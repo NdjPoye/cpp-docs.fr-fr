@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
 L'objet `source_link_manager` gère les liens réseau des blocs de messagerie avec les blocs `ISource`.  
@@ -64,15 +68,15 @@ class source_link_manager;
 |Nom|Description|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Construit un objet `source_link_manager`.|  
-|[~ source_link_manager, destructeur](#dtor)|Détruit le `source_link_manager` objet.|  
+|[~source_link_manager Destructor](#dtor)|Détruit le `source_link_manager` objet.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
 |[add](#add)|Ajoute un lien de la source à la `source_link_manager` objet.|  
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|  
-|[contient](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.|  
+|[contains](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.|  
 |[count](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|  
 |[reference](#reference)|Acquiert une référence sur le `source_link_manager` objet.|  
 |[register_target_block](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|  
@@ -86,12 +90,12 @@ class source_link_manager;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `source_link_manager`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="add"></a>ajouter 
+##  <a name="add"></a> Ajouter 
 
  Ajoute un lien de la source à la `source_link_manager` objet.  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-##  <a name="begin"></a>commencer 
+##  <a name="begin"></a> Commencer 
 
  Retourne un itérateur au premier élément dans le `source_link_manager` objet.  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>Notes  
  L’état final de l’itérateur est indiqué par un `NULL` lien.  
   
-##  <a name="contains"></a>contient 
+##  <a name="contains"></a> contient 
 
  Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  Un pointeur vers un bloc qui consiste à rechercher dans le `source_link_manager` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
+ `true` Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
   
-##  <a name="count"></a>nombre 
+##  <a name="count"></a> Nombre 
 
  Compte le nombre de blocs liés dans le `source_link_manager` objet.  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de blocs liés dans le `source_link_manager` objet.  
   
-##  <a name="reference"></a>référence 
+##  <a name="reference"></a> Référence 
 
  Acquiert une référence sur le `source_link_manager` objet.  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  Inscrit le bloc cible qui conserve ce `source_link_manager` objet.  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  Le bloc cible contenant cet `source_link_manager` objet.  
   
-##  <a name="release"></a>mise en production 
+##  <a name="release"></a> mise en production 
 
  Libère la référence sur le `source_link_manager` objet.  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>supprimer 
+##  <a name="remove"></a> Supprimer 
 
  Supprime un lien à partir de la `source_link_manager` objet.  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  Un pointeur vers un bloc doit être supprimée, si trouvée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
+ `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  Le nombre maximal de liens.  
   
-##  <a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a> source_link_manager 
 
  Construit un objet `source_link_manager`.  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a> ~source_link_manager 
 
  Détruit le `source_link_manager` objet.  
   
@@ -216,5 +220,5 @@ source_link_manager();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [single_link_registry, classe](single-link-registry-class.md)   
+ [single_link_registry Class](single-link-registry-class.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)

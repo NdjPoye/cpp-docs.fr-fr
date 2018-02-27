@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: preprocessor
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor"></a>Préprocesseur
 Le préprocesseur est un processeur de texte qui manipule le texte d'un fichier source dans le cadre de la première phase de traduction. Le préprocesseur n'analyse pas le texte source, mais il le divise en jetons en vue de localiser les appels de macros. Bien que le compilateur appelle normalement le préprocesseur lors de sa première passe, le préprocesseur peut également être appelé séparément pour traiter du texte sans compilation.  
@@ -40,7 +44,7 @@ Le préprocesseur est un processeur de texte qui manipule le texte d'un fichier 
   
  **FIN de la section spécifique à Microsoft**  
   
-##  <a name="_predir_special_terminology"></a>Terminologie spéciale  
+##  <a name="_predir_special_terminology"></a> Terminologie spéciale  
  Dans la documentation du préprocesseur, le terme « argument » fait référence à l’entité passée à une fonction. Dans certains cas, il est modifié par l'adjectif « réel » ou « formel », qui décrit respectivement l'expression d'argument spécifiée dans l'appel de fonction et la déclaration d'argument spécifiée dans la définition de fonction.  
   
  Le terme « variable » fait référence à un objet de données simple de type C. Le terme « objet » fait référence aux objets et aux variables C++ ; il s'agit d'un terme inclusif.  

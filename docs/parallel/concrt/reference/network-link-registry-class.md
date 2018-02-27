@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  
@@ -60,7 +64,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
 |[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
+|[contains](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
 |[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
 |[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|  
   
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Espace de noms :** concurrency  
   
-##  <a name="add"></a>ajouter 
+##  <a name="add"></a> Ajouter 
 
  En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-##  <a name="begin"></a>commencer 
+##  <a name="begin"></a> Commencer 
 
  En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Notes  
  L’état final de l’itérateur est indiqué par un `NULL` lien.  
   
-##  <a name="contains"></a>contient 
+##  <a name="contains"></a> contient 
 
  En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Un pointeur vers un bloc qui est recherché dans le `network_link_registry` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le bloc a été trouvé, `false` dans le cas contraire.  
+ `true` Si le bloc a été trouvé, `false` dans le cas contraire.  
   
-##  <a name="count"></a>nombre 
+##  <a name="count"></a> Nombre 
 
  En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le `network_link_registry` objet.  
   
-##  <a name="remove"></a>supprimer 
+##  <a name="remove"></a> Supprimer 
 
  En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.  
   
@@ -140,9 +144,9 @@ virtual bool remove(_EType _Link) = 0;
  Un pointeur vers un bloc doit être supprimée, si trouvée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
+ `true` Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [single_link_registry, classe](single-link-registry-class.md)   
+ [single_link_registry Class](single-link-registry-class.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)

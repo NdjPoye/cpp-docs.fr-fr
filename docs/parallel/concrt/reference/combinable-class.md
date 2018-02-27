@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>combinable, classe
 L'objet `combinable<T>` est destiné à fournir des copies privées de thread des données pour exécuter des sous-calculs locaux de thread sans verrou pendant des algorithmes parallèles. À la fin de l'opération parallèle, les sous-calculs privés de thread peuvent être fusionnées dans un résultat final. Cette classe peut être utilisée à la place d'une variable partagée et peut entraîner une amélioration des performances au cas où il y aurait beaucoup de conflit sur cette variable partagée.  
@@ -78,7 +82,7 @@ class combinable;
   
  **Espace de noms :** concurrency  
   
-##  <a name="clear"></a>Effacer 
+##  <a name="clear"></a> Effacer 
 
  Efface les résultats de calcul intermédiaires d’une utilisation précédente.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>combinable 
+##  <a name="ctor"></a> combinable 
 
  Construit un nouveau `combinable` objet.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  Le troisième constructeur est le constructeur de copie.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~combinable 
 
  Détruit un objet `combinable`.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>combiner 
+##  <a name="combine"></a> combiner 
 
  Calcule une valeur finale de l’ensemble des sous-calculs locaux de thread en appelant la fonction d’association fournie.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat final de la combinaison de tous les sous-calculs privés de thread.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  Calcule une valeur finale de l’ensemble des sous-calculs locaux de thread en appelant la fonction d’association fournie une fois par calcul sous-chemin de thread local. Le résultat final est accumulé par l’objet de fonction.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  La fonction qui est utilisée pour combiner un calcul secondaire. Sa signature est `void (T)` ou `void (const T&)`et doit être associative et commutative.  
   
-##  <a name="local"></a>local 
+##  <a name="local"></a> Local 
 
  Retourne une référence au calcul sous-chemin privés de thread.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence au calcul sous-chemin privés de thread.  
   
-##  <a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a> operator= 
 
  Assigne à une `combinable` objet à partir d’un autre `combinable` objet.  
   

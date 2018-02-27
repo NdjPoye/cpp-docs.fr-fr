@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL (Classes)
 La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).  
@@ -62,7 +65,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)|Cette classe représente un objet pointeur intelligent à l’aide de nouveau vecteur et supprimer des opérateurs.|atlbase.h|  
 |[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)|Cette classe fournit des méthodes, les fonctions statiques et typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de nouveau vecteur et supprimer des opérateurs.|atlcoll.h|  
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|Cette classe implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.|atlwin.h|  
-|[Objet CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|  
+|[CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et prend également en charge pour l’hébergement de contrôles ActiveX sous licence.|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Cette classe implémente l'interface `IBindStatusCallback`.|atlctl.h|  
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet.|atlcom.h|  
@@ -88,7 +91,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[CComEnum](../../atl/reference/ccomenum-class.md)|Cette classe définit un objet d’énumérateur COM basé sur un tableau.|atlcom.h|  
 |[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)|Cette classe fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau.|atlcom.h|  
 |[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|Cette classe définit un objet d’énumérateur COM basé sur une collection de la bibliothèque C++ Standard.|atlcom.h|  
-|[Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|Cette classe fournit les mêmes méthodes que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) mais ne fournit ne pas une section critique.|atlcore.h|  
+|[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|Cette classe fournit les mêmes méthodes que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) mais ne fournit ne pas une section critique.|atlcore.h|  
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|Cette classe fournit des méthodes pour traiter les pointeurs d’interface et le tableau global d’interface (GIT).|atlbase.h|  
 |[CComHeap](../../atl/reference/ccomheap-class.md)|Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions d’allocation de mémoire COM.|ATLComMem.h|  
 |[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Une classe de pointeur intelligent pour la gestion des pointeurs de segment de mémoire.|atlbase.h|  
@@ -162,7 +165,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[CSnapInItemImpl](../../atl/reference/csnapinitemimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.|atlsnap.h|  
 |[CSnapInPropertyPageImpl](../../atl/reference/csnapinpropertypageimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de page de propriétés du composant logiciel enfichable.|atlsnap.h|  
 |[CStockPropImpl](../../atl/reference/cstockpropimpl-class.md)|Cette classe fournit des méthodes pour prendre en charge les valeurs de propriétés stock.|atlctl.h|  
-|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.|CStringT.h|  
+|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.|cstringt.h|  
 |[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Il est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons sans respecter la casse.|atlcoll.h|  
 |[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Les objets de chaîne sont traitées en tant que références.|atlcoll.h|  
 |[CThreadPool, classe](../../atl/reference/cthreadpool-class.md)|Cette classe fournit un pool de threads de travail qui traitent d’une file d’attente d’éléments de travail.|atlutil.h|  
@@ -183,7 +186,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|Cette classe représente l’interface pour un gestionnaire de mémoire.|atlmem.h|  
 |[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Cette interface fournit des méthodes permettant de spécifier les caractéristiques du contrôle hébergé ou du conteneur.|atlbase.h, ATLIFace.h|  
 |[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Cette interface implémente des propriétés ambiantes supplémentaires pour un contrôle hébergé.|atlbase.h, ATLIFace.h|  
-|[Interface IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Cette interface fournit des méthodes pour manipuler un contrôle et son objet ordinateur hôte.|atlbase.h, ATLIFace.h|  
+|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Cette interface fournit des méthodes pour manipuler un contrôle et son objet ordinateur hôte.|atlbase.h, ATLIFace.h|  
 |[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Cette interface fournit des méthodes pour manipuler un contrôle sous licence et son objet ordinateur hôte.|atlbase.h, ATLIFace.h|  
 |[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)|Cette classe fournit des méthodes utilisées par une classe de collection.|atlcom.h|  
 |[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)|Cette classe implémente un conteneur de point de connexion pour gérer une collection de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objets.|atlcom.h|  
@@ -195,7 +198,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|Interface utilisée pour l’analyse Microsoft HTML et de moteur de rendu.|atlbase.h, ATLIFace.h|  
 |[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|Cette classe définit une interface d’énumérateur basée sur une collection de la bibliothèque C++ Standard.|atlcom.h|  
 |[IObjectSafetyImpl](../../atl/reference/iobjectsafetyimpl-class.md)|Cette classe fournit une implémentation par défaut de la `IObjectSafety` interface pour permettre à un client récupérer et définir des niveaux de sécurité d’un objet.|atlctl.h|  
-|[IObjectWithSiteImpl de prendre facilement](../../atl/reference/iobjectwithsiteimpl-class.md)|Cette classe fournit des méthodes permettant d’un objet communiquer avec son site.|atlcom.h|  
+|[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)|Cette classe fournit des méthodes permettant d’un objet communiquer avec son site.|atlcom.h|  
 |[IOleControlImpl](../../atl/reference/iolecontrolimpl-class.md)|Cette classe fournit une implémentation par défaut de la **IOleControl** interface et implémente **IUnknown**.|atlctl.h|  
 |[IOleInPlaceActiveObjectImpl](../../atl/reference/ioleinplaceactiveobjectimpl-class.md)|Cette classe fournit des méthodes d’assistance de communication entre un contrôle sur place et son conteneur.|atlctl.h|  
 |[IOleInPlaceObjectWindowlessImpl](../../atl/reference/ioleinplaceobjectwindowlessimpl-class.md)|Cette classe implémente **IUnknown** et fournit des méthodes qui permettent un contrôle sans fenêtre pour recevoir des messages de fenêtre et participer aux opérations de glisser-déplacer.|atlctl.h|  
@@ -216,7 +219,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Cette classe fournit une implémentation par défaut de la `ISupportErrorInfo Interface` de l’interface et peut être utilisé lorsque seulement une seule interface génère des erreurs sur un objet.|atlcom.h|  
 |[IThreadPoolConfig, interface](../../atl/reference/ithreadpoolconfig-interface.md)|Cette interface fournit des méthodes pour la configuration d’un pool de threads.|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Cette classe implémente **IUnknown** et fournit des implémentations par défaut de la [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), et [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfaces.|atlctl.h|  
-|[IWorkerThreadClient, interface](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`est l’interface implémentée par les clients de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) classe.|atlutil.h|  
+|[IWorkerThreadClient, interface](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` est l’interface implémentée par les clients de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) classe.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Cette classe fournit des wrappers pour **CreateWindow** et **CreateWindowEx**.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Cette classe d’argument d’adaptateur permet soit `RECT` pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Cette classe d’argument d’adaptateur permet à deux noms de ressources (`LPCTSTR`s) ou l’ID de ressource (**UINT**s) à passer à une fonction sans nécessiter de l’appelant convertir une chaîne à l’aide de l’ID du **MAKEINTRESOURCE** (macro).|atlwin.h|  
