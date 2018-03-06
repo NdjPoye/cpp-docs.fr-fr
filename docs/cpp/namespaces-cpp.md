@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque identificateur, par exemple `std::vector<std::string> vec;`, ou par un [à l’aide de la déclaration](../cpp/using-declaration.md) pour un identificateur unique (`using std::string`), ou un [à l’aide de la Directive](../cpp/namespaces-cpp.md#using_directives) pour tous les identificateurs dans l’espace de noms (`using namespace std;`). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>à l’aide de directives  
+## <a id="using_directives"></a> à l’aide de directives  
  Le `using` directive permet à tous les noms dans un **espace de noms** sans le *nom de l’espace de noms* comme qualificateur explicite. Utiliser une directive dans un fichier d’implémentation (c'est-à-dire *.cpp) si vous utilisez plusieurs identificateurs différents dans un espace de noms ; Si vous utilisez simplement un ou deux identificateurs, envisagez une déclaration pour placer uniquement ces identificateurs dans la portée et pas tous les identificateurs dans l’espace de noms. Si une variable locale a le même nom qu'une variable d'espace de noms, la variable d'espace de noms est masquée. Le fait qu'une variable d'espace de noms porte le même nom qu'une variable globale est une erreur.  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>Alias de Namespace  
+## <a id="namespace_aliases"></a> Alias de Namespace  
  Les noms des espaces de noms doivent être uniques, ce qui signifie qu'ils ne doivent pas être trop courts. Si la longueur d'un nom rend le code difficile à lire ou est fastidieux à taper dans un fichier d'en-tête où les directives using ne peuvent pas être utilisées, vous pouvez créer un alias d'espaces de noms qui sert d'abréviation pour le nom réel. Exemple :  
   
 ```cpp  

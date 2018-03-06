@@ -1,12 +1,9 @@
 ---
 title: "Création d’un projet Makefile | Documents Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vc.appwiz.makefile.project
@@ -22,32 +19,36 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e86bedbf83cd417cfc41317e5887304cda7ee76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f487126b58dddc0243646ebce7faa2754ffa7053
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="creating-a-makefile-project"></a>Création d'un projet Makefile
-Si vous avez un projet que vous générez à partir d'une ligne de commande avec un makefile, l'environnement de développement Visual Studio ne reconnaît pas votre projet. Pour ouvrir et générer votre projet en utilisant [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], Visual Studio Professional ou Visual Studio Express pour Windows Desktop, tout d’abord créer un projet vide en sélectionnant le modèle de projet MakeFile. Vous pouvez ensuite utiliser ce projet pour générer votre projet à partir de l'environnement de développement Visual Studio.  
-  
- Ce projet n'affiche aucun fichier dans l'Explorateur de solutions. Le projet spécifie les paramètres de génération, qui sont affichés dans la page de propriétés du projet.  
-  
- Le fichier de sortie que vous spécifiez dans le projet n'a pas d'incidence sur le nom que le script génère ; il déclare uniquement une intention.  
-  
-### <a name="to-create-a-makefile-project"></a>Pour créer un projet Makefile  
-  
-1.  Suivez les instructions de la rubrique d’aide [création d’un projet avec l’Assistant Application Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).  
-  
-2.  Dans le **nouveau projet** boîte de dialogue, sélectionnez **projet Makefile** dans le volet Modèles pour ouvrir l’Assistant.  
-  
-3.  Dans le [paramètres de l’Application](../ide/application-settings-makefile-project-wizard.md) page fournissez la commande, sortie, nettoyer et régénérer les informations.  
-  
-4.  Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir le projet nouvellement créé dans **l’Explorateur de solutions**.  
-  
- Vous pouvez afficher et modifier les propriétés du projet dans sa page de propriétés. Consultez [définition des propriétés de projet Visual C++](../ide/working-with-project-properties.md) pour plus d’informations sur l’affichage de la page de propriétés.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Assistant projet Makefile](../ide/makefile-project-wizard.md)   
- [Caractères spéciaux dans un Makefile](../build/special-characters-in-a-makefile.md)   
- [Contenu d’un makefile](../build/contents-of-a-makefile.md)
+
+Si vous avez un projet de code source existant que vous générez à partir de la ligne de commande à l’aide d’un makefile, l’environnement de développement Visual Studio dispose de plusieurs méthodes de lui affecter la valeur dans un projet qui peut tirer pleinement parti des fonctionnalités de l’IDE de Visual Studio. Cet article décrit comment créer un projet Makefile de Visual Studio qui utilise votre makefile existant pour générer votre code dans l’IDE. Vous pouvez également utiliser le **créer un projet à partir de fichiers de Code existants** Assistant pour créer un projet MSBuild natif à partir de votre code source. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md). À partir de Visual Studio 2017, vous pouvez également utiliser le **ouvrir le dossier** fonctionnalité, qui peut utiliser plusieurs systèmes de build existants comme s’ils étaient les projets natifs Visual Studio. Pour plus d’informations, consultez [Open Folder projects in Visual C++](non-msbuild-projects.md).
+
+Pour utiliser Visual Studio pour ouvrir et générer votre code source à l’aide de votre makefile existant, vous créez tout d’abord un nouveau projet en sélectionnant le modèle de projet MakeFile. Un Assistant vous permet de spécifier les commandes et l’environnement utilisé par votre makefile. Vous pouvez ensuite utiliser ce projet pour générer votre code dans l’environnement de développement Visual Studio.
+
+Par défaut, le projet makefile n’affiche aucun fichier dans l’Explorateur de solutions. Le projet makefile spécifie les paramètres de génération, qui sont répercutées dans la page de propriétés du projet.
+
+Le fichier de sortie que vous spécifiez dans le projet n'a pas d'incidence sur le nom que le script génère ; il déclare uniquement une intention. Votre fichier Make toujours contrôle le processus de génération et spécifie les cibles de génération.
+
+## <a name="to-create-a-makefile-project"></a>Pour créer un projet Makefile
+
+1. Suivez les instructions de la rubrique d’aide [création d’un projet avec l’Assistant Application Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).
+
+1. Dans le **nouveau projet** boîte de dialogue, développez **Visual C++** > **général** , puis sélectionnez **projet Makefile** dans le Volet Modèles pour ouvrir l’Assistant de projet.
+
+1. Dans le [paramètres de l’Application](../ide/application-settings-makefile-project-wizard.md) , fournissez la commande de sortie, nettoyer et génère des informations de reconstruction pour le débogage et de la vente au détail.
+
+1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir le projet nouvellement créé dans **l’Explorateur de solutions**.
+
+Vous pouvez afficher et modifier les propriétés du projet dans sa page de propriétés. Consultez [définition des propriétés de projet Visual C++](../ide/working-with-project-properties.md) pour plus d’informations sur l’affichage de la page de propriétés.
+
+## <a name="see-also"></a>Voir aussi
+
+[Projet Makefile (Assistant)](../ide/makefile-project-wizard.md)<br/>
+[Caractères spéciaux dans un makefile](../build/special-characters-in-a-makefile.md)<br/>
+[Contenu d’un makefile](../build/contents-of-a-makefile.md)<br/>
