@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (génération PDB plus rapide)
 
@@ -32,7 +32,7 @@ Activer la génération PDB plus rapide dans les builds parallèles en réduisan
 
 Le **/Zf** option active la prise en charge du compilateur pour la génération plus rapide des fichiers PDB lorsque vous utilisez la [/MP (générer avec plusieurs processus)](mp-build-with-multiple-processes.md) option, ou lorsque le système de génération (par exemple, [MSBuild ](/visualstudio/msbuild/msbuild-reference) ou [CMake](../../ide/cmake-tools-for-visual-cpp.md)) peuvent s’exécuter cl.exe plusieurs processus du compilateur en même temps. Cette option entraîne le compilateur frontal différer la génération de l’index de type pour chaque enregistrement de type dans le fichier PDB jusqu'à la fin de la compilation, puis les demande tous dans un seul appel RPC mspdbsrv.exe, au lieu d’effectuer une demande RPC pour chaque enregistrement. Cela peut considérablement améliorer le débit de la build en réduisant la charge RPC sur le processus de mspdbsrv.exe dans un environnement où plusieurs processus du compilateur cl.exe s’exécutent simultanément.
 
-Étant donné que la **/Zf** option s’applique uniquement à la génération du fichier PDF, il requiert le [/Zi](z7-zi-zi-debug-information-format.md) ou [/Zi](z7-zi-zi-debug-information-format.md) option.
+Étant donné que la **/Zf** option s’applique uniquement à la génération du fichier PDB, il requiert le [/Zi](z7-zi-zi-debug-information-format.md) ou [/Zi](z7-zi-zi-debug-information-format.md) option.
 
 Le **/Zf** option est disponible à compter de Visual Studio 2017 version 15,1 et est désactivée par défaut.
 
