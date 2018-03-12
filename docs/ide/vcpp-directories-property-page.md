@@ -1,7 +1,7 @@
 ---
 title: "Page de propriétés répertoires VC ++ | Documents Microsoft"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ Page de propriétés répertoires (Windows)
 
@@ -42,23 +42,25 @@ Pour la version Linux de cette page, consultez [répertoires VC ++ (C++ Linux)](
 
 Pour accéder à la **répertoires VC ++** page de propriétés :
 
-1. dans le menu principal, choisissez **affichage | Explorateur de solutions**
-1. avec le bouton droit sur le nœud de projet (pas la solution de niveau supérieur) et choisissez **propriétés**
-1. dans le volet gauche de la **Pages de propriétés** boîte de dialogue, développez **propriétés de Configuration** et sélectionnez **répertoires VC ++**.  
+1. Si le **l’Explorateur de solutions** fenêtre n’est pas visible, puis, dans le menu principal, choisissez **vue** > **l’Explorateur de solutions**.
+1. Avec le bouton droit sur un nœud de projet (pas la solution de niveau supérieur) et choisissez **propriétés**.
+1. Dans le volet gauche de la **Pages de propriétés** boîte de dialogue, sélectionnez **propriétés de Configuration** > **répertoires VC ++**.  
 
-Les propriétés répertoires VC ++ s’appliquent à un projet, et non le nœud de solution de niveau supérieur :
+Les propriétés répertoires VC ++ s’appliquent à un projet, et non le nœud de solution de niveau supérieur. Si vous ne voyez pas **répertoires VC ++** sous **propriétés de Configuration**, sélectionnez un nœud de projet C++ dans les **l’Explorateur de solutions** fenêtre : 
 
 ![Sélectionnez le nœud de projet](media/vcppdir.png "sélectionnez le nœud de projet pour voir les propriétés répertoires VC ++")
 
-Si vous ne voyez pas la page de propriétés, assurez-vous que vous avez sélectionné dans le nœud du projet **l’Explorateur de solutions**. Notez qu’un **répertoires VC ++** page de propriétés pour les projets interplateforme, différent. Pour les projets non Windows, consultez [répertoires VC ++ (C++ Linux)](../linux/prop-pages/directories-linux.md) ou. 
+Notez que la **répertoires VC ++** page de propriétés pour les projets interplateforme, différent. Pour plus d’informations spécifiques aux projets C++ de Linux, consultez [répertoires VC ++ (C++ Linux)](../linux/prop-pages/directories-linux.md). 
  
 Si vous n’êtes pas familiarisé avec *propriétés de projet* dans Visual Studio, il peut s’avérer utile de la première lecture [utilisation des propriétés de projet](working-with-project-properties.md). 
  
-Les paramètres par défaut pour les répertoires VC ++ dépendent du type de projet. Pour les projets de bureau, ils comprennent les emplacements d’outils VC ++ pour un ensemble d’outils de plateforme spécifique et l’emplacement du Kit de développement logiciel Windows. Vous pouvez modifier le **ensemble d’outils de plateforme** et **version du Kit de développement logiciel Windows** sur la **propriétés de Configuration – général** page. Pour afficher les valeurs pour tous les répertoires de :
+Les paramètres par défaut **répertoires VC ++** propriétés varient selon le type de projet. Pour les projets de bureau, ils comprennent les emplacements d’outils C++ pour un ensemble d’outils de plateforme spécifique et l’emplacement du Kit de développement logiciel Windows. Vous pouvez modifier le **ensemble d’outils de plateforme** et **version du Kit de développement logiciel Windows** sur la **propriétés de Configuration** > **général** page. 
 
-1. dans le volet droit de la **répertoires VC ++** , sélectionnez une ligne. Par exemple, **répertoires de bibliothèques**
-1. Cliquez sur le bouton de flèche vers le bas à droite
-1. Choisissez **modifier**.
+Pour afficher les valeurs pour tous les répertoires de :
+
+1. Sélectionnez une des propriétés de la **répertoires VC ++** page. Par exemple, choisir **répertoires de bibliothèques**.
+1. Choisissez le bouton de flèche vers le bas à la fin du champ de valeur de propriété.
+1. Dans le menu déroulant, choisissez **modifier**.
 
 ![Modifier les répertoires de bibliothèques](media/vcppdir_libdir_edit.png "boîte de dialogue pour modifier des chemins d’accès de la bibliothèque")
 
@@ -74,7 +76,7 @@ Vous pouvez rechercher des correspondances partielles ou complètes dans la zone
 
 ![Consultez les valeurs des macros](media/vcppdir_libdir_macros.png "boîte de dialogue pour modifier les macros")
 
-Remarque : La liste remplira en cours de frappe. N’appuyez pas sur **entrée**.
+Remarque : La liste est remplie en cours de frappe. N’appuyez pas sur **entrée**.
 
 Pour plus d’informations sur les macros et pourquoi vous devez les utiliser au lieu des chemins codés en dur chaque fois que possible, consultez [utilisation des propriétés de projet](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
@@ -90,22 +92,25 @@ Pour plus d’informations, consultez ces billets de blog : [répertoires VC ++
 
 Vous pouvez également spécifier d'autres répertoires, comme suit.  
   
-**Répertoires d’exécutables**  
+**Répertoires d’exécutables**<br/>
 Répertoires dans lesquels rechercher des fichiers exécutables. Correspond à la **chemin d’accès** variable d’environnement.
 
-**Répertoires Include**  
+**Répertoires Include**<br/>
 Répertoires dans lesquels rechercher des fichiers Include référencés dans le code source. Correspond à la **INCLUDE** variable d’environnement.
 
-**Répertoires de référence**  
+**Répertoires de référence**<br/>
  Répertoires dans lesquels rechercher l’assembly et les fichiers de module (métadonnées) référencés dans le code source par le [#using](../preprocessor/hash-using-directive-cpp.md) directive. Correspond à la **LIBPATH** variable d’environnement.
 
-**Répertoires de bibliothèques**  
-Répertoires dans lesquels se trouvent des fichiers bibliothèques (.lib) ; cela inclut des bibliothèques Runtime. Correspond à la **LIB** variable d’environnement. Ce paramètre ne s’applique pas aux fichiers .obj ; Pour lier à un fichier .obj, sur le [l’éditeur de liens](../ide/linker-property-pages.md)**général** page de propriétés, sélectionnez **Additional Library Dependencies** , puis spécifiez le chemin d’accès relatif du fichier.
+**Répertoires de bibliothèques**<br/>
+Répertoires dans lesquels se trouvent des fichiers bibliothèques (.lib) ; cela inclut des bibliothèques Runtime. Correspond à la **LIB** variable d’environnement. Ce paramètre ne s’applique pas aux fichiers .obj ; Pour lier à un fichier .obj, sur le **propriétés de Configuration** > **l’éditeur de liens** > **général** page de propriétés, sélectionnez  **Dépendances de bibliothèque supplémentaires** , puis spécifiez le chemin d’accès relatif du fichier. Pour plus d’informations, consultez [les pages de propriétés de l’éditeur de liens](../ide/linker-property-pages.md).
 
-**Répertoires sources**  
+**Répertoires de bibliothèques WinRT**<br/>
+Répertoires dans lesquels rechercher des fichiers de bibliothèque WinRT pour utilisent dans les applications de plateforme Windows universelle (UWP). 
+
+**Répertoires sources**<br/>
 Répertoires dans lesquels rechercher des fichiers source à utiliser pour IntelliSense.
 
-**Exclure des répertoires**  
+**Exclure des répertoires**<br/>
 Répertoires à ne pas rechercher lors de la recherche de dépendances de génération.
 
 ## <a name="sharing-the-settings"></a>Partage des paramètres
