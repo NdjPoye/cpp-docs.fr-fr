@@ -1,12 +1,9 @@
 ---
-title: "-Zc (conformité) | Documents Microsoft"
+title: "/Zc (conformité) | Documents Microsoft"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Conformité)
 
@@ -36,11 +32,11 @@ Vous pouvez utiliser la **/Zc** options du compilateur pour spécifier le compor
 
 ## <a name="syntax"></a>Syntaxe
 
-> /Zc:_option_{,_option_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>Notes
 
-Lorsque Visual Studio a implémenté une extension de C ou C++ qui n’est pas compatible avec la norme, vous pouvez utiliser un `/Zc` option de conformité pour spécifier le comportement conforme à la norme ou spécifique à Microsoft. Pour certaines options, le comportement spécifique à Microsoft est la valeur par défaut, pour empêcher des modifications avec rupture à grande échelle pour le code existant. Dans d’autres cas, la valeur par défaut est le comportement standard, où les améliorations de sécurité, les performances ou compatibilité l’emportent sur les coûts des modifications avec rupture. Le paramètre par défaut de chaque option de conformité peut-être changer dans les versions plus récentes de Visual Studio. Pour plus d’informations sur chaque option de conformité, consultez la rubrique relative à l’option.
+Lorsque Visual Studio a implémenté une extension de C ou C++ qui n’est pas compatible avec la norme, vous pouvez utiliser un `/Zc` option de conformité pour spécifier le comportement conforme à la norme ou spécifique à Microsoft. Pour certaines options, le comportement spécifique à Microsoft est la valeur par défaut, pour empêcher des modifications avec rupture à grande échelle pour le code existant. Dans d’autres cas, la valeur par défaut est le comportement standard, où les améliorations de sécurité, les performances ou compatibilité l’emportent sur les coûts des modifications avec rupture. Le paramètre par défaut de chaque option de conformité peut-être changer dans les versions plus récentes de Visual Studio. Pour plus d’informations sur chaque option de conformité, consultez la rubrique relative à l’option. Le [/ permissive-](permissive-standards-conformance.md) option du compilateur définit implicitement les conformité des options qui ne sont pas définies par défaut pour leur paramètre conforme.
 
 Il s’agit du `/Zc` options du compilateur :
 
@@ -61,7 +57,8 @@ Il s’agit du `/Zc` options du compilateur :
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Activer l’initialisation statique locale thread-safe (sur par défaut).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Supposons que `operator new` lève en cas d’échec (désactivé par défaut).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Activer les trigraphes (obsolètes, désactivée par défaut).|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`est un type natif, et non un typedef (sur par défaut).|
+|[twoPhase-](zc-twophase.md)|Utilisez le modèle non conforme de l’analyse du comportement (conforme par défaut).|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` est un type natif, et non un typedef (sur par défaut).|
 
 Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 

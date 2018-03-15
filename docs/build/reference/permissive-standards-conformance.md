@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformité aux normes)
 
@@ -37,7 +37,7 @@ Spécifiez le mode de conformité aux normes pour le compilateur. Utilisez cette
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez utiliser la **/ permissive-** option du compilateur pour spécifier le comportement de compilateur conforme aux normes. Cette option désactive les comportements permissive et définit les [/Zc](../../build/reference/zc-conformance.md) options du compilateur pour la conformité stricte. Dans l’IDE, cette option permet également le code non conforme de soulignement de moteur IntelliSense. 
+Vous pouvez utiliser la **/ permissive-** option du compilateur pour spécifier le comportement de compilateur conforme aux normes. Cette option désactive les comportements permissive et définit les [/Zc](../../build/reference/zc-conformance.md) options du compilateur pour la conformité stricte. Dans l’IDE, cette option permet également le code non conforme de soulignement de moteur IntelliSense.
 
 Par défaut, le **/ permissive-** option est définie dans les nouveaux projets créés par la version de Visual Studio 2017 15.5 et versions ultérieures. Il n’est pas défini par défaut dans les versions antérieures. Lorsque l’option est définie, le compilateur génère des erreurs de diagnostic ou des avertissements lors de constructions de langage non standard sont détectées dans votre code, y compris certains bogues courants dans pre-code C ++ 11.
 
@@ -416,7 +416,7 @@ Dans les versions antérieures de Visual Studio 2017 version 15.5, utilisez cett
 
 1. Ouvrez votre projet **Pages de propriétés** boîte de dialogue.
 
-1. Sous **propriétés de Configuration**, développez le **C/C++** dossier et choisissez le **ligne de commande** page de propriétés.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
 1. Entrez le **/ permissive-** option du compilateur dans le **des Options supplémentaires** boîte. Choisissez **OK** ou **appliquer** pour enregistrer vos modifications.
 

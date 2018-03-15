@@ -1,12 +1,9 @@
 ---
-title: "-Zc : strictStrings (désactiver la conversion de type de littéral chaîne) | Documents Microsoft"
+title: "/ Zc : strictstrings (désactiver la conversion de type de littéral chaîne) | Documents Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /Zc:strictStrings
@@ -20,69 +17,69 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f316c5fc9209f968219d770a15e6576880b69954
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61ae45d6a067b45d625055d92900b17e69a366e7
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Désactiver la conversion du type de littéral de chaîne)
-Quand il est spécifié, le compilateur requiert une conformité de qualification `const` stricte pour les pointeurs initialisés à l'aide de littéraux de chaîne.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/Zc:strictStrings[-]  
-```  
-  
-## <a name="remarks"></a>Notes  
- Si **/Zc : strictstrings** est spécifié, le compilateur applique le standard C++ `const` qualifications des littéraux de chaîne en tant que type ' tableau de `const char`' ou ' tableau de `const wchar_t`», en fonction de la déclaration. Les littéraux de chaîne sont immuables et une tentative de modification du contenu d'un de ces littéraux entraîne une erreur de violation d'accès au moment de l'exécution. Vous devez déclarer un pointeur de chaîne en tant que `const` pour l'initialiser en utilisant un littéral de chaîne ou utilisez un `const_cast` explicite pour initialiser un pointeur non `const`. Par défaut, ou si **/Zc:strictStrings-** est spécifié, le compilateur n’applique pas le standard C++ `const` qualifications pour les pointeurs de chaîne initialisés à l’aide de littéraux de chaîne.  
-  
- Utilisez le **/Zc : strictstrings** option pour empêcher la compilation de code incorrect. Cet exemple montre comment une simple erreur de déclaration conduit à un incident au moment de l'exécution :  
-  
-```cpp  
-// strictStrings_off.cpp  
-// compile by using: cl /W4 strictStrings_off.cpp  
-int main() {  
-   wchar_t* str = L"hello";  
-   str[2] = L'a'; // run-time error: access violation  
-}  
-```  
-  
- Lorsque **/Zc : strictstrings** est activé, le même code signale une erreur dans la déclaration de `str`.  
-  
-```cpp  
-// strictStrings_on.cpp  
-// compile by using: cl /Zc:strictStrings /W4 strictStrings_on.cpp  
-int main() {  
-   wchar_t* str = L"hello"; // error: Conversion from string literal   
-   // loses const qualifier  
-   str[2] = L'a';   
-}  
-```  
-  
- Si vous utilisez `auto` pour déclarer un pointeur de chaîne, le compilateur crée automatiquement la déclaration de type de pointeur `const` correcte. Une tentative de modification du contenu d'un pointeur `const` est signalée par le compilateur en tant qu'erreur.  
-  
+
+Quand il est spécifié, le compilateur requiert une conformité de qualification `const` stricte pour les pointeurs initialisés à l'aide de littéraux de chaîne.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/Zc:strictStrings**[**-**]
+
+## <a name="remarks"></a>Notes
+
+Si **/Zc : strictstrings** est spécifié, le compilateur applique le standard C++ `const` qualifications des littéraux de chaîne en tant que type ' tableau de `const char`' ou ' tableau de `const wchar_t`», en fonction de la déclaration. Les littéraux de chaîne sont immuables et une tentative de modification du contenu d'un de ces littéraux entraîne une erreur de violation d'accès au moment de l'exécution. Vous devez déclarer un pointeur de chaîne en tant que `const` pour l'initialiser en utilisant un littéral de chaîne ou utilisez un `const_cast` explicite pour initialiser un pointeur non `const`. Par défaut, ou si **/Zc:strictStrings-** est spécifié, le compilateur n’applique pas le standard C++ `const` qualifications pour les pointeurs de chaîne initialisés à l’aide de littéraux de chaîne.
+
+Le **/Zc : strictstrings** option est désactivée par défaut. Le [/ permissive-](permissive-standards-conformance.md) option du compilateur définit implicitement cette option, mais elle peut être substituée à l’aide de **/Zc:strictStrings-**.
+
+Utilisez le **/Zc : strictstrings** option pour empêcher la compilation de code incorrect. Cet exemple montre comment une simple erreur de déclaration conduit à un incident au moment de l'exécution :
+
+```cpp
+// strictStrings_off.cpp
+// compile by using: cl /W4 strictStrings_off.cpp
+int main() {
+   wchar_t* str = L"hello";
+   str[2] = L'a'; // run-time error: access violation
+}
+```
+
+Lorsque **/Zc : strictstrings** est activé, le même code signale une erreur dans la déclaration de `str`.
+
+```cpp
+// strictStrings_on.cpp
+// compile by using: cl /Zc:strictStrings /W4 strictStrings_on.cpp
+int main() {
+   wchar_t* str = L"hello"; // error: Conversion from string literal
+   // loses const qualifier
+   str[2] = L'a';
+}
+```
+
+Si vous utilisez `auto` pour déclarer un pointeur de chaîne, le compilateur crée automatiquement la déclaration de type de pointeur `const` correcte. Une tentative de modification du contenu d'un pointeur `const` est signalée par le compilateur en tant qu'erreur.
+
 > [!NOTE]
->  La bibliothèque C++ Standard dans [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] ne prend pas en charge la **/Zc : strictstrings** builds de l’option du compilateur en mode débogage. Si vous voyez plusieurs [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) erreurs dans votre build de sortie, cela peut être la cause.  
-  
- Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
-  
-1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
-  
-2.  Sélectionnez le **C/C++** dossier.  
-  
-3.  Sélectionnez le **ligne de commande** page de propriétés.  
-  
-4.  Modifier la **des Options supplémentaires** propriété à inclure `/Zc:strictStrings` , puis **OK**.  
-  
-## <a name="see-also"></a>Voir aussi  
- [/Zc (conformité)](../../build/reference/zc-conformance.md)
+> La bibliothèque C++ Standard dans [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] ne prend pas en charge la **/Zc : strictstrings** builds de l’option du compilateur en mode débogage. Si vous voyez plusieurs [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) erreurs dans votre build de sortie, cela peut être la cause.
+
+Pour plus d’informations sur les problèmes de conformité dans Visual C++, consultez [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
+
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
+
+1. Modifier la **des Options supplémentaires** propriété à inclure **/Zc : strictstrings** , puis **OK**.
+
+## <a name="see-also"></a>Voir aussi
+
+[/Zc (Conformité)](../../build/reference/zc-conformance.md)<br/>

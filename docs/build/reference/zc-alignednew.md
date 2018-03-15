@@ -1,6 +1,6 @@
 ---
 title: "/Zc:alignedNew (c ++ 17 trop d’allocation alignée) | Documents Microsoft"
-ms.date: 12/14/2017
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a4d6e801b258697154a4b11c7b5e468c090cc94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 trop d’allocation alignée)
 
@@ -33,7 +33,7 @@ Activer la prise en charge pour C ++ 17 trop forte aligné **nouveau**, allocati
 
 Visual Studio version 15.5 permet de compilateur et la prise en charge de la bibliothèque C ++ 17 standard alignés de manière excessive dynamique d’allocation de mémoire. Lorsque le **/Zc:alignedNew** option est spécifiée, une allocation dynamique comme `new Example;` respecte l’alignement de *exemple* même quand il est supérieur à `max_align_t`, le plus grand alignement obligatoire pour tous les types fondamentaux. Lorsque l’alignement du type alloué n’est pas plus d’assuré par l’opérateur d’origine **nouveau**, disponible en tant que la valeur de la macro prédéfinie  **\_ \_STDCPP\_par défaut \_Nouveau\_alignement\_\_**, l’instruction `new Example;` entraîne un appel à `::operator new(size_t)` comme dans C ++ 14. Lorsque l’alignement est supérieur à  **\_ \_STDCPP\_par défaut\_nouveau\_alignement\_\_**, l’implémentation obtient à la place la mémoire à l’aide de `::operator new(size_t, align_val_t)`. De même, la suppression de types alignés de manière excessive appelle `::operator delete(void*, align_val_t)` ou la taille supprimer la signature `::operator delete(void*, size_t, align_val_t)`.
 
-Le **/Zc:alignedNew** option est disponible uniquement lorsque [/std : c ++ 17](std-specify-language-standard-version.md) ou [/std : c ++ dernière](std-specify-language-standard-version.md) est activé. Sous **/std : c ++ 17** ou **/std : c ++ dernière**, **/Zc:alignedNew** est activée par défaut pour se conformer à la norme ISO C ++ 17 standard. Si la seule raison vous implémenter l’opérateur **nouveau** et **supprimer** doit prendre en charge les allocations alignées de manière excessive, vous devrez peut-être ne sont plus ce code dans le mode C ++ 17. Pour désactiver cette option et rétablir le comportement 14 C ++ de **nouveau** et **supprimer** lorsque **/std::c ++ 17** ou **/std : c ++ dernière** est spécifié, Spécifiez **/Zc:alignedNew-**. Si vous implémentez l’opérateur **nouveau** et **supprimer** , mais vous n’êtes pas prêt à implémenter l’opérateur aligné de manière excessive **nouveau** et **supprimer** surcharges ayant le `align_val_t` paramètre, utilisez le **/Zc:alignedNew-** option pour empêcher le compilateur et la bibliothèque Standard à partir de la génération d’appels aux surcharges alignés de manière excessive.
+Le **/Zc:alignedNew** option est disponible uniquement lorsque [/std : c ++ 17](std-specify-language-standard-version.md) ou [/std : c ++ dernière](std-specify-language-standard-version.md) est activé. Sous **/std : c ++ 17** ou **/std : c ++ dernière**, **/Zc:alignedNew** est activée par défaut pour se conformer à la norme ISO C ++ 17 standard. Si la seule raison vous implémenter l’opérateur **nouveau** et **supprimer** doit prendre en charge les allocations alignées de manière excessive, vous devrez peut-être ne sont plus ce code dans le mode C ++ 17. Pour désactiver cette option et rétablir le comportement 14 C ++ de **nouveau** et **supprimer** lorsque **/std::c ++ 17** ou **/std : c ++ dernière** est spécifié, Spécifiez **/Zc:alignedNew-**. Si vous implémentez l’opérateur **nouveau** et **supprimer** , mais vous n’êtes pas prêt à implémenter l’opérateur aligné de manière excessive **nouveau** et **supprimer** surcharges ayant le `align_val_t` paramètre, utilisez le **/Zc:alignedNew-** option pour empêcher le compilateur et la bibliothèque Standard à partir de la génération d’appels aux surcharges alignés de manière excessive. Le [/ permissive-](permissive-standards-conformance.md) option ne modifie pas le paramètre par défaut de **/Zc:alignedNew**.
 
 ## <a name="example"></a>Exemple
 
@@ -106,10 +106,10 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).
 
-1. Sélectionnez le **ligne de commande** page de propriétés dans le **C/C++** dossier.
+1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
 
 1. Modifier la **des Options supplémentaires** propriété à inclure **/Zc:alignedNew** ou **/Zc:alignedNew-** , puis **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc (conformité)](../../build/reference/zc-conformance.md)  
+[/Zc (Conformité)](../../build/reference/zc-conformance.md)  
