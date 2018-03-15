@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Compatibilité binaire C++ entre Visual Studio 2015 et Visual Studio 2017
 
@@ -34,7 +34,8 @@ Il existe deux exceptions à cette règle. La compatibilité binaire n’est pas
 
 1) Quand les bibliothèques statiques ou les fichiers objets sont compilés avec le commutateur de compilateur /GL.  
 
-2) Quand une application consomme des bibliothèques redistribuables dont le numéro de version est inférieur à l’ensemble d’outils utilisé pour compiler l’application. En d’autres termes, si vous compilez un programme avec l’ensemble d’outils de plateforme v141, toutes les bibliothèques redistribuables que consomme l’application doivent être compilées avec v141 ou supérieur.  
+2) Lors de l’utilisation de bibliothèques générées avec un ensemble d’outils dont la version est supérieure à l’ensemble d’outils utilisé pour compiler et lier l’application. Par exemple, un programme qui est compilé et lié avec un ensemble d’outils 19.12 peut utiliser des bibliothèques qui sont compilées avec les versions 19.0 à 19.12. La liaison de programmes 19.x avec des bibliothèques produites par Visual Studio 2013 ou antérieur n’est pas prise en charge.
+
 
 ## <a name="see-also"></a>Voir aussi  
 
