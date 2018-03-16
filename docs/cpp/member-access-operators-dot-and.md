@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Opérateurs d’accès au membre :. et -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -50,7 +50,7 @@ postfix-expression -> name
   
 1.  Dans la première forme, *postfix-expression* représente une valeur de type d’union, classe ou struct et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur de l’opération est celle de *nom* et est une l-value Si *postfix-expression* est une l-value.  
   
-2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le  **->**  opérateur de déréférence le pointeur. Par conséquent, les expressions *e*  **->**  `member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs  **->**  ou  **\***  sont surchargées).  
+2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le  **->**  opérateur de déréférence le pointeur. Par conséquent, les expressions * e * **->**  `member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs  **->**  ou  **\***  sont surchargées).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre les deux formes de l'opérateur d'accès aux membres.  

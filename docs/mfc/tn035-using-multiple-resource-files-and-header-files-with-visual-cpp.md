@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035 : utilisation de plusieurs fichiers de ressources et fichiers d’en-tête avec Visual C++
 > [!NOTE]
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H définit des symboles standard, par exemple `ID_FILE_NEW`, utilisés par l'infrastructure et spécifiquement dans AFXRES.RC. AFXRES.H inclut également WINRES.H, qui contient un sous-ensemble de WINDOWS.H requis par les fichiers .RC générés par Visual C++, ainsi que par AFXRES.RC. Les symboles définis dans AFXRES.H sont disponibles lorsque vous modifiez le fichier de ressources d'application (MYAPP.RC). Par exemple, `ID_FILE_NEW` est utilisé pour l'élément Nouveau du menu Fichier dans la ressource de menu de MYAPP.RC. Vous ne pouvez pas modifier ou supprimer ces symboles définis par l'infrastructure.  
   
-## <a name="_mfcnotes_tn035_including"></a>Y compris les fichiers d’en-tête supplémentaires  
+## <a name="_mfcnotes_tn035_including"></a> Y compris les fichiers d’en-tête supplémentaires  
   
  L'application créée par AppWizard inclut uniquement deux fichiers d'en-tête : RESOURCE.H et AFXRES.H. Seul RESOURCE.H est spécifique à l'application. Vous devrez peut-être inclure des fichiers d'en-tête en lecture seule supplémentaires dans les cas suivants :  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ ajoute toujours la ligne de commentaire //{{NO_DEPENDENCIES}} à un fichier .RC lorsqu'il enregistre le fichier. Dans certains cas, le contournement de la dépendance de build vis-à-vis de RESOURCE.H peut provoquer des erreurs d'exécution non détectées au moment de la liaison. Par exemple, si vous utilisez le navigateur de symbole pour modifier la valeur numérique assignée à un symbole pour une ressource, celle-ci ne sera pas correctement détectée et chargée lors de l'exécution de l'application si le fichier .CPP faisant référence à la ressource n'est pas recompilé. Dans ce cas, vous devez explicitement recompilez un. Les fichiers CPP que vous savez sont affectées par les modifications de symbole de ressource. H ou sélectionnez **tout reconstruire**. Si vous devez modifier fréquemment des valeurs de symbole pour un certain groupe de ressources, vous constaterez probablement il plus pratique et plus sécurisé de consigner ces symboles dans un fichier d’en-tête distinct d’en lecture seule, comme décrit dans la section ci-dessus [notamment Fichiers d’en-tête supplémentaires](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Comment Visual C++ gère ensemble inclut des informations **  
+## <a name="_mfcnotes_tn035_set_includes"></a> Comment Visual C++ gère ensemble inclut des informations **  
   
  Comme décrit ci-dessus, la commande Set Includes du menu Fichier vous permet de spécifier trois types d'informations :  
   

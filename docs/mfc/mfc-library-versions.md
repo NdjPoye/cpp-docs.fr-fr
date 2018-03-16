@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>Versions de bibliothèque MFC
 
@@ -98,7 +98,7 @@ Projets MFC utilisent le symbole de préprocesseur  **\_UNICODE** pour indiquer 
 
 Bibliothèques statiques MFC utilisent les conventions d’affectation de noms suivantes. Les noms de bibliothèque ont la forme
 
-> *u*AFX*c ** d*. LIB
+> *u*AFX*c**d*.LIB
 
 où les lettres affichés en italique minuscules sont des espaces réservés pour des spécificateurs dont la signification est indiquée dans le tableau suivant :
 
@@ -114,10 +114,10 @@ Toutes les bibliothèques répertoriées dans le tableau suivant sont incluses p
 |-------------|-----------------|
 |NAFXCW.LIB|Bibliothèque de liaison statique MFC, version Release|
 |NAFXCWD.LIB|Bibliothèque de liaison statique MFC, version de débogage|
-|UAFXCW. LIB|Bibliothèque de liaison statique MFC avec prise en charge d’Unicode, version Release|
-|UAFXCWD. LIB|Bibliothèque de liaison statique MFC avec prise en charge d’Unicode, version de débogage|
-|AFXNMCD. LIB|Bibliothèque de liaison statique MFC sans contrôles de boîte de dialogue MFC, version Release|
-|AFXNMCDD. LIB|Bibliothèque de liaison statique MFC sans contrôles de boîte de dialogue MFC, version de débogage|
+|UAFXCW.LIB|Bibliothèque de liaison statique MFC avec prise en charge d’Unicode, version Release|
+|UAFXCWD.LIB|Bibliothèque de liaison statique MFC avec prise en charge d’Unicode, version de débogage|
+|AFXNMCD.LIB|Bibliothèque de liaison statique MFC sans contrôles de boîte de dialogue MFC, version Release|
+|AFXNMCDD.LIB|Bibliothèque de liaison statique MFC sans contrôles de boîte de dialogue MFC, version de débogage|
 
 Fichiers du débogueur qui ont le même nom et une extension .pdb sont également disponibles pour chacune des bibliothèques statiques.
 
@@ -129,14 +129,14 @@ La DLL de MFC ont *version* des nombres qui indiquent la compatibilité binaire.
 
 |DLL|Description|
 |---------|-----------------|
-|MFC*version*. DLL|Version DLL MFC, ANSI ou MBCS version|
+|MFC*version*.DLL|Version DLL MFC, ANSI ou MBCS version|
 |MFC*version*U.DLL|DLL MFC, version Release d’Unicode|
 |MFC*version*D.DLL|Version DLL MFC, ANSI ou MBCS de débogage|
-|MFC*version*UD. DLL|DLL MFC, version Unicode Debug|
-|MFCM*version*. DLL|DLL MFC avec les contrôles Windows Forms, version ANSI ou d’une version de MBCS|
+|MFC*version*UD.DLL|DLL MFC, version Unicode Debug|
+|MFCM*version*.DLL|DLL MFC avec les contrôles Windows Forms, version ANSI ou d’une version de MBCS|
 |MFCM*version*U.DLL|DLL MFC avec les contrôles Windows Forms, version Release d’Unicode|
 |MFCM*version*D.DLL|DLL MFC avec les contrôles Windows Forms, version ANSI ou MBCS de débogage|
-|MFCM*version*UD. DLL|DLL MFC avec les contrôles Windows Forms, version Unicode Debug|
+|MFCM*version*UD.DLL|DLL MFC avec les contrôles Windows Forms, version Unicode Debug|
 
 Les bibliothèques d’importation nécessaires pour générer des applications ou des DLL qui utilisent ces DLL partagée d’extension MFC ont le même nom que la DLL, mais ont une extension de nom de fichier .lib. Lorsque vous utilisez les DLL partagées, une petite bibliothèque statique doit toujours être liée à votre code. Cette bibliothèque est nommée MFCS*version*{U} {D} .lib.
 

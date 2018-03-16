@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d'évaluation
 La priorité et l’associativité des opérateurs C affectent le regroupement et l’évaluation des opérandes dans les expressions. La priorité d'un opérateur est significative uniquement si d'autres opérateurs dotés d'une priorité supérieure ou inférieure sont présents. Les expressions avec des opérateurs de priorité supérieure sont évaluées en premier. La priorité peut également être décrite par le mot « liaison ». Les opérateurs dotés d'une priorité plus élevée sont considérés comme ayant une liaison plus stricte.  

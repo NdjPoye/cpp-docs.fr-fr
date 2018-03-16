@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -38,7 +38,7 @@ C++ prend en charge l’allocation dynamique et la désallocation des objets à 
   
  Pour obtenir la liste des fichiers de bibliothèque qui composent la bibliothèque Runtime C et la bibliothèque C++ Standard, consultez [fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> L’opérateur new  
+##  <a id="new_operator"> </a> L’opérateur new  
  Lorsqu'une instruction comme la suivante est détectée dans un programme, elle se traduit par un appel à la fonction `operator new` :  
   
 ```cpp  
@@ -59,7 +59,7 @@ Les deux portées des fonctions `operator new` sont décrites dans le tableau su
 |**:: new, opérateur**|Global|  
 |*nom de la classe* **:: new, opérateur**|Classe|  
   
- Le premier argument de **new, opérateur** doit être de type **size_t** (un type défini dans \<stddef.h >), et le type de retour est toujours **void \***.  
+ Le premier argument de **new, opérateur** doit être de type **size_t** (un type défini dans \<stddef.h >), et le type de retour est toujours **void \***  .  
   
  Global **new, opérateur** fonction est appelée lorsque le **nouveau** opérateur est utilisé pour allouer des objets de types intégrés, définis par l’utilisateur du type de classe des objets qui ne contiennent pas **new, opérateur** fonctions et des tableaux de n’importe quel type. Lorsque le **nouvelle** opérateur est utilisé pour allouer des objets d’un type de classe où un **new, opérateur** est défini, la classe **new, opérateur** est appelée.  
   
@@ -144,7 +144,7 @@ int main() {
   
  Il existe d’autres manières pour gérer les demandes d’allocation de mémoire a échoué : écrire une routine de récupération personnalisée pour gérer un tel échec, puis enregistrez votre fonction en appelant le [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) fonction du moment de l’exécution.  
   
-##  <a id="delete_operator"></a> L’opérateur delete  
+##  <a id="delete_operator"> </a> L’opérateur delete  
  Mémoire qui est allouée dynamiquement à l’aide de la **nouveau** opérateur peut être libérée à l’aide de la **supprimer** opérateur. L’opérateur delete appelle le **opérateur delete** fonction, ce qui libère la mémoire vers le pool disponible. À l’aide de la **supprimer** opérateur entraîne le destructeur de classe (le cas échéant) à appeler.  
   
  Il sont globales et de portée de classe **opérateur delete** fonctions. Seul **opérateur delete** fonction peut être définie pour une classe donnée ; s’il est défini, il masque global **opérateur delete** (fonction). Global **opérateur delete** fonction est toujours appelée pour les tableaux de n’importe quel type.  

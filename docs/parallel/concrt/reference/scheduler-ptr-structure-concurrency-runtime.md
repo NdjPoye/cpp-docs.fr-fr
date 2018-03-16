@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr, Structure
 Représente un pointeur vers un planificateur. Cette classe a pour fonction de permettre la spécification d'une durée de vie partagée à l'aide de shared_ptr ou d'une référence simple à l'aide d'un pointeur brut.  
@@ -62,7 +62,7 @@ struct scheduler_ptr;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `scheduler_ptr`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** pplinterface.h  
   
  **Espace de noms :** concurrency  

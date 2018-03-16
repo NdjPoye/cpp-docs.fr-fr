@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractères (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Littéraux de caractère  
  Un *littéral de caractère* est composé d'une constante caractère. Elle est représentée par le caractère entouré de guillemets-apostrophes. Il existe cinq types de littéraux de caractère :  
   
--   Littéraux de caractère ordinaire de type `char`, par exemple`'a'`  
+-   Littéraux de caractère ordinaire de type `char`, par exemple `'a'`  
   
--   Littéraux de caractères UTF-8 de type `char`, par exemple`u8'a'`  
+-   Littéraux de caractères UTF-8 de type `char`, par exemple `u8'a'`  
   
 -   Littéraux de caractères étendus de type `wchar_t`, par exemple `L'a'`  
   
--   Littéraux de caractère UTF-16 de type `char16_t`, par exemple`u'a'`  
+-   Littéraux de caractère UTF-16 de type `char16_t`, par exemple `u'a'`  
   
--   Littéraux de caractères UTF-32 de type `char32_t`, par exemple`U'a'`  
+-   Littéraux de caractères UTF-32 de type `char32_t`, par exemple `U'a'`  
   
  Le caractère utilisé pour un littéral de caractère peut être n’importe quel caractère, à l’exception de la barre oblique inverse les caractères réservés ('\\'), guillemet simple ('), ou une nouvelle ligne. Les caractères réservés peuvent être spécifiés à l’aide d’une séquence d’échappement. Vous pouvez spécifier des caractères à l’aide des noms de caractères universels, tant que le type est suffisamment grand pour contenir le caractère.  
   
@@ -406,4 +406,4 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ## <a name="see-also"></a>Voir aussi  
  [Character Sets](../cpp/character-sets2.md)   
  [Littéraux numériques, booléen et pointeur](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
- [Littéraux définis par l'utilisateur](../cpp/user-defined-literals-cpp.md)
+ [Littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md)

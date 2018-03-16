@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue, classe
 Classe d’adaptateur de conteneur de modèle qui fournit une restriction de fonctionnalité limitant l’accès à l’élément supérieur d’un certain type de conteneur sous-jacent, qui est toujours le plus grand ou de la priorité la plus élevée. De nouveaux éléments peuvent être ajoutés à la classe priority_queue, et l’élément supérieur dans priority_queue peut être inspecté ou supprimé.  
@@ -102,7 +102,7 @@ class priority_queue
 |[size](#size)|Retourne le nombre d'éléments d'un `priority_queue`.|  
 |[top](#top)|Retourne une référence const à l’élément le plus grand en haut du `priority_queue`.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<queue>  
   
  **Espace de noms :** std  

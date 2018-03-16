@@ -1,7 +1,7 @@
 ---
 title: "Détermination des DLL à redistribuer | Documents Microsoft"
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Détermination des DLL à redistribuer
 
@@ -55,11 +55,11 @@ Le tableau suivant décrit certaines des DLL Visual C++ dont votre application 
 |--------------------------|-----------------|----------------|
 |vcruntime*version*.dll|Bibliothèque d’exécution pour le code natif.|Applications qui utilisent les normal C et C++ démarrage et arrêt de services de langage.|
 |vccorlib*version*.dll|Bibliothèque d’exécution pour le code managé.|Applications qui utilisent les services de langage C++ pour le code managé.|
-|msvcp*version*.dll|Bibliothèque Standard C++ pour le code natif.|Les applications qui utilisent la [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).|
+|msvcp*version*.dll et msvcp*version*_*dotnumber*.dll|Bibliothèque Standard C++ pour le code natif.|Les applications qui utilisent la [bibliothèque Standard C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*version*.dll|Bibliothèque du Runtime d’accès concurrentiel pour le code natif.|Les applications qui utilisent la [Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md).|
-|MFC*version*.dll|Bibliothèque MFC (Microsoft Foundation Class).|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md).|
+|mfc*version*.dll|Bibliothèque MFC (Microsoft Foundation Class).|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md).|
 |MFC*version* *langage*.dll|Microsoft Foundation Classes (MFC) les ressources de bibliothèque.|Applications qui utilisent des ressources de langue spécifique pour que MFC.|
-|MFC*version*u.dll|Bibliothèque MFC avec prise en charge Unicode.|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md) et requièrent la prise en charge Unicode.|
+|mfc*version*u.dll|Bibliothèque MFC avec prise en charge Unicode.|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md) et requièrent la prise en charge Unicode.|
 |mfcmifc80.dll|Bibliothèque d'interfaces gérées MFC.|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md) avec [des contrôles Windows Forms](/dotnet/framework/winforms/controls/index).|
 |mfcm*version*.dll|Bibliothèque managée MFC.|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md) avec [des contrôles Windows Forms](/dotnet/framework/winforms/controls/index).|
 |mfcm*version*u.dll|Bibliothèque managée MFC avec prise en charge Unicode.|Les applications qui utilisent la [bibliothèque MFC](../mfc/mfc-desktop-applications.md) avec [des contrôles Windows Forms](/dotnet/framework/winforms/controls/index) et requièrent la prise en charge Unicode.|

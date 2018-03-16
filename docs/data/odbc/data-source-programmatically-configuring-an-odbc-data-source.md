@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
 Cette rubrique explique comment configurer les noms de sources de données de base de données ODBC (Open Connectivity) par programmation. Cela vous donne une grande souplesse pour accéder aux données sans forcer l’utilisateur d’utiliser explicitement l’administrateur ODBC ou autres programmes pour spécifier les noms de sources de données.  
@@ -40,7 +40,7 @@ Cette rubrique explique comment configurer les noms de sources de données de ba
   
  Toutefois, nombreux SGBD permettre de créer une source de données par programmation. Certaines sources de données conservent une spécification de répertoire pour les bases de données. Autrement dit, un répertoire est la source de données et chaque table de la source de données est stockée dans un fichier distinct (dans le cas de dBASE, chaque table est un fichier .dbf). Pilotes d’autres bases de données ODBC, telles que Microsoft Access et SQL Server, nécessitent que certains critères spécifiques soient remplis avant qu’une source de données peut être établie. Par exemple, lorsque vous utilisez le pilote ODBC de SQL Server, vous devez avoir établi un ordinateur SQL Server.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>Exemple de SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_example"></a> Exemple de SQLConfigDataSource  
  L’exemple suivant utilise le **:: SQLConfigDataSource** fonction d’API ODBC pour créer une nouvelle source de données Excel appelé nouvelle Source de données Excel :  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Bien que ces informations peut être écrite directement dans le Registre sans utiliser de **:: SQLConfigDataSource**, toute application qui fait repose sur la technique actuelle utilisée par le Gestionnaire de pilote pour conserver ses données. Si une version ultérieure pour le Gestionnaire de pilotes ODBC implémente tenue sur les sources de données d’une manière différente, toute application qui utilise cette technique est rompue. Il est généralement recommandé d’utiliser une fonction API lorsqu’elle est fournie. Par exemple, votre code est portable à partir de 16 bits en 32 bits si vous utilisez la **:: SQLConfigDataSource** fonctionne, car la fonction écrit correctement dans le fichier Odbc.ini ou dans le Registre.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Paramètres de SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> Paramètres de SQLConfigDataSource  
  Décrit les paramètres de la **:: SQLConfigDataSource** (fonction). La majorité des informations provient de l’API ODBC *de référence du programmeur* fourni avec Visual C++ version 1.5 ou ultérieure.  
   
-###  <a name="_core_function_prototype"></a>Prototype de fonction  
+###  <a name="_core_function_prototype"></a> Prototype de fonction  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Notes  
   
-####  <a name="_core_parameters_and_usage"></a>Paramètres et utilisation  
+####  <a name="_core_parameters_and_usage"></a> Paramètres et utilisation  
  *hwndParent*  
  La fenêtre spécifiée comme propriétaire de toutes les boîtes de dialogue qui soit le Gestionnaire de pilotes ODBC ou le pilote ODBC spécifique crée pour obtenir des informations supplémentaires à partir de l’utilisateur sur la nouvelle source de données. Si le `lpszAttributes` paramètre ne fournit pas suffisamment d’informations, une boîte de dialogue s’affiche. Le *hwndParent* paramètre peut être **NULL**.  
   

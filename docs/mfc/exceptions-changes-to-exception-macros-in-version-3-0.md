@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions : modifications apportées aux macros d'exception dans la version 3.0
 Il s’agit d’une rubrique avancée.  
@@ -39,7 +39,7 @@ Il s’agit d’une rubrique avancée.
   
 -   [Nouvelle levée des exceptions](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Types d’exception et la Macro CATCH  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Types d’exception et la Macro CATCH  
  Dans les versions antérieures de MFC, la **CATCH** macro utilisé les informations de type au moment de l’exécution MFC pour déterminer le type d’une exception ; le type de l’exception est déterminée, en d’autres termes, au niveau du site d’interception. Avec les exceptions C++, toutefois, type de l’exception est toujours déterminé au niveau du site de levée par le type de l’objet exception qui est levée. Cela entraîne des incompatibilités dans les rares cas où le type du pointeur vers l’objet levé est différent du type de l’objet levé.  
   
  L’exemple suivant illustre les conséquences de cette différence entre MFC version 3.0 et versions antérieures :  
@@ -60,7 +60,7 @@ Il s’agit d’une rubrique avancée.
   
  Pour contourner ce problème, déplacez l’expression throw à partir de la fonction au code appelant et lève une exception du type réellement connu du compilateur au moment de que l’exception est générée.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Nouvelle levée des Exceptions  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Nouvelle levée des Exceptions  
  Un bloc catch ne peuvent pas lever le pointeur d’exception qu’il a intercepté.  
   
  Par exemple, ce code était valide dans les versions précédentes, mais ont des résultats inattendus avec la version 3.0 :  

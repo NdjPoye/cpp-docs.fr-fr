@@ -22,10 +22,10 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
 ||||  
@@ -313,13 +313,13 @@ Type inner_product(
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre retourne la somme des produits d’éléments et y ajoute la valeur initiale spécifiée. Pour les plages de valeurs *a*i et *b*i, elle retourne :  
   
- `val` + ( *un*1 \* *b*1) + ( *un*2 \* *b*2) +... + ( *un* n  \* *b*n) 
+ `val` + ( *un*1 \* *b*1) + ( *un*2 \* *b*2) +... + ( *un*n \* *b*n) 
   
  en remplaçant de manière itérative `val` avec `val` + ( *un*i \* *b*i).  
   
  La deuxième fonction membre retourne :  
   
- `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
+ `val` *binary_op1* ( *un*1 *binary_op2* *b*1) *binary_op1* ( *un*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *un*n *binary_op2* *b*n)  
   
  en remplaçant de manière itérative `val` avec `val` *binary_op1* ( *un*i *binary_op2* *b*i).  
   

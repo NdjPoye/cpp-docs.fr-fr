@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="type-cast-conversions"></a>Conversions de type cast
 Vous pouvez utiliser des casts de type pour convertir explicitement les types.  
@@ -53,7 +53,7 @@ Vous pouvez utiliser des casts de type pour convertir explicitement les types.
 |Virgule flottante|Tout type arithmétique|  
 |Pointeur vers un objet ou (**void \***)|Tout type entier, (**void \***), pointeur vers un objet ou pointeur fonction|  
 |Pointeur fonction|Tout type intégral, pointeur vers un objet ou pointeur fonction|  
-|Structure, union ou tableau|Aucun.|  
+|Structure, union ou tableau|Aucun|  
 |Type void|Tout type|  
   
  Tout identificateur peut être converti en type `void`. Toutefois, si le type spécifié dans une expression cast-type n'est pas `void`, l'identificateur converti en ce type ne peut pas être une expression `void`. Toute expression peut être convertie en `void`, mais une expression de type `void` ne peut pas être castée en un autre type. Par exemple, une fonction avec un type de retour `void` ne peut pas avoir son retour converti en un autre type.  

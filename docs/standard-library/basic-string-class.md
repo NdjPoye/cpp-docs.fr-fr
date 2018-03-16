@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string, classe
 Les séquences contrôlées par un objet de la classe de modèle `basic_string` correspondent à la classe de chaîne C++ Standard et sont généralement appelées chaînes. Toutefois, elles ne doivent pas être confondues avec les chaînes de style C se terminant par un caractère null et utilisées dans la bibliothèque C++ Standard. La chaîne C++ Standard est un conteneur qui permet d’utiliser les chaînes comme types normaux, par exemple pour les opérations de comparaison et de concaténation, les itérateurs, les algorithmes de la bibliothèque C++ Standard, ainsi que les opérations de copie et d’assignation avec la mémoire gérée par la classe allocator. Si vous devez convertir une chaîne C++ Standard en chaîne de style C se terminant par un caractère null, utilisez le membre [basic_string::c_str](#c_str).  
@@ -241,7 +241,7 @@ class basic_string;
   
  Les références, pointeurs et itérateurs qui désignent les éléments de la séquence contrôlée peuvent devenir non valides après un appel à une fonction qui modifie la séquence contrôlée, ou après le premier appel à une fonction membre non-**const**.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<string>  
   
  **Espace de noms :** std  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.  
   
 ### <a name="remarks"></a>Notes  
- Le premier élément de la chaîne possède un index de zéro et les éléments suivants sont indexés consécutivement par des entiers positifs, afin qu’une chaîne de longueur  *n*  a un  *n* th élément indexé par le nombre *n -* 1.  
+ Le premier élément de la chaîne possède un index de zéro et les éléments suivants sont indexés consécutivement par des entiers positifs, afin qu’une chaîne de longueur *n* a un *n*ième élément indexé par le nombre *n -* 1.  
   
  Le membre [operator&#91;&#93;](#op_at) est plus rapide que la fonction membre **at** pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.  
   
 ### <a name="remarks"></a>Notes  
- Le premier élément de la chaîne a un index de zéro, et les éléments suivants sont indexés consécutivement par des entiers positifs, afin qu’une chaîne de longueur  *n*  a un  *n*  élément indexé par le nombre  *n*  - 1.  
+ Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a son *n*-ième élément indexé par le nombre *n* - 1.  
   
  `operator[]` est plus rapide que la fonction membre [at](#at) pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.  
   

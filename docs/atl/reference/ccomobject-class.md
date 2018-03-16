@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>Classe de CComObject
 Cette classe implémente **IUnknown** pour un objet brutes et non agrégée.  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |Nom|Description|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Constructeur.|  
-|[CComObject :: ~ CComObject](#dtor)|Destructeur.|  
+|[CComObject::~CComObject](#dtor)|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CComObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet brutes et non agrégée. Toutefois, les appels à `QueryInterface`, `AddRef`, et **version** sont déléguées à `CComObjectRootEx`.  
+ `CComObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet brutes et non agrégée. Toutefois, les appels à `QueryInterface`, `AddRef`, et **version** sont déléguées à `CComObjectRootEx`.  
   
  Pour plus d’informations sur l’utilisation de `CComObject`, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -75,10 +75,10 @@ class CComObject : public Base
   
  `CComObject`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  Incrémente le décompte de références sur l’objet.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valeur de retour  
  Cette fonction retourne le nouveau nombre incrémenté de référence sur l’objet. Cette valeur peut être utile pour les tests de diagnostic ou des tests.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  Le constructeur incrémente le nombre de verrous du module.  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Paramètres  
  **void\***  
- [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
+ [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom *** XXX*`Object`*XXX* constructeurs.  
   
 ### <a name="remarks"></a>Notes  
  Le décrémente destructeur il.  
   
  Si un `CComObject`-objet dérivé est construit correctement à l’aide de la **nouveau** (opérateur), le nombre de référence initiale est 0. Pour définir le nombre de références à la valeur appropriée (1), effectuez un appel à la [AddRef](#addref) (fonction).  
   
-##  <a name="dtor"></a>CComObject :: ~ CComObject  
+##  <a name="dtor"></a>  CComObject::~CComObject  
  Destructeur.  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  Libère toutes les ressources attribuées, les appels [FinalRelease](ccomobjectrootex-class.md#finalrelease), et décrémente le module nombre de verrous.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  Cette fonction statique vous permet de créer un nouveau **CComObject <** `Base`  **>**  objet, sans la surcharge de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  Récupère un pointeur vers l'interface demandée.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  Décrémente le décompte de références sur l’objet.  
   
 ```

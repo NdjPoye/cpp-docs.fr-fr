@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([La priorité des opérateurs et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans [Conventions lexicales](../cpp/lexical-conventions.md), montre les relations C++ opérateurs appliquent aux expressions.)  
@@ -80,10 +80,10 @@ Ordre Expression-Évaluation avec parenthèses
   
 |Type attendu|Types autorisés|  
 |-------------------|-------------------|  
-|*type*|`const`*type*<br /> `volatile`*type*<br /> *type*&<br /> `const`*type*&<br /> `volatile`*type*&<br /> `volatile const`*type*<br /> `volatile const`*type*&|  
-|*type*\*|*type*\*<br /> `const`*type*\*<br /> `volatile`*type*\*<br /> `volatile const`*type*\*|  
-|`const`*type*|*type*<br /> `const`*type*<br />`const`*type*&|  
-|`volatile`*type*|*type*<br /> `volatile`*type*<br /> `volatile`*type*&|  
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
   
  Comme les règles précédentes peuvent toujours être utilisées de manière combinée, un pointeur const vers un objet volatile peut être fourni là où un pointeur est attendu.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Opérande de gauche de l’opérateur AND logique (&&). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur AND logique sera évalué.  
   
--   Opérande gauche de l’opérateur OR logique (&#124; &#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.  
+-   Opérande de gauche de l’opérateur OR logique (&#124;&#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.  
   
 -   Opérande gauche de l'opérateur virgule. L’opérande gauche de l’opérateur virgule est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Les deux opérandes de l'opérateur virgule sont toujours évalués.  
   

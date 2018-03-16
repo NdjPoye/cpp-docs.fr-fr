@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>Opérateur d’indice :
 ## <a name="syntax"></a>Syntaxe  
@@ -51,9 +51,9 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- Dans l'exemple précédent, l'expression `nArray[2]` est identique à `2[nArray]`. La raison est que le résultat d’une expression d’indice *e1***[** *e2* **]** est donné par :  
+ Dans l'exemple précédent, l'expression `nArray[2]` est identique à `2[nArray]`. La raison est que le résultat d’une expression d’indice *e1 *** [** *e2* **]** est donné par :  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
  L’adresse transmise par l’expression n’est pas *e2* octets à partir de l’adresse *e1*. Au lieu de cela, l’adresse est à l’échelle pour parvenir à l’objet suivant dans le tableau *e2*. Exemple :  
   
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Les expressions d'indice s'associent de gauche à droite. L'expression d'indice extrême gauche, *expression1***[***expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, * expression1***[***expression2 ***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions. L'exemple suivant déclare et initialise un tableau de caractères simple à deux dimensions :  
   

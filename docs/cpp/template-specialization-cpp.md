@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Spécialisation de modèle (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Exemple
 
- Si vous avez une classe de collection de modèle qui accepte tout type **T**, vous pouvez créer une spécialisation partielle qui accepte tout type pointeur **T***. Le code suivant illustre un modèle de classe de collection `Bag` et une spécialisation partielle pour les types pointeur dans laquelle la collection déréférence les types pointeur avant de les copier dans le tableau. La collection stocke ensuite les valeurs cibles des pointeurs. Avec le modèle d’origine, seuls les pointeurs proprement dits auraient été stockés dans la collection, laissant les données vulnérables à la suppression ou à la modification. Dans cette version de pointeur spéciale de la collection, du code vérifiant l'existence d'un pointeur null dans la méthode `add` est ajouté.  
+ Si vous avez une classe de collection de modèle qui accepte tout type **T**, vous pouvez créer une spécialisation partielle qui accepte tout type pointeur ** T ***. Le code suivant illustre un modèle de classe de collection `Bag` et une spécialisation partielle pour les types pointeur dans laquelle la collection déréférence les types pointeur avant de les copier dans le tableau. La collection stocke ensuite les valeurs cibles des pointeurs. Avec le modèle d’origine, seuls les pointeurs proprement dits auraient été stockés dans la collection, laissant les données vulnérables à la suppression ou à la modification. Dans cette version de pointeur spéciale de la collection, du code vérifiant l'existence d'un pointeur null dans la méthode `add` est ajouté.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

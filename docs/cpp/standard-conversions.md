@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Conversions standard
 Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types et types dérivés des types standard, consultez [Types](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Les promotions de type conservation-valeur et les promotions qui conservent l'entier non signé produisent normalement les mêmes résultats. Toutefois, ils peuvent produire des résultats différents si l'objet promu est l'un des suivants :  
   
--   Un opérande de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou**>=**  
+-   Un opérande de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou **>=**  
   
      Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.  
   
--   L’opérande gauche de  **>>**  ou**>>=**  
+-   L’opérande gauche de  **>>**  ou **>>=**  
   
      Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.  
   
@@ -199,7 +199,7 @@ int main() {
   
  L'accessibilité d'une classe de base dépend du type d'héritage utilisé dans la dérivation. Prenons l'héritage illustré dans l'illustration suivante.  
   
- ![Base de l’héritage graphique montrant &#45; accessibilité de la classe](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Graphique d’héritage illustrant base&#45;d’accessibilité de la classe](../cpp/media/vc38xa1.gif "vc38XA1")  
 Graphique d'héritage pour l'illustration de l'accessibilité de la classe de base  
   
  Le tableau suivant indique l'accessibilité de la classe de base d'après la situation illustrée.  

@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="map-class"></a>map, classe
 Utilisé pour le stockage et la récupération de données d’une collection dans laquelle chaque élément est une paire qui a à la fois une valeur de données et une clé de tri. La valeur de la clé est unique et est utilisée pour trier automatiquement les données.  
@@ -233,7 +233,7 @@ class map;
 |[operator&#91;&#93;](#op_at)|Insère un élément dans une classe map avec une valeur de clé spécifiée.|  
 |[operator=](#op_eq)|Remplace les éléments d'une classe map par une copie d'une autre classe map.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<map>  
   
  **Espace de noms :** std  

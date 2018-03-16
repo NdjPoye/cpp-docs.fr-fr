@@ -44,10 +44,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="valarray-class"></a>valarray, classe
 La classe de modèle décrit un objet qui contrôle une séquence d'éléments de type **Type** qui sont stockés sous forme de tableau, conçu pour effectuer des opérations mathématiques très rapides et optimisé pour les performances de calcul.  
@@ -115,7 +115,7 @@ La classe de modèle décrit un objet qui contrôle une séquence d'éléments d
 |[operator&#124;=](#op_or_eq)|Obtient le résultat d'une opération `OR` au niveau du bit des éléments d'un tableau avec les éléments correspondants d'un `valarray` spécifié ou avec une valeur du type d'élément.|  
 |[operator~](#op_dtor)|Un opérateur unaire qui obtient les valeurs `NOT` au niveau du bit de chaque élément d'un `valarray`.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<valarray>  
   
  **Espace de noms :** std  

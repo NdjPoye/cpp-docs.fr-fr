@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
@@ -44,7 +44,7 @@ Vous pouvez surcharger des fonctions membres et les fonctions non membres. Le ta
 |Présence ou absence de points de suspension|Oui|  
 |Utilisation de noms `typedef`|Non|  
 |Limites de tableau non spécifiées|Non|  
-|**const** ou`volatile`|Oui, quand il est appliqué à la fonction entière|
+|**const** ou `volatile`|Oui, quand il est appliqué à la fonction entière|
 |[ref-qualifier](#ref-qualifier)|Oui|  
   
 ## <a name="example"></a>Exemple  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Notez que l'intersection entre ces deux ensembles est vide. Par conséquent, le compilateur génère un message d'erreur.  
   
- Pour l’argument correspondant, une fonction avec  *n*  arguments par défaut est traité comme  *n* + 1 des fonctions séparées, chacune avec un nombre différent d’arguments.  
+ Pour l’argument correspondant, une fonction avec *n* arguments par défaut est traité comme *n*+ 1 des fonctions séparées, chacune avec un nombre différent d’arguments.  
   
  L’ellipse (...) fait office de caractère générique ; elle correspond à n’importe quel argument réel. Cela peut aboutir à de nombreux ensembles ambigus si vous ne concevez pas vos ensembles de fonctions surchargées de fonction avec une extrême prudence.  
   
@@ -301,7 +301,7 @@ Graphique illustrant les conversions préférées
   
  La règle précédente s’applique uniquement à un chemin de dérivation donné. Examinez le graphique présenté dans l'illustration ci-dessous.  
   
- ![Plusieurs &#45; l’héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Plusieurs&#45;héritage illustrant les conversions préférées](../cpp/media/vc391t2.gif "vc391T2")  
 Graphique d'héritages multiples illustrant les conversions préférées  
   
  La conversion du type `C*` vers le type `B*` est préférable à une conversion du type `C*` vers le type `A*`. Cela provient du fait qu'ils se trouvent dans le même chemin et que `B*` est plus proche. Toutefois, la conversion du type `C*` vers le type `D*` n'est pas préférable à une conversion vers le type `A*`. Il n'existe aucune préférence car les conversions suivent des chemins différents.  
@@ -407,7 +407,7 @@ obj.name
   
  L'opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d'arguments.  
 
-## <a name="ref-qualifiers"></a>Ces qualificateurs ref sur les fonctions membres  
+## <a name="ref-qualifiers"></a> Ces qualificateurs ref sur les fonctions membres  
 Ces qualificateurs REF permettent de surcharger une fonction membre après que l’objet vers lequel pointe `this` est une rvalue ou une lvalue.  Cette fonctionnalité peut être utilisée pour éviter les opérations de copie inutiles dans les scénarios où vous choisissez de ne pas fournir l’accès à un pointeur vers les données. Par exemple, supposons que la classe **C** initialise des données dans son constructeur et retourne une copie de ces données dans la fonction membre **get_data()**. Si un objet de type **C** est une rvalue est sur le point d’être détruit, le compilateur choisit le **get_data() & &** de surcharge, ce qui déplace les données au lieu de le copier. 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR`est un synonyme de type **char \*** . Dans la portée du membre, ce code génère une erreur.  
+     Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type **char \*** . Dans la portée du membre, ce code génère une erreur.  
   
 -   Les types énumérés sont des types distincts et peuvent être utilisés pour établir une distinction entre les fonctions surchargées.  
   

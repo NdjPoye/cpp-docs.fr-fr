@@ -105,10 +105,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 des avertissements du compilateur via C4199
 
@@ -232,7 +232,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4155|suppression d'une expression de tableau sans utiliser la forme 'delete' de tableau|
 |[Avertissement du compilateur (niveau 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|suppression d’une expression de tableau sans utiliser la forme 'delete' ; forme de tableau substituée|
 |[Avertissement du compilateur (niveau 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|pragma ignoré par le compilateur C|
-|Avertissement du compilateur (niveau 1) C4158|en supposant que #pragma pointers_to_members (full_generality, 'inheritance_type')|
+|Avertissement du compilateur (niveau 1) C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
 |[Avertissement du compilateur (niveau 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...) : a exécuté un POP l’identificateur 'identificateur'|
 |Avertissement du compilateur (niveau 1) C4160|#pragma ' pragma'(pop,...) : n’a pas trouvé l’identificateur 'identificateur'|
 |Avertissement du compilateur (niveau 3) C4161|#pragma ' pragma'(pop...) : plus de POP que de push|

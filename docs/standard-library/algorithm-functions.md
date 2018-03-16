@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Divise une plage d’éléments, en recherchant le  *n* ième élément de la séquence de la plage afin que tous les éléments le précédant lui soient inférieur ou égal à celui-ci et tous les éléments qui suivent dans la séquence d’un RE supérieur ou égal à celui-ci.  
+ Partitionne une plage d’éléments, en recherchant le *n*-ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent sont supérieurs ou égaux.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Notes  
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
   
- Le `nth_element` algorithme ne garantit pas que les éléments dans les sous-plages soit à côté de la  *n* élément th sont triés. Il apporte donc encore moins de garanties que `partial_sort`, qui ordonne les éléments de la plage en dessous d’un élément choisi, et peut être utilisé comme alternative plus rapide à `partial_sort` quand l’ordre de la plage inférieure n’est pas nécessaire.  
+ L’algorithme `nth_element` ne garantit pas que les éléments des sous-plages de part et d’autre du *n*-ième élément sont triés. Il apporte donc encore moins de garanties que `partial_sort`, qui ordonne les éléments de la plage en dessous d’un élément choisi, et peut être utilisé comme alternative plus rapide à `partial_sort` quand l’ordre de la plage inférieure n’est pas nécessaire.  
   
  Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.  
   

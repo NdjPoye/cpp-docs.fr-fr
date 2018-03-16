@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 09bf551c6487631ea803e071ed4b4c11501cdb04
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 Décrit un objet qui stocke une paire ordonnée d’objets de type **float **** le premier représentant la partie réelle d’un nombre complexe et le deuxième représentant la partie imaginaire.  
@@ -125,7 +125,7 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête** : \<complex>  
   
  **Espace de noms :** std  

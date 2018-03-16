@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065 : prise en charge d'une interface double pour les serveurs Automation OLE
 > [!NOTE]
@@ -306,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   Dans la fonction `InitInstance` de votre application, recherchez l'appel à `COleObjectFactory::UpdateRegistryAll`. Après cet appel, ajoutez un appel à `AfxOleRegisterTypeLib`, en spécifiant le **LIBID** correspondant à votre bibliothèque de types, ainsi que le nom de votre bibliothèque de types :  
   
  ''' * / / Quand une application serveur est lancée de façon autonome, il est judicieux * / / mettre à jour le Registre système, au cas où il a été endommagé.  
-    m_server. UpdateRegistry(OAT_DISPATCH_OBJECT) ;
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll() ; * / / DUAL_SUPPORT_START * / / Assurez-vous que la bibliothèque de types est inscrite ou d’interface double ne fonctionne pas.  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")) ; * / / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -352,10 +352,10 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 {  
     METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC convertit automatiquement des BSTR Unicode à * / / Ansi CString, si nécessaire...  
-    pThis -> m_str = newText ;  
+    pThis->m_str = newText;  
     Retourne NOERROR ;  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e -> m_wCode + 0 x 200)) ;
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -400,10 +400,10 @@ STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::Release()
     retournés pThis -> ExternalRelease() ;
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID * ppvObj)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface( REFIID iid, LPVOID* ppvObj)   
 {   
     METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
-    retournés pThis -> ExternalQueryInterface (& iid, ppvObj) ;
+    return pThis->ExternalQueryInterface(&iid, ppvObj);
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (iid REFIID)   

@@ -50,10 +50,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset, classe
 Décrit un type d'objet stockant une séquence composée d'un nombre fixe de bits qui offrent un moyen compact de conserver des indicateurs d'un ensemble d'éléments ou de conditions. La classe bitset prend en charge les opérations sur les objets de type bitset qui contiennent une collection de bits et qui fournissent un accès à délai constant à chaque bit.  
@@ -125,7 +125,7 @@ class bitset
 |[operator&#124;=](#op_or_eq')|Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` inclusive.|  
 |[operator~](#op_dtor)|Inverse tous les bits d’un `bitset` cible et retourne le résultat.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<bitset>  
   
  **Espace de noms :** std  

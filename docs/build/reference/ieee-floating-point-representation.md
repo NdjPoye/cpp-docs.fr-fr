@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Représentation à virgule flottante IEEE
 Microsoft Visual C++ est compatible avec les standards numériques IEEE. Il existe trois variétés de nombres réels. Real\*4 et réel\*8 sont utilisés dans Visual C++. Real\*4 est déclaré à l’aide du mot **float**. Real\*8 est déclaré à l’aide du mot **double**. Dans la programmation de Windows 32 bits, le `long double` est mappé au type de données **double**. Il est toutefois prise en charge du langage d’assembly pour effectuer des calculs à l’aide du véritable * type de données de 10.  
@@ -40,7 +40,7 @@ Microsoft Visual C++ est compatible avec les standards numériques IEEE. Il exis
 |Value|Stockées en tant que|  
 |-----------|---------------|  
 |réel * 4|bit de signe, exposant 8 bits, mantisse 23 bits|  
-|réel * 8|bit de signe, exposant de 11 bits, mantisse 52 bits|  
+|real*8|bit de signe, exposant de 11 bits, mantisse 52 bits|  
 |réel * 10|bit de signe, exposant de 15 bits, 64 bits de mantisse|  
   
  Dans réel * 4 et réel\*8 formats, il existe une valeur 1 dans la mantisse qui n’est pas stockée dans la mémoire, afin des mantisses correspondent en fait à 24 ou 53 bits, même si seuls 23 ou 52 bits sont stockés. Réel\*format 10 stocke réellement ce bit.  
@@ -64,10 +64,10 @@ Microsoft Visual C++ est compatible avec les standards numériques IEEE. Il exis
 |Format|OCTET 1|OCTET 2|OCTET 3|OCTETS 4|...|OCTET n|  
 |------------|------------|------------|------------|------------|---------|------------|  
 |réel * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|réel * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |réel * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`représente le bit de signe, le `X`de sont des bits de l’exposant et la `M`de sont des bits de la mantisse. Notez que le bit de gauche est supposé dans réel * 4 et réel\*8 met en forme, mais est présent en tant que « 1 » dans les 3 octets de la valeur réelle\*format 10.  
+ `S` représente le bit de signe, le `X`de sont des bits de l’exposant et la `M`de sont des bits de la mantisse. Notez que le bit de gauche est supposé dans réel * 4 et réel\*8 met en forme, mais est présent en tant que « 1 » dans les 3 octets de la valeur réelle\*format 10.  
   
  Pour décaler la virgule binaire correctement, vous pouvez tout d’abord devez l’exposant et ensuite déplacer la virgule binaire vers la droite ou gauche du nombre approprié de bits.  
   

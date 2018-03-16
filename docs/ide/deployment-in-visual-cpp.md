@@ -1,12 +1,9 @@
 ---
 title: "Déploiement dans Visual C++ | Documents Microsoft"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Déploiement dans Visual C++
 
@@ -49,6 +45,8 @@ Un module de fusion permet l’inclusion de logique d’installation d’une bib
 ## <a name="local-deployment"></a>Déploiement local
 
 Dans un déploiement local, les fichiers bibliothèques sont installés dans votre dossier d’application avec le fichier exécutable. Différentes versions des bibliothèques redistribuables Visual C++ peuvent être installées dans le même dossier, car le nom de fichier de chaque version inclut son numéro de version. Par exemple, la version 12 de la bibliothèque runtime C++ est msvcp120.dll et la version 14 est msvcp140.dll.
+
+Une bibliothèque peut-être être répartie sur plusieurs DLL supplémentaires, appelés *point bibliothèques*. Par exemple, certaines fonctionnalités dans la bibliothèque standard publiée dans Visual Studio 2017 version 15,6 a été ajoutée à msvcp140_1.dll, à preverve la compatibilité ABI de msvcp140.dll. Si vous utilisez la version de Visual Studio 2017 15,6 (ensemble d’outils 14.13) ou un ensemble d’outils ultérieur à partir de Visual Studio 2017, vous devrez peut-être déployer localement de ces bibliothèques point ainsi que la bibliothèque principale. Ces bibliothèques point distincts sont ensuite ajoutées dans la prochaine version majeure de la bibliothèque de base lorsque l’ABI est modifiée.
 
 Étant donné que Microsoft ne peut pas automatiquement mise à jour localement déployée des bibliothèques Visual C++, nous ne recommandons pas de déploiement local de ces bibliothèques. Si vous décidez de recourir au déploiement local des bibliothèques redistribuables, nous vous recommandons d'appliquer votre propre méthode de mise à jour automatique des bibliothèques déployées localement.
 
