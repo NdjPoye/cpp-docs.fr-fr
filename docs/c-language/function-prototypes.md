@@ -36,7 +36,7 @@ Une déclaration de fonction précède la définition de fonction et spécifie l
  `declaration`:  
  *declaration-specifiers attribute-seq* opt*init-declarator-list*opt**;**  
   
- /\* *attribute-seq* est spécifique de Microsoft */  
+ /\* *attribute-seq* est spécifique de Microsoft \*/  
   
  *declaration-specifiers* :  
  *storage-class-specifier declaration-specifiers* opt  

@@ -59,7 +59,7 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
   
 -   Les opérateurs binaires déclarés comme fonctions membres acceptent un argument ; s’ils sont déclarés comme fonctions globales, ils en prennent deux.  
   
--   Si un opérateur peut être utilisé comme un opérateur unaire ou un opérateur binaire (**&**,  **\*** ,  **+** , et  **-** ), vous pouvez surcharger séparément chaque utilisation.  
+-   Si un opérateur peut être utilisé comme un opérateur unaire ou un opérateur binaire (**&**, **\***, **+**, et **-**), vous pouvez surcharger séparément chaque utilisation.  
   
 -   Les opérateurs surchargés ne peuvent pas avoir d’arguments par défaut.  
   

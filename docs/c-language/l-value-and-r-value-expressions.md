@@ -43,7 +43,7 @@ Les expressions qui font référence à des emplacements de mémoire sont appel�
   
 -   Une expression de sélection de membres (**->** ou **.**)  
   
--   Une expression indirection-unaire (**\***) qui ne fait pas référence à un tableau  
+-   Une expression indirection-unaire (**\****) qui ne fait pas référence à un tableau  
   
 -   Une expression l-value entre parenthèses  
   

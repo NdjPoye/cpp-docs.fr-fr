@@ -78,7 +78,7 @@ identifier
  lorsque *expression* est une valeur de pointeur.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants font référence à cette déclaration de structure. Pour plus d’informations sur l’opérateur d’indirection (**\***) utilisé dans ces exemples, consultez [Opérateurs d’indirection et d’adresse](../c-language/indirection-and-address-of-operators.md).  
+ Les exemples suivants font référence à cette déclaration de structure. Pour plus d’informations sur l’opérateur d’indirection (**\****) utilisé dans ces exemples, consultez [Opérateurs d’indirection et d’adresse](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   

@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, * expression1***[***expression2 ***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L'opérateur d'indirection (**\***) est appliqué après l'évaluation de la dernière expression d'indice, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1***[***expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L'opérateur d'indirection (**\***) est appliqué après l'évaluation de la dernière expression d'indice, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions.  
   

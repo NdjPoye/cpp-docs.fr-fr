@@ -314,7 +314,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Notez que `strlen()` et `wcslen()` n’incluent pas la taille du caractère null de fin, dont la taille est égale à la taille de l’élément du type chaîne : un octet sur une chaîne char *, deux octets sur wchar_t\* ou char16_t\* chaînes, et quatre octets sur char32_t\* chaînes.  
+ Notez que `strlen()` et `wcslen()` n’incluent pas la taille du caractère null de fin, dont la taille est égale à la taille de l’élément du type chaîne : un octet sur une chaîne char*, deux octets sur wchar_t\* ou char16_t\* chaînes, et quatre octets sur char32_t\* chaînes.  
   
  La longueur maximale d'un littéral de chaîne est de 65 535 octets. Cette limite s'applique à la fois aux littéraux de chaîne étroits et étendus.  
   

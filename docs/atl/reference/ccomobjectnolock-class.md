@@ -95,7 +95,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Paramètres  
  **void\***  
- [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom *** XXX*`Object`*XXX* constructeurs.  
+ [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Destructeur.  

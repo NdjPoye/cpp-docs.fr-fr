@@ -32,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="void-c"></a>void (C++)
 Quand il est utilisé en tant que type de retour de fonction, le mot clé `void` spécifie que la fonction ne retourne pas de valeur. Quand il est utilisé pour la liste des paramètres d'une fonction, void spécifie que la fonction ne prend aucun paramètre. Quand il est utilisé dans la déclaration d'un pointeur, void spécifie que le pointeur est « universel ».  
   
- Si le type de pointeur est **void \*** , le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclaré avec le **const** ou `volatile` (mot clé). Un pointeur void ne peut pas être déréférencé, sauf s'il fait l'objet d'un cast en un autre type. Un pointeur void peut être converti en tout autre type de pointeur de données.  
+ Si le type de pointeur est **void \***, le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclaré avec le **const** ou `volatile` (mot clé). Un pointeur void ne peut pas être déréférencé, sauf s'il fait l'objet d'un cast en un autre type. Un pointeur void peut être converti en tout autre type de pointeur de données.  
   
  Un pointeur void peut pointer vers une fonction, mais pas vers un membre de classe en C++.  
   

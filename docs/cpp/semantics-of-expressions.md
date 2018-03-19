@@ -60,7 +60,7 @@ Ordre Expression-Évaluation
   
  L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est évaluée est déterminé par la priorité et l'associativité des opérateurs :  
   
-1.  La multiplication (*) a la priorité la plus élevée dans cette expression. Donc, la sous-expression `b * c` est évaluée en premier.  
+1.  La multiplication (\*) a la priorité la plus élevée dans cette expression. Donc, la sous-expression `b * c` est évaluée en premier.  
   
 2.  L'ajout (+) a la priorité la plus élevée suivante, donc `a` est ajouté au produit de `b` et `c`.  
   

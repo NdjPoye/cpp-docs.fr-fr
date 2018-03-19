@@ -1,5 +1,5 @@
 ---
-title: "Opérateurs de pointeur vers membre :. * et -&gt;* | Documents Microsoft"
+title: "Opérateurs de pointeur vers membre : .* et -&gt;* | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/16/2018
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Opérateurs de pointeur vers membre :. * et -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Opérateurs de pointeur vers membre : .* et -&gt;*
 ## <a name="syntax"></a>Syntaxe  
   
 ```  

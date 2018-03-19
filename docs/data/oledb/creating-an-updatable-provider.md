@@ -310,7 +310,7 @@ HRESULT FlushData(HROW, HACCESSOR)
  Examinez le code dans le [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) exemple ; il illustre la façon dont un fournisseur peut gérer **NULL** données. Dans UpdatePV, le fournisseur stocke **NULL** données en écrivant la chaîne « NULL » dans le magasin de données. Lorsqu’il lit **NULL** du magasin de données à partir des données, il visualise cette chaîne puis vide la mémoire tampon, création d’un **NULL** chaîne. Il dispose également d’une substitution de `IRowsetImpl::GetDBStatus` dans laquelle il retourne **DBSTATUS_S_ISNULL** si cette valeur de données est vide.  
   
 ### <a name="marking-nullable-columns"></a>Marquage des colonnes autorisant des valeurs null  
- Si vous implémentez également des ensembles de lignes de schéma (voir `IDBSchemaRowsetImpl`), votre implémentation doit spécifier dans le **DBSCHEMA_COLUMNS** ensemble de lignes (généralement marqué dans le fournisseur par **C***xxx*** SchemaColSchemaRowset**) que la colonne est nullable.  
+ Si vous implémentez également des ensembles de lignes de schéma (voir `IDBSchemaRowsetImpl`), votre implémentation doit spécifier dans le **DBSCHEMA_COLUMNS** ensemble de lignes (généralement marqué dans le fournisseur par **C***xxx***SchemaColSchemaRowset**) que la colonne est nullable.  
   
  Vous devez également spécifier que toutes les colonnes contiennent le **DBCOLUMNFLAGS_ISNULLABLE** valeur dans votre version de la `GetColumnInfo`.  
   
@@ -414,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Indicateurs de colonne  
- Si vous prenez en charge les valeurs par défaut sur les colonnes, vous devez définir à l’aide de métadonnées dans le  **\< ***classe de fournisseur***> SchemaRowset** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Si vous prenez en charge les valeurs par défaut sur les colonnes, vous devez définir à l’aide de métadonnées dans le **\<***classe de fournisseur***>SchemaRowset** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Vous pouvez définir les indicateurs de colonnes, qui sont spécifiées à l’aide de la **DBCOLUMNFLAGS** type énuméré. Les indicateurs de colonnes décrivent les caractéristiques de la colonne.  
   

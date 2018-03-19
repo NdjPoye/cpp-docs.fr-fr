@@ -233,7 +233,7 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** construit un `_variant_t` objet de type `VT_BSTR` d’un `_bstr_t` objet.     Un nouvel objet `BSTR` est alloué.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** construit un `_variant_t` objet de type `VT_BSTR` à partir d’une chaîne Unicode.   Un nouvel objet `BSTR` est alloué.  
+-   **_variant_t (wchar_t \*** *wstrSrc*  **)** construit un `_variant_t` objet de type `VT_BSTR` à partir d’une chaîne Unicode.   Un nouvel objet `BSTR` est alloué.  
   
 -   **_variant_t (char\***`strSrc`**)** construit un `_variant_t` objet de type `VT_BSTR` à partir d’une chaîne.     Un nouvel objet `BSTR` est alloué.  
   

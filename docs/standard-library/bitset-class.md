@@ -469,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  Copie du bitset modifié pour lequel la fonction membre a été appelée.  
   
 ### <a name="remarks"></a>Notes  
- La deuxième fonction membre lève un [out_of_range](../standard-library/out-of-range-class.md) exception si la position spécifiée en tant que paramètre est supérieure à la taille *N* de la **bitset\<***N***  >**  dont le bit a été inversé.  
+ La deuxième fonction membre lève un [out_of_range](../standard-library/out-of-range-class.md) exception si la position spécifiée en tant que paramètre est supérieure à la taille *N* de la **bitset\<***N***>** dont le bit a été inversé.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1176,7 +1176,7 @@ public:
  Référence au bit du bitset spécifié par la position de l’argument pour les première, deuxième et cinquième fonctions membres de référence de classe, et **true** ou **false**, pour refléter la valeur du bit modifié dans le bitset pour les troisième et quatrième fonctions membres de référence de classe.  
   
 ### <a name="remarks"></a>Notes  
- La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. Laisser *b* être un objet de type `bool`, *x* et *y* les objets de type **bitset\<***N*** >** , et *i* et *j* positions valides au sein d’un tel objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :  
+ La classe `reference` existe uniquement dans une classe d’assistance pour le bitset `operator[]`. La classe membre décrit un objet qui peut accéder à un bit individuel d’un bitset. Laisser *b* être un objet de type `bool`, *x* et *y* les objets de type **bitset\<***N***>**, et *i* et *j* positions valides au sein d’un tel objet. La notation *x [i]* référence le bit à la position *i* dans le bitset *x*. Les fonctions membres de la classe `reference` fournissent, dans l’ordre, les opérations suivantes :  
   
 |Opération|Définition|  
 |---------------|----------------|  

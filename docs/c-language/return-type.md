@@ -38,7 +38,7 @@ Le type de retour d’une fonction génère la taille et le type de la valeur re
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft */  
+ /\* *attribute-seq* est spécifique de Microsoft \*/  
   
  *declaration-specifiers* :  
  *storage-class-specifier declaration-specifiers* opt  

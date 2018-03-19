@@ -56,7 +56,7 @@ int main() {
   
  Les expressions d'indice servent généralement à faire référence à des éléments de tableau, mais vous pouvez appliquer un indice à n'importe quel pointeur. Quel que soit l'ordre des valeurs, *expression* doit être placé entre crochets (**[ ]**).  
   
- L'expression d'indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant l'opérateur d'indirection (**\***) au résultat. (Pour obtenir une description de l'opérateur d'indirection, consultez [Opérateurs d'indirection et d'adresse](../c-language/indirection-and-address-of-operators.md).) En pratique, pour un tableau unidimensionnel, les quatre expressions suivantes sont identiques, en supposant que `a` est un pointeur et `b` un entier :  
+ L'expression d'indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant l'opérateur d'indirection (**\****) au résultat. (Pour obtenir une description de l'opérateur d'indirection, consultez [Opérateurs d'indirection et d'adresse](../c-language/indirection-and-address-of-operators.md).) En pratique, pour un tableau unidimensionnel, les quatre expressions suivantes sont identiques, en supposant que `a` est un pointeur et `b` un entier :  
   
 ```  
 a[b]  

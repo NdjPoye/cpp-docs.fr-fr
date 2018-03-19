@@ -48,7 +48,7 @@ expression % expression
 ## <a name="remarks"></a>Notes  
  Les opérateurs de multiplication sont :  
   
--   Multiplication (**\***)  
+-   Multiplication (**\****)  
   
 -   Division (**/**)  
   

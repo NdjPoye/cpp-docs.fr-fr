@@ -33,7 +33,7 @@ Une « déclaration » spécifie l'interprétation et les attributs d'un ensem
  `declaration`:  
  *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
   
- /\* *attribute-seq*opt est spécifique de Microsoft */  
+ /\* *attribute-seq*opt est spécifique de Microsoft \*/  
   
  *declaration-specifiers* :  
  *storage-class-specifier declaration-specifiers*opt  

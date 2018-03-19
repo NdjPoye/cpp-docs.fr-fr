@@ -263,12 +263,12 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
-|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **[ ]**|*type-name\***|  
 |*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
 |*type-name*|**const** *type-name*|  
 |*type-name*|`volatile` *type-name*|  
-|*type-name\**|**const** *type-name\**|  
-|*type-name\**|`volatile` *type-name\**|  
+|*type-name\***|**const** *type-name\***|  
+|*type-name\***|`volatile` *type-name\**|  
   
  La séquence dans laquelle les conversions sont tentées est la suivante :  
   

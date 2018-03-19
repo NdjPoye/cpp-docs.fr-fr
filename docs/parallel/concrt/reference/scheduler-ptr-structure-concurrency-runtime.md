@@ -86,7 +86,7 @@ scheduler_interface* get() const;
  Behave like a pointer  
   
 ```
-opérateur de scheduler_interface -> () const ;
+opérateur de scheduler_interface* -> () const ;
 ```  
   
 ### Return Value  

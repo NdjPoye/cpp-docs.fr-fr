@@ -35,7 +35,7 @@ Un « corps de fonction » est une instruction composée contenant les instruc
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft */  
+ /\* *attribute-seq* est spécifique de Microsoft \*/  
   
  *compound-statement*: /\* Le corps de la fonction \*/  
  **{**  *declaration-list* opt*statement-list* opt**}**  

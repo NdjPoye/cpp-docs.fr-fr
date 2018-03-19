@@ -51,7 +51,7 @@ Vous pouvez utiliser des casts de type pour convertir explicitement les types.
 |-----------------------|-----------------------|  
 |Types intégraux|Tout type entier ou type à virgule flottante ou pointeur vers un objet|  
 |Virgule flottante|Tout type arithmétique|  
-|Pointeur vers un objet ou (**void \***)|Tout type entier, (**void \***), pointeur vers un objet ou pointeur fonction|  
+|Pointeur vers un objet ou (**void\***)|Tout type entier, (**void\***), pointeur vers un objet ou pointeur fonction|  
 |Pointeur fonction|Tout type intégral, pointeur vers un objet ou pointeur fonction|  
 |Structure, union ou tableau|Aucun|  
 |Type void|Tout type|  

@@ -40,7 +40,7 @@ Les arguments sont les noms des valeurs passées à une fonction par un appel de
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft */  
+ /\* *attribute-seq* est spécifique de Microsoft \*/  
   
  *declarator* :  
  *pointer* opt*direct-declarator*  

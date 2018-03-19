@@ -1,5 +1,5 @@
 ---
-title: "Comment : convertir System::String en wchar_t * ou char * | Documents Microsoft"
+title: "Comment : convertir System::String en wchar_t* ou char* | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

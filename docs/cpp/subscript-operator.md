@@ -51,7 +51,7 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- Dans l'exemple précédent, l'expression `nArray[2]` est identique à `2[nArray]`. La raison est que le résultat d’une expression d’indice *e1 *** [** *e2* **]** est donné par :  
+ Dans l'exemple précédent, l'expression `nArray[2]` est identique à `2[nArray]`. La raison est que le résultat d’une expression d’indice *e1***[** *e2* **]** est donné par :  
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, * expression1***[***expression2 ***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1***[***expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions. L'exemple suivant déclare et initialise un tableau de caractères simple à deux dimensions :  
   
