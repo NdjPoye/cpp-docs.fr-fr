@@ -1,5 +1,5 @@
 ---
-title: "ComPtrRefBase::operator IUnknown **, opérateur | Documents Microsoft"
+title: "ComPtrRefBase::operator IUnknown**, opérateur | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

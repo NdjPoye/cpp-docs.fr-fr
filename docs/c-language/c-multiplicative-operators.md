@@ -28,12 +28,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>Opérateurs de multiplication C
-Les opérateurs de multiplication exécutent la multiplication (**\***), la division (**/**) et les opérations de reste (`%`).  
+Les opérateurs de multiplication exécutent la multiplication (**\****), la division (**/**) et les opérations de reste (`%`).  
   
  **Syntaxe**  
   
@@ -46,7 +46,7 @@ Les opérateurs de multiplication exécutent la multiplication (**\***), la divi
   
  *multiplicative-expression*  **%**  *cast-expression*  
   
- Les opérandes de l'opérateur de reste (`%`) doivent être intégraux. Les opérateurs de multiplication (**\***) et de division (**/**) peuvent prendre des opérandes de type entier ou virgule flottante. Les types des opérandes peuvent être différents.  
+ Les opérandes de l'opérateur de reste (`%`) doivent être intégraux. Les opérateurs de multiplication (**\****) et de division (**/**) peuvent prendre des opérandes de type entier ou virgule flottante. Les types des opérandes peuvent être différents.  
   
  Les opérateurs de multiplication exécutent les conversions arithmétiques courantes sur les opérandes. Le type du résultat est le type des opérandes après conversion.  
   

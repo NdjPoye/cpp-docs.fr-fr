@@ -1,5 +1,5 @@
 ---
-title: "ComPtrRef::operator InterfaceType **, opérateur | Documents Microsoft"
+title: "ComPtrRef::operator InterfaceType**, opérateur | Documents Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

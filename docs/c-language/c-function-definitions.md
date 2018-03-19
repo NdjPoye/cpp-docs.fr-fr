@@ -29,7 +29,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/16/2018
 ---
@@ -50,7 +50,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
  *function-definition*: /\* Ici le déclarateur est le déclarateur de fonction \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft */  
+ /\* *attribute-seq* est spécifique de Microsoft \*/  
   
  Les paramètres de prototype sont les suivants :  
   
