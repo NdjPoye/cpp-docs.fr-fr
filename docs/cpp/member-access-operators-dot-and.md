@@ -50,7 +50,7 @@ postfix-expression -> name
   
 1.  Dans la première forme, *postfix-expression* représente une valeur de type d’union, classe ou struct et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur de l’opération est celle de *nom* et est une l-value Si *postfix-expression* est une l-value.  
   
-2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le  **->**  opérateur de déréférence le pointeur. Par conséquent, les expressions * e * **->**  `member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs  **->**  ou  **\***  sont surchargées).  
+2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le  **->**  opérateur de déréférence le pointeur. Par conséquent, les expressions * e ***->**`member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs **->** ou **\*** sont surchargées).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre les deux formes de l'opérateur d'accès aux membres.  

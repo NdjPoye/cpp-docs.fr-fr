@@ -37,7 +37,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>Notes  
- L’opérateur d’indirection unaire (**\***) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur à une l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de la  **\***  opérateur dans ce contexte est différente de sa signification comme opérateur binaire, qui est la multiplication.  
+ L’opérateur d’indirection unaire (**\***) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur à une l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de la **\*** opérateur dans ce contexte est différente de sa signification comme opérateur binaire, qui est la multiplication.  
   
  Si l'opérande pointe vers une fonction, le résultat est un désignateur de fonction. S'il pointe vers un emplacement de stockage, le résultat est une l-value désignant l'emplacement de stockage.  
   
