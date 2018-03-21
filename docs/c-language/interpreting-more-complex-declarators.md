@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interprétation des déclarateurs plus complexes
 Vous pouvez placer n'importe quel déclarateur entre parenthèses pour spécifier une interprétation particulière d'un « déclarateur complexe ». Un déclarateur complexe est un identificateur qualifié par plusieurs modificateurs de tableau, de pointeur ou de fonction. Vous pouvez appliquer différentes combinaisons de modificateurs de tableau, de pointeur et de fonction à un même identificateur. En général, `typedef` peut être utilisé pour simplifier les déclarations. Consultez [Déclarations typedef](../c-language/typedef-declarations.md).  
@@ -47,7 +47,7 @@ Vous pouvez placer n'importe quel déclarateur entre parenthèses pour spécifie
      7   6  4 2 1   3    5  
     ```  
   
- Dans cet exemple, les étapes sont numérotées dans l'ordre et peuvent être interprétées comme suit :  
+Dans cet exemple, les étapes sont numérotées dans l'ordre et peuvent être interprétées comme suit :  
   
 1.  L'identificateur `var` est déclaré comme  
   
