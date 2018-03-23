@@ -1,12 +1,12 @@
 ---
 title: pin_ptr (C + c++ / CLI) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - pin_ptr_cpp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce63996cc2d93f4890f54c5edda318fca55f98aa
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Déclare un *pointeur épingle*, qui est utilisé uniquement avec le common language runtime.  
@@ -51,7 +51,7 @@ Déclare un *pointeur épingle*, qui est utilisé uniquement avec le common lang
   
 ### <a name="parameters"></a>Paramètres  
  *cv_qualifier*  
- `const`ou `volatile` qualificateurs. Par défaut, un pointeur épingle est `volatile`. Elle est redondante mais pas une erreur pour déclarer un pointeur épingle `volatile`.  
+ `const` ou `volatile` qualificateurs. Par défaut, un pointeur épingle est `volatile`. Elle est redondante mais pas une erreur pour déclarer un pointeur épingle `volatile`.  
   
  *type*  
  Type d'élément `initializer`.  
@@ -93,13 +93,13 @@ Déclare un *pointeur épingle*, qui est utilisé uniquement avec le common lang
   
 -   type de cible d’une conversion.  
   
- `pin_ptr`est dans le `cli` espace de noms. Pour plus d’informations, consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `pin_ptr` est dans le `cli` espace de noms. Pour plus d’informations, consultez [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
  Pour plus d’informations sur les pointeurs intérieurs, consultez [interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
   
  Pour plus d’informations sur les pointeurs épingle, consultez [Comment : pointeurs de code confidentiel et tableaux](../windows/how-to-pin-pointers-and-arrays.md) et [Comment : déclarer des pointeurs épingle et les Types valeur](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
@@ -211,7 +211,7 @@ public:
   
 int main() {  
    ManagedType ^mt = gcnew ManagedType;  
-   pin_ptr< int > pt = &mt->i;  
+   pin_ptr<int> pt = &mt->i;  
    *pt = 8;  
    Console::WriteLine(mt->i);  
   

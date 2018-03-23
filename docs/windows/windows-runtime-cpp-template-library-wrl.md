@@ -1,31 +1,36 @@
 ---
-title: "Windows Runtime bibliothèque de modèles C++ (WRL) | Documents Microsoft"
-ms.custom: 
+title: Windows Runtime bibliothèque de modèles C++ (WRL) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
-La bibliothèque de modèles C++ Windows Runtime (WRL) est une bibliothèque de modèles qui fournit un moyen de bas niveau de créer et d’utiliser des composants Windows Runtime.  
+La bibliothèque de modèles C++ Windows Runtime (WRL) est une bibliothèque de modèles qui fournit un moyen de bas niveau de créer et d’utiliser des composants Windows Runtime.
+
+> [!NOTE]
+> WRL est désormais remplacée par C + c++ / WinRT, une standard C ++ 17 projection du langage for Windows Runtime APIs. C + c++ / WinRT est disponible dans le SDK Windows 10 à partir de la version 1803 qui interviennent. C + c++ / WinRT est entièrement implémentée dans les fichiers d’en-tête et conçu pour vous fournir un accès de première classe de l’API Windows modernes.
+
+> Avec C + c++ / WinRT, vous pouvez consommer et créer APIs Windows Runtime à l’aide de n’importe quel conforme aux normes compilateur C ++ 17. C + c++ / WinRT généralement plus performant et génère des fichiers binaires du plus petits que toute autre option de langue pour le Windows Runtime. Nous continuerons à prendre en charge C + c++ / CX et WRL, mais le recommandons vivement que les nouvelles applications utiliser C + c++ / WinRT. Pour plus d’informations, consultez [C + c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Avantages  
  La bibliothèque de modèles Windows Runtime C++ vous permet de mettre en œuvre et consommer des composants de modèle COM (Component Object) plus facilement. Elle fournit des techniques de gestion interne comme le décompte des références pour gérer la durée de vie des objets et tester des valeurs d' `HRESULT` afin de déterminer si une opération a réussi ou échoué. Pour pouvoir utiliser la bibliothèque de modèles Windows Runtime C++, vous devez respecter soigneusement ces règles et techniques.  
@@ -58,10 +63,7 @@ La bibliothèque de modèles C++ Windows Runtime (WRL) est une bibliothèque de 
  [Comment : gérer des événements](../windows/how-to-handle-events-using-wrl.md)  
  Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ s’abonner à et gérer les événements d’un objet Windows Runtime.  
   
- [Procédure pas à pas : Création d’un composant Runtime de base de Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Montre comment utiliser la bibliothèque de modèles Windows Runtime C++ pour créer un composant Windows Runtime de base qui additionne deux nombres. Montre également comment déclencher des événements et utiliser le composant à partir d’une application de plateforme Windows universelle qui utilise JavaScript.  
-  
- [Procédure pas à pas : Création d’une application de plateforme Windows universelle à l’aide de WRL et Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Procédure pas à pas : création d’une application UWP à l’aide de WRL et Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Découvrez comment créer une application de plateforme Windows universelle qui utilise [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Comment : créer un composant COM classique](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
@@ -144,7 +146,6 @@ La bibliothèque de modèles C++ Windows Runtime (WRL) est une bibliothèque de 
   
 |||  
 |-|-|  
-|[Modèle de projet de bibliothèque de classes](../windows/wrl-class-library-project-template.md)|Décrit comment accéder au modèle de projet WRL Class Library. Ce modèle permet de simplifier la tâche de l’utilisation de Visual Studio pour créer des composants Windows Runtime.|  
 |[API principales par catégorie](../windows/key-wrl-apis-by-category.md)|Met en surbrillance de la principale bibliothèque de modèles Windows Runtime C++ types, fonctions et les macros.|  
 |[Référence](../windows/wrl-reference.md)|Contient des informations de référence pour la bibliothèque de modèles Windows Runtime C++.|  
 |[Référence rapide (Windows Runtime et Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Décrit brièvement le C + c++ / fonctionnalités CX qui prennent en charge le Windows Runtime.|  

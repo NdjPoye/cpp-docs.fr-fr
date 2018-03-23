@@ -1,12 +1,12 @@
 ---
 title: AsWeak (fonction) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::AsWeak
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bc994c502a806fcca0ead9a5c73aa6f8b5dd02e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75d732758bac53edc40aeac50e0184d80145890d
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="asweak-function"></a>AsWeak (fonction)
 Récupère une référence faible à une instance spécifiée.  
@@ -34,9 +34,7 @@ Récupère une référence faible à une instance spécifiée.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 HRESULT AsWeak(  
    _In_ T* p,  
    _Out_ WeakRef* pWeak  
@@ -56,7 +54,7 @@ HRESULT AsWeak(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK, si cette opération a réussi ; Sinon, une erreur HRESULT qui indique la cause de l’échec.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,12 +1,12 @@
 ---
 title: Makeallocator, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33ba172099fd2554709cc539eeee8999c0e42cef
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (classe)
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -38,17 +38,13 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
-         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>,   
-   T)> , T)> class MakeAllocator;  
+         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
+ class MakeAllocator;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, false>;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, true>;  
 ```  
   
@@ -57,7 +53,7 @@ class MakeAllocator<T, true>;
  Un nom de type.  
   
  `hasWeakReferenceSupport`  
- `true`allocation de mémoire pour un objet qui prend en charge les références faibles ; `false` pour allouer de la mémoire pour un objet qui ne prend pas en charge les références faibles.  
+ `true` allocation de mémoire pour un objet qui prend en charge les références faibles ; `false` pour allouer de la mémoire pour un objet qui ne prend pas en charge les références faibles.  
   
 ## <a name="remarks"></a>Notes  
  Alloue la mémoire pour une classe activable, avec ou sans prise en charge de la référence faible.  
@@ -85,7 +81,7 @@ class MakeAllocator<T, true>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `MakeAllocator`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

@@ -1,34 +1,31 @@
 ---
-title: "Comment : activer et utiliser un composant Windows Runtime à l’aide de WRL | Documents Microsoft"
-ms.custom: 
+title: 'Comment : activer et utiliser un composant Windows Runtime à l’aide de WRL | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Comment : activer et utiliser un composant Windows Runtime Component à l'aide de WRL
 Ce document montre comment utiliser la bibliothèque de modèles C++ (WRL) de Windows Runtime pour initialiser le Runtime Windows et comment activer et utiliser un composant Windows Runtime.  
-  
-> [!NOTE]
->  Cet exemple active un composant intégré de Windows Runtime. Pour savoir comment créer votre propre composant que vous pouvez activer de manière similaire, consultez [procédure pas à pas : création d’un composant Windows Runtime base](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Pour utiliser un composant, vous devez obtenir un pointeur d’interface vers le type qui est implémenté par le composant. Et, étant donné que la technologie sous-jacente de l’exécution de Windows est le modèle COM (Component Object), vous devez suivre les règles de COM pour conserver une instance du type. Par exemple, vous devez mettre à jour le *le décompte de références* qui détermine quand le type est supprimé de la mémoire.  
   

@@ -1,12 +1,12 @@
 ---
 title: EventSource, classe | Documents Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/22/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
@@ -15,28 +15,26 @@ dev_langs:
 helpviewer_keywords:
 - EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 531c4ec218f7e3b694a41cd465090a5b1787c41a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="eventsource-class"></a>EventSource (classe)
-Représente un événement. Les fonctions membres EventSource ajouter, supprimer et appellent des gestionnaires d’événements.  
+Représente un événement non agile. Les fonctions membres EventSource ajouter, supprimer et appellent des gestionnaires d’événements. Pour les événements agiles, utilisez [AgileEventSource](agileeventsource-class.md). 
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<  
-   typename TDelegateInterface  
->  
+template<typename TDelegateInterface>  
 class EventSource;  
 ```  
   
@@ -72,10 +70,11 @@ class EventSource;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `EventSource`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  
   
 ## <a name="see-also"></a>Voir aussi  
- [Microsoft::WRL, espace de noms](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)
+[AgileEventSource classe](agileeventsource-class.md)
