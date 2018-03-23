@@ -1,11 +1,9 @@
 ---
-title: "-GENPROFILE, - FASTGENPROFILE (générer la Build instrumentée de profilage) | Documents Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+title: / GENPROFILE, /FASTGENPROFILE (générer la Build instrumentée de profilage) | Documents Microsoft
+ms.custom: ''
+ms.date: 03/14/2018
+ms.technology:
+- cpp-tools
 ms.topic: article
 f1_keywords:
 - GENPROFILE
@@ -16,52 +14,70 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 028b31044d035def628785969a04c27af4699f65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
+ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Générer une build instrumentée de profilage)
-Spécifie la génération d’un fichier .pgd par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil.  /GENPROFILE et /FASTGENPROFILE utilisent des paramètres par défaut différents. Utilisez /GENPROFILE pour privilégier la précision par rapport à la rapidité et à l’utilisation de la mémoire pendant le profilage. Utilisez /FASTGENPROFILE pour privilégier une utilisation moins importante de la mémoire et la rapidité par rapport à la précision.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-/{GENPROFILE|FASTGENPROFILE}[:{COUNTER32|COUNTER64|EXACT|MEMMAX=#|MEMMIN=#|NOEXACT|NOPATH|NOTRACKEH|PATH|PGD=filename|TRACKEH}]   
-```  
-  
-## <a name="remarks"></a>Notes  
- COUNTER32 &#124; COUNTER64  
- Utilisez COUNTER32 pour spécifier l’utilisation de compteurs de sonde 32 bits et COUNTER64 pour spécifier des compteurs de sonde 64 bits. Quand vous spécifiez /GENPROFILE, la valeur par défaut est COUNTER64. Quand vous spécifiez /FASTGENPROFILE, la valeur par défaut est COUNTER32.  
-  
- EXACT &#124; NOEXACT  
- Utilisez EXACT pour spécifier des incréments à blocage thread-safe pour les sondes. NOEXACT spécifie les opérations d’incrément non protégées pour les sondes. La valeur par défaut est NOEXACT.  
-  
- MEMMAX=valeur, MEMMIN=valeur  
- Utilisez MEMMAX et MEMMIN pour spécifier la taille de réservation maximale et minimale pour les données d’apprentissage dans la mémoire. La valeur est la quantité de mémoire à réserver en octets.  Par défaut, ces valeurs sont déterminées par une méthode heuristique interne.  
-  
- CHEMIN D’ACCÈS &#124; NOPATH  
- Utilisez PATH pour spécifier un ensemble distinct de compteurs PGO pour chaque chemin unique vers une fonction. Utilisez NOPATH pour spécifier un seul ensemble de compteurs pour chaque fonction.   Quand vous spécifiez /GENPROFILE, la valeur par défaut est PATH. Quand vous spécifiez /FASTGENPROFILE, la valeur par défaut est NOPATH.  
-  
- TRACKEH &#124; NOTRACKEH  
- Spécifie s’il faut utiliser des compteurs supplémentaires pour conserver un décompte précis quand des exceptions sont levées au cours de la formation. Utilisez TRACKEH pour spécifier des compteurs supplémentaires pour un décompte exact. Utilisez NOTRACKEH pour spécifier des compteurs uniques pour le code qui n’utilisent pas la gestion des exceptions ou qui ne rencontrent pas d’exceptions dans vos scénarios d’apprentissage.  Quand vous spécifiez /GENPROFILE, la valeur par défaut est TRACKEH. Quand vous spécifiez /FASTGENPROFILE, la valeur par défaut est NOTRACKEH.  
-  
- PGD=nom_fichier  
- Spécifie un nom de fichier de base pour le fichier .pgd. Par défaut, l’éditeur de liens utilise le nom du fichier image exécutable de base avec une extension .pgd.  
-  
- Les options /GENPROFILE et /FASTGENPROFILE indiquent à l’éditeur de liens de générer le fichier d’instrumentation du profilage nécessaire pour prendre en charge de l’apprentissage de l’application pour l’optimisation guidée par profil. Les informations de profilage générées par l’apprentissage de l’application sont utilisées comme entrée pour effectuer les optimisations de la totalité du programme ciblé pendant les générations.   Vous pouvez définir des options supplémentaires pour contrôler différentes fonctionnalités de profilage pour les performances pendant l’apprentissage de l’application et les builds. Les options par défaut spécifiées par /GENPROFILE donnent des résultats plus précis, en particulier pour les grosses applications multithreads complexes. L’option /FASTGENPROFILE utilise des valeurs par défaut différentes pour un encombrement mémoire moindre et de meilleures performances lors de l’apprentissage, au détriment de la précision.  
-  
- Les informations de profilage sont capturées quand vous exécutez l’application instrumentée après avoir généré la build en utilisant /GENPROFILE ou /FASTGENPROFILE. Ces informations sont utilisées par l’éditeur de liens quand vous spécifiez l’option /USEPROFILE. Pour plus d’informations sur la façon d’effectuer l’apprentissage de votre application et sur les données collectées, consultez Optimisation guidée par profil.  
-  
- Vous devez également spécifier /LTCG quand vous spécifiez /GENPROFILE ou /FASTGENPROFILE.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Définition des Options de l’éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l’éditeur de liens](../../build/reference/linker-options.md)   
- [/LTCG (génération de Code de l’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md)
+
+Spécifie la génération d’un fichier .pgd par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil. **/ GENPROFILE** et **/fastgenprofile** utiliser les paramètres par défaut différents. Utilisez **/genprofile** à privilégier la précision d’utilisation de vitesse et de la mémoire pendant le profilage. Utilisez **/fastgenprofile** pour favoriser une utilisation plus petite de la mémoire et la vitesse sur la précision.
+
+## <a name="syntax"></a>Syntaxe
+
+> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Chemin d’accès**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_nom de fichier_}]<br/>
+> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]
+
+### <a name="arguments"></a>Arguments
+
+Un des arguments suivants peut être spécifié pour **/genprofile** ou **/fastgenprofile**. Les arguments répertoriés ici séparés par une barre verticale (**|**) caractère s’excluent mutuellement. Utilisez une virgule (**,**) caractère pour séparer les options.
+
+**COUNTER32** &#124; **COUNTER64**<br/>
+Utilisez **COUNTER32** pour spécifier l’utilisation des compteurs de sonde 32 bits, et **COUNTER64** pour spécifier des compteurs de sonde 64 bits. Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **COUNTER64**. Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **COUNTER32**.
+
+**EXACT** &#124; **NOEXACT**<br/>
+Utilisez **EXACT** pour spécifier des incréments à blocage de thread-safe pour les sondes. **NOEXACT** spécifie les opérations d’incrément non protégées pour les sondes. La valeur par défaut est **NOEXACT**.
+
+**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
+Utilisez **MEMMAX** et **MEMMIN** pour spécifier les tailles de réservation maximale et minimale pour les données d’apprentissage en mémoire. La valeur est la quantité de mémoire à réserver en octets. Par défaut, ces valeurs sont déterminées par une méthode heuristique interne.
+
+**PATH**  &#124; **NOPATH** <br/>
+Utilisez **chemin d’accès** pour spécifier un ensemble distinct de compteurs PGO pour chaque chemin unique vers une fonction. Utilisez **NOPATH** pour ne spécifier qu’un ensemble de compteurs pour chaque fonction. Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **chemin d’accès** . Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **NOPATH** .
+
+**TRACKEH**  &#124; **NOTRACKEH** <br/>
+Spécifie s’il faut utiliser des compteurs supplémentaires pour conserver un décompte précis quand des exceptions sont levées au cours de l’apprentissage. Utilisez **TRACKEH** pour spécifier des compteurs supplémentaires pour un nombre exact. Utilisez **NOTRACKEH** pour spécifier des compteurs uniques pour le code qui n’utilise pas d’exception manipulation ou qui ne rencontrent pas d’exceptions dans vos scénarios de formation.  Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **TRACKEH** . Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **NOTRACKEH** .
+
+**PGD**=*filename*<br/>
+Spécifie un nom de fichier de base pour le fichier .pgd. Par défaut, l’éditeur de liens utilise le nom du fichier image exécutable de base avec une extension .pgd.
+
+## <a name="remarks"></a>Notes
+
+Le **/genprofile** et **/fastgenprofile** options indiquent à l’éditeur de liens pour générer le fichier d’instrumentation profilage nécessaire pour prendre en charge de la formation de l’application pour l’optimisation guidée par profil (PGO). Ces options sont nouvelles dans Visual Studio 2015. Préférez ces options à la fonctionnalité déconseillée **/LTCG : PGINSTRUMENT**, **/PGD** et **/POGOSAFEMODE** options et **PogoSafeMode**,  **VCPROFILE_ALLOC_SCALE** et **VCPROFILE_PATH** variables d’environnement. Les informations de profilage générées par l’apprentissage de l’application sont utilisées comme entrée pour effectuer les optimisations de la totalité du programme ciblé pendant les générations. Vous pouvez définir des options supplémentaires pour contrôler différentes fonctionnalités de profilage pour les performances pendant l’apprentissage de l’application et les builds. Les options par défaut spécifiées par **/genprofile** donner des résultats plus précis, en particulier pour les applications multithreads volumineuses et complexes. Le **/fastgenprofile** option utilise les valeurs par défaut différentes pour un encombrement mémoire moindre et les meilleures performances lors de la formation, au détriment de la précision.
+
+Informations de profilage sont capturées lorsque vous exécutez l’application instrumentée après avoir généré à l’aide de **/genprofile** de **/fastgenprofile**. Ces informations sont capturées lorsque vous spécifiez la [/useprofile](useprofile.md) option de l’éditeur de liens pour effectuer le profilage de l’étape et puis utilisé afin de guider l’étape de génération optimisée. Pour plus d’informations sur la façon d’effectuer l’apprentissage de votre application et des détails sur les données collectées, consultez [optimisation guidée par profil](profile-guided-optimizations.md).
+
+Vous devez également spécifier **LTCG** lorsque vous spécifiez **/genprofile** ou **/fastgenprofile**.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
+
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [définition des propriétés de projet Visual C++](../../ide/working-with-project-properties.md).
+
+1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+
+1. Entrez le **/genprofile** ou **/FASTGENPROFILE** options et les arguments dans le **des Options supplémentaires** boîte. Choisissez **OK** pour enregistrer vos modifications.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
+
+- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Voir aussi
+
+[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
+[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+[/LTCG (Génération de code durant l’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md)<br/>
