@@ -1,23 +1,23 @@
 ---
-title: "Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -37,9 +37,11 @@ Les formats de fichier .obj et .lib sont bien définis et rarement modifiés. De
 
 C++ ne dispose pas d’une interface ABI (Application Binary Interface) stable. Visual Studio gère une interface ABI C++ stable pour toutes les versions secondaires d’une version. Par exemple, Visual Studio 2017 et toutes ses mises à jour sont compatibles du point de vue binaire. Toutefois, l’interface ABI n’est pas obligatoirement compatible entre les versions principales de Visual Studio (à l’exception de 2015 et 2017, qui _sont_ compatibles du point de vue binaire). Autrement dit, nous pouvons apporter des modifications avec rupture à la disposition de type C++, à la décoration de nom, à la gestion des exceptions et à d’autres parties de l’interface ABI C++. Ainsi, si vous avez un fichier objet qui affiche des symboles externes avec une liaison C++, ce fichier objet peut ne pas être lié correctement aux fichiers objets générés avec une version principale différente de l’ensemble d’outils. Notez que l’expression « peut ne pas être lié » ici a plusieurs significations possibles : le lien peut échouer complètement (par exemple, si la décoration de nom a changé), le lien peut aboutir et les dysfonctionnements peuvent survenir au moment de l’exécution (par exemple, si la disposition de type a changé) ou tout fonctionne correctement dans de nombreux cas et aucun problème ne se pose. Notez également que si l’interface ABI C++ n’est pas stable, l’interface ABI C et le sous-ensemble de l’interface ABI C++ requis pour COM sont stables.
 
+Si vous créez un lien à une bibliothèque d’importation, les versions ultérieures des bibliothèques redistribuables Visual Studio qui conservent une compatibilité avec l’ABI peuvent être utilisées lors de l’exécution. Par exemple, si votre application est compilée et liée à l’aide de l’ensemble d’outils Visual Studio 2015 Update 3, vous pouvez utiliser n’importe quel package redistribuable de Visual Studio 2017, car les bibliothèques 2015 et 2017 ont conservé une compatibilité binaire descendante. L’inverse n’est pas vrai : vous ne pouvez pas utiliser un package redistribuable d’une version antérieure de l’ensemble d’outils que vous avez utilisé pour générer votre code, même s’il a une ABI compatible.
+
 ### <a name="libraries"></a>Bibliothèques
 
-Si vous compilez un fichier source à l’aide d’une version particulière des en-têtes de bibliothèques Visual Studio C++ (en utilisant #include sur les en-têtes), le fichier objet obtenu doit être lié avec la même version des bibliothèques. Ainsi, par exemple, si votre fichier source est compilé avec le fichier d’en-tête \<immintrin.h > Visual Studio 2017, vous devez le lier avec la bibliothèque vcruntime Visual Studio 2017. De même, si votre fichier source est compilé avec le fichier d’en-tête \<iostream> Visual Studio 2017, vous devez le lier avec la bibliothèque C++ standard Visual Studio 2017, msvcprt. Les associations ne sont pas prises en charge.
+Si vous compilez un fichier source à l’aide d’une version particulière des en-têtes de bibliothèques Visual Studio C++ (en utilisant #include sur les en-têtes), le fichier objet obtenu doit être lié avec la même version des bibliothèques. Ainsi, par exemple, si votre fichier source est compilé avec le fichier d’en-tête \<immintrin.h > Visual Studio 2015 Update 3, vous devez le lier avec la bibliothèque vcruntime Visual Studio 2015 Update 3. De même, si votre fichier source est compilé avec le fichier d’en-tête \<iostream> Visual Studio 2017 version 15.5, vous devez le lier avec la bibliothèque C++ standard Visual Studio 2017 version 15.5, msvcprt. Les associations ne sont pas prises en charge.
 
 Pour la bibliothèque C++ standard, les associations ont été explicitement interdites via l’utilisation de `#pragma detect_mismatch` dans les en-têtes standard depuis Visual Studio 2010. Si vous tentez de lier des fichiers objets incompatibles ou d’effectuer une liaison avec la bibliothèque standard incorrecte, la liaison échoue.
 
