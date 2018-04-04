@@ -1,28 +1,28 @@
 ---
 title: Applications de bureau (Visual C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 A *application de bureau* en C++ est une application native qui peut accéder à l’ensemble complet d’API Windows et s’exécute dans une fenêtre ou dans la console système. Applications de bureau en C++ peuvent s’exécuter sur Windows XP et Windows 10 (bien que Windows XP n’est ne sont plus officiellement pris en charge et qu’il existe de nombreuses API Windows qui ont été introduites depuis).   Une application de bureau est distincte à partir d’une application de plateforme Windows universelle (UWP), ce qui peut s’exécuter sur des PC exécutant Windows 10 et également sur XBox, Windows Phone, Surface Hub et autres périphériques. Pour plus d’informations sur les postes de travail Visual Studio. Les applications UWP, consultez [choisir votre technologie](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ A *application de bureau* en C++ est une application native qui peut accéder à
 |Titre|Description|  
 |-----------|-----------------|  
 |[Développement Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|  
-|[Hilo : développement d’applications C++ pour Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une présentation throough programmation Win32.|  
+|[Hilo : développement d’applications C++ pour Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une présentation détaillée de la programmation Win32.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Décrit les principales fonctionnalités de Visual C++ dans Visual Studio et fournit un lien vers le reste de la documentation Visual C++.|  
   
 ## <a name="see-also"></a>Voir aussi  

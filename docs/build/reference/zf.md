@@ -1,6 +1,6 @@
 ---
-title: "/ZF (génération plus rapide PDB) | Documents Microsoft"
-ms.date: 02/22/2018
+title: /ZF (génération plus rapide PDB) | Documents Microsoft
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (génération PDB plus rapide)
 
@@ -34,7 +34,7 @@ Le **/Zf** option active la prise en charge du compilateur pour la génération 
 
 Étant donné que la **/Zf** option s’applique uniquement à la génération du fichier PDB, il requiert le [/Zi](z7-zi-zi-debug-information-format.md) ou [/Zi](z7-zi-zi-debug-information-format.md) option.
 
-Le **/Zf** option est disponible à compter de Visual Studio 2017 version 15,1 et est désactivée par défaut.
+Le **/Zf** option est disponible à compter de Visual Studio 2017 version 15,1, où elle est désactivée par défaut. À compter de Visual Studio 2017 version 15.7 Preview 3, cette option est activée par défaut lorsque le **/Zi** ou **/Zi** est activée.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
@@ -46,5 +46,5 @@ Le **/Zf** option est disponible à compter de Visual Studio 2017 version 15,1 e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur classées par ordre alphabétique](compiler-options-listed-alphabetically.md)  
-[/MP (Générer avec plusieurs processus)](mp-build-with-multiple-processes.md)  
+[Options du compilateur classées par ordre alphabétique](compiler-options-listed-alphabetically.md)<br/>
+[/MP (Générer avec plusieurs processus)](mp-build-with-multiple-processes.md)<br/>
