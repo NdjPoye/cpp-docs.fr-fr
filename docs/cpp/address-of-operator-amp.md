@@ -1,12 +1,12 @@
 ---
-title: "Opérateur address-of : &amp; | Documents Microsoft"
-ms.custom: 
+title: 'Opérateur address-of : &amp; | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="address-of-operator-amp"></a>Opérateur address-of :&amp;
+# <a name="address-of-operator-amp"></a>Opérateur address-of : &amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -37,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Notes  
- L’opérateur d’adresse unaire (**&**) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits et n’est pas déclaré avec le spécificateur de classe de stockage **register**.  
+ L’opérateur d’adresse unaire (**&**) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou d’une l-value qui désigne un objet qui n’est pas un champ de bits.  
   
  L’opérateur d’adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, structure, classe ou union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.  
   
- Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l'opérande est de type `char`, le résultat de l'expression est de type pointeur vers `char`. L’opérateur d’adresse, appliqué à **const** ou `volatile` objets, la valeur de **const** `type`  **\***  ou `volatile` `type`  **\*** , où `type` est le type de l’objet d’origine.  
+ Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l'opérande est de type `char`, le résultat de l'expression est de type pointeur vers `char`. L’opérateur d’adresse, appliqué à **const** ou `volatile` objets, la valeur de **const** `type` **\*** ou `volatile` `type` **\***, où `type` est le type de l’objet d’origine.  
   
  Quand l’opérateur d’adresse est appliqué à un [nom qualifié](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), le résultat varie selon que le *nom qualifié* spécifie un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Si le membre n’est pas statique, le résultat est un pointeur vers le membre *nom* de la classe indiquée par *qualified-class-name*. (Consultez [Expressions primaires](../cpp/primary-expressions.md) pour plus d’informations *qualified-class-name*.) Le fragment de code ci-dessous montre comment le résultat diffère si le membre est statique ou non :  
   
@@ -65,7 +65,7 @@ int main() {
   
  L'adresse d'une fonction surchargée peut être prise uniquement lorsque vous savez clairement quelle version de la fonction est référencée. Consultez [surcharge de fonction](function-overloading.md) pour plus d’informations sur la façon d’obtenir l’adresse d’un particulier de la fonction surchargée.  
   
- L'application de l'opérateur d'adresse à un type référence fournit le même résultat que l'application de l'opérateur à l'objet auquel la référence est liée. Exemple :  
+ L'application de l'opérateur d'adresse à un type référence fournit le même résultat que l'application de l'opérateur à l'objet auquel la référence est liée. Par exemple :  
   
 ## <a name="example"></a>Exemple  
   

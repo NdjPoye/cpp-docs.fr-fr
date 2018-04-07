@@ -1,12 +1,12 @@
 ---
 title: Les membres statiques (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>Membres statiques (C++)
 Les classes peuvent contenir des données membres et des fonctions membres statiques. Lorsqu’un membre de données est déclaré en tant que **statique**, qu’une seule copie des données est conservée pour tous les objets de la classe.
   
  Les données membres statiques ne font pas partie des objets d'un type donné de classe. Par conséquent, la déclaration de données membres statiques n'est pas considérée comme une définition. Les données membres sont déclarées dans la portée de classe, mais la définition est exécutée au niveau de la portée de fichier. Ces membres statiques ont une liaison externe. L'exemple suivant illustre ce comportement :  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  Les données membres statiques peuvent être mentionnées sans faire référence à un objet de type classe. Le nombre d'octets écrits avec des objets `BufferedOutput` peut être obtenu comme suit :   
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Pour que le membre statique existe, il n'est pas nécessaire que des objets du type classe existent. Les membres statiques qui sont également accessibles à l’aide de la sélection de membre (**.** et  **->** ) opérateurs. Exemple :  
+ Pour que le membre statique existe, il n'est pas nécessaire que des objets du type classe existent. Les membres statiques qui sont également accessibles à l’aide de la sélection de membre (**.** et **->**) opérateurs. Par exemple :  
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  
