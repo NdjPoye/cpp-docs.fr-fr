@@ -1,13 +1,10 @@
 ---
 title: creal, crealf, creall | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/30/2018
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - creal
@@ -40,64 +37,62 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75e3ebc7a5f93084e925eece49adedf1b41df8ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc43c72c4fcbaf9d24c1a2c4cc7b7923d0c67878
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
-Récupère la partie réelle d’un nombre complexe.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double creal(   
-   _Dcomplex z   
-);  
-float creal(   
-   _Fcomplex z   
-);  // C++ only  
-long double creal(   
-   _Lcomplex z   
-);  // C++ only  
-float crealf(   
-   _Fcomplex z   
-);  
-long double creall(   
-  _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `z`  
- Nombre complexe.  
-  
-## <a name="return-value"></a>Valeur de retour  
- La partie réelle de `z`.  
-  
-## <a name="remarks"></a>Notes  
- Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `creal` qui acceptent des valeurs `_Fcomplex` ou `_Lcomplex` et retournent des valeurs `float` ou `long double`. Dans un programme C, `creal` accepte toujours une valeur `_Dcomplex` et retourne une valeur `double`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête C|En-tête C++|  
-|-------------|--------------|------------------|  
-|`creal`,               `crealf`, `creall`|\<complex.h>|\<ccomplex>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Récupère la partie réelle d’un nombre complexe.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double creal( _Dcomplex z );
+float crealf( _Fcomplex z );
+long double creall( _Lcomplex z );
+```
+
+```cpp
+float creal( _Fcomplex z );  // C++ only
+long double creal( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*z*<br/>
+Nombre complexe.
+
+## <a name="return-value"></a>Valeur de retour
+
+La partie réelle de *z*.
+
+## <a name="remarks"></a>Notes
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de `creal` acceptant **_Fcomplex** ou **_Lcomplex** valeurs et retournent **float** ou **long Double** valeurs. Dans un programme C, `creal` prend toujours un **_Dcomplex** valeur et retourne un **double** valeur.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête C|En-tête C++|
+|-------------|--------------|------------------|
+|`creal`, `crealf`, `creall`|\<complex.h>|\<ccomplex>|
+
+Le **_Fcomplex**, **_Dcomplex**, et **_Lcomplex** types sont équivalents spécifiques à Microsoft des types natifs C99 non implémentées **float _Complex** , **_Complex double**, et **_Complex long double**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_Cbuild, _FCbuild, _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
+[norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
