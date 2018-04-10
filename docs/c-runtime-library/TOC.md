@@ -29,6 +29,7 @@
 ## [Manipulation de la mémoire tampon](buffer-manipulation.md)
 ## [Classification d’octets](byte-classification.md)
 ## [Classifications des caractères](character-classification.md)
+## [Prise en charge des opérations mathématiques complexes](complex-math-support.md)
 ## [Alignement des données](data-alignment.md)
 ## [Conversion de données](data-conversion.md)
 ## [Routines de débogage](debug-routines.md)
