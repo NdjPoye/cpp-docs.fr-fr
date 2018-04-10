@@ -1,12 +1,12 @@
 ---
 title: Classe de contexte | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context, classe
 Représente une abstraction pour un contexte d'exécution.  
@@ -56,7 +56,7 @@ class Context;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[~Context Destructor](#dtor)||  
+|[~ Context, destructeur](#dtor)||  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -70,9 +70,9 @@ class Context;
 |[Id](#id)|Retourne un identificateur pour le contexte actuel qui est unique dans le planificateur auquel appartient le contexte actuel.|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Retourne une indication précisant si la collection de tâches qui s’exécute actuellement inline sur le contexte actuel est en cours d’annulation (ou sera bientôt).|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Détermine si le contexte est bloqué de façon synchrone. Un contexte est considéré comme bloqué de façon synchrone s’il a exécuté une action qui a conduit à bloquer explicitement.|  
-|[Oversubscribe](#oversubscribe)|Injecte un processeur virtuel supplémentaire dans un planificateur pour la durée d’un bloc de code lorsqu’elle est appelée sur un contexte de l’exécution sur l’un des processeurs virtuels dans ce planificateur.|  
+|[Sur-souscrire](#oversubscribe)|Injecte un processeur virtuel supplémentaire dans un planificateur pour la durée d’un bloc de code lorsqu’elle est appelée sur un contexte de l’exécution sur l’un des processeurs virtuels dans ce planificateur.|  
 |[ScheduleGroupId](#schedulegroupid)|Retourne un identificateur pour le groupe de planification qui travaille sur le contexte actuel.|  
-|[Unblock](#unblock)|Débloque le contexte et le rend exécutable.|  
+|[Débloquer](#unblock)|Débloque le contexte et le rend exécutable.|  
 |[VirtualProcessorId](#virtualprocessorid)|Retourne un identificateur pour le processeur virtuel d’exécution sur le contexte actuel.|  
 |[Yield](#yield)|Produit l'exécution pour qu'un autre contexte puisse s'exécuter. Si aucun autre contexte n'est disponible pour la production, le planificateur peut produire dans un autre thread du système d'exploitation.|  
   
@@ -86,7 +86,7 @@ class Context;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Context`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -108,7 +108,7 @@ static void __cdecl Block();
   
  Cette méthode peut lever des exceptions, y compris les diverses [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="dtor"></a> ~Context 
+##  <a name="dtor"></a> ~ Contexte 
 
 ```
 virtual ~Context();

@@ -1,12 +1,12 @@
 ---
-title: "Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Conteneurs de contrôles ActiveX : Gestion des événements à partir d’un contrôle ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
 Cet article explique l’utilisation de la fenêtre Propriétés pour installer des gestionnaires d’événements pour les contrôles ActiveX dans un conteneur de contrôles ActiveX. Les gestionnaires d’événements sont utilisés pour recevoir des notifications (à partir du contrôle) de certains événements et exécuter des actions en réponse. Cette notification est appelée « déclenche » l’événement.  
@@ -42,7 +42,7 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
   
  Pour plus d’informations sur les tables de récepteurs d’événements, consultez [tables de récepteurs d’événements](../mfc/reference/event-sink-maps.md) dans les *Class Library Reference*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>Modifications de gestionnaire d’événements au projet  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> Modifications de gestionnaire d’événements au projet  
  Lorsque vous utilisez la fenêtre Propriétés pour ajouter des gestionnaires d’événements, une table de récepteur d’événements est déclarée et définie dans votre projet. Les instructions suivantes sont ajoutées au contrôle. Fichier CPP la première fois qu’un gestionnaire d’événements est ajouté. Ce code déclare une table de récepteur d’événements pour la classe de boîte de dialogue (dans ce cas, `CContainerDlg`) :  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
@@ -72,7 +72,7 @@ Cet article explique l’utilisation de la fenêtre Propriétés pour installer 
   
 4.  Sélectionnez l’événement que vous souhaitez que la classe de boîte de dialogue pour gérer. Dans cet exemple, sélectionnez **cliquez sur**.  
   
-5.  Dans la zone de liste déroulante à droite, sélectionnez ** \<Ajouter > ClickCircctrl1**.  
+5.  Dans la zone de liste déroulante à droite, sélectionnez  **\<Ajouter > ClickCircctrl1**.  
   
 6.  Double-cliquez sur la nouvelle fonction de gestionnaire à partir de l’affichage de classes pour atteindre le code de gestionnaire d’événements dans l’implémentation (. Fichier CPP) de `CContainerDlg`.  
   

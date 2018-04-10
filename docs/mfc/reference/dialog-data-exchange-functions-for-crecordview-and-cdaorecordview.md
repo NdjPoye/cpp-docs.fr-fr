@@ -1,12 +1,12 @@
 ---
-title: "Fonctions d’échange de données de la boîte de dialogue pour CRecordView et CDaoRecordView | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’échange de données de la boîte de dialogue pour CRecordView et CDaoRecordView | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
@@ -29,17 +29,17 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 Cette rubrique répertorie les fonctions DDX_Field utilisées pour échanger des données entre un [CRecordset](../../mfc/reference/crecordset-class.md) et un [CRecordView](../../mfc/reference/crecordview-class.md) formulaire ou un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) et un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formulaire.  
@@ -63,7 +63,7 @@ Cette rubrique répertorie les fonctions DDX_Field utilisées pour échanger des
 |[DDX_FieldSlider](#ddx_fieldslider)|Synchronise la position du curseur de défilement d’un contrôle slider dans une vue d’enregistrement et une `int` membre de données de champ d’un jeu d’enregistrements. |
 |[DDX_FieldText](#ddx_fieldtext)|Les versions surchargées sont disponibles pour le transfert `int`, **UINT**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** , **double**, **court**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), et [COleCurrency](../../mfc/reference/colecurrency-class.md) des données entre un membre de données de champ de recordset et une modification zone un `CRecordView` ou `CDaoRecordView`.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
  Le `DDX_FieldCBIndex` fonction synchronise l’index de l’élément sélectionné dans le contrôle de zone de liste d’un contrôle de zone de liste déroulante dans une vue d’enregistrement et une `int` membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -103,10 +103,10 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple serait similaire pour `DDX_FieldCBIndex`.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
  Le `DDX_FieldCBString` fonction gère le transfert de [CString](../../atl-mfc-shared/reference/cstringt-class.md) des données entre le contrôle d’édition d’un contrôle de zone de liste déroulante dans une vue d’enregistrement et un `CString` membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -146,10 +146,10 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple inclut un appel à `DDX_FieldCBString`.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
  Le `DDX_FieldCBStringExact` fonction gère le transfert de [CString](../../atl-mfc-shared/reference/cstringt-class.md) des données entre le contrôle d’édition d’un contrôle de zone de liste déroulante dans une vue d’enregistrement et un `CString` membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -189,10 +189,10 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldCBStringExact` serait similaire.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
  Le `DDX_FieldCheck` fonction gère le transfert de `int` des données entre un contrôle de case à cocher dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un `int` membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```  
@@ -227,10 +227,10 @@ void AFXAPI DDX_FieldCheck(
   
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
  Le `DDX_FieldLBIndex` fonction synchronise l’index de l’élément sélectionné dans un contrôle de zone de liste dans une vue d’enregistrement et une `int` membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -270,10 +270,10 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
  Le `DDX_FieldLBString` copie la sélection actuelle d’un contrôle de zone de liste dans une vue d’enregistrement pour un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -313,10 +313,10 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBString` serait similaire.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
  Le `DDX_FieldLBStringExact` fonction copie la sélection actuelle d’un contrôle de zone de liste dans une vue d’enregistrement pour un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membre de données de champ d’un objet recordset associé à la vue de l’enregistrement.  
   
 ```  
@@ -356,10 +356,10 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBStringExact` serait similaire.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
  Le `DDX_FieldRadio` fonction associe de base zéro `int` variable de membre du jeu d’enregistrements de la vue d’un enregistrement avec le bouton radio actuellement sélectionné dans un groupe de cases d’option dans la vue de l’enregistrement.  
   
 ```  
@@ -399,10 +399,10 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldRadio` serait similaire.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
  Le `DDX_FieldScroll` fonction synchronise la position de défilement d’un contrôle de barre de défilement dans une vue d’enregistrement et une `int` membre de données de champ d’un jeu d’enregistrements associés à la vue d’enregistrement (ou toute variable de type entier vous souhaitez mapper au).  
   
 ```  
@@ -442,10 +442,10 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldScroll` serait similaire.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>nom = « ddx_fieldslider » ></a> DDX_FieldSlider
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
 Le `DDX_FieldSlider` fonction synchronise la position du curseur de défilement d’un contrôle slider dans une vue d’enregistrement et une `int` membre de données de champ d’un jeu d’enregistrements associés à la vue d’enregistrement (ou toute variable de type entier vous souhaitez mapper au).  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -478,7 +478,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="remarks"></a>Notes  
  Lors du déplacement des données à partir de l’ensemble d’enregistrements pour le curseur, cette fonction affecte la valeur spécifiée dans la position du curseur *valeur*. Sur un transfert à partir de l’ensemble d’enregistrements pour le contrôle, si le champ de recordset est Null, la position du contrôle de curseur est définie sur 0. Sur le transfert du contrôle vers le recordset, si le contrôle est vide, la valeur du champ de recordset est 0.  
   
- `DDX_FieldSlider`ne pas échanger les informations de plage avec des contrôles slider capables de définir une plage plutôt que simplement une position.  
+ `DDX_FieldSlider` ne pas échanger les informations de plage avec des contrôles slider capables de définir une plage plutôt que simplement une position.  
   
  Utilisez la première substitution de la fonction si vous travaillez avec les classes ODBC. Utilisez la deuxième substitution avec les classes DAO.  
   
@@ -487,13 +487,13 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="example"></a>Exemple  
  Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldSlider` serait similaire.  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
    
 ### <a name="see-also"></a>Voir aussi  
  [Macros et objet Globals](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
  Le `DDX_FieldText` fonction gère le transfert de `int`, **court**, **long**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, ou **octets** données entre un contrôle de zone d’édition et les membres de données de champ d’un recordset.  
   
 ```  
@@ -632,7 +632,7 @@ void AFXAPI DDX_FieldText(
  [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdao.h  
     
 ## <a name="see-also"></a>Voir aussi  

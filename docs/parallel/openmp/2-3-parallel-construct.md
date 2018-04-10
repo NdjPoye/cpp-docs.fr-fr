@@ -1,27 +1,27 @@
 ---
-title: "2.3 construction parallèle | Documents Microsoft"
-ms.custom: 
+title: 2.3 construction parallèle | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Construction parallèle
 La directive suivante définit une région parallèle, qui est une région du programme qui doit être exécutée par plusieurs threads en parallèle. Il s’agit de la construction fondamentale qui démarre l’exécution en parallèle.  
@@ -32,21 +32,21 @@ La directive suivante définit une région parallèle, qui est une région du pr
   
  Le *clause* est une des opérations suivantes :  
   
- **Si (** *expression scalaire* **)**  
+ **if(** *scalar-expression* **)**  
   
- **privé (** *variable-list* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *variable-list* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **par défaut (partagé &#124; none)**  
+ **default(shared &#124; none)**  
   
- **partagé (** *variable-list* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *variable-list* **)**  
+ **copyin(** *variable-list* **)**  
   
- **la réduction (** *opérateur* **:***variable-list* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *entier* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Lorsqu’un thread rencontre une construction parallèle, une équipe de threads est créée si une des situations suivantes est vraie :  
   

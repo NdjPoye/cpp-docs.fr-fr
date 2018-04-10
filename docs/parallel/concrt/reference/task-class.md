@@ -1,12 +1,12 @@
 ---
-title: "Task, classe (Runtime d’accès concurrentiel) | Documents Microsoft"
-ms.custom: 
+title: Task, classe (Runtime d’accès concurrentiel) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +23,17 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Elle peut également être composée avec d’autres tâches à l’aide de continuations ( `then`) et de jointure ( `when_all`) et un choix ( `when_any`) des modèles.  
@@ -96,12 +96,12 @@ class task;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="get"></a> Télécharger 
+##  <a name="get"></a> get 
 
  Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu'elle est appelée sur une tâche dont le `result_type` a la valeur `void`.  
   
@@ -144,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Notes  
  La fonction retourne la valeur true si la tâche est terminée ou annulée (avec ou sans exception utilisateur).  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
  Détermine si deux objets `task` représentent différentes tâches internes.  
   
@@ -160,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si les objets font référence à différentes tâches sous-jacentes ; sinon `false`.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Remplace le contenu d'un objet `task` par un autre.  
   
@@ -179,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Notes  
  Étant donné que `task` se comporte comme un pointeur intelligent, après une assignation de copie, cet objet `task` représente la même tâche réelle que `_Other`.  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
  Détermine si deux objets `task` représentent la même tâche interne.  
   

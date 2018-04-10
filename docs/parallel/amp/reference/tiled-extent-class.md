@@ -1,12 +1,12 @@
 ---
 title: tiled_extent, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 A `tiled_extent` objet est un `extent` objet d’un à trois dimensions qui divise l’espace d’étendue en une, deux ou les vignettes en trois dimensions.  
@@ -97,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Name|Description|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
-|[tile_dim1 Constant](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 Constant](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
+|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
+|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
+|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -113,12 +113,12 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  `tiled_extent`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
 
-## <a name="ctor">tiled_extent, constructeur</a>  
+## <a name="ctor"> </a>  tiled_extent, constructeur  
 Initialise une nouvelle instance de la classe `tiled_extent`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -164,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valeur de retour  
  La nouvelle `tiled_extent` objet par valeur. 
-## <a name="truncate"> </a>  Tronquer   
+## <a name="truncate"> </a>  truncate   
 Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  

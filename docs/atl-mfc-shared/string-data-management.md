@@ -1,29 +1,29 @@
 ---
-title: "Gestion des données de chaîne | Documents Microsoft"
-ms.custom: 
+title: Gestion des données de chaîne | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="string-data-management"></a>Gestion des données chaînes
 Visual C++ propose plusieurs façons de gérer les données de type chaîne :  
@@ -34,7 +34,7 @@ Visual C++ propose plusieurs façons de gérer les données de type chaîne :
   
 -   La classe MFC [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md), qui fournit des objets chaîne redimensionnables flexible  
   
--   Classe [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md), qui fournit un objet de chaîne indépendant des MFC avec les mêmes fonctionnalités que`CString`  
+-   Classe [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md), qui fournit un objet de chaîne indépendant des MFC avec les mêmes fonctionnalités que `CString`  
   
  Presque tous les programmes fonctionnent avec des données de chaîne. MFC `CString` classe est souvent la meilleure solution pour la gestion des chaînes flexible. Depuis la version 7.0, `CString` peut être utilisé dans les programmes MFC ou indépendants des MFC. La bibliothèque d’exécution et `CString` prend en charge les chaînes contenant des caractères multioctets (étendus), comme dans la programmation MBCS ou Unicode.  
   
@@ -48,11 +48,11 @@ Visual C++ propose plusieurs façons de gérer les données de type chaîne :
   
  Le [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md) classe prend en charge la manipulation de chaînes. Elle est destinée à remplacer et étendre la fonctionnalité normalement fournie par le package de chaîne de bibliothèque Runtime C. La `CString` classe fournit les fonctions membres et des opérateurs pour la gestion simplifiée des chaînes, similaires à ceux de Basic. La classe fournit également les constructeurs et des opérateurs pour la construction, l’affectation et la comparaison **classes CString** et types de données de chaîne C++ standard. Étant donné que `CString` n’est pas dérivé `CObject`, vous pouvez utiliser `CString` objets indépendamment de la plupart de la bibliothèque Microsoft Foundation classe (MFC).  
   
- `CString`les objets suivent la « sémantique des valeurs ». A `CString` objet représente une valeur unique. Imaginez un `CString` sous forme de chaîne réelle, et non comme un pointeur vers une chaîne.  
+ `CString` les objets suivent la « sémantique des valeurs ». A `CString` objet représente une valeur unique. Imaginez un `CString` sous forme de chaîne réelle, et non comme un pointeur vers une chaîne.  
   
- A `CString` objet représente une séquence d’un nombre variable de caractères. `CString`objets peuvent être considérés comme des tableaux de caractères.  
+ A `CString` objet représente une séquence d’un nombre variable de caractères. `CString` objets peuvent être considérés comme des tableaux de caractères.  
   
-##  <a name="_core_unicode_and_mbcs_provide_portability"></a>Unicode et MBCS assurent la portabilité  
+##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode et MBCS assurent la portabilité  
  Avec MFC version 3.0 et versions ultérieure, MFC, y compris les `CString`, est activée pour Unicode et jeux de caractères multioctets (MBCS). Cette prise en charge facilite l’écriture d’applications portables que vous pouvez générer des caractères Unicode ou ANSI. Pour activer cette portabilité, chaque caractère dans un `CString` objet est de type **TCHAR**, qui est définie comme `wchar_t` si vous définissez le symbole **_UNICODE** lorsque vous générez votre application, ou en tant que `char` si ce n’est pas le cas. Une `wchar_t` caractère est la largeur de 16 bits. MBCS est activé si vous générez avec le symbole **_MBCS** défini. Application MFC elle-même est générée à l’aide d’un le **_MBCS** symbole (pour les bibliothèques NAFX) ou le **_UNICODE** symbole (pour les bibliothèques UAFX) défini.  
   
 > [!NOTE]
@@ -70,7 +70,7 @@ Visual C++ propose plusieurs façons de gérer les données de type chaîne :
   
  A `CString` objet peut stocker jusqu'à **INT_MAX** (2 147 483 647) caractères. Le **TCHAR** type de données est utilisé pour obtenir ou définir des caractères individuels à l’intérieur d’un `CString` objet. Contrairement aux tableaux de caractères, la `CString` classe a une fonction d’allocation de mémoire intégrées. Cela permet de `CString` objets à croître automatiquement en fonction des besoins (autrement dit, il est inutile à vous soucier de croissance un `CString` objet en fonction de chaînes plus longues).  
   
-##  <a name="_core_cstrings_and_const_char_pointers"></a>CString et pointeurs const char  
+##  <a name="_core_cstrings_and_const_char_pointers"></a> CString et pointeurs const char  
  A `CString` objet peut également agir comme une chaîne de style C littérale (une `PCXSTR`, qui est le même que **const char\***  si pas sous Unicode). Le [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) permet de l’opérateur de conversion `CString` objets à être librement remplacés par des pointeurs de caractères dans les appels de fonction. Le **CString (LPCWSTR** `pszSrc` **)** constructeur permet des pointeurs de caractères à remplacer pour `CString` objets.  
   
  Aucune tentative n’est effectuée `CString` objets. Si vous effectuez deux `CString` contenant des objets `Chicago`, par exemple, les caractères de `Chicago` sont stockées dans deux emplacements. (Cela ne peut pas être vrai pour les futures versions de MFC, donc vous ne devez pas dépendre il.)  
@@ -86,7 +86,7 @@ Visual C++ propose plusieurs façons de gérer les données de type chaîne :
   
  Le `CString` classe n’est pas implémentée comme une classe de collection de bibliothèque Microsoft Foundation Class, bien que `CString` objets certainement peuvent être stockés en tant qu’éléments dans des collections.  
   
-##  <a name="_core_cstring_reference_counting"></a>Décompte de références CString  
+##  <a name="_core_cstring_reference_counting"></a> Décompte de références CString  
  Depuis la version 4.0, MFC lorsque [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md) objets sont copiés, MFC incrémente un décompte de références au lieu de copier les données. Cela rend le passage de paramètres par valeur et en retournant `CString` objets par valeur plus efficace. Ces opérations entraînent le constructeur de copie être appelées, parfois plusieurs fois. Incrémentation d’un décompte de références réduit le temps système pour ces opérations courantes et facilite l’utilisation de `CString` une option plus attrayante.  
   
  Comme chaque copie est détruit, le nombre de références dans l’objet d’origine est décrémenté. La version d’origine `CString` objet n’est pas détruit tant que son décompte de références est réduit à zéro.  

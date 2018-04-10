@@ -1,12 +1,12 @@
 ---
 title: Classe de CStdioFile | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Classe de CStdioFile
 Représente un fichier de flux d’exécution C tel qu’il est ouvert par la fonction de l’exécution [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -56,7 +56,7 @@ class CStdioFile : public CFile
 |----------|-----------------|  
 |[CStdioFile::CStdioFile](#cstdiofile)|Construit un `CStdioFile` objet à partir d’un pointeur de fichier ou chemin d’accès.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Construit et initialise un objet `CStdioFile`.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  Le `m_pStream` membre de données est le pointeur vers un fichier ouvert, tel que retourné par la fonction d’exécution C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Notes  
  Il s’agit de **NULL** si le fichier n’a jamais été ouvert ou a été fermé.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Surchargé. Ouvrir est conçu pour une utilisation avec la valeur par défaut `CStdioFile` constructeur.  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  Chaîne qui est le chemin d’accès au fichier souhaité. Le chemin d’accès peut être relatif ou absolu.  
   
  `nOpenFlags`  
- Mode de partage et d’accès. Spécifie l’action à entreprendre lors de l’ouverture du fichier. Vous pouvez combiner des options à l’aide de l’OR au niveau du bit (&#124;) (opérateur). Autorisation d’accès un à et un seul partage sont requis ; les modes modeCreate et modeNoInherit sont facultatifs.  
+ Mode de partage et d’accès. Spécifie l’action à entreprendre lors de l’ouverture du fichier. Vous pouvez combiner des options à l’aide de l’opération de bits OR (&#124;) (opérateur). Autorisation d’accès un à et un seul partage sont requis ; les modes modeCreate et modeNoInherit sont facultatifs.  
   
  `pError`  
  Pointeur vers un objet d’exception du fichier existant qui recevra l’état d’une opération ayant échoué.  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Lit les données de texte dans une mémoire tampon, jusqu'à une limite de `nMax`-1 caractères, à partir du fichier associé à le `CStdioFile` objet.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Repositionne le pointeur dans un fichier déjà ouvert.  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Écrit des données à partir d’une mémoire tampon dans le fichier associé à le `CStdioFile` objet.  
   
 ```  

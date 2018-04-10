@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Modifications du système de génération
 Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefois, dans Visual Studio 2008 et versions antérieures, le système de VCBuild a été utilisé. Certains types de fichiers et les concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document explique les différences dans le système de génération en cours.  
@@ -59,16 +59,16 @@ Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefoi
   
  L’héritage est pris en charge dans la version actuelle, en spécifiant la valeur d’une propriété comme la concaténation d’une ou plusieurs valeurs littérales et macros de propriété. Le **$ (Inherit)** et **$ (NoInherit)** macros ne sont pas prises en charge.  
   
- Dans l’exemple suivant, une liste délimitée par des points-virgules est assignée à une propriété sur une page de propriétés. La liste se compose de la concaténation de la  *\<valeur >* littéral et la valeur de la `MyProperty` propriété, qui est accessible à l’aide de la notation de macro, **$(**  *MyProperty***)**.  
+ Dans l’exemple suivant, une liste délimitée par des points-virgules est assignée à une propriété sur une page de propriétés. La liste se compose de la concaténation de la  *\<valeur >* littéral et la valeur de la `MyProperty` propriété, qui est accessible à l’aide de la notation de macro, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>. vcxproj.user fichiers  
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
  Un fichier utilisateur (. vcxproj.user) stocke des propriétés spécifiques à l’utilisateur pour les paramètres de l’exemple, de débogage et de déploiement. Le fichier vcxproj.user s’applique à tous les projets pour un utilisateur particulier.  
   
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters fichier  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  Lorsque **l’Explorateur de solutions** est utilisée pour ajouter un fichier à un projet, le fichier de filtres (. vcxproj.filters) définit où, dans le **l’Explorateur de solutions** arborescence le fichier est ajouté, en fonction de son extension de nom de fichier.  
   
 ## <a name="vc-directories-settings"></a>Paramètres de répertoires VC ++  

@@ -1,12 +1,12 @@
 ---
 title: completion_future, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
 Représente une future qui correspond à une opération asynchrone de C++ AMP.  
@@ -68,13 +68,13 @@ class completion_future;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur std::shared_future\<void >](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|  
+|[operator std::shared_future\<void>](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|  
 |[operator=](#operator_eq)|Copie le contenu de l’objet `completion_future` objet dans celui-ci.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `completion_future`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amprt.h  
   
  **Espace de noms :** concurrency  
@@ -108,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe par un constructeur de copie.|  
 |`completion_future(completion_future&& _Other);`|Initialise une nouvelle instance de la `completion_future` classe en déplaçant un constructeur.|  
   
-## <a name="get"></a> Télécharger 
+## <a name="get"></a> get 
 
 Attend que l’opération asynchrone terminée. Lève l’exception stockée si une s’est produite lors de l’opération asynchrone.  
   
@@ -131,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `std::shared_future`.  
   
-## <a name="operator_eq"></a> operator= 
+## <a name="operator_eq"></a> opérateur = 
 
 Copie le contenu de l’objet `completion_future` objet dans celui-ci.  
   
