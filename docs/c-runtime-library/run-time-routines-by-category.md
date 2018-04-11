@@ -1,12 +1,9 @@
 ---
-title: "Routines runtime par catégorie | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Routines runtime par catégorie | Microsoft Docs
+ms.custom: ''
+ms.date: 04/06/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - c.runtime
@@ -18,36 +15,38 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cfa27e2d76e546748258a5f6c1af1df9ded28f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="run-time-routines-by-category"></a>Routines runtime par catégorie
-Cette section répertorie et décrit les routines de la bibliothèque runtime Microsoft par catégorie. Pour des raisons pratiques de référence, certaines routines sont listées dans plusieurs catégories. Les routines de caractères multioctets et les routines de caractères larges sont regroupées avec leurs équivalents à caractères codés sur un octet, s’ils existent.  
-  
- Les principales catégories de routines de la bibliothèque runtime Microsoft sont :  
-  
-|||  
-|-|-|  
-|[Accès à un argument](../c-runtime-library/argument-access.md)|[Manipulation de la mémoire tampon](../c-runtime-library/buffer-manipulation.md)|  
-|[Classification d’octets](../c-runtime-library/byte-classification.md)|[Classifications des caractères](../c-runtime-library/character-classification.md)|  
-|[Alignement des données](../c-runtime-library/data-alignment.md)|[Conversion de données](../c-runtime-library/data-conversion.md)|  
-|[Routines de débogage](../c-runtime-library/debug-routines.md)|[Contrôle de répertoire](../c-runtime-library/directory-control.md)|  
-|[Gestion des erreurs](../c-runtime-library/error-handling-crt.md)|[Routines de gestion des exceptions](../c-runtime-library/exception-handling-routines.md)|  
-|[Gestion de fichiers](../c-runtime-library/file-handling.md)|[Prise en charge de la virgule flottante](../c-runtime-library/floating-point-support.md)|  
-|[Entrée et sortie](../c-runtime-library/input-and-output.md)|[Internationalisation](../c-runtime-library/internationalization.md)|  
-|[Allocation de mémoire](../c-runtime-library/memory-allocation.md)|[Contrôle de processus et d’environnement](../c-runtime-library/process-and-environment-control.md)|  
-|[Robustesse](../c-runtime-library/robustness.md)|[Vérifications des erreurs au moment de l’exécution](../c-runtime-library/run-time-error-checking.md)|  
-|[Recherche et tri](../c-runtime-library/searching-and-sorting.md)|[Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)|  
-|[Appels système](../c-runtime-library/system-calls.md)|[Gestion du temps](../c-runtime-library/time-management.md)|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+
+Cette section répertorie et décrit les routines de la bibliothèque runtime Microsoft par catégorie. Pour des raisons pratiques de référence, certaines routines sont listées dans plusieurs catégories. Les routines de caractères multioctets et les routines de caractères larges sont regroupées avec leurs équivalents à caractères codés sur un octet, s’ils existent.
+
+## <a name="routine-categories"></a>Catégories de routine
+
+|||
+|-|-|
+|[Accès à un argument](../c-runtime-library/argument-access.md)|[Manipulation de la mémoire tampon](../c-runtime-library/buffer-manipulation.md)|
+|[Classification d’octets](../c-runtime-library/byte-classification.md)|[Classifications des caractères](../c-runtime-library/character-classification.md)|
+|[Prise en charge des opérations mathématiques complexes](../c-runtime-library/complex-math-support.md)||
+|[Alignement des données](../c-runtime-library/data-alignment.md)|[Conversion de données](../c-runtime-library/data-conversion.md)|
+|[Routines de débogage](../c-runtime-library/debug-routines.md)|[Contrôle de répertoire](../c-runtime-library/directory-control.md)|
+|[Gestion des erreurs](../c-runtime-library/error-handling-crt.md)|[Routines de gestion des exceptions](../c-runtime-library/exception-handling-routines.md)|
+|[Gestion de fichiers](../c-runtime-library/file-handling.md)|[Prise en charge de la virgule flottante](../c-runtime-library/floating-point-support.md)|
+|[Entrée et sortie](../c-runtime-library/input-and-output.md)|[Internationalisation](../c-runtime-library/internationalization.md)|
+|[Allocation de mémoire](../c-runtime-library/memory-allocation.md)|[Contrôle de processus et d’environnement](../c-runtime-library/process-and-environment-control.md)|
+|[Robustesse](../c-runtime-library/robustness.md)|[Vérifications des erreurs au moment de l’exécution](../c-runtime-library/run-time-error-checking.md)|
+|[Recherche et tri](../c-runtime-library/searching-and-sorting.md)|[Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)|
+|[Appels système](../c-runtime-library/system-calls.md)|[Gestion du temps](../c-runtime-library/time-management.md)|
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>

@@ -1,10 +1,10 @@
 ---
 title: vcpkg-- gestionnaire de package C++ pour Windows | Microsoft Docs
-description: "vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques C++ open source sur Windows."
+description: vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques C++ open source sur Windows.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 02/01/2018
+ms.date: 04/06/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg : Gestionnaire de package C++ pour Windows
 
@@ -53,7 +53,7 @@ Cette commande énumère les fichiers de contrôle dans les sous-dossiers vcpkg/
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
-anax      2.1.0-1 An open source C++ entity system. <https://github...
+anax      2.1.0-1 An open source C++ entity system. \<https://github...
 antlr4    4.6-1   ANother Tool for Language Recognition
 apr       1.5.2   The Apache Portable Runtime (APR) is a C library ...
 asio      1.10.8  Asio is a cross-platform C++ library for network ...
@@ -86,7 +86,6 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Répertorier les bibliothèques déjà installées
-
 Après avoir installé certaines bibliothèques, vous pouvez utiliser **vcpkg list** pour voir ce que vous avez :
 
 ```cmd
@@ -106,9 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Exécutez **vcpkg integrate install** pour configurer Visual Studio afin qu’il recherche par utilisateur tous les fichiers d’en-tête et les fichiers binaires vcpkg, sans qu’il soit nécessaire de modifier manuellement les chemins des répertoires VC ++. Si vous disposez de plusieurs clones, le clone à partir duquel vous exécutez cette commande devient le nouvel emplacement par défaut.
 
-Désormais, vous pouvez #include des en-têtes en tapant juste le dossier/l’en-tête, et la saisie semi-automatique vous assiste. Aucune étape supplémentaire n’est nécessaire pour la liaison à des bibliothèques, ou pour l’ajout de références de projet. L’illustration suivante montre comment Visual Studio recherche les en-têtes azure-storage-cpp. vcpkg place ses en-têtes dans le sous-dossier \installed, partitionné par la plateforme cible. Le diagramme suivant présente la liste des fichiers include dans le sous-dossier `/was` pour la bibliothèque :
-
-Désormais, vous pouvez #include des en-têtes en tapant juste le dossier/l’en-tête, et la saisie semi-automatique vous assistera. Aucune étape supplémentaire n’est nécessaire pour la liaison à des bibliothèques, ou pour l’ajout de références de projet. L’illustration suivante montre comment Visual Studio recherche les en-têtes azure-storage-cpp. vcpkg place ses en-têtes dans le sous-dossier \installed, partitionné par la plateforme cible. Le diagramme suivant présente la liste des fichiers include dans le sous-dossier \was pour la bibliothèque :
+Désormais, vous pouvez #include des en-têtes en tapant juste le dossier/l’en-tête, et la saisie semi-automatique vous assiste. Aucune étape supplémentaire n’est nécessaire pour la liaison à des bibliothèques, ou pour l’ajout de références de projet. L’illustration suivante montre comment Visual Studio recherche les en-têtes azure-storage-cpp. vcpkg place ses en-têtes dans le sous-dossier **/installed**, partitionné par la plateforme cible. Le diagramme suivant présente la liste des fichiers include dans le sous-dossier **/was** pour la bibliothèque :
 
 ![Intégration de vcpkg Intellisense](media/vcpkg-intellisense.png "vcpkg et Intellisense")
 
@@ -144,6 +141,36 @@ Par défaut, la commande **upgrade** ne fait que lister les bibliothèques qui s
 
 ### <a name="upgrade-example"></a>Exemple de mise à niveau
 
+### <a name="per-project"></a>Par projet
+Si vous devez utiliser une version spécifique d’une bibliothèque qui est différente de la version de votre instance vcpkg active, effectuez les étapes suivantes :
+
+1. Créez un clone de vcpkg. 
+1. Modifiez le portfile de la bibliothèque pour obtenir la version dont vous avez besoin.
+1. Exécutez **vcpkg install \<bibliothèque>**.
+1. Utilisez **vcpkg integrate project** pour créer un package NuGet qui référence cette bibliothèque en fonction du projet.
+
+
+## <a name="export-compiled-binaries-and-headers"></a>Exporter les fichiers binaires et les en-têtes compilés
+Exiger que tous les membres d’une équipe téléchargent et génèrent des bibliothèques peut être inefficace. Un seul membre de cette équipe peut effectuer ce travail, puis utiliser **vcpkg export** pour créer un fichier zip contenant les fichiers binaires et les en-têtes qui peuvent alors être facilement partagés avec d’autres membres de l’équipe. 
+
+## <a name="updateupgrade-installed-libraries"></a>Mettre à jour ou à niveau les bibliothèques installées
+Le catalogue public est mis à jour avec les versions les plus récentes des bibliothèques. Pour déterminer lesquelles de vos bibliothèques locales sont obsolètes, utilisez **vcpkg update**. Quand vous êtes prêt à mettre à jour votre collection de ports avec la version la plus récente du catalogue public, exécutez la commande **vcpkg upgrade** pour télécharger et regénérer automatiquement tout ou partie de vos bibliothèques installées obsolètes.
+
+Par défaut, la commande **upgrade** ne fait que lister les bibliothèques qui sont obsolètes ; elle ne les met pas à niveau. Pour effectuer la mise à niveau, utilisez l’option **--no-dry-run**. 
+
+```cmd
+  vcpkg upgrade --no-dry-run 
+```
+
+### <a name="upgrade-options"></a>Options de mise à niveau
+
+- **--no-dry-run** Effectuer la mise à niveau ; quand cette option n’est pas spécifiée, la commande ne fait que lister les packages obsolètes. 
+- **--keep-going** Continuer l’installation des packages, même si l’un d’eux échoue. 
+- **--triplet \<t>** Définir le triplet par défaut pour les packages non qualifiés. 
+- **--vcpkg-root \<chemin>** Spécifier le répertoire vcpkg à utiliser à la place du répertoire actif ou du répertoire de l’outil. 
+
+### <a name="upgrade-example"></a>Exemple de mise à niveau
+
 L’exemple suivant montre comment mettre à niveau les bibliothèques spécifiées uniquement. Notez que vcpgk extrait automatiquement les dépendances en fonction des besoins.
 
 ```cmd
@@ -160,27 +187,21 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Apporter de nouvelles bibliothèques
-
 Vous pouvez inclure toutes les bibliothèques que vous souhaitez dans votre collection de ports privés. Pour suggérer une nouvelle bibliothèque pour le catalogue public, ouvrez un problème sur la [page des problèmes vcpkg de GitHub](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Supprimer une bibliothèque
-
 Tapez **vcpkg remove** pour supprimer une bibliothèque installée. Si d’autres bibliothèques dépendent de celle-ci, vous êtes invité à réexécuter la commande avec **--recurse**, ce qui entraîne la suppression de toutes les bibliothèques en aval.
 
 ## <a name="customize-vcpkg"></a>Personnaliser vcpkg
-
 Vous pouvez modifier votre clone de vcpkg comme vous le souhaitez. Vous pouvez créer plusieurs clones de vcpkg et modifier les portfiles dans chacun d’eux pour obtenir des versions spécifiques de bibliothèques, ou pour spécifier des paramètres de ligne de commande. Dans une entreprise, par exemple, un groupe de développeurs peut travailler sur des logiciels disposant d’un ensemble de dépendances tandis qu’un autre groupe peut utiliser un ensemble différent. Vous pouvez configurer deux clones de vcpkg et, selon vos besoins, modifier chacun d’eux pour télécharger les versions des bibliothèques et des commutateurs de compilation, etc. 
 
 ## <a name="uninstall-vcpkg"></a>Désinstaller vcpkg
-
 Supprimez simplement le répertoire. 
 
 ## <a name="send-feedback-about-vcpkg"></a>Envoyer des commentaires à propos de vcpkg
-
 Utilisez la commande **--survey** pour envoyer des commentaires à Microsoft sur vcpkg, notamment des rapports de bogues et des suggestions de fonctionnalités.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>La hiérarchie des dossiers vcpkg
-
 Toutes les données et les fonctionnalités de vcpkg sont autonomes dans une hiérarchie de répertoires unique, appelée « instance ». Il n’existe pas de paramètre de Registre ni de variable d’environnement. Vous pouvez avoir le nombre d’instances de vcpkg que vous voulez sur une machine ; celles-ci n’interfèrent pas les unes avec les autres. 
 
 Une instance de vcpkg comporte les éléments suivants : 
