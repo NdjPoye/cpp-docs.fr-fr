@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  Un pointeur vers un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
- *nIDC\**  
+ *nIDC\*\*  
  L’ID de la première dans un groupe (avec style **WS_GROUP**) des contrôles de bouton radio adjacents dans le [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objet.  
   
  *valeur*  
