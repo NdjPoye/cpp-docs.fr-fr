@@ -1,12 +1,12 @@
 ---
-title: "Expressions régulières (C++) | Microsoft Docs"
-ms.custom: 
+title: Expressions régulières (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
 La bibliothèque standard C++ prend en charge plusieurs grammaires d’expressions régulières. Cette rubrique décrit les variations de grammaire disponibles lors de l’utilisation d’expressions régulières.  
@@ -93,7 +93,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
  Dans `ECMAScript`, un élément peut également être ce qui suit :  
   
--   Un *groupe de non-capture* au format "(: *sous-expression* )". Correspond à la séquence de caractères de la séquence cible qui correspond au modèle situé entre les délimiteurs.  
+-   A *groupe de non capture* sous la forme « ( ? : *sous-expression* ) ». Correspond à la séquence de caractères de la séquence cible qui correspond au modèle situé entre les délimiteurs.  
   
 -   Un *échappement de format de fichier* limité au format "\f", "\n", "\r", "\t" ou "\v". Ces derniers correspondent, respectivement, à un saut de page, un saut de ligne, un retour chariot, une tabulation horizontale et une tabulation verticale, dans la séquence cible.  
   
@@ -115,7 +115,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
  Exemples :  
   
--   "(:a)" correspond à la séquence cible "a", mais "(:a)\1" n’est pas valide, car il n’existe aucun groupe de capture 1.  
+-   "(?:a)" correspond à la séquence cible "a", mais "(?:a)\1" n'est pas valide, car il n'existe aucun groupe de capture 1.  
   
 -   "(=a)a" correspond à la séquence cible "a". L'assertion positive correspond à la séquence initiale "a" dans la séquence cible, et le dernier "a" de l'expression régulière correspond à la séquence initiale "a" de la séquence cible.  
   
@@ -158,11 +158,11 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
   
  Exemples :  
   
--   "a?" correspond à la séquence cible « » et la séquence cible « a », mais pas à la séquence cible « aa ».  
+-   « a » ? correspond à la séquence cible « » et la séquence cible « a », mais pas à la séquence cible « aa ».  
   
 -   "a+" correspond aux séquences cibles "a", "aa", et ainsi de suite, mais pas à la séquence cible "".  
   
- Dans `ECMAScript`, toutes les formes de nombres de répétitions peuvent être suivies par le caractère ", qui indique une *répétition non gourmande*.  
+ Dans `ECMAScript`, toutes les formes du nombre de répétitions peuvent être suivis par le caractère ' ?', qui désigne une *répétition non gourmande*.  
   
 ### <a name="concatenation"></a>Concaténation  
  Les éléments d’expression régulière, avec ou sans *nombre de répétitions*, peuvent être concaténés pour former de plus longues expressions régulières. L'expression résultante correspond à une séquence cible qui est une concaténation des séquences auxquelles correspondent les éléments. Par exemple, "a{2,3}b" correspond à la séquence cible "aab" et à la séquence cible "aaab", mais ne correspond pas aux séquences cibles "ab" et "aaaab".  
@@ -314,7 +314,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
  Une séquence d'échappement hexadécimale est une barre oblique inverse suivie de la lettre 'x', suivie de deux chiffres hexadécimaux (0-9a-fA-F). Elle correspond à un caractère dans la séquence cible dont la valeur est spécifiée par les deux chiffres. Par exemple, "\x41" correspond à la séquence cible "A" lorsque l'encodage de caractères ASCII est utilisé.  
   
 ### <a name="identity-escape"></a>Échappement d'identité  
- Un échappement d'identité est une barre oblique inverse suivie d'un caractère unique. Elle correspond à ce caractère. Il est requis lorsque le caractère a une signification particulière ; si vous utilisez l'échappement d'identité, la signification particulière sera supprimée. Exemple :  
+ Un échappement d'identité est une barre oblique inverse suivie d'un caractère unique. Elle correspond à ce caractère. Il est requis lorsque le caractère a une signification particulière ; si vous utilisez l'échappement d'identité, la signification particulière sera supprimée. Par exemple :  
   
 -   « un\*» correspond à la séquence cible « aaa », mais ne correspond pas à la séquence cible « un\*».  
   
@@ -365,7 +365,7 @@ Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour s
  Une assertion négative de limite de mot aboutit si la position actuelle dans la chaîne cible n’est pas située immédiatement après une *limite de mot*.  
   
 ### <a name="non-capture-group"></a>Groupe de non capture  
- Un groupe de non capture marque son contenu comme une unité dans la grammaire d'expressions régulières, mais n'étiquette pas le texte cible. Par exemple, « (a)(:b)\*(c) » correspond au texte cible « abbc » et associe le groupe de capture 1 à la sous-séquence « un « et groupe de capture 2 à la sous-séquence « c ».  
+ Un groupe de non capture marque son contenu comme une unité dans la grammaire d'expressions régulières, mais n'étiquette pas le texte cible. Par exemple, « (a)(?:b)\*(c) » correspond au texte cible « abbc » et associe le groupe de capture 1 à la sous-séquence « un « et groupe de capture 2 à la sous-séquence « c ».  
   
 ### <a name="non-greedy-repetition"></a>Répétition non gourmande  
  Une répétition non gourmande consomme la sous-séquence la plus courte de la séquence cible qui correspond au modèle. Une répétition gourmande consomme la sous-séquence la plus longue. Par exemple, "(a+) (un\*b) » correspond à la séquence cible « aaab ». Lorsqu'une répétition non gourmande est utilisée, elle associe le groupe de capture 1 à la sous-séquence "a" au début de la séquence cible, et le groupe de capture 2 à la sous-séquence "aab" à la fin de la séquence cible. Lorsqu'une répétition gourmande est utilisée, elle associe le groupe de capture 1 à la sous-séquence "aaa", et le groupe de capture 2 à la sous-séquence "b".  

@@ -1,12 +1,12 @@
 ---
 title: -OPT (optimisations) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 Contrôle les optimisations effectuées par LINK pendant une génération.  
@@ -50,10 +50,10 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **REF** &#124; **NOREF**  
+ **REF** &AMP;#124; **NOREF**  
  **/ OPT : REF** élimine les fonctions et les données qui ne sont jamais référencées. **/OPT : NOREF** conserve les fonctions et les données qui ne sont jamais référencées.  
   
- Lorsque /OFT:REF est activé, LINK supprime les fonctions et données empaquetées non référencées. Un objet contient des fonctions empaquetées et les données (COMDAT) s’il a été compilé à l’aide de la [/Gy](../../build/reference/gy-enable-function-level-linking.md) option. Cette optimisation porte le nom d'élimination COMDAT transitive. Par défaut, **/OPT : REF** est activé dans les versions non debug. Pour remplacer cette valeur par défaut et conserver les COMDAT dans le programme, spécifiez **/OPT : NOREF**. Vous pouvez utiliser la [/inclure](../../build/reference/include-force-symbol-references.md) option pour substituer la suppression d’un symbole spécifique.  
+ Lorsque/OPT : REF est activé, LINK supprime les données et fonctions empaquetées non référencées. Un objet contient des fonctions empaquetées et les données (COMDAT) s’il a été compilé à l’aide de la [/Gy](../../build/reference/gy-enable-function-level-linking.md) option. Cette optimisation porte le nom d'élimination COMDAT transitive. Par défaut, **/OPT : REF** est activé dans les versions non debug. Pour remplacer cette valeur par défaut et conserver les COMDAT dans le programme, spécifiez **/OPT : NOREF**. Vous pouvez utiliser la [/inclure](../../build/reference/include-force-symbol-references.md) option pour substituer la suppression d’un symbole spécifique.  
   
  Lorsque **/OPT : REF** est activé, soit explicitement, soit par défaut, une forme limitée de **/OPT : ICF** est activée afin de replier uniquement des fonctions identiques. Si vous souhaitez **/OPT : REF** mais pas **/OPT : ICF**, vous devez spécifier soit **/OPT : REF, NOICF** ou **NOICF**.  
   
@@ -63,7 +63,7 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
   
  Spécification de **/OPT : ICF** n’active pas la **/OPT : REF** option.  
   
- **ICF [=** `iterations` **] &#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**   
  Utilisez **/OPT : ICF [=**`iterations`**]** pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif `iterations` spécifie la fréquence de recherche des doublons parmi les symboles. Le nombre d'itérations par défaut est de deux. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.  
   
  L’éditeur de liens se comporte différemment lorsque **/OPT : REF** est spécifié, et **ICF** est activée par défaut — que c’est le cas lorsque **/OPT : REF, ICF** est spécifié explicitement. La forme de **ICF** activée avec **/OPT : REF** uniquement ne replie pas les données en lecture seule, cela inclut .rdata, .pdata et .xdata. Par conséquent, moins de fonctions sont repliées lors de la production d'images pour [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], car les fonctions de ces modules dépendent davantage des données en lecture seule, par exemple .pdata et .xdata. Pour obtenir un total **ICF** pliage de comportement, spécifiez explicitement **/OPT : ICF**.  
@@ -75,7 +75,7 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
 > [!NOTE]
 >  Étant donné que **/OPT : ICF** peut entraîner la même adresse à affecter à différentes fonctions ou les membres de données en lecture seule (`const` compilés à l’aide de variables **/Gy**), il peut interrompre un programme qui dépend de adresses uniques pour les fonctions ou les membres de données en lecture seule. Pour plus d’informations, consultez l’article [/Gy (Activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md).  
   
- **LBR** &#124; **NOLBR**  
+ **LBR** &AMP;#124; **NOLBR**  
  Le **/OPT : LBR** et **/OPT:NOLBR** options s’appliquent uniquement aux binaires ARM. Étant donné que certaines instructions de branche de processeur ARM ont une plage limitée, si l’éditeur de liens détecte un saut vers une adresse hors limite, il remplace l’adresse de destination de l’instruction de branche par l’adresse d’un « îlot » de code contenant une instruction de branche qui cible la destination réelle. Vous pouvez utiliser **/OPT : LBR** pour optimiser la détection des longues instructions de branche et le positionnement des îlots de code intermédiaires afin de réduire la taille globale du code. **/OPT:NOLBR** fait en sorte que l’éditeur de liens pour générer des îlots de code pour les longues instructions de branche rencontrées, sans optimisation.  
   
  Par défaut, le **/OPT : LBR** option est définie lors de l’édition des liens incrémentielle ne sont pas activé. Si vous souhaitez que des liens non incrémentielle sans optimisations des longues branches, spécifiez **/OPT:NOLBR**. Le **/OPT : LBR** option désactive les liens incrémentiels.  

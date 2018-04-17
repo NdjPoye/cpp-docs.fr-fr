@@ -1,13 +1,13 @@
 ---
-title: "-valider-charset (valider les caractères compatibles) | Documents Microsoft"
-ms.custom: 
+title: -valider-charset (valider les caractères compatibles) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /validate-charset
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694eb94fe1b50d1892dab399b523a5b0e6deef7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e82b9fd42b636cffd318f6327cc064687334329
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-CharSet (valider les caractères compatibles)
 Vérifie que le texte du fichier source contient uniquement des caractères pouvant être représentées au format UTF-8.  
@@ -41,7 +41,7 @@ Vérifie que le texte du fichier source contient uniquement des caractères pouv
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la **/Validate-CharSet** option permettant de valider que le code source contient uniquement des caractères qui peuvent être représentées dans les deux caractères de code source et de jeu de caractères d’exécution. Cette vérification est activée automatiquement lorsque vous spécifiez **/source-CharSet**, **/Execution-CharSet**, ou **/UTF-8** options du compilateur. Vous pouvez désactiver explicitement cette vérification en spécifiant le **/ validate-charset -** option.  
   
- Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est encodé au format Unicode, par exemple, UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvé, il suppose que le fichier source est encodé à l’aide de la page de code utilisateur actuel, sauf si vous avez spécifié une page de codes à l’aide de **/UTF-8** ou **/source-CharSet** option. Visual Studio vous permet d’enregistrer votre code source C++ à l’aide de plusieurs codages de caractères. Pour plus d’informations sur les jeux de caractères source et de l’exécution, consultez [jeux de caractères](../../cpp/character-sets2.md) dans la documentation de langage. Pour une liste de prise en charge les identificateurs de page de code et les noms de jeu de caractères, consultez [Code Page Identifiers](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
+ Par défaut, Visual Studio détecte une marque d’ordre d’octet pour déterminer si le fichier source est encodé au format Unicode, par exemple, UTF-16 ou UTF-8. Si aucune marque d’ordre d’octet n’est trouvé, il suppose que le fichier source est encodé à l’aide de la page de code utilisateur actuel, sauf si vous avez spécifié une page de codes à l’aide de **/UTF-8** ou **/source-CharSet** option. Visual Studio vous permet d’enregistrer votre code source C++ à l’aide de plusieurs codages de caractères. Pour plus d’informations sur les jeux de caractères source et de l’exécution, consultez [jeux de caractères](../../cpp/character-sets.md) dans la documentation de langage. Pour une liste de prise en charge les identificateurs de page de code et les noms de jeu de caractères, consultez [Code Page Identifiers](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
   
  Visual Studio utilise UTF-8 comme encodage de caractères interne lors de la conversion entre le jeu de caractères source et le jeu de caractères d’exécution. Si un caractère dans le fichier source ne peut pas être représenté dans le jeu de caractères d’exécution, la conversion de UTF-8 substitue un point d’interrogation ' ?' caractères. Le **/Validate-CharSet** option entraîne la compilation signaler un avertissement si cela se produit.  
   

@@ -1,37 +1,35 @@
 ---
-title: "Opérateurs d’assignation | Documents Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Opérateurs d’assignation | Documents Microsoft
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Opérateurs d'assignation
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Notes  
- Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe deux types d’opérations d’assignation : l’assignation simple, dans laquelle la valeur du deuxième opérande est stockée dans l’objet spécifié par le premier opérande, et l’assignation composée, dans laquelle une opération arithmétique, de décalage ou de bits est effectuée avant d’enregistrer le résultat. Tous les opérateurs d'assignation décrits dans le tableau suivant, à l'exception de l'opérateur =, sont des opérateurs d'assignation composée.  
+ Les opérateurs d’assignation stockent une valeur dans l’objet indiqué par l’opérande de gauche. Il existe trois types d’opérations d’assignation : 
+
+1. assignation simple, dans laquelle la valeur du deuxième opérande est stockée dans l’objet spécifié par le premier opérande. 1. assignation composée, dans lequel une opération arithmétique, MAJ ou opération au niveau du bit est exécutée avant d’enregistrer le résultat.
+1. dans les ressources qui sont transférés sans copier, déplacer attribution (pour les types de classe).
+
+
+Tous les opérateurs d’assignation dans le tableau suivant à l’exception de l’opération = et & & = opérateurs sont des opérateurs d’assignation composée.  
   
 ### <a name="assignment-operators"></a>Opérateurs d'assignation  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Déplace la valeur du premier opérande à droite du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**&=**|Obtient l’opérateur de bits AND du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |`^=`|Obtient l’opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`&#124;=`|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
+|`&#124;=`|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
+|**&&=**| Opérateur d’assignation de déplacement (pour les types de classe). Si le second opérande est une rvalue, déplacer ses ressources vers le premier opérande (sans les copier). Consultez [des constructeurs de déplacement et opérateurs d’assignation](move-constructors-and-move-assignment-operators-cpp.md) pour plus d’informations.|
   
  **Mots clés des opérateurs**  
   
@@ -129,7 +132,7 @@ int main() {
   
  L'assignation à des objets de type classe (types struct, union et classe) est exécutée par une fonction nommée operator=. Le comportement par défaut de cette fonction d'opérateur consiste à effectuer une copie de bits ; toutefois, ce comportement peut être modifié à l'aide d'opérateurs surchargés. (Consultez [opérateurs surchargés](../cpp/operator-overloading.md) pour plus d’informations.)  
   
- Un objet de toute classe clairement dérivée d'une classe de base donnée peut être assigné à un objet de la classe de base. L'inverse n'est pas vrai, car il existe une conversion implicite de la classe dérivée vers la classe de base mais pas de la classe de base vers la classe dérivée. Exemple :  
+ Un objet de toute classe clairement dérivée d'une classe de base donnée peut être assigné à un objet de la classe de base. L'inverse n'est pas vrai, car il existe une conversion implicite de la classe dérivée vers la classe de base mais pas de la classe de base vers la classe dérivée. Par exemple :  
   
 ```  
 // expre_SimpleAssignment.cpp  

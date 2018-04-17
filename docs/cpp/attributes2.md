@@ -1,19 +1,19 @@
 ---
 title: Attributs de la norme C++ | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="attributes-in-c"></a>Attributs en C++
 
@@ -39,17 +39,17 @@ Dans C ++ 11, les attributs fournissent une méthode normalisée pour annoter de
 void Foo(int);
 ```
 
-Les attributs représentent une alternative standardisée aux extensions spécifiques au fournisseur comme directives #pragma, __declspec() (Visual C++), ou &#95; &#95; attribut &#95; &#95; (GNU). Toutefois, vous devrez toujours utiliser les constructions spécifiques au fournisseur pour la plupart des cas. Actuellement, la norme spécifie un compilateur conforme doit reconnaître les attributs suivants :
+Les attributs représentent une alternative standardisée aux extensions spécifiques au fournisseur comme directives #pragma, __declspec() (Visual C++), ou &#95; &#95;attribut&#95; &#95; (GNU). Toutefois, vous devrez toujours utiliser les constructions spécifiques au fournisseur pour la plupart des cas. Actuellement, la norme spécifie un compilateur conforme doit reconnaître les attributs suivants :
 
-- `[[noreturn]]`Spécifie qu’une fonction ne retourne jamais ; en d’autres termes, elle lève toujours une exception. Le compilateur peut ajuster ses règles de compilation de `[[noreturn]]` entités.
+- `[[noreturn]]` Spécifie qu’une fonction ne retourne jamais ; en d’autres termes, elle lève toujours une exception. Le compilateur peut ajuster ses règles de compilation de `[[noreturn]]` entités.
 
-- `[[carries_dependency]]`Spécifie que la fonction propage les dépendances de données classement en ce qui concerne la synchronisation de threads. L’attribut peut être appliqué à un ou plusieurs paramètres pour spécifier que l’argument passé dans comporte une dépendance dans le corps de la fonction. L’attribut peut être appliqué à la fonction elle-même, pour spécifier que la valeur de retour comporte une dépendance de la fonction. Le compilateur peut utiliser ces informations pour générer du code plus efficace.
+- `[[carries_dependency]]` Spécifie que la fonction propage les dépendances de données classement en ce qui concerne la synchronisation de threads. L’attribut peut être appliqué à un ou plusieurs paramètres pour spécifier que l’argument passé dans comporte une dépendance dans le corps de la fonction. L’attribut peut être appliqué à la fonction elle-même, pour spécifier que la valeur de retour comporte une dépendance de la fonction. Le compilateur peut utiliser ces informations pour générer du code plus efficace.
 
-- `[[deprecated]]`**Visual Studio 2015 et versions ultérieur :** Spécifie qu’une fonction n’est pas destinée à être utilisé et peut ne pas exister dans les futures versions d’une interface de bibliothèque. Le compilateur peut l’utiliser pour générer un message d’information lorsque le code client tente d’appeler la fonction. Peut être appliqué à la déclaration d’une classe, un nom de typedef, une variable, un membre de données non statiques, une fonction, un espace de noms, une énumération, un énumérateur ou une spécialisation de modèle.  
+- `[[deprecated]]` **Visual Studio 2015 et versions ultérieur :** Spécifie qu’une fonction n’est pas destinée à être utilisé et peut ne pas exister dans les futures versions d’une interface de bibliothèque. Le compilateur peut l’utiliser pour générer un message d’information lorsque le code client tente d’appeler la fonction. Peut être appliqué à la déclaration d’une classe, un nom de typedef, une variable, un membre de données non statiques, une fonction, un espace de noms, une énumération, un énumérateur ou une spécialisation de modèle.  
 
-- `[[fallthrough]]`**Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut peut être utilisé dans le contexte de [commutateur](switch-statement-cpp.md) instructions comme indicateur de la compilateur (ou toute personne lisant le code) qui le comportement fallthrough est destiné. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement de fallthrough, afin de cet attribut n’a aucun comportement de compilateur d’effet.
+- `[[fallthrough]]` **Visual Studio 2017 et versions ultérieur :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) le `[[fallthrough]]` attribut peut être utilisé dans le contexte de [commutateur](switch-statement-cpp.md) en tant qu’indicateur pour le compilateur (ou toute personne qui lit les instructions le code) qui le comportement fallthrough est destiné. Le compilateur Visual C++ n’avertit actuellement pas sur le comportement de fallthrough, afin de cet attribut n’a aucun comportement de compilateur d’effet.
 
-- `[[nodiscard]]`**Visual Studio 2017 15,3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) Spécifie que la valeur de retour d’une fonction n’est pas conçue pour être rejetés. Déclenche avertissement C4834, comme illustré dans cet exemple :
+- `[[nodiscard]]` **Visual Studio 2017 15,3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) Spécifie que la valeur de retour d’une fonction n’est pas conçue pour être rejetés. Déclenche avertissement C4834, comme illustré dans cet exemple :
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ Les attributs représentent une alternative standardisée aux extensions spécif
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 15,3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) spécifie une variable, une fonction, classe, typedef, de spécialisation de modèle, enum ou membre de données non statiques peut-être intentionnellement ne pas être utilisé. Le compilateur ne pas avertit lorsqu’une entité marquée `[[maybe_unused]]` n’est pas utilisé. Une entité qui est déclarée sans l’attribut peut être redéclarée ultérieurement avec l’attribut et vice versa. Une entité est considérée comme marqué après que sa première déclaration est marquée est analysée et pour le reste de la traduction de l’unité de traduction actuelle.
+- `[[maybe_unused]]` **Visual Studio 2017 15,3 et versions ultérieures :** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) indique que variable, fonction, classe, typedef, les données membres non statiques, enum ou spécialisation de modèle peut délibérément pas utilisée. Le compilateur ne pas avertit lorsqu’une entité marquée `[[maybe_unused]]` n’est pas utilisé. Une entité qui est déclarée sans l’attribut peut être redéclarée ultérieurement avec l’attribut et vice versa. Une entité est considérée comme marqué après que sa première déclaration est marquée est analysée et pour le reste de la traduction de l’unité de traduction actuelle.
 
 ## <a name="microsoft-specific-attributes"></a>Attributs spécifiques à Microsoft
 
-- `[[gsl::suppress(rules)]]`Cet attribut spécifique à Microsoft est utilisé pour supprimer les avertissements à partir des outils d’analyse afin d’appliquer des [bibliothèque de prise en charge des instructions (GSL)](https://github.com/Microsoft/GSL) règles dans le code. Par exemple, considérez cet extrait de code :
+- `[[gsl::suppress(rules)]]` Cet attribut spécifique à Microsoft est utilisé pour supprimer les avertissements à partir des outils d’analyse afin d’appliquer des [bibliothèque de prise en charge des instructions (GSL)](https://github.com/Microsoft/GSL) règles dans le code. Par exemple, considérez cet extrait de code :
 
     ```cpp
     void main()

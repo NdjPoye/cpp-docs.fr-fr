@@ -1,12 +1,12 @@
 ---
-title: "Littéraux de chaîne et caractères (C++) | Documents Microsoft"
-ms.custom: 
+title: Littéraux de chaîne et caractères (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Littéraux de chaîne et caractères (C++)
 C++ prend en charge divers types de chaîne et de caractère, et fournit les moyens d'exprimer les valeurs littérales de chacun de ces types. Dans votre code source, vous exprimez le contenu de vos littéraux de caractère et de chaîne à l’aide d’un jeu de caractères. Les noms de caractères universels et les caractères d’échappement vous permettent d’exprimer une chaîne en utilisant uniquement le jeu de caractères sources de base. Un littéral de chaîne brut vous permet d'éviter d'utiliser des caractères d'échappement et peut servir à exprimer tous les types de littéral de chaîne. Vous pouvez également créer des littéraux std::string sans avoir à effectuer d’étapes de conversion ou de construction supplémentaires.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur le jeu de caractères sources de base, les noms de caractères universels et l’utilisation de caractères de pages de codes étendues dans votre code source, consultez [Character Sets](../cpp/character-sets2.md).  
+ Il est possible que les littéraux de chaîne n’aient aucun préfixe, ou qu’ils aient les préfixes `u8`, `L`, `u`et  `U` pour désigner un caractère étroit (codé sur un ou plusieurs octets), UTF-8, un caractère large (UCS-2 ou UTF-16), ainsi que les encodages UTF-16 et UTF-32, respectivement. Un littéral de chaîne brut peut avoir les préfixes `R`, `u8R`, `LR`, `uR` et `UR` pour les équivalents en version brute de ces encodages.  Pour créer des valeurs std::string temporaires ou statiques, vous pouvez utiliser des littéraux de chaîne ou des littéraux de chaîne bruts avec un suffixe `s` . Pour plus d’informations, consultez la section Littéraux de chaîne ci-dessous. Pour plus d’informations sur le caractère de la source de base définie, les noms de caractères universels et l’utilisation de caractères à partir des pages de codes étendues dans votre code source, consultez [jeux de caractères](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Littéraux de caractère  
  Un *littéral de caractère* est composé d'une constante caractère. Elle est représentée par le caractère entouré de guillemets-apostrophes. Il existe cinq types de littéraux de caractère :  
@@ -157,14 +157,14 @@ char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Exemple :  
+ Une séquence d'échappement octale est une barre oblique inverse suivie de trois chiffres octaux maximum. Une séquence d’échappement octale qui contient plus de trois chiffres est considérée comme une séquence octale à 3 chiffres suivie de caractères. Cela peut entraîner des résultats inattendus. Par exemple :  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Exemple :  
+ Les séquences d’échappement qui contiennent des caractères non octaux sont évaluées sous forme de séquences octales jusqu’au dernier caractère octal, suivi des caractères restants. Par exemple :  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Les noms de caractères universels ne peuvent pas encoder les valeurs dans la plage de points de code de substitution D800-DFFF. Pour les paires de substitution Unicode, spécifiez le nom de caractère universel à l’aide de `\UNNNNNNNN`, où NNNNNNNN représente le point de code à huit chiffres du caractère. Le compilateur génère une paire de substitution, si nécessaire.  
   
- En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Ce problème a été corrigé dans la norme C++11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [Character Sets](../cpp/character-sets2.md). Pour plus d’informations sur Unicode, consultez [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Pour plus d’informations sur les paires de substitution, consultez [Paires de substitution et caractères supplémentaires](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ En C++03, le langage autorisait uniquement un sous-ensemble de caractères à être représentés par leurs noms de caractères universels. En outre, il autorisait certains noms de caractères universels qui ne représentaient pas en réalité des caractères Unicode valides. Ce problème a été corrigé dans la norme C++11. En C++11, les littéraux de caractère et de chaîne, ainsi que les identificateurs, peuvent utiliser des noms de caractères universels.  Pour plus d’informations sur les noms de caractères universels, consultez [jeux de caractères](../cpp/character-sets.md). Pour plus d’informations sur Unicode, consultez [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Pour plus d’informations sur les paires de substitution, consultez [Paires de substitution et caractères supplémentaires](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Littéraux de chaîne  
  Un littéral de chaîne représente une séquence de caractères qui, ensemble, forment une chaîne terminée par le caractère Null. Les caractères doivent être placés entre guillemets doubles. Il existe les genres suivants de littéraux de chaîne :  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Character Sets](../cpp/character-sets2.md)   
+ [Jeux de caractères](../cpp/character-sets.md)   
  [Littéraux numériques, booléen et pointeur](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md)

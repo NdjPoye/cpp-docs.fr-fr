@@ -1,12 +1,12 @@
 ---
 title: Compilateur avertissement (niveau 3) C4996 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilateur avertissement (niveau 3) C4996
 
@@ -43,7 +43,7 @@ Voici quelques messages C4996 courants générés par la bibliothèque Runtime C
 
 ## <a name="cause"></a>Cause
 
-L’erreur C4996 se produit lorsque le compilateur rencontre une fonction ou une variable qui est marqué comme étant [déconseillée](../../cpp/deprecated-cpp.md) à l’aide un `__declspec(deprecated)` modificateur, ou lorsque vous tentez d’accéder à une fonction, un membre de classe ou un typedef qui a C ++ 14 [ \[ \[déconseillée\] \] ](../../cpp/attributes2.md) attribut. Vous pouvez utiliser la `__declspec(deprecated)` modificateur ou `[[deprecated]]` vous-même dans vos bibliothèques ou les fichiers d’en-tête pour informer vos clients sur les fonctions déconseillées, des variables, des membres ou des typedefs d’attribut.
+L’erreur C4996 se produit lorsque le compilateur rencontre une fonction ou une variable qui est marqué comme étant [déconseillée](../../cpp/deprecated-cpp.md) à l’aide un `__declspec(deprecated)` modificateur, ou lorsque vous tentez d’accéder à une fonction, un membre de classe ou un typedef qui a C ++ 14 [ \[ \[déconseillée\] \] ](../../cpp/attributes.md) attribut. Vous pouvez utiliser la `__declspec(deprecated)` modificateur ou `[[deprecated]]` vous-même dans vos bibliothèques ou les fichiers d’en-tête pour informer vos clients sur les fonctions déconseillées, des variables, des membres ou des typedefs d’attribut.
 
 ## <a name="remarks"></a>Notes
 

@@ -1,32 +1,32 @@
 ---
-title: "Constructeurs de déplacement et opérateurs d’assignation de déplacement (C++) | Documents Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Comment : définir des constructeurs de déplacement et opérateurs d’assignation de déplacement (C++) | Documents Microsoft'
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- move constructor
+- move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
-Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement vous permet d'implémenter une sémantique de déplacement, qui peut améliorer considérablement les performances de vos applications. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement permet les ressources détenues par un objet rvalue à déplacer vers une lvalue sans copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Cette rubrique repose sur la classe C++ suivante, `MemoryBlock`, qui gère une mémoire tampon.  
   
@@ -135,7 +135,7 @@ private:
     ```  
   
 ### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Pour créer un opérateur d'assignation de déplacement pour une classe C++  
-  
+
 1.  Définissez un opérateur d'assignation vide qui accepte une référence rvalue au type de classe comme paramètre et retourne une référence au type de classe, comme illustré dans l'exemple suivant :  
   
     ```cpp  
@@ -230,7 +230,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. Dans Visual C++ 2010, la `vector` classe utilise sémantique de déplacement pour effectuer l’opération d’insertion efficace en déplaçant les éléments du vecteur au lieu de les copier.  
+ L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. La `vector` classe utilise sémantique de déplacement pour effectuer l’opération d’insertion efficace en déplaçant les éléments du vecteur au lieu de les copier.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Avant Visual C++ 2010, cet exemple génère la sortie suivante :  
+ Avant Visual Studio 2010, cet exemple produit la sortie suivante :  
   
 ```  
 In MemoryBlock(size_t). length = 25.  

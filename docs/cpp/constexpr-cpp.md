@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Un ou plusieurs paramètres qui doivent être un type de littéral et doivent el
 
 ## <a name="return-value"></a>Valeur de retour
 
+
  Une variable ou fonction constexpr doit retourner un [type de littéral](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>Variables constexpr
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>Fonctions constexpr
+## <a name="constexpr_functions"></a> fonctions constexpr
 
 A **constexpr** fonction est un dont la valeur de retournée peut être calculée à la compilation lorsque la consommation du code l’exige.  Quand ses arguments sont **constexpr** valeurs et le code de consommation requiert la valeur de retour au moment de la compilation, notamment initialiser un **constexpr** variable ou fournir un argument de modèle sans type, il génère une constante au moment de la compilation. Lorsqu’elle est appelée avec non -**constexpr** arguments, ou lorsque sa valeur n’est pas requise au moment de la compilation, elle génère une valeur au moment de l’exécution comme une fonction régulière.  (Ce double comportement vous évite d’avoir à écrire **constexpr** et non-**constexpr** versions de la même fonction.)
 

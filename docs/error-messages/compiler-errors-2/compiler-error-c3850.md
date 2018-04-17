@@ -1,12 +1,12 @@
 ---
 title: Erreur du compilateur C3850 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C3850
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe77bb54a72c340a2fbf2a986a4346397cff11fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5c79f1ab90348ea234e006ae6838d5e80e46c3e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-error-c3850"></a>Erreur du compilateur C3850
 ’char’ : un nom de caractère universel spécifie un caractère non valide  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  Dans du code compilé en C, un nom de caractère universel ne peut pas représenter un caractère de la plage 0000-009F (plage inclusive), à l’exception de 0024 (« $ »), 0040 (« @ ») et 0060 (« ` »).  
   
- Dans du code compilé en C++, un nom de caractère universel peut utiliser n’importe quel point de code Unicode valide dans un littéral de chaîne ou de caractère. En dehors d’un littéral, un nom de caractère universel ne peut pas représenter un caractère de contrôle dans les plages 0000-001F ou 007F-009F (plages inclusives), ou un membre du jeu de caractères sources de base.  Pour plus d’informations, consultez [Character Sets](../../cpp/character-sets2.md).  
+ Dans du code compilé en C++, un nom de caractère universel peut utiliser n’importe quel point de code Unicode valide dans un littéral de chaîne ou de caractère. En dehors d’un littéral, un nom de caractère universel ne peut pas représenter un caractère de contrôle dans les plages 0000-001F ou 007F-009F (plages inclusives), ou un membre du jeu de caractères sources de base.  Pour plus d’informations, consultez [jeux de caractères](../../cpp/character-sets.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3850, et montre comment la corriger :  
