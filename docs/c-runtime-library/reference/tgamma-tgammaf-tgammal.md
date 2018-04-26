@@ -1,13 +1,13 @@
 ---
 title: tgamma, tgammaf, tgammal | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tgamma
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7525da71d114179d40b937816f9ebe08d5a892a9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 951e5635ae1e2b8ee22af7cb26902bd309d62b40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
-Détermine la fonction gamma de la valeur spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double tgamma(  
-   double x  
-);  
-  
-float tgamma(  
-   float x  
-); //C++ only  
-  
-long double tgamma(  
-   long double x  
-); //C++ only  
-  
-float tgammaf(  
-   float x  
-);  
-  
-long double tgammal(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `x`  
- Valeur dont le gamma doit être trouvé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne le gamma de `x`.  
-  
- Une erreur de plage peut se produire si `x` est trop grand ou trop petit pour le type de données. Une erreur de domaine ou de plage peut se produire si `x` <=0.  
-  
-|Problème|Retourner|  
-|-----------|------------|  
-|x = ±0|±INFINITY|  
-|x = entier négatif|NaN|  
-|x =  -INFINITY|NaN|  
-|x = +INFINITY|+INFINITY|  
-|x = NaN|NaN|  
-|Erreur de domaine|NaN|  
-|erreur de pôle|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
-|erreur de plage avec dépassement de capacité positif|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|  
-|erreur de plage avec dépassement de capacité négatif|valeur correcte après arrondi|  
-  
- Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Notes  
- Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de tgamma qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, tgamma accepte et retourne toujours un type double.  
-  
- Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)
+
+Détermine la fonction gamma de la valeur spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double tgamma(
+   double x
+);
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
+
+float tgammaf(
+   float x
+);
+
+long double tgammal(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur dont le gamma doit être trouvé.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne la valeur gamma de *x*.
+
+Une erreur de plage peut se produire si la grandeur de *x* est trop grande ou trop petite pour le type de données. Une erreur de domaine ou d’une erreur de plage peut se produire si *x* < = 0.
+
+|Problème|Retourner|
+|-----------|------------|
+|x = ±0|±INFINITY|
+|x = entier négatif|NaN|
+|x = - INFINITY|NaN|
+|x = +INFINITY|+INFINITY|
+|x = NaN|NaN|
+|Erreur de domaine|NaN|
+|erreur de pôle|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|erreur de plage avec dépassement de capacité positif|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
+|erreur de plage avec dépassement de capacité négatif|valeur correcte après arrondi|
+
+Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
+
+## <a name="remarks"></a>Notes
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **tgamma** accepte et retourne toujours un **double**.
+
+Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

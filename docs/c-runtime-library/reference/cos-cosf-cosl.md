@@ -1,17 +1,14 @@
 ---
-title: asin, asinf, asinl | Microsoft Docs
+title: COS, cosf, cosl | Documents Microsoft
 ms.custom: ''
 ms.date: 04/05/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
-- asinf
-- asinl
-- asin
+- cos
+- cosf
+- cosl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,84 +23,85 @@ apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
-- asin
-- asinl
-- asinf
+- cos
+- cosf
+- cosl
 dev_langs:
 - C++
 helpviewer_keywords:
-- asin function
-- asinl function
-- asinf function
+- cosines
+- cosl function
+- calculating cosine
+- cosf function
+- cos function
 - trigonometric functions
-- arcsine function
-ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-caps.latest.revision: 14
+- cosines, calculating
+ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd1399042e1055d124cd3c53363a6979d4256d3
+ms.openlocfilehash: 3c93d9abe3b78a34f357f9418b5d27413f2ca4d0
 ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/20/2018
 ---
-# <a name="asin-asinf-asinl"></a>asin, asinf, asinl
+# <a name="cos-cosf-cosl"></a>COS, cosf, cosl
 
-Calcule l’arc sinus.
+Calcule le cosinus.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-double asin( double x );
-float asinf ( float x );
-long double asinl( long double x );
+double cos( double x );
+float cosf( float x );
+long double cosl( long double x );
 ```
 
 ```cpp
-float asin( float x );  // C++ only
-long double asin( long double x );  // C++ only
+float cos( float x );  // C++ only
+long double cos( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-Valeur dont l’arc sinus doit être calculé.
+Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le **asin** fonction retourne l’arc sinus (la fonction sinus inverse) de *x* dans la plage - π/2 et π/2 radians.
-
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** retourne un indéterminée.
+Cosinus de *x*. Si *x* est supérieur ou égal à 263 ou inférieur ou égal à -263, une perte de crédibilité du résultat se produit.
 
 |Entrée|Exception SEH|Exception{b> <b}Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDE**|**_DOMAIN**|
-|± **QNAN**, **IND**|aucun|**_DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDE**|**_DOMAIN**|
+|± QNAN, IND|aucun|**_DOMAIN**|
+|± INF|**NON VALIDE**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **asin** avec **float** et **long** **double** valeurs. Dans un programme C, **asin** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cos** qui acceptent et retournent **float** ou **long** **double** valeurs. Dans un programme C, **cos** accepte et retourne toujours un **double**.
 
 ## <a name="requirements"></a>Spécifications
 
-|Routine|En-tête requis (C)|En-tête requis (C++)|
+|Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**ASIN**, **asinf**, **asinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-Pour plus d’informations, consultez [acos, acosf, acosl](acos-acosf-acosl.md).
+Consultez l’exemple de [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
+[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
 [_matherr](matherr.md)<br/>
 [sin, sinf, sinl](sin-sinf-sinl.md)<br/>
 [tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[_CIcos](../../c-runtime-library/cicos.md)<br/>

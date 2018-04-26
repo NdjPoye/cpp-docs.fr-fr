@@ -1,12 +1,12 @@
 ---
 title: ldiv, lldiv | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ldiv
@@ -37,17 +37,17 @@ helpviewer_keywords:
 - remainder computing
 - computing quotients
 ms.assetid: 68ab5d83-27a4-479c-9d52-d055eb139eca
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cdd241eca666570a47e1ce3ceb74730c6fe35de7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ldiv-lldiv"></a>ldiv, lldiv
 Calcule le quotient et le reste de deux entiers en une seule opération.  
@@ -80,7 +80,7 @@ lldiv_t lldiv(
   
  Les structures `ldiv_t` et `lldiv_t` sont définies dans \<stdlib.h>.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Routine|En-tête requis|  
 |-------------|---------------------|  

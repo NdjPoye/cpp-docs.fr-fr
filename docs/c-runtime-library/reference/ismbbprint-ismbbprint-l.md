@@ -1,12 +1,12 @@
 ---
 title: _ismbbprint, _ismbbprint_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbprint_l
@@ -37,58 +37,60 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2499e48ffd87171df50d46bd58327dc8c7cac47a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bdb07a6abaed7f45ce799ae33fcaf406f8cec40b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
-Détermine si un caractère multioctet spécifié est un caractère d’impression.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbbprint(  
-   unsigned int c   
-);  
-int _ismbbprint_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_ismbbprint` retourne une valeur différente de zéro si l’expression :  
-  
-```  
-isprint || _ismbbkprint  
-```  
-  
- est différente de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbprint` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbprint_l` est identique, excepté qu’il utilise à la place les paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_ismbbprint`|\<mbctype.h>|  
-|`_ismbbprint_l`|\<mbctype.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Détermine si un caractère multioctet spécifié est un caractère d’impression.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbbprint(
+   unsigned int c
+);
+int _ismbbprint_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_ismbbprint** retourne une valeur différente de zéro si l’expression :
+
+`isprint(c) || _ismbbkprint(c)`
+
+est différent de zéro pour *c*, ou 0 s’il n’est pas. **_ismbbprint** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbprint_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_ismbbprint**|\<mbctype.h>|
+|**_ismbbprint_l**|\<mbctype.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

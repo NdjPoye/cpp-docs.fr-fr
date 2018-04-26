@@ -1,13 +1,13 @@
 ---
 title: log2, log2f, log2l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - log2
@@ -29,79 +29,84 @@ apitype: DLLExport
 dev_langs:
 - C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd35b9298cec4e56da1fb9d255cc012d0f525623
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ddde058c61bfbe83013111e3376a84bd463cd650
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
-Détermine le logarithme (base 2) binaire de la valeur spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double log2(  
-   double x  
-);  
-  
-float log2(  
-   float x  
-); //C++ only  
-  
-long double log2(  
-   long double x  
-); //C++ only  
-  
-float log2f(  
-   float x  
-);  
-  
-long double log2l(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `x`  
- Valeur dont le logarithme base 2 doit être déterminé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne log2 `x`.  
-  
- Sinon, peut retourner l’une des valeurs suivantes :  
-  
-|Problème|Retourner|  
-|-----------|------------|  
-|`x` < 0|NaN|  
-|`x` = ±0|-INFINITY|  
-|`x` = 1|+0|  
-|+INFINITY|+INFINITY|  
-|NaN|NaN|  
-|Erreur de domaine|NaN|  
-|Erreur de pôle|-HUGE_VAL, -HUGE_VALF ou -HUGE_VALL|  
-  
- Les erreurs sont signalées comme indiqué dans [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Notes  
- Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit 1 le plus significatif de `x`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`log2`,                `log2f`,  `log2l`|\<math.h>|\<cmath>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [exp2, exp2f, exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)   
- [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Détermine le logarithme (base 2) binaire de la valeur spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double log2(
+   double x
+);
+
+float log2(
+   float x
+); //C++ only
+
+long double log2(
+   long double x
+); //C++ only
+
+float log2f(
+   float x
+);
+
+long double log2l(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur dont le logarithme base 2 doit être déterminé.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne retour log2 *x*.
+
+Sinon, peut retourner l’une des valeurs suivantes :
+
+|Problème|Retourner|
+|-----------|------------|
+|*x* < 0|NaN|
+|*x* = ±0|-INFINITY|
+|*x* = 1|+0|
+|+INFINITY|+INFINITY|
+|NaN|NaN|
+|Erreur de domaine|NaN|
+|Erreur de pôle|-HUGE_VAL, -HUGE_VALF ou -HUGE_VALL|
+
+Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
+
+## <a name="remarks"></a>Notes
+
+Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit 1 plus significatif de *x*.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**LOG2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
+[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

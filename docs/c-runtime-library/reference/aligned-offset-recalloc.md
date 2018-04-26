@@ -1,12 +1,12 @@
 ---
 title: _aligned_offset_recalloc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_offset_recalloc
@@ -32,68 +32,73 @@ helpviewer_keywords:
 - aligned_offset_recalloc function
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cf4f353d71cd5fc21957dc0ab9178982ad6030
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e3fdf431a270211cba3a4552d7df4affc46ca4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
-Modifie la taille d’un bloc de mémoire qui a été alloué avec [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) et initialise la mémoire à 0.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void * _aligned_offset_recalloc(  
-   void *memblock,   
-   size_t num,   
-   size_t size,   
-   size_t alignment,  
-   size_t offset  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `memblock`  
- Pointeur de bloc de mémoire actif.  
-  
- `num`  
- Nombre d'éléments.  
-  
- `size`  
- Longueur en octets de chaque élément.  
-  
- `alignment`  
- Valeur d'alignement, qui doit être un entier à puissance 2.  
-  
- `offset`  
- Décalage dans l'allocation de mémoire pour forcer l'alignement.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_aligned_offset_recalloc` retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est `NULL` si la taille est égale à zéro et l'argument de mémoire tampon n'est pas `NULL`, ou si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.  
-  
- `_aligned_offset_recalloc` est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut pas modifier les variables globales et que le pointeur retourné n'a pas d'alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).  
-  
-## <a name="remarks"></a>Notes  
- Comme [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_recalloc` autorise une structure à être alignée au niveau d’un décalage au sein de la structure.  
-  
- `_aligned_offset_recalloc` est basé sur `malloc`. Pour plus d’informations sur l’utilisation de `_aligned_offset_malloc`, consultez [malloc](../../c-runtime-library/reference/malloc.md). Si `memblock` est `NULL`, la fonction appelle `_aligned_offset_malloc` en interne.  
-  
- Cette fonction affecte à `errno` la valeur `ENOMEM` si l’allocation de mémoire a échoué ou si la taille demandée (`num` * `size`) était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, `_aligned_offset_recalloc` valide ses paramètres. Si `alignment` n’est pas une puissance de 2 ou si `offset` est supérieur ou égal à la taille demandée et différent de zéro, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction retourne `NULL` et affecte la valeur `errno` à `EINVAL`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_aligned_offset_recalloc`|\<malloc.h>|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Alignement des données](../../c-runtime-library/data-alignment.md)   
- [_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)
+
+Modifie la taille d’un bloc de mémoire qui a été alloué avec [_aligned_malloc](aligned-malloc.md) ou [_aligned_offset_malloc](aligned-offset-malloc.md) et initialise la mémoire à 0.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void * _aligned_offset_recalloc(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment,
+   size_t offset
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*memblock*<br/>
+Pointeur de bloc de mémoire actif.
+
+*Nombre*<br/>
+Nombre d'éléments.
+
+*size*<br/>
+Longueur en octets de chaque élément.
+
+*Alignement*<br/>
+Valeur d'alignement, qui doit être un entier à puissance 2.
+
+*offset*<br/>
+Décalage dans l'allocation de mémoire pour forcer l'alignement.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_aligned_offset_recalloc** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **NULL** si la taille est égale à zéro et que l’argument de la mémoire tampon n’est pas **NULL**, ou s’il n’existe pas de suffisamment de mémoire pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
+
+**_aligned_offset_recalloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+
+## <a name="remarks"></a>Notes
+
+Comme [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_recalloc** autorise une structure à être alignée au niveau d’un décalage au sein de la structure.
+
+**_aligned_offset_recalloc** est basée sur **malloc**. Pour plus d’informations sur l’utilisation de **_aligned_offset_malloc**, consultez [malloc](malloc.md). Si *memblock* est **NULL**, les appels de fonction **_aligned_offset_malloc** en interne.
+
+Cette fonction affecte **errno** à **ENOMEM** si l’allocation de mémoire a échoué ou si la taille demandée (*nombre* * *taille* ) était supérieure à **_HEAP_MAXREQ**. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). En outre, **_aligned_offset_recalloc** valide ses paramètres. Si *alignement* n’est pas une puissance de 2 ou si *offset* est supérieure ou égale à la taille demandée et différent de zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **NULL** et définit **errno** à **EINVAL**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_aligned_offset_recalloc**|\<malloc.h>|
+
+## <a name="see-also"></a>Voir aussi
+
+[Alignement des données](../../c-runtime-library/data-alignment.md)<br/>
+[_recalloc](recalloc.md)<br/>
+[_aligned_recalloc](aligned-recalloc.md)<br/>

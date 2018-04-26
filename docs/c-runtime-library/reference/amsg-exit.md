@@ -1,12 +1,12 @@
 ---
 title: _amsg_exit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _amsg_exit
@@ -29,38 +29,39 @@ dev_langs:
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9029cbcfaa3853638a5b46e2c3ee1cb56622cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e35d6f606f4862c8a326d70d2e103cb32c8cfda3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="amsgexit"></a>_amsg_exit
-Émet un message d’erreur d’exécution spécifié, puis quitte votre application avec le code d’erreur 255.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```cpp  
-void _amsg_exit (  
-   int rterrnum  
-   )  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `rterrnum`  
- Numéro d’identification d’un message d’erreur d’exécution défini par le système.  
-  
-## <a name="remarks"></a>Notes  
- Cette fonction émet le message d’erreur d’exécution vers **stderr** (pour les applications de console) ou affiche le message dans une boîte de message (pour les applications Windows). En mode débogage, vous pouvez choisir d’appeler le débogueur avant de quitter.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
+
+Émet un message d’erreur d’exécution spécifié, puis quitte votre application avec le code d’erreur 255.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+void _amsg_exit ( int rterrnum );
+```
+
+### <a name="parameters"></a>Paramètres
+
+*rterrnum*<br/>
+Numéro d’identification d’un message d’erreur d’exécution défini par le système.
+
+## <a name="remarks"></a>Notes
+
+Cette fonction émet le message d’erreur d’exécution vers **stderr** (pour les applications de console) ou affiche le message dans une boîte de message (pour les applications Windows). En mode débogage, vous pouvez choisir d’appeler le débogueur avant de quitter.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
 |_amsg_exit|internal.h|

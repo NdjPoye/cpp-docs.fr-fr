@@ -1,12 +1,12 @@
 ---
 title: _fdopen, _wfdopen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fdopen
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03dd7c56c8b8249ddee09ed2ac5446f99484e671
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -58,7 +58,7 @@ Associe un flux à un fichier ouvert précédemment pour une E/S de bas niveau.
 
 ## <a name="syntax"></a>Syntaxe
 
-```c
+```C
 FILE *_fdopen(
    int fd,
    const char *mode
@@ -71,91 +71,75 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Paramètres
 
-*fd*  
-Descripteur du fichier ouvert.
+*FD* descripteur de fichier du fichier ouvert.
 
-*mode*  
-Type d'accès fichier.
+*mode* Type d’accès au fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur désignant le flux ouvert. Une valeur de pointeur null indique une erreur. Quand une erreur se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a soit la valeur `EBADF`, ce qui indique un descripteur de fichier incorrect, soit la valeur `EINVAL`, ce qui indique que `mode` était un pointeur null.
+Chacune de ces fonctions retourne un pointeur désignant le flux ouvert. Une valeur de pointeur null indique une erreur. Quand une erreur se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** prend la valeur **EBADF**, ce qui indique un descripteur de fichier incorrect, ou **EINVAL**, ce qui indique que *mode*  était un pointeur null.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-Le `_fdopen` fonction associe le fichier identifié par un flux d’e/s *fd*, permettant ainsi un fichier est ouvert pour les e/s de bas niveau mis en mémoire tampon et la mise en forme. `_wfdopen` est une version à caractères larges de `_fdopen`; le *mode* argument `_wfdopen` est une chaîne à caractères larges. Sinon, `_wfdopen` et `_fdopen` se comportent de la même façon.
+Le **_fdopen** fonction associe le fichier identifié par un flux d’e/s *fd*, permettant ainsi un fichier est ouvert pour les e/s de bas niveau mis en mémoire tampon et la mise en forme. **_wfdopen** est une version à caractères larges de **_fdopen**; le *mode* argument **_wfdopen** est une chaîne à caractères larges. **_wfdopen** et **_fdopen** sinon se comportent de façon identique.
 
-Transmis à des descripteurs de fichiers `_fdopen` sont détenus par retourné `FILE *` flux. Si `_fdopen` est réussie, n’appelez pas [ \_fermer](../../c-runtime-library/reference/close.md) sur le descripteur de fichier. Appel de [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) sur retourné `FILE *` ferme également le descripteur de fichier.
+Transmis à des descripteurs de fichiers **_fdopen** sont détenus par retourné **fichier &#42;**  flux. Si **_fdopen** est réussie, n’appelez pas [ \_fermer](close.md) sur le descripteur de fichier. Appel de [fclose](fclose-fcloseall.md) sur retourné **fichier &#42;**  ferme également le descripteur de fichier.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine Tchar.h|\_UNICODE et \_MBCS non défini|\_MBCS défini|\_UNICODE défini|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_tfdopen`|`_fdopen`|`_fdopen`|`_wfdopen`|
+|**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-Le *mode* chaîne de caractères Spécifie le type d’accès de fichier demandé pour le fichier :  
+Le *mode* chaîne de caractères Spécifie le type d’accès de fichier demandé pour le fichier :
 
-`"r"`  
-Ouvre pour l'accès en lecture. Si le fichier n'existe pas ou est introuvable, l'appel à `fopen` échoue.
+|*mode*|Accès|
+|-|-|
+**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **fopen** appel échoue.
+**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
+**"a"**|Ouvre pour l’accès en écriture à la fin du fichier (ajout). Crée le fichier s'il n'existe pas.
+**"r+"**|Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister.
+**"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit.
+**"a+"**|S'ouvre pour lecture et ajout. Crée le fichier s'il n'existe pas.
 
-`"w"`  
-Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
-
-`"a"`  
-Ouvre pour l'accès en écriture, à la fin du fichier (ajout). Crée le fichier s'il n'existe pas.
-
-`"r+"`  
-Ouvre pour l'accès en lecture et en écriture. (Le fichier doit exister.)
-
-`"w+"`  
-Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.
-
-`"a+"`  
-S'ouvre pour lecture et ajout. Crée le fichier s'il n'existe pas.
-
-Quand un fichier est ouvert avec le type d'accès `"a"` ou `"a+"`, toutes les opérations d'écriture se produisent à la fin du fichier. Le pointeur de fichier peut être repositionné à l'aide de `fseek` ou `rewind`, mais il est toujours redéplacé à la fin du fichier avant toute opération d'écriture. Par conséquent, les données existantes ne peuvent pas être remplacées. Lorsque le type d'accès `"r+"`, `"w+"` ou `"a+"` est spécifié, la lecture et l'écriture sont autorisées (on dit que le fichier est ouvert pour « mise à jour »). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire `fflush`, `fsetpos`, `fseek` ou `rewind` doit exister. Vous pouvez éventuellement spécifier la position actuelle pour l'opération `fsetpos` ou `fseek`.
+Lorsqu’un fichier est ouvert avec le **« a »** ou **« a + »** accéder au type, toutes les opérations se produisent à la fin du fichier d’écriture. Le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rembobiner](rewind.md), mais il est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées. Lorsque le **« r + »**, **« w + »**, ou **« a + »** type d’accès est spécifié, la lecture et l’écriture sont autorisées (le fichier est dite doit être ouvert pour « update »). Toutefois, lorsque vous basculez entre lecture et écriture, il doit y avoir un intervenant [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), ou [rembobiner](rewind.md) opération. Vous pouvez spécifier la position actuelle pour le [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) opération, si vous le souhaitez.
 
 Outre les valeurs ci-dessus, les caractères suivants peuvent également être inclus dans *mode* pour spécifier le mode de traduction des caractères de saut de ligne :
 
-`t`  
-Ouvrir en mode texte (traduit). Dans ce mode, les combinaisons retour chariot-saut de ligne sont traduites en flux d'une ligne (saut de ligne) en entrée, et les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts pour lecture/écriture, `fopen` recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l'utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` près de la fin du fichier.
+|*mode* modificateur|Comportement|
+|-|-|
+**t**|Ouvrir en mode texte (traduit). Dans ce mode, les combinaisons retour chariot-saut de ligne sont traduites en flux d'une ligne (saut de ligne) en entrée, et les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée.
+**b**|Ouvrir en mode binaire (non traduit). Les traductions du **t** mode sont supprimés.
+**c**|Activer l’indicateur de validation associé au *nom de fichier* afin que le contenu de la mémoire tampon de fichier est écrites directement sur le disque si le paramètre **fflush** ou **_flushall** est appelée.
+**n**|Réinitialiser l’indicateur de validation associé au *nom de fichier* pour « no-commit ». Il s'agit de la valeur par défaut. Substitue aussi l'indicateur de validation globale si vous liez votre programme avec Commode.obj. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec Commode.obj.
 
-`b`  
-Ouvrir en mode binaire (non traduit). Les traductions du mode `t` sont supprimées.
+Le **t**, **c**, et **n** *mode* options sont des extensions Microsoft **fopen** et **_fdopen**. Ne les utilisez pas si vous voulez préserver la portabilité ANSI.
 
-`c`  
-Activer l'indicateur de validation pour le `filename` associé, afin que le contenu de la mémoire tampon de fichier soit écrit directement sur disque si `fflush` ou `_flushall` est appelé.
+Si **t** ou **b** n’est pas donné dans *mode*, le mode de traduction par défaut est défini par la variable globale [ \_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et renvoie la valeur NULL. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-`n`  
-Réinitialiser l'indicateur de validation pour le `filename` associé à la valeur « no-commit » Il s'agit de la valeur par défaut. Substitue aussi l'indicateur de validation globale si vous liez votre programme avec Commode.obj. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec Commode.obj.
+Les caractères valides pour le *mode* chaîne utilisée dans **fopen** et **_fdopen** correspondent aux *oflag* arguments utilisés dans [ \_ouvrir](open-wopen.md) et [ \_sopen](sopen-wsopen.md), comme indiqué dans cette table :
 
-Le `t`, `c`, et `n` *mode* options sont des extensions Microsoft `fopen` et `_fdopen`. Ne les utilisez pas si vous voulez préserver la portabilité ANSI.
-
-Si `t` ou `b` n’est pas donné dans *mode*, le mode de traduction par défaut est défini par la variable globale [ \_fmode](../../c-runtime-library/fmode.md). Si `t` ou `b` est préfixé à l’argument, la fonction échoue et renvoie la valeur NULL. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
-
-Les caractères valides pour le *mode* chaîne utilisée dans `fopen` et `_fdopen` correspondent aux *oflag* arguments utilisés dans [ \_ouvrir](../../c-runtime-library/reference/open-wopen.md) et [ \_sopen](../../c-runtime-library/reference/sopen-wsopen.md), comme indiqué dans cette table :
-
-|Les caractères de *mode* chaîne|Équivalent *oflag* valeur `_open` et `_sopen`|
+|Les caractères de *mode* chaîne|Équivalent *oflag* valeur **_open** et **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|`a`|**\_O\_WRONLY &#124; \_O\_APPEND** (généralement  **\_O\_WRONLY &#124; \_O\_créer un &#124; \_O\_APPEND**)|
-|`a+`|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_Ajout &#124; \_O\_CREAT** )|
-|`r`|**\_O\_RDONLY**|
-|`r+`|**\_O\_RDWR**|
-|`w`|**\_O\_WRONLY** (généralement  **\_O\_WRONLY &#124; \_O\_créer un &#124; \_O\_TRUNC**)|
-|`w+`|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_créer un &#124; \_O\_TRUNC**)|
-|`b`|**\_O\_BINARY**|
-|`t`|**\_O\_TEXT**|
-|`c`|Aucun.|
-|`n`|Aucun.|
+|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (généralement  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_APPEND**)|
+|**un +**|**\_O\_RDWR &#124; \_O\_APPEND** (généralement  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Créer un** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (généralement  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (généralement  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**b**|**\_O\_BINAIRE**|
+|**t**|**\_O\_TEXTE**|
+|**c**|Aucun|
+|**n**|Aucun|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
-|`_fdopen`|\<stdio.h>|
-|`_wfdopen`|\<stdio.h> ou \<wchar.h>|
+|**_fdopen**|\<stdio.h>|
+|**_wfdopen**|\<stdio.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -198,22 +182,22 @@ int main( void )
 
 ### <a name="input-crtfdopentxt"></a>Entrée : crt_fdopen.txt
 
-```
+```Input
 Line one
 Line two
 ```
 
 ### <a name="output"></a>Sortie
 
-```
+```Output
 Lines in file: 2
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de flux](../../c-runtime-library/stream-i-o.md)   
-[\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
-[fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
-[fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
-[freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
-[\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[\_dup, \_dup2](dup-dup2.md)<br/>
+[fclose, \_fcloseall](fclose-fcloseall.md)<br/>
+[fopen, \_wfopen](fopen-wfopen.md)<br/>
+[freopen, \_wfreopen](freopen-wfreopen.md)<br/>
+[\_Ouvrir, \_wopen](open-wopen.md)<br/>

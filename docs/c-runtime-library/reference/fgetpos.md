@@ -1,12 +1,12 @@
 ---
 title: fgetpos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fgetpos
@@ -31,106 +31,111 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3740fdc7924e12fc9eeb2de4ab108ad376c764da
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 10734497ac8db77e09f6e3077aa5eb123a179f88
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetpos"></a>fgetpos
-Obtient l’indicateur de position de fichier d’un flux.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fgetpos(   
-   FILE *stream,  
-   fpos_t *pos   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `stream`  
- Flux cible.  
-  
- `pos`  
- Stockage de l’indicateur de position.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, `fgetpos` retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit `errno` sur une des constantes manifestes suivantes (définies dans STDIO.H) : `EBADF` (le flux spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible) ou `EINVAL` (la valeur `stream` ou la valeur de `pos` n’est pas valide, par exemple, un pointeur null). Si `stream` ou `pos` est un pointeur `NULL`, la fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
-  
-## <a name="remarks"></a>Notes  
- La fonction `fgetpos` obtient la valeur actuelle de l’indicateur de position de fichier de l’argument `stream` et la stocke dans l’objet désigné par `pos`. La fonction `fsetpos` peut utiliser ultérieurement les informations stockées dans `pos` pour réinitialiser le pointeur de l’argument `stream` à la position qu’il occupait au moment de l’appel à `fgetpos`. La valeur `pos` est stockée dans un format interne en vue d’une utilisation par `fgetpos` et `fsetpos` uniquement.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`fgetpos`|\<stdio.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_fgetpos.c  
-// This program uses fgetpos and fsetpos to  
-// return to a location in a file.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE   *stream;  
-   fpos_t pos;  
-   char   buffer[20];  
-  
-   if( fopen_s( &stream, "crt_fgetpos.txt", "rb" ) ) {  
-      perror( "Trouble opening file" );  
-      return -1;  
-   }  
-  
-   // Read some data and then save the position.   
-   fread( buffer, sizeof( char ), 8, stream );  
-   if( fgetpos( stream, &pos ) != 0 ) {  
-      perror( "fgetpos error" );  
-      return -1;  
-   }  
-  
-   fread( buffer, sizeof( char ), 13, stream );  
-   printf( "after fgetpos: %.13s\n", buffer );  
-  
-   // Restore to old position and read data   
-   if( fsetpos( stream, &pos ) != 0 ) {  
-      perror( "fsetpos error" );  
-      return -1;  
-   }  
-  
-   fread( buffer, sizeof( char ), 13, stream );  
-   printf( "after fsetpos: %.13s\n", buffer );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="input-crtfgetpostxt"></a>Entrée : crt_fgetpos.txt  
-  
-```  
-fgetpos gets a stream's file-position indicator.  
-```  
-  
-### <a name="output-crtfgetpostxt"></a>Sortie : crt_fgetpos.txt  
-  
-```  
-after fgetpos: gets a stream  
-after fsetpos: gets a stream  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fsetpos](../../c-runtime-library/reference/fsetpos.md)
+
+Obtient l’indicateur de position de fichier d’un flux.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fgetpos(
+   FILE *stream,
+   fpos_t *pos
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Flux de données*<br/>
+Flux cible.
+
+*bons de commande*<br/>
+Stockage de l’indicateur de position.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, **fgetpos** retourne 0. En cas d’échec, elle retourne une valeur différente de zéro et définit **errno** à un des éléments suivants du manifeste de constantes (définies dans STDIO. (H) : **EBADF**, ce qui signifie que le flux de données spécifié n’est pas un pointeur de fichier valide ou n’est pas accessible, ou **EINVAL**, ce qui signifie que la *flux* valeur ou la valeur de *pos* est non valide, telle qu’if est un pointeur null. Si *flux* ou *pos* est un **NULL** pointeur, la fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+
+## <a name="remarks"></a>Notes
+
+Le **fgetpos** fonction obtient la valeur actuelle de la *flux* indicateur de position de fichier et le stocke dans l’objet désigné par l’argument *pos*. Le **fsetpos** fonction peut ensuite utiliser les informations stockées dans *pos* pour réinitialiser le *flux* pointeur d’argument à sa position en temps **fgetpos** a été appelée. Le *pos* valeur est stockée dans un format interne et est destinée uniquement par **fgetpos** et **fsetpos**.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**fgetpos**|\<stdio.h>|
+
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_fgetpos.c
+// This program uses fgetpos and fsetpos to
+// return to a location in a file.
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE   *stream;
+   fpos_t pos;
+   char   buffer[20];
+
+   if( fopen_s( &stream, "crt_fgetpos.txt", "rb" ) ) {
+      perror( "Trouble opening file" );
+      return -1;
+   }
+
+   // Read some data and then save the position.
+   fread( buffer, sizeof( char ), 8, stream );
+   if( fgetpos( stream, &pos ) != 0 ) {
+      perror( "fgetpos error" );
+      return -1;
+   }
+
+   fread( buffer, sizeof( char ), 13, stream );
+   printf( "after fgetpos: %.13s\n", buffer );
+
+   // Restore to old position and read data
+   if( fsetpos( stream, &pos ) != 0 ) {
+      perror( "fsetpos error" );
+      return -1;
+   }
+
+   fread( buffer, sizeof( char ), 13, stream );
+   printf( "after fsetpos: %.13s\n", buffer );
+   fclose( stream );
+}
+```
+
+## <a name="input-crtfgetpostxt"></a>Entrée : crt_fgetpos.txt
+
+```Input
+fgetpos gets a stream's file-position indicator.
+```
+
+### <a name="output-crtfgetpostxt"></a>Sortie : crt_fgetpos.txt
+
+```Output
+after fgetpos: gets a stream
+after fsetpos: gets a stream
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fsetpos](fsetpos.md)<br/>

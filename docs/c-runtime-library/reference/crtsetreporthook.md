@@ -1,12 +1,12 @@
 ---
 title: _CrtSetReportHook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetReportHook
@@ -31,67 +31,73 @@ helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c7b3a8954c39e8157834297ab5ac3a747420af8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: faa7e5726555ef8000cd393f8f2f7061024095ed
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
-Installe une fonction de création de rapports définie par le client en la raccordant au processus de création de rapports de débogage du runtime C (version de débogage uniquement).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_CRT_REPORT_HOOK _CrtSetReportHook(   
-   _CRT_REPORT_HOOK reportHook   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `reportHook`  
- Nouvelle fonction de création de rapports définie par le client à raccorder au processus de création de rapports de débogage du runtime C.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne la fonction de création de rapports précédente définie par le client.  
-  
-## <a name="remarks"></a>Notes  
- `_CrtSetReportHook` permet à une application d’utiliser sa propre fonction de création de rapports dans le processus de création de rapports de bibliothèque de débogage runtime C. Ainsi, chaque fois que [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) est appelé pour générer un rapport de débogage, la fonction de création de rapports de l’application est appelée en premier. Grâce à cette fonctionnalité, une application peut effectuer des opérations telles que le filtrage des rapports de débogage afin de se concentrer sur des types d’allocation spécifiques ou d’envoyer un rapport à des destinations non disponibles à l’aide de `_CrtDbgReport`. Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtSetReportHook` sont supprimés durant le prétraitement.  
-  
- Pour obtenir une version plus robuste de `_CrtSetReportHook`, consultez [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
-  
- La fonction `_CrtSetReportHook` installe la nouvelle fonction de création de rapports définie par le client spécifiée dans `reportHook` et retourne le raccordement précédent défini par le client. L’exemple suivant montre comment un raccordement de rapport défini par le client doit être prototypé :  
-  
-```  
-int YourReportHook( int reportType, char *message, int *returnValue );  
-```  
-  
- où `reportType` est le type de rapport de débogage (`_CRT_WARN`, `_CRT_ERROR` ou `_CRT_ASSERT`), `message` le message utilisateur de débogage entièrement assemblé à inclure dans le rapport, et `returnValue` la valeur spécifiée par la fonction de création de rapports définie par le client qui doit être retournée par `_CrtDbgReport`. Pour obtenir une description complète des types de rapports disponibles, consultez la fonction [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
-  
- Si la fonction de création de rapports définie par le client gère intégralement le message de débogage sans nécessiter de création de rapports supplémentaires, la fonction doit retourner `TRUE`. Quand la fonction retourne `FALSE`, `_CrtDbgReport` est appelé pour générer le rapport de débogage à l’aide des paramètres actuels pour le type de rapport, le mode et le fichier. En outre, en spécifiant la valeur de retour `_CrtDbgReport` dans `returnValue`, l’application peut également contrôler si une interruption de débogage se produit. Pour obtenir une description complète de la façon dont le rapport de débogage est configuré et généré, consultez `_CrtSetReportMode`, [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) et `_CrtDbgReport`.  
-  
- Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).  
-  
+
+Installe une fonction de création de rapports définie par le client en la raccordant au processus de création de rapports de débogage du runtime C (version de débogage uniquement).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_CRT_REPORT_HOOK _CrtSetReportHook(
+   _CRT_REPORT_HOOK reportHook
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*reportHook*<br/>
+Nouvelle fonction de création de rapports définie par le client à raccorder au processus de création de rapports de débogage du runtime C.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne la fonction de création de rapports précédente définie par le client.
+
+## <a name="remarks"></a>Notes
+
+**_CrtSetReportHook** permet à une application d’utiliser sa propre déclaration de fonction dans la bibliothèque de débogage du runtime C processus de création de rapports. Ainsi, chaque fois que [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) est appelé pour générer un rapport de débogage, la fonction de création de rapports de l’application est appelée en premier. Cette fonctionnalité permet à une application effectuer des opérations telles que le filtrage des rapports de débogage et elle peut se concentrer sur les types d’allocation spécifiques ou envoyer un rapport à des destinations non disponibles à l’aide de **_CrtDbgReport**. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetReportHook** sont supprimés lors du prétraitement.
+
+Pour une version plus robuste de **_CrtSetReportHook**, consultez [_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md).
+
+Le **_CrtSetReportHook** fonction installe la nouvelle déclaration de fonction spécifiée dans défini par le client *reportHook* et retourne le raccordement défini par le client précédent. L’exemple suivant montre comment un raccordement de rapport défini par le client doit être prototypé :
+
+```C
+int YourReportHook( int reportType, char *message, int *returnValue );
+```
+
+où *reportType* est le type de rapport de débogage (**_CRT_WARN**, **_CRT_ERROR**, ou **_CRT_ASSERT**), *demessage* est le message utilisateur de débogage entièrement assemblé doit être contenu dans le rapport, et **returnValue** est la valeur spécifiée par le client défini reporting (fonction) qui doit être retournée par **_ CrtDbgReport**. Pour obtenir une description complète des types de rapports disponibles, consultez la fonction [_CrtSetReportMode](crtsetreportmode.md).
+
+Si la fonction de rapport défini par le client gère complètement le message de débogage telles qu’aucun rapport supplémentaire n’est requise, la fonction doit retourner **TRUE**. Lorsque la fonction retourne **FALSE**, **_CrtDbgReport** est appelée pour générer le rapport de débogage à l’aide des paramètres actuels pour le type de rapport, le mode et le fichier. En outre, en spécifiant le **_CrtDbgReport** retourner la valeur de **returnValue**, l’application peut également contrôler si un arrêt du débogage. Pour obtenir une description complète de la façon dont le rapport de débogage est configuré et généré, consultez **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md), et **_CrtDbgReport**.
+
+Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
+
 > [!NOTE]
->  Si votre application est compilée avec `/clr` et que la fonction de création de rapports est appelée une fois que l’application a quitté la procédure principale, le CLR lève une exception si la fonction de création de rapports appelle des fonctions CRT.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="libraries"></a>Bibliothèques  
- Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Routines de débogage](../../c-runtime-library/debug-routines.md)   
- [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+> Si votre application est compilée avec **/CLR** et la fonction de création de rapports est appelée après que l’application a quitté principale, le CLR lève une exception si la fonction de création de rapports appelle les fonctions CRT.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_CrtSetReportHook**|\<crtdbg.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Routines de débogage](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtGetReportHook](crtgetreporthook.md)<br/>

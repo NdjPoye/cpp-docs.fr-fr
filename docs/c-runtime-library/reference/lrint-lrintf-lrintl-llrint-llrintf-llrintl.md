@@ -1,13 +1,13 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - lrint
@@ -52,91 +52,96 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80a331618df913040ea145346299ebd30509ce8e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 30056214b07624429c8b1b23237585e5b6f46266
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
-Arrondit la valeur à virgule flottante spécifiée à la valeur intégrale la plus proche, en utilisant le mode et la direction de l’arrondi actuels.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-long int lrint(  
-   double x  
-);  
-  
-long int lrint(  
-   float x  
-); //C++ only  
-  
-long int lrint(  
-   long double x  
-); //C++ only  
-  
-long int lrintf(  
-   float x  
-);  
-  
-long int lrintl(  
-   long double x  
-);  
-  
-long long int llrint(  
-   double x  
-);  
-  
-long long int llrint(  
-   float x  
-); //C++ only  
-  
-long long int llrint(  
-   long double x  
-); //C++ only  
-  
-long long int llrintf(  
-   float x  
-);  
-  
-long long int llrintl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `x`  
- Valeur à arrondir.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne la valeur intégrale arrondie de `x`.  
-  
-|Problème|Retourner|  
-|-----------|------------|  
-|`x` se situe hors de la plage du type de retour<br /><br /> `x` = ±∞<br /><br /> `x` = NaN|Déclenche FE_INVALID et retourne zéro (0).|  
-  
-## <a name="remarks"></a>Notes  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `lrint` et `llrint` qui acceptent des types double long et à virgule flottante. Dans un programme C, `lrint` et `llrint` acceptent toujours un double.  
-  
- Si `x` ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions déclenchent FE_INEXACT.  
-  
- **Section spécifique à Microsoft** : quand le résultat se situe hors de la plage du type de retour ou que le paramètre est une valeur NaN ou l’infini, la valeur de retour est définie par l’implémentation. Le compilateur Microsoft retourne zéro (0).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`lrint`,                `lrintf`, `lrintl`, `llrint`, `llrintf`, `llrintl`|\<math.h>|\<cmath>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Arrondit la valeur à virgule flottante spécifiée à la valeur intégrale la plus proche, en utilisant le mode et la direction de l’arrondi actuels.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+long int lrint(
+   double x
+);
+
+long int lrint(
+   float x
+); //C++ only
+
+long int lrint(
+   long double x
+); //C++ only
+
+long int lrintf(
+   float x
+);
+
+long int lrintl(
+   long double x
+);
+
+long long int llrint(
+   double x
+);
+
+long long int llrint(
+   float x
+); //C++ only
+
+long long int llrint(
+   long double x
+); //C++ only
+
+long long int llrintf(
+   float x
+);
+
+long long int llrintl(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur à arrondir.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne la valeur intégrale arrondie du *x*.
+
+|Problème|Retourner|
+|-----------|------------|
+|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Déclenche **FE_INVALID** et renvoie zéro (0).|
+
+## <a name="remarks"></a>Notes
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** acceptant **float** et **long**  **Double** types. Dans un programme C, **lrint** et **llrint** ont toujours une **double**.
+
+Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions de déclenchement **FE_INEXACT**.
+
+**Section spécifique à Microsoft** : quand le résultat se situe hors de la plage du type de retour ou que le paramètre est une valeur NaN ou l’infini, la valeur de retour est définie par l’implémentation. Le compilateur Microsoft retourne zéro (0).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>

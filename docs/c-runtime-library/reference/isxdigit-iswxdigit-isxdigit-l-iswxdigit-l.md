@@ -1,12 +1,12 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswxdigit_l
@@ -43,74 +43,78 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5849caeddac4b52c80a29b5f4a6e85e2fe3e47b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7ee95f058056464ec0b9ea4b7b35154a15a7439e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
-Détermine si un entier représente un caractère qui est un chiffre hexadécimal.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int isxdigit(  
-   int c   
-);  
-int iswxdigit(  
-   wint_t c   
-);  
-int _isxdigit_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswxdigit_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un chiffre hexadécimal. `isxdigit` Retourne une valeur différente de zéro si `c` est un chiffre hexadécimal (A - F, a - f, ou 0 - 9). `iswxdigit` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à un caractère numérique hexadécimal. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
-  
- Pour les paramètres régionaux « C », la fonction `iswxdigit` ne prend pas en charge les caractères hexadécimaux à pleine chasse Unicode.  
-  
- Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
- Le comportement de `isxdigit` et `_isxdigit_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istxdigit`|`isxdigit`|`isxdigit`|`iswxdigit`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`isxdigit`|\<ctype.h>|  
-|`iswxdigit`|\<ctype.h> ou \<wchar.h>|  
-|`_isxdigit_l`|\<ctype.h>|  
-|`_iswxdigit_l`|\<ctype.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classifications des caractères](../../c-runtime-library/character-classification.md)   
- [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [is, isw, routines](../../c-runtime-library/is-isw-routines.md)
+
+Détermine si un entier représente un caractère qui est un chiffre hexadécimal.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int isxdigit(
+   int c
+);
+int iswxdigit(
+   wint_t c
+);
+int _isxdigit_l(
+   int c,
+   _locale_t locale
+);
+int _iswxdigit_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Chacune de ces routines retourne différente de zéro si *c* est une représentation spécifique d’un chiffre hexadécimal. **isxdigit** retourne une valeur différente de zéro si *c* est un chiffre hexadécimal (A - F, a - f, ou 0 - 9). **iswxdigit** retourne une valeur différente de zéro si *c* est un caractère large qui correspond à un chiffre hexadécimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+
+Pour les paramètres régionaux « C », le **iswxdigit** (fonction) ne prend pas en charge les caractères hexadécimaux de Unicode en pleine largeur.
+
+Les versions de ces fonctions qui ont le **_l** suffixe utilisent les paramètres régionaux qui sont passé au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+Le comportement de **isxdigit** et **_isxdigit_l** n’est pas défini si *c* n’est pas EOF ou dans la plage 0 à 0xFF, inclus. Lorsqu’une bibliothèque de débogage CRT est utilisée et *c* ne fait pas partie de ces valeurs, le fonctions de déclencher une assertion.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**isxdigit**|\<ctype.h>|
+|**iswxdigit**|\<ctype.h> ou \<wchar.h>|
+|**_isxdigit_l**|\<ctype.h>|
+|**_iswxdigit_l**|\<ctype.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _ismbbkana, _ismbbkana_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkana_l
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b79df529aacc0e1e4c4a0dcedfceb09912a8ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 35bc19b50f315987c1a0bb8d2871bd8cfebe9ab6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
-Teste un symbole katakana, et est spécifique à la page de codes 932.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbbkana(  
-   unsigned int c   
-);  
-int _ismbbkana_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_ismbbkana` retourne une valeur différente de zéro si l’entier `c` est un symbole katakana, ou 0 dans le cas contraire. `_ismbbkana` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkana_l` est identique, à ceci près qu’il utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_ismbbkana`|\<mbctype.h>|  
-|`_ismbbkana_l`|\<mbctype.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Teste un symbole katakana, et est spécifique à la page de codes 932.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbbkana(
+   unsigned int c
+);
+int _ismbbkana_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_ismbbkana** retourne une valeur différente de zéro si l’entier *c* est un symbole katakana, ou 0 s’il n’est pas. **_ismbbkana** utilise les paramètres régionaux actuels pour les informations de caractères dépendant des paramètres régionaux. **_ismbbkana_l** est identique, sauf qu’elle utilise l’objet de paramètres régionaux passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_ismbbkana**|\<mbctype.h>|
+|**_ismbbkana_l**|\<mbctype.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

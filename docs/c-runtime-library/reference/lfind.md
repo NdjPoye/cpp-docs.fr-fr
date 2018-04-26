@@ -1,12 +1,12 @@
 ---
 title: _lfind | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lfind
@@ -36,105 +36,110 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6df994306ad9a7d51d619a9bd409c021386a11
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 488863a32319fac17f5d1c84f56edaeeb63ff0ce
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lfind"></a>_lfind
-Effectue une recherche linéaire portant sur la clé spécifiée. Une version plus sécurisée de cette fonction est disponible. Consultez [_lfind_s](../../c-runtime-library/reference/lfind-s.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void *_lfind(  
-   const void *key,  
-   const void *base,  
-   unsigned int *num,  
-   unsigned int width,  
-   int (__cdecl *compare)(const void *, const void *)  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `key`  
- Objet à rechercher.  
-  
- `base`  
- Pointeur désignant la base de données de recherche.  
-  
- `num`  
- Nombre d’éléments de tableau.  
-  
- `width`  
- Largeur des éléments du tableau.  
-  
- `compare`  
- Pointeur désignant la routine de comparaison. Le premier paramètre est un pointeur désignant la clé pour la recherche. Le second paramètre est un pointeur désignant l’élément de tableau à comparer à la clé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Si la clé est trouvée, `_lfind` retourne un pointeur désignant l’élément du tableau à `base` qui correspond à `key`. Si la clé est introuvable, `_lfind` retourne `NULL`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_lfind` effectue une recherche linéaire portant sur la valeur `key` dans un tableau de `num` éléments, chacun d’une taille de `width` octets. Contrairement à `bsearch`, `_lfind` ne nécessite pas que le tableau soit trié. L’argument `base` est un pointeur désignant la base du tableau à explorer. L’argument `compare` est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau, puis retourne une valeur spécifiant leur relation. `_lfind` appelle la routine `compare` une ou plusieurs fois pendant la recherche, passant les pointeurs désignant deux éléments de tableau à chaque appel. La routine `compare` doit comparer les éléments, puis retourner une valeur différente de zéro (les éléments sont différents) ou 0 (les éléments sont identiques).  
-  
- Cette fonction valide ses paramètres. Si `compare`, `key` ou `num` a la valeur `NULL`, ou si `base` a la valeur NULL et que *`num` est différent de zéro, ou si `width` est inférieur à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `NULL`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_lfind`|\<search.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_lfind.c  
-// This program uses _lfind to search a string array  
-// for an occurrence of "hello".  
-  
-#include <search.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare(const void *arg1, const void *arg2 )  
-{  
-   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );  
-}  
-  
-int main( )  
-{  
-   char *arr[] = {"Hi", "Hello", "Bye"};  
-   int n = sizeof(arr) / sizeof(char*);  
-   char **result;  
-   char *key = "hello";  
-  
-   result = (char **)_lfind( &key, arr,   
-                      &n, sizeof(char *), compare );  
-  
-   if( result )  
-      printf( "%s found\n", *result );  
-   else  
-      printf( "hello not found!\n" );  
-}  
-```  
-  
-```Output  
-Hello found  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Recherche et tri](../../c-runtime-library/searching-and-sorting.md)   
- [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)   
- [qsort](../../c-runtime-library/reference/qsort.md)
+
+Effectue une recherche linéaire portant sur la clé spécifiée. Une version plus sécurisée de cette fonction est disponible. Consultez [_lfind_s](lfind-s.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void *_lfind(
+   const void *key,
+   const void *base,
+   unsigned int *num,
+   unsigned int width,
+   int (__cdecl *compare)(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*key*<br/>
+Objet à rechercher.
+
+*base*<br/>
+Pointeur désignant la base de données de recherche.
+
+*Nombre*<br/>
+Nombre d’éléments de tableau.
+
+*width*<br/>
+Largeur des éléments du tableau.
+
+*compare*<br/>
+Pointeur désignant la routine de comparaison. Le premier paramètre est un pointeur désignant la clé pour la recherche. Le second paramètre est un pointeur désignant l’élément de tableau à comparer à la clé.
+
+## <a name="return-value"></a>Valeur de retour
+
+Si la clé est trouvée, **_lfind** retourne un pointeur vers l’élément du tableau à *base* qui correspond à *clé*. Si la clé est introuvable, **_lfind** retourne **NULL**.
+
+## <a name="remarks"></a>Notes
+
+Le **_lfind** fonction effectue une recherche linéaire pour la valeur *clé* dans un tableau de *nombre* éléments, chacun des *largeur* octets. Contrairement aux **bsearch**, **_lfind** ne nécessite pas de tableau à trier. Le *base* argument est un pointeur vers la base du tableau à rechercher. Le *comparer* argument est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments du tableau, puis retourne une valeur précisant leur relation. **_lfind** appelle la *comparer* routine une ou plusieurs fois lors de la recherche, le passage de pointeurs vers deux éléments de tableau à chaque appel. Le *comparer* routine doit comparer les éléments, puis revenez différente de zéro (ce qui signifie que les éléments sont différents), ou 0 (ce qui signifie que les éléments sont identiques).
+
+Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *nombre* est **NULL**, ou si *base* a la valeur NULL et **nombre*  est différent de zéro, ou si *largeur* est inférieur à zéro, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_lfind**|\<search.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_lfind.c
+// This program uses _lfind to search a string array
+// for an occurrence of "hello".
+
+#include <search.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare(const void *arg1, const void *arg2 )
+{
+   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );
+}
+
+int main( )
+{
+   char *arr[] = {"Hi", "Hello", "Bye"};
+   int n = sizeof(arr) / sizeof(char*);
+   char **result;
+   char *key = "hello";
+
+   result = (char **)_lfind( &key, arr,
+                      &n, sizeof(char *), compare );
+
+   if( result )
+      printf( "%s found\n", *result );
+   else
+      printf( "hello not found!\n" );
+}
+```
+
+```Output
+Hello found
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)<br/>
+[_lfind_s](lfind-s.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lsearch](lsearch.md)<br/>
+[qsort](qsort.md)<br/>

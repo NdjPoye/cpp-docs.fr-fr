@@ -37,15 +37,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2d058b356cbb7624ee6dd0bbecdfb55c64813
-ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
+ms.openlocfilehash: 818051fba093c83d695afcad103865b4114673d0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chsize"></a>_chsize
 
-Modifie la taille d’un fichier. Une version plus sécurisée est disponible. Consultez [_chsize_s](../../c-runtime-library/reference/chsize-s.md).
+Modifie la taille d’un fichier. Une version plus sécurisée est disponible. Consultez [_chsize_s](chsize-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,6 +57,7 @@ int _chsize(
 ```
 
 ### <a name="parameters"></a>Paramètres
+
 *fd*<br/>
 Descripteur de fichier qui fait référence à un fichier ouvert.
 
@@ -65,21 +66,21 @@ Nouvelle longueur, en octets, du fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-_chsize` returns the value 0 if the file size is successfully changed. A return value of -1 indicates an error: `errno` is set to `EACCES` if the specified file is read-only or the specified file is locked against access, to `EBADF` if the descriptor is invalid, `ENOSPC` if no space is left on the device, or `EINVAL` if `taille » est inférieur à zéro.
+**_chsize** renvoie la valeur 0 si la taille du fichier est modifiée avec succès. Une valeur de retour de -1 indique une erreur : **errno** a la valeur **EACCES** si le fichier spécifié est en lecture seule ou si le fichier spécifié est verrouillé contre tout accès, de **EBADF** si le descripteur n’est pas valide, **ENOSPC** si aucun espace n’est pas sur l’appareil, ou **EINVAL** si *taille* est inférieur à zéro.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction `_chsize` étend ou tronque le fichier associé à `fd` à la longueur spécifiée par `size`. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.
+Le **_chsize** fonction étend ou tronque le fichier associé *fd* à la longueur spécifiée par *taille*. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.
 
-Cette fonction valide ses paramètres. Si `size` est inférieur à zéro ou que `fd` est un descripteur de fichier incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
+Cette fonction valide ses paramètres. Si *taille* est inférieur à zéro ou *fd* est un descripteur de fichier incorrect, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
-|`_chsize`|\<io.h>|\<errno.h>|
+|**_chsize**|\<io.h>|\<errno.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -126,6 +127,6 @@ File length after:  329678
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
-[_close](../../c-runtime-library/reference/close.md)<br/>
-[_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)<br/>
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)<br/>
+[_close](close.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

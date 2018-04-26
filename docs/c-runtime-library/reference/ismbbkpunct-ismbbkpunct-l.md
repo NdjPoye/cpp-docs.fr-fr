@@ -1,12 +1,12 @@
 ---
 title: _ismbbkpunct, _ismbbkpunct_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkpunct_l
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bcf41bfa1e06643aebaf77575d98409be694a48
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 73f9ee94dc405163d09f100422d98c9e823f6c77
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
-Vérifie si un caractère multioctet est un caractère de ponctuation.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbbkpunct(  
-   unsigned int c   
-);  
-int _ismbbkpunct_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_ismbbkpunct` retourne une valeur différente de zéro si l'entier `c` est un symbole de ponctuation non ASCII ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, `_ismbbkpunct` teste la présence d'une ponctuation katakana. `_ismbbkpunct` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbkpunct_l` est identique, à ceci près qu'il utilise les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_ismbbkpunct`|\<mbctype.h>|  
-|`_ismbbkpunct_l`|\<mbctype.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Vérifie si un caractère multioctet est un caractère de ponctuation.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbbkpunct(
+   unsigned int c
+);
+int _ismbbkpunct_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_ismbbkpunct** retourne une valeur différente de zéro si l’entier *c* est un symbole de ponctuation non ASCII, ou 0 s’il n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** tests d’une ponctuation katakana. **_ismbbkpunct** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkpunct_l** est identique, sauf qu’elle utilise les paramètres régionaux qui sont passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_ismbbkpunct**|\<mbctype.h>|
+|**_ismbbkpunct_l**|\<mbctype.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

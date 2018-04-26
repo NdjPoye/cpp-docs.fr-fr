@@ -1,12 +1,12 @@
 ---
 title: _get_printf_count_output | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_printf_count_output
@@ -33,43 +33,48 @@ helpviewer_keywords:
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05184838f9ac68e697cc7ff326c33c266f865875
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b96aab9e075386f71439a5c528fcf072097d389
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
-Indique si les fonctions de la famille [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) prennent en charge le format `%n`.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _get_printf_count_output();  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro si `%n` est pris en charge, 0 si `%n` n’est pas pris en charge.  
-  
-## <a name="remarks"></a>Notes  
- Si `%n` n’est pas pris en charge (paramétrage par défaut), la présence de `%n` dans la chaîne de format d’une des fonctions `printf` entraîne l’appel du gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si `%n` prise en charge est activée (consultez [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) puis `%n` se comporteront comme décrit dans [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_get_printf_count_output`|\<stdio.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple relatif à [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md).  
-  
-## <a name="see-also"></a>Voir aussi  
-[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+
+Indique si [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-famille de fonctions de prise en charge la **%n** format.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _get_printf_count_output();
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Non nul if **%n** est pris en charge, 0 si **%n** n’est pas pris en charge.
+
+## <a name="remarks"></a>Notes
+
+Si **%n** est pas pris en charge (la valeur par défaut), il rencontre **%n** dans la chaîne de format d’un de la **printf** fonctions seront appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si **%n** prise en charge est activée (consultez [_set_printf_count_output](set-printf-count-output.md)) puis **%n** se comporteront comme décrit dans [syntaxe de spécification de Format : printf et wprintf Fonctions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_get_printf_count_output**|\<stdio.h>|
+
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [_set_printf_count_output](set-printf-count-output.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[_set_printf_count_output](set-printf-count-output.md)<br/>

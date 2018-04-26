@@ -1,12 +1,12 @@
 ---
 title: _fputc_nolock, _fputwc_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fputwc_nolock
@@ -42,90 +42,95 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fec3b3497d58a4b08a46d569e9989bf4792544f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 83f79339b2c0335031b4a5eec13d4ccca1f12ace
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
-Écrit un caractère dans un flux sans verrouiller le thread.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _fputc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _fputwc_nolock(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Caractère à écrire.  
-  
- `stream`  
- Pointeur désignant la structure `FILE`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Chacune de ces fonctions retourne le caractère écrit. Pour plus d’informations sur les erreurs, consultez [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md).  
-  
-## <a name="remarks"></a>Notes  
- `_fputc_nolock` et `_fputwc_nolock` sont identiques à `fputc` et `fputwc`, respectivement, à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
-  
- Les deux fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `_fputc_nolock` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fputtc_nolock`|`_fputc_nolock`|`_fputc_nolock`|`_fputwc_nolock`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`_fputc_nolock`|\<stdio.h>|  
-|`_fputwc_nolock`|\<stdio.h> ou \<wchar.h>|  
-  
- La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console :`stdin`, `stdout`, et `stderr`, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_fputc_nolock.c  
-// This program uses _fputc_nolock  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char strptr1[] = "This is a test of _fputc_nolock!!\n";  
-   char *p;  
-  
-   // Print line to stream using fputc.   
-   p = strptr1;  
-   while( (*p != '\0') && _fputc_nolock( *(p++), stdout ) != EOF ) ;  
-  
-}  
-```  
-  
-```Output  
-This is a test of _fputc_nolock!!  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Écrit un caractère dans un flux sans verrouiller le thread.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _fputc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _fputwc_nolock(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Caractère à écrire.
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+Chacune de ces fonctions retourne le caractère écrit. Pour plus d’informations sur les erreurs, consultez [fputc, fputwc](fputc-fputwc.md).
+
+## <a name="remarks"></a>Notes
+
+**_fputc_nolock** et **_fputwc_nolock** sont identiques aux **fputc** et **fputwc**, respectivement, à ceci près qu’ils ne sont pas protégés contre les interférences par autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+
+Les deux fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **_fputc_nolock** ne prend pas en charge sortie dans un flux de données UNICODE.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fputtc_nolock**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**_fputc_nolock**|\<stdio.h>|
+|**_fputwc_nolock**|\<stdio.h> ou \<wchar.h>|
+
+La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console :**stdin**, **stdout**, et **stderr**: doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_fputc_nolock.c
+// This program uses _fputc_nolock
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char strptr1[] = "This is a test of _fputc_nolock!!\n";
+   char *p;
+
+   // Print line to stream using fputc.
+   p = strptr1;
+   while( (*p != '\0') && _fputc_nolock( *(p++), stdout ) != EOF ) ;
+
+}
+```
+
+```Output
+This is a test of _fputc_nolock!!
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _popen, _wpopen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _popen
@@ -42,27 +42,28 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e779a514cc68722eca79540929d41e34155174
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 39ed5841c50dea2aad79db3ee73589fcaa5aa39b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
-Crée un canal et exécute une commande.  
-  
+
+Crée un canal et exécute une commande.
+
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```
+> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
 FILE *_popen(
 const char *command,
 const char *mode
@@ -71,119 +72,121 @@ FILE *_wpopen(
 const wchar_t *command,
 const wchar_t *mode
 );
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *command*  
- Commande à exécuter.  
-  
- *mode*  
- Mode du flux retourné.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est liée à un paramètre non valide, par exemple si *command* ou *mode* est un pointeur null, ou si *mode* n’est pas un mode valide, `errno` prend la valeur `EINVAL`. Consultez la section Notes pour en savoir plus sur les modes valides.  
-  
- Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_popen` crée un canal et exécute de façon asynchrone une copie générée du processeur de commandes avec la chaîne spécifiée *command*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.  
-  
- **"r"**  
- Le processus appelant peut lire la sortie standard de la commande générée en utilisant le flux retourné.  
-  
- **"w"**  
- Le processus appelant peut écrire dans l’entrée standard de la commande générée en utilisant le flux retourné.  
-  
- **"b"**  
- Ouvre en mode binaire.  
-  
- **"t"**  
- Ouvre en mode texte.  
-  
+```
+
+### <a name="parameters"></a>Paramètres
+
+*command*<br/>
+Commande à exécuter.
+
+*mode*<br/>
+Mode du flux retourné.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est un paramètre non valide, par exemple si *commande* ou *mode* est un pointeur null, ou *mode* n’est pas un mode valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
+
+Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Le **_popen** fonction crée un canal de communication et exécute une copie engendrée de l’interpréteur de commandes avec la chaîne spécifiée de manière asynchrone *commande*. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
+
+**« r »** le processus appelant peut lire la sortie standard de la commande généré à l’aide du flux retourné.
+
+**« w »** le processus appelant peut écrire à l’entrée standard de la commande généré à l’aide du flux retourné.
+
+**« b »** ouvert en mode binaire.
+
+**« t »** ouvert en mode texte.
+
 > [!NOTE]
->  Quand elle est utilisée dans un programme Windows, la fonction `_popen` retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. `_popen` fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](http://msdn.microsoft.com/library/windows/desktop/ms682499) dans le Kit de développement logiciel Windows.  
-  
- `_wpopen` est une version à caractères larges de `_popen` ; l’argument *path* de `_wpopen` est une chaîne de caractères larges. Sinon, `_wpopen` et `_popen` se comportent de la même façon.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tpopen`|`_popen`|`_popen`|`_wpopen`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_popen`|\<stdio.h>|  
-|`_wpopen`|\<stdio.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_popen.c  
-/* This program uses _popen and _pclose to receive a   
- * stream of text from a system process.  
- */  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-  
-   char   psBuffer[128];  
-   FILE   *pPipe;  
-  
-        /* Run DIR so that it writes its output to a pipe. Open this  
-         * pipe with read text attribute so that we can read it   
-         * like a text file.   
-         */  
-  
-   if( (pPipe = _popen( "dir *.c /on /p", "rt" )) == NULL )  
-      exit( 1 );  
-  
-   /* Read pipe until end of file, or an error occurs. */  
-  
-   while(fgets(psBuffer, 128, pPipe))  
-   {  
-      printf(psBuffer);  
-   }  
-  
-   /* Close pipe and print return value of pPipe. */  
-   if (feof( pPipe))  
-   {  
-     printf( "\nProcess returned %d\n", _pclose( pPipe ) );  
-   }  
-   else  
-   {  
-     printf( "Error: Failed to read the pipe to the end.\n");  
-   }  
-}  
-```  
-  
-## <a name="sample-output"></a>Résultat de l'exemple  
- Cette sortie suppose la présence d’un seul fichier dans le répertoire actuel avec une extension de nom de fichier .c.  
-  
-```  
- Volume in drive C is CDRIVE  
- Volume Serial Number is 0E17-1702  
-  
- Directory of D:\proj\console\test1  
-  
-07/17/98  07:26p                   780 popen.c  
-               1 File(s)            780 bytes  
-                             86,597,632 bytes free  
-  
-Process returned 0  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   
- [_pclose](../../c-runtime-library/reference/pclose.md)   
- [_pipe](../../c-runtime-library/reference/pipe.md)
+> Si utilisé dans un programme Windows, le **_popen** fonction retourne un pointeur de fichier non valide, le programme se bloquer indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige les entrées et sorties, consultez [création d’un processus enfant avec redirigé d’entrée et sortie](http://msdn.microsoft.com/library/windows/desktop/ms682499) dans le Kit de développement logiciel Windows.
+
+**_wpopen** est une version à caractères larges de **_popen**; le *chemin d’accès* argument **_wpopen** est une chaîne à caractères larges. **_wpopen** et **_popen** comportent de façon identique.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tpopen**|**_popen**|**_popen**|**_wpopen**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_popen**|\<stdio.h>|
+|**_wpopen**|\<stdio.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_popen.c
+/* This program uses _popen and _pclose to receive a
+* stream of text from a system process.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+
+   char   psBuffer[128];
+   FILE   *pPipe;
+
+        /* Run DIR so that it writes its output to a pipe. Open this
+         * pipe with read text attribute so that we can read it
+         * like a text file.
+         */
+
+   if( (pPipe = _popen( "dir *.c /on /p", "rt" )) == NULL )
+      exit( 1 );
+
+   /* Read pipe until end of file, or an error occurs. */
+
+   while(fgets(psBuffer, 128, pPipe))
+   {
+      printf(psBuffer);
+   }
+
+   /* Close pipe and print return value of pPipe. */
+   if (feof( pPipe))
+   {
+     printf( "\nProcess returned %d\n", _pclose( pPipe ) );
+   }
+   else
+   {
+     printf( "Error: Failed to read the pipe to the end.\n");
+   }
+}
+```
+
+### <a name="sample-output"></a>Résultat de l'exemple
+
+Cette sortie suppose la présence d’un seul fichier dans le répertoire actuel avec une extension de nom de fichier .c.
+
+```Output
+ Volume in drive C is CDRIVE
+ Volume Serial Number is 0E17-1702
+
+Directory of D:\proj\console\test1
+
+ 07/17/98  07:26p                   780 popen.c
+               1 File(s)            780 bytes
+                             86,597,632 bytes free
+
+Process returned 0
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_pclose](pclose.md)<br/>
+[_pipe](pipe.md)<br/>

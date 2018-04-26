@@ -1,13 +1,13 @@
 ---
-title: fmin, fminf, fminl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Fmax, fminf, fminl | Documents Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmin
@@ -38,79 +38,84 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90de1e734b2d2da4770c7a5ad85a5ee60a15408
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3de46ba0a8d550d961fd05527b49a68a1518c50a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
-Détermine la plus petite de deux valeurs spécifiées.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double fmin(  
-   double x,   
-   double y  
-);  
-  
-float fmin(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fmin(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fminf(  
-   float x,   
-   float y  
-);  
-  
-long double fminl(  
-   long double x,   
-   long double y  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `x`  
- Première valeur à comparer.  
-  
- `y`  
- Deuxième valeur à comparer.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne la plus petite valeur (`x` ou `y`).  
-  
-|Entrée|Résultat|  
-|-----------|------------|  
-|`x` est NaN|`y`|  
-|`y` est NaN|`x`|  
-|`x` et `y` sont NaN|NaN|  
-  
- La fonction n’entraîne pas l’appel de [_matherr](../../c-runtime-library/reference/matherr.md), d’exceptions de virgule flottante ou de modification de la valeur de `errno`.  
-  
-## <a name="remarks"></a>Notes  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `fmin` qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, `fmin` accepte et retourne toujours un double.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`fmin`, `fminf`, `fminl`|C : \<math.h><br />C++ : \<math.h> ou \<cmath>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
- [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)  
+
+Détermine la plus petite de deux valeurs spécifiées.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double fmin(
+   double x,
+   double y
+);
+
+float fmin(
+   float x,
+   float y
+); //C++ only
+
+long double fmin(
+   long double x,
+   long double y
+); //C++ only
+
+float fminf(
+   float x,
+   float y
+);
+
+long double fminl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Première valeur à comparer.
+
+*y*<br/>
+Deuxième valeur à comparer.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne le plus petit de *x* ou *y*.
+
+|Entrée|Résultat|
+|-----------|------------|
+|*x* est une valeur NaN|*y*|
+|*y* est NaN|*x*|
+|*x* et *y* sont des valeurs NaN|NaN|
+
+La fonction ne provoque pas [_matherr](matherr.md) pour être appelé, provoquer des exceptions de virgule flottante, ou de modifier la valeur de **errno**.
+
+## <a name="remarks"></a>Notes
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmin** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **fmin** accepte et retourne toujours un **double**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**Fmax**, **fminf**, **fminl**|C : \<math.h><br />C++ : \<math.h> ou \<cmath>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>

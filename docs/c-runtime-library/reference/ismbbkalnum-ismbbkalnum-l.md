@@ -1,12 +1,12 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkalnum
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a09460e5c9da6aef8a9b9564c3f193bfba719
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 10f8dbda2331d9ac50b072a0383b725c42a306a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
-Détermine si un caractère multioctet particulier est un symbole de texte non ASCII.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbbkalnum(  
-   unsigned int c   
-);  
-int _ismbbkalnum_l(  
-   unsigned int c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_ismbbkalnum` retourne une valeur différente de zéro si l'entier `c` correspond à un symbole de texte autre qu'un signe de ponctuation ou 0 dans le cas contraire. `_ismbbkalnum` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkalnum_l` est identique à `_ismbbkalnum` , à ceci près qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_ismbbkalnum`|\<mbctype.h>|  
-|`_ismbbkalnum_l`|\<mbctype.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Détermine si un caractère multioctet particulier est un symbole de texte non ASCII.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbbkalnum(
+   unsigned int c
+);
+int _ismbbkalnum_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre que le signe de ponctuation ou 0 s’il n’est pas. **_ismbbkalnum** utilise les paramètres régionaux actuels pour les informations de caractères dépendant des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** sauf qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_ismbbkalnum**|\<mbctype.h>|
+|**_ismbbkalnum_l**|\<mbctype.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

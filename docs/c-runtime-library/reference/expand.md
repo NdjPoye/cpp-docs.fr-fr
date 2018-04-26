@@ -1,12 +1,12 @@
 ---
 title: _expand | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _expand
@@ -39,102 +39,107 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b2bf8ba3e30165f11e3392e04519a3d49cfd4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f55b7e3c321ff4a86464fab39313abbe742d77d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="expand"></a>_expand
-Modifie la taille d’un bloc de mémoire.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void *_expand(   
-   void *memblock,  
-   size_t size   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `memblock`  
- Pointeur désignant le bloc de mémoire précédemment alloué.  
-  
- `size`  
- Nouvelle taille en octets.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_expand` retourne un pointeur void désignant le bloc de mémoire réalloué. `_expand`, contrairement à `realloc`, ne peut pas déplacer un bloc pour modifier sa taille. Ainsi, s’il y a suffisamment de mémoire disponible pour étendre le bloc sans le déplacer, le paramètre `memblock` de `_expand` est identique à la valeur de retour.  
-  
- `_expand` retourne `NULL` quand une erreur est détectée au cours de son fonctionnement. Par exemple, si `_expand` est utilisé pour réduire un bloc de mémoire, il peut détecter une altération dans le tas de petits blocs ou un pointeur de bloc non valide et retourner `NULL`.  
-  
- S’il y a suffisamment de mémoire pour étendre le bloc à la taille donnée sans le déplacer, la fonction retourne `NULL`. `_expand` ne retourne jamais un bloc étendu à une taille inférieure à celle demandée. En cas d’échec, `errno` en indique la nature. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour vérifier la nouvelle taille de l’élément, utilisez `_msize`. Pour obtenir un pointeur désignant un type autre que `void`, utilisez un cast de type sur la valeur de retour.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_expand` modifie la taille d’un bloc de mémoire alloué en essayant d’étendre ou réduire le bloc sans déplacer son emplacement dans le tas. Le paramètre `memblock` pointe vers le début du bloc. Le paramètre `size` indique la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé jusqu’à la plus courte des tailles nouvelle et ancienne. `memblock` ne doit pas être un bloc qui a été libéré.  
-  
+
+Modifie la taille d’un bloc de mémoire.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void *_expand(
+   void *memblock,
+   size_t size
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*memblock*<br/>
+Pointeur désignant le bloc de mémoire précédemment alloué.
+
+*size*<br/>
+Nouvelle taille en octets.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_étendre site** retourne un pointeur void vers le bloc de mémoire réalloué. **_étendre site**, contrairement à **realloc**, ne peut pas déplacer un bloc pour modifier sa taille. Par conséquent, s’il existe suffisamment de mémoire disponible pour étendre le bloc sans le déplacer, le *memblock* paramètre **_étendre site** est identique à la valeur de retour.
+
+**_étendre site** retourne **NULL** si une erreur est détectée au cours de son fonctionnement. Par exemple, si **_étendre site** est utilisé pour réduire un bloc de mémoire, il peut détecter une altération dans le tas de petits blocs ou un pointeur de bloc non valide et retourner **NULL**.
+
+Si mémoire disponible insuffisante pour étendre le bloc à la taille donnée sans le déplacer, la fonction retourne **NULL**. **_étendre site** ne retourne jamais un bloc de développé à une taille inférieure à demandée. En cas de défaillance, **errno** indiquant la nature de l’échec. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour vérifier la nouvelle taille de l’élément, utilisez **_msize**. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
+
+## <a name="remarks"></a>Notes
+
+Le **_étendre site** fonction modifie la taille d’un bloc de mémoire précédemment alloué par la tentative de développer ou réduire le bloc sans déplacer son emplacement dans le tas. Le *memblock* paramètre pointe vers le début du bloc. Le *taille* paramètre indique la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé jusqu’à la plus courte des tailles nouvelle et ancienne. *memblock* ne doit pas être un bloc qui a été libéré.
+
 > [!NOTE]
->  Sur les plateformes 64 bits, `_expand` peut ne pas réduire le bloc si la nouvelle taille est inférieure à la taille actuelle ; en particulier, si le bloc était inférieur à 16 Ko et donc alloué dans la fonctionnalité Low Fragmentation Heap (Tas à faible fragmentation), `_expand` laisse le bloc inchangé et retourne `memblock`.  
-  
- Quand l’application est liée à une version de débogage des bibliothèques Runtime C, `_expand` se résout en [_expand_dbg](../../c-runtime-library/reference/expand-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- Cette fonction valide ses paramètres. Si `memblock` est un pointeur null, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `NULL`. Si `size` est supérieur à `_HEAP_MAXREQ`, `errno` est défini sur `ENOMEM` et la fonction retourne `NULL`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`_expand`|\<malloc.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_expand.c  
-  
-#include <stdio.h>  
-#include <malloc.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char *bufchar;  
-   printf( "Allocate a 512 element buffer\n" );  
-   if( (bufchar = (char *)calloc( 512, sizeof( char ) )) == NULL )  
-      exit( 1 );  
-   printf( "Allocated %d bytes at %Fp\n",   
-         _msize( bufchar ), (void *)bufchar );  
-   if( (bufchar = (char *)_expand( bufchar, 1024 )) == NULL )  
-      printf( "Can't expand" );  
-   else  
-      printf( "Expanded block to %d bytes at %Fp\n",   
-            _msize( bufchar ), (void *)bufchar );  
-   // Free memory   
-   free( bufchar );  
-   exit( 0 );  
-}  
-```  
-  
-```Output  
-Allocate a 512 element buffer  
-Allocated 512 bytes at 002C12BC  
-Expanded block to 1024 bytes at 002C12BC  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [free](../../c-runtime-library/reference/free.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_msize](../../c-runtime-library/reference/msize.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)
+> Sur les plateformes 64 bits, **_étendre site** peut vous engagez pas le bloc si la nouvelle taille est inférieure à la taille actuelle, en particulier si le bloc a été de taille inférieure à 16 Ko et par conséquent allouée dans le tas de Fragmentation faible, **_étendre site**  quitte le bloc inchangé et retourne *memblock*.
+
+Lorsque l’application est liée à une version debug des bibliothèques Runtime C, **_étendre site** se résout en [_expand_dbg](expand-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+Cette fonction valide ses paramètres. Si *memblock* est un pointeur null, cette fonction appelle un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **NULL**. Si *taille* est supérieur à **_HEAP_MAXREQ**, **errno** a la valeur **ENOMEM** et la fonction retourne **NULL**.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**_expand**|\<malloc.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_expand.c
+
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char *bufchar;
+   printf( "Allocate a 512 element buffer\n" );
+   if( (bufchar = (char *)calloc( 512, sizeof( char ) )) == NULL )
+      exit( 1 );
+   printf( "Allocated %d bytes at %Fp\n",
+         _msize( bufchar ), (void *)bufchar );
+   if( (bufchar = (char *)_expand( bufchar, 1024 )) == NULL )
+      printf( "Can't expand" );
+   else
+      printf( "Expanded block to %d bytes at %Fp\n",
+            _msize( bufchar ), (void *)bufchar );
+   // Free memory
+   free( bufchar );
+   exit( 0 );
+}
+```
+
+```Output
+Allocate a 512 element buffer
+Allocated 512 bytes at 002C12BC
+Expanded block to 1024 bytes at 002C12BC
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[free](free.md)<br/>
+[malloc](malloc.md)<br/>
+[_msize](msize.md)<br/>
+[realloc](realloc.md)<br/>

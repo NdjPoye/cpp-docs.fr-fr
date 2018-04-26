@@ -1,12 +1,12 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wtof_l
@@ -55,94 +55,99 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89644b1ff00bda2db5aa1a8c007668fc895a3b6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1897cc64c79a8593ade221ba24ecad6c037d3586
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
-Convertissent une chaîne en double.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double atof(  
-   const char *str   
-);  
-double _atof_l(  
-   const char *str,  
-   _locale_t locale  
-);  
-double _wtof(  
-   const wchar_t *str   
-);  
-double _wtof_l(  
-   const wchar_t *str,  
-   _locale_t locale  
-);  
-```  
-  
-## <a name="parameters"></a>Paramètres  
- `str`  
- Chaîne à convertir.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Chaque fonction retourne la valeur `double` produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.  
-  
- Dans tous les cas hors limites, errno est défini sur `ERANGE`. Si le paramètre passé est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent 0.  
-  
-## <a name="remarks"></a>Notes  
- Ces fonctions convertissent une chaîne de caractères en valeur à virgule flottante double précision.  
-  
- La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.  
-  
- L’argument `str` de `atof` et `_wtof` prend la forme suivante :  
-  
- [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E` }[`sign`]`digits`]  
-  
- A `whitespace` se compose de caractères espace ou tabulation, qui sont ignorés ; `sign` est plus (+) ou moins (-) ; et `digits` sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`e` ou `E`) et, éventuellement, d’un entier décimal signé.  
- 
- Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de lettres d’exposants (`d` ou `D`) de style Fortran. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.  
-  
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstof`|`atof`|`atof`|`_wtof`|  
-|`_ttof`|`atof`|`atof`|`_wtof`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine(s)|En-tête requis|  
-|------------------|---------------------|  
-|`atof`, `_atof_l`|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|  
-|`_wtof`, `_wtof_l`|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib>, \<stdlib.h> ou \<wchar.h>|  
-  
-## <a name="example"></a>Exemple  
- Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions `atof` et `_atof_l`.  
-  
-```C  
-// crt_atof.c  
-//  
-// This program shows how numbers stored as   
-// strings can be converted to numeric  
-// values using the atof and _atof_l functions.  
 
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <locale.h>  
+Convertissent une chaîne en double.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double atof(
+   const char *str
+);
+double _atof_l(
+   const char *str,
+   _locale_t locale
+);
+double _wtof(
+   const wchar_t *str
+);
+double _wtof_l(
+   const wchar_t *str,
+   _locale_t locale
+);
+```
+
+## <a name="parameters"></a>Paramètres
+
+*str*<br/>
+Chaîne à convertir.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Chaque fonction retourne le **double** valeur produite par l’interprétation des caractères d’entrée en tant que nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
+
+Dans tous les cas d’out-of-range, **errno** a la valeur **ERANGE**. Si le paramètre passé est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourne 0.
+
+## <a name="remarks"></a>Notes
+
+Ces fonctions convertissent une chaîne de caractères en valeur à virgule flottante double précision.
+
+La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
+
+Le *str* argument **atof** et **_wtof** a la forme suivante :
+
+[*espace blanc*] [*signe*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **E** } [*signe*]*chiffres*]
+
+A *espace blanc* se compose de caractères espace ou tabulation, qui sont ignorés ; *signe* est plus (+) ou moins (-) ; et *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivies d’un exposant, qui se compose d’une lettre d’introduction (**e**, ou **E**) et un entier décimal signé si vous le souhaitez.
+
+Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de type Fortran (**d** ou **D**) lettres exposant. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
+
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent le *paramètres régionaux* paramètre passés au lieu des paramètres régionaux actuels.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tstof**|**atof**|**atof**|**_wtof**|
+|**_ttof**|**atof**|**atof**|**_wtof**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine(s)|En-tête requis|
+|------------------|---------------------|
+|**atof**, **_atof_l**|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|
+|**_wtof**, **_wtof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib>, \<stdlib.h> ou \<wchar.h>|
+
+## <a name="example"></a>Exemple
+
+Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être converties en valeurs numériques à l’aide de la **atof** et **_atof_l** fonctions.
+
+```C
+// crt_atof.c
+//
+// This program shows how numbers stored as
+// strings can be converted to numeric
+// values using the atof and _atof_l functions.
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
 
 int main(void)
 {
@@ -150,42 +155,43 @@ int main(void)
     double value = 0;
     _locale_t fr = _create_locale(LC_NUMERIC, "fr-FR");
 
-    // An example of the atof function  
-    // using leading and training spaces.  
+    // An example of the atof function
+    // using leading and training spaces.
     str = "  3336402735171707160320 ";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
 
-    // Another example of the atof function  
-    // using the 'E' exponential formatting keyword.  
+    // Another example of the atof function
+    // using the 'E' exponential formatting keyword.
     str = "3.1412764583E210";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
 
-    // An example of the atof and _atof_l functions  
-    // using the 'e' exponential formatting keyword  
-    // and showing different decimal point interpretations.  
+    // An example of the atof and _atof_l functions
+    // using the 'e' exponential formatting keyword
+    // and showing different decimal point interpretations.
     str = "  -2,309e-25";
     value = atof(str);
     printf("Function: atof(\"%s\") = %e\n", str, value);
     value = _atof_l(str, fr);
     printf("Function: _atof_l(\"%s\", fr)) = %e\n", str, value);
-}  
-```  
-  
-```Output  
+}
+```
+
+```Output
 Function: atof("  3336402735171707160320 ") = 3.336403e+21
 Function: atof("3.1412764583E210") = 3.141276e+210
 Function: atof("  -2,309e-25") = -2.000000e+00
-Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conversion de données](../../c-runtime-library/data-conversion.md)   
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_fcvt](fcvt.md)<br/>
+[_gcvt](gcvt.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

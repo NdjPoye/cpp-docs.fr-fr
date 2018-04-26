@@ -1,12 +1,12 @@
 ---
 title: memchr, wmemchr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wmemchr
@@ -32,133 +32,139 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d008c0dfaae7490dd23fdd5fe3206b0c5c1d76fc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2eb092abaa1e49c13ca05066de98b533507b4421
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
-Rechercher des caractères dans une mémoire tampon.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void *memchr(  
-   const void *buf,  
-   int c,  
-   size_t count  
-); // C only  
-void *memchr(  
-   void *buf,  
-   int c,  
-   size_t count  
-); // C++ only  
-const void *memchr(  
-   const void *buf,  
-   int c,  
-   size_t count  
-); // C++ only  
-wchar_t *wmemchr(  
-   const wchar_t * buf,   
-   wchar_t c,  
-   size_t count  
-); // C only  
-wchar_t *wmemchr(  
-   wchar_t * buf,   
-   wchar_t c,  
-   size_t count  
-); // C++ only  
-const wchar_t *wmemchr(  
-   const wchar_t * buf,   
-   wchar_t c,  
-   size_t count  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `buf`  
- Pointeur désignant la mémoire tampon.  
-  
- `c`  
- Caractère à rechercher.  
-  
- `count`  
- Nombre de caractères à vérifier.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne un pointeur désignant le premier emplacement de `c` dans `buf`. Sinon, elle retourne `NULL`.  
-  
-## <a name="remarks"></a>Notes  
- `memchr` et `wmemchr` recherchent la première occurrence de `c` dans les `count` premiers octets de `buf`. Elles s’arrêtent quand elles trouvent `c` ou qu’elles ont vérifié les `count` premiers octets.  
-  
- En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le `const` et non-`const` versions de ces fonctions sont disponibles. Si vous avez besoin d’un comportement non-`const` pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`memchr`|\<memory.h> ou \<string.h>|  
-|`wmemchr`|\<wchar.h>|  
-  
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_memchr.c  
-  
-#include <memory.h>  
-#include <stdio.h>  
-  
-int  ch = 'r';  
-char str[] =    "lazy";  
-char string[] = "The quick brown dog jumps over the lazy fox";  
-char fmt1[] =   "         1         2         3         4         5";  
-char fmt2[] =   "12345678901234567890123456789012345678901234567890";  
-  
-int main( void )  
-{  
-   char *pdest;  
-   int result;  
-   printf( "String to be searched:\n             %s\n", string );  
-   printf( "             %s\n             %s\n\n", fmt1, fmt2 );  
-  
-   printf( "Search char: %c\n", ch );  
-   pdest = memchr( string, ch, sizeof( string ) );  
-   result = (int)(pdest - string + 1);  
-   if ( pdest != NULL )  
-      printf( "Result:      %c found at position %d\n", ch, result );  
-   else  
-      printf( "Result:      %c not found\n" );  
-}  
-```  
-  
-## <a name="output"></a>Sortie  
-  
-```  
-String to be searched:  
-             The quick brown dog jumps over the lazy fox  
-                      1         2         3         4         5  
-             12345678901234567890123456789012345678901234567890  
-  
-Search char: r  
-Result:      r found at position 12  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Manipulation de la mémoire tampon](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)
+
+Rechercher des caractères dans une mémoire tampon.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void *memchr(
+   const void *buffer,
+   int c,
+   size_t count
+); // C only
+void *memchr(
+   void *buffer,
+   int c,
+   size_t count
+); // C++ only
+const void *memchr(
+   const void *buffer,
+   int c,
+   size_t count
+); // C++ only
+wchar_t *wmemchr(
+   const wchar_t * buffer,
+   wchar_t c,
+   size_t count
+); // C only
+wchar_t *wmemchr(
+   wchar_t * buffer,
+   wchar_t c,
+   size_t count
+); // C++ only
+const wchar_t *wmemchr(
+   const wchar_t * buffer,
+   wchar_t c,
+   size_t count
+); // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*buffer*<br/>
+Pointeur désignant la mémoire tampon.
+
+*c*<br/>
+Caractère à rechercher.
+
+*count*<br/>
+Nombre de caractères à vérifier.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dans *tampon*. Sinon, elle retourne **NULL**.
+
+## <a name="remarks"></a>Notes
+
+**memchr** et **wmemchr** rechercher la première occurrence de *c* dans la première *nombre* octets de *tampon*. Il s’arrête lorsqu’il trouve *c* ou si elle a activé la première *nombre* octets.
+
+En C, ces fonctions acceptent un ** const ** pointeur comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers ** const ** retourne un pointeur vers **const **; la version qui prend un pointeur vers non -** const ** retourne un pointeur vers non -** const **. La macro _CRT_CONST_CORRECT_OVERLOADS est défini si les deux le **const ** et non-** const ** les versions de ces fonctions sont disponibles. Si vous avez besoin non -** const ** comportement pour les deux overloadsin C++ C++, définissez le symbol _CONST_RETURN.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**memchr**|\<memory.h> ou \<string.h>|
+|**wmemchr**|\<wchar.h>|
+
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_memchr.c
+
+#include <memory.h>
+#include <stdio.h>
+
+int  ch = 'r';
+char str[] =    "lazy";
+char string[] = "The quick brown dog jumps over the lazy fox";
+char fmt1[] =   "         1         2         3         4         5";
+char fmt2[] =   "12345678901234567890123456789012345678901234567890";
+
+int main( void )
+{
+   char *pdest;
+   int result;
+   printf( "String to be searched:\n             %s\n", string );
+   printf( "             %s\n             %s\n\n", fmt1, fmt2 );
+
+   printf( "Search char: %c\n", ch );
+   pdest = memchr( string, ch, sizeof( string ) );
+   result = (int)(pdest - string + 1);
+   if ( pdest != NULL )
+      printf( "Result:      %c found at position %d\n", ch, result );
+   else
+      printf( "Result:      %c not found\n" );
+}
+```
+
+### <a name="output"></a>Sortie
+
+```Output
+String to be searched:
+             The quick brown dog jumps over the lazy fox
+                      1         2         3         4         5
+             12345678901234567890123456789012345678901234567890
+
+Search char: r
+Result:      r found at position 12
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Manipulation de la mémoire tampon](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

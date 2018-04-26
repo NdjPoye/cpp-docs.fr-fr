@@ -1,12 +1,12 @@
 ---
 title: _putc_nolock, _putwc_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putc_nolock
@@ -43,100 +43,105 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348141f4d096e22efc80ada84c31a7e10b96287a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c52dcb390fac781018782f727fbc360d949770c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
-Écrit un caractère dans un flux sans verrouiller le thread.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int _putc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _putwc_nolock(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Caractère à écrire.  
-  
- `stream`  
- Pointeur désignant la structure **FILE**.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Consultez **putc, putwc**.  
-  
-## <a name="remarks"></a>Notes  
- `_putc_nolock` et `_putwc_nolock` sont identiques aux versions sans suffixe **_nolock**, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
-  
- `_putwc_nolock` est la version à caractères larges de `_putc_nolock` ; les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. `_putc_nolock` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_putc_nolock`|\<stdio.h>|  
-|`_putwc_nolock`|\<stdio.h> ou \<wchar.h>|  
-  
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, `stdin`, `stdout`, et `stderr`, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_putc_nolock.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-   /* Make standard out the stream and write to it. */  
-   stream = stdout;  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putc_nolock( *p, stream );  
-}  
-```  
-  
-## <a name="output"></a>Sortie  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Écrit un caractère dans un flux sans verrouiller le thread.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _putc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _putwc_nolock(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Caractère à écrire.
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+Consultez **putc, putwc**.
+
+## <a name="remarks"></a>Notes
+
+**_putc_nolock** et **_putwc_nolock** sont identiques aux versions sans le **_nolock** suffixe, sauf qu’elles ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+
+**_putwc_nolock** est la version à caractères larges de **_putc_nolock**; les deux fonctions se comportent de façon identique si le flux est ouvert en mode ANSI. **_putc_nolock** ne prend actuellement en charge la sortie dans un flux de données UNICODE.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttc_nolock**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_putc_nolock**|\<stdio.h>|
+|**_putwc_nolock**|\<stdio.h> ou \<wchar.h>|
+
+La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_putc_nolock.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+   /* Make standard out the stream and write to it. */
+   stream = stdout;
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putc_nolock( *p, stream );
+}
+```
+
+### <a name="output"></a>Sortie
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

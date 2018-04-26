@@ -1,13 +1,13 @@
 ---
 title: log1p, log1pf, log1pl2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - log1p
@@ -38,84 +38,89 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f99c09efd055cc60162e88e52e938df690929a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cf512bcf898a202eee771318afb022642d432b4f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
-Calcule le logarithme népérien de 1 plus la valeur spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double log1p(  
-   double x  
-);  
-  
-float log1p(  
-   float x  
-); //C++ only  
-  
-long double log1p(  
-   long double x  
-); //C++ only  
-  
-float log1pf(  
-   float x  
-);  
-  
-long double log1pl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `x`  
- Argument à virgule flottante.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne le logarithme népérien (base e) de (`x`+1).  
-  
- Sinon, peut retourner l’une des valeurs suivantes :  
-  
-|Entrée|Résultat|Exception SEH|errno|  
-|-----------|------------|-------------------|-----------|  
-|+inf|+inf|||  
-|Nombres dénormalisés|Identique à l’entrée|UNDERFLOW||  
-|±0|Identique à l’entrée|||  
-|-1|-inf|DIVBYZERO|ERANGE|  
-|< -1|nan|INVALID|EDOM|  
-|-inf|nan|INVALID|EDOM|  
-|±SNaN|Identique à l’entrée|INVALID||  
-|±QNaN, indéterminée|Identique à l’entrée|||  
-  
- `errno` prend la valeur ERANGE si `x` est égal à -1. Le `errno` a la valeur EDOM si `x` < -1.  
-  
-## <a name="remarks"></a>Notes  
- Les fonctions `log1p` peuvent être plus précises que l’utilisation de log(`x`+1) si x est proche de 0.  
-  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `log1p` qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, `log1p` accepte et retourne toujours un double.  
-  
- Si `x` est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (`x`-1).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
- [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Calcule le logarithme népérien de 1 plus la valeur spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double log1p(
+   double x
+);
+
+float log1p(
+   float x
+); //C++ only
+
+long double log1p(
+   long double x
+); //C++ only
+
+float log1pf(
+   float x
+);
+
+long double log1pl(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Argument à virgule flottante.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, retourne le naturel (base -*e*) dans le journal de (*x* + 1).
+
+Sinon, peut retourner l’une des valeurs suivantes :
+
+|Entrée|Résultat|Exception SEH|errno|
+|-----------|------------|-------------------|-----------|
+|+inf|+inf|||
+|Nombres dénormalisés|Identique à l’entrée|UNDERFLOW||
+|±0|Identique à l’entrée|||
+|-1|-inf|DIVBYZERO|ERANGE|
+|< -1|nan|INVALID|EDOM|
+|-inf|nan|INVALID|EDOM|
+|±SNaN|Identique à l’entrée|INVALID||
+|±QNaN, indéterminée|Identique à l’entrée|||
+
+Le **errno** a la valeur ERANGE si *x* = -1. Le **errno** a la valeur **EDOM** si *x* < -1.
+
+## <a name="remarks"></a>Notes
+
+Le **log1p** les fonctions peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **log1p** accepte et retourne toujours un **double**.
+
+Si *x* est un nombre, cette fonction retourne le logarithme d’obtenir la factorielle (*x* - 1).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[log2, log2f, log2l](log2-log2f-log2l.md)<br/>
+[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

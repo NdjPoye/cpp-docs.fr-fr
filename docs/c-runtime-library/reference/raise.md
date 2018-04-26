@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Paramètres
 
-*sig*  
+*sig*<br/>
 Signal à déclencher.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -73,16 +73,16 @@ La fonction **raise** envoie *sig* au programme en cours d’exécution. Si un a
 
 |Signal|Signification|Par défaut|
 |------------|-------------|-------------|
-|`SIGABRT`|Arrêt anormal|Termine le programme appelant avec le code de sortie 3|
-|`SIGFPE`|Erreur de virgule flottante|Termine le programme appelant|
-|`SIGILL`|Instruction non conforme|Termine le programme appelant|
-|`SIGINT`|Interruption CTRL+C|Termine le programme appelant|
-|`SIGSEGV`|Accès au stockage non conforme|Termine le programme appelant|
-|`SIGTERM`|Demande d’arrêt envoyée au programme|Ignore le signal|
+|**SIGABRT**|Arrêt anormal|Termine le programme appelant avec le code de sortie 3|
+|**SIGFPE**|Erreur de virgule flottante|Termine le programme appelant|
+|**SIGILL**|Instruction non conforme|Termine le programme appelant|
+|**SIGINT**|Interruption CTRL+C|Termine le programme appelant|
+|**SIGSEGV**|Accès au stockage non conforme|Termine le programme appelant|
+|**SIGTERM**|Demande d’arrêt envoyée au programme|Ignore le signal|
 
-Si l’argument n’est pas un signal valide tel que spécifié ci-dessus, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). S’il n’est pas géré, la fonction affecte à `errno` la valeur `EINVAL` et retourne une valeur différente de zéro.
+Si l’argument n’est pas un signal valide tel que spécifié ci-dessus, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si non gérée, la fonction définit **errno** à **EINVAL** et retourne une valeur différente de zéro.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -92,6 +92,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

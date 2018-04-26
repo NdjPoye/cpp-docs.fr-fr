@@ -1,12 +1,12 @@
 ---
 title: _getw | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getw
@@ -32,95 +32,100 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfba71c98b347cec3ef56143cce34b1550e4149
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2079672548a7f25106e7540580b60ac9fead8a36
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getw"></a>_getw
-Obtient un entier à partir d’un flux.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _getw(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `stream`  
- Pointeur désignant la structure `FILE`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_getw` retourne la valeur entière lue. Une valeur de retour égale à `EOF` indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur `EOF` est également une valeur d’entier légitime, utilisez `feof` ou `ferror` pour vérifier une condition d’erreur ou de fin de fichier. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `EOF`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_getw` lit la valeur binaire suivante de type `int` à partir du fichier associé à `stream` et incrémente le pointeur de fichier associé (le cas échéant) pour qu’il désigne le caractère non lu suivant. `_getw` ne considère pas que les éléments du flux sont alignés de manière spécifique. Des problèmes de portage peuvent se produire avec `_getw`, car la taille du type `int` et l’ordre des octets dans le type `int` diffèrent d’un système à l’autre.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_getw`|\<stdio.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_getw.c  
-// This program uses _getw to read a word  
-// from a stream, then performs an error check.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   int i;  
-  
-   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )  
-      printf( "Couldn't open file\n" );  
-   else  
-   {  
-      // Read a word from the stream:  
-      i = _getw( stream );  
-  
-      // If there is an error...  
-      if( ferror( stream ) )  
-      {  
-         printf( "_getw failed\n" );  
-         clearerr_s( stream );  
-      }  
-      else  
-         printf( "First data word in file: 0x%.4x\n", i );  
-      fclose( stream );  
-   }  
-}  
-```  
-  
-## <a name="input-crtgetwtxt"></a>Entrée : crt_getw.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Sortie  
-  
-```  
-First data word in file: 0x656e694c  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [_putw](../../c-runtime-library/reference/putw.md)
+
+Obtient un entier à partir d’un flux.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _getw(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_getw** retourne la valeur entière en lecture. La valeur de retour **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que la **EOF** valeur est également une valeur d’entier légitime, utilisez **feof** ou **ferror** pour vérifier une condition d’erreur ou de fin de fichier. Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
+
+## <a name="remarks"></a>Notes
+
+Le **_getw** fonction lit la valeur binaire suivante de type **int** à partir du fichier associé *flux* et incrémente le pointeur de fichier associé (si elle existe) à un point pour le caractère suivant non lu. **_getw** n’assume pas tout alignement spécial d’éléments dans le flux de données. Problèmes de portage peuvent se produire avec **_getw** , car la taille de la **int** type et l’ordre des octets dans le **int** type diffèrent entre les systèmes.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_getw**|\<stdio.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_getw.c
+// This program uses _getw to read a word
+// from a stream, then performs an error check.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   int i;
+
+   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )
+      printf( "Couldn't open file\n" );
+   else
+   {
+      // Read a word from the stream:
+      i = _getw( stream );
+
+      // If there is an error...
+      if( ferror( stream ) )
+      {
+         printf( "_getw failed\n" );
+         clearerr_s( stream );
+      }
+      else
+         printf( "First data word in file: 0x%.4x\n", i );
+      fclose( stream );
+   }
+}
+```
+
+### <a name="input-crtgetwtxt"></a>Entrée : crt_getw.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Sortie
+
+```Output
+First data word in file: 0x656e694c
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[_putw](putw.md)<br/>

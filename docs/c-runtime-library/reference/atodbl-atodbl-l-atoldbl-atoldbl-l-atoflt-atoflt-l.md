@@ -1,12 +1,12 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _atoldbl
@@ -58,137 +58,121 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cc49c513f72be5fa96cc8534f749d2ecbc01ec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fef1a1d54399febfd0cf42fc1c1643a799476ef3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-Convertit une chaîne en valeur de type double (`_atodbl`), long double (`_atoldbl`) ou float (`_atoflt`).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _atodbl(  
-   _CRT_DOUBLE * value,  
-   char * str  
-);  
-int _atodbl_l (  
-   _CRT_DOUBLE * value,  
-   char * str,  
-   locale_t locale  
-);  
-int _atoldbl(  
-   _LDOUBLE * value,  
-   char * str  
-);  
-int _atoldbl_l (  
-   _LDOUBLE * value,  
-   char * str,  
-   locale_t locale  
-);  
-int _atoflt(  
-   _CRT_FLOAT * value,  
-   const char * str  
-);  
-int _atoflt_l(  
-   _CRT_FLOAT * value,  
-   const char * str,  
-   locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `value`  
- Valeur de type double, long double ou float produite par la conversion de la chaîne en une valeur à virgule flottante. Ces valeurs sont encapsulées dans une structure.  
-  
- `str`  
- Chaîne à analyser en vue de sa conversion en une valeur à virgule flottante.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne 0 en cas de réussite. Les codes d’erreur possibles sont `_UNDERFLOW` ou `_OVERFLOW`, qui sont définis dans le fichier d’en-tête Math.h.  
-  
-## <a name="remarks"></a>Notes  
- Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et la famille de fonctions `atof` est que ces fonctions ne génèrent pas de code à virgule flottante et ne provoquent pas d’exceptions matérielles. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.  
-  
- En l’absence d’interprétation valide de la chaîne en tant que valeur à virgule flottante, `value` est défini sur zéro et la valeur de retour est zéro.  
-  
- Les versions de ces fonctions avec le suffixe `_l` sont identiques aux versions dépourvues du suffixe, à ceci près qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routines|En-tête requis|  
-|--------------|---------------------|  
-|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h>|  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_atodbl.c  
-// Uses _atodbl to convert a string to a double precision  
-// floating point value.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-   char str1[256] = "3.141592654";  
-   char abc[256] = "abc";  
-   char oflow[256] = "1.0E+5000";  
-   _CRT_DOUBLE dblval;  
-   _CRT_FLOAT fltval;  
-   int retval;  
-  
-   retval = _atodbl(&dblval, str1);  
-  
-   printf("Double value: %lf\n", dblval.x);  
-   printf("Return value: %d\n\n", retval);  
-  
-   retval = _atoflt(&fltval, str1);  
-   printf("Float value: %f\n", fltval.f);  
-   printf("Return value: %d\n\n", retval);  
-  
-   // A non-floating point value: returns 0.  
-   retval = _atoflt(&fltval, abc);  
-   printf("Float value: %f\n", fltval.f);  
-   printf("Return value: %d\n\n", retval);  
-  
-   // Overflow.  
-   retval = _atoflt(&fltval, oflow);  
-   printf("Float value: %f\n", fltval.f);  
-   printf("Return value: %d\n\n", retval);  
-  
-   return 0;  
-}  
-```  
-  
-```Output  
-Double value: 3.141593  
-Return value: 0  
-  
-Float value: 3.141593  
-Return value: 0  
-  
-Float value: 0.000000  
-Return value: 0  
-  
-Float value: 1.#INF00  
-Return value: 3  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conversion de données](../../c-runtime-library/data-conversion.md)   
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+
+Convertit une chaîne en valeur double (**_atodbl**), long double (**_atoldbl**), ou float (**_atoflt**).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _atodbl( _CRT_DOUBLE * value, char * str );
+int _atodbl_l ( _CRT_DOUBLE * value, char * str, locale_t locale );
+int _atoldbl( _LDOUBLE * value, char * str );
+int _atoldbl_l ( _LDOUBLE * value, char * str, locale_t locale );
+int _atoflt( _CRT_FLOAT * value, const char * str );
+int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
+```
+
+### <a name="parameters"></a>Paramètres
+
+*valeur*<br/>
+Valeur de type double, long double ou float produite par la conversion de la chaîne en une valeur à virgule flottante. Ces valeurs sont encapsulées dans une structure.
+
+*str*<br/>
+Chaîne à analyser en vue de sa conversion en une valeur à virgule flottante.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne 0 en cas de réussite. Codes d’erreur possibles sont **_UNDERFLOW** ou **_OVERFLOW**, qui sont définies dans le fichier d’en-tête \<math.h >.
+
+## <a name="remarks"></a>Notes
+
+Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et les **atof** famille de fonctions est que ces fonctions ne génèrent pas de code à virgule flottante et ne provoquent pas d’exceptions matérielles. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
+
+Si une chaîne n’est pas une interprétation valide en tant que valeur à virgule flottante, *valeur* est définie sur zéro et la valeur de retour valeur est égale à zéro.
+
+Les versions de ces fonctions qui ont le **_l** suffixe sont identiques les versions qui n’ont pas le suffixe, à ceci près qu’elles utilisent le *paramètres régionaux* paramètre qui est passé au lieu du thread en cours paramètres régionaux.
+
+## <a name="requirements"></a>Spécifications
+
+|Routines|En-tête requis|
+|--------------|---------------------|
+|**_atodbl**, **_atoldbl**, **_atoflt**<br /><br /> **_atodbl_l**, **_atoldbl_l**, **_atoflt_l**|\<stdlib.h>|
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_atodbl.c
+// Uses _atodbl to convert a string to a double precision
+// floating point value.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+   char str1[256] = "3.141592654";
+   char abc[256] = "abc";
+   char oflow[256] = "1.0E+5000";
+   _CRT_DOUBLE dblval;
+   _CRT_FLOAT fltval;
+   int retval;
+
+   retval = _atodbl(&dblval, str1);
+
+   printf("Double value: %lf\n", dblval.x);
+   printf("Return value: %d\n\n", retval);
+
+   retval = _atoflt(&fltval, str1);
+   printf("Float value: %f\n", fltval.f);
+   printf("Return value: %d\n\n", retval);
+
+   // A non-floating point value: returns 0.
+   retval = _atoflt(&fltval, abc);
+   printf("Float value: %f\n", fltval.f);
+   printf("Return value: %d\n\n", retval);
+
+   // Overflow.
+   retval = _atoflt(&fltval, oflow);
+   printf("Float value: %f\n", fltval.f);
+   printf("Return value: %d\n\n", retval);
+
+   return 0;
+}
+```
+
+```Output
+Double value: 3.141593
+Return value: 0
+
+Float value: 3.141593
+Return value: 0
+
+Float value: 0.000000
+Return value: 0
+
+Float value: inf
+Return value: 3
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

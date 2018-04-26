@@ -1,12 +1,12 @@
 ---
 title: _getcwd_dbg, _wgetcwd_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wgetcwd_dbg
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc2538ce4e745917e23d67903b86677bacfbb979
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 59bf95e03891f787ec8271d35d4b922d8641dda2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
-Versions de débogage des fonctions [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md) (disponibles uniquement durant le débogage).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char *_getcwd_dbg(   
-   char *buffer,  
-   int maxlen,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wgetcwd_dbg(   
-   wchar_t *buffer,  
-   int maxlen,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `buffer`  
- Emplacement de stockage pour le chemin.  
-  
- `maxlen`  
- Longueur maximale du chemin d'accès en caractères : `char` pour `_getcwd_dbg` et `wchar_t` pour `_wgetcwd_dbg`.  
-  
- `blockType`  
- Type demandé du bloc de mémoire : `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
-  
- `filename`  
- Pointeur vers le nom du fichier source qui a demandé l'opération d'allocation ou `NULL`.  
-  
- `linenumber`  
- Numéro de ligne dans le fichier source où l'opération d'allocation a été demandée ou `NULL`.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne un pointeur vers `buffer`. Une valeur de retour `NULL` indique une erreur et `errno` prend la valeur `ENOMEM`, ce qui indique que la mémoire est insuffisante pour allouer `maxlen` octets (quand un argument `NULL` est donné comme `buffer`), ou la valeur `ERANGE`, ce qui indique que le chemin d’accès fait plus de `maxlen` caractères.  
-  
- Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- Le `_getcwd_dbg` et `_wgetcwd_dbg` fonctions sont identiques aux `_getcwd` et `_wgetcwd` , sauf que, lorsque `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc` et `_malloc_dbg` pour allouer la mémoire si `NULL` est passée comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`. Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_getcwd` et `_wgetcwd` sont remappés à `_getcwd_dbg` et `_wgetcwd_dbg`, respectivement, avec `blockType` défini sur `_NORMAL_BLOCK`. Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tgetcwd_dbg`|`_getcwd_dbg`|`_getcwd_dbg`|`_wgetcwd_dbg`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_getcwd_dbg`|\<crtdbg.h>|  
-|`_wgetcwd_dbg`|\<crtdbg.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="see-also"></a>Voir aussi  
- [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [Contrôle de répertoire](../../c-runtime-library/directory-control.md)   
- [Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+
+Versions de débogage des fonctions [_getcwd, _wgetcwd](getcwd-wgetcwd.md) (disponibles uniquement durant le débogage).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+char *_getcwd_dbg(
+   char *buffer,
+   int maxlen,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wgetcwd_dbg(
+   wchar_t *buffer,
+   int maxlen,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*buffer*<br/>
+Emplacement de stockage pour le chemin.
+
+*MAXLEN*<br/>
+Longueur maximale du chemin en caractères : **char** pour **_getcwd_dbg** et **wchar_t** pour **_wgetcwd_dbg**.
+
+*blockType*<br/>
+Type du bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
+
+*filename*<br/>
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
+
+*linenumber*<br/>
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne un pointeur vers *tampon*. A **NULL** valeur renvoyée indique une erreur, et **errno** prend la valeur **ENOMEM**, indiquant que la mémoire est insuffisante pour allouer *maxlen* octets (quand un **NULL** argument n’est fourni en tant que *tampon*), ou à **ERANGE**, indiquant que le chemin d’accès fait plu *maxlen*  caractères.
+
+Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Le **_getcwd_dbg** et **_wgetcwd_dbg** fonctions sont identiques aux **_getcwd** et **_wgetcwd** , sauf que, lorsque **_ DÉBOGUER** est défini, ces fonctions utilisent la version debug de **malloc** et **_malloc_dbg** pour allouer la mémoire si **NULL** est passé en tant que le premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](malloc-dbg.md).
+
+Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_getcwd** et **_wgetcwd** sont remappés à **_getcwd_dbg** et **_ wgetcwd_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tgetcwd_dbg**|**_getcwd_dbg**|**_getcwd_dbg**|**_wgetcwd_dbg**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_getcwd_dbg**|\<crtdbg.h>|
+|**_wgetcwd_dbg**|\<crtdbg.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
+[Contrôle de répertoire](../../c-runtime-library/directory-control.md)<br/>
+[Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbalnum
@@ -37,62 +37,65 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4badd63e50edc57ea09465693797d090e43b2876
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b1d190fcc5175371a50f4613aaaf8f26747e17aa
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum, _ismbbalnum_l
-Détermine si un caractère multioctet spécifié est alphabétique ou numérique.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbbalnum(  
-   unsigned int c   
-);  
-int _ismbbalnum_l(  
-   unsigned int c   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_ismbbalnum` retourne une valeur différente de zéro si l’expression :  
-  
-```  
-isalnum || _ismbbkalnum  
-```  
-  
- est différente de zéro pour `c`, ou 0 dans le cas contraire.  
-  
- La version de cette fonction avec le suffixe `_l` est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_ismbbalnum`|\<mbctype.h>|  
-|`_ismbbalnum_l`|\<mbctype.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Détermine si un caractère multioctet spécifié est alphabétique ou numérique.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbbalnum(
+   unsigned int c
+);
+int _ismbbalnum_l(
+   unsigned int c
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_ismbbalnum** retourne une valeur différente de zéro si l’expression :
+
+`isalnum(c) || _ismbbkalnum(c)`
+
+est différent de zéro pour *c*, ou 0 s’il n’est pas.
+
+La version de cette fonction avec la **_l** suffixe est identique, sauf qu’elle utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_ismbbalnum**|\<mbctype.h>|
+|**_ismbbalnum_l**|\<mbctype.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

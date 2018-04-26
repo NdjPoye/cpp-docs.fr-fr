@@ -1,16 +1,17 @@
 ---
-title: fmod, fmodf | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fmod, fmodf, fmodl | Documents Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmod
 - fmodf
+- fmodl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,90 +34,100 @@ dev_langs:
 helpviewer_keywords:
 - calculating floating-point remainders
 - fmodf function
+- fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bf7fec2d8e05628f09297f4af92011237fc5f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c31ec67e3b5c75c334a985461365c7b139758427
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="fmod-fmodf"></a>fmod, fmodf
-Calcule le reste à virgule flottante.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double fmod(   
-   double x,  
-   double y   
-);  
-float fmod(  
-   float x,  
-   float y   
-);  // C++ only  
-long double fmod(  
-   long double x,  
-   long double y  
-);  // C++ only  
-float fmodf(   
-   float x,  
-   float y   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `x`, `y`  
- Valeurs à virgule flottante.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `fmod` retourne le reste à virgule flottante de `x` / `y`. Si la valeur de `y` est 0.0, `fmod` retourne un NaN silencieux. Pour plus d’informations sur la représentation d’un NaN silencieux par la famille `printf`, consultez [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="remarks"></a>Notes  
- La fonction `fmod` calcule le reste à virgule flottante `f` de `x` / `y` selon la formule `x` = `i` `*` `y` + `f`, où `i` est un entier, `f` a le même signe que `x` et la valeur absolue de `f` est inférieure à la valeur absolue de `y`.  
-  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `fmod`. Dans un programme C, `fmod` accepte deux doubles et retourne un double systématiquement.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`fmod`, `fmodf`|\<math.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_fmod.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = fmod( w, x );  
-   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [_CIfmod](../../c-runtime-library/cifmod.md)
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
+
+Calcule le reste à virgule flottante.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double fmod(
+   double x,
+   double y
+);
+float fmod(
+   float x,
+   float y
+);  // C++ only
+long double fmod(
+   long double x,
+   long double y
+);  // C++ only
+float fmodf(
+   float x,
+   float y
+);
+long double fmodl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*, *y*<br/>
+Valeurs à virgule flottante.
+
+## <a name="return-value"></a>Valeur de retour
+
+**fmod** renvoie le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est égale à 0.0, **fmod** retourne une valeur NaN silencieuse. Pour plus d’informations sur la représentation sous forme d’une valeur NaN silencieuse par le **printf** famille, voir [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="remarks"></a>Notes
+
+Le **fmod** fonction calcule le reste à virgule flottante *f* de *x* / *y* tels que *x*  =  *i* * *y* + *f*, où *i* est un entier, *f* a la même signature que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+
+C++ autorise la surcharge, vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent **float** et **long** **double** valeurs. Dans un programme C, **fmod** toujours prend deux **double** arguments et retourne un **double**.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_fmod.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = fmod( w, x );
+   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[_CIfmod](../../c-runtime-library/cifmod.md)<br/>

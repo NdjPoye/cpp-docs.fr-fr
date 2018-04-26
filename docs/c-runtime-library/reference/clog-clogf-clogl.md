@@ -1,13 +1,13 @@
 ---
 title: clog, clogf, clogl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - clog
@@ -40,71 +40,76 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 045eaee50f988e5712fd23845bd91db68c75ba65
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d0f27af3c63b4f3dd43caae6b628b184f8c872a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
-Récupère le logarithme népérien d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-_Dcomplex clog(   
-   _Dcomplex z   
-);  
-_Fcomplex clog(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex clog(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex clogf(   
-   _Fcomplex z   
-);  
-_Lcomplex clogl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `z`  
- Base du logarithme.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Logarithme népérien de `z`. Le résultat est illimité sur l’axe réel et dans l’intervalle [-iπ, + iπ] sur l’axe imaginaire.  
-  
- Les valeurs de retour possibles sont :  
-  
-|Paramètre z|Valeur de retour|  
-|-----------------|------------------|  
-|Positif|Logarithme de base 10 de z|  
-|Zéro|- ∞|  
-|Négatif|NaN|  
-|NaN|NaN|  
-|+ ∞|+ ∞|  
-  
-## <a name="remarks"></a>Notes  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `clog` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `clog` accepte et retourne toujours une valeur `_Dcomplex` .  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête C|En-tête C++|  
-|-------------|--------------|------------------|  
-|`clog`,               `clogf`, `clogl`|\<complex.h>|\<ccomplex>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
- [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
- [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)
+
+Récupère le logarithme népérien d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+_Dcomplex clog(
+   _Dcomplex z
+);
+_Fcomplex clog(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex clog(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex clogf(
+   _Fcomplex z
+);
+_Lcomplex clogl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*z*<br/>
+Base du logarithme.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le logarithme népérien de *z*. Le résultat est illimité sur l’axe réel et dans l’intervalle [-iπ, + iπ] sur l’axe imaginaire.
+
+Les valeurs de retour possibles sont :
+
+|Paramètre z|Valeur de retour|
+|-----------------|------------------|
+|Positif|Logarithme de base 10 de z|
+|Zéro|- ∞|
+|Négatif|NaN|
+|NaN|NaN|
+|+ ∞|+ ∞|
+
+## <a name="remarks"></a>Notes
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **clog** qui acceptent et retournent **_Fcomplex** et **_Lcomplex** valeurs. Dans un programme C, **clog** accepte et retourne toujours un **_Dcomplex** valeur.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête C|En-tête C++|
+|-------------|--------------|------------------|
+|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>
+[cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)<br/>
+[clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)<br/>

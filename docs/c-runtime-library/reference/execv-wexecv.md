@@ -1,12 +1,12 @@
 ---
 title: _execv, _wexecv | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wexecv
@@ -36,82 +36,88 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9520c8975d342b423bf61a1f5973a4bdabfcc37
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8367e0525180faec25479106ea8e8b75f321aa4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
-Charge et exécute les nouveaux processus enfant.  
-  
+
+Charge et exécute les nouveaux processus enfant.
+
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-intptr_t _execv(   
-   const char *cmdname,  
-   const char *const *argv   
-);  
-intptr_t _wexecv(   
-   const wchar_t *cmdname,  
-   const wchar_t *const *argv   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `cmdname`  
- Chemin d’accès du fichier à exécuter.  
-  
- `argv`  
- Tableau de pointeurs vers les paramètres.  
-  
-## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la `errno` variable globale est définie.  
-  
-|Valeur `errno`|Description|  
-|-------------------|-----------------|  
-|`E2BIG`|L’espace requis pour les arguments et les paramètres d’environnement dépasse 32 Ko.|  
-|`EACCES`|Le fichier spécifié possède un verrou ou une violation de partage.|  
-|`EINVAL`|Paramètre non valide.|  
-|`EMFILE`|Trop de fichiers ouverts (le fichier spécifié doit être ouvert pour déterminer s'il est exécutable).|  
-|`ENOENT`|Fichier ou chemin d’accès introuvable.|  
-|`ENOEXEC`|Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.|  
-|`ENOMEM`|Mémoire insuffisante pour exécuter le nouveau processus ; la mémoire disponible est endommagée ; ou il existe un bloc non valide, indiquant que le processus appelant n'a pas été alloué correctement.|  
-  
- Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.  
-  
- Les fonctions `_execv` valident leurs paramètres. Si `cmdname` est un pointeur null ou si `argv` est un pointeur null, un pointeur désignant un tableau vide ou si le premier argument du tableau est une chaîne vide, les fonctions `_execv` appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1. Aucun processus lancé.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|En-tête facultatif|  
-|--------------|---------------------|---------------------|  
-|`_execv`|\<process.h>|\<errno.h>|  
-|`_wexecv`|\<process.h> ou \<wchar.h>|\<errno.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   
- [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+intptr_t _execv(
+   const char *cmdname,
+   const char *const *argv
+);
+intptr_t _wexecv(
+   const wchar_t *cmdname,
+   const wchar_t *const *argv
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*CmdName*<br/>
+Chemin d’accès du fichier à exécuter.
+
+*argv*<br/>
+Tableau de pointeurs vers les paramètres.
+
+## <a name="return-value"></a>Valeur de retour
+
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de -1 indique une erreur, auquel cas la **errno** variable globale est définie.
+
+|**errno** valeur|Description|
+|-------------------|-----------------|
+|**E2BIG**|L’espace requis pour les arguments et les paramètres d’environnement dépasse 32 Ko.|
+|**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
+|**EINVAL**|Paramètre non valide.|
+|**EMFILE**|Trop de fichiers ouverts (le fichier spécifié doit être ouvert pour déterminer s'il est exécutable).|
+|**ENOENT**|Fichier ou chemin d’accès introuvable.|
+|**ENOEXEC**|Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.|
+|**ENOMEM**|Mémoire insuffisante pour exécuter le nouveau processus ; la mémoire disponible est endommagée ; ou il existe un bloc non valide, indiquant que le processus appelant n'a pas été alloué correctement.|
+
+Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.
+
+Le **_execv** fonctions valident leurs paramètres. Si *cmdname* est un pointeur null, ou si *argv* est un pointeur null, pointeur vers un tableau vide, ou si le tableau contient une chaîne vide comme premier argument, la **_execv** fonctions appellent le Gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1. Aucun processus lancé.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|En-tête facultatif|
+|--------------|---------------------|---------------------|
+|**_execv**|\<process.h>|\<errno.h>|
+|**_wexecv**|\<process.h> ou \<wchar.h>|\<errno.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

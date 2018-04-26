@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof Macro
 
@@ -58,15 +58,15 @@ Le nombre d’éléments dans le tableau, exprimé comme une **size_t**.
 
 ## <a name="remarks"></a>Notes
 
-`_countof` est implémenté comme une macro de préprocesseur type fonction. La version C++ a machines modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
+**_countof** est implémenté comme une macro de préprocesseur type fonction. La version C++ a machines modèle supplémentaire pour détecter au moment de la compilation si un pointeur est passé au lieu d’un tableau déclaré statiquement.
 
-Vérifiez que *tableau* est en réalité un tableau, et non un pointeur. En C, `_countof` génère des résultats erronés si *tableau* est un pointeur. En C++, `_countof` ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline à un pointeur*, ce qui signifie que la fonction, vous ne pouvez pas utiliser `_countof` pour déterminer l’étendue du tableau.
+Vérifiez que *tableau* est en réalité un tableau, et non un pointeur. En C, **_countof** génère des résultats erronés si *tableau* est un pointeur. En C++, **_countof** ne parvient pas à compiler si *tableau* est un pointeur.  Un tableau passé en tant que paramètre à une fonction *décline à un pointeur*, ce qui signifie que la fonction, vous ne pouvez pas utiliser **_countof** pour déterminer l’étendue du tableau.
 
 ## <a name="requirements"></a>Spécifications
 
 |Macro|En-tête requis|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Exemple
 

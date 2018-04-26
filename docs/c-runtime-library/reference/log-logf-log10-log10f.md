@@ -1,18 +1,17 @@
 ---
-title: log, logf, log10, log10f | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: journal, logf, logl, log10, log10f, log10l | Documents Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - log10f
 - logf
 - log10
 - log
+- log10l
+- logl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,10 +27,12 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - logf
+- logl
 - _log10l
 - log
 - _logl
 - log10f
+- log10l
 - log10
 dev_langs:
 - C++
@@ -40,146 +41,133 @@ helpviewer_keywords:
 - log10f function
 - log10 function
 - log function
+- log10l function
+- logl function
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e18cd4c602940884eec13a3b1650afe738acd66
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b698eab686403dc2350d3d9cc1ddfc1c5065418
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="log-logf-log10-log10f"></a>log, logf, log10, log10f
-Calcule le logarithme.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      double log(  
-   double x   
-);  
-float log(  
-   float x  
-);  // C++ only  
-long double log(  
-   long double x  
-);  // C++ only  
-float logf(  
-   float x   
-);  
-double log10(  
-   double x  
-);  
-float log10(  
-   float x  
-);  // C++ only  
-long double log10(  
-   long double x  
-);  // C++ only  
-float log10f (  
-   float x  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *x*  
- Valeur dont le logarithme doit être recherché.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Les fonctions **log** retournent le logarithme népérien (base e) de *x* en cas de réussite. Les fonctions log10 retournent un logarithme en base 10. Si *x* est négatif, ces fonctions retournent un indéfini, par défaut. Si *x* est égal à 0, elles retournent INF (infini).  
-  
-|Entrée|Exception SEH|Exception{b> <b}Matherr|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|aucun|_DOMAIN|  
-|± 0|ZERODIVIDE|_SING|  
-|x < 0|INVALID|_DOMAIN|  
-  
- **log** et `log10` présentent une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
-  
-## <a name="remarks"></a>Notes  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et `log10`. Dans un programme C, **log** et `log10` acceptent et retournent toujours un double.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|**log**, `logf`, `log10`, `log10f`|\<math.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_log.c  
-/* This program uses log and log10  
- * to calculate the natural logarithm and  
- * the base-10 logarithm of 9,000.  
- */  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 9000.0;  
-   double y;  
-  
-   y = log( x );  
-   printf( "log( %.2f ) = %f\n", x, y );  
-   y = log10( x );  
-   printf( "log10( %.2f ) = %f\n", x, y );  
-}  
-```  
-  
-## <a name="output"></a>Sortie  
-  
-```  
-log( 9000.00 ) = 9.104980  
-log10( 9000.00 ) = 3.954243  
-```  
-  
- Pour générer le logarithme pour d’autres bases, utilisez la relation mathématique : log base b de a == logarithme népérien (a) / logarithme népérien (b).  
-  
-```  
-// logbase.cpp  
-#include <math.h>  
-#include <stdio.h>  
-  
-double logbase(double a, double base)  
-{  
-   return log(a) / log(base);  
-}  
-  
-int main()  
-{  
-   double x = 65536;  
-   double result;  
-  
-   result = logbase(x, 2);  
-   printf("Log base 2 of %lf is %lf\n", x, result);  
-}  
-```  
-  
-## <a name="output"></a>Sortie  
-  
-```  
-Log base 2 of 65536.000000 is 16.000000  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf, expl](../../c-runtime-library/reference/exp-expf.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   
- [_CIlog](../../c-runtime-library/cilog.md)   
- [_CIlog10](../../c-runtime-library/cilog10.md)
+# <a name="log-logf-logl-log10-log10f-log10l"></a>journal, logf, logl, log10, log10f, log10l
+
+Calcule le logarithme.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double log( double x );
+float logf( float x );
+long double logl( double x );
+double log10( double x );
+float log10f ( float x );
+long double log10l( double x );
+```
+
+```cpp
+float log( float x );  // C++ only
+long double log( long double x );  // C++ only
+float log10( float x );  // C++ only
+long double log10( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur dont le logarithme doit être recherché.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le **journal** fonctions retournent le logarithme naturel (base *e*) de *x* en cas de réussite. Le **log10** fonctions retournent le logarithme de base 10. Si *x* est négatif, ces fonctions retournent un indéfini (IND), par défaut. Si *x* est 0, elles retournent l’infini (INF).
+
+|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|-----------|-------------------|-----------------------|
+|± QNAN, IND|aucun|_DOMAIN|
+|± 0|ZERODIVIDE|_SING|
+|*x* < 0|INVALID|_DOMAIN|
+
+**journal** et **log10** avoir une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+
+## <a name="remarks"></a>Notes
+
+C++ autorise la surcharge, vous pouvez appeler des surcharges de **journal** et **log10** qui acceptent et retournent **float** ou **long double** valeurs. Dans un programme C, **journal** et **log10** acceptent et retournent toujours un **double**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**journal**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_log.c
+/* This program uses log and log10
+* to calculate the natural logarithm and
+* the base-10 logarithm of 9,000.
+*/
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 9000.0;
+   double y;
+
+   y = log( x );
+   printf( "log( %.2f ) = %f\n", x, y );
+   y = log10( x );
+   printf( "log10( %.2f ) = %f\n", x, y );
+}
+```
+
+```Output
+log( 9000.00 ) = 9.104980
+log10( 9000.00 ) = 3.954243
+```
+
+Pour générer le logarithme pour d’autres bases, utilisez la relation mathématique : log base b de a == logarithme népérien (a) / logarithme népérien (b).
+
+```cpp
+// logbase.cpp
+#include <math.h>
+#include <stdio.h>
+
+double logbase(double a, double base)
+{
+   return log(a) / log(base);
+}
+
+int main()
+{
+   double x = 65536;
+   double result;
+
+   result = logbase(x, 2);
+   printf("Log base 2 of %lf is %lf\n", x, result);
+}
+```
+
+```Output
+Log base 2 of 65536.000000 is 16.000000
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md) <br/>
+[exp, expf, expl](exp-expf.md) <br/>
+[_matherr](matherr.md) <br/>
+[pow, powf, powl](pow-powf-powl.md) <br/>
+[_CIlog](../../c-runtime-library/cilog.md) <br/>
+[_CIlog10](../../c-runtime-library/cilog10.md)<br/>

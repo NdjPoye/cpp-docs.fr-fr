@@ -1,12 +1,12 @@
 ---
 title: offsetof Macro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>offsetof, macro
-Récupère le décalage d'un membre au début de sa structure parent.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- *structName*  
- Nom de la structure de données parent.  
-  
- `memberName`  
- Nom du membre dans la structure de données parent pour lequel le décalage doit être déterminé.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `offsetof` retourne le décalage en octets du membre spécifié au début de sa structure de données parent. Il n'est pas défini pour les champs de bits.  
-  
-## <a name="remarks"></a>Notes  
- La macro `offsetof` retourne le décalage en octets de `memberName` à partir du début de la structure spécifiée par *structName* sous forme de valeur de type `size_t`. Vous pouvez spécifier les types avec le mot clé `struct`.  
-  
+
+Récupère le décalage d'un membre au début de sa structure parent.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*structName*<br/>
+Nom de la structure de données parent.
+
+*Nom de membre*<br/>
+Nom du membre dans la structure de données parent pour lequel le décalage doit être déterminé.
+
+## <a name="return-value"></a>Valeur de retour
+
+**offsetof** retourne l’offset en octets du membre spécifié à partir du début de sa structure de données parent. Il n'est pas défini pour les champs de bits.
+
+## <a name="remarks"></a>Notes
+
+Le **offsetof** macro retourne le décalage en octets de *memberName* à partir du début de la structure spécifiée par *structName* en tant que valeur de type **size_ t**. Vous pouvez spécifier les types avec le **struct** (mot clé).
+
 > [!NOTE]
->  `offsetof` n'est pas une fonction et ne peut pas être décrite à l'aide d'un prototype C.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)
+> **offsetof** n’est pas une fonction et ne peut pas être décrite à l’aide d’un prototype C.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>

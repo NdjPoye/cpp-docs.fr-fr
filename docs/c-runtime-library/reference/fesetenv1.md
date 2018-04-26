@@ -1,13 +1,13 @@
 ---
-title: fesetenv | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fesetenv | Documents Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fesetenv
@@ -32,54 +32,59 @@ dev_langs:
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2717c0fee2582cac3c9013f3f49ff37744cbde9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 466d37a55cbd0d4fdf3e1fc0eed085cb9fcb5b6a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fesetenv"></a>fesetenv
-Définit l’environnement à virgule flottante actuel.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fesetenv(  
-   const fenv_t *penv  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `penv`  
- Pointeur désignant un objet `fenv_t` qui contient un environnement à virgule flottante tel que défini par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne 0 si l’environnement a été correctement défini. Sinon, retourne une valeur différente de zéro.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `fesetenv` définit l’environnement à virgule flottante actuel à partir de la valeur stockée dans l’objet `fenv_t` désigné par `penv`. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode d’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si `penv` n’est pas FE_DFL_ENV ou ne désigne pas un objet `fenv_t` valide, le comportement suivant n’est pas défini.  
-  
- Un appel à cette fonction définit les indicateurs d’état d’exception qui se trouvent dans l’objet `penv`, mais ne déclenche pas les exceptions correspondantes.  
-  
- Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`fesetenv`|\<fenv.h>|\<cfenv>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
- [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)
+
+Définit l’environnement à virgule flottante actuel.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fesetenv(
+   const fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*penv*<br/>
+Pointeur vers un **fenv_t** objet qui contient un environnement à virgule flottante en tant que jeu par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la **FE_DFL_ENV** (macro).
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne 0 si l’environnement a été correctement défini. Sinon, retourne une valeur différente de zéro.
+
+## <a name="remarks"></a>Notes
+
+Le **fesetenv** fonction définit l’environnement actuel et à virgule flottante à partir de la valeur stockée dans le **fenv_t** objet pointé par *penv*. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode d’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si *penv* n’est pas **FE_DFL_ENV** ou ne pointe pas vers un valide **fenv_t** de l’objet, le comportement suivant n’est pas défini.
+
+Un appel à cette fonction définit l’exception des indicateurs d’état qui se trouvent dans le *penv* objet, mais il ne déclenche pas ces exceptions.
+
+Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**fesetenv**|\<fenv.h>|\<cfenv>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[fegetenv](fegetenv1.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[feholdexcept](feholdexcept2.md)<br/>
+[fesetexceptflag](fesetexceptflag2.md)<br/>

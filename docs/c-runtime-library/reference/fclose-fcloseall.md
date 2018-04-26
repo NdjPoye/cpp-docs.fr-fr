@@ -1,12 +1,12 @@
 ---
 title: fclose, _fcloseall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fclose
@@ -34,64 +34,70 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9399aa2848ff3f5179b711674fa524ef7543fc0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e884663c1af1d9c9f31330cda40aa3c7458820
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
-Ferme un flux (`fclose`) ou ferme tous les flux ouverts (`_fcloseall`).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int fclose(   
-   FILE *stream   
-);  
-int _fcloseall( void );  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `stream`  
- Pointeur vers la structure `FILE` .  
-  
-## <a name="return-value"></a>Valeur de retour  
- `fclose` retourne 0 si le flux est fermé correctement. `_fcloseall` retourne le nombre total de flux fermés. Ces deux fonctions retournent `EOF` pour indiquer une erreur.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `fclose` ferme `stream`. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à continuer, `fclose` définit `errno` sur `EINVAL` et retourne `EOF`. Nous vous recommandons de toujours vérifier le pointeur `stream` avant d’appeler cette fonction.  
-  
- Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- La fonction `_fcloseall` ferme tous les flux à l’exception de `stdin`, `stdout`, `stderr` (et, dans MS-DOS, `_stdaux` et `_stdprn`). En outre, elle ferme et supprime tous les fichiers temporaires créés par `tmpfile`. Dans les deux fonctions, toutes les mémoires tampons associées au flux sont vidées avant la fermeture. Les mémoires tampons allouées par le système sont libérées quand le flux est fermé. Les mémoires tampons assignées par l’utilisateur avec `setbuf` et `setvbuf` ne sont pas automatiquement libérées.  
-  
- **Remarque :** Quand ces fonctions sont utilisées pour fermer un flux, le descripteur de fichier sous-jacent et le handle de fichier de système d’exploitation (ou socket) sont fermés, ainsi que le flux. Ainsi, si le fichier a été ouvert à l’origine en tant que handle ou descripteur de fichier et qu’il est fermé avec `fclose`, n’appelez pas également `_close` pour fermer le descripteur de fichier, ou la fonction Win32 `CloseHandle` pour fermer le handle de fichier.  
-  
- `fclose` et `_fcloseall` incluent du code qui protège contre les interférences avec d’autres threads. Pour une version sans verrouillage d’un `fclose`, consultez `_fclose_nolock`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`fclose`|\<stdio.h>|  
-|`_fcloseall`|\<stdio.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple relatif à [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [_close](../../c-runtime-library/reference/close.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+
+Ferme un flux de données (**fclose**) ou ferme tous les flux ouverts (**_fcloseall**).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int fclose(
+   FILE *stream
+);
+int _fcloseall( void );
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+**fclose** retourne 0 si le flux est fermé correctement. **_fcloseall** renvoie le nombre total de flux fermé. Les deux fonctions retournent **EOF** pour indiquer une erreur.
+
+## <a name="remarks"></a>Notes
+
+Le **fclose** fonction ferme *flux*. Si *flux* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **fclose** définit **errno** à **EINVAL** et retourne **EOF**. Il est recommandé que le *flux* pointeur toujours être vérifiées avant d’appeler cette fonction.
+
+Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+Le **_fcloseall** fonction ferme tous les flux ouverts sauf **stdin**, **stdout**, **stderr** (et MS-DOS, **_stdaux**  et **_stdprn**). Ferme également et supprime tous les fichiers temporaires créés par **tmpfile**. Dans les deux fonctions, toutes les mémoires tampons associées au flux sont vidées avant la fermeture. Les mémoires tampons allouées par le système sont libérées quand le flux est fermé. Mémoires tampons affectées par l’utilisateur avec **setbuf** et **setvbuf** ne sont pas libérés automatiquement.
+
+**Remarque :** Quand ces fonctions sont utilisées pour fermer un flux, le descripteur de fichier sous-jacent et le handle de fichier de système d’exploitation (ou socket) sont fermés, ainsi que le flux. Par conséquent, si le fichier a été ouverte en tant que fichier gérer ou descripteur de fichier et est fermée avec **fclose**, effectuer un appel pas également **_close** à fermer le descripteur de fichier ; n’appelez pas la fonction Win32  **CloseHandle** pour fermer le handle de fichier.
+
+**fclose** et **_fcloseall** inclure du code pour vous protéger contre toute interférence avec d’autres threads. Pour une version sans verrouillage d’un **fclose**, consultez **_fclose_nolock**.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**fclose**|\<stdio.h>|
+|**_fcloseall**|\<stdio.h>|
+
+Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [fopen](fopen-wfopen.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[_close](close.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[fflush](fflush.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>

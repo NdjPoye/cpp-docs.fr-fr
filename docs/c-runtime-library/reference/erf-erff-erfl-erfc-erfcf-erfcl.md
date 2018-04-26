@@ -1,12 +1,12 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - erff
@@ -36,79 +36,84 @@ helpviewer_keywords:
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa60c6bb6c3c11a596589a411a7d094cc41c65fa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1703b4e352fee798a7b38dd16edf6158cd7f53ea
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
-Calcule la fonction d'erreur ou la fonction d'erreur complémentaire d'une valeur.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double erf(  
-   double x  
-);  
-float erf(  
-   float x  
-); // C++ only  
-long double erf(  
-   long double x  
-); // C++ only  
-float erff(  
-   float x  
-);  
-long double erfl(  
-   long double x  
-);  
-double erfc(  
-   double x  
-);  
-float erfc(  
-   float x  
-); // C++ only  
-long double erfc(  
-   long double x  
-); // C++ only  
-float erfcf(  
-   float x  
-);  
-long double erfcl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `x`  
- Valeur à virgule flottante.  
-  
-## <a name="return-value"></a>Valeur de retour  
- La fonction `erf` retourne la fonction d'erreur de Gauss de `x`. La fonction `erfc` retourne la fonction d'erreur de Gauss complémentaire de `x`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `erf` calcule la fonction d'erreur de Gauss de x, qui est définie comme suit :  
-  
- ![Fonction d’erreur de x](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
-  
- La fonction d’erreur de Gauss complémentaire est définie en tant que 1 - ERF (x). La fonction `erf` retourne une valeur comprise dans la plage -1,0 à 1,0. Aucun retour d'erreur. La fonction `erfc` retourne une valeur comprise dans la plage 0 à 2. Si `x` est trop grand pour `erfc`, la variable `errno` prend la valeur `ERANGE`.  
-  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `erf` et `erfc` qui acceptent et retournent les types `float` et `long double`. Dans un programme C, `erf` et `erfc` acceptent et retournent toujours un `double`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)
+
+Calcule la fonction d'erreur ou la fonction d'erreur complémentaire d'une valeur.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double erf(
+   double x
+);
+float erf(
+   float x
+); // C++ only
+long double erf(
+   long double x
+); // C++ only
+float erff(
+   float x
+);
+long double erfl(
+   long double x
+);
+double erfc(
+   double x
+);
+float erfc(
+   float x
+); // C++ only
+long double erfc(
+   long double x
+); // C++ only
+float erfcf(
+   float x
+);
+long double erfcl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur à virgule flottante.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le **erf** fonctions retournent le Gauss fonction d’erreur de *x*. Le **erfc** fonctions retournent de Gauss complémentaire la fonction d’erreur de *x*.
+
+## <a name="remarks"></a>Notes
+
+Le **erf** fonctions calculent la fonction d’erreur de Gauss de *x*, qui est défini en tant que :
+
+![Fonction d’erreur de x](media/crt_erf_formula.PNG "CRT_erf_formula")
+
+La fonction d’erreur de Gauss complémentaire est définie en tant que 1 - ERF (x). Le **erf** fonctions retournent une valeur dans la plage -1,0 à 1,0. Aucun retour d'erreur. Le **erfc** fonctions retournent une valeur dans la plage 0 à 2. Si *x* est trop grande pour **erfc**, le **errno** variable est définie sur **ERANGE**.
+
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **erf** et **erfc** qui acceptent et retournent **float** et **long** **double** types. Dans un programme C, **erf** et **erfc** acceptent et retournent toujours un **double**.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>

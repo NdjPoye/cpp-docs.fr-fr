@@ -1,12 +1,12 @@
 ---
 title: freopen_s, _wfreopen_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfreopen_s
@@ -38,153 +38,150 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a62165fee7ed54a7eeadf5f381945936bb441908
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 31840ecf42952f696dc7a51a679e54e0c53a96c9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
-Réaffecte un pointeur de fichier. Ces versions de [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-errno_t freopen(   
-   FILE** pFile,  
-   const char *path,  
-   const char *mode,  
-   FILE *stream   
-);  
-errno_t _wfreopen(   
-   FILE** pFile,  
-   const wchar_t *path,  
-   const wchar_t *mode,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [out] `pFile`  
- Pointeur vers le pointeur de fichier devant être fourni par l'appel.  
-  
- [in] `path`  
- Chemin d'accès du nouveau fichier.  
-  
- [in] `mode`  
- Type d'accès autorisé.  
-  
- [in] `stream`  
- Pointeur vers la structure `FILE` .  
-  
-## <a name="return-value"></a>Valeur de retour  
- Chacune de ces fonctions retourne un code d'erreur. Si une erreur se produit, le fichier d'origine est fermé.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `freopen_s` ferme le fichier associé à `stream` et réaffecte `stream` au fichier spécifié par `path.` `_wfreopen_s` est une version à caractères larges de `_freopen_s` ; les arguments `path` et `mode` de `_wfreopen_s` sont des chaînes à caractères larges. Sinon, `_wfreopen_s` et `_freopen_s` se comportent de la même façon.  
-  
- Si `pFile`, `path`, `mode` ou `stream` a la valeur `NULL`, ou si `path` est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tfreopen_s`|`freopen_s`|`freopen_s`|`_wfreopen_s`|  
-  
- `freopen_s` est généralement utilisé pour rediriger les fichiers pré-ouverts `stdin`, `stdout` et `stderr` vers les fichiers spécifiés par l'utilisateur. Le nouveau fichier associé `stream` est ouvert avec `mode`, qui est une chaîne de caractères spécifiant le type d’accès demandé pour le fichier, comme suit :  
-  
- `"r"`  
- Ouvre pour l'accès en lecture. Si le fichier n'existe pas ou est introuvable, l'appel à `freopen_s` échoue.  
-  
- `"w"`  
- Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.  
-  
- `"a"`  
- Ouvre pour un accès en écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant l'écriture de nouvelles données dans le fichier ; crée d'abord le fichier s'il n'existe pas.  
-  
- `"r+"`  
- Ouvre pour l'accès en lecture et en écriture. (Le fichier doit exister.)  
-  
- `"w+"`  
- Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.  
-  
- `"a+"`  
- Ouvre pour l'accès en lecture et l'ajout ; l'opération d'ajout inclut la suppression du marqueur EOF préalablement à l'écriture de nouvelles données dans le fichier et à la restauration du marqueur EOF à l'issue de l'écriture ; crée d'abord le fichier s'il n'existe pas.  
-  
- Utilisez les types `"w"` et `"w+"` avec précaution, car ils peuvent détruire les fichiers existants.  
-  
- Quand un fichier est ouvert avec le type d'accès `"a"` ou `"a+"`, toutes les opérations d'écriture se produisent à la fin du fichier. Même si le pointeur de fichier peut être repositionné à l'aide de `fseek` ou `rewind`, il est toujours redéplacé à la fin du fichier avant toute opération d'écriture. Par conséquent, les données existantes ne peuvent pas être remplacées.  
-  
- Le mode `"a"` ne supprime pas le marqueur EOF avant l'ajout des données au fichier. Après l'ajout, la commande MS-DOS TYPE affiche uniquement les données jusqu'au marqueur EOF d'origine, et non les données ajoutées au fichier. Le mode `"a+"` supprime le marqueur EOF avant l'ajout des données au fichier. Après l'ajout, la commande MS-DOS TYPE affiche toutes les données du fichier. Le mode `"a+"` est obligatoire pour ajouter des données à un fichier de flux qui se termine par le marqueur EOF Ctrl+Z.  
-  
- Lorsque le `"r+"`, `"w+",` ou `"a+"` type d’accès est spécifié, la lecture et l’écriture sont autorisées (le fichier est dite doit être ouvert pour « update »). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire [fsetpos](../../c-runtime-library/reference/fsetpos.md), [fseek](../../c-runtime-library/reference/fseek-fseeki64.md) ou [rewind](../../c-runtime-library/reference/rewind.md) doit exister. La position actuelle peut éventuellement être spécifiée pour l'opération `fsetpos` ou `fseek`. Outre les valeurs ci-dessus, l'un des caractères suivants peut être inclus dans la chaîne `mode` pour spécifier le mode de traduction pour les nouvelles lignes.  
-  
- `t`  
- Ouvrir dans le texte (traduit) mode ; combinaisons de sauts de ligne (CRLF) de chariot sont traduites en caractères de saut de ligne (LF) unique d’entrée ; Les caractères de saut de ligne sont traduits en combinaisons retour chariot-saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou lecture et écriture avec `"a+"`, la bibliothèque Runtime recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l'utilisation de `fseek` et `ftell` pour se déplacer dans un fichier peut amener `fseek` à se comporter de manière incorrecte vers la fin du fichier. L'option `t` est une extension Microsoft qui ne doit pas être utilisée là où la portabilité ANSI est souhaitée.  
-  
- `b`  
- Ouvre en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.  
-  
- Si `t` ou `b` n'est pas donné dans `mode`, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si `t` ou `b` a l'argument comme préfixe, la fonction échoue et retourne `NULL`.  
-  
- Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`freopen_s`|\<stdio.h>|  
-|`_wfreopen_s`|\<stdio.h> ou \<wchar.h>|  
-  
- La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console :`stdin`, `stdout`, et `stderr`, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_freopen_s.c  
-// This program reassigns stderr to the file  
-// named FREOPEN.OUT and writes a line to that file.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-FILE *stream;  
-  
-int main( void )  
-{  
-   errno_t err;  
-   // Reassign "stderr" to "freopen.out":   
-   err = freopen_s( &stream, "freopen.out", "w", stderr );  
-  
-   if( err != 0 )  
-      fprintf( stdout, "error on freopen\n" );  
-   else  
-   {  
-      fprintf( stdout, "successfully reassigned\n" ); fflush( stdout );  
-      fprintf( stream, "This will go to the file 'freopen.out'\n" );  
-      fclose( stream );  
-   }  
-   system( "type freopen.out" );  
-}  
-```  
-  
-```Output  
-successfully reassigned  
-This will go to the file 'freopen.out'  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_setmode](../../c-runtime-library/reference/setmode.md)
+
+Réaffecte un pointeur de fichier. Ces versions de [freopen, _wfreopen](freopen-wfreopen.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+errno_t freopen(
+   FILE** pFile,
+   const char *path,
+   const char *mode,
+   FILE *stream
+);
+errno_t _wfreopen(
+   FILE** pFile,
+   const wchar_t *path,
+   const wchar_t *mode,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*pFile*<br/>
+Pointeur vers le pointeur de fichier devant être fourni par l'appel.
+
+*path*<br/>
+Chemin d’accès du nouveau fichier.
+
+*mode*<br/>
+Type d'accès autorisé.
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+Chacune de ces fonctions retourne un code d'erreur. Si une erreur se produit, le fichier d'origine est fermé.
+
+## <a name="remarks"></a>Notes
+
+Le **freopen_s** fonction ferme le fichier actuellement associé *flux* et réaffecte *flux* dans le fichier spécifié par *chemin d’accès* . **_wfreopen_s** est une version à caractères larges de **_freopen_s**; le *chemin d’accès* et *mode* arguments **_wfreopen_s** sont chaînes à caractères larges. **_wfreopen_s** et **_freopen_s** comportent de façon identique.
+
+Si une des *pFile*, *chemin d’accès*, *mode*, ou *flux* sont **NULL**, ou si *chemin d’accès* est une chaîne vide, ces fonctions appellent le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
+
+**freopen_s** est généralement utilisé pour rediriger les fichiers pré-ouverts **stdin**, **stdout**, et **stderr** vers les fichiers spécifiés par l’utilisateur. Le nouveau fichier associé *flux* est ouvert avec *mode*, qui est une chaîne de caractères spécifiant le type d’accès demandé pour le fichier, comme suit :
+
+|*mode*|Accès|
+|-|-|
+**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, la **freopen_s** appel échoue.
+**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.
+**"a"**|S'ouvre pour écriture à la fin du fichier (ajout) sans supprimer le marqueur de fin de fichier (EOF) avant que de nouvelles données soient écrites dans le fichier. Crée le fichier s'il n'existe pas.
+**"r+"**|Ouvre pour l'accès en lecture et en écriture. Le fichier doit exister.
+**"w+"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier existe, son contenu est détruit.
+**"a+"**|S'ouvre pour lecture et ajout. L'opération d'ajout inclut la suppression du marqueur EOF avant que de nouvelles données soient écrites dans le fichier. Le marqueur EOF n'est pas restauré une fois l'écriture terminée. Crée le fichier s'il n'existe pas.
+
+Utilisez le **« w »** et **« w + »** types avec précaution, car ils peuvent détruire les fichiers existants.
+
+Lorsqu’un fichier est ouvert avec le **« a »** ou **« a + »** accéder au type, toutes les opérations ont lieu à la fin du fichier d’écriture. Bien que le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rembobiner](rewind.md), le pointeur de fichier est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées.
+
+Le **« a »** mode ne supprime pas le marqueur EOF avant d’ajouter au fichier. Après l'ajout, la commande MS-DOS TYPE affiche uniquement les données jusqu'au marqueur EOF d'origine, et non les données ajoutées au fichier. Le **« a + »** mode supprime le marqueur EOF avant l’ajout au fichier. Après l'ajout, la commande MS-DOS TYPE affiche toutes les données du fichier. Le **« a + »** mode est obligatoire pour ajouter des données dans un fichier de flux de données qui se termine par le marqueur EOF CTRL + Z.
+
+Lorsque le **« r + »**, **« w + »**, ou **« a + »** type d’accès est spécifié, la lecture et l’écriture sont autorisées (le fichier est dite doit être ouvert pour « update »). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) ou [rewind](rewind.md) doit exister. La position actuelle peut être spécifiée pour le [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) opération, si vous le souhaitez. Outre les valeurs ci-dessus, un des caractères suivants peut-être être inclus dans le *mode* chaîne pour spécifier le mode de traduction pour les nouvelles lignes.
+
+|*mode* modificateur|Mode de traduction|
+|-|-|
+**t**|Ouvrir en mode texte (traduit).
+**b**|Ouvrir en mode binaire (non traduit) ; les traductions implique la suppression des caractères de retour chariot et de saut de ligne.
+
+En mode texte (traduit), les combinaisons de sauts de ligne (CRLF) chariot sont traduites en caractères de saut de ligne (LF) unique d’entrée ; Les caractères de saut de ligne sont traduits en combinaisons retour chariot-saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts pour la lecture ou de lecture et écriture avec **« a + »**, la bibliothèque runtime recherche un CTRL + Z à la fin du fichier et le supprime, si possible. Pour cela, car il est à l’aide de [fseek](fseek-fseeki64.md) et [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier peut provoquer [fseek](fseek-fseeki64.md) comportement incorrect vers la fin du fichier. Le **t** option est une extension Microsoft qui ne doit pas être utilisée là où la portabilité ANSI est souhaitée.
+
+Si **t** ou **b** n’est pas donné dans *mode*, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et le retourne **NULL**.
+
+Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**freopen_s**|\<stdio.h>|
+|**_wfreopen_s**|\<stdio.h> ou \<wchar.h>|
+
+La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_freopen_s.c
+// This program reassigns stderr to the file
+// named FREOPEN.OUT and writes a line to that file.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+FILE *stream;
+
+int main( void )
+{
+   errno_t err;
+   // Reassign "stderr" to "freopen.out":
+   err = freopen_s( &stream, "freopen.out", "w", stderr );
+
+   if( err != 0 )
+      fprintf( stdout, "error on freopen\n" );
+   else
+   {
+      fprintf( stdout, "successfully reassigned\n" ); fflush( stdout );
+      fprintf( stream, "This will go to the file 'freopen.out'\n" );
+      fclose( stream );
+   }
+   system( "type freopen.out" );
+}
+```
+
+```Output
+successfully reassigned
+This will go to the file 'freopen.out'
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[_fileno](fileno.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_setmode](setmode.md)<br/>

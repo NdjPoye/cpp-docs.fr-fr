@@ -1,12 +1,12 @@
 ---
 title: _gcvt | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _gcvt
@@ -37,118 +37,123 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97f1487b770ac761a2555985a69069155e51cf74
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 74ac570b5b37d3557bed5508685ef1c28d9ec210
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="gcvt"></a>_gcvt
-Convertir une valeur à virgule flottante en chaîne, qui est stockée dans une mémoire tampon. Une version plus sécurisée de cette fonction est disponible. Consultez [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char *_gcvt(   
-   double value,  
-   int digits,  
-   char *buffer   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `value`  
- Valeur à convertir.  
-  
- `digits`  
- Nombre de chiffres significatifs stockés.  
-  
- `buffer`  
- Emplacement de stockage pour le résultat.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_gcvt` retourne un pointeur désignant la chaîne de chiffres.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_gcvt` convertit une `value` à virgule flottante en une chaîne de caractères (qui inclut une virgule décimale et, éventuellement, un octet de signe) et stocke la chaîne dans `buffer`. `buffer` doit être assez grand pour contenir la valeur convertie, plus un caractère Null de fin, qui est ajouté automatiquement. Si la taille de mémoire tampon utilisée est `digits` + 1, cette fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. `_gcvt` tente de produire `digits` chiffres au format décimal. Si elle n’y parvient pas, elle génère `digits` chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.  
-  
- Une mémoire tampon (`buffer`) de longueur `_CVTBUFSIZE` est suffisante pour n’importe quelle valeur à virgule flottante.  
-  
- Cette fonction valide ses paramètres. Si `buffer` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `NULL`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_gcvt`|\<stdlib.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_gcvt.c  
-// compile with: /W3  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <string.h>  
-  
-int main( void )  
-{  
-   char buffer[_CVTBUFSIZE];  
-   double value = -1234567890.123;  
-   printf( "The following numbers were converted by _gcvt(value,12,buffer):\n" );  
-   _gcvt( value, 12, buffer ); // C4996  
-   // Note: _gcvt is deprecated; consider using _gcvt_s instead  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value *= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value *= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value *= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-  
-   printf( "\n" );  
-   value = -12.34567890123;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value /= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value /= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-   value /= 10;  
-   _gcvt( value, 12, buffer ); // C4996  
-   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );  
-}  
-```  
-  
-```Output  
-The following numbers were converted by _gcvt(value,12,buffer):  
-buffer: '-1234567890.12' (14 chars)  
-buffer: '-12345678901.2' (14 chars)  
-buffer: '-123456789012' (13 chars)  
-buffer: '-1.23456789012e+012' (19 chars)  
-  
-buffer: '-12.3456789012' (14 chars)  
-buffer: '-1.23456789012' (14 chars)  
-buffer: '-0.123456789012' (15 chars)  
-buffer: '-1.23456789012e-002' (19 chars)  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conversion de données](../../c-runtime-library/data-conversion.md)   
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)
+
+Convertir une valeur à virgule flottante en chaîne, qui est stockée dans une mémoire tampon. Une version plus sécurisée de cette fonction est disponible. Consultez [_gcvt_s](gcvt-s.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+char *_gcvt(
+   double value,
+   int digits,
+   char *buffer
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*valeur*<br/>
+Valeur à convertir.
+
+*digits*<br/>
+Nombre de chiffres significatifs stockés.
+
+*buffer*<br/>
+Emplacement de stockage pour le résultat.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_gcvt** retourne un pointeur vers la chaîne de chiffres.
+
+## <a name="remarks"></a>Notes
+
+Le **_gcvt** fonction convertit une virgule flottante *valeur* en une chaîne de caractères (qui inclut une virgule décimale et un octet de connexion possibles) et stocke la chaîne dans *tampon*. Le *tampon* doit être suffisamment grand pour contenir la valeur convertie plus un caractère null de fin est ajouté automatiquement. Si une taille de mémoire tampon de *chiffres* + 1 est utilisé, la fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de se produire *chiffres* chiffres au format décimal. Si elle n’est pas le cas, il produit *chiffres* chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+
+A *tampon* de longueur **_CVTBUFSIZE** est suffisant pour n’importe quel flottante valeur du point.
+
+Cette fonction valide ses paramètres. Si *tampon* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **NULL**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_gcvt**|\<stdlib.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_gcvt.c
+// compile with: /W3
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main( void )
+{
+   char buffer[_CVTBUFSIZE];
+   double value = -1234567890.123;
+   printf( "The following numbers were converted by _gcvt(value,12,buffer):\n" );
+   _gcvt( value, 12, buffer ); // C4996
+   // Note: _gcvt is deprecated; consider using _gcvt_s instead
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value *= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value *= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value *= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+
+   printf( "\n" );
+   value = -12.34567890123;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value /= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value /= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+   value /= 10;
+   _gcvt( value, 12, buffer ); // C4996
+   printf( "buffer: '%s' (%d chars)\n", buffer, strlen(buffer) );
+}
+```
+
+```Output
+The following numbers were converted by _gcvt(value,12,buffer):
+buffer: '-1234567890.12' (14 chars)
+buffer: '-12345678901.2' (14 chars)
+buffer: '-123456789012' (13 chars)
+buffer: '-1.23456789012e+012' (19 chars)
+
+buffer: '-12.3456789012' (14 chars)
+buffer: '-1.23456789012' (14 chars)
+buffer: '-0.123456789012' (15 chars)
+buffer: '-1.23456789012e-002' (19 chars)
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_fcvt](fcvt.md)<br/>

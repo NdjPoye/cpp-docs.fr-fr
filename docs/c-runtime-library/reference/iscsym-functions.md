@@ -1,12 +1,12 @@
 ---
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswcsym_l
@@ -71,17 +71,17 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 225a5ab6dd00619b825be5b7e5220de70aafc3ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -124,32 +124,32 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*  
+*c*<br/>
 Entier à tester. *c* doit être comprise entre 0 et 255 pour la version à caractères étroits de la fonction.
 
-*locale*  
+*locale*<br/>
 Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les deux `__iscsym` et `__iswcsym` retourner une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. Les deux `__iscsymf` et `__iswcsymf` retourner une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le `_l` suffixe sont identiques, sauf qu’elles utilisent le *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les deux **__iscsym** et **__iswcsym** retourner une valeur différente de zéro si *c* est une lettre, un trait de soulignement ou un chiffre. Les deux **__iscsymf** et **__iswcsymf** retourner une valeur différente de zéro si *c* est une lettre ou un trait de soulignement. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent le *paramètres régionaux* passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Notes
 
 Ces routines sont définies en tant que macros, sauf si la macro de préprocesseur _CTYPE_DISABLE_MACROS est définie. Quand vous utilisez les versions macro de ces routines, les arguments peuvent être évalués plusieurs fois. Soyez prudent quand vous utilisez des expressions qui ont des effets secondaires dans la liste d’arguments.
 
-Pour la compatibilité descendante, `iscsym` et `iscsymf` sont définies en tant que macros uniquement lorsque [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini sur 0 ; sinon, elles ne sont pas définis.
+Pour la compatibilité descendante, **iscsym** et **iscsymf** sont définies en tant que macros uniquement lorsque [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) n’est pas défini ou est défini en tant que 0 ; Sinon, ils ne sont pas définis.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
+|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C : \<ctype.h><br /><br /> C++ : \<cctype> ou \<ctype.h>|
 
-Les routines `iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l` et `_iswcsymf_l` sont des routines fournies par Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Le **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, et **_iswcsymf_l** sont des routines Section spécifique à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)   
-[Paramètres régionaux](../../c-runtime-library/locale.md)   
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)
+[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: nan, nanf, nanl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 94/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - nanf
@@ -36,53 +36,52 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba2620b43199788cfbcc237bc09a2cd112035
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e2fa378cdded71f0f99ad0fbe152d1282c9e6fe4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
-Retourne une valeur NaN silencieuse.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-double nan(  
-   const char* input   
-);  
-float nanf(  
-   const char* input   
-);  
-long double nanl(  
-   const char* input   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `input`  
- Valeur de chaîne.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Les fonctions `nan` retournent une valeur NaN silencieuse.  
-  
-## <a name="remarks"></a>Notes  
- Les fonctions `nan` retournent une valeur à virgule flottante qui correspond à une valeur NaN silencieuse (sans signalisation). La valeur `input` est ignorée. Pour plus d’informations sur la façon dont une valeur NaN est représentée pour la sortie, consultez [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête C|En-tête C++|  
-|--------------|--------------|------------------|  
-|`nan`, `nanf`, `nanl`|\<math.h>|\<cmath>|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)   
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+
+Retourne une valeur NaN silencieuse.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+double nan( const char* input );
+float nanf( const char* input );
+long double nanl( const char* input );
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Entrée*<br/>
+Valeur de chaîne.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le **nan** fonctions retournent une valeur NaN silencieuse.
+
+## <a name="remarks"></a>Notes
+
+Le **nan** fonctions retournent une valeur à virgule flottante qui correspond à une valeur NaN silencieuse (sans signalisation). Le *d’entrée* valeur est ignorée. Pour plus d’informations sur la façon dont une valeur NaN est représentée pour la sortie, consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête C|En-tête C++|
+|--------------|--------------|------------------|
+|**NaN**, **nanf**, **nanl**|\<math.h>|\<cmath> ou \<math.h>|
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite, _finitef](finite-finitef.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

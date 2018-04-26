@@ -1,12 +1,12 @@
 ---
 title: _fpclass, _fpclassf | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fpclass
@@ -39,65 +39,70 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13abc84cf3e28f6282bf5c160d118d019334cfd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3ee483334c7456c1cf2be480d7f925d8f3a839e9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
-Retourne une valeur indiquant la classification à virgule flottante de l’argument.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _fpclass(   
-   double x   
-);  
-  
-int _fpclassf(   
-   float x   
-); /* x64 only */  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `x`  
- Valeur à virgule flottante à tester.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Les fonctions `_fpclass` et `_fpclassf` retournent une valeur entière qui indique la classification à virgule flottante de l’argument `x`. La classification peut avoir une des valeurs suivantes, définies dans \<float.h>.  
-  
-|Value|Description|  
-|-----------|-----------------|  
-|`_FPCLASS_SNAN`|NaN signalant|  
-|`_FPCLASS_QNAN`|NaN silencieux|  
-|`_FPCLASS_NINF`|Infini négatif (-INF)|  
-|`_FPCLASS_NN`|Valeur non nulle normalisée négative|  
-|`_FPCLASS_ND`|Valeur dénormalisée négative|  
-|`_FPCLASS_NZ`|Un zéro négatif (- 0)|  
-|`_FPCLASS_PZ`|Zéro positif (+0)|  
-|`_FPCLASS_PD`|Valeur dénormalisée positive|  
-|`_FPCLASS_PN`|Valeur non nulle normalisée positive|  
-|`_FPCLASS_PINF`|Infini positif (+INF)|  
-  
-## <a name="remarks"></a>Notes  
- Les fonctions `_fpclass` et `_fpclassf` sont propres à Microsoft. Elles sont similaires à [fpclassify](../../c-runtime-library/reference/fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction `_fpclassf` n’est disponible que quand elle est compilée pour la plateforme x64.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`_fpclass`|\<float.h>|  
-  
- Pour plus d’informations sur la compatibilité et la conformité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
- [fpclassify](../../c-runtime-library/reference/fpclassify.md)
+
+Retourne une valeur indiquant la classification à virgule flottante de l’argument.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _fpclass(
+   double x
+);
+
+int _fpclassf(
+   float x
+); /* x64 only */
+```
+
+### <a name="parameters"></a>Paramètres
+
+*x*<br/>
+Valeur à virgule flottante à tester.
+
+## <a name="return-value"></a>Valeur de retour
+
+Le **_fpclass** et **_fpclassf** fonctions retournent une valeur entière qui indique la classification à virgule flottante de l’argument *x*. La classification peut avoir une des valeurs suivantes, définies dans \<float.h>.
+
+|Value|Description|
+|-----------|-----------------|
+|**_FPCLASS_SNAN**|NaN signalant|
+|**_FPCLASS_QNAN**|NaN silencieux|
+|**_FPCLASS_NINF**|Infini négatif (-INF)|
+|**_FPCLASS_NN**|Valeur non nulle normalisée négative|
+|**_FPCLASS_ND**|Valeur dénormalisée négative|
+|**_FPCLASS_NZ**|Un zéro négatif (- 0)|
+|**_FPCLASS_PZ**|Zéro positif (+0)|
+|**_FPCLASS_PD**|Valeur dénormalisée positive|
+|**_FPCLASS_PN**|Valeur non nulle normalisée positive|
+|**_FPCLASS_PINF**|Infini positif (+INF)|
+
+## <a name="remarks"></a>Notes
+
+Le **_fpclass** et **_fpclassf** fonctions sont spécifiques de Microsoft. Elles sont similaires à [fpclassify](fpclassify.md), mais retournent des informations plus détaillées sur l’argument. Le **_fpclassf** fonction est uniquement disponible lors de la compilation pour le x64 plateforme.
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|
+|--------------|---------------------|
+|**_fpclass**, **_fpclassf**|\<float.h>|
+
+Pour plus d’informations sur la compatibilité et la conformité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[fpclassify](fpclassify.md)<br/>

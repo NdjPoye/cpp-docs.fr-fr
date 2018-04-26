@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Génération de code durant l'édition de liens)
 
@@ -51,7 +51,7 @@ Spécifie que l’éditeur de liens s’applique uniquement ensemble du programm
 Spécifie si l'éditeur de liens affiche un indicateur de progression qui montre le pourcentage d'exécution du lien. Par défaut, ces informations d'état ne sont pas affichées.
 
 **DÉSACTIVER** (facultatif)<br/>
-Désactive la génération de code au moment de la liaison. Ce comportement est le même que quand /LTCG n’est pas spécifié sur la ligne de commande.
+Désactive la génération de code au moment de la liaison. Ce comportement est le même que lorsque **LTCG** n’est pas spécifié sur la ligne de commande.
 
 **PGINSTRUMENT** (facultatif)<br/>
 Cette option est déconseillée à compter de Visual Studio 2015. Au lieu de cela, utilisez **LTCG** et [/GENPROFILE ou /fastgenprofile.](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) pour générer une version instrumentée de l’optimisation guidée par profil. Les données recueillies à partir des séries de tests instrumentées sont utilisées pour créer une image optimisée. Pour plus d’informations, consultez [optimisation guidée par profil](profile-guided-optimizations.md). La forme abrégée de cette option est **/LTCG : PGI**.
@@ -156,7 +156,7 @@ Les modules compilés avec [/GL](../../build/reference/gl-whole-program-optimiza
 
 Vous pouvez également appliquer **LTCG** à des builds spécifiques en choisissant **générer** > **optimisation guidée par profil** sur la barre de menus, ou en choisissant une du profil Options d’optimisation guidées dans le menu contextuel du projet.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
+### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
 - Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

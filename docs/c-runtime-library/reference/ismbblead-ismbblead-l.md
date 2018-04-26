@@ -1,12 +1,12 @@
 ---
 title: _ismbblead, _ismbblead_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbblead_l
@@ -41,65 +41,70 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4979e40aedc763ff9a058277a4c549fa76bdec0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7833abbe4a13a2c5f012926ffcca6befdc8b52ff
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
-Teste un caractère pour déterminer s’il s’agit d’un octet de tête d’un caractère multioctet.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _ismbblead(  
-   unsigned int c   
-);  
-int _ismbblead_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Entier à tester.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur différente de zéro si l’entier `c` est le premier octet d’un caractère multioctet.  
-  
-## <a name="remarks"></a>Notes  
- Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, en octets de tête, uniquement de la page 932 code comprise entre 0 x 81-0x9F et 0xE0 - 0xFC.  
-  
- `_ismbblead` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbblead_l` est identique, à ceci près qu’il utilise à la place les paramètres régionaux passés. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_istlead`|Retourne toujours la valeur false|`_ismbblead`|Retourne toujours la valeur false|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|En-tête facultatif|  
-|-------------|---------------------|---------------------|  
-|`_ismbblead`|\<mbctype.h> ou \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbblead_l`|\<mbctype.h> ou \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-  
- \* Pour les constantes manifestes des conditions de test.  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Classification d’octet](../../c-runtime-library/byte-classification.md)   
- [_ismbb, routines](../../c-runtime-library/ismbb-routines.md)
+
+Teste un caractère pour déterminer s’il s’agit d’un octet de tête d’un caractère multioctet.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _ismbblead(
+   unsigned int c
+);
+int _ismbblead_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Entier à tester.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne une valeur différente de zéro si l’entier *c* est le premier octet d’un caractère multioctet.
+
+## <a name="remarks"></a>Notes
+
+Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, en octets de tête, uniquement de la page 932 code comprise entre 0 x 81-0x9F et 0xE0 - 0xFC.
+
+**_ismbblead** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. **_ismbblead_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_istlead**|Retourne toujours la valeur false|**_ismbblead**|Retourne toujours la valeur false|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|En-tête facultatif|
+|-------------|---------------------|---------------------|
+|**_ismbblead**|\<mbctype.h> ou \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbblead_l**|\<mbctype.h> ou \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+
+\* Pour les constantes manifestes des conditions de test.
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>

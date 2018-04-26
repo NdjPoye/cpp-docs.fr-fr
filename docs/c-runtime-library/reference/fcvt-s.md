@@ -1,12 +1,12 @@
 ---
 title: _fcvt_s | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fcvt_s
@@ -34,139 +34,143 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e76888f3e4162a35cacbf9c6f2f88bf9d90e34f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
-Convertir un nombre à virgule flottante en chaîne. Il s’agit d’une version de [_fcvt](../../c-runtime-library/reference/fcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-errno_t _fcvt_s(   
-   char* buffer,  
-   size_t sizeInBytes,  
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-);  
-template <size_t size>  
-errno_t _fcvt_s(   
-   char (&buffer)[size],  
-   double value,  
-   int count,  
-   int *dec,  
-   int *sign   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [out] `buffer`  
- La mémoire tampon fournie destinée à contenir le résultat de la conversion.  
-  
- [in] `sizeInBytes`  
- Taille de la mémoire tampon en octets.  
-  
- [in] `value`  
- Nombre à convertir.  
-  
- [in] `count`  
- Nombre de chiffres après la virgule décimale.  
-  
- [out] `dec`  
- Pointeur désignant la position de la virgule décimale stockée.  
-  
- [out] `sign`  
- Pointeur désignant l’indicateur de signe stocké.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
-  
-### <a name="error-conditions"></a>Conditions d’erreur  
-  
-|`buffer`|`sizeInBytes`|par défaut|count|dec|sign|Return|Valeur dans `buffer`|  
-|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|Non modifiée.|  
-|Pas `NULL` (pointe vers une mémoire valide)|<=0|any|any|any|any|`EINVAL`|Non modifiée.|  
-|any|any|any|any|`NULL`|any|`EINVAL`|Non modifiée.|  
-|any|any|any|any|any|`NULL`|`EINVAL`|Non modifiée.|  
-  
- **Problèmes de sécurité**  
-  
- `_fcvt_s` peut générer une violation d’accès si `buffer` ne désigne pas une mémoire valide et n’est pas `NULL`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_fcvt_s` convertit un nombre à virgule flottante en une chaîne de caractères se terminant par un caractère Null. Le paramètre `value` est le nombre à virgule flottante à convertir. `_fcvt_s` stocke les chiffres de `value` sous forme de chaîne et ajoute un caractère null (« \0 »). Le paramètre `count` spécifie le nombre de chiffres à stocker après la virgule décimale. Les chiffres en trop sont arrondis au niveau de `count` positions après la virgule. Si le nombre de chiffres de précision est inférieur à `count`, la chaîne est remplie de zéros.  
-  
- Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de `value` peuvent être obtenus à partir de `dec` et `sign` après l’appel. Le paramètre `dec` désigne une valeur entière ; celle-ci indique la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre `sign` désigne un entier indiquant le signe de `value`. L’entier est défini sur 0 si `value` est positif, et sur un nombre différent de zéro si `value` est négatif.  
-  
- Une mémoire tampon de longueur `_CVTBUFSIZE` est suffisante pour n’importe quelle valeur à virgule flottante.  
-  
- La différence entre `_ecvt_s` et `_fcvt_s` réside dans l’interprétation du paramètre `count`. `_ecvt_s` interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, et `_fcvt_s` interprète `count` en tant que le nombre de chiffres après la virgule décimale.  
-  
- En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Fonction|En-tête requis|En-tête facultatif|  
-|--------------|---------------------|---------------------|  
-|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
- **Bibliothèques :** toutes les versions des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// fcvt_s.c  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main()  
-{  
-  char * buf = 0;  
-  int decimal;  
-  int sign;  
-  int err;  
-  
-  buf = (char*) malloc(_CVTBUFSIZE);  
-  err = _fcvt_s(buf, _CVTBUFSIZE, 1.2, 5, &decimal, &sign);  
-  
-  if (err != 0)  
-  {  
-     printf("_fcvt_s failed with error code %d\n", err);  
-     exit(1);  
-  }  
-  
-  printf("Converted value: %s\n", buf);    
-  
-}  
-```  
-  
-```Output  
-Converted value: 120000  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Conversion de données](../../c-runtime-library/data-conversion.md)   
- [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
- [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)
+
+Convertir un nombre à virgule flottante en chaîne. Il s’agit d’une version de [_fcvt](fcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+errno_t _fcvt_s(
+   char* buffer,
+   size_t sizeInBytes,
+   double value,
+   int count,
+   int *dec,
+   int *sign
+);
+template <size_t size>
+errno_t _fcvt_s(
+   char (&buffer)[size],
+   double value,
+   int count,
+   int *dec,
+   int *sign
+); // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*buffer*<br/>
+La mémoire tampon fournie destinée à contenir le résultat de la conversion.
+
+*sizeInBytes*<br/>
+Taille de la mémoire tampon en octets.
+
+*valeur*<br/>
+Nombre à convertir.
+
+*count*<br/>
+Nombre de chiffres après la virgule décimale.
+
+*dec*<br/>
+Pointeur désignant la position de la virgule décimale stockée.
+
+*sign*<br/>
+Pointeur désignant l’indicateur de signe stocké.
+
+## <a name="return-value"></a>Valeur de retour
+
+Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **EINVAL**.
+
+### <a name="error-conditions"></a>Conditions d’erreur
+
+|*buffer*|*sizeInBytes*|par défaut|count|dec|sign|Retourner|Valeur de *tampon*|
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
+|**NULL**|any|any|any|any|any|**EINVAL**|Non modifiée.|
+|Pas **NULL** (pointe vers une mémoire valide)|<=0|any|any|any|any|**EINVAL**|Non modifiée.|
+|any|any|any|any|**NULL**|any|**EINVAL**|Non modifiée.|
+|any|any|any|any|any|**NULL**|**EINVAL**|Non modifiée.|
+
+## <a name="security-issues"></a>Problèmes de sécurité
+
+**_fcvt_s** peut générer une violation d’accès si *tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**.
+
+## <a name="remarks"></a>Notes
+
+Le **_fcvt_s** fonction convertit un nombre à virgule flottante en une chaîne de caractères terminée par null. Le *valeur* paramètre est le nombre à virgule flottante à convertir. **_fcvt_s** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null ('\0'). Le *nombre* paramètre spécifie le nombre de chiffres à stocker après la virgule décimale. Chiffres en trop sont arrondies à *nombre* place. S’il y a moins de *nombre* chiffres de précision, la chaîne est rempli de zéros.
+
+Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de *valeur* peut être obtenu à partir de *dec* et *signe* après l’appel. Le *dec* paramètre pointe vers une valeur entière ; cette valeur d’entier donne la position de la virgule décimale en ce qui concerne le début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *signe* pointe vers un entier indiquant le signe de *valeur*. L’entier est défini à 0 si *valeur* est un nombre positif et est définie sur un nombre différent de zéro si *valeur* est un nombre négatif.
+
+Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisant pour n’importe quel flottante valeur du point.
+
+La différence entre **_ecvt_s** et **_fcvt_s** est dans l’interprétation de la *nombre* paramètre. **_ecvt_s** interprète *nombre* comme le nombre total de chiffres dans la chaîne de sortie, et **_fcvt_s** interprète *nombre* en tant que le nombre de chiffres après le virgule décimale.
+
+En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Fonction|En-tête requis|En-tête facultatif|
+|--------------|---------------------|---------------------|
+|**_fcvt_s**|\<stdlib.h>|\<errno.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+**Bibliothèques :** toutes les versions des [fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// fcvt_s.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main()
+{
+    char * buf = 0;
+    int decimal;
+    int sign;
+    int err;
+
+    buf = (char*) malloc(_CVTBUFSIZE);
+    err = _fcvt_s(buf, _CVTBUFSIZE, 1.2, 5, &decimal, &sign);
+
+    if (err != 0)
+    {
+        printf("_fcvt_s failed with error code %d\n", err);
+        exit(1);
+    }
+
+    printf("Converted value: %s\n", buf);
+}
+```
+
+```Output
+Converted value: 120000
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
+[_ecvt_s](ecvt-s.md)<br/>
+[_gcvt_s](gcvt-s.md)<br/>
+[_fcvt](fcvt.md)<br/>

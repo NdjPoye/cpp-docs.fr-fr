@@ -1,12 +1,12 @@
 ---
 title: _aligned_offset_malloc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_offset_malloc
@@ -32,61 +32,67 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b192d8bf88ac40fffdbdf601e74ee1b265e7171
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62ddae2faf8139b58e43f889c46771647b254b10
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
-Alloue de la mémoire sur une limite d'alignement spécifiée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-void * _aligned_offset_malloc(  
-   size_t size,   
-   size_t alignment,   
-   size_t offset  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `size`  
- Taille de l'allocation de mémoire demandée.  
-  
- [in] `alignment`  
- Valeur d'alignement, qui doit être un entier à puissance 2.  
-  
- [in] `offset`  
- Décalage dans l'allocation de mémoire pour forcer l'alignement.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Pointeur vers le bloc de mémoire qui a été alloué ou `NULL` si l'opération a échoué.  
-  
-## <a name="remarks"></a>Notes  
- `_aligned_offset_malloc` est utile quand l’alignement est nécessaire sur un élément imbriqué, par exemple, sur une classe imbriquée.  
-  
- `_aligned_offset_malloc` est basé sur `malloc` ; pour plus d’informations, consultez [malloc](../../c-runtime-library/reference/malloc.md).  
-  
- `_aligned_offset_malloc` est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut pas modifier les variables globales et que le pointeur retourné n'a pas d'alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).  
-  
- Cette fonction affecte à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, `_aligned_offset_malloc` valide ses paramètres. Si `alignment` n’est pas une puissance de 2 ou si `offset` est supérieur ou égal à `size` et différent de zéro, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction retourne `NULL` et affecte la valeur `errno` à `EINVAL`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_aligned_offset_malloc`|\<malloc.h>|  
-  
-## <a name="example"></a>Exemple  
- Pour plus d’informations, consultez [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Alignement des données](../../c-runtime-library/data-alignment.md)
+
+Alloue de la mémoire sur une limite d'alignement spécifiée.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+void * _aligned_offset_malloc(
+   size_t size,
+   size_t alignment,
+   size_t offset
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*size*<br/>
+Taille de l'allocation de mémoire demandée.
+
+*Alignement*<br/>
+Valeur d'alignement, qui doit être un entier à puissance 2.
+
+*offset*<br/>
+Décalage dans l'allocation de mémoire pour forcer l'alignement.
+
+## <a name="return-value"></a>Valeur de retour
+
+Un pointeur vers le bloc de mémoire qui a été alloué ou **NULL** si l’opération a échoué.
+
+## <a name="remarks"></a>Notes
+
+**_aligned_offset_malloc** est utile dans les situations où l’alignement est nécessaire sur un élément imbriqué ; par exemple, si l’alignement était nécessaire sur une classe imbriquée.
+
+**_aligned_offset_malloc** est basée sur **malloc**; pour plus d’informations, consultez [malloc](malloc.md).
+
+**_aligned_offset_malloc** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction ne peut ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+
+Cette fonction affecte **errno** à **ENOMEM** si l’allocation de mémoire a échoué ou si la taille demandée était supérieure à **_HEAP_MAXREQ**. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). En outre, **_aligned_offset_malloc** valide ses paramètres. Si *alignement* n’est pas une puissance de 2 ou si *offset* est supérieur ou égal à *taille* et différent de zéro, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [ Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **NULL** et définit **errno** à **EINVAL**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_aligned_offset_malloc**|\<malloc.h>|
+
+## <a name="example"></a>Exemple
+
+Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Alignement des données](../../c-runtime-library/data-alignment.md)<br/>

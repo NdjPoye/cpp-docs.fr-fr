@@ -1,12 +1,12 @@
 ---
 title: _CrtDumpMemoryLeaks | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
@@ -39,55 +39,61 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f71e37da509d4e8dd05c5a41afa9fe539294347
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fb0ebfe1017f6315d60528c5f6196131704c5d0f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
-Vide tous les blocs de mémoire dans le tas de débogage quand une fuite de mémoire s’est produite (version de débogage uniquement).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-int _CrtDumpMemoryLeaks( void );  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_CrtDumpMemoryLeaks` retourne TRUE si une fuite de mémoire est trouvée. Dans le cas contraire, la fonction retourne FALSE.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_CrtDumpMemoryLeaks` détermine si une fuite de mémoire a eu lieu depuis le début de l’exécution du programme. Quand une fuite est détectée, les informations d’en-tête de débogage pour tous les objets du tas sont exportées dans un format lisible par l’utilisateur. Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtDumpMemoryLeaks` sont supprimés durant le prétraitement.  
-  
- `_CrtDumpMemoryLeaks` est fréquemment appelé à la fin de l’exécution du programme pour vérifier que toute la mémoire allouée par l’application a été libérée. La fonction peut être appelée automatiquement à la fin du programme en activant le champ de bits `_CRTDBG_LEAK_CHECK_DF` de l’indicateur [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) à l’aide de la fonction [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md).  
-  
- `_CrtDumpMemoryLeaks` appelle [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) pour obtenir l’état actuel du tas, puis vérifie l’état des blocs qui n’ont pas été libérés. Quand un bloc non libéré est rencontré, `_CrtDumpMemoryLeaks` appelle [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) pour vider les informations de tous les objets alloués dans le tas à partir du début de l’exécution du programme.  
-  
- Par défaut, les blocs runtime C internes (`_CRT_BLOCK`) ne sont pas inclus dans les opérations relatives au vidage de la mémoire. La fonction [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) peut être utilisée pour activer la partie `_CRTDBG_CHECK_CRT_DF` de `_crtDbgFlag` afin d’inclure ces blocs dans le processus de détection des fuites.  
-  
- Pour plus d’informations sur les fonctions d’état du tas et sur la structure `_CrtMemState` , consultez [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_CrtDumpMemoryLeaks`|\<crtdbg.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="libraries"></a>Bibliothèques  
- Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
- Pour obtenir un exemple d’utilisation de `_CrtDumpMemoryLeaks`, consultez [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Routines de débogage](../../c-runtime-library/debug-routines.md)
+
+Vide tous les blocs de mémoire dans le tas de débogage quand une fuite de mémoire s’est produite (version de débogage uniquement).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+
+int _CrtDumpMemoryLeaks( void );
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+**_CrtDumpMemoryLeaks** retourne la valeur TRUE si une fuite de mémoire est trouvée. Dans le cas contraire, la fonction retourne FALSE.
+
+## <a name="remarks"></a>Notes
+
+Le **_CrtDumpMemoryLeaks** fonction détermine si une fuite de mémoire a eu lieu depuis le début de l’exécution du programme. Quand une fuite est détectée, les informations d’en-tête de débogage pour tous les objets du tas sont exportées dans un format lisible par l’utilisateur. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtDumpMemoryLeaks** sont supprimés lors du prétraitement.
+
+**_CrtDumpMemoryLeaks** est fréquemment appelée à la fin de l’exécution du programme pour vérifier que toute mémoire allouée par l’application a été libérée. La fonction peut être appelée automatiquement à l’arrêt du programme en activant le **_CRTDBG_LEAK_CHECK_DF** champ de bits de le [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) indicateur à l’aide de la [_CrtSetDbgFlag](crtsetdbgflag.md)(fonction).
+
+**_CrtDumpMemoryLeaks** appelle [_CrtMemCheckpoint](crtmemcheckpoint.md) pour obtenir l’état actuel du segment de mémoire, puis vérifie l’état pour les blocs qui n’ont pas été libérés. Lorsqu’un bloc non libéré est rencontré, **_CrtDumpMemoryLeaks** appelle [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) aux informations de vidage pour tous les objets alloués dans le tas à partir du début de l’exécution du programme.
+
+Par défaut, les blocs de runtime C internes (**_CRT_BLOCK**) ne sont pas inclus dans les opérations de vidage de mémoire. Le [_CrtSetDbgFlag](crtsetdbgflag.md) fonction peut être utilisée pour activer la **_CRTDBG_CHECK_CRT_DF** de **_crtDbgFlag** à inclure ces blocs dans le processus de détection des fuites.
+
+Pour plus d’informations sur les fonctions d’état du tas et le **_CrtMemState** de la structure, consultez [fonctions de rapport état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_CrtDumpMemoryLeaks**|\<crtdbg.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+Pour obtenir un exemple montrant comment utiliser **_CrtDumpMemoryLeaks**, consultez [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+
+## <a name="see-also"></a>Voir aussi
+
+[Routines de débogage](../../c-runtime-library/debug-routines.md)<br/>

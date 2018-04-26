@@ -1,12 +1,12 @@
 ---
 title: _get_purecall_handler, _set_purecall_handler | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_purecall_handler
@@ -43,106 +43,109 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918fbe6c27333c705dbb2768ccd903c64e0fd687
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a184041e77ef6ddb97cb60a0e925ed677e2d47ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
-Obtient ou définit le gestionnaire d’erreurs pour un appel de fonction virtuelle pure.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-typedef void (__cdecl* _purecall_handler)(void);  
-  
-_purecall_handler __cdecl _get_purecall_handler(void);  
-  
-_purecall_handler __cdecl _set_purecall_handler(   
-   _purecall_handler function  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `function`  
- Fonction à appeler quand une fonction virtuelle pure est appelée. Une fonction `_purecall_handler` doit avoir un type de retour void.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_purecall_handler` précédent. Retourne `nullptr` s'il n'existait pas de gestionnaire précédemment.  
-  
-## <a name="remarks"></a>Notes  
- Les fonctions `_get_purecall_handler` et `_set_purecall_handler` sont des fonctions fournies par Microsoft et s’appliquent uniquement au code C++.  
-  
- Un appel à une fonction virtuelle pure est une erreur, car il n’a aucune implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonction virtuelle pure, pour les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui a la signature `_purecall_handler`, puis utilisez `_set_purecall_handler` afin d’en faire le gestionnaire actuel.  
-  
- Comme il n’y a qu’un seul `_purecall_handler` par processus, quand vous appelez `_set_purecall_handler`, son impact est immédiat sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.  
-  
- Pour rétablir le comportement par défaut, appelez `_set_purecall_handler` à l’aide d’un argument `nullptr`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_get_purecall_handler`, `_set_purecall_handler`|\<cstdlib> ou \<stdlib.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// _set_purecall_handler.cpp  
-// compile with: /W1  
-#include <tchar.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-class CDerived;  
-class CBase  
-{  
-public:  
-   CBase(CDerived *derived): m_pDerived(derived) {};  
-   ~CBase();  
-   virtual void function(void) = 0;  
-  
-   CDerived * m_pDerived;  
-};  
-  
-class CDerived : public CBase  
-{  
-public:  
-   CDerived() : CBase(this) {};   // C4355  
-   virtual void function(void) {};  
-};  
-  
-CBase::~CBase()  
-{  
-   m_pDerived -> function();  
-}  
-  
-void myPurecallHandler(void)  
-{  
-   printf("In _purecall_handler.");  
-   exit(0);  
-}  
-  
-int _tmain(int argc, _TCHAR* argv[])  
-{  
-   _set_purecall_handler(myPurecallHandler);  
-   CDerived myDerived;  
-}  
-```  
-  
-```Output  
-In _purecall_handler.  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)   
- [_purecall](../../c-runtime-library/reference/purecall.md)
+
+Obtient ou définit le gestionnaire d’erreurs pour un appel de fonction virtuelle pure.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+typedef void (__cdecl* _purecall_handler)(void);
+_purecall_handler __cdecl _get_purecall_handler(void);
+_purecall_handler __cdecl _set_purecall_handler(
+   _purecall_handler function
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*function*<br/>
+Fonction à appeler quand une fonction virtuelle pure est appelée. A **_purecall_handler** fonction doit avoir un type de retour void.
+
+## <a name="return-value"></a>Valeur de retour
+
+Précédent **_purecall_handler**. Retourne **nullptr** s’il y a aucun gestionnaire précédent.
+
+## <a name="remarks"></a>Notes
+
+Le **_get_purecall_handler** et **_set_purecall_handler** fonctions sont spécifiques à Microsoft et s’appliquent uniquement au code C++.
+
+Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui possède le **_purecall_handler** signature, puis utilisez **_set_purecall_handler** afin de faciliter le gestionnaire en cours.
+
+Étant donné qu’un seul **_purecall_handler** pour chaque processus, lorsque vous appelez **_set_purecall_handler** l’impact est immédiatement sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.
+
+Pour restaurer le comportement par défaut, appelez **_set_purecall_handler** en utilisant un **nullptr** argument.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> ou \<stdlib.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```cpp
+// _set_purecall_handler.cpp
+// compile with: /W1
+#include <tchar.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+class CDerived;
+class CBase
+{
+public:
+   CBase(CDerived *derived): m_pDerived(derived) {};
+   ~CBase();
+   virtual void function(void) = 0;
+
+   CDerived * m_pDerived;
+};
+
+class CDerived : public CBase
+{
+public:
+   CDerived() : CBase(this) {};   // C4355
+   virtual void function(void) {};
+};
+
+CBase::~CBase()
+{
+   m_pDerived -> function();
+}
+
+void myPurecallHandler(void)
+{
+   printf("In _purecall_handler.");
+   exit(0);
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+   _set_purecall_handler(myPurecallHandler);
+   CDerived myDerived;
+}
+```
+
+```Output
+In _purecall_handler.
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)<br/>
+[_purecall](purecall.md)<br/>
