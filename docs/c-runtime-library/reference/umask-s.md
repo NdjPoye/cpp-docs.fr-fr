@@ -42,108 +42,110 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 315473748d64e572c73746ce6f6fc97ccc912bb0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1ba4fe460008f80ed74e7d0d81911a65356f4929
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="umasks"></a>_umask_s
-Définit le masque d’autorisation de fichier par défaut. Version de [_umask](../../c-runtime-library/reference/umask.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-errno_t _umask_s(  
-   int mode,  
-   int * pOldMode  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `mode`  
- Paramètre d’autorisation par défaut.  
-  
- [out] `oldMode`  
- Valeur précédente du paramètre d’autorisation.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne un code d’erreur si `Mode` ne spécifie pas de mode valide ou si le pointeur `pOldMode` a la valeur `NULL`.  
-  
-### <a name="error-conditions"></a>Conditions d’erreur  
-  
-|`mode`|`pOldMode`|**Valeur de retour**|**Contenu de**  `oldMode`|  
-|------------|----------------|----------------------|--------------------------------|  
-|any|`NULL`|`EINVAL`|non modifié|  
-|mode non valide|any|`EINVAL`|non modifié|  
-  
- Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_umask_s` retourne `EINVAL` et définit `errno` à `EINVAL`.  
-  
-## <a name="remarks"></a>Notes  
- Le `_umask_s` fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par `mode`. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par `_creat`, `_open` ou `_sopen`. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.  
-  
- L’expression d’entier `pmode` contient l’une des constantes manifestes suivantes (ou les deux), définies dans SYS\STAT.H :  
-  
- `_S_IWRITE`  
- Écriture autorisée.  
-  
- `_S_IREAD`  
- Lecture autorisée.  
-  
- `_S_IREAD | _S_IWRITE`  
- Lecture et écriture autorisées.  
-  
- Quand les deux constantes sont transmises, elles sont jointes avec l’opérateur OR au niveau du bit ( `|` ). Si l’argument `mode` a la valeur `_S_IREAD`, la lecture n’est pas autorisée (le fichier est en écriture seule). Si l’argument `mode` a la valeur `_S_IWRITE`, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, le fait définir le bit de lecture avec `_umask_s` n’a aucun effet sur les modes du fichier.  
-  
- Si `pmode` n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_umask_s`|\<io.h>, \<sys/stat.h> et \<sys/types.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_umask_s.c  
-/* This program uses _umask_s to set  
- * the file-permission mask so that all future  
- * files will be created as read-only files.  
- * It also displays the old mask.  
- */  
-  
-#include <sys/stat.h>  
-#include <sys/types.h>  
-#include <io.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int oldmask, err;  
-  
-   /* Create read-only files: */  
-   err = _umask_s( _S_IWRITE, &oldmask );  
-   if (err)  
-   {  
-      printf("Error setting the umask.\n");  
-      exit(1);  
-   }  
-   printf( "Oldmask = 0x%.4x\n", oldmask );  
-}  
-```  
-  
-```Output  
-Oldmask = 0x0000  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)   
- [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_umask](../../c-runtime-library/reference/umask.md)
+
+Définit le masque d’autorisation de fichier par défaut. Version de [_umask](umask.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+errno_t _umask_s(
+   int mode,
+   int * pOldMode
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*mode*<br/>
+Paramètre d’autorisation par défaut.
+
+*pOldMode*<br/>
+Valeur précédente du paramètre d’autorisation.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne un code d’erreur si *mode* ne spécifie pas un mode valide ou le *pOldMode* pointeur est **NULL**.
+
+### <a name="error-conditions"></a>Conditions d’erreur
+
+|*mode*|*pOldMode*|Valeur de retour|Contenu de *pOldMode*|
+|------------|----------------|----------------------|--------------------------------|
+|any|**NULL**|**EINVAL**|non modifié|
+|mode non valide|any|**EINVAL**|non modifié|
+
+Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_umask_s** retourne **EINVAL** et définit **errno** à **EINVAL**.
+
+## <a name="remarks"></a>Notes
+
+Le **_umask_s** fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par *mode*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation de nouveaux fichiers créés par **_creat**, **_open**, ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
+
+L’expression d’entier *pmode* contient une ou les deux constantes de manifeste suivantes, définies dans SYS\STAT. H :
+
+|*pmode*||
+|-|-|
+|**_S_IWRITE**|Écriture autorisée.|
+|**_S_IREAD**|Lecture autorisée.|
+|**_S_IREAD** \| **_S_IWRITE**|Lecture et écriture autorisées.|
+
+Lorsque les deux constantes sont données, elles sont jointes avec l’opérateur OR au niveau du bit ( **|** ). Si le *mode* argument est **_S_IREAD**, la lecture n’est pas autorisée (le fichier est en écriture seule). Si le *mode* argument est **_S_IWRITE**, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, si la lecture de type bit avec **_umask_s** n’a aucun effet sur les modes du fichier.
+
+Si *pmode* n’est pas une combinaison de l’une des constantes de manifeste ou incorpore un autre jeu de constantes, la fonction ignore simplement les.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_umask_s**|\<io.h>, \<sys/stat.h> et \<sys/types.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_umask_s.c
+/* This program uses _umask_s to set
+* the file-permission mask so that all future
+* files will be created as read-only files.
+* It also displays the old mask.
+*/
+
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <io.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int oldmask, err;
+
+   /* Create read-only files: */
+   err = _umask_s( _S_IWRITE, &oldmask );
+   if (err)
+   {
+      printf("Error setting the umask.\n");
+      exit(1);
+   }
+   printf( "Oldmask = 0x%.4x\n", oldmask );
+}
+```
+
+```Output
+Oldmask = 0x0000
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
+[E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chmod, _wchmod](chmod-wchmod.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_umask](umask.md)<br/>

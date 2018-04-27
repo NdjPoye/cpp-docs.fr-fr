@@ -1,12 +1,12 @@
 ---
 title: independent_bits_engine, classe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - random/std::independent_bits_engine
@@ -15,55 +15,56 @@ dev_langs:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2f5b064b91aa6df766ff4ca460a6096f984ab8b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 01979567e29796288c124e6e5a55dcf9b44ee6e0
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine, classe
-Génère une séquence aléatoire de nombres avec un nombre spécifié de bits en recompressant les bits des valeurs retournées par son moteur de base.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <class Engine, size_t W, class UIntType>  
-class independent_bits_engine;  
-```  
-  
-### <a name="parameters"></a>Paramètres  
- `Engine`  
- Type de moteur de base.  
-  
- `W`  
- **Taille de mot**. Taille, en bits, de chaque nombre généré. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`  
-  
- `UIntType`  
- Type des résultats entiers non signés. Pour plus d’informations sur les types possibles, consultez [\<random>](../standard-library/random.md).  
-  
-## <a name="members"></a>Membres  
-  
-||||  
-|-|-|-|  
-|`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|  
-|`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|  
-  
- Pour plus d’informations sur les membres moteurs, consultez [\<random>](../standard-library/random.md).  
-  
-## <a name="remarks"></a>Notes  
- Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en recompressant les bits à partir des valeurs retournées par son moteur de base, ce qui produit des valeurs de `W` bits.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<random>  
-  
- **Espace de noms :** std  
-  
-## <a name="see-also"></a>Voir aussi  
- [\<random>](../standard-library/random.md)
 
+Génère une séquence aléatoire de nombres avec un nombre spécifié de bits en recompressant les bits des valeurs retournées par son moteur de base.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <class Engine, size_t W, class UIntType>
+class independent_bits_engine;
+```
+
+### <a name="parameters"></a>Paramètres
+
+`Engine` Le type de moteur de base.
+
+`W` **Taille de mot**. Taille, en bits, de chaque nombre généré. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`
+
+`UIntType` Type de résultat de l’entier non signé. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+
+## <a name="members"></a>Membres
+
+||||
+|-|-|-|
+|`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
+|`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
+
+Pour plus d’informations sur les membres moteurs, consultez [\<random>](../standard-library/random.md).
+
+## <a name="remarks"></a>Notes
+
+Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en recompressant les bits à partir des valeurs retournées par son moteur de base, ce qui produit des valeurs de `W` bits.
+
+## <a name="requirements"></a>Spécifications
+
+**En-tête :** \<random>
+
+**Espace de noms :** std
+
+## <a name="see-also"></a>Voir aussi
+
+[\<random>](../standard-library/random.md)<br/>

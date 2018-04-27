@@ -1,12 +1,12 @@
 ---
 title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _snprintf_s
@@ -55,261 +55,266 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-caps.latest.revision: 
+caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f164afa6a4eef0544482192ec69a47c56164d68
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 51962d696583023f0cd5fc5b0def22f05d87b9fb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
-Écrit des données mises en forme dans une chaîne. Ces versions de [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _snprintf_s(  
-   char *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const char *format [,  
-   argument] ...   
-);  
-int _snprintf_s_l(  
-   char *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const char *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-int _snwprintf_s(  
-   wchar_t *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const wchar_t *format [,  
-   argument] ...   
-);  
-int _snwprintf_s_l(  
-   wchar_t *buffer,  
-   size_t sizeOfBuffer,  
-   size_t count,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-template <size_t size>  
-int _snprintf_s(  
-   char (&buffer)[size],  
-   size_t count,  
-   const char *format [,  
-   argument] ...   
-); // C++ only  
-template <size_t size>  
-int _snwprintf_s(  
-   wchar_t (&buffer)[size],  
-   size_t count,  
-   const wchar_t *format [,  
-   argument] ...   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `buffer`  
- Emplacement de stockage pour la sortie.  
-  
- `sizeOfBuffer`  
- Taille de l’emplacement de stockage pour la sortie. Taille en octets (`bytes`) pour `_snprintf_s` ou taille en mots (`words`) pour `_snwprintf_s`.  
-  
- `Count`  
- Nombre maximal de caractères à stocker ou [_TRUNCATE](../../c-runtime-library/truncate.md).  
-  
- `format`  
- Chaîne de contrôle de format.  
-  
- `argument`  
- Arguments facultatifs.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_snprintf_s` retourne le nombre de caractères stockés dans `buffer`, sans compter le caractère null de fin. `_snwprintf_s` retourne le nombre de caractères larges stockés dans `buffer`, sans compter le caractère large null de fin.  
-  
- Si l’espace nécessaire au stockage des données et d’un caractère null de fin est supérieur à `sizeOfBuffer`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le gestionnaire de paramètre non valide, ces fonctions définissent `buffer` en tant que chaîne vide, affectent à `errno` la valeur `ERANGE` et retournent -1.  
-  
- Si `buffer` ou `format` est un pointeur `NULL` ou si `count` a une valeur inférieure ou égale à zéro, le gestionnaire de paramètre non valide est appelé. Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1.  
-  
- Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_snprintf_s` met en forme et stocke un nombre de caractères inférieur ou égale à `count` dans `buffer` et ajoute un caractère null de fin. Chaque argument éventuel est converti et sorti selon la spécification de format correspondante dans `format`. La mise en forme est en cohérence avec la famille de fonctions `printf` ; consultez [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
-  
- Si `count` a la valeur [_TRUNCATE](../../c-runtime-library/truncate.md), `_snprintf_s` écrit autant de caractères de la chaîne que possible dans `buffer` tout en laissant de l’espace pour un caractère null de fin. Si la chaîne entière (avec le caractère null de fin) tient dans `buffer`, `_snprintf_s` retourne le nombre de caractères écrits (à l’exclusion du caractère null de fin) ; sinon, `_snprintf_s` retourne -1 pour indiquer qu’une troncation s’est produite.  
-  
+
+Écrit des données mises en forme dans une chaîne. Ces versions de [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _snprintf_s(
+   char *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const char *format [,
+   argument] ...
+);
+int _snprintf_s_l(
+   char *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const char *format,
+   locale_t locale [,
+   argument] ...
+);
+int _snwprintf_s(
+   wchar_t *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const wchar_t *format [,
+   argument] ...
+);
+int _snwprintf_s_l(
+   wchar_t *buffer,
+   size_t sizeOfBuffer,
+   size_t count,
+   const wchar_t *format,
+   locale_t locale [,
+   argument] ...
+);
+template <size_t size>
+int _snprintf_s(
+   char (&buffer)[size],
+   size_t count,
+   const char *format [,
+   argument] ...
+); // C++ only
+template <size_t size>
+int _snwprintf_s(
+   wchar_t (&buffer)[size],
+   size_t count,
+   const wchar_t *format [,
+   argument] ...
+); // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*buffer*<br/>
+Emplacement de stockage pour la sortie.
+
+*sizeOfBuffer*<br/>
+Taille de l’emplacement de stockage pour la sortie. Taille en **octets** pour **_snprintf_s** ou taille en **mots** pour **_snwprintf_s**.
+
+*count*<br/>
+Nombre maximal de caractères à stocker ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+
+*format*<br/>
+Chaîne de contrôle de format.
+
+*Argument*<br/>
+Arguments facultatifs.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+**_snprintf_s** retourne le nombre de caractères stockés dans *tampon*, sans compter le caractère null de fin. **_snwprintf_s** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin.
+
+Si le stockage nécessaire pour stocker les données et un caractère null de fin dépasse *sizeOfBuffer*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit après le Gestionnaire de paramètres non valides, ces fonctions définissent *tampon* vers une chaîne vide, définissez **errno** à **ERANGE**et retournent -1.
+
+Si *tampon* ou *format* est un **NULL** pointeur, ou si *nombre* est inférieur ou égal à zéro, le Gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
+
+Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Le **_snprintf_s** formats de fonction et les magasins *nombre* caractères au maximum dans *tampon* et ajoute un caractère null de fin. Chaque argument (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. La mise en forme est cohérent avec la **printf** famille de fonctions ; consultez [syntaxe de spécification de Format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+
+Si *nombre* est [_TRUNCATE](../../c-runtime-library/truncate.md), puis **_snprintf_s** écritures autant de la chaîne en tenir dans *tampon* tout en laissant la place pour un termine la valeur null. Si la chaîne entière (avec le caractère null de fin) rentre dans *tampon*, puis **_snprintf_s** retourne le nombre de caractères écrits (sans compter le caractère null de fin) ; sinon, **_snprintf_s**  retourne -1 pour indiquer que la troncation s’est produite.
+
 > [!IMPORTANT]
->  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
-  
- `_snwprintf_s` est une version à caractères larges de `_snprintf_s` ; les arguments de pointeur de `_snwprintf_s` sont des chaînes à caractères larges. La détection d'erreurs d'encodage dans `_snwprintf_s` peut différer de celle dans `_snprintf_s`. `FILE`, tout comme `_snwprintf_s`, écrit la sortie dans une chaîne plutôt que dans une destination de type `swprintf_s`.  
-  
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
-  
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_sntprintf_s`|`_snprintf_s`|`_snprintf_s`|`_snwprintf_s`|  
-|`_sntprintf_s_l`|`_snprintf_s_l`|`_snprintf_s_l`|`_snwprintf_s_l`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h>|  
-|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_snprintf_s.cpp  
-// compile with: /MTd  
-  
-// These #defines enable secure template overloads  
-// (see last part of Examples() below)  
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1   
-#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT 1  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <crtdbg.h>  // For _CrtSetReportMode  
-#include <errno.h>  
-  
-// This example uses a 10-byte destination buffer.  
-  
-int snprintf_s_tester( const char * fmt, int x, size_t count )  
-{  
-   char dest[10];  
-  
-   printf( "\n" );  
-  
-   if ( count == _TRUNCATE )  
-      printf( "%zd-byte buffer; truncation semantics\n",  
-               _countof(dest) );  
-   else  
-      printf( "count = %zd; %zd-byte buffer\n",  
-               count, _countof(dest) );  
-  
-   int ret = _snprintf_s( dest, _countof(dest), count, fmt, x );  
-  
-   printf( "    new contents of dest: '%s'\n", dest );  
-  
-   return ret;  
-}  
-  
-void Examples()  
-{  
-   // formatted output string is 9 characters long: "<<<123>>>"  
-   snprintf_s_tester( "<<<%d>>>", 121, 8 );  
-   snprintf_s_tester( "<<<%d>>>", 121, 9 );  
-   snprintf_s_tester( "<<<%d>>>", 121, 10 );  
-  
-   printf( "\nDestination buffer too small:\n" );  
-  
-   snprintf_s_tester( "<<<%d>>>", 1221, 10 );  
-  
-   printf( "\nTruncation examples:\n" );  
-  
-   int ret = snprintf_s_tester( "<<<%d>>>", 1221, _TRUNCATE );  
-   printf( "    truncation %s occur\n", ret == -1 ? "did"  
-                                                  : "did not" );  
-  
-   ret = snprintf_s_tester( "<<<%d>>>", 121, _TRUNCATE );  
-   printf( "    truncation %s occur\n", ret == -1 ? "did"  
-                                                  : "did not" );  
-   printf( "\nSecure template overload example:\n" );  
-  
-   char dest[10];  
-   _snprintf( dest, 10, "<<<%d>>>", 12321 );  
-   // With secure template overloads enabled (see #defines  
-   // at top of file), the preceding line is replaced by  
-   //    _snprintf_s( dest, _countof(dest), 10, "<<<%d>>>", 12345 );  
-   // Instead of causing a buffer overrun, _snprintf_s invokes  
-   // the invalid parameter handler.  
-   // If secure template overloads were disabled, _snprintf would  
-   // write 10 characters and overrun the dest buffer.  
-   printf( "    new contents of dest: '%s'\n", dest );  
-}  
-  
-void myInvalidParameterHandler(  
-   const wchar_t* expression,  
-   const wchar_t* function,   
-   const wchar_t* file,   
-   unsigned int line,   
-   uintptr_t pReserved)  
-{  
-   wprintf(L"Invalid parameter handler invoked: %s\n", expression);  
-}  
-  
-int main( void )  
-{  
-   _invalid_parameter_handler oldHandler, newHandler;  
-  
-   newHandler = myInvalidParameterHandler;  
-   oldHandler = _set_invalid_parameter_handler(newHandler);  
-   // Disable the message box for assertions.  
-   _CrtSetReportMode(_CRT_ASSERT, 0);  
-  
-   Examples();  
-}  
-```  
-  
-```Output  
-  
-count = 8; 10-byte buffer  
-    new contents of dest: '<<<121>>'  
-  
-count = 9; 10-byte buffer  
-    new contents of dest: '<<<121>>>'  
-  
-count = 10; 10-byte buffer  
-    new contents of dest: '<<<121>>>'  
-  
-Destination buffer too small:  
-  
-count = 10; 10-byte buffer  
-Invalid parameter handler invoked: ("Buffer too small", 0)  
-    new contents of dest: ''  
-  
-Truncation examples:  
-  
-10-byte buffer; truncation semantics  
-    new contents of dest: '<<<1221>>'  
-    truncation did occur  
-  
-10-byte buffer; truncation semantics  
-    new contents of dest: '<<<121>>>'  
-    truncation did not occur  
-  
-Secure template overload example:  
-Invalid parameter handler invoked: ("Buffer too small", 0)  
-    new contents of dest: ''  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
+
+**_snwprintf_s** est une version à caractères larges de **_snprintf_s**; les arguments de pointeur de **_snwprintf_s** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **_snwprintf_s** peut différer de celle dans **_snprintf_s**. **_snwprintf_s**, comme **swprintf_s**, écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**.
+
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_sntprintf_s**|**_snprintf_s**|**_snprintf_s**|**_snwprintf_s**|
+|**_sntprintf_s_l**|**_snprintf_s_l**|**_snprintf_s_l**|**_snwprintf_s_l**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_snprintf_s**, **_snprintf_s_l**|\<stdio.h>|
+|**_snwprintf_s**, **_snwprintf_s_l**|\<stdio.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```cpp
+// crt_snprintf_s.cpp
+// compile with: /MTd
+
+// These #defines enable secure template overloads
+// (see last part of Examples() below)
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT 1
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <crtdbg.h>  // For _CrtSetReportMode
+#include <errno.h>
+
+// This example uses a 10-byte destination buffer.
+
+int snprintf_s_tester( const char * fmt, int x, size_t count )
+{
+   char dest[10];
+
+   printf( "\n" );
+
+   if ( count == _TRUNCATE )
+      printf( "%zd-byte buffer; truncation semantics\n",
+               _countof(dest) );
+   else
+      printf( "count = %zd; %zd-byte buffer\n",
+               count, _countof(dest) );
+
+   int ret = _snprintf_s( dest, _countof(dest), count, fmt, x );
+
+   printf( "    new contents of dest: '%s'\n", dest );
+
+   return ret;
+}
+
+void Examples()
+{
+   // formatted output string is 9 characters long: "<<<123>>>"
+   snprintf_s_tester( "<<<%d>>>", 121, 8 );
+   snprintf_s_tester( "<<<%d>>>", 121, 9 );
+   snprintf_s_tester( "<<<%d>>>", 121, 10 );
+
+   printf( "\nDestination buffer too small:\n" );
+
+   snprintf_s_tester( "<<<%d>>>", 1221, 10 );
+
+   printf( "\nTruncation examples:\n" );
+
+   int ret = snprintf_s_tester( "<<<%d>>>", 1221, _TRUNCATE );
+   printf( "    truncation %s occur\n", ret == -1 ? "did"
+                                                  : "did not" );
+
+   ret = snprintf_s_tester( "<<<%d>>>", 121, _TRUNCATE );
+   printf( "    truncation %s occur\n", ret == -1 ? "did"
+                                                  : "did not" );
+   printf( "\nSecure template overload example:\n" );
+
+   char dest[10];
+   _snprintf( dest, 10, "<<<%d>>>", 12321 );
+   // With secure template overloads enabled (see #defines
+   // at top of file), the preceding line is replaced by
+   //    _snprintf_s( dest, _countof(dest), 10, "<<<%d>>>", 12345 );
+   // Instead of causing a buffer overrun, _snprintf_s invokes
+   // the invalid parameter handler.
+   // If secure template overloads were disabled, _snprintf would
+   // write 10 characters and overrun the dest buffer.
+   printf( "    new contents of dest: '%s'\n", dest );
+}
+
+void myInvalidParameterHandler(
+   const wchar_t* expression,
+   const wchar_t* function,
+   const wchar_t* file,
+   unsigned int line,
+   uintptr_t pReserved)
+{
+   wprintf(L"Invalid parameter handler invoked: %s\n", expression);
+}
+
+int main( void )
+{
+   _invalid_parameter_handler oldHandler, newHandler;
+
+   newHandler = myInvalidParameterHandler;
+   oldHandler = _set_invalid_parameter_handler(newHandler);
+   // Disable the message box for assertions.
+   _CrtSetReportMode(_CRT_ASSERT, 0);
+
+   Examples();
+}
+```
+
+```Output
+
+count = 8; 10-byte buffer
+    new contents of dest: '<<<121>>'
+
+count = 9; 10-byte buffer
+    new contents of dest: '<<<121>>>'
+
+count = 10; 10-byte buffer
+    new contents of dest: '<<<121>>>'
+
+Destination buffer too small:
+
+count = 10; 10-byte buffer
+Invalid parameter handler invoked: ("Buffer too small", 0)
+    new contents of dest: ''
+
+Truncation examples:
+
+10-byte buffer; truncation semantics
+    new contents of dest: '<<<1221>>'
+    truncation did occur
+
+10-byte buffer; truncation semantics
+    new contents of dest: '<<<121>>>'
+    truncation did not occur
+
+Secure template overload example:
+Invalid parameter handler invoked: ("Buffer too small", 0)
+    new contents of dest: ''
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
+[vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)<br/>

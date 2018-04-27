@@ -1,12 +1,12 @@
 ---
 title: operator!= | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - std::!=
@@ -22,36 +22,38 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cff517cc1a8231684ac3fd6d07cc6d6b2c68ebf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0b00e594321c80a1e0b65ab410223c2cbbf719fe
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator"></a>!=, opérateur
-> [!NOTE]
->  Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).  
-  
- Surcharge `operator!=` pour comparer deux objets de la classe de modèle [Container](../standard-library/sample-container-class.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <class Ty>  
-bool operator!=(
-    const Container <Ty>& left,  
-    const Container <Ty>& right);
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne `!(left == right)`.  
-  
-## <a name="see-also"></a>Voir aussi  
- [\<sample container>](../standard-library/sample-container.md)
 
+> [!NOTE]
+> Cette rubrique fait partie de la documentation Visual C++ comme exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+
+Surcharge `operator!=` pour comparer deux objets de la classe de modèle [Container](../standard-library/sample-container-class.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+template <class Ty>
+bool operator!=(
+    const Container <Ty>& left,
+    const Container <Ty>& right);
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne `!(left == right)`.
+
+## <a name="see-also"></a>Voir aussi
+
+[\<sample container>](../standard-library/sample-container.md)<br/>

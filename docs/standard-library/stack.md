@@ -1,12 +1,12 @@
 ---
-title: '&lt;stack&gt; | Microsoft Docs'
-ms.custom: 
+title: '&lt;pile&gt; | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <stack>
@@ -16,47 +16,48 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9e26a3f2a5eaf3e1175a6f1b58ae7e9b5f4efd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4db3881ff6babad8686c1d004c0c8a47a78f214b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-Définit la pile de classe de modèle et les deux modèles de prise en charge.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <stack>  
-  
-```  
-  
-### <a name="operators"></a>Opérateurs  
-  
-|||  
-|-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Teste si l'objet de pile situé à gauche de l'opérateur n'est pas égal à l'objet de pile situé à droite.|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur à l'objet de pile situé à droite.|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur ou égal à l'objet de pile situé à droite.|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est égal à l'objet de pile situé à droite.|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur à l'objet de pile situé à droite.|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur ou égal à l'objet de pile situé à droite.|  
-  
-### <a name="classes"></a>Classes  
-  
-|||  
-|-|-|  
-|[stack, classe](../standard-library/stack-class.md)|Classe d'adaptateur de conteneur modèle qui fournit une restriction des fonctionnalités limitant l'accès à l'élément ajouté le plus récemment pour un type de conteneur sous-jacent.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
 
+Définit la pile de classe de modèle et les deux modèles de prise en charge.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
+#include <stack>
+
+```
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Teste si l'objet de pile situé à gauche de l'opérateur n'est pas égal à l'objet de pile situé à droite.|
+|[operator<](../standard-library/stack-operators.md#op_lt)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur à l'objet de pile situé à droite.|
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur ou égal à l'objet de pile situé à droite.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est égal à l'objet de pile situé à droite.|
+|[operator>](../standard-library/stack-operators.md#op_gt)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur à l'objet de pile situé à droite.|
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur ou égal à l'objet de pile situé à droite.|
+
+### <a name="classes"></a>Classes
+
+|Classe|Description|
+|-|-|
+|[stack, classe](../standard-library/stack-class.md)|Classe d'adaptateur de conteneur modèle qui fournit une restriction des fonctionnalités limitant l'accès à l'élément ajouté le plus récemment pour un type de conteneur sous-jacent.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: putc, putwc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - putwc
@@ -38,102 +38,107 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3c07cab44f6b709affa22f470dfd7a8840b729
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 04ef65bec3f315a6d6d133d047a212514848f02f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putc-putwc"></a>putc, putwc
-Écrit un caractère dans un flux.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-      int putc(  
-   int c,  
-   FILE *stream   
-);  
-wint_t putwc(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Caractère à écrire.  
-  
- `stream`  
- Pointeur désignant la structure **FILE**.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, `putc` et `putchar` retournent `EOF` ; `putwc` et `putwchar` retournent **WEOF**. Pour les quatre routines, utilisez [ferror](../../c-runtime-library/reference/ferror.md) ou [feof](../../c-runtime-library/reference/feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si un pointeur Null est transmis pour `stream`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `EOF` ou **WEOF** et affectent à `errno` la valeur `EINVAL`.  
-  
- Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- La routine `putc` écrit le caractère unique `c` dans la sortie `stream` à la position actuelle. Il est possible de passer un entier à `putc`, mais seuls les 8 bits inférieurs sont écrits. La routine `putchar` est identique à **putc(** `c`**, stdout)**. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. Les routines `putc` et `putchar` sont comparables, respectivement, à `fputc` et `_fputchar`, mais elles sont implémentées à la fois comme fonctions et macros (consultez [Choix entre une fonction et une macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` et `putwchar` sont, respectivement, des versions à caractères larges de `putc` et `putchar`. `putwc` et `putc` se comportent de la même façon si le flux est ouvert en mode ANSI. `putc` ne prend pas en charge la sortie vers un flux UNICODE pour l’instant.  
-  
- Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putc_nolock, _putwc_nolock**.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_puttc`|`putc`|`putc`|**putwc**|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`putc`|\<stdio.h>|  
-|`putwc`|\<stdio.h> ou \<wchar.h>|  
-  
-La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, `stdin`, `stdout`, et `stderr`, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_putc.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-   /* Make standard out the stream and write to it. */  
-   stream = stdout;  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = putc( *p, stream );  
-}  
-```  
-  
-## <a name="output"></a>Sortie  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Écrit un caractère dans un flux.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int putc(
+   int c,
+   FILE *stream
+);
+wint_t putwc(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Caractère à écrire.
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, **putc** et **putchar** retourner ** EOF`; **putwc` et **putwchar** retourner **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si un pointeur null passé à *flux*, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** ou **WEOF** et **errno** à **EINVAL**.
+
+Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Le **putc** routine écrit le caractère unique *c* à la sortie *flux* à la position actuelle. Tout entier peut être passé à **putc**, mais uniquement les 8 derniers bits sont écrits. Le **putchar** routine est identique à **putc (** * c ***, stdout)**. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires aux **fputc** et **_fputchar**, respectivement, mais sont implémentées en tant que fonctions et macros (consultez [ Choix entre les Macros et fonctions](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont des versions à caractères larges de **putc** et **putchar**, respectivement. **putwc** et **putc** se comportent de façon identique, si le flux est ouvert en mode ANSI. **putc** ne prend actuellement en charge la sortie dans un flux de données UNICODE.
+
+Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putc_nolock, _putwc_nolock**.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_puttc**|**putc**|**putc**|**putwc**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**putc**|\<stdio.h>|
+|**putwc**|\<stdio.h> ou \<wchar.h>|
+
+La console n’est pas pris en charge dans les applications de plateforme Windows universelle (UWP). Les descripteurs de flux standard qui sont associés à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions d’exécution C de les utiliser dans les applications UWP . Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_putc.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+   /* Make standard out the stream and write to it. */
+   stream = stdout;
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = putc( *p, stream );
+}
+```
+
+### <a name="output"></a>Sortie
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

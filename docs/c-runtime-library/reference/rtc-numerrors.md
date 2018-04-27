@@ -1,12 +1,12 @@
 ---
 title: _RTC_NumErrors | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _RTC_NumErrors
@@ -32,43 +32,47 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2034dd9c1e255196c66c4385e68c51845915ff59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d7c6c2fd9f804bdbb949e4e2909cd4b9627e0f24
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
-Retourne le nombre total d’erreurs détectées par les vérifications d’erreurs au moment de l’exécution. Vous pouvez utiliser ce nombre comme contrôle dans une boucle **for**, où chaque valeur de la boucle est transmise à [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-  
-int _RTC_NumErrors( void );  
-  
-```  
-  
-## <a name="return-value"></a>Valeur de retour  
- Un entier dont la valeur représente le nombre total d’erreurs qui peuvent être détectées par les vérifications d’erreurs au moment de l’exécution de Visual C++.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_RTC_NumErrors`|\<rtcapi.h>|  
-  
- Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)
+
+Retourne le nombre total d’erreurs détectées par les vérifications d’erreurs au moment de l’exécution. Vous pouvez utiliser ce nombre comme contrôle dans une boucle **for**, où chaque valeur de la boucle est transmise à [_RTC_GetErrDesc](rtc-geterrdesc.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+
+int _RTC_NumErrors( void );
+
+```
+
+## <a name="return-value"></a>Valeur de retour
+
+Un entier dont la valeur représente le nombre total d’erreurs qui peuvent être détectées par les vérifications d’erreurs au moment de l’exécution de Visual C++.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_RTC_NumErrors**|\<rtcapi.h>|
+
+Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
+[Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>

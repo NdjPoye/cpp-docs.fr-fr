@@ -1,12 +1,12 @@
 ---
 title: setvbuf | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - setvbuf
@@ -32,117 +32,120 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072a1a9b1fca01dc8c6266f65232e4a8d8183580
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c5faca3ea3403ec06029e6c4a125915884621e4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setvbuf"></a>setvbuf
-Contrôle la mise en mémoire tampon du flux et la taille de la mémoire tampon.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int setvbuf(  
-   FILE *stream,  
-   char *buffer,  
-   int mode,  
-   size_t size   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `stream`  
- Pointeur vers la structure `FILE` .  
-  
- `buffer`  
- Mémoire tampon allouée par l’utilisateur.  
-  
- `mode`  
- Mode de mise en mémoire tampon.  
-  
- `size`  
- Taille de la mémoire tampon en octets. Plage autorisée : 2 <= `size` <= INT_MAX (2147483647). En interne, la valeur fournie pour `size` est arrondie vers le bas au multiple de 2 le plus proche.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne 0 en cas de réussite.  
-  
- Si `stream` a la valeur `NULL` ou si `mode` ou `size` ne se trouve pas dans une plage valide, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte à `errno` la valeur `EINVAL`.  
-  
- Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Notes  
- La fonction `setvbuf` permet au programme de contrôler la mise en mémoire tampon et la taille de la mémoire tampon pour `stream`. `stream` doit faire référence à un fichier ouvert qui n’a pas subi d’opération d’E/S depuis son ouverture. Le tableau désigné par `buffer` est utilisé en tant que mémoire tampon, sauf s’il a la valeur `NULL`, auquel cas `setvbuf` utilise une mémoire tampon allouée automatiquement de longueur `size`/2 * 2 octets.  
-  
- Le mode doit être `_IOFBF`, `_IOLBF` ou `_IONBF`. Si `mode` a la valeur `_IOFBF` ou `_IOLBF`, `size` est utilisé comme taille de la mémoire tampon. Si `mode` a la valeur `_IONBF`, le flux n’est pas mis en mémoire tampon et `size` et `buffer` sont ignorés. Les valeurs de `mode` et leur signification sont les suivantes :  
-  
- `_IOFBF`  
- Mise en mémoire tampon complète. Autrement dit, `buffer` est utilisé comme mémoire tampon et `size` comme taille de la mémoire tampon. Si `buffer` a la valeur `NULL`, une mémoire tampon allouée automatiquement d’une longueur de `size` octets est utilisée.  
-  
- `_IOLBF`  
- Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Cependant, pour Win32, son comportement est identique à `_IOFBF` (mise en mémoire tampon complète).  
-  
- `_IONBF`  
- Aucune mémoire tampon n’est utilisée, quel que soit le paramétrage de `buffer` ou `size`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`setvbuf`|\<stdio.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_setvbuf.c  
-// This program opens two streams: stream1  
-// and stream2. It then uses setvbuf to give stream1 a  
-// user-defined buffer of 1024 bytes and stream2 no buffer.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buf[1024];  
-   FILE *stream1, *stream2;  
-  
-   if( fopen_s( &stream1, "data1", "a" ) == 0 &&  
-       fopen_s( &stream2, "data2", "w" ) == 0 )  
-   {  
-      if( setvbuf( stream1, buf, _IOFBF, sizeof( buf ) ) != 0 )  
-         printf( "Incorrect type or size of buffer for stream1\n" );  
-      else  
-         printf( "'stream1' now has a buffer of 1024 bytes\n" );  
-      if( setvbuf( stream2, NULL, _IONBF, 0 ) != 0 )  
-         printf( "Incorrect type or size of buffer for stream2\n" );  
-      else  
-         printf( "'stream2' now has no buffer\n" );  
-      _fcloseall();  
-   }  
-}  
-```  
-  
-```Output  
-'stream1' now has a buffer of 1024 bytes  
-'stream2' now has no buffer  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [setbuf](../../c-runtime-library/reference/setbuf.md)
+
+Contrôle la mise en mémoire tampon du flux et la taille de la mémoire tampon.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int setvbuf(
+   FILE *stream,
+   char *buffer,
+   int mode,
+   size_t size
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*Flux de données*<br/>
+Pointeur désignant la structure **FILE**.
+
+*buffer*<br/>
+Mémoire tampon allouée par l’utilisateur.
+
+*mode*<br/>
+Mode de mise en mémoire tampon.
+
+*size*<br/>
+Taille de la mémoire tampon en octets. Plage autorisée : 2 < = *taille* < = INT_MAX (2147483647). En interne, la valeur fournie pour *taille* est arrondie au multiple plus proche de 2.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne 0 en cas de réussite.
+
+Si *flux* est **NULL**, ou si *mode* ou *taille* est n’est pas dans une modification valide, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte **errno** à **EINVAL**.
+
+Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Notes
+
+Le **setvbuf** fonction permet au programme de contrôle à la fois mise en mémoire tampon et de la mémoire tampon de taille pour *flux*. *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s, car il a été ouvert. Le tableau vers lequel pointe *tampon* est utilisé en tant que la mémoire tampon, sauf s’il est **NULL**, auquel cas **setvbuf** utilise un tampon alloué automatiquement de longueur  *taille*/2 * 2 octets.
+
+Le mode doit être **_IOFBF**, **_IOLBF**, ou **_IONBF**. Si *mode* est **_IOFBF** ou **_IOLBF**, puis *taille* est utilisé en tant que la taille de la mémoire tampon. Si *mode* est **_IONBF**, le flux est tamponné et *taille* et *tampon* sont ignorés. Les valeurs pour *mode* et leurs significations sont :
+
+|*mode* valeur|Signification|
+|-|-|
+**_IOFBF**|Mise en mémoire tampon complète ; Autrement dit, *tampon* est utilisé en tant que la mémoire tampon et *taille* est utilisé en tant que la taille de la mémoire tampon. Si *tampon* est **NULL**, une mémoire tampon allouée automatiquement *taille* octets de long est utilisé.
+**_IOLBF**|Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Toutefois, pour Win32, le comportement est identique à **_IOFBF** -mise en mémoire tampon complète.
+**_IONBF**|Aucune mémoire tampon n’est utilisé, quel que soit le *tampon* ou *taille*.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**setvbuf**|\<stdio.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliothèques
+
+Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_setvbuf.c
+// This program opens two streams: stream1
+// and stream2. It then uses setvbuf to give stream1 a
+// user-defined buffer of 1024 bytes and stream2 no buffer.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   char buf[1024];
+   FILE *stream1, *stream2;
+
+   if( fopen_s( &stream1, "data1", "a" ) == 0 &&
+       fopen_s( &stream2, "data2", "w" ) == 0 )
+   {
+      if( setvbuf( stream1, buf, _IOFBF, sizeof( buf ) ) != 0 )
+         printf( "Incorrect type or size of buffer for stream1\n" );
+      else
+         printf( "'stream1' now has a buffer of 1024 bytes\n" );
+      if( setvbuf( stream2, NULL, _IONBF, 0 ) != 0 )
+         printf( "Incorrect type or size of buffer for stream2\n" );
+      else
+         printf( "'stream2' now has no buffer\n" );
+      _fcloseall();
+   }
+}
+```
+
+```Output
+'stream1' now has a buffer of 1024 bytes
+'stream2' now has no buffer
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[fflush](fflush.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[setbuf](setbuf.md)<br/>

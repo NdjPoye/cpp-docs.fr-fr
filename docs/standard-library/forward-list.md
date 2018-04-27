@@ -1,12 +1,12 @@
 ---
 title: '&lt;forward_list&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <forward_list>
@@ -15,52 +15,51 @@ dev_langs:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b4a92590189d7081cf778161b47e35458d9bf82
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dbc6dcf9b3fb334f0c28a291aab81d0585580917
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
-Définit la classe de modèle de conteneur forward_list et plusieurs modèles de prise en charge.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <forward_list>  
-```  
-  
-### <a name="operators"></a>Opérateurs  
-  
-|||  
-|-|-|  
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est égal à l’objet de liste forward_list situé à droite.|  
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur n’est pas égal à l’objet de liste forward_list situé à droite.|  
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur à l’objet de liste forward_list situé à droite.|  
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur ou égal à l’objet de liste forward_list situé à droite.|  
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur à l’objet de liste forward_list situé à droite.|  
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur ou égal à l’objet de liste forward_list situé à droite.|  
-  
-### <a name="functions"></a>Fonctions  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/forward-list-functions.md#swap)|Échange les éléments de deux forward_list.|  
-  
-### <a name="classes"></a>Classes  
-  
-|||  
-|-|-|  
-|[forward_list](../standard-library/forward-list-class.md)|Décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments. La séquence est stockée sous forme de liste d’éléments à liaison unique, chacun contenant un membre de type `Type`.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
 
+Définit la classe de modèle de conteneur forward_list et plusieurs modèles de prise en charge.
 
+## <a name="syntax"></a>Syntaxe
 
+```cpp
+#include <forward_list>
+```
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est égal à l’objet de liste forward_list situé à droite.|
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur n’est pas égal à l’objet de liste forward_list situé à droite.|
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur à l’objet de liste forward_list situé à droite.|
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur ou égal à l’objet de liste forward_list situé à droite.|
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur à l’objet de liste forward_list situé à droite.|
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur ou égal à l’objet de liste forward_list situé à droite.|
+
+### <a name="functions"></a>Fonctions
+
+|Fonction|Description|
+|-|-|
+|[swap](../standard-library/forward-list-functions.md#swap)|Échange les éléments de deux forward_list.|
+
+### <a name="classes"></a>Classes
+
+|Classe|Description|
+|-|-|
+|[forward_list](../standard-library/forward-list-class.md)|Décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments. La séquence est stockée sous forme de liste d’éléments à liaison unique, chacun contenant un membre de type `Type`.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: signal | Microsoft Docs
-ms.custom: 
-ms.date: 02/12/2018
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/12/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - signal
@@ -34,11 +34,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc6ed4c1af9e746a4e4b20c72d69f0700597b665
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="signal"></a>signal
 
@@ -54,79 +54,82 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Paramètres
-_sig_  
+
+*sig*<br/>
 Valeur du signal.
 
-_func_  
+*Func*<br/>
 Le deuxième paramètre est un pointeur vers la fonction à exécuter. Le premier paramètre est une valeur de signal et le deuxième paramètre est un sous-code qui peut être utilisé lorsque le premier paramètre est SIGFPE.
 
 ## <a name="return-value"></a>Valeur de retour
 
-`signal` Retourne la valeur précédente de func associé au signal donné. Par exemple, si la valeur précédente de _func_ a été `SIG_IGN`, la valeur de retour est également `SIG_IGN`. La valeur de retour `SIG_ERR` indique une erreur ; dans ce cas, `errno` a la valeur `EINVAL`.
+**signal** retourne la valeur précédente de func associé au signal donné. Par exemple, si la valeur précédente de *func* a été **SIG_IGN**, la valeur de retour est également **SIG_IGN**. La valeur de retour **SIG_ERR** indique une erreur ; dans ce cas, **errno** a la valeur **EINVAL**.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction `signal` permet à un processus de choisir une des différentes méthodes pour gérer un signal d'interruption à partir du système d'exploitation. Le _sig_ argument est l’interruption à laquelle `signal` répond ; il doit être une des constantes de manifeste suivantes, qui sont définies dans un SIGNAL. H.
+Le **signal** fonction permet à un processus choisir une des différentes méthodes pour gérer un signal d’interruption à partir du système d’exploitation. Le *sig* argument est l’interruption à laquelle **signal** répond ; il doit être une des constantes de manifeste suivantes, qui sont définies dans un SIGNAL. H.
 
-|_SIG_ valeur|Description|
+|*SIG* valeur|Description|
 |-----------------|-----------------|
-|`SIGABRT`|Arrêt anormal|
-|`SIGFPE`|Erreur de virgule flottante|
-|`SIGILL`|Instruction non conforme|
-|`SIGINT`|Signal CTRL+C|
-|`SIGSEGV`|Accès au stockage non conforme|
-|`SIGTERM`|Demande d'arrêt|
+|**SIGABRT**|Arrêt anormal|
+|**SIGFPE**|Erreur de virgule flottante|
+|**SIGILL**|Instruction non conforme|
+|**SIGINT**|Signal CTRL+C|
+|**SIGSEGV**|Accès au stockage non conforme|
+|**SIGTERM**|Demande d'arrêt|
 
-Si _sig_ n’est pas une des valeurs ci-dessus, le Gestionnaire de paramètre non valide est appelé, comme défini dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `SIG_ERR`.
+Si *sig* n’est pas une des valeurs ci-dessus, le Gestionnaire de paramètre non valide est appelé, comme défini dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, cette fonction affecte **errno** à **EINVAL** et retourne **SIG_ERR**.
 
-Par défaut, `signal` termine le programme appelant avec code de sortie 3, quelle que soit la valeur de _sig_.
+Par défaut, **signal** termine le programme appelant avec code de sortie 3, quelle que soit la valeur de *sig*.
 
 > [!NOTE]
-> `SIGINT` n'est pris en charge pour aucune application Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
+> **SIGINT** n’est pas prise en charge pour les applications Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
 
-Le _func_ argument est une adresse d’un gestionnaire de signal que vous écrivez, ou à une des constantes prédéfinies `SIG_DFL` ou `SIG_IGN`, qui sont également définies dans un SIGNAL. H. Si _func_ est une fonction, il est installé en tant que gestionnaire de signal pour le signal donné. Prototype du Gestionnaire de signal requiert un argument formel, _sig_, de type `int`. Le système d’exploitation fournit l’argument réel via _sig_ lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler `signal` à deux reprises pour assigner le même gestionnaire à deux signaux différents, puis tester la _sig_ argument dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
+Le *func* argument est une adresse d’un gestionnaire de signal que vous écrivez, ou à une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans un SIGNAL. H. Si *func* est une fonction, il est installé en tant que gestionnaire de signal pour le signal donné. Prototype du Gestionnaire de signal requiert un argument formel, *sig*, de type **int**. Le système d’exploitation fournit l’argument réel via *sig* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** à deux reprises pour assigner le même gestionnaire à deux signaux différents, puis tester la *sig* argument dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
 
-Si vous testez des exceptions de virgule flottante (`SIGFPE`), _func_ pointe vers une fonction qui accepte un deuxième argument facultatif qui est une des nombreuses constantes de manifeste, défini dans le type FLOAT. H, sous la forme `FPE_xxx`. Lorsqu'un signal `SIGFPE` se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d'exception à virgule flottante et agir en conséquence. Cet argument et ses valeurs possibles sont des extensions Microsoft.
+Si vous testez des exceptions de virgule flottante (**SIGFPE**), *func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est une des nombreuses constantes de manifeste définies dans FLOAT. H, sous la forme **FPE_xxx**. Lorsqu’un **SIGFPE** signal se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante et agir en conséquence. Cet argument et ses valeurs possibles sont des extensions Microsoft.
 
-Pour les exceptions à virgule flottante, la valeur de _func_ n’est pas réinitialisée lorsque le signal est reçu. Pour récupérer des exceptions à virgule flottante, utilisez les clauses try/except pour cerner les opérations à virgule flottante. Il est aussi possible d’effectuer une récupération en utilisant [setjmp](../../c-runtime-library/reference/setjmp.md) avec [longjmp](../../c-runtime-library/reference/longjmp.md). Dans les deux cas, le processus appelant reprend l'exécution et quitte l'état à virgule flottante du processus non défini.
+Pour les exceptions à virgule flottante, la valeur de *func* n’est pas réinitialisée lorsque le signal est reçu. Pour récupérer des exceptions à virgule flottante, utilisez les clauses try/except pour cerner les opérations à virgule flottante. Il est aussi possible d’effectuer une récupération en utilisant [setjmp](setjmp.md) avec [longjmp](longjmp.md). Dans les deux cas, le processus appelant reprend l'exécution et quitte l'état à virgule flottante du processus non défini.
 
 Si le gestionnaire de signal retourne, le processus appelant reprend l'exécution immédiatement après le moment où il a reçu le signal d'interruption. Cela est vrai quel que soit le type de signal ou le mode de fonctionnement.
 
-Avant l’exécution de la fonction spécifiée, la valeur de _func_ a la valeur `SIG_DFL`. Le signal d'interruption suivant est traité comme décrit pour `SIG_DFL`, sauf si un appel d'intervention à `signal` précise le contraire. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
+Avant l’exécution de la fonction spécifiée, la valeur de *func* a la valeur **SIG_DFL**. Le signal d’interruption suivant est traité comme décrit pour **SIG_DFL**, sauf si un appel d’intervention à **signal** spécifie dans le cas contraire. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
 
 Dans la mesure où les routines de gestion de signal sont généralement appelées de façon asynchrone lorsqu'une interruption se produit, votre fonction de gestion de signal peut obtenir le contrôle lorsqu'une opération du runtime est incomplète et dans un état inconnu. La liste suivante résume les restrictions qui déterminent les fonctions que vous pouvez utiliser dans votre routine de gestion de signal.
 
-- Ne publiez pas les routines d'E/S STDIO.H ou de niveau inférieur (par exemple, `printf` ou `fread`).
+- Faire pas problème de bas niveau ou STDIO. Routines e/s H (par exemple, **printf** ou **fread**).
 
-- N'appelez pas les routines de tas ou toute routine qui utilise les routines de tas (par exemple, `malloc`, `_strdup` ou `_putenv`). Pour plus d’informations, consultez [malloc](../../c-runtime-library/reference/malloc.md).
+- N’appelez pas les routines du tas ou toute routine qui utilise les routines du tas (par exemple, **malloc**, **_strdup**, ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
 
-- N'utilisez aucune fonction qui génère un appel du système (par exemple, `_getcwd` ou `time`).
+- N’utilisez pas de n’importe quelle fonction qui génère un appel système (par exemple, **_getcwd** ou **temps**).
 
-- N’utilisez pas `longjmp` à moins que l’interruption soit provoquée par une exception à virgule flottante (autrement dit, _sig_ est `SIGFPE`). Dans ce cas, réinitialisez d'abord le package à virgule flottante à l'aide d'un appel à `_fpreset`.
+- N’utilisez pas **longjmp** à moins que l’interruption soit provoquée par une exception à virgule flottante (autrement dit, *sig* est **SIGFPE**). Dans ce cas, réinitialisez d’abord le package à virgule flottante à l’aide d’un appel à **_fpreset**.
 
 - N'utilisez aucune routine de superposition.
 
-Un programme doit contenir un code à virgule flottante s'il doit intercepter l'exception `SIGFPE` à l'aide de la fonction. Si votre programme ne contient pas de code à virgule flottante et qu'il requiert le code de gestion de signal de la bibliothèque runtime, déclarez un chiffre de type double volatile et initialisez-le à zéro :
+Un programme doit contenir du code à virgule flottante s’il doit intercepter le **SIGFPE** exception à l’aide de la fonction. Si votre programme ne contient pas de code à virgule flottante et qu'il requiert le code de gestion de signal de la bibliothèque runtime, déclarez un chiffre de type double volatile et initialisez-le à zéro :
 
-`volatile double d = 0.0f;`
+```C
+volatile double d = 0.0f;
+```
 
-Les signaux `SIGILL` et `SIGTERM` ne sont pas générés sous Windows. Ils sont inclus pour la compatibilité ANSI. Par conséquent, vous pouvez définir des gestionnaires de signal pour ces signaux à l’aide de `signal`, et vous pouvez aussi générer explicitement ces signaux en appelant [raise](../../c-runtime-library/reference/raise.md).
+Le **SIGILL** et **SIGTERM** signaux ne sont pas générés sous Windows. Ils sont inclus pour la compatibilité ANSI. Par conséquent, vous pouvez définir des gestionnaires de signal pour ces signaux à l’aide de **signal**, et vous pouvez également générer explicitement ces signaux en appelant [déclencher](raise.md).
 
-Les paramètres de signal ne sont pas conservés dans les processus engendrés qui sont créés par les appels aux fonctions `_exec` ou `_spawn`. Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
+Paramètres de signal ne sont pas conservées dans les processus engendrés qui sont créés par les appels à [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) fonctions. Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`signal`|\<signal.h >|
+|**signal**|\<signal.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment utiliser `signal` pour ajouter un comportement personnalisé au signal `SIGABRT`. Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](../../c-runtime-library/reference/set-abort-behavior.md).
+L’exemple suivant montre comment utiliser **signal** pour ajouter un comportement personnalisé pour le **SIGABRT** signal. Pour plus d’informations sur le comportement d’arrêt, consultez [_set_abort_behavior](set-abort-behavior.md).
 
 ```C
 // crt_signal.c
@@ -163,9 +166,9 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)  
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)  
-[_fpreset](../../c-runtime-library/reference/fpreset.md)  
-[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)  
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_fpreset](fpreset.md)<br/>
+[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

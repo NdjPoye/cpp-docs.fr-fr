@@ -1,12 +1,12 @@
 ---
 title: _purecall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _purecall
@@ -32,35 +32,39 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c19324cde907f31ab18a312f3039c2da7a3a40c7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bfcd454aa6a4053ff30eef27b9c9c7d3d8bf7b34
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="purecall"></a>_purecall
-Gestionnaire d’erreurs d’appel de fonction virtuelle pure par défaut. Le compilateur génère du code pour appeler cette fonction quand une fonction membre virtuelle pure est appelée.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-extern "C" int __cdecl _purecall();  
-```  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_purecall` est un détail d’implémentation propre à Microsoft du compilateur Microsoft Visual C++. Cette fonction n’est pas destinée à être appelée directement par votre code, et ne s’accompagne d’aucune déclaration d’en-tête publique. Elle est documentée ici, car il s’agit d’une exportation publique de la bibliothèque Runtime C.  
-  
- Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Le compilateur génère du code pour appeler la fonction de gestionnaire d’erreurs `_purecall` quand une fonction virtuelle pure est appelée. Par défaut, `_purecall` met fin au programme. Avant cela, la fonction `_purecall` appelle une fonction `_purecall_handler` s’il en a été défini une pour le processus. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui présente la signature `_purecall_handler`, puis utilisez [_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) pour en faire le gestionnaire actif.  
-  
-## <a name="requirements"></a>Configuration requise  
- La fonction `_purecall` n’a pas de déclaration d’en-tête. Le typedef `_purecall_handler` est défini dans \<stdlib.h>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_get_purecall_handler, _set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)
+
+Gestionnaire d’erreurs d’appel de fonction virtuelle pure par défaut. Le compilateur génère du code pour appeler cette fonction quand une fonction membre virtuelle pure est appelée.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+extern "C" int __cdecl _purecall();
+```
+
+## <a name="remarks"></a>Notes
+
+Le **_purecall** fonction est un détail d’implémentation du compilateur Microsoft Visual C++ spécifiques à Microsoft. Cette fonction n’est pas destinée à être appelée directement par votre code, et ne s’accompagne d’aucune déclaration d’en-tête publique. Elle est documentée ici, car il s’agit d’une exportation publique de la bibliothèque Runtime C.
+
+Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Le compilateur génère du code pour appeler le **_purecall** fonction de gestionnaire d’erreur lorsqu’une fonction virtuelle pure est appelée. Par défaut, **_purecall** termine le programme. Avant de mettre fin, le **_purecall** fonction appelle un **_purecall_handler** fonctionner s’il a été défini pour le processus. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui possède le **_purecall_handler** signature, puis utilisez [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) afin de faciliter le gestionnaire en cours.
+
+## <a name="requirements"></a>Spécifications
+
+Le **_purecall** fonction n’a pas une déclaration d’en-tête. Le **_purecall_handler** typedef est défini dans \<stdlib.h >.
+
+## <a name="see-also"></a>Voir aussi
+
+[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[_get_purecall_handler, _set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>

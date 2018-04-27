@@ -1,12 +1,12 @@
 ---
 title: '&lt;utility&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <utility>
@@ -15,69 +15,69 @@ dev_langs:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278ffaf44fa65d8a3545463ac64c22cb6994cca7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fc7af4118af41a6cfddc09f7fbfee0d9e3e36285
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
-Définit des types, des fonctions et des opérateurs de la bibliothèque standard C++ qui aident à construire et à gérer des paires d’objets qui sont utiles quand deux objets doivent être traités comme s’ils n’en étaient qu’un seul.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-#include <utility>  
-  
-```  
-  
-## <a name="remarks"></a>Notes  
- Les paires sont largement utilisées dans la bibliothèque standard C++. Elles sont nécessaires comme arguments et valeurs de retour pour diverses fonctions et comme types d’éléments pour des conteneurs tels que la [classe map](../standard-library/map-class.md) et la [classe multimap](../standard-library/multimap-class.md). L’en-tête \<utility> est inclus automatiquement par \<map> pour aider à gérer leurs éléments de type paire clé/valeur.  
-  
-### <a name="classes"></a>Classes  
-  
-|||  
-|-|-|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Classe qui encapsule le type d'un élément `pair`.|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Classe qui encapsule le nombre d'éléments `pair`.|  
-  
-### <a name="functions"></a>Fonctions  
-  
-|||  
-|-|-|  
-|[forward](../standard-library/utility-functions.md#forward)|Empêche que le type de référence (`lvalue` ou `rvalue`) de l'argument ne soit masqué par le transfert parfait.|  
-|[get](../standard-library/utility-functions.md#get)|Fonction qui obtient un élément d'un objet `pair`.|  
-|[make_pair](../standard-library/utility-functions.md#make_pair)|Fonction d'assistance de modèle qui sert à construire des objets de type `pair`, où les types de composants sont basés sur les types de données passés comme paramètres.|  
-|[move](../standard-library/utility-functions.md#move)|Retourne l'argument passé comme référence `rvalue`.|  
-|[swap](../standard-library/utility-functions.md#swap)|Échange les éléments de deux objets `pair`.|  
-  
-### <a name="operators"></a>Opérateurs  
-  
-|||  
-|-|-|  
-|[operator!=](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|  
-|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.|  
-|[operator<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|  
-|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|  
-|[operator>](../standard-library/utility-operators.md#op_gt)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.|  
-|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.|  
-  
-### <a name="structs"></a>Structs  
-  
-|||  
-|-|-|  
-|[identity](../standard-library/identity-structure.md)||  
-|[pair](../standard-library/pair-structure.md)|Struct qui permet de traiter deux objets comme s'il s'agissait d'un objet unique.|  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Définit des types, des fonctions et des opérateurs de la bibliothèque standard C++ qui aident à construire et à gérer des paires d’objets qui sont utiles quand deux objets doivent être traités comme s’ils n’en étaient qu’un seul.
 
+## <a name="syntax"></a>Syntaxe
 
+```cpp
+#include <utility>
+
+```
+
+## <a name="remarks"></a>Notes
+
+Les paires sont largement utilisées dans la bibliothèque standard C++. Elles sont nécessaires comme arguments et valeurs de retour pour diverses fonctions et comme types d’éléments pour des conteneurs tels que la [classe map](../standard-library/map-class.md) et la [classe multimap](../standard-library/multimap-class.md). L’en-tête \<utility> est inclus automatiquement par \<map> pour aider à gérer leurs éléments de type paire clé/valeur.
+
+### <a name="classes"></a>Classes
+
+|Classe|Description|
+|-|-|
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|Classe qui encapsule le type d'un élément `pair`.|
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|Classe qui encapsule le nombre d'éléments `pair`.|
+
+### <a name="functions"></a>Fonctions
+
+|Fonction|Description|
+|-|-|
+|[forward](../standard-library/utility-functions.md#forward)|Empêche que le type de référence (`lvalue` ou `rvalue`) de l'argument ne soit masqué par le transfert parfait.|
+|[get](../standard-library/utility-functions.md#get)|Fonction qui obtient un élément d'un objet `pair`.|
+|[make_pair](../standard-library/utility-functions.md#make_pair)|Fonction d'assistance de modèle qui sert à construire des objets de type `pair`, où les types de composants sont basés sur les types de données passés comme paramètres.|
+|[move](../standard-library/utility-functions.md#move)|Retourne l'argument passé comme référence `rvalue`.|
+|[swap](../standard-library/utility-functions.md#swap)|Échange les éléments de deux objets `pair`.|
+
+### <a name="operators"></a>Opérateurs
+
+|Opérateur|Description|
+|-|-|
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.|
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.|
+|[operator<](../standard-library/utility-operators.md#op_lt)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur à l'objet pair situé à droite.|
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.|
+|[operator>](../standard-library/utility-operators.md#op_gt)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur à l'objet pair situé à droite.|
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.|
+
+### <a name="structs"></a>Structs
+
+|||
+|-|-|
+|[identity](../standard-library/identity-structure.md)||
+|[pair](../standard-library/pair-structure.md)|Struct qui permet de traiter deux objets comme s'il s'agissait d'un objet unique.|
+
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

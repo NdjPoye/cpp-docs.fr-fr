@@ -1,12 +1,12 @@
 ---
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcsrev
@@ -55,112 +55,117 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a0c70634dc0942004eb1045a72e0354e59526ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8b925b3c67dda4d29208a7027bb7905502df432
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
-Inverse les caractères d’une chaîne.  
-  
+
+Inverse les caractères d’une chaîne.
+
 > [!IMPORTANT]
->  `_mbsrev` et `_mbsrev_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications de plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-char *_strrev(  
-   char *str   
-);  
-wchar_t *_wcsrev(  
-   wchar_t *str   
-);  
-unsigned char *_mbsrev(  
-   unsigned char *str   
-);  
-unsigned char *_mbsrev_l(  
-   unsigned char *str,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `str`  
- Chaîne se terminant par un caractère Null à inverser.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Retourne un pointeur vers la chaîne modifiée. Aucune valeur de retour n'est réservée pour indiquer une erreur.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_strrev` inverse l’ordre des caractères dans `string`. Le caractère Null de fin reste en place. `_wcsrev` et `_mbsrev` sont des versions à caractères larges et à caractères multioctets de `_strrev`. Les arguments et la valeur de retour de `_wcsrev` sont des chaînes de caractères larges ; ceux de `_mbsrev` sont des chaînes de caractères multioctets. Pour `_mbsrev`, l’ordre des octets dans chaque caractère multioctet de `string` n’est pas modifié. Ces trois fonctions se comportent sinon de façon identique.  
-  
- `_mbsrev` valide ses paramètres. Si `string1` ou `string2` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_mbsrev` retourne `NULL` et définit `errno` à `EINVAL`. `_strrev` et `_wcsrev` ne vérifient pas leurs paramètres.  
-  
- La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels et celles qui ont le suffixe `_l` utilisent à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
+> **_mbsrev** et **_mbsrev_l** ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+char *_strrev(
+   char *str
+);
+wchar_t *_wcsrev(
+   wchar_t *str
+);
+unsigned char *_mbsrev(
+   unsigned char *str
+);
+unsigned char *_mbsrev_l(
+   unsigned char *str,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*str*<br/>
+Chaîne se terminant par un caractère Null à inverser.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Retourne un pointeur vers la chaîne modifiée. Aucune valeur de retour n'est réservée pour indiquer une erreur.
+
+## <a name="remarks"></a>Notes
+
+Le **_strrev** fonction inverse l’ordre des caractères dans *str*. Le caractère Null de fin reste en place. **_wcsrev** et **_mbsrev** sont des versions à caractères larges et caractères multioctets de **_strrev**. Les arguments et la valeur de retour de **_wcsrev** sont des caractères larges chaînes ; ceux de **_mbsrev** sont des chaînes de caractères multioctets. Pour **_mbsrev**, l’ordre des octets dans chaque caractère multioctet dans *str* n’est pas modifiée. Ces trois fonctions se comportent sinon de façon identique.
+
+**_mbsrev** valide ses paramètres. Si le paramètre *string1* ou *chaîne2* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsrev** retourne **NULL** et définit **errno** à **EINVAL**. **_strrev** et **_wcsrev** ne vérifient pas leurs paramètres.
+
+La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, sauf que ceux qui n’ont le **_l** suffixe utilisent les paramètres régionaux actuels et celles qui ont le **_l** suffixe utilisent à la place les paramètres régionaux de passée. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
 > [!IMPORTANT]
->  Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsrev`|`_strrev`|`_mbsrev`|`_wcsrev`|  
-|**n/a**|**n/a**|`_mbsrev_l`|**n/a**|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_strrev`|\<string.h>|  
-|`_wcsrev`|\<string.h> ou \<wchar.h>|  
-|`_mbsrev`, `_mbsrev_l`|\<mbstring.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Exemple  
-  
-```  
-// crt_strrev.c  
-// This program checks a string to see  
-// whether it is a palindrome: that is, whether  
-// it reads the same forward and backward.  
-//  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char* string = "Able was I ere I saw Elba";  
-   int result;  
-  
-   // Reverse string and compare (ignore case):  
-   result = _stricmp( string, _strrev( _strdup( string ) ) );  
-   if( result == 0 )  
-      printf( "The string \"%s\" is a palindrome\n", string );  
-   else  
-      printf( "The string \"%s\" is not a palindrome\n", string );  
-}  
-```  
-  
-```Output  
-The string "Able was I ere I saw Elba" is a palindrome  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
- [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+> Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsrev**|**_strrev**|**_mbsrev**|**_wcsrev**|
+|**n/a**|**n/a**|**_mbsrev_l**|**n/a**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_strrev**|\<string.h>|
+|**_wcsrev**|\<string.h> ou \<wchar.h>|
+|**_mbsrev**, **_mbsrev_l**|\<mbstring.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+```C
+// crt_strrev.c
+// This program checks a string to see
+// whether it is a palindrome: that is, whether
+// it reads the same forward and backward.
+//
+
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char* string = "Able was I ere I saw Elba";
+   int result;
+
+   // Reverse string and compare (ignore case):
+   result = _stricmp( string, _strrev( _strdup( string ) ) );
+   if( result == 0 )
+      printf( "The string \"%s\" is a palindrome\n", string );
+   else
+      printf( "The string \"%s\" is not a palindrome\n", string );
+}
+```
+
+```Output
+The string "Able was I ere I saw Elba" is a palindrome
+```
+
+## <a name="see-also"></a>Voir aussi
+
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

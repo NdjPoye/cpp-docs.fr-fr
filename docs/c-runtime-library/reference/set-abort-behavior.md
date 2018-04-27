@@ -1,12 +1,12 @@
 ---
 title: _set_abort_behavior | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Spécifie l’action à entreprendre quand un programme s’arrête anormalement.
 
 > [!NOTE]
-> N’utilisez pas le `abort` fonction pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de magasin ne sont pas autorisées en fonction de la [des stratégies Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Pour plus d’informations, consultez [cycle de vie des applications UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> N’utilisez pas le [abandonner](abort.md) fonction pour arrêter une application Microsoft Store, à l’exception de test ou de scénarios de débogage. Méthodes de programmation ou l’interface utilisateur pour fermer une application de magasin ne sont pas autorisées en fonction de la [des stratégies Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Pour plus d’informations, consultez [cycle de vie des applications UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] _indicateurs_  
-Nouvelle valeur des indicateurs `abort`.
+*flags*<br/>
+Nouvelle valeur de la [abandonner](abort.md) indicateurs.
 
-[in] _masque_  
-Masque pour les bits d’indicateurs `abort` à définir.
+*masque*<br/>
+Masque pour le [abandonner](abort.md) indicateurs de bits à définir.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -73,13 +73,13 @@ Ancienne valeur des indicateurs.
 
 ## <a name="remarks"></a>Notes
 
-Il existe deux indicateurs `abort` : `_WRITE_ABORT_MSG` et `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` détermine si un message texte utile est imprimé quand un programme s’arrête anormalement. Le message indique que l’application a appelé la fonction `abort`. Le comportement par défaut consiste à imprimer le message. S’il est défini, l’indicateur `_CALL_REPORTFAULT` spécifie qu’un vidage sur incident Watson est généré et signalé quand `abort` est appelé. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
+Il existe deux [abandonner](abort.md) indicateurs : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé lorsqu’un programme est terminé anormalement. Le message indique que l’application a appelé la [abandonner](abort.md) (fonction). Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, si définie, spécifie qu’un incident Dr. Watson est généré et signalé quand [abandonner](abort.md) est appelée. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Voir aussi
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

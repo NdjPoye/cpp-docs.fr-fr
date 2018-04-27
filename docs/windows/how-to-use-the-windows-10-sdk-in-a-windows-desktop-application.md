@@ -1,28 +1,28 @@
 ---
-title: "Comment : utiliser les fenêtres 10 SDK dans une Application de bureau Windows | Documents Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Comment : utiliser les fenêtres 10 SDK dans une Application de bureau Windows | Documents Microsoft'
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procédure : utilisation du Kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows
 Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 2017, il est configuré par défaut pour générer avec la version du SDK Windows 10 qui a été installé lors de la charge de travail de bureau C++ a été installé ou mis à jour. Cette version du SDK Windows est compatible avec toutes les versions récentes de Windows. Si vous souhaitez cibler une version antérieure du Kit de développement, vous pouvez ouvrir le projet | Propriétés et choisissez parmi les autres versions de kit de développement logiciel disponibles dans la liste déroulante Version du Kit de développement logiciel Windows.  
@@ -31,7 +31,8 @@ Lorsque vous créez un projet de bureau Windows classique dans Visual Studio 201
   
 ### <a name="to-target-the-windows-10-sdk"></a>Pour cibler le Kit de développement logiciel (SDK) Windows 10  
   
-1.  Assurez-vous que le Kit de développement logiciel (SDK) Windows 10 est installé. Le SDK Windows 10 est installé dans le cadre de la [outils pour Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
+1.  Assurez-vous que le Kit de développement logiciel (SDK) Windows 10 est installé. Le SDK Windows 10 est installé dans le cadre de la **bureau développement avec C++** la charge de travail. Une version autonome est disponible à l’adresse [téléchargements et outils pour Windows 10](https://developer.microsoft.com/windows/downloads).
+
   
 2.  Ouvrez le menu contextuel du nœud du projet, puis sélectionnez **Recibler la version du Kit de développement logiciel (SDK)**.  
   

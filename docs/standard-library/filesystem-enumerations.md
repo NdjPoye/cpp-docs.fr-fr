@@ -1,12 +1,12 @@
 ---
-title: "&lt;filesystem&gt;, énumerations | Microsoft Docs"
-ms.custom: 
+title: '&lt;filesystem&gt;, énumerations | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - filesystem/std::filesystem::copy_options
@@ -20,117 +20,126 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a6d7dcb0e0b0a8e655acbda0624f7fa5b70a8a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd0e2a85d7044e18e4153582a46dbb9889cb5b2b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
+
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<experimental/filesystem>    
- **Espace de noms :** std::experimental::filesystem  
+## <a name="requirements"></a>Spécifications
 
-##  <a name="copy_options"></a>  copy_options
-Énumération de valeurs de masque de bits utilisée avec les fonctions [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) et [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) pour spécifier le comportement.  
-  
-### <a name="syntax"></a>Syntaxe  
-```cpp  
-enum class copy_options {      
-   none = 0,  
-   skip_existing = 1,  
-   overwrite_existing = 2,  
-   update_existing = 4,  
-   recursive = 8,  
-   copy_symlinks = 16,  
-   skip_symlinks = 32,  
-   directories_only = 64,  
-   create_symlinks = 128,  
-   create_hard_links = 256  
-};  
-```  
-  
-### <a name="values"></a>Valeurs  
-  
-|`Name`|Description|  
-|------------|-----------------|  
-|`none`|Exécute le comportement par défaut de l’opération.|  
-|`skip_existing`|Ne pas copier si le fichier existe déjà, ne pas signaler une erreur.|  
-|`overwrite_existing`|Remplacer le fichier s'il existe déjà.|  
-|`update_existing`|Remplacer le fichier s’il existe déjà et qu’il est plus ancien que le remplacement.|  
-|`recursive`|Copier dans les sous-répertoires et leur contenu de façon récursive.|  
-|`copy_symlinks`|Copier les liens symboliques sous la forme de liens symboliques, au lieu de copier les fichiers vers lesquels ils pointent.|  
-|`skip_symlinks`|Ignorer les liens symboliques.|  
-|`directories_only`|Itérer uniquement sur les répertoires, ignorer les fichiers.|  
-|`create_symlinks`|Créer des liens symboliques au lieu de copier les fichiers. Un chemin absolu doit servir de chemin source, sauf si la destination est le répertoire actuel.|  
-|`create_hard_links`|Créer des liens physiques au lieu de copier les fichiers.|  
-  
+**En-tête :** \<expérimentale/filesystem > **Namespace :** std::experimental::filesystem
 
-##  <a name="directory_options"></a> directory_options
-Spécifie s'il faut suivre les liens symboliques vers des répertoires ou les ignorer.  
-  
-### <a name="syntax"></a>Syntaxe  
-```cpp  
-enum class directory_options {  
-   none = 0,  
-   follow_directory_symlink 
-};  
-```  
-  
-### <a name="values"></a>Valeurs  
-  
-|Nom|Description|  
-|----------|-----------------|  
-|`none`|Comportement par défaut : ignorer les liens symboliques vers les répertoires. Autorisation refusée est une erreur.|  
-|`follow_directory_symlink`|Traiter les liens symboliques vers des répertoires comme des répertoires réels.|  
-  
-##  <a name="file_type"></a>  file_type
-Énumération pour les types de fichiers. Les valeurs prises en charge sont regular, directory, not_found et unknown.  
-  
-### <a name="syntax"></a>Syntaxe  
-```cpp  
+## <a name="copy_options"></a>  copy_options
+
+Énumération de valeurs de masque de bits utilisée avec les fonctions [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) et [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) pour spécifier le comportement.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+enum class copy_options {
+   none = 0,
+   skip_existing = 1,
+   overwrite_existing = 2,
+   update_existing = 4,
+   recursive = 8,
+   copy_symlinks = 16,
+   skip_symlinks = 32,
+   directories_only = 64,
+   create_symlinks = 128,
+   create_hard_links = 256
+};
+```
+
+### <a name="values"></a>Valeurs
+
+|`Name`|Description|
+|------------|-----------------|
+|`none`|Exécute le comportement par défaut de l’opération.|
+|`skip_existing`|Ne pas copier si le fichier existe déjà, ne pas signaler une erreur.|
+|`overwrite_existing`|Remplacer le fichier s'il existe déjà.|
+|`update_existing`|Remplacer le fichier s’il existe déjà et qu’il est plus ancien que le remplacement.|
+|`recursive`|Copier dans les sous-répertoires et leur contenu de façon récursive.|
+|`copy_symlinks`|Copier les liens symboliques sous la forme de liens symboliques, au lieu de copier les fichiers vers lesquels ils pointent.|
+|`skip_symlinks`|Ignorer les liens symboliques.|
+|`directories_only`|Itérer uniquement sur les répertoires, ignorer les fichiers.|
+|`create_symlinks`|Créer des liens symboliques au lieu de copier les fichiers. Un chemin absolu doit servir de chemin source, sauf si la destination est le répertoire actuel.|
+|`create_hard_links`|Créer des liens physiques au lieu de copier les fichiers.|
+
+
+## <a name="directory_options"></a> directory_options
+
+Spécifie s'il faut suivre les liens symboliques vers des répertoires ou les ignorer.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
+enum class directory_options {
+   none = 0,
+   follow_directory_symlink
+};
+```
+
+### <a name="values"></a>Valeurs
+
+|Nom|Description|
+|----------|-----------------|
+|`none`|Comportement par défaut : ignorer les liens symboliques vers les répertoires. Autorisation refusée est une erreur.|
+|`follow_directory_symlink`|Traiter les liens symboliques vers des répertoires comme des répertoires réels.|
+
+## <a name="file_type"></a>  file_type
+
+Énumération pour les types de fichiers. Les valeurs prises en charge sont regular, directory, not_found et unknown.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
 enum class file_type {
-    not_found = -1, 
-    none, 
-    regular, 
-    directory, 
+    not_found = -1,
+    none,
+    regular,
+    directory,
     symlink,
-    block, 
-    character, 
-    fifo, 
-    socket, 
+    block,
+    character,
+    fifo,
+    socket,
     unknown
-};  
-```  
-  
-### <a name="values"></a>Valeurs  
-  
-|Nom|Value|Description|  
-|----------|-----------|-----------------|  
-|`not_found`|-1|Représente un fichier qui n'existe pas.|  
-|`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|  
-|`regular`|1|Représente un fichier de disque conventionnel.|  
-|`directory`|2|Représente un répertoire.|  
-|`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|  
-|`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|  
-|`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|  
-|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|  
-|`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|  
-|`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|  
-  
-##  <a name="perms"></a>  perms
-Indicateurs pour les autorisations de fichiers. Les valeurs prises en charge sont essentiellement « readonly » et all. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.  
-  
-### <a name="syntax"></a>Syntaxe  
-```cpp  
+};
+```
+
+### <a name="values"></a>Valeurs
+
+|Nom|Value|Description|
+|----------|-----------|-----------------|
+|`not_found`|-1|Représente un fichier qui n'existe pas.|
+|`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
+|`regular`|1|Représente un fichier de disque conventionnel.|
+|`directory`|2|Représente un répertoire.|
+|`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|
+|`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|
+|`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
+|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
+|`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
+|`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
+
+## <a name="perms"></a>  perms
+
+Indicateurs pour les autorisations de fichiers. Les valeurs prises en charge sont essentiellement « readonly » et all. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.
+
+### <a name="syntax"></a>Syntaxe
+
+```cpp
 enum class perms {// names for permissions
    none = 0,
    owner_read = 0400,  // S_IRUSR
@@ -154,10 +163,10 @@ enum class perms {// names for permissions
    add_perms = 0x10000,
    remove_perms = 0x20000,
    resolve_symlinks = 0x40000
-};  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [\<filesystem>](../standard-library/filesystem.md)
+};
+```
 
+## <a name="see-also"></a>Voir aussi
+
+[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<filesystem>](../standard-library/filesystem.md)<br/>

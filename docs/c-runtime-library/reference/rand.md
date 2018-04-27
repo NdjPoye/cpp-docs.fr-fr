@@ -1,12 +1,12 @@
 ---
 title: rand | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand
@@ -39,15 +39,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fecd9079de1ae846d83847eb299890d62c29d17
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b5d60cdedf69d03871be4c408241660ea726b5c5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rand"></a>rand
 
-Génère un nombre pseudo-aléatoire en utilisant un algorithme bien connu et reproductible entièrement. Une version plus par programmation sécurisée de cette fonction est disponible ; consultez [rand_s](../../c-runtime-library/reference/rand-s.md). Générer des numéros `rand` ne sont pas sécurisé par chiffrement. Pour plus d’informations sécurisés par chiffrement génération de nombres aléatoires, utilisez `rand_s` ou les fonctions déclarées dans la bibliothèque Standard C++ [ \<aléatoire >](../../standard-library/random.md).
+Génère un nombre pseudo-aléatoire en utilisant un algorithme bien connu et reproductible entièrement. Une version plus par programmation sécurisée de cette fonction est disponible ; consultez [rand_s](rand-s.md). Générer des numéros **rand** ne sont pas sécurisé par chiffrement. Pour plus d’informations sécurisés par chiffrement génération de nombres aléatoires, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque Standard C++ [ \<aléatoire >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,21 +57,21 @@ int rand( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-`rand` retourne un nombre pseudo-aléatoire, comme décrit ci-dessus. Aucun retour d'erreur.
+**RAND** retourne un nombre pseudo-aléatoire, tel que décrit ci-dessus. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction `rand` retourne un entier pseudo-aléatoire compris entre 0 et `RAND_MAX` (32 767). Utilisez la fonction [srand](../../c-runtime-library/reference/srand.md) pour amorcer le générateur de nombres pseudo-aléatoires avant d’appeler `rand`.
+Le **rand** fonction retourne un entier pseudo-aléatoire comprise entre 0 et **RAND_MAX** (32767). Utilisez le [srand](srand.md) fonction pour amorcer le Générateur de nombres pseudo-aléatoires avant d’appeler **rand**.
 
-Le `rand` fonction génère une séquence connue et qu’il n’est pas appropriée pour une utilisation en tant qu’une fonction de chiffrement. Pour plus d’informations sécurisés par chiffrement génération de nombres aléatoires, utilisez `rand_s` ou les fonctions déclarées dans la bibliothèque Standard C++ [ \<aléatoire >](../../standard-library/random.md). Pour plus d’informations sur les inconvénients présentés par `rand()` et la façon dont `<random>` les traite, regardez [cette vidéo](http://go.microsoft.com/fwlink/?LinkId=397615).
+Le **rand** fonction génère une séquence connue et qu’il n’est pas appropriée pour une utilisation en tant qu’une fonction de chiffrement. Pour plus d’informations sécurisés par chiffrement génération de nombres aléatoires, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque Standard C++ [ \<aléatoire >](../../standard-library/random.md). Pour plus d’informations sur les problèmes avec **rand** et comment \<aléatoire > les traite, consultez [cette vidéo](http://go.microsoft.com/fwlink/?LinkId=397615).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`rand`|\<stdlib.h>|
+|**rand**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -125,7 +125,7 @@ int main( void )
 11651
 27464
 18093
- 3284
+3284
 11785
 14686
 11447
@@ -145,6 +145,6 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
-[rand_s](../../c-runtime-library/reference/rand-s.md)  
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[srand](srand.md)<br/>
+[rand_s](rand-s.md)<br/>

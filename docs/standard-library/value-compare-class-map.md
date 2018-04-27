@@ -1,12 +1,12 @@
 ---
 title: value_compare, classe (&lt;map&gt;) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - std::value_compare
@@ -18,24 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbb0f651c22702fdad7ca392fa76e4827c6c2e25
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 134d364c38b30584b2f8c242cd824ea522bc9259
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare, classe (&lt;map&gt;)
-Fournit un objet de fonction qui peut comparer les éléments d'un map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le map.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```
+
+Fournit un objet de fonction qui peut comparer les éléments d'un map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le map.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 class value_compare : public binary_function<value_type, value_type, bool>
 {
 public:
@@ -44,25 +45,26 @@ public:
 protected:
     key_compare comp;
 };
-```  
-  
-## <a name="remarks"></a>Notes  
- Le critère de comparaison fourni par `value_compare` entre des **value_types** d’éléments entiers contenus par un objet map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet **comp** de type `key_compare` stocké dans l’objet de fonction fourni par `value_compare` pour comparer les composants de clé de tri de deux éléments.  
-  
- Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, `value_compare` équivaut à `key_compare` ; pour les objets map et multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.  
-  
-## <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#value_comp) qui illustre comment déclarer et utiliser `value_compare`.  
-  
-## <a name="requirements"></a>Configuration requise  
- **En-tête :** \<map>  
-  
- **Espace de noms :** std  
-  
-## <a name="see-also"></a>Voir aussi  
- [binary_function, struct](../standard-library/binary-function-struct.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+```
 
+## <a name="remarks"></a>Notes
 
+Le critère de comparaison fourni par `value_compare` entre des **value_types** d’éléments entiers contenus par un objet map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet **comp** de type `key_compare` stocké dans l’objet de fonction fourni par `value_compare` pour comparer les composants de clé de tri de deux éléments.
 
+Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, `value_compare` équivaut à `key_compare` ; pour les objets map et multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#value_comp) qui illustre comment déclarer et utiliser `value_compare`.
+
+## <a name="requirements"></a>Spécifications
+
+**En-tête :** \<map>
+
+**Espace de noms :** std
+
+## <a name="see-also"></a>Voir aussi
+
+[binary_function, struct](../standard-library/binary-function-struct.md)<br/>
+[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

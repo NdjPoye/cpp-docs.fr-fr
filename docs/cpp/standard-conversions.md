@@ -1,12 +1,12 @@
 ---
 title: Conversions standard | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Conversions standard
 Le langage C++ définit les conversions entre ses types fondamentaux. Il définit également les conversions pour les types dérivés de pointeur, de référence et de pointeur vers membre. Ces conversions sont appelées « conversions standard ». (Pour plus d’informations sur les types et types dérivés des types standard, consultez [Types](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Les promotions de type conservation-valeur et les promotions qui conservent l'entier non signé produisent normalement les mêmes résultats. Toutefois, ils peuvent produire des résultats différents si l'objet promu est l'un des suivants :  
   
--   Un opérande de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , ou **>=**  
+-   Un opérande de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, ou **>=**  
   
      Ces opérateurs se basent sur un signe pour déterminer le résultat. Par conséquent, les promotions de type conservation-valeur et conservation-signe produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.  
   
--   L’opérande gauche de  **>>**  ou **>>=**  
+-   L’opérande gauche de **>>** ou **>>=**  
   
      Ces opérateurs traitent les quantités signées et non signées différemment en effectuant une opération de décalage. Pour les quantités signées, le déplacement de la quantité vers la droite provoque la propagation du bit de signe dans les positions binaires libérées. Pour les quantités non signées, les positions binaires libérées sont vides.  
   
@@ -120,8 +120,7 @@ int main()
   
  Les objets de types intégraux non signés peuvent être convertis en types signés correspondants. Toutefois, cette conversion peut entraîner une erreur d'interprétation des données si la valeur de l'objet non signé se situe en dehors de la plage qui peut être représentée par le type signé, comme illustré dans l'exemple suivant :  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Un objet de type flottant peut également être converti en type moins précis, s'il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de type flottant.) Si la valeur d'origine ne peut pas être représentée précisément, elle peut être convertie à la valeur représentable inférieure ou supérieure suivante. Si aucune valeur de ce type n'existe, le résultat n'est pas défini. Prenons l'exemple suivant :  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- La valeur maximale représentable par type **float** est 3.402823466E38 — un plus petit nombre à 1E300. Par conséquent, le nombre est converti à l'infini et le résultat est 1.#INF.  
+ La valeur maximale représentable par type **float** est 3.402823466E38 — un plus petit nombre à 1E300. Par conséquent, le nombre est converti à l’infini, et le résultat est « inf ».  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversions entre types intégraux et à virgule flottante  
  Certaines expressions peuvent provoquer la conversion des objets de type flottant en types intégraux, ou vice versa. Lorsqu'un objet de type intégral est converti en type flottant et que la valeur d'origine ne peut pas être représentée précisément, elle peut être convertie à la valeur représentable inférieure ou supérieure suivante.  

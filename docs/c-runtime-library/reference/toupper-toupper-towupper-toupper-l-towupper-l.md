@@ -1,12 +1,12 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _toupper_l
@@ -50,91 +50,97 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da016750a125c6645a878b3fee04a09c3e76e26
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2e5ee092690f257950acd84e1af69ca4c4f3e4c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
-Convertit le caractère en majuscule.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int toupper(  
-   int c   
-);  
-int _toupper(  
-   int c   
-);  
-int towupper(  
-   wint_t c   
-);  
-int _toupper_l(  
-   int c ,  
-   _locale_t locale  
-);  
-int _towupper_l(  
-   wint_t c ,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `c`  
- Caractère à convertir.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Chacune de ces routines convertit une copie de `c`, si possible, et retourne le résultat.  
-  
- Si `c` est un caractère large pour lequel `iswlower` a une valeur différente de zéro et s’il existe un caractère large correspondant pour lequel `iswupper` a une valeur différente de zéro, `towupper` retourne le caractère large correspondant ; sinon, `towupper` retourne `c` inchangé.  
-  
- Il n’existe aucune valeur de retour réservée pour indiquer une erreur.  
-  
- Pour que `toupper` donne les résultats attendus, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) doivent retourner une valeur différente de zéro.  
-  
-## <a name="remarks"></a>Notes  
- Chacune de ces routines convertit une lettre minuscule donnée en lettre majuscule si cela est possible et approprié. La conversion de la casse de `towupper` est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
-  
- Pour que `toupper` donne les résultats attendus, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) doivent retourner une valeur différente de zéro.  
-  
- [Routines de conversion de données](../../c-runtime-library/data-conversion.md)  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
-|`_totupper_l`|`_toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
-  
+
+Convertit le caractère en majuscule.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int toupper(
+   int c
+);
+int _toupper(
+   int c
+);
+int towupper(
+   wint_t c
+);
+int _toupper_l(
+   int c ,
+   _locale_t locale
+);
+int _towupper_l(
+   wint_t c ,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*c*<br/>
+Caractère à convertir.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+## <a name="return-value"></a>Valeur de retour
+
+Chacune de ces routines convertit une copie de *c*, si possible et retourne le résultat.
+
+Si *c* est un caractère large pour lequel **iswlower** est différente de zéro et il existe un caractère large correspondant pour lequel [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) est différent de zéro, **towupper** retourne le caractère large correspondant ; dans le cas contraire, **towupper** retourne *c* inchangée.
+
+Il n’existe aucune valeur de retour réservée pour indiquer une erreur.
+
+Dans l’ordre pour **toupper** afin de donner les résultats attendus, [__isascii](isascii-isascii-iswascii.md) et [islower](islower-iswlower-islower-l-iswlower-l.md) doit retourner différente de zéro.
+
+## <a name="remarks"></a>Notes
+
+Chacune de ces routines convertit une lettre minuscule donnée en lettre majuscule si cela est possible et approprié. La conversion de casse **towupper** est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans le **_l** suffixe utiliser actuellement défini aux paramètres régionaux. Les versions de ces fonctions avec le **_l** suffixe prend les paramètres régionaux en tant que paramètre et l’utiliser à la place la paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+Dans l’ordre pour **toupper** afin de donner les résultats attendus, [__isascii](isascii-isascii-iswascii.md) et [isupper](isupper-isupper-l-iswupper-iswupper-l.md) doit retourner différente de zéro.
+
+[Routines de conversion de données](../../c-runtime-library/data-conversion.md)
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
+
 > [!NOTE]
->  Les routines `_toupper_l` et `_towupper_l` ne dépendent pas des paramètres régionaux et ne sont pas destinées à être appelées directement. Elles sont fournies pour une utilisation en interne par `_totupper_l`.  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`toupper`|\<ctype.h>|  
-|`_toupper`|\<ctype.h>|  
-|`towupper`|\<ctype.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple dans [to, fonctions](../../c-runtime-library/to-functions.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [is, isw, routines](../../c-runtime-library/is-isw-routines.md)   
- [to, fonctions](../../c-runtime-library/to-functions.md)   
- [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> **_toupper_l** et **_towupper_l** n’ont aucune dépendance des paramètres régionaux et ne sont pas destinés à être appelée directement. Elles sont fournies à un usage interne par **_totupper_l**.
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**toupper**|\<ctype.h>|
+|**_toupper**|\<ctype.h>|
+|**towupper**|\<ctype.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple dans [to, fonctions](../../c-runtime-library/to-functions.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[to, fonctions](../../c-runtime-library/to-functions.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

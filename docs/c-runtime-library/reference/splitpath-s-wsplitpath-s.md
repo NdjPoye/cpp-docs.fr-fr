@@ -1,12 +1,12 @@
 ---
 title: _splitpath_s, _wsplitpath_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wsplitpath_s
@@ -39,155 +39,161 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baa71ca1a3d624c08df8ff1cbd14a9386e1b83d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7b04dec6f1f8129283815c2dcb6211f93139800f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
-Divise un nom de chemin en composants. Ces versions de [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-errno_t _splitpath_s(  
-   const char * path,  
-   char * drive,  
-   size_t driveNumberOfElements,  
-   char * dir,  
-   size_t dirNumberOfElements,  
-   char * fname,  
-   size_t nameNumberOfElements,  
-   char * ext,   
-   size_t extNumberOfElements  
-);  
-errno_t _wsplitpath_s(  
-   const wchar_t * path,  
-   wchar_t * drive,  
-   size_t driveNumberOfElements,  
-   wchar_t *dir,  
-   size_t dirNumberOfElements,  
-   wchar_t * fname,  
-   size_t nameNumberOfElements,  
-   wchar_t * ext,  
-   size_t extNumberOfElements  
-);  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _splitpath_s(  
-   const char *path,  
-   char (&drive)[drivesize],  
-   char (&dir)[dirsize],  
-   char (&fname)[fnamesize],  
-   char (&ext)[extsize]  
-); // C++ only  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _wsplitpath_s(  
-   const wchar_t *path,  
-   wchar_t (&drive)[drivesize],  
-   wchar_t (&dir)[dirsize],  
-   wchar_t (&fname)[fnamesize],  
-   wchar_t (&ext)[extsize]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- [in] `path`  
- Chemin complet.  
-  
- [out] `drive`  
- Lettre de lecteur suivie de deux-points (`:`). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.  
-  
- [in] `driveNumberOfElements`  
- Taille de la mémoire tampon `drive` en caractères larges ou codés sur un octet. Si `drive` a la valeur `NULL`, cette valeur doit être égale à 0.  
-  
- [out] `dir`  
- Chemin de répertoire incluant une barre oblique de fin. Il est possible d’utiliser des barres obliques ( `/` ), des barres obliques inverses ( `\` ) ou les deux à la fois. Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin du chemin de répertoire.  
-  
- [in] `dirNumberOfElements`  
- Taille de la mémoire tampon `dir` en caractères larges ou codés sur un octet. Si `dir` a la valeur `NULL`, cette valeur doit être égale à 0.  
-  
- [out] `fname`  
- Nom de fichier de base (sans extension). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin du nom de fichier.  
-  
- [in] `nameNumberOfElements`  
- Taille de la mémoire tampon `fname` en caractères larges ou codés sur un octet. Si `fname` a la valeur `NULL`, cette valeur doit être égale à 0.  
-  
- [out] `ext`  
- Extension de nom de fichier incluant le point de début (**.**). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.  
-  
- [in] `extNumberOfElements`  
- Taille de la mémoire tampon `ext` en caractères larges ou codés sur un octet. Si `ext` a la valeur `NULL`, cette valeur doit être égale à 0.  
-  
-## <a name="return-value"></a>Valeur de retour  
- Zéro si l'opération a réussi ; code d'erreur en cas de échec.  
-  
-### <a name="error-conditions"></a>Conditions d’erreur  
-  
-|Condition|Valeur de retour|  
-|---------------|------------------|  
-|`path` a la valeur `NULL`.|`EINVAL`|  
-|`drive` a la valeur `NULL`, `driveNumberOfElements` est différent de zéro|`EINVAL`|  
-|`drive` n’a pas la valeur `NULL`, `driveNumberOfElements` est égal à zéro|`EINVAL`|  
-|`dir` a la valeur `NULL`, `dirNumberOfElements` est différent de zéro|`EINVAL`|  
-|`dir` n’a pas la valeur `NULL`, `dirNumberOfElements` est égal à zéro|`EINVAL`|  
-|`fname` a la valeur `NULL`, `nameNumberOfElements` est différent de zéro|`EINVAL`|  
-|`fname` n’a pas la valeur `NULL`, `nameNumberOfElements` est égal à zéro|`EINVAL`|  
-|`ext` a la valeur `NULL`, `extNumberOfElements` est différent de zéro|`EINVAL`|  
-|`ext` n’a pas la valeur `NULL`, `extNumberOfElements` est égal à zéro|`EINVAL`|  
-  
- Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.  
-  
- Si la taille de l’une des mémoires tampons ne suffit pas à contenir le résultat, ces fonctions remplacent le contenu de toutes les mémoires tampons par des chaînes vides, affectent à `errno` la valeur `ERANGE` et retournent `ERANGE`.  
-  
-## <a name="remarks"></a>Notes  
- La fonction `_splitpath_s` divise un chemin en quatre composants. `_splitpath_s` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath_s` est une version à caractères larges de `_splitpath_s` ; les arguments de `_wsplitpath_s` sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tsplitpath_s`|`_splitpath_s`|`_splitpath_s`|`_wsplitpath_s`|  
-  
- Chaque composant du chemin complet est stocké dans une mémoire tampon distincte ; les constantes manifestes `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` et `_MAX_EXT` (définies dans STDLIB.H) spécifient la taille maximale autorisée de chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.  
-  
- Le tableau suivant répertorie les valeurs des constantes manifestes.  
-  
-|Name|Value|  
-|----------|-----------|  
-|_MAX_DRIVE|3|  
-|_MAX_DIR|256|  
-|_MAX_FNAME|256|  
-|_MAX_EXT|256|  
-  
- Si le chemin complet ne contient pas de composant (par exemple, un nom de fichier), `_splitpath_s` affecte une chaîne vide à la mémoire tampon correspondante.  
-  
- En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_splitpath_s`|\<stdlib.h>|  
-|`_wsplitpath_s`|\<stdlib.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple relatif à [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+
+Divise un nom de chemin en composants. Ces versions de [_splitpath, _wsplitpath](splitpath-wsplitpath.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+errno_t _splitpath_s(
+   const char * path,
+   char * drive,
+   size_t driveNumberOfElements,
+   char * dir,
+   size_t dirNumberOfElements,
+   char * fname,
+   size_t nameNumberOfElements,
+   char * ext,
+   size_t extNumberOfElements
+);
+errno_t _wsplitpath_s(
+   const wchar_t * path,
+   wchar_t * drive,
+   size_t driveNumberOfElements,
+   wchar_t *dir,
+   size_t dirNumberOfElements,
+   wchar_t * fname,
+   size_t nameNumberOfElements,
+   wchar_t * ext,
+   size_t extNumberOfElements
+);
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _splitpath_s(
+   const char *path,
+   char (&drive)[drivesize],
+   char (&dir)[dirsize],
+   char (&fname)[fnamesize],
+   char (&ext)[extsize]
+); // C++ only
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _wsplitpath_s(
+   const wchar_t *path,
+   wchar_t (&drive)[drivesize],
+   wchar_t (&dir)[dirsize],
+   wchar_t (&fname)[fnamesize],
+   wchar_t (&ext)[extsize]
+); // C++ only
+```
+
+### <a name="parameters"></a>Paramètres
+
+*path*<br/>
+Chemin complet.
+
+*Lecteur*<br/>
+Lecteur, suivie du signe deux-points (**:**). Vous pouvez passer **NULL** pour ce paramètre, si vous n’avez pas besoin de la lettre de lecteur.
+
+*driveNumberOfElements*<br/>
+La taille de la *lecteur* mémoire tampon en caractères codés sur un octet ou larges. Si *lecteur* est **NULL**, cette valeur doit être 0.
+
+*dir*<br/>
+Chemin de répertoire incluant une barre oblique de fin. Barres obliques ( **/** ), les barres obliques inverses ( **\\** ), ou les deux peuvent être utilisés. Vous pouvez passer **NULL** pour ce paramètre, si vous n’avez pas besoin du chemin d’accès de répertoire.
+
+*dirNumberOfElements*<br/>
+La taille de la *dir* mémoire tampon en caractères codés sur un octet ou larges. Si *dir* est **NULL**, cette valeur doit être 0.
+
+*fname*<br/>
+Nom de fichier de base (sans extension). Vous pouvez passer **NULL** pour ce paramètre, si vous n’avez pas besoin du nom de fichier.
+
+*nameNumberOfElements*<br/>
+La taille de la *fname* mémoire tampon en caractères codés sur un octet ou larges. Si *fname* est **NULL**, cette valeur doit être 0.
+
+*Ext*<br/>
+Extension de nom de fichier, y compris le début de période (**.**). Vous pouvez passer **NULL** pour ce paramètre, si vous n’avez pas besoin de l’extension de nom de fichier.
+
+*extNumberOfElements*<br/>
+La taille de *ext* mémoire tampon en caractères codés sur un octet ou larges. Si *ext* est **NULL**, cette valeur doit être 0.
+
+## <a name="return-value"></a>Valeur de retour
+
+Zéro si l'opération a réussi ; code d'erreur en cas de échec.
+
+### <a name="error-conditions"></a>Conditions d’erreur
+
+|Condition|Valeur de retour|
+|---------------|------------------|
+|*chemin d’accès* est **NULL**|**EINVAL**|
+|*lecteur* est **NULL**, *driveNumberOfElements* est différente de zéro|**EINVAL**|
+|*lecteur* est non -**NULL**, *driveNumberOfElements* est égal à zéro|**EINVAL**|
+|*dir* est **NULL**, *dirNumberOfElements* est différente de zéro|**EINVAL**|
+|*dir* est non -**NULL**, *dirNumberOfElements* est égal à zéro|**EINVAL**|
+|*fname* est **NULL**, *nameNumberOfElements* est différente de zéro|**EINVAL**|
+|*fname* est non -**NULL**, *nameNumberOfElements* est égal à zéro|**EINVAL**|
+|*Ext* est **NULL**, *extNumberOfElements* est différente de zéro|**EINVAL**|
+|*Ext* est non -**NULL**, *extNumberOfElements* est égal à zéro|**EINVAL**|
+
+Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **EINVAL**.
+
+Si une des mémoires tampons est trop court pour contenir le résultat, ces fonctions effacer toutes les mémoires tampons pour les chaînes vides, définissez **errno** à **ERANGE**et retourner **ERANGE**.
+
+## <a name="remarks"></a>Notes
+
+Le **_splitpath_s** fonction s’arrête à un chemin d’accès en quatre composants. **_splitpath_s** gère automatiquement les arguments de chaîne de caractères multioctets selon le cas, le cas des séquences de caractères multioctets selon la page de codes multioctets en cours d’utilisation. **_wsplitpath_s** est une version à caractères larges de **_splitpath_s**; les arguments de **_wsplitpath_s** sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
+
+Chaque composant du chemin d’accès complet est stocké dans une mémoire tampon distincte ; les constantes de manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, et **_MAX_EXT** (défini dans STDLIB. H) spécifier la taille maximale autorisée pour chaque composant du fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.
+
+Le tableau suivant répertorie les valeurs des constantes manifestes.
+
+|Name|Value|
+|----------|-----------|
+|_MAX_DRIVE|3|
+|_MAX_DIR|256|
+|_MAX_FNAME|256|
+|_MAX_EXT|256|
+
+Si le chemin d’accès complet ne contient pas un composant (par exemple, un nom de fichier), **_splitpath_s** affecte une chaîne vide à la mémoire tampon correspondante.
+
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_splitpath_s**|\<stdlib.h>|
+|**_wsplitpath_s**|\<stdlib.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
+[_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_makepath, _wmakepath](makepath-wmakepath.md)<br/>
+[_setmbcp](setmbcp.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: add_cv, classe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::add_cv
@@ -16,67 +16,69 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24709bf7b14d398f55540dd65633785e536280e1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5996fb3490d15947c825077ea963ac08b20c546
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="addcv-class"></a>add_cv, classe
-Crée un type volatile const à partir d’un type.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-template <class T>  
-struct add_cv;  
- 
+
+Crée un type volatile const à partir d’un type.
+
+## <a name="syntax"></a>Syntaxe
+
+```cpp
 template <class T>
-using add_cv_t = typename add_cv<T>::type;  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
-*T*  
-Type à modifier.  
-  
-## <a name="remarks"></a>Notes  
-Une instance du type modifié `add_cv<T>` a un typedef de membre `type` équivalent à *T* modifié par [add_volatile](../standard-library/add-volatile-class.md) et [add_const](../standard-library/add-const-class.md), sauf si *T* a déjà les qualificateurs cv, est une référence ou une fonction.  
-  
+struct add_cv;
+
+template <class T>
+using add_cv_t = typename add_cv<T>::type;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*T* type à modifier.
+
+## <a name="remarks"></a>Notes
+
+Une instance du type modifié `add_cv<T>` a un typedef de membre `type` équivalent à *T* modifié par [add_volatile](../standard-library/add-volatile-class.md) et [add_const](../standard-library/add-const-class.md), sauf si *T* a déjà les qualificateurs cv, est une référence ou une fonction.
+
 Le type d’assistance `add_cv_t<T>` est un raccourci pour accéder au typedef de membre de `add_cv<T>` `type`.
-  
-## <a name="example"></a>Exemple  
-  
-```cpp  
+
+## <a name="example"></a>Exemple
+
+```cpp
 // add_cv.cpp
 // compile by using: cl /EHsc /W4 add_cv.cpp
-#include <type_traits>   
-#include <iostream>   
+#include <type_traits>
+#include <iostream>
 
 struct S {
-    void f() { 
-        std::cout << "invoked non-cv-qualified S.f()" << std::endl; 
+    void f() {
+        std::cout << "invoked non-cv-qualified S.f()" << std::endl;
     }
-    void f() const { 
-        std::cout << "invoked const S.f()" << std::endl; 
+    void f() const {
+        std::cout << "invoked const S.f()" << std::endl;
     }
-    void f() volatile { 
-        std::cout << "invoked volatile S.f()" << std::endl; 
+    void f() volatile {
+        std::cout << "invoked volatile S.f()" << std::endl;
     }
-    void f() const volatile { 
-        std::cout << "invoked const volatile S.f()" << std::endl; 
+    void f() const volatile {
+        std::cout << "invoked const volatile S.f()" << std::endl;
     }
 };
 
 template <class T>
 void invoke() {
     T t;
-    ((T *)&t)->f(); 
+    ((T *)&t)->f();
 }
 
 int main()
@@ -85,21 +87,22 @@ int main()
     invoke<std::add_const<S>::type>();
     invoke<std::add_volatile<S>::type>();
     invoke<std::add_cv<S>::type>();
-}  
-```  
-  
-```Output  
+}
+```
+
+```Output
 invoked non-cv-qualified S.f()
 invoked const S.f()
 invoked volatile S.f()
-invoked const volatile S.f()  
-```  
-  
-## <a name="requirements"></a>Configuration requise  
-**En-tête :** \<type_traits>  
-**Espace de noms :** std  
-  
-## <a name="see-also"></a>Voir aussi  
-[<type_traits>](../standard-library/type-traits.md)   
-[remove_const, classe](../standard-library/remove-const-class.md)   
-[remove_volatile, classe](../standard-library/remove-volatile-class.md)
+invoked const volatile S.f()
+```
+
+## <a name="requirements"></a>Spécifications
+
+**En-tête :** \<type_traits > **Namespace :** std
+
+## <a name="see-also"></a>Voir aussi
+
+[<type_traits>](../standard-library/type-traits.md)<br/>
+[remove_const, classe](../standard-library/remove-const-class.md)<br/>
+[remove_volatile, classe](../standard-library/remove-volatile-class.md)<br/>

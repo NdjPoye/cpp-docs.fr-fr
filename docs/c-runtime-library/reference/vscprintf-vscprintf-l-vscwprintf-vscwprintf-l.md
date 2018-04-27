@@ -1,12 +1,12 @@
 ---
 title: _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vscprintf
@@ -51,92 +51,98 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0ba44a2e23baf8d901cb6bf5d9abd8306c32527
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4a8cfdd7eded5956e9e34faed53e93e0ad029361
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
-Retourne le nombre de caractères présents dans la chaîne mise en forme en utilisant un pointeur désignant une liste d’arguments.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-int _vscprintf(  
-   const char *format,  
-   va_list argptr   
-);  
-int _vscprintf_l(  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vscwprintf(  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vscwprintf_l(  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-```  
-  
-#### <a name="parameters"></a>Paramètres  
- `format`  
- Chaîne de contrôle de format.  
-  
- `argptr`  
- Pointeur vers la liste d'arguments.  
-  
- `locale`  
- Paramètres régionaux à utiliser.  
-  
- Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="return-value"></a>Valeur de retour  
- `_vscprintf` retourne le nombre de caractères qui seraient générés si la chaîne vers laquelle la liste d’arguments pointe était imprimée ou envoyée vers un fichier ou une mémoire tampon en utilisant les codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. `_vscwprintf` exécute la même fonction pour les caractères larges.  
-  
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
-  
- Si `format` est un pointeur Null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
-  
-## <a name="remarks"></a>Notes  
- Chaque `argument` éventuel est converti selon la spécification de format correspondante de `format`. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument `format` pour [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
+
+Retourne le nombre de caractères présents dans la chaîne mise en forme en utilisant un pointeur désignant une liste d’arguments.
+
+## <a name="syntax"></a>Syntaxe
+
+```C
+int _vscprintf(
+   const char *format,
+   va_list argptr
+);
+int _vscprintf_l(
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vscwprintf(
+   const wchar_t *format,
+   va_list argptr
+);
+int _vscwprintf_l(
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*format*<br/>
+Chaîne de contrôle de format.
+
+*argptr*<br/>
+Pointeur vers la liste d'arguments.
+
+*locale*<br/>
+Paramètres régionaux à utiliser.
+
+Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="return-value"></a>Valeur de retour
+
+**_vscprintf** renvoie le nombre de caractères qui est générée si la chaîne pointée par la liste d’arguments a été imprimé ou envoyé vers un fichier ou les codes de la mémoire tampon à l’aide de la mise en forme spécifiée. La valeur retournée n’inclut pas le caractère Null de fin. **_vscwprintf** effectue la même fonction pour les caractères larges.
+
+Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+
+Si *format* est un pointeur null, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+
+## <a name="remarks"></a>Notes
+
+Chaque *argument* (le cas échéant) est convertie en fonction de la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md).
+
 > [!IMPORTANT]
->  Si `format` est une chaîne définie par l’utilisateur, vérifiez qu’elle se termine par un caractère null et qu’elle comprend le nombre et le type de paramètres appropriés. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
-  
-|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vsctprintf`|`_vscprintf`|`_vscprintf`|`_vscwprintf`|  
-|`_vsctprintf_l`|`_vscprintf_l`|`_vscprintf_l`|`_vscwprintf_l`|  
-  
-## <a name="requirements"></a>Configuration requise  
-  
-|Routine|En-tête requis|  
-|-------------|---------------------|  
-|`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
-|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> ou \<wchar.h>|  
-  
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
-  
-## <a name="example"></a>Exemple  
- Consultez l’exemple relatif à [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
-  
-## <a name="see-also"></a>Voir aussi  
- [E/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)
+> Garantir que si *format* est une chaîne définie par l’utilisateur, il se termine par null et le nombre et le type de paramètres. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
+
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
+|**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
+
+## <a name="requirements"></a>Spécifications
+
+|Routine|En-tête requis|
+|-------------|---------------------|
+|**_vscprintf**, **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**, **_vscwprintf_l**|\<stdio.h> ou \<wchar.h>|
+
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Exemple
+
+Consultez l’exemple relatif à [vsprintf](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).
+
+## <a name="see-also"></a>Voir aussi
+
+[E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
+[vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)<br/>
