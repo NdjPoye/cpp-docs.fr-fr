@@ -1,12 +1,12 @@
 ---
 title: C4000 des avertissements du compilateur via C4199 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 des avertissements du compilateur via C4199
 
@@ -159,6 +159,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4051|conversion de type ; perte possible de données|
 |Avertissement du compilateur (niveau 4) C4052|déclarations de fonction différentes, une seule contient des arguments de variables|
 |Avertissement du compilateur (niveau 4) C4053|un opérande void pour '?:'|
+|[Avertissement du compilateur (niveau 1) C4055](compiler-warning-level-1-c4055.md)|'conversion' : du pointeur donnée '*type1*'vers le pointeur de fonction'*type2*'|
 |[Avertissement du compilateur (niveau 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|dans l’opération arithmétique de constante à virgule flottante de dépassement de capacité|
 |Avertissement du compilateur (niveau 4) C4057|'opérateur' : 'identificateur1' diffère dans l’indirection vers des types de base légèrement différents de 'identificateur2'|
 |Avertissement C4060 du compilateur|l’instruction switch ne contient aucune étiquette 'case' ou 'default'|
@@ -232,7 +233,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4155|suppression d'une expression de tableau sans utiliser la forme 'delete' de tableau|
 |[Avertissement du compilateur (niveau 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|suppression d’une expression de tableau sans utiliser la forme 'delete' ; forme de tableau substituée|
 |[Avertissement du compilateur (niveau 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|pragma ignoré par le compilateur C|
-|Avertissement du compilateur (niveau 1) C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
+|Avertissement du compilateur (niveau 1) C4158|en supposant que #pragma pointers_to_members (full_generality, 'inheritance_type')|
 |[Avertissement du compilateur (niveau 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...) : a exécuté un POP l’identificateur 'identificateur'|
 |Avertissement du compilateur (niveau 1) C4160|#pragma ' pragma'(pop,...) : n’a pas trouvé l’identificateur 'identificateur'|
 |Avertissement du compilateur (niveau 3) C4161|#pragma ' pragma'(pop...) : plus de POP que de push|
