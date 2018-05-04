@@ -1,12 +1,9 @@
 ---
-title: "Limites d’entier | Documents Microsoft"
-ms.custom: 
+title: Limites d’entier | Documents Microsoft
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fc79f225d340777751ca513c0fb47dd33e17ad
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 656873dc510f53fc05250a28c61cc452078c4aca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integer-limits"></a>Limites d'entier
 
@@ -50,10 +45,10 @@ Les limites pour les types d'entiers sont répertoriées dans le tableau ci-dess
 |**USHRT_MAX**|Valeur maximale d'une variable de type **unsigned short**.|65535 (0xffff)|
 |**INT_MIN**|Valeur minimale d’une variable de type **int**.|-2147483648|
 |**INT_MAX**|Valeur maximale d’une variable de type **int**.|2147483647|
-|**UINT_MAX**|Valeur maximale d’une variable de type **int non signées**.|4294967295 (0xffffffff)|
+|**UINT_MAX**|Valeur maximale d’une variable de type **unsigned int**.|4294967295 (0xffffffff)|
 |**LONG_MIN**|Valeur minimale d'une variable de type **long**.|-2147483648|
 |**LONG_MAX**|Valeur maximale d'une variable de type **long**.|2147483647|
-|**ULONG_MAX**|Valeur maximale d’une variable de type **long non signé**.|4294967295 (0xffffffff)|
+|**ULONG_MAX**|Valeur maximale d’une variable de type **unsigned long**.|4294967295 (0xffffffff)|
 |**LLONG_MIN**|Valeur minimale d’une variable de type **long**|-9223372036854775808|
 |**LLONG_MAX**|Valeur maximale d’une variable de type **long**|9223372036854775807|
 |**ULLONG_MAX**|Valeur maximale d’une variable de type **long long non signé**|18446744073709551615 (0xffffffffffffffff)|

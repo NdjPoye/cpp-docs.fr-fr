@@ -2,28 +2,23 @@
 title: Règles et Limitations pour les fonctions Naked | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a007cd18714906b3897004549da83053b42ec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Règles et limitations concernant les fonctions naked
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Le `naked` mot clé est ignoré lors de la compilation avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de pile pour cette variable. Exemple :  
+-   Pour [__fastcall](../cpp/fastcall.md) fonctions naked, chaque fois qu’il existe une référence dans le code C/C++ à un des arguments de Registre, le code de prologue doit stocker les valeurs de ce Registre à l’emplacement de pile pour cette variable. Par exemple :  
   
 ```  
 // nkdfastcl.cpp  

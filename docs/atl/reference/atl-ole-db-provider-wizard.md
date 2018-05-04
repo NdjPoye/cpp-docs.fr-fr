@@ -1,12 +1,9 @@
 ---
 title: Assistant fournisseur Oledb ATL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 Cet Assistant crée les classes qui composent un fournisseur OLE DB.  
@@ -39,7 +34,7 @@ Cet Assistant crée les classes qui composent un fournisseur OLE DB.
  **Nom court**  
  Tapez le nom court du fournisseur à créer. Les autres zones d’édition dans l’Assistant seront rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres zones de nom si vous le souhaitez.  
   
- **Coclasse**  
+ **coclasse**  
  Le nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.  
   
  **Attribué**  

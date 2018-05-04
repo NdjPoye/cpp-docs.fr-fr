@@ -1,12 +1,9 @@
 ---
-title: "Résumé des règles de portée | Documents Microsoft"
-ms.custom: 
+title: Résumé des règles de portée | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, [accès aux membres](../cpp/member-access-control-cpp.md) les règles sont appliquées.  
@@ -47,7 +42,7 @@ L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point
 ## <a name="qualified-names"></a>Noms qualifiés  
  Les noms utilisés avec l'opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l’opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l’opérateur ou membre d’une ou plusieurs de ses classes de base.  
   
- Les noms spécifiés après l’opérateur de sélection de membre (**.** ou  **->** ) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de  **->**  est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)  
+ Les noms spécifiés après l’opérateur de sélection de membre (**.** ou **->**) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de **->** est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)  
   
  Le compilateur recherche les noms dans l'ordre suivant et s'arrête après avoir trouvé le nom :  
   

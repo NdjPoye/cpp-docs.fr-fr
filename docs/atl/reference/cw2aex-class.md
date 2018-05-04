@@ -1,12 +1,9 @@
 ---
 title: Classe de CW2AEX | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fd48a34b82e0671d417a882e040a87a7691c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2aex-class"></a>Classe de CW2AEX
 Cette classe est utilisée par les macros de conversion de chaînes `CT2AEX`, `CW2TEX`, `CW2CTEX`, et `CT2CAEX`et le typedef **CW2A**.  
@@ -98,10 +93,10 @@ class CW2AEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
   
-##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>  CW2AEX::CW2AEX  
  Constructeur.  
   
 ```
@@ -119,7 +114,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Notes  
  Alloue de la mémoire tampon utilisée dans le processus de traduction.  
   
-##  <a name="dtor"></a>CW2AEX :: ~ CW2AEX  
+##  <a name="dtor"></a>  CW2AEX :: ~ CW2AEX  
  Destructeur.  
   
 ```
@@ -129,21 +124,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
-##  <a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>  CW2AEX::m_psz  
  Le membre de données qui stocke la chaîne source.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer  
  La mémoire tampon statique, utilisé pour stocker la chaîne convertie.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR  
  Opérateur de conversion.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: __thiscall | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __thiscall
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55f7d288758b345dfc4f182f2153e0d39a1b349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dccd9e80a23b1636bd869d406824c9997f4cdef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Dans les versions antérieures à Visual C++ 2005, la convention d’appel thiscall ne peut pas être explicitement spécifiée dans un programme, car `thiscall` n’était pas un mot clé.  
   
- `vararg`Utilisez les fonctions membres le `__cdecl` convention d’appel. Tous les arguments de fonction sont insérés dans la pile, avec le `this` pointeur placées en dernier dans la pile  
+ `vararg` Utilisez les fonctions membres le `__cdecl` convention d’appel. Tous les arguments de fonction sont insérés dans la pile, avec le `this` pointeur placées en dernier dans la pile  
   
  Étant donné que cette convention d’appel s’applique uniquement à C++, il n’existe aucun schéma de décoration de nom C.  
   

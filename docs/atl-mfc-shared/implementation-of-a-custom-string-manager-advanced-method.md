@@ -1,29 +1,24 @@
 ---
-title: "Implémentation d’un gestionnaire de chaîne personnalisée (méthode d’avancé) | Documents Microsoft"
-ms.custom: 
+title: Implémentation d’un gestionnaire de chaîne personnalisée (méthode d’avancé) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)
 Dans des cas spéciaux, il pourrez que vous souhaitez implémenter un gestionnaire de chaînes personnalisé qui change plus que de segment de mémoire est utilisé pour allouer de la mémoire. Dans ce cas, vous devez implémenter manuellement le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface en tant que gestionnaire de chaînes personnalisé.  
@@ -34,7 +29,7 @@ Dans des cas spéciaux, il pourrez que vous souhaitez implémenter un gestionnai
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) ce champ pointe vers le `IAtlStringMgr` interface utilisée pour gérer les données de type chaîne. Lorsque `CStringT` doit réallouer ou libérer la mémoire tampon de chaîne qu’elle appelle la réallocation ou libres méthodes de cette interface, en passant le `CStringData` structure en tant que paramètre. Lors de l’allocation un `CStringData` structure dans le Gestionnaire de chaînes, vous devez définir ce champ pour pointer vers le Gestionnaire de chaînes personnalisé.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) ce champ contient la longueur actuelle de la logique de la chaîne stockée dans la mémoire tampon à l’exclusion du caractère null de fin. `CStringT`met à jour ce champ lorsque la longueur de la chaîne est modifiée. Lors de l’allocation un `CStringData` structure, le Gestionnaire de chaînes doit définissez ce champ à zéro. Lors de la réallocation un `CStringData` structure, le Gestionnaire de chaînes personnalisé doit laisser ce champ inchangé.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) ce champ contient la longueur actuelle de la logique de la chaîne stockée dans la mémoire tampon à l’exclusion du caractère null de fin. `CStringT` met à jour ce champ lorsque la longueur de la chaîne est modifiée. Lors de l’allocation un `CStringData` structure, le Gestionnaire de chaînes doit définissez ce champ à zéro. Lors de la réallocation un `CStringData` structure, le Gestionnaire de chaînes personnalisé doit laisser ce champ inchangé.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) ce champ contient le nombre maximal de caractères (sans le caractère null de fin) qui peuvent être stockées dans cette mémoire tampon de chaîne sans la réallouer. Chaque fois que `CStringT` a besoin d’augmenter la longueur logique de la chaîne, il vérifie d’abord ce champ pour vous assurer que l’espace est suffisant dans la mémoire tampon. Si la vérification échoue, `CStringT` appelle le Gestionnaire de chaînes personnalisé pour réallouer la mémoire tampon. Lors de l’attribution ou de réallocation un `CStringData` structure, vous devez configurer ce champ au moins le nombre de caractères demandé dans le **nChars** paramètre [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) ou [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). S’il existe davantage d’espace dans la mémoire tampon que celle demandée, vous pouvez définir cette valeur afin de refléter la quantité réelle de l’espace disponible. Cela permet de `CStringT` d’agrandir la chaîne pour remplir l’ensemble de l’espace alloué à l’avant qu’il ait rappeler dans le Gestionnaire de chaînes pour réallouer la mémoire tampon.  
   

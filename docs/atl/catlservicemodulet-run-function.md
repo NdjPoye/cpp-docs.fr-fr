@@ -1,13 +1,10 @@
 ---
 title: Fonction CAtlServiceModuleT::Run | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule::Run
 - CServiceModule.Run
@@ -17,22 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run (fonction)
 **Exécutez** contient des appels de `PreMessageLoop`, `RunMessageLoop`, et `PostMessageLoop`. Après avoir été appelé, `PreMessageLoop` stocke d’abord les ID de thread. du service Le service utilisera cet ID pour se fermer lui-même en envoyant un **WM_QUIT** de message à l’aide de la fonction API Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop`appelle ensuite `InitializeSecurity`. Par défaut, `InitializeSecurity` appelle [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) avec le descripteur de sécurité la valeur NULL, ce qui signifie que n’importe quel utilisateur a accès à votre objet.  
+ `PreMessageLoop` appelle ensuite `InitializeSecurity`. Par défaut, `InitializeSecurity` appelle [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) avec le descripteur de sécurité la valeur NULL, ce qui signifie que n’importe quel utilisateur a accès à votre objet.  
   
  Si vous ne souhaitez pas que le service spécifie sa propre sécurité, substituez `PreMessageLoop` et n’appelez pas `InitializeSecurity`, et COM puis détermine les paramètres de sécurité à partir du Registre. Un moyen pratique de configurer les paramètres du Registre est la [DCOMCNFG](../atl/dcomcnfg.md) utilitaire décrit plus loin dans cette section.  
   

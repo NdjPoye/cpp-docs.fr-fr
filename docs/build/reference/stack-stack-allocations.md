@@ -1,13 +1,10 @@
 ---
 title: -STACK (pile des Allocations) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.StackReserveSize
 - VC.Project.VCLinkerTool.StackCommitSize
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b487ff830abd3dfa97a748c81d541cbd9fdd0b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-stack-allocations"></a>/STACK, allocations de la pile
 ```  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Le `reserve` valeur spécifie l’allocation de pile total dans la mémoire virtuelle. Pour ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] machines, la taille de pile par défaut est de 1 Mo.  
   
- `commit`est soumis à l’interprétation par le système d’exploitation. Dans Windows RT de Windows, il spécifie la quantité de mémoire physique à allouer à la fois. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur fait gagner du temps quand l’application requiert davantage d’espace de pile, mais augmente les besoins en mémoire et éventuellement le temps de démarrage. Pour ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] machines, la valeur de validation par défaut est de 4 Ko.  
+ `commit` est soumis à l’interprétation par le système d’exploitation. Dans Windows RT de Windows, il spécifie la quantité de mémoire physique à allouer à la fois. Mémoire virtuelle dédiée, espace à réserver dans le fichier d’échange. Un degré plus élevé `commit` valeur fait gagner du temps quand l’application requiert davantage d’espace de pile, mais augmente les besoins en mémoire et éventuellement le temps de démarrage. Pour ARM, x86 et [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] machines, la valeur de validation par défaut est de 4 Ko.  
   
  Spécifiez le `reserve` et `commit` les valeurs dans la notation décimale ou en langage C.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Définition de module (. Fichiers def) | Documents Microsoft"
-ms.custom: 
+title: Définition de module (. Fichiers def) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57bad3a63e910918b6a22b6263f0df3faca0dcd1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="module-definition-def-files"></a>Fichiers de définition de module (.Def)
 Les fichiers de définition de module (.def) fournissent à l’éditeur de liens avec des informations sur les exportations, attributs et d’autres informations sur le programme à lier. Un fichier .def est très utile lors de la création d’une DLL. Étant donné que [les options de l’éditeur de liens](../../build/reference/linker-options.md) qui peut être utilisé au lieu des instructions de définition de module, les fichiers .def ne sont généralement pas nécessaires. Vous pouvez également utiliser [__declspec (dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) comme un moyen de spécifier des fonctions exportées.  

@@ -1,12 +1,9 @@
 ---
 title: ATL (Classes) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>ATL (Classes)
 La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).  
@@ -65,7 +60,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)|Cette classe représente un objet pointeur intelligent à l’aide de nouveau vecteur et supprimer des opérateurs.|atlbase.h|  
 |[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)|Cette classe fournit des méthodes, les fonctions statiques et typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de nouveau vecteur et supprimer des opérateurs.|atlcoll.h|  
 |[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)|Cette classe implémente une boîte de dialogue (modale ou non modale) qui héberge des contrôles ActiveX.|atlwin.h|  
-|[CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|  
+|[Objet CAxWindow](../../atl/reference/caxwindow-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX.|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|Cette classe fournit des méthodes pour manipuler une fenêtre qui héberge un contrôle ActiveX et prend également en charge pour l’hébergement de contrôles ActiveX sous licence.|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|Cette classe implémente l'interface `IBindStatusCallback`.|atlctl.h|  
 |[CComAggObject](../../atl/reference/ccomaggobject-class.md)|Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet.|atlcom.h|  
@@ -165,7 +160,7 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
 |[CSnapInItemImpl](../../atl/reference/csnapinitemimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.|atlsnap.h|  
 |[CSnapInPropertyPageImpl](../../atl/reference/csnapinpropertypageimpl-class.md)|Cette classe fournit des méthodes pour implémenter un objet de page de propriétés du composant logiciel enfichable.|atlsnap.h|  
 |[CStockPropImpl](../../atl/reference/cstockpropimpl-class.md)|Cette classe fournit des méthodes pour prendre en charge les valeurs de propriétés stock.|atlctl.h|  
-|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.|cstringt.h|  
+|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Cette classe fournit des fonctions statiques utilisées par le stockage des classes de collection `CString` objets.|CStringT.h|  
 |[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Il est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons sans respecter la casse.|atlcoll.h|  
 |[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)|Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Les objets de chaîne sont traitées en tant que références.|atlcoll.h|  
 |[CThreadPool, classe](../../atl/reference/cthreadpool-class.md)|Cette classe fournit un pool de threads de travail qui traitent d’une file d’attente d’éléments de travail.|atlutil.h|  

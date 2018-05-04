@@ -2,11 +2,8 @@
 title: (C/C++) de gestion structurée des exceptions | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Bien que Windows et Visual C++ prennent en charge la gestion structurée des exceptions (SEH), nous vous recommandons d'utiliser la gestion des exceptions C++ conforme à la norme ISO, car elle rend le code plus portable et plus flexible. Néanmoins, vous devrez peut-être encore utiliser SEH dans le code existant ou pour des types particuliers de programmes.  
@@ -38,9 +33,9 @@ Bien que Windows et Visual C++ prennent en charge la gestion structurée des exc
 ## <a name="grammar"></a>Grammaire  
  *try-except-statement* :  
   
- `__try`*compound-statement*  
+ `__try` *instruction composée*  
   
- `__except`( `expression` ) *compound-statement*  
+ `__except` ( `expression` ) *compound-statement*  
   
 ## <a name="remarks"></a>Notes  
  Avec SEH, vous pouvez garantir que les ressources telles que les blocs de mémoire et les fichiers seront corrects si l'exécution se termine de façon inattendue. Vous pouvez également gérer des problèmes spécifiques (par exemple, une mémoire insuffisante) en utilisant un code structuré concis qui ne repose pas sur les instructions `goto` ni sur des tests élaborés de codes de retour.   

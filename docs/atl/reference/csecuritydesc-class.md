@@ -1,12 +1,9 @@
 ---
 title: Classe de CSecurityDesc | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>Classe de CSecurityDesc
 Cette classe est un wrapper pour le **SECURITY_DESCRIPTOR** structure.  
@@ -121,7 +116,7 @@ class CSecurityDesc
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
@@ -475,7 +470,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la mise à jour `CSecurityDesc` objet.  
   
-##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
+##  <a name="operator_const_security_descriptor__star"></a>  SECURITY_DESCRIPTOR const de CSecurityDesc::operator *  
  Convertit une valeur en un pointeur vers le **SECURITY_DESCRIPTOR** structure.  
   
 ```  
@@ -518,7 +513,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *Dacl*  
+ *Liste DACL*  
  Référence à un `CDacl` objet qui spécifie la liste DACL pour le descripteur de sécurité. Ce paramètre ne doit pas être NULL. Pour définir une liste DACL NULL dans le descripteur de sécurité, la première forme de la méthode doit être utilisée avec `bPresent` défini sur false.  
   
  `bPresent`  
@@ -575,7 +570,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *Sacl*  
+ *Liste (SACL)*  
  Pointeur vers un `CSacl` objet qui spécifie la liste SACL pour le descripteur de sécurité. Ce paramètre ne doit pas être NULL et doit être un objet CSacl. Contrairement aux listes DACL, il n’existe aucune différence entre la valeur NULL et une liste SACL vide, comme les objets de liste (SACL) ne spécifient pas de droits d’accès, uniquement les informations d’audit.  
   
  `bDefaulted`  

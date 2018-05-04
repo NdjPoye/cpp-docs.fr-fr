@@ -1,12 +1,9 @@
 ---
 title: __clrcall | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Section spécifique à Microsoft**  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [/CLR (Compilation pour le common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implique que toutes les fonctions et les pointeurs de fonction sont `__clrcall` et le compilateur ne permettra pas d’une fonction à l’intérieur du module à quoi que ce soit marquer autre que `__clrcall`. Lorsque **/CLR : pure** est utilisé, `__clrcall` peut être spécifié uniquement sur les pointeurs de fonction et les déclarations externes.  
   
- Vous pouvez appeler directement `__clrcall` fonctions à partir de code C++ existant qui a été compilé à l’aide de **/CLR** tant que cette fonction a une implémentation MSIL. `__clrcall`les fonctions ne peut pas être appelées directement à partir de fonctions qui ont le code asm incorporé et appellent des intrinsèques spécifiques UC, par exemple, même si ces fonctions sont compilées avec **/CLR**.  
+ Vous pouvez appeler directement `__clrcall` fonctions à partir de code C++ existant qui a été compilé à l’aide de **/CLR** tant que cette fonction a une implémentation MSIL. `__clrcall` les fonctions ne peut pas être appelées directement à partir de fonctions qui ont le code asm incorporé et appellent des intrinsèques spécifiques UC, par exemple, même si ces fonctions sont compilées avec **/CLR**.  
   
  Des pointeurs fonction `__clrcall` sont uniquement destinés à être utilisés dans le domaine d'application dans lequel ils ont été créés.  Au lieu de passer des pointeurs fonction `__clrcall` entre des domaines d'application, utilisez <xref:System.CrossAppDomainDelegate>. Pour plus d’informations, consultez [domaines d’Application et Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   

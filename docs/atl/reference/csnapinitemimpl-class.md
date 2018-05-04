@@ -2,11 +2,8 @@
 title: Classe de CSnapInItemImpl | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>Classe de CSnapInItemImpl
 Cette classe fournit des méthodes pour implémenter un objet de nœud de composant logiciel enfichable.  
@@ -76,7 +71,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |----------|-----------------|  
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Constructeur.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Les fenêtres **SCOPEDATAITEM** structure utilisée par le `CSnapInItemImpl` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CSnapInItemImpl`Fournit une implémentation de base pour un objet de nœud de composant logiciel enfichable, telles que l’ajout d’éléments de menu et les barres d’outils et de transfert de commandes pour le nœud de composant logiciel enfichable à la fonction gestionnaire approprié. Ces fonctionnalités sont implémentées à l’aide de plusieurs interfaces différentes et mappent les types. L’implémentation par défaut gère les notifications envoyées à l’objet de nœud en déterminant l’instance appropriée de la classe dérivée, puis transférer le message vers l’instance appropriée.  
+ `CSnapInItemImpl` Fournit une implémentation de base pour un objet de nœud de composant logiciel enfichable, telles que l’ajout d’éléments de menu et les barres d’outils et de transfert de commandes pour le nœud de composant logiciel enfichable à la fonction gestionnaire approprié. Ces fonctionnalités sont implémentées à l’aide de plusieurs interfaces différentes et mappent les types. L’implémentation par défaut gère les notifications envoyées à l’objet de nœud en déterminant l’instance appropriée de la classe dérivée, puis transférer le message vers l’instance appropriée.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Cette méthode implémente la fonction Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** objet de données a un type non valide.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Cette méthode implémente la fonction Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** objet de données a un type non valide.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Cette méthode implémente la fonction Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -186,7 +181,7 @@ CreatePropertyPages(
  *lpProvider*  
  [in] Pointeur vers le **IPropertySheetCallback** interface.  
   
- *handle*  
+ *Handle*  
  [in] Spécifie le handle utilisé pour router le **MMCN_PROPERTY_CHANGE** message de notification à la classe de données approprié.  
   
  *pUnk*  
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** objet de données a un type non valide.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Construit un objet `CSnapInItemImpl`.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Cette fonction est appelée pour récupérer des informations sur l’élément.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Notes  
  Pour implémenter correctement cette fonction, copiez les informations correctes dans le flux de données ( `pStream`), selon le format de Presse-papiers indiqué par `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Appelez cette fonction pour récupérer le type d’affichage pour le volet des résultats de l’objet du composant logiciel enfichable.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 autorise les options d’affichage par défaut.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Appelez cette fonction pour récupérer le **SCOPEDATAITEM** structure de l’utilisation du composant logiciel enfichable.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Un pointeur vers le **SCOPEDATAITEM** structure de le `CSnapInItemImpl` objet.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Appelez cette fonction pour récupérer le **RESULTDATAITEM** structure de l’utilisation du composant logiciel enfichable.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Un pointeur vers le **RESULTDATAITEM** structure de le `CSnapInItemImpl` objet.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Contient la chaîne affichée pour l’élément de nœud.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  Le `SCOPEDATAITEM` structure de l’objet de données du composant logiciel enfichable.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  Le [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) structure de l’objet de données du composant logiciel enfichable.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Appelé lorsque l’objet est appliquée par l’utilisateur.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** objet de données a un type non valide.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Appelé pour voir si le nœud de composant logiciel enfichable prend en charge les pages de propriétés.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Appelez cette fonction pour modifier les indicateurs d’insertion de menu, spécifiés par `pInsertionAllowed`, pour l’objet.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  Vous ne devez pas essayer de définir des bits `pInsertionAllowed` qui ont été effacées à l’origine. Les versions ultérieures de la console MMC peuvent utiliser bits pas actuellement définis afin de vous ne devez pas modifier les bits qui ne sont pas actuellement définis.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Appelez cette fonction pour modifier les styles de bouton de barre d’outils, de l’objet du composant logiciel enfichable, avant la création de la barre d’outils.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :  
   
-- `TBSTATE_CHECKED`Le bouton a la **TBSTYLE_CHECKED** de style et est enfoncé.  
+- `TBSTATE_CHECKED` Le bouton a la **TBSTYLE_CHECKED** de style et est enfoncé.  
   
-- `TBSTATE_ENABLED`Le bouton accepte une entrée d’utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.  
+- `TBSTATE_ENABLED` Le bouton accepte une entrée d’utilisateur. Un bouton qui n’a pas de cet état n’accepte pas d’entrée d’utilisateur et est grisé.  
   
-- `TBSTATE_HIDDEN`Le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.  
+- `TBSTATE_HIDDEN` Le bouton n’est pas visible et ne peut pas recevoir l’entrée d’utilisateur.  
   
-- `TBSTATE_INDETERMINATE`Le bouton est grisé.  
+- `TBSTATE_INDETERMINATE` Le bouton est grisé.  
   
-- `TBSTATE_PRESSED`Le bouton est enfoncé.  
+- `TBSTATE_PRESSED` Le bouton est enfoncé.  
   
-- `TBSTATE_WRAP`Un saut de ligne suit le bouton. Le bouton doit également avoir le `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Un saut de ligne suit le bouton. Le bouton doit également avoir le `TBSTATE_ENABLED`.  
   
  *(fsType)*  
  [in] Les indicateurs d’état du bouton. Peut être une ou plusieurs des opérations suivantes :  
   
-- `TBSTYLE_BUTTON`Crée un bouton de commande standard.  
+- `TBSTYLE_BUTTON` Crée un bouton de commande standard.  
   
-- `TBSTYLE_CHECK`Crée un bouton bascule entre les États enfoncés et non-enfoncé chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan lorsqu’il est dans l’état enfoncé.  
+- `TBSTYLE_CHECK` Crée un bouton bascule entre les États enfoncés et non-enfoncé chaque fois que l’utilisateur clique dessus. Le bouton a une couleur d’arrière-plan lorsqu’il est dans l’état enfoncé.  
   
-- `TBSTYLE_CHECKGROUP`Crée un bouton de vérification qui reste enfoncé jusqu'à ce qu’un autre bouton dans le groupe.  
+- `TBSTYLE_CHECKGROUP` Crée un bouton de vérification qui reste enfoncé jusqu'à ce qu’un autre bouton dans le groupe.  
   
-- `TBSTYLE_GROUP`Crée un bouton qui reste enfoncé jusqu'à ce qu’un autre bouton dans le groupe.  
+- `TBSTYLE_GROUP` Crée un bouton qui reste enfoncé jusqu'à ce qu’un autre bouton dans le groupe.  
   
-- `TBSTYLE_SEP`Crée un séparateur, en fournissant un petit intervalle entre les groupes. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.  
+- `TBSTYLE_SEP` Crée un séparateur, en fournissant un petit intervalle entre les groupes. Un bouton qui a ce style ne reçoit pas d’entrée d’utilisateur.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Appelez cette fonction pour modifier un élément de menu avant qu’il est inséré dans le menu contextuel de l’objet du composant logiciel enfichable.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** désactive l’élément de menu, il ne peut pas être sélectionné, mais l’indicateur gris pas il.  
   
-- `MF_ENABLED`Permet à l’élément de menu afin qu’il peut être sélectionné, sa restauration à partir de son état grisée.  
+- `MF_ENABLED` Permet à l’élément de menu afin qu’il peut être sélectionné, sa restauration à partir de son état grisée.  
   
 - **MF_GRAYED** désactive l’élément de menu, il graying afin qu’il ne peut pas être sélectionné.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** et **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Appelez cette fonction pour modifier un bouton de barre d’outils, de l’objet du composant logiciel enfichable, avant son affichage.  
   
 ```

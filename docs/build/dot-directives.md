@@ -1,30 +1,25 @@
 ---
 title: Point Directives | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NMAKE program, dot directives
 - dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9958b13a6f06b0024ec2d4dd304abfe93b16741e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29eeedbdc2eaccb753751082a38736fa239837b2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dot-directives"></a>Directives précédées par un point
 Spécifiez des directives dot en dehors d’un bloc de description, au début d’une ligne. Directives dot commencent par un point (. ) et sont suivis par un signe deux-points ( :). Les onglets et les espaces sont autorisés. Les noms de directive point respectent la casse et sont en majuscules.  
@@ -33,8 +28,8 @@ Spécifiez des directives dot en dehors d’un bloc de description, au début d�
 |---------------|-------------|  
 |**. IGNORER :**|Ignore les codes de sortie différent de zéro renvoyés par les commandes, à partir de l’emplacement où qu'elle est spécifiée à la fin du makefile. Par défaut, NMAKE s’arrête si une commande retourne un code de sortie différent de zéro. Pour restaurer la vérification des erreurs, utilisez **! CMDSWITCHES**. Pour ignorer le code de sortie d’une commande unique, utilisez le modificateur tiret (-). Pour ignorer les codes de sortie dans un fichier entier, utilisez / I.|  
 |**. PRÉCIEUX :** *cibles*|Conserve *cibles* sur le disque si les commandes de mise à jour sont interrompus ; n’a aucun effet si une commande gère une interruption en supprimant le fichier. Séparez les noms de cible avec un ou plusieurs espaces ou des tabulations. Par défaut, NMAKE supprime une cible si une build est interrompue par CTRL + C ou CTRL + Pause. L’utilisation de **. PRÉCIEUX** s’applique à tout le makefile ; plusieurs spécifications sont cumulatifs.|  
-|**. EN MODE SILENCIEUX :**|Supprime l’affichage des commandes exécutées, à partir de l’emplacement où qu'elle est spécifiée à la fin du makefile. Par défaut, NMAKE affiche les commandes qu’il appelle. Pour rétablir l’écho, utilisez **! CMDSWITCHES**. Pour supprimer l’écho d’une seule commande, utilisez le  **@**  modificateur. Pour supprimer l’écho pour un fichier entier, utilisez/s.|  
-|**. SUFFIXES :**`list`|Répertorie les extensions pour la correspondance de la règle d’inférence ; prédéfinies pour inclure les extensions suivantes : .exe .obj .asm .c .cpp .cxx .bas .cbl .pour .pas .res .rc .f .f90|  
+|**. EN MODE SILENCIEUX :**|Supprime l’affichage des commandes exécutées, à partir de l’emplacement où qu'elle est spécifiée à la fin du makefile. Par défaut, NMAKE affiche les commandes qu’il appelle. Pour rétablir l’écho, utilisez **! CMDSWITCHES**. Pour supprimer l’écho d’une seule commande, utilisez le **@** modificateur. Pour supprimer l’écho pour un fichier entier, utilisez/s.|  
+|**. SUFFIXES :** `list`|Répertorie les extensions pour la correspondance de la règle d’inférence ; prédéfinies pour inclure les extensions suivantes : .exe .obj .asm .c .cpp .cxx .bas .cbl .pour .pas .res .rc .f .f90|  
   
  Pour modifier le **. SUFFIXES** liste ordre ou pour spécifier une nouvelle liste, effacer la liste et spécifier un nouveau paramètre. Pour effacer la liste, ne spécifiez aucune extension après le signe deux-points :  
   

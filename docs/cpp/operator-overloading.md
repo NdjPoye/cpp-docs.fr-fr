@@ -1,12 +1,9 @@
 ---
-title: "Surcharge d’opérateur | Documents Microsoft"
-ms.custom: 
+title: Surcharge d’opérateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>Surcharge d'opérateur
 Le mot clé `operator` déclare une fonction spécifiant la signification de `operator-symbol` quand il est appliqué aux instances d'une classe. Cela donne à l'opérateur plusieurs significations ou le « surcharge ». Le compilateur fait la distinction entre les différentes significations d’un opérateur en examinant les types de ses opérandes.  
@@ -108,7 +103,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Attribution](../cpp/assignment.md)  
   
--   [Appel de fonction](../cpp/function-call-cpp.md)  
+-   [Appel de fonction ](../cpp/function-call-cpp.md)  
   
 -   [Indices](../cpp/subscripting.md)  
   
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Incrémentation et décrémentation](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Conversions de Type défini par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Conversions de type définies par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md)  
   
  Les opérateurs indiqués dans le tableau suivant ne peuvent pas être surchargés. Le tableau inclut les symboles de préprocesseur `#` et `##`.  
   
@@ -187,7 +182,7 @@ int main() {
   
 4.  [Attribution](../cpp/assignment.md)  
   
-5.  [Appel de fonction](../cpp/function-call-cpp.md)  
+5.  [Appel de fonction ](../cpp/function-call-cpp.md)  
   
 6.  [Indices](../cpp/subscripting.md)  
   

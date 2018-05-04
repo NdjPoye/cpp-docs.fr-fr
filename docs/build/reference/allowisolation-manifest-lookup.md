@@ -2,12 +2,9 @@
 title: -/ALLOWISOLATION (recherche de manifeste) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
 - VC.Project.VCLinkerTool.AllowIsolation
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Recherche de manifeste)
 Spécifie un comportement pour la recherche de manifeste.  
@@ -45,7 +40,7 @@ Spécifie un comportement pour la recherche de manifeste.
   
  **/ALLOWISOLATION** est la valeur par défaut.  
   
- Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas à trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus ne disposera d’un contexte d’activation par défaut, même s’il existe un manifeste à l’intérieur du fichier exécutable ou dans le même répertoire que le fichier exécutable avec le nom *-nom du fichier exécutable***. exe.manifest**.  
+ Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas à trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus ne disposera d’un contexte d’activation par défaut, même s’il existe un manifeste à l’intérieur du fichier exécutable ou dans le même répertoire que le fichier exécutable nommé * exécutable-nom ***. exe.manifest**.  
   
  Pour plus d’informations, consultez [référence des fichiers manifeste](http://msdn.microsoft.com/library/aa375632).  
   

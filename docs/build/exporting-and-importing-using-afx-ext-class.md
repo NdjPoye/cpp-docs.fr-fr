@@ -1,13 +1,10 @@
 ---
-title: "Exportation et importation à l’aide de AFX_EXT_CLASS | Documents Microsoft"
-ms.custom: 
+title: Exportation et importation à l’aide de AFX_EXT_CLASS | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - afx_ext_class
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb47703b7cd4ef2d0493016c120db0b7d845a71f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6cc853c66afae72d6e426d800c0443ab206ab20
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Exportation et importation à l'aide de AFX_EXT_CLASS  
   
@@ -66,7 +61,7 @@ Bien que vous pouvez éviter la création d’un fichier .def et tous les noms d
   
 Vous pouvez parfois exporter des membres individuels de votre classe. Par exemple, si vous exportez un `CDialog`-classe dérivée, vous devrez peut-être uniquement exporter le constructeur et le `DoModal` appeler. Vous pouvez utiliser `AFX_EXT_CLASS` sur les membres individuels, vous devez exporter.  
   
-Exemple :  
+Par exemple :  
   
 ```cpp  
 class CExampleDialog : public CDialog  
@@ -95,7 +90,7 @@ public: \
   
 La ligne qui commence par statique `AFX_DATA` déclare un objet statique à l’intérieur de votre classe. Pour exporter cette classe correctement et accéder aux informations d’exécution à partir d’un fichier exécutable du client, vous devez exporter cet objet statique. Car l’objet statique est déclaré avec le modificateur `AFX_DATA`, vous ne devez définir `AFX_DATA` être `__declspec(dllexport)` lors de la création de la DLL et définir en tant que `__declspec(dllimport)` lors de la génération de l’exécutable client. Étant donné que `AFX_EXT_CLASS` est déjà définie de cette façon, il vous suffit de redéfinir `AFX_DATA` pour être le même que `AFX_EXT_CLASS` autour de votre définition de classe.  
   
-Exemple :  
+Par exemple :  
   
 ```cpp  
 #undef  AFX_DATA  

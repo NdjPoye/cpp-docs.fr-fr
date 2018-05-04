@@ -1,13 +1,10 @@
 ---
 title: Options EDITBIN | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>Options EDITBIN
 Vous pouvez y recourir pour modifier des fichiers objets, les fichiers exécutables et les bibliothèques de liens dynamiques (DLL). Options spécifient les modifications apportées par EDITBIN.  
@@ -41,7 +36,7 @@ Vous pouvez y recourir pour modifier des fichiers objets, les fichiers exécutab
 |[/APPCONTAINER](../../build/reference/appcontainer.md)|Spécifie si l’application doit s’exécuter dans un AppContainer — par exemple, une application UWP.|  
 |[/BIND](../../build/reference/bind.md)|Définit les adresses pour les points d’entrée dans les objets spécifiés pour accélérer le chargement.|  
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Spécifie si le fichier DLL ou une image exécutable peut être redéfinie de façon aléatoire au moment du chargement en utilisant la randomisation du format d’espace d’adresse (ASLR).|  
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Rapports d’erreurs internes à Microsoft.|  
+|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Rapports d’erreurs internes à Microsoft.|  
 |[/HEAP](../../build/reference/heap.md)|Définit la taille du tas de l’image exécutable en octets.|  
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Spécifie si le fichier DLL ou une image exécutable prend en charge la randomisation du format d’espace de forte entropie (64 bits) adresse (ASLR).|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Spécifie s’il faut vérifier la signature numérique lors du chargement.|  

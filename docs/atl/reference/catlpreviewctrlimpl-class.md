@@ -1,12 +1,9 @@
 ---
 title: Classe de CAtlPreviewCtrlImpl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe de CAtlPreviewCtrlImpl
 Cette classe est une implémentation d’une fenêtre qui est placée dans une fenêtre hôte fournie par l’interpréteur de commandes pour l’aperçu riche d’ATL.  
@@ -112,10 +107,10 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
  `ATL::CAtlPreviewCtrlImpl`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlpreviewctrlimpl.h  
   
-##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  Construit un objet de contrôle de version préliminaire.  
   
 ```
@@ -125,7 +120,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="dtor"></a>CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl :: ~ CAtlPreviewCtrlImpl  
  Destruction d’un objet de contrôle de version préliminaire.  
   
 ```
@@ -134,7 +129,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
  Appelée par un gestionnaire d’aperçu riche pour créer la fenêtre Windows.  
   
 ```
@@ -153,7 +148,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
  Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin détruire ce contrôle.  
   
 ```
@@ -162,7 +157,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
  Appelé par l’infrastructure pour afficher l’aperçu.  
   
 ```
@@ -175,7 +170,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
  Définit le focus à ce contrôle.  
   
 ```
@@ -184,7 +179,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
  Couleur d’arrière-plan de la fenêtre d’aperçu.  
   
 ```
@@ -193,7 +188,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
  Couleur du texte de la fenêtre d’aperçu.  
   
 ```
@@ -202,7 +197,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
  Police utilisée pour afficher le texte dans la fenêtre d’aperçu.  
   
 ```
@@ -211,7 +206,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
  Gère le message WM_PAINT.  
   
 ```
@@ -240,7 +235,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
  Indique à ce contrôle à redessiner.  
   
 ```
@@ -249,7 +244,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
  Définit un nouveau parent pour ce contrôle.  
   
 ```
@@ -262,7 +257,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
  Appelée par un gestionnaire d’aperçu riche lorsqu’il a besoin définir les éléments visuels de l’aperçu riche contenu.  
   
 ```
@@ -284,7 +279,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
  Définit un nouveau rectangle englobant pour ce contrôle.  
   
 ```

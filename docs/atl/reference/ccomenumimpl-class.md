@@ -1,12 +1,9 @@
 ---
 title: Classe de CComEnumImpl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>Classe de CComEnumImpl
 Cette classe fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau.  
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Constructeur.|  
 |[CComEnumImpl :: ~ CComEnumImpl](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|Le **IUnknown** pointeur de l’objet en fournissant la collection énumérée.|  
   
 ## <a name="remarks"></a>Notes  
- `CComEnumImpl`fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau. Cette classe est analogue à la `IEnumOnSTLImpl` (classe), qui fournit une implémentation d’une interface d’énumérateur basé sur un conteneur de bibliothèque C++ Standard.  
+ `CComEnumImpl` fournit l’implémentation pour une interface d’énumérateur COM où les éléments en cours d’énumération sont stockées dans un tableau. Cette classe est analogue à la `IEnumOnSTLImpl` (classe), qui fournit une implémentation d’une interface d’énumérateur basé sur un conteneur de bibliothèque C++ Standard.  
   
 > [!NOTE]
 >  Pour plus d’informations sur les autres différences entre `CComEnumImpl` et `IEnumOnSTLImpl`, consultez [CComEnumImpl::Init](#init).  
@@ -112,21 +107,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  Constructeur.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl :: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl :: ~ CComEnumImpl  
  Destructeur.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  Vous devez appeler cette méthode avant de passer un pointeur vers l’interface de l’énumérateur sur tous les clients.  
   
 ```
@@ -158,7 +153,7 @@ HRESULT Init(
   
  Si vous passez des pointeurs à des éléments dans un tableau dans un autre objet (et vous ne demandez pas à l’énumérateur pour copier les données), vous pouvez utiliser la *pUnk* paramètre pour garantir que l’objet et le tableau, sa valeur est aussi longtemps que l’énumérateur en a besoin. L’énumérateur conserve simplement une référence COM sur l’objet pour conserver actif. La référence COM est automatiquement libérée lorsque l’énumérateur est détruit.  
   
- Le `flags` paramètre vous permet de spécifier comment l’énumérateur doit traiter les éléments du tableau passés. `flags`peut prendre une des valeurs à partir de la **CComEnumFlags** énumération ci-dessous :  
+ Le `flags` paramètre vous permet de spécifier comment l’énumérateur doit traiter les éléments du tableau passés. `flags` peut prendre une des valeurs à partir de la **CComEnumFlags** énumération ci-dessous :  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  Le prototype de cette méthode spécifie les éléments du tableau comme étant de type **T**, où **T** a été défini en tant que paramètre de modèle pour la classe. Il s’agit du même type qui est exposé au moyen de la méthode d’interface COM [CComEnumImpl::Next](#next). La conséquence de cela est que, contrairement à [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), cette classe ne prend pas en charge le stockage de différents et exposées de types de données. Le type de données des éléments du tableau doit être le même que le type de données exposé à l’aide de l’interface COM.  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) méthode en créant un objet de type `CComEnum`, l’initialise avec le même tableau et itérateur utilisé par l’objet actuel et le renvoi de l’interface sur le objet nouvellement créé.  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Notes  
  Notez que les énumérateurs clonés jamais leurs propre copie (ou prendre possession) des données utilisées par l’énumérateur d’origine. Si nécessaire, les énumérateurs clonés conservera l’énumérateur d’origine actif (à l’aide d’une référence COM) pour vous assurer que les données sont disponibles pour autant que nécessaire.  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  Ce pointeur intelligent conserve une référence sur l’objet passé à [CComEnumImpl::Init](#init), garantissant qu’il reste actif pendant la durée de vie de l’énumérateur.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  Pointeur vers l’emplacement situé juste après le dernier élément du tableau contenant les éléments à énumérer.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  Pointeur vers le premier élément du tableau contenant les éléments à énumérer.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  Pointeur vers l’élément actuel du tableau contenant les éléments à énumérer.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  Les indicateurs transmis aux [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) (méthode).  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) (méthode).  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>  CComEnumImpl::Skip  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) (méthode).  
   
 ```

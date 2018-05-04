@@ -1,29 +1,24 @@
 ---
-title: "Archétype de travail | Documents Microsoft"
-ms.custom: 
+title: Archétype de travail | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>Archétype de travail
 Les classes qui se conforment à la *travail* archétype fournissent le code pour traiter des éléments de travail en file d’attente sur un pool de threads.  
@@ -63,7 +58,7 @@ Les classes qui se conforment à la *travail* archétype fournissent le code pou
 |*Processus de travail*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
 |*Processus de travail*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlutil.h  
   
 ## <a name="execute"></a>WorkerArchetype::Execute
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  Un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour créer la file d’attente à laquelle les éléments ont été en file d’attente.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 Appelé pour initialiser l’objet de travail avant que toutes les demandes sont passées à `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourner **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 Typedef pour le type d’élément de travail qui peut être traité par la classe de travail.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Notes  
  Ce type doit être utilisé comme premier paramètre de `WorkerArchetype::Execute` et doit être capable d’en cours de conversion vers et depuis un ULONG_PTR entière.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 Appelé pour annuler l’initialisation de l’objet travail une fois que toutes les demandes qui ont été transmis au `WorkerArchetype::Execute`).  
     
 ``` 

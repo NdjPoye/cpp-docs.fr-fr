@@ -1,12 +1,9 @@
 ---
 title: Classe de CSocketAddr | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csocketaddr-class"></a>Classe de CSocketAddr
 Cette classe fournit des méthodes de conversion des noms d’hôte en adresses d’hôte, prenant en charge les formats IPv4 et IPV6.  
@@ -68,10 +63,10 @@ class CSocketAddr
   
  Cette classe prend en charge les deux adresses de réseau IPv4 andIPv6.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsocket.h  
   
-##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr  
  Constructeur.  
   
 ```
@@ -81,7 +76,7 @@ CSocketAddr();
 ### <a name="remarks"></a>Notes  
  Crée un `CSocketAddr` de l’objet et initialise la liste liée contenant les informations de réponse de l’ordinateur hôte.  
   
-##  <a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  Appelez cette méthode pour convertir le nom d’hôte fourni à l’adresse de l’hôte.  
   
 ```
@@ -130,7 +125,7 @@ int FindAddr(
 ### <a name="remarks"></a>Notes  
  Le paramètre de nom d’hôte peut être au format IPv4 ou IPv6. Cette méthode appelle la fonction API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) pour effectuer la conversion.  
   
-##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  Appelez cette méthode pour convertir le nom d’hôte IPv4 à l’adresse de l’hôte.  
   
 ```
@@ -160,7 +155,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la fonction API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) pour effectuer la conversion.  
   
-##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Appelez cette méthode pour convertir le nom d’hôte IPv6 à l’adresse de l’hôte.  
   
 ```
@@ -190,7 +185,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>Notes  
  Cette méthode appelle la fonction API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) pour effectuer la conversion.  
   
-##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  Appelez cette méthode pour retourner un pointeur vers un élément spécifique de la **addrinfo** liste.  
   
 ```
@@ -204,7 +199,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le **addrinfo** structure référencée par `nIndex` dans la liste liée contenant les informations de réponse de l’ordinateur hôte.  
   
-##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
  Appelez cette méthode pour retourner un pointeur vers le **addrinfo** liste.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Classe de IPersistPropertyBagImpl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe de IPersistPropertyBagImpl
 Cette classe implémente **IUnknown** et permet à un objet enregistrer ses propriétés à un jeu de propriétés de fourni par le client.  
@@ -72,10 +67,10 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
  `IPersistPropertyBagImpl`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
  Récupère le CLSID de l’objet.  
   
 ```
@@ -85,7 +80,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Notes  
  Consultez [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans le Kit de développement logiciel Windows.  
   
-##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  Initialise un objet nouvellement créé.  
   
 ```
@@ -98,7 +93,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Notes  
  Consultez [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) dans le Kit de développement logiciel Windows.  
   
-##  <a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>  IPersistPropertyBagImpl::Load  
  Charge les propriétés de l’objet à partir d’un jeu de propriétés de fourni par le client.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  Consultez [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) dans le Kit de développement logiciel Windows.  
   
-##  <a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
  Enregistre les propriétés de l’objet dans un jeu de propriétés de fourni par le client.  
   
 ```

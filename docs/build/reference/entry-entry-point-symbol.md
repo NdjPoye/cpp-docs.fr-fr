@@ -1,13 +1,10 @@
 ---
-title: "-ENTRÉE (symbole de Point d’entrée) | Documents Microsoft"
-ms.custom: 
+title: -ENTRÉE (symbole de Point d’entrée) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Symbole de point d'entrée)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |Nom de la fonction|Valeur par défaut pour|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (ou **wmainCRTStartup**)|Une application qui utilise/SUBSYSTEM : console ; appels `main` (ou `wmain`)|  
-|**WinMainCRTStartup** (ou **wWinMainCRTStartup**)|Une application qui utilise/SUBSYSTEM :**WINDOWS**; appels `WinMain` (ou `wWinMain`), qui doit être défini à utiliser`__stdcall`|  
-|**_DllMainCRTStartup**|UNE DLL ; appels `DllMain` si elle existe, qui doit être défini à utiliser`__stdcall`|  
+|**WinMainCRTStartup** (ou **wWinMainCRTStartup**)|Une application qui utilise/SUBSYSTEM :**WINDOWS**; appels `WinMain` (ou `wWinMain`), qui doit être défini à utiliser `__stdcall`|  
+|**_DllMainCRTStartup**|UNE DLL ; appels `DllMain` si elle existe, qui doit être défini à utiliser `__stdcall`|  
   
  Si le [/DLL](../../build/reference/dll-build-a-dll.md) ou [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) option n’est pas spécifiée, l’éditeur de liens sélectionne un sous-système de point d’entrée selon que `main` ou `WinMain` est défini.  
   

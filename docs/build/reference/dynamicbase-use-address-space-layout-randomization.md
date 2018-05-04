@@ -1,13 +1,10 @@
 ---
 title: -DYNAMICBASE (utilisez espace randomisation du format adresse) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.RandomizedBaseAddress
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1458070f85678d30c716622bf57740d90feb65d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 Spécifie s’il faut générer une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement à l’aide de la fonctionnalité espace d’adresse (ASLR) de randomisation de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
@@ -41,7 +36,7 @@ Spécifie s’il faut générer une image exécutable qui peut être redéfinie 
 ## <a name="remarks"></a>Notes  
  Par défaut, /DYNAMICBASE est activé.  
   
- Cette option modifie l’en-tête d’un fichier exécutable pour indiquer si l’application doit être redéfinie de façon aléatoire au moment du chargement.  
+ Cette option modifie l’en-tête d’un exécutable pour indiquer si l’application doit être rebasée de façon aléatoire au moment du chargement.  
   
  Randomisation du format d’espace d’adresse est prise en charge sur [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
   

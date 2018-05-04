@@ -1,27 +1,22 @@
 ---
-title: "Référence des utilitaires ATL | Documents Microsoft"
-ms.custom: 
+title: Référence des utilitaires ATL | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>Référence des utilitaires ATL
 ATL fournit du code pour la manipulation d’URL et les chemins d’accès sous la forme de [CPathT](../atl/reference/cpatht-class.md) et [CUrl](../atl/reference/curl-class.md). Un pool de threads, [CThreadPool](../atl/reference/cthreadpool-class.md), peut être utilisé dans vos applications. Vous trouverez ce code dans atlpath.h et atlutil.h.  
@@ -38,7 +33,7 @@ ATL fournit du code pour la manipulation d’URL et les chemins d’accès sous 
 |[CUrl, classe](../atl/reference/curl-class.md)|Cette classe représente une URL. Il vous permet de manipuler chaque élément de l’URL indépendamment des autres si l’analyse des URL existante de chaîne ou de génération d’une chaîne à partir de zéro.|  
 |[CWorkerThread, classe](../atl/reference/cworkerthread-class.md)|Cette classe crée un thread de travail ou utilise un existant, attend sur un ou plusieurs handles d’objet noyau et exécute une fonction de client spécifié lors d’une des poignées est signalée.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |||  
 |-|-|  
@@ -47,7 +42,7 @@ ATL fournit du code pour la manipulation d’URL et les chemins d’accès sous 
 |[CPathW](../atl/reference/atl-typedefs.md#cpathw)|Une spécialisation de [CPathT](../atl/reference/cpatht-class.md) à l’aide de `CStringW`.|  
 |[ATL_URL_PORT](../atl/reference/atl-typedefs.md#atl_url_port)|Le type utilisé par [CUrl](../atl/reference/curl-class.md) pour spécifier un numéro de port.|  
   
-### <a name="enums"></a>Énumérations  
+### <a name="enums"></a>Enums  
   
 |||  
 |-|-|  

@@ -1,13 +1,10 @@
 ---
-title: "-EH (modèle de gestion des exceptions) | Documents Microsoft"
-ms.custom: 
+title: -EH (modèle de gestion des exceptions) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 Spécifie le type de gestion des exceptions utilisé par le compilateur, quand optimiser la vérification des exceptions, et si les objets C++ hors de portée doivent être détruits en raison d’une exception. Si **/EH** n’est pas spécifié, le compilateur intercepte les exceptions structurées asynchrones et les exceptions C++, mais ne détruit pas les objets C++ qui sont hors de portée en raison d’une exception asynchrone.  

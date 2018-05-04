@@ -1,10 +1,10 @@
 ---
-title: "/Zc (conformité) | Documents Microsoft"
-ms.custom: 
+title: /Zc (conformité) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Conformité)
 
@@ -32,7 +31,7 @@ Vous pouvez utiliser la **/Zc** options du compilateur pour spécifier le compor
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:**_option_{,_option_}
+> **/ Zc :**_option_{,_option_}
 
 ## <a name="remarks"></a>Notes
 
@@ -47,16 +46,16 @@ Il s’agit du `/Zc` options du compilateur :
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Activer une liaison externe pour `constexpr` variables (désactivé par défaut).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Appliquer la norme C++ `for` règles de portée (sur par défaut).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Activer implicite `noexcept` sur les fonctions requises (sur par défaut).|
-|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Supprimer la fonction ou données COMDAT ou a une liaison interne uniquement (désactivé par défaut).|
+|[Inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Supprimer la fonction ou données COMDAT ou a une liaison interne uniquement (désactivé par défaut).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Appliquer les règles de noexcept C ++ 17 (sur par défaut dans C ++ 17 ou version ultérieure).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT temporaire ne sera pas liée à une référence non const lvalue (désactivé par défaut).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Appliquer les règles de conversion de type explicite Standard C++ (désactivé par défaut).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Activer les fonctions de désallocation dimensionnée globales C ++ 14 (sur par défaut).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Désactiver le littéral de chaîne pour `char*` ou `wchar_t*` conversion (désactivé par défaut).|
-|[ternary\[-\]](zc-ternary.md)|Appliquer les règles de l’opérateur conditionnel sur les types d’opérande (désactivé par défaut).|
+|[ternaire\[-\]](zc-ternary.md)|Appliquer les règles de l’opérateur conditionnel sur les types d’opérande (désactivé par défaut).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Activer l’initialisation statique locale thread-safe (sur par défaut).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Supposons que `operator new` lève en cas d’échec (désactivé par défaut).|
-|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Activer les trigraphes (obsolètes, désactivée par défaut).|
+|[trigraphes\[-\]](zc-trigraphs-trigraphs-substitution.md)|Activer les trigraphes (obsolètes, désactivée par défaut).|
 |[twoPhase-](zc-twophase.md)|Utilisez le modèle non conforme de l’analyse du comportement (conforme par défaut).|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` est un type natif, et non un typedef (sur par défaut).|
 

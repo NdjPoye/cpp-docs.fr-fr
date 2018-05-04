@@ -1,12 +1,9 @@
 ---
-title: "Opérateur static_cast | Documents Microsoft"
-ms.custom: 
+title: Opérateur static_cast | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>static_cast, opérateur
 Convertit un *expression* pour le type de *id de type,* basés uniquement sur les types qui sont présents dans l’expression.  
@@ -63,7 +58,7 @@ void f(B* pb, D* pd) {
   
  Contrairement à [dynamic_cast](../cpp/dynamic-cast-operator.md), aucune vérification de l’exécution est effectuée sur le `static_cast` conversion de `pb`. L'objet pointé par `pb` peut ne pas être un objet de type `D`, auquel cas l'utilisation de `*pd2` peut être désastreuse. Par exemple, appeler une fonction membre de la classe `D`, mais pas de la classe `B`, peut entraîner une violation d'accès.  
   
- Les opérateurs `dynamic_cast` et `static_cast` déplacent un pointeur à travers une hiérarchie de classes. Toutefois, `static_cast` s'appuie exclusivement sur les informations fournies dans l'instruction de lancement et peut donc être potentiellement dangereux. Exemple :  
+ Les opérateurs `dynamic_cast` et `static_cast` déplacent un pointeur à travers une hiérarchie de classes. Toutefois, `static_cast` s'appuie exclusivement sur les informations fournies dans l'instruction de lancement et peut donc être potentiellement dangereux. Par exemple :  
   
 ```  
 // static_cast_Operator_2.cpp  
@@ -88,7 +83,7 @@ void f(B* pb) {
   
  Ce comportement s'applique également aux types autres que les types de classe. Par exemple, `static_cast` peut être utilisé pour convertir un entier en `char`. Toutefois, le `char` résultant peut ne pas avoir suffisamment de bits pour conserver toute la valeur de `int`. Là encore, il est laissé au programmeur pour vérifier que les résultats d’une `static_cast` conversion sont sécurisés.  
   
- L'opérateur `static_cast` peut également être utilisé pour exécuter toute conversion implicite, notamment les conversions standard et les conversions définies par l'utilisateur. Exemple :  
+ L'opérateur `static_cast` peut également être utilisé pour exécuter toute conversion implicite, notamment les conversions standard et les conversions définies par l'utilisateur. Par exemple :  
   
 ```  
 // static_cast_Operator_3.cpp  

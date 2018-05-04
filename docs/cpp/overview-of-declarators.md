@@ -1,29 +1,24 @@
 ---
-title: "Vue d’ensemble des déclarateurs | Documents Microsoft"
-ms.custom: 
+title: Vue d’ensemble des déclarateurs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
 Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), acheminent des propriétés telles que le stockage et le type de classe. Modificateurs, présentés dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
@@ -57,7 +52,7 @@ const char *pch, ch;
   
  **Déclarateurs de pointeurs, références et tableaux**  
   
- Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le  **\***  opérateur déclare le nom en tant que pointeur ; la  **&**  opérateur déclare en tant que référence.  
+ Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le **\*** opérateur déclare le nom en tant que pointeur ; la **&** opérateur déclare en tant que référence.  
   
 ```  
 int *i; // declarator is *i  

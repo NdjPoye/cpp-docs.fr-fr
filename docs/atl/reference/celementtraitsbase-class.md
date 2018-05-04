@@ -1,12 +1,9 @@
 ---
 title: Classe de CElementTraitsBase | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraitsbase-class"></a>Classe de CElementTraitsBase
 Cette classe fournit la copie de la valeur par défaut et les méthodes d’une classe de collection de déplacement.  
@@ -67,10 +62,10 @@ class CElementTraitsBase
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
  Appelez cette méthode pour copier les éléments stockés dans un objet de classe de collection.  
   
 ```
@@ -93,21 +88,21 @@ static void CopyElements(
 ### <a name="remarks"></a>Notes  
  Les éléments source et de destination ne doivent pas se chevaucher.  
   
-##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  Le type de données à utiliser pour ajouter des éléments à la collection.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
  Le type de données à utiliser pour récupérer des éléments de la collection.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
  Appelez cette méthode pour déplacer des éléments stockés dans un objet de classe de collection.  
   
 ```

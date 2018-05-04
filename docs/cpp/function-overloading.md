@@ -1,12 +1,9 @@
 ---
 title: Surcharge de fonction | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ils sont appelés *surchargé* fonctions. Les fonctions surchargées permettent de fournir une sémantique différente pour une fonction, selon les types et le nombre d’arguments. 
@@ -261,26 +256,26 @@ volatile Over&
   
 |Conversion depuis le type|Conversion vers le type|  
 |-----------------------|---------------------|  
-|*type-name*|*type-name* **&**|  
-|*type-name* **&**|*type-name*|  
+|*type-name*|*nom de type* **&**|  
+|*nom de type* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\***|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name* **(** *argument-list* **)**|**(**  *\*-nom du type* **) (** *-liste d’arguments* **)**|  
 |*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *type-name*|  
+|*type-name*|`volatile` *nom de type*|  
 |*type-name\***|**const** *type-name\***|  
-|*type-name\***|`volatile` *type-name\**|  
+|*type-name\***|`volatile` *nom de type\**|  
   
  La séquence dans laquelle les conversions sont tentées est la suivante :  
   
 1.  Correspondance exacte. Une correspondance exacte entre les types avec lesquels la fonction est appelée et les types déclarés dans le prototype de fonction est toujours la meilleure correspondance. Les séquences de conversions ordinaires sont classées comme correspondances exactes. Toutefois, les séquences qui n'effectuent aucune de ces conversions sont considérées meilleures que les séquences qui convertissent :  
   
-    -   À partir du pointeur en pointeur vers **const** (`type`  **\***  à **const** `type`  **\***  ).  
+    -   À partir du pointeur en pointeur vers **const** (`type` **\*** à **const** `type` **\*** ).  
   
-    -   À partir du pointeur en pointeur vers `volatile` (`type`  **\***  à `volatile` `type`  **\*** ).  
+    -   À partir du pointeur en pointeur vers `volatile` (`type` **\*** à `volatile` `type` **\***).  
   
-    -   À partir de la référence, à la référence à **const** (`type`  **&**  à **const** `type`  **&** ).  
+    -   À partir de la référence, à la référence à **const** (`type` **&** à **const** `type` **&**).  
   
-    -   À partir de la référence, à la référence à `volatile` (`type`  **&**  à `volatile` `type`  **&** ).  
+    -   À partir de la référence, à la référence à `volatile` (`type` **&** à `volatile` `type` **&**).  
   
 2.  Correspondance avec des promotions. Toute séquence non classée comme correspondance exacte qui contient uniquement des promotions intégrales, les conversions de **float** à **double**, et des conversions ordinaires est classée comme correspondance avec des promotions. Bien qu'elle ne soit pas aussi appropriée qu'une correspondance exacte, une correspondance avec des promotions est meilleure qu'une correspondance avec des conversions standard.  
   
@@ -349,7 +344,7 @@ LogToFile( udc );
   
  Dans l’exemple précédent, la conversion définie par l’utilisateur, **opérateur long**, est appelée pour convertir `udc` au type **long**. Si aucune conversion définie par l’utilisateur à taper **long** avait été défini, la conversion aurait été comme suit : Type `UDC` serait ont été converties en type `int` à l’aide de la conversion définie par l’utilisateur. Ensuite, la conversion standard du type `int` au type **long** aurait été appliquée pour correspondre à l’argument de la déclaration.  
   
- Si les conversions définies par l’utilisateur sont requises pour mettre un argument en correspondance, les conversions standard ne sont pas utilisées lors de l’évaluation de la meilleure correspondance. Cette règle est valable même si plusieurs fonctions candidates requièrent une conversion définie par l'utilisateur. Dans ce cas, les fonctions sont considérées comme égales. Exemple :  
+ Si les conversions définies par l’utilisateur sont requises pour mettre un argument en correspondance, les conversions standard ne sont pas utilisées lors de l’évaluation de la meilleure correspondance. Cette règle est valable même si plusieurs fonctions candidates requièrent une conversion définie par l'utilisateur. Dans ce cas, les fonctions sont considérées comme égales. Par exemple :  
   
 ```  
 // argument_matching2.cpp  
@@ -497,7 +492,7 @@ int main()
 
 Si la fonction de la classe de base n’est pas déclarée comme 'virtual', alors que la fonction de la classe dérivée est dite *masquer* il. Remplacement et le masquage sont distincts de la surcharge.  
   
- La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n’est pas dans la même portée qu’une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Exemple :  
+ La portée de bloc est strictement observée ; par conséquent, une fonction déclarée dans la portée du fichier n’est pas dans la même portée qu’une fonction déclarée localement. Si une fonction déclarée localement a le même nom qu'une fonction déclarée avec portée de fichier, la fonction déclarée localement masque la fonction déclarée avec portée de fichier au lieu de provoquer la surcharge. Par exemple :  
   
 ```  
 // declaration_matching1.cpp  

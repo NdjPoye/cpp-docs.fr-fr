@@ -1,13 +1,10 @@
 ---
-title: "Exportation à partir d’une DLL à l’aide de __declspec (dllexport) | Documents Microsoft"
-ms.custom: 
+title: Exportation à partir d’une DLL à l’aide de __declspec (dllexport) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportation à partir d'une DLL à l'aide de __declspec(dllexport)
 Microsoft a introduit **__export** dans la version du compilateur 16 bits de Visual C++ pour permettre au compilateur de générer automatiquement les noms d’exportation et de les placer dans un fichier .lib. Ce fichier .lib peut ensuite être utilisé comme un .lib statique pour relier à l’aide d’une DLL.  
@@ -40,7 +35,7 @@ Microsoft a introduit **__export** dans la version du compilateur 16 bits de Vis
   
  Plusieurs directives d’exportation, telles que les ordinaux, NONAME et PRIVATE, peuvent être effectuées uniquement dans un fichier .def, et il n’existe aucun moyen de spécifier ces attributs sans un fichier .def. Toutefois, à l’aide de **__declspec (dllexport)** en plus d’utiliser un .def fichier n’entraîne pas d’erreurs de build.  
   
- Pour exporter des fonctions, les **__declspec (dllexport)** (mot clé) doit apparaître à gauche du mot clé de convention d’appel, si un mot clé est spécifié. Exemple :  
+ Pour exporter des fonctions, les **__declspec (dllexport)** (mot clé) doit apparaître à gauche du mot clé de convention d’appel, si un mot clé est spécifié. Par exemple :  
   
 ```  
 __declspec(dllexport) void __cdecl Function1(void);  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`ne peut pas être appliqué à une fonction avec la `__clrcall` convention d’appel.  
+>  `__declspec(dllexport)` ne peut pas être appliqué à une fonction avec la `__clrcall` convention d’appel.  
   
  Lorsque vous générez la DLL, vous créez généralement un fichier d’en-tête contenant les prototypes de fonction et/ou les classes vous exportez, puis ajoutez **__declspec (dllexport)** aux déclarations du fichier d’en-tête. Pour rendre votre code plus lisible, définissez une macro pour **__declspec (dllexport)** et utilisez la macro avec chaque symbole exporté :  
   

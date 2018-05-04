@@ -2,11 +2,8 @@
 title: Macros de mappage de propriété | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriété
 Ces macros définissent les mappages de propriété et les entrées.  
@@ -44,10 +39,10 @@ Ces macros définissent les mappages de propriété et les entrées.
 |[PROP_PAGE](#prop_page)|Insère une page de propriétés CLSID dans le mappage de propriété.|  
 |[END_PROP_MAP](#end_prop_map)|Marque la fin de la table de propriétés ATL.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Marque le début du mappage des propriétés de l’objet.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Lorsque vous créez un objet avec l’Assistant Projet ATL, l’Assistant va créer un mappage de propriété vide en spécifiant `BEGIN_PROP_MAP` suivie [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`n’enregistre pas le niveau (autrement dit, les dimensions) d’un mappage de propriété, car un objet à l’aide d’un mappage de propriété n’est peut-être pas une interface utilisateur, serait donc aucune mesure. Si l’objet est un contrôle ActiveX avec une interface utilisateur, elle a une étendue. Dans ce cas, vous devez spécifier [PROP_DATA_ENTRY](#prop_data_entry) dans votre mappage de propriété pour fournir l’étendue.  
+ `BEGIN_PROP_MAP` n’enregistre pas le niveau (autrement dit, les dimensions) d’un mappage de propriété, car un objet à l’aide d’un mappage de propriété n’est peut-être pas une interface utilisateur, serait donc aucune mesure. Si l’objet est un contrôle ActiveX avec une interface utilisateur, elle a une étendue. Dans ce cas, vous devez spécifier [PROP_DATA_ENTRY](#prop_data_entry) dans votre mappage de propriété pour fournir l’étendue.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Indique l’étendue ou dimensions, d’un contrôle ActiveX.  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Utilisez cette macro à entrer une page de description, propriété DISPID et propriété des propriétés CLSID dans le mappage des propriétés de l’objet.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Semblable à [PROP_ENTRY_TYPE](#prop_entry_type), mais vous permet de spécifier un IID spécifique si votre objet prend en charge plusieurs interfaces doubles.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Utilisez cette macro à entrer une page de propriétés CLSID dans le mappage des propriétés de l’objet.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] Le CLSID d’une page de propriétés.  
   
 ### <a name="remarks"></a>Notes  
- `PROP_PAGE`est semblable à [PROP_ENTRY_TYPE](#prop_entry_type), mais ne nécessite pas une description de la propriété ou un DISPID.  
+ `PROP_PAGE` est semblable à [PROP_ENTRY_TYPE](#prop_entry_type), mais ne nécessite pas une description de la propriété ou un DISPID.  
   
 > [!NOTE]
 >  Si vous avez déjà entré un CLSID avec `PROP_ENTRY_TYPE` ou [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), vous n’avez pas besoin de créer une entrée supplémentaire avec `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Marque la fin du mappage des propriétés de l’objet.  
   
 ```

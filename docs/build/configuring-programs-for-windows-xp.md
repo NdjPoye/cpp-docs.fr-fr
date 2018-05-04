@@ -1,27 +1,22 @@
 ---
 title: Configuration des programmes pour Windows XP | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 
@@ -46,7 +41,7 @@ Avec l’ensemble d’outils de plateforme Windows XP, la bibliothèque de Runti
 
 Ces bibliothèques sont prises en charge par les ensembles d’outils de plateforme installés par Visual Studio, en fonction de la cible :
 
-|Bibliothèque|Ensemble d'outils de plateforme par défaut ciblant les applications de bureau Windows|Valeur par défaut de la plateforme ensemble d’outils ciblage applications du Windows Store|Ensemble d’outils de plateforme Windows XP ciblant [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|Bibliothèque|Ensemble d'outils de plateforme par défaut ciblant les applications de bureau Windows|Valeur par défaut de la plateforme ensemble d’outils ciblage applications du Windows Store|Ensemble d'outils de plateforme Windows XP ciblant [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
 |---|---|---|---|
 |CRT|X|X|X|
 |Bibliothèque standard C++|X|X|X|

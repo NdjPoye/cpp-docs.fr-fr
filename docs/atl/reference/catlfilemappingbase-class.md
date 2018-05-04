@@ -1,12 +1,9 @@
 ---
 title: Classe de CAtlFileMappingBase | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>Classe de CAtlFileMappingBase
 Cette classe représente un fichier mappé en mémoire.  
@@ -58,7 +53,7 @@ class CAtlFileMappingBase
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Constructeur.|  
 |[CAtlFileMappingBase :: ~ CAtlFileMappingBase](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  Constructeur.  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase :: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase :: ~ CAtlFileMappingBase  
  Destructeur.  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Notes  
  Libère les ressources allouées par la classe et les appels de la [CAtlFileMappingBase::Unmap](#unmap) (méthode).  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Appelez cette méthode pour copier à partir d’un objet de mappage de fichier.  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Appelez cette méthode pour obtenir les données à partir d’un objet de mappage de fichier.  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers les données.  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  Appelez cette méthode pour retourner un handle vers l’objet de mappage de fichier.  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un handle vers l’objet de mappage de fichier.  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  Appelez cette méthode pour obtenir la taille du mappage d’un objet de mappage de fichier.  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  Appelez cette méthode pour ouvrir ou créer un objet de mappage de fichier pour le fichier spécifié.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>Paramètres  
  `hFile`  
- Handle vers le fichier à partir duquel créer un objet de mappage. `hFile`doit être valide et ne peut pas être définie à INVALID_HANDLE_VALUE.  
+ Handle vers le fichier à partir duquel créer un objet de mappage. `hFile` doit être valide et ne peut pas être définie à INVALID_HANDLE_VALUE.  
   
  `nMappingSize`  
  La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle du fichier identifié par *hFile.*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  Appelez cette méthode pour créer un objet de mappage de fichier qui permet un accès total à tous les processus.  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>Paramètres  
  `nMappingSize`  
- La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par`szName.`  
+ La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par `szName.`  
   
  `szName`  
  Le nom de l’objet de mappage.  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Notes  
  **MapShareMem** permet à un objet de mappage de fichier existant, créé par [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), pour être partagées entre les processus.  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Appelez cette méthode pour ouvrir un objet de mappage de fichier nommé pour le fichier spécifié.  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  Le nom de l’objet de mappage. Si un handle est ouvert à un objet de mappage de fichier de ce nom et le descripteur de sécurité sur l’objet de mappage n’est pas en conflit avec le `dwViewDesiredAccess` paramètre, l’opération d’ouverture aboutisse.  
   
  `nMappingSize`  
- La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par`szName.`  
+ La taille du mappage. Si 0, la taille maximale de l’objet de mappage de fichier est égale à la taille actuelle de l’objet de mappage de fichier identifié par `szName.`  
   
  `nOffset`  
  Le décalage du fichier où la correspondance doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produira si les paramètres d’entrée ne sont pas valides.  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  Définit l’objet de mappage de fichier actuel dans un autre objet de mappage de fichier.  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à l’objet actuel.  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  Appelez cette méthode pour annuler le mappage d’un objet de mappage de fichier.  
   
 ```

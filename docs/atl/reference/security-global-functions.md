@@ -1,12 +1,9 @@
 ---
-title: "Fonctions globales de sécurité | Documents Microsoft"
-ms.custom: 
+title: Fonctions globales de sécurité | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>Fonctions de sécurité Global
 Ces fonctions prennent en charge la modification des objets de SID et la liste ACL.  
@@ -55,10 +50,10 @@ Ces fonctions prennent en charge la modification des objets de SID et la liste A
 |[AtlSetSacl](#atlsetsacl)|Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|  
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  Appelez cette fonction pour récupérer les informations relatives à la liste de contrôle d'accès discrétionnaire (DACL) d'un objet spécifique.  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si le paramètre `hObject` ou `pDacl` n’est pas valide.  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès discrétionnaire (DACL) d'un objet spécifique.  
   
 > [!IMPORTANT]
@@ -119,10 +114,10 @@ inline bool AtlSetDacl(
   
 ### <a name="remarks"></a>Notes  
  Dans les versions debug, une erreur d’assertion se produit si `hObject` n’est pas valide, ou si `dwInheritanceFlowControl` n’est pas une des trois valeurs autorisées.  
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  Appelez cette fonction pour récupérer l'identificateur de sécurité (SID) de groupe d'un objet.  
   
 > [!IMPORTANT]
@@ -148,10 +143,10 @@ inline bool AtlGetGroupSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  Appelez cette fonction pour définir l'identificateur de sécurité (SID) de groupe d'un objet.  
   
 > [!IMPORTANT]
@@ -177,10 +172,10 @@ inline bool AtlSetGroupSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  Appelez cette fonction pour récupérer l'identificateur de sécurité (SID) de propriétaire d'un objet.  
   
 > [!IMPORTANT]
@@ -206,10 +201,10 @@ inline bool AtlGetOwnerSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  Appelez cette fonction pour définir l'identificateur de sécurité (SID) de propriétaire d'un objet.  
   
 > [!IMPORTANT]
@@ -235,10 +230,10 @@ inline bool AtlSetOwnerSid(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  Appelez cette fonction pour récupérer les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.  
   
 > [!IMPORTANT]
@@ -271,10 +266,10 @@ inline bool AtlGetSacl(
 ### <a name="remarks"></a>Notes  
  Si `AtlGetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.  
   
 > [!IMPORTANT]
@@ -313,10 +308,10 @@ inline bool AtlSetSacl(
   
  Si `AtlSetSacl` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.  
   
 > [!IMPORTANT]
@@ -355,7 +350,7 @@ inline bool AtlGetSecurityDescriptor(
 ### <a name="remarks"></a>Notes  
  Si `AtlGetSecurityDescriptor` doit être appelée plusieurs fois sur de nombreux objets différents, il sera plus efficace pour activer le privilège SE_SECURITY_NAME qu’une seule fois avant d’appeler la fonction, avec `bRequestNeededPrivileges` défini sur false.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h 
    
 ## <a name="see-also"></a>Voir aussi  

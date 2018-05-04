@@ -1,10 +1,10 @@
 ---
 title: /Zc:twoPhase-(recherche de nom en deux phases disable) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
@@ -17,14 +17,13 @@ helpviewer_keywords:
 - /Zc:twoPhase
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4582a5532d9fd410224ee4174ca3973bfe539656
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(recherche de nom en deux phases disable)
 
@@ -134,7 +133,7 @@ En mode de mise en conformité sous **/ permissive-**, l’appel de `tfunc(1729)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>Mettre à jour votre code pour la conformité en deux phases
 
-Les versions antérieures du compilateur ne nécessitent pas les mots clés `template` et `typename` partout où la norme C++ a besoin. Ces mots clés sont nécessaires dans certaines positions pour lever l’ambiguïté comment les compilateurs doivent analyser un nom dépendant pendant la première phase de la recherche. Exemple :
+Les versions antérieures du compilateur ne nécessitent pas les mots clés `template` et `typename` partout où la norme C++ a besoin. Ces mots clés sont nécessaires dans certaines positions pour lever l’ambiguïté comment les compilateurs doivent analyser un nom dépendant pendant la première phase de la recherche. Par exemple :
 
 `T::Foo<a || b>(c);`
 
@@ -144,7 +143,7 @@ Analyse d’un compilateur conforme `Foo` en tant que variable dans la portée d
 
 Dans les versions antérieures de Visual Studio 2017 version 15.3 et à quel moment **/Zc:twoPhase-** est spécifié, le compilateur autorise ce code sans le `template` (mot clé) et l’interprète comme un appel à un modèle de fonction avec un argument de `a || b`, car il analyse les modèles de manière très limitée. Le code ci-dessus n’est pas analysé du tout dans la première phase. Pendant la deuxième phase, il existe suffisamment de contexte pour indiquer que `T::Foo` est un modèle plutôt qu’une variable pour le compilateur n’applique pas l’utilisation du mot clé.
 
-Ce comportement peut également être affiché en supprimant le mot clé `typename` avant les noms dans les corps de modèle de fonction, les initialiseurs, les arguments par défaut et les arguments de noexcept. Exemple :
+Ce comportement peut également être affiché en supprimant le mot clé `typename` avant les noms dans les corps de modèle de fonction, les initialiseurs, les arguments par défaut et les arguments de noexcept. Par exemple :
 
 ```cpp
 template<typename T>

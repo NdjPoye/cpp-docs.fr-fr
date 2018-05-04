@@ -1,29 +1,24 @@
 ---
-title: "ATL gestion d’événements résumé | Documents Microsoft"
-ms.custom: 
+title: ATL gestion d’événements résumé | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>Résumé de la gestion des événements ATL
 En général, la gestion des événements COM sont un processus relativement simple. Il existe trois étapes principales :  
@@ -44,7 +39,7 @@ En général, la gestion des événements COM sont un processus relativement sim
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|Non|Oui|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|Non|Non|  
   
- \*Lors de l’utilisation des classes de prise en charge ATL, vous ne sont jamais requis pour implémenter le **IUnknown** ou `IDispatch` méthodes manuellement.  
+ \* Lors de l’utilisation des classes de prise en charge ATL, vous ne sont jamais requis pour implémenter le **IUnknown** ou `IDispatch` méthodes manuellement.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Information et désinformation la Source d’événements  
  Il existe trois méthodes principales d’information et désinformation une source d’événement à l’aide d’ATL.  
@@ -52,7 +47,7 @@ En général, la gestion des événements COM sont un processus relativement sim
 |Conseiller (fonction)|Déconseiller (fonction)|Mieux adapté pour une utilisation avec|Vous devez effectuer le suivi d’un cookie|Commentaires|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable ou interfaces doubles | Oui | `AtlAdvise` est une fonction ATL globale. `CComPtrBase::Advise`est utilisé par [CComPtr](../atl/reference/ccomptr-class.md) et [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable ou interfaces doubles | Oui | `AtlAdvise` est une fonction ATL globale. `CComPtrBase::Advise` est utilisé par [CComPtr](../atl/reference/ccomptr-class.md) et [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
 
 |[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) ou [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Ne | Moins de paramètres que `AtlAdvise` étant donné que la classe de base fonctionne plus. |  
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Contrôles ActiveX dans des contrôles composites | Ne | `CComCompositeControl::AdviseSinkMap` indique qu’il contient toutes les entrées de table de récepteur de l’événement. La même fonction avertit les entrées. Cette méthode est appelée automatiquement par le `CComCompositeControl` classe. |  

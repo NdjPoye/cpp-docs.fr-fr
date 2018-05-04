@@ -1,13 +1,10 @@
 ---
-title: "L’importation d’appels de fonction à l’aide de __declspec (dllimport) | Documents Microsoft"
-ms.custom: 
+title: L’importation d’appels de fonction à l’aide de __declspec (dllimport) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __declspec
 - dllimport
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5553bd5e9999a4737dc258358402eb71269b9c40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importation d'appels de fonctions à l'aide de __declspec(dllimport)
 L’exemple de code suivant montre comment utiliser **_declspec (dllimport)** pour importer des appels de fonction à partir d’une DLL dans une application. Supposons que `func1` est une fonction qui réside dans une DLL séparée du fichier .exe qui contient le **principal** (fonction).  

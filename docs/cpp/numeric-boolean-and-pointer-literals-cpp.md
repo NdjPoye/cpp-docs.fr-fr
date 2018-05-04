@@ -1,12 +1,9 @@
 ---
-title: "Littéraux numériques, booléen et pointeur (C++) | Documents Microsoft"
-ms.custom: 
+title: Littéraux numériques, booléen et pointeur (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Littéraux numériques, booléen et pointeur (C++)
 Un littéral est un élément de programme qui représente directement une valeur. Cet article traite des littéraux de type entier, virgule flottante, booléen et de pointeur. Pour plus d’informations sur les littéraux de chaîne et de caractère, consultez [chaîne et les littéraux de caractère (C++)](../cpp/string-and-character-literals-cpp.md). Vous pouvez également définir vos propres littéraux basés sur un de ces catégories. Pour plus d’informations, consultez [littéraux définis par l’utilisateur (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -49,7 +44,7 @@ MyClass* mc = nullptr;      // pointer literal
   
  En l'absence de préfixe ou de suffixe, le compilateur génère un type de valeur littérale intégral `int` (32 bits) si la valeur peut y correspondre ; sinon, il génère un type `long long` (64 bits).  
   
- Pour spécifier un littéral intégral décimal, commencez la spécification par un chiffre différent de zéro. Exemple :  
+ Pour spécifier un littéral intégral décimal, commencez la spécification par un chiffre différent de zéro. Par exemple :  
   
 ```  
 int i = 157;   // Decimal literal  
@@ -59,21 +54,21 @@ int m = 36'000'000  // digit separators make large values more readable
 int   
 ```  
   
- Pour spécifier un littéral intégral octal, commencez la spécification par 0, suivi d'une séquence de chiffres dans la plage 0 à 7. Les chiffres 8 et 9 sont des erreurs lors de la spécification d'un littéral octal. Exemple :  
+ Pour spécifier un littéral intégral octal, commencez la spécification par 0, suivi d'une séquence de chiffres dans la plage 0 à 7. Les chiffres 8 et 9 sont des erreurs lors de la spécification d'un littéral octal. Par exemple :  
   
 ```  
 int i = 0377;   // Octal literal  
 int j = 0397;        // Error: 9 is not an octal digit  
 ```  
   
- Pour spécifier un littéral intégral hexadécimal, commencez la spécification par `0x` ou `0X` (la casse de « x » n'a pas d'importance) suivi d'une séquence de chiffres dans la plage `0` à `9` et `a` (ou `A`) à `f` (ou `F`). Les chiffres hexadécimaux `a` (ou `A`) à `f` (ou `F`) représentent des valeurs dans la plage 10 à 15. Exemple :  
+ Pour spécifier un littéral intégral hexadécimal, commencez la spécification par `0x` ou `0X` (la casse de « x » n'a pas d'importance) suivi d'une séquence de chiffres dans la plage `0` à `9` et `a` (ou `A`) à `f` (ou `F`). Les chiffres hexadécimaux `a` (ou `A`) à `f` (ou `F`) représentent des valeurs dans la plage 10 à 15. Par exemple :  
   
 ```  
 int i = 0x3fff;   // Hexadecimal literal  
 int j = 0X3FFF;        // Equal to i  
 ```  
   
- Pour spécifier un type non signé, utilisez le **u** ou **U** suffixe. Pour spécifier un type long, utilisez le **l** ou **L** suffixe. Pour spécifier un type intégral 64 bits, utilisez le suffixe LL ou ll. Le suffixe i64 est toujours pris en charge mais doit être évité, car il est spécifique à Microsoft et n'est pas portable. Exemple :  
+ Pour spécifier un type non signé, utilisez le **u** ou **U** suffixe. Pour spécifier un type long, utilisez le **l** ou **L** suffixe. Pour spécifier un type intégral 64 bits, utilisez le suffixe LL ou ll. Le suffixe i64 est toujours pris en charge mais doit être évité, car il est spécifique à Microsoft et n'est pas portable. Par exemple :  
   
 ```  
 unsigned val_1 = 328u;             // Unsigned value  

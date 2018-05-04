@@ -2,31 +2,26 @@
 title: __vectorcall | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Section spécifique à Microsoft**  
   
- La convention d'appel `__vectorcall` spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. `__vectorcall`utilise plus de registres pour les arguments que [__fastcall](../cpp/fastcall.md) ou la valeur par défaut [x64 convention d’appel](../build/overview-of-x64-calling-conventions.md) utiliser. La convention d'appel `__vectorcall` est prise en charge uniquement dans le code natif sur les processeurs x86 et x64 qui incluent les extensions Streaming SIMD 2 (SSE2) et versions ultérieures. Utilisez `__vectorcall` pour accélérer les fonctions qui passent plusieurs arguments à virgule flottante ou de type vecteur SIMD, et effectuent des opérations qui tirent parti des arguments chargés dans les registres. La liste ci-dessous indique les fonctionnalités qui sont communes aux implémentations x86 et x64 de `__vectorcall`. Les différences sont expliquées plus loin dans cet article.  
+ La convention d'appel `__vectorcall` spécifie que les arguments des fonctions doivent être passés dans les registres, lorsque cela est possible. `__vectorcall` utilise plus de registres pour les arguments que [__fastcall](../cpp/fastcall.md) ou la valeur par défaut [x64 convention d’appel](../build/overview-of-x64-calling-conventions.md) utiliser. La convention d'appel `__vectorcall` est prise en charge uniquement dans le code natif sur les processeurs x86 et x64 qui incluent les extensions Streaming SIMD 2 (SSE2) et versions ultérieures. Utilisez `__vectorcall` pour accélérer les fonctions qui passent plusieurs arguments à virgule flottante ou de type vecteur SIMD, et effectuent des opérations qui tirent parti des arguments chargés dans les registres. La liste ci-dessous indique les fonctionnalités qui sont communes aux implémentations x86 et x64 de `__vectorcall`. Les différences sont expliquées plus loin dans cet article.  
   
 |Élément|Implémentation|  
 |-------------|--------------------|  

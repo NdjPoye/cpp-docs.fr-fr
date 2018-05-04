@@ -1,13 +1,10 @@
 ---
 title: Référence du langage C++ | Documents Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Référence du langage C++
 Cette référence explique le langage de programmation C++ tel qu'il est implémenté dans Microsoft Visual C++. L’organisation est basée sur *le manuel de référence C++ annoté* par Margaret Ellis et Bjarne Stroustrup et sur la norme d’internationale C++ ANSI/ISO (ISO/IEC FDIS 14882). Les implémentations spécifiques à Microsoft des fonctionnalités du langage C++ sont incluses.  
@@ -83,7 +78,7 @@ Pour une vue d’ensemble de pratiques de programmation C++ moderne, consultez [
  [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md)  
  La gestion des exceptions C++, la gestion structurée des exceptions (SEH) et les mots clés utilisés pour écrire des instructions de gestion des exceptions.  
   
- [Assertion et Messages fournis par l’utilisateur](../cpp/assertion-and-user-supplied-messages-cpp.md)  
+ [Messages d’assertion et messages fournis par l’utilisateur](../cpp/assertion-and-user-supplied-messages-cpp.md)  
  Directive`#error`, le mot clé `static_assert`, la macro `assert`.  
   
  [Modèles](../cpp/templates-cpp.md)  

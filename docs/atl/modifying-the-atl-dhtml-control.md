@@ -1,13 +1,10 @@
 ---
-title: "La modification du contrôle ATL DHTML | Documents Microsoft"
-ms.custom: 
+title: La modification du contrôle ATL DHTML | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3810236aca4661a6cdcd8399294cdb73e97948fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>La modification du contrôle ATL DHTML
 L’Assistant contrôle ATL fournit le code de démarrage vous pouvez générer et exécuter le contrôle, et donc vous pouvez voir la manière dont les méthodes sont écrites dans les fichiers projet et comment le DHTML appelle le code du contrôle C++ en utilisant les méthodes de distribution. Vous pouvez ajouter n’importe quelle méthode de répartition à l’interface. Ensuite, vous pouvez appeler les méthodes dans la ressource HTML.  
@@ -62,7 +57,7 @@ L’Assistant contrôle ATL fournit le code de démarrage vous pouvez générer 
   
      Examinez le code HTML, notamment les appels aux méthodes de dispatch Windows externes. Le code HTML appelle du projet `OnClick` (méthode) et les paramètres indiquent le corps du contrôle (`theBody`) et la couleur à assigner («`red`»). Le texte qui suit l’appel de méthode est l’étiquette qui apparaît sur le bouton.  
   
-2.  Ajoutez un autre `OnClick` (méthode), uniquement de modifier la couleur. Exemple :  
+2.  Ajoutez un autre `OnClick` (méthode), uniquement de modifier la couleur. Par exemple :  
   
  ```  
  <br>  
@@ -72,7 +67,7 @@ L’Assistant contrôle ATL fournit le code de démarrage vous pouvez générer 
   
      Cette méthode crée un bouton étiqueté **Actualiser**, que l’utilisateur peut cliquer pour retourner le contrôle à l’arrière-plan blanc d’origine.  
   
-3.  Ajoutez l’appel à la `HelloHTML` méthode que vous avez créé. Exemple :  
+3.  Ajoutez l’appel à la `HelloHTML` méthode que vous avez créé. Par exemple :  
   
  ```  
  <br>  

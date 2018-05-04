@@ -1,13 +1,10 @@
 ---
 title: Extensions Microsoft pour C et C++ | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Extensions Microsoft pour C et C++
 Visual C++ étend les normes ANSI C et ANSI C++ comme suit.  
@@ -71,7 +66,7 @@ const int CMyClass::max;   // out of class definition
   
  Sous **/Ze**, la définition hors classe est facultative pour les membres de données static, const integral et const enum. Seuls les membres integral et enum qui sont de type static et const peuvent avoir des initialiseurs dans une classe ; l'expression d'initialisation doit être une expression de type const.  
   
- Pour éviter des erreurs quand une définition hors classe est fournie dans un en-tête de fichier et le fichier d’en-tête est inclus dans plusieurs fichiers sources, utilisez [selectany](../../cpp/selectany.md). Exemple :  
+ Pour éviter des erreurs quand une définition hors classe est fournie dans un en-tête de fichier et le fichier d’en-tête est inclus dans plusieurs fichiers sources, utilisez [selectany](../../cpp/selectany.md). Par exemple :  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
@@ -80,7 +75,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 ## <a name="casts"></a>Casts  
  Le compilateur C++ et le compilateur C prennent tous les deux en charge les types de casts non ANSI suivants :  
   
--   Casts non ANSI pour produire des valeurs l-value. Exemple :  
+-   Casts non ANSI pour produire des valeurs l-value. Par exemple :  
   
     ```  
     char *p;  
@@ -96,7 +91,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   Casts non ANSI d'un pointeur de fonction vers un pointeur de données. Exemple :  
+-   Casts non ANSI d'un pointeur de fonction vers un pointeur de données. Par exemple :  
   
     ```  
     int ( * pfunc ) ();   
@@ -272,7 +267,7 @@ void func ()
   
 -   & (bitand)  
   
--   &#124; (bitor)  
+-   &#124;(bitor)  
   
 -   ~ (Terminer)  
   
@@ -280,9 +275,9 @@ void func ()
   
 -   ! = (not_eq)  
   
--   &#124; &#124; (ou)  
+-   &#124;&#124;(ou)  
   
--   &#124; = (or_eq)  
+-   &#124;= (or_eq)  
   
 -   ^ (xor)  
   

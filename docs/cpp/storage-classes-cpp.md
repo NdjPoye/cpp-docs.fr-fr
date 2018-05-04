@@ -2,11 +2,8 @@
 title: Classes de stockage (C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10acbfc4835b59bcddefb722a9039cc5dbae5e21
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: a56d456564dc171292e8a58b6cb486ce2dfbaf31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-classes-c"></a>Classes de stockage (C++)  
   
@@ -234,7 +229,7 @@ Points à noter concernant le `thread_local` spécificateur :
 
 Sous Windows, `thread_local` est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , sauf que `__declspec(thread)` peut être appliqué à une définition de type et n’est valide dans le code C. Si possible, utilisez `thread_local`, car il fait partie de la norme C++ et est par conséquent plus portable.
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>  Inscrire
 
 **Visual Studio 2017 15,3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : le `register` mot clé n’est plus une classe de stockage pris en charge. Le mot clé est toujours réservé dans la norme pour une utilisation ultérieure. 
 

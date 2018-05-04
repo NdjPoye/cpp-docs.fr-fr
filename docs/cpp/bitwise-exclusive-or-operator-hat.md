@@ -1,12 +1,9 @@
 ---
-title: "Exclusif au niveau du bit ou opérateur : ^ | Documents Microsoft"
-ms.custom: 
+title: 'Exclusif au niveau du bit ou opérateur : ^ | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Opérateur de bits OR exclusif : ^
 ## <a name="syntax"></a>Syntaxe  
@@ -44,7 +39,7 @@ L’opérateur OR exclusif au niveau du bit (**^**) compare chaque bit de son pr
 Les deux opérandes de l’opérateur de bits OR exclusif doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé d'opérateur pour ^  
-Le **xor** opérateur est l’équivalent textuel de  **^** . Il existe deux moyens d’accéder à la **xor** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+Le **xor** opérateur est l’équivalent textuel de **^**. Il existe deux moyens d’accéder à la **xor** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   

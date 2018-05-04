@@ -1,5 +1,5 @@
 ---
-title: pgomgr | Microsoft Docs
+title: pgomgr | Documents Microsoft
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743665bbe0ee9c3df08d197d203e95d08542f613
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgomgr"></a>pgomgr
 

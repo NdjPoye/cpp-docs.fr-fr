@@ -1,12 +1,9 @@
 ---
-title: "commutateur d’instruction (C++) | Documents Microsoft"
-ms.custom: 
+title: commutateur d’instruction (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>switch, instruction (C++)
 Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une expression intégrale.  
@@ -57,7 +52,7 @@ Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une e
 |Aucune des constantes correspond à l’une des constantes dans le **cas** étiquettes ; un **par défaut** étiquette n’est présente.|Le contrôle est transféré à la **par défaut** étiquette.|  
 |Aucune des constantes correspond à l’une des constantes dans le **cas** étiquettes ; **par défaut** étiquette n’est pas présente.|Le contrôle est transféré à l'instruction, après l'exécution de l'instruction `switch`.|  
   
- Si une expression correspondante est trouvée, le contrôle n’est pas bloqué par les **cas** ou **par défaut** étiquettes. Le [saut](../cpp/break-statement-cpp.md) instruction est utilisée pour arrêter l’exécution et de transférer le contrôle à l’instruction après la `switch` instruction. Sans un **saut** chaque instruction, à partir de la mise en correspondance **cas** étiquette à la fin de la `switch`, y compris le **par défaut**, est exécutée. Exemple :  
+ Si une expression correspondante est trouvée, le contrôle n’est pas bloqué par les **cas** ou **par défaut** étiquettes. Le [saut](../cpp/break-statement-cpp.md) instruction est utilisée pour arrêter l’exécution et de transférer le contrôle à l’instruction après la `switch` instruction. Sans un **saut** chaque instruction, à partir de la mise en correspondance **cas** étiquette à la fin de la `switch`, y compris le **par défaut**, est exécutée. Par exemple :  
   
 ```  
 // switch_statement1.cpp  
@@ -131,7 +126,7 @@ int main()
         };
 ```
 
- Un bloc interne d'une instruction `switch` peut contenir des définitions avec des initialisations tant qu'elles sont accessibles, c'est-à-dire non contournées par tous les chemins d'exécution possibles. Les noms présentés à l'aide de ces déclarations ont une portée locale. Exemple :  
+ Un bloc interne d'une instruction `switch` peut contenir des définitions avec des initialisations tant qu'elles sont accessibles, c'est-à-dire non contournées par tous les chemins d'exécution possibles. Les noms présentés à l'aide de ces déclarations ont une portée locale. Par exemple :  
   
 ```cpp  
 // switch_statement2.cpp  

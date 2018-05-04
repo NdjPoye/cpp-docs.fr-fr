@@ -2,11 +2,8 @@
 title: Classe CBindStatusCallback | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CBindStatusCallback
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19aa979cb69bdbf8d74acbd96291fac9af78c845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43a51b98710ea92f153581945007f21864dca6f4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cbindstatuscallback-class"></a>Classe CBindStatusCallback
 Cette classe implémente l'interface `IBindStatusCallback`.  
@@ -82,7 +77,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Constructeur.|  
 |[CBindStatusCallback :: ~ CBindStatusCallback](#dtor)|Destructeur.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -111,7 +106,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_spStream](#m_spstream)|Pointeur vers le [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interface pour le transfert de données.|  
   
 ## <a name="remarks"></a>Notes  
- La classe `CBindStatusCallback` implémente l'interface `IBindStatusCallback`. `IBindStatusCallback`doit être implémenté par votre application afin qu’il peut recevoir des notifications à partir d’un transfert de données asynchrone. Le moniker asynchrone fourni par le système utilise `IBindStatusCallback` pour envoyer et recevoir des informations sur les données asynchrones, les méthodes transfèrent vers et à partir de votre objet.  
+ La classe `CBindStatusCallback` implémente l'interface `IBindStatusCallback`. `IBindStatusCallback` doit être implémenté par votre application afin qu’il peut recevoir des notifications à partir d’un transfert de données asynchrone. Le moniker asynchrone fourni par le système utilise `IBindStatusCallback` pour envoyer et recevoir des informations sur les données asynchrones, les méthodes transfèrent vers et à partir de votre objet.  
   
  En règle générale, le `CBindStatusCallback` objet est associé à une opération de liaison spécifique. Par exemple, dans le [ASYNC](../../visual-cpp-samples.md) exemple, lorsque vous définissez la propriété URL, il crée un `CBindStatusCallback` objet dans l’appel à `Download`:  
   
@@ -131,7 +126,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback  
+##  <a name="cbindstatuscallback"></a>  CBindStatusCallback::CBindStatusCallback  
  Constructeur.  
   
 ```
@@ -143,7 +138,7 @@ CBindStatusCallback();
   
  Le constructeur initialise également [m_pT](#m_pt) et [m_pFunc](#m_pfunc) à **NULL**.  
   
-##  <a name="dtor"></a>CBindStatusCallback :: ~ CBindStatusCallback  
+##  <a name="dtor"></a>  CBindStatusCallback :: ~ CBindStatusCallback  
  Destructeur.  
   
 ```
@@ -153,7 +148,7 @@ CBindStatusCallback();
 ### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées.  
   
-##  <a name="download"></a>CBindStatusCallback::Download  
+##  <a name="download"></a>  CBindStatusCallback::Download  
  Crée un `CBindStatusCallback` objet et appelle `StartAsyncDownload` pour démarrer le téléchargement des données de façon asynchrone à partir de l’URL spécifiée.  
   
 ```
@@ -173,7 +168,7 @@ static HRESULT Download(
  [in] Pointeur vers la fonction qui reçoit les données qui sont en lecture. La fonction est un membre de classe de l’objet de type `T`. Consultez [StartAsyncDownload](#startasyncdownload) pour la syntaxe et un exemple.  
   
  `bstrURL`  
- [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être **NULL**. Exemple :  
+ [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être **NULL**. Par exemple :  
   
  `CComBSTR mybstr =_T("http://somesite/data.htm")`  
   
@@ -187,9 +182,9 @@ static HRESULT Download(
  Un de la norme `HRESULT` valeurs.  
   
 ### <a name="remarks"></a>Notes  
- Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable`lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
+ Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable` lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
   
-##  <a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
+##  <a name="getbindinfo"></a>  CBindStatusCallback::GetBindInfo  
  Appelé pour indiquer le moniker de la liaison.  
   
 ```
@@ -219,7 +214,7 @@ STDMETHOD(GetBindInfo)(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut définit la liaison doit être asynchrone et à utiliser le modèle d’émission de données. Dans le modèle push de données, le moniker de l’opération de liaison asynchrone les lecteurs et signale en permanence au client chaque fois que les nouvelles données sont disponibles.  
   
-##  <a name="getpriority"></a>CBindStatusCallback::GetPriority  
+##  <a name="getpriority"></a>  CBindStatusCallback::GetPriority  
  Appelé par le moniker asynchrone pour obtenir la priorité de l’opération de liaison.  
   
 ```
@@ -233,7 +228,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-##  <a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead  
+##  <a name="m_dwavailabletoread"></a>  CBindStatusCallback::m_dwAvailableToRead  
  Peut être utilisé pour stocker le nombre d’octets disponibles pour la lecture.  
   
 ```
@@ -243,7 +238,7 @@ DWORD m_dwAvailableToRead;
 ### <a name="remarks"></a>Notes  
  Initialisé à zéro dans `StartAsyncDownload`.  
   
-##  <a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
+##  <a name="m_dwtotalread"></a>  CBindStatusCallback::m_dwTotalRead  
  Le total cumulé d’octets lus dans le transfert de données asynchrone.  
   
 ```
@@ -253,7 +248,7 @@ DWORD m_dwTotalRead;
 ### <a name="remarks"></a>Notes  
  Incrémenté à chaque modification `OnDataAvailable` est appelée par le nombre d’octets réellement lus. Initialisé à zéro dans `StartAsyncDownload`.  
   
-##  <a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
+##  <a name="m_pfunc"></a>  CBindStatusCallback::m_pFunc  
  La fonction vers laquelle pointe `m_pFunc` est appelée par `OnDataAvailable` après elle lit les données disponibles (par exemple, pour stocker les données ou l’imprimer à l’écran).  
   
 ```
@@ -271,7 +266,7 @@ void Function_Name(
    );  
 ```  
   
-##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
+##  <a name="m_pt"></a>  CBindStatusCallback::m_pT  
  Pointeur vers l’objet demandant le transfert de données asynchrone.  
   
 ```
@@ -281,7 +276,7 @@ T* m_pT;
 ### <a name="remarks"></a>Notes  
  Le `CBindStatusCallback` objet est mise en modèle de classe de l’objet.  
   
-##  <a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
+##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
  Un pointeur vers un [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) interface qui fournit l’accès au contexte de liaison (un objet qui stocke des informations sur une opération de liaison de moniker particulier).  
   
 ```
@@ -291,7 +286,7 @@ CComPtr<IBindCtx> m_spBindCtx;
 ### <a name="remarks"></a>Notes  
  Initialisé dans `StartAsyncDownload`.  
   
-##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
+##  <a name="m_spbinding"></a>  CBindStatusCallback::m_spBinding  
  Un pointeur vers le `IBinding` interface de l’opération de liaison actuel.  
   
 ```
@@ -301,7 +296,7 @@ CComPtr<IBinding> m_spBinding;
 ### <a name="remarks"></a>Notes  
  Initialisé dans `OnStartBinding` et publiée en `OnStopBinding`.  
   
-##  <a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
+##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
  Un pointeur vers le [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interface pour l’URL à utiliser.  
   
 ```
@@ -311,7 +306,7 @@ CComPtr<IMoniker> m_spMoniker;
 ### <a name="remarks"></a>Notes  
  Initialisé dans `StartAsyncDownload`.  
   
-##  <a name="m_spstream"></a>CBindStatusCallback::m_spStream  
+##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
  Un pointeur vers le [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) interface de l’opération de liaison actuel.  
   
 ```
@@ -321,7 +316,7 @@ CComPtr<IStream> m_spStream;
 ### <a name="remarks"></a>Notes  
  Initialisé dans `OnDataAvailable` à partir de la **STGMEDIUM** structure lorsque le **BCSF** indicateur est **BCSF_FIRSTDATANOTIFICATION** et libérée lorsque la **BCSF**  indicateur est **BCSF_LASTDATANOTIFICATION**.  
   
-##  <a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CBindStatusCallback::OnDataAvailable  
  Les appels système des monikers asynchrones `OnDataAvailable` pour fournir des données à l’objet qu’il est disponible.  
   
 ```
@@ -349,9 +344,9 @@ STDMETHOD(
  Un de la norme `HRESULT` valeurs.  
   
 ### <a name="remarks"></a>Notes  
- `OnDataAvailable`lit les données, puis appelle une méthode de classe de l’objet (par exemple, pour stocker les données ou l’imprimer à l’écran). Consultez [CBindStatusCallback::StartAsyncDownload à laquelle sont](#startasyncdownload) pour plus d’informations.  
+ `OnDataAvailable` lit les données, puis appelle une méthode de classe de l’objet (par exemple, pour stocker les données ou l’imprimer à l’écran). Consultez [CBindStatusCallback::StartAsyncDownload à laquelle sont](#startasyncdownload) pour plus d’informations.  
   
-##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
+##  <a name="onlowresource"></a>  CBindStatusCallback::OnLowResource  
  Appelé lorsque les ressources sont insuffisantes.  
   
 ```
@@ -365,7 +360,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-##  <a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable  
+##  <a name="onobjectavailable"></a>  CBindStatusCallback::OnObjectAvailable  
  Appelé par le moniker asynchrone à passer un pointeur d’interface objet à votre application.  
   
 ```
@@ -382,7 +377,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-##  <a name="onprogress"></a>CBindStatusCallback::OnProgress  
+##  <a name="onprogress"></a>  CBindStatusCallback::OnProgress  
  Appelé pour indiquer la progression d’un processus de téléchargement de données.  
   
 ```
@@ -409,7 +404,7 @@ STDMETHOD(OnProgress)(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-##  <a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding  
+##  <a name="onstartbinding"></a>  CBindStatusCallback::OnStartBinding  
  Définit le membre de données [m_spBinding](#m_spbinding) à la `IBinding` pointeur dans `pBinding`.  
   
 ```
@@ -423,7 +418,7 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
  `pBinding`  
  [in] Adresse de l’interface IBinding actuelles une opération de liaison. Cela ne peut pas être NULL. Le client doit appeler AddRef sur ce pointeur pour conserver une référence à l’objet de liaison.  
   
-##  <a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding  
+##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding  
  Versions du `IBinding` pointeur dans le membre de données [m_spBinding](#m_spbinding).  
   
 ```
@@ -440,7 +435,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 ### <a name="remarks"></a>Notes  
  Appelé par le moniker asynchrone fourni par le système pour indiquer la fin de l’opération de liaison.  
   
-##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload à laquelle sont  
+##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload à laquelle sont  
  Démarre le téléchargement des données de façon asynchrone à partir de l’URL spécifiée.  
   
 ```
@@ -460,7 +455,7 @@ HRESULT StartAsyncDownload(
  [in] Pointeur vers la fonction qui reçoit les données en cours de lecture. La fonction est un membre de classe de l’objet de type `T`. Consultez **remarques** pour la syntaxe et un exemple.  
   
  `bstrURL`  
- [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être **NULL**. Exemple :  
+ [in] L’URL pour obtenir des données à partir de. Peut être n’importe quel nom de fichier ou URL valide. Ne peut pas être **NULL**. Par exemple :  
   
  `CComBSTR mybstr =_T("http://somesite/data.htm")`  
   
@@ -474,7 +469,7 @@ HRESULT StartAsyncDownload(
  Un de la norme `HRESULT` valeurs.  
   
 ### <a name="remarks"></a>Notes  
- Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable`lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
+ Chaque fois que les données sont disponibles, il est envoyé à l’objet via `OnDataAvailable`. `OnDataAvailable` lit les données et appelle la fonction vers laquelle pointée *pFunc* (par exemple, pour stocker les données ou l’imprimer à l’écran).  
   
  La fonction vers laquelle pointe *pFunc* est un membre de classe de l’objet et la syntaxe est la suivante :  
   

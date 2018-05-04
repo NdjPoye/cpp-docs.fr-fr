@@ -1,12 +1,9 @@
 ---
-title: __declspec | Microsoft Docs
-ms.custom: 
+title: __declspec | Documents Microsoft
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -38,14 +34,14 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 
 *extended-decl-modifier-seq* :  
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier* :  
-&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**align (** *#* **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Déconseillé**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
@@ -55,8 +51,8 @@ La syntaxe à attributs étendus pour la spécification de classe de stockage d�
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**process**  
-&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Processus**  
+&nbsp;&nbsp;&nbsp;&nbsp;**propriété (** { **get =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
@@ -72,13 +68,13 @@ Le **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow
 
 Le **__declspec** mots clés doivent être placés au début d’une déclaration simple. Le compilateur ignore sans avertissement les **__declspec** mots clés placés après * ou & et devant l’identificateur dans une déclaration de variable.
 
-A **__declspec** attribut spécifié au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. Exemple :
+A **__declspec** attribut spécifié au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. Par exemple :
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-Dans ce cas, l'attribut s'applique à `varX`. A **__declspec** attribut placé après le **classe** ou **struct** mot clé s’applique au type défini par l’utilisateur. Exemple :
+Dans ce cas, l'attribut s'applique à `varX`. A **__declspec** attribut placé après le **classe** ou **struct** mot clé s’applique au type défini par l’utilisateur. Par exemple :
 
 ```cpp
 class __declspec(dllimport) X {};
@@ -90,7 +86,7 @@ La règle générale pour l’utilisation de la **__declspec** attribut pour les
 
 *decl-specifier-seq* *init-declarator-list*;
 
-Le *decl-specifier-seq* doit contenir, entre autres choses, un type de base (par exemple, **int**, **float**, un **typedef**, ou un nom de classe), un classe de stockage (par exemple, **statique**, **extern**), ou le **__declspec** extension. Le *init-declarator-list* doit contenir, entre autres choses, le pointeur de déclarations. Exemple :
+Le *decl-specifier-seq* doit contenir, entre autres choses, un type de base (par exemple, **int**, **float**, un **typedef**, ou un nom de classe), un classe de stockage (par exemple, **statique**, **extern**), ou le **__declspec** extension. Le *init-declarator-list* doit contenir, entre autres choses, le pointeur de déclarations. Par exemple :
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

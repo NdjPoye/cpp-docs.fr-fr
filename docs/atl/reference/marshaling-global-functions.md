@@ -1,12 +1,9 @@
 ---
 title: Marshaling des fonctions globales | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a12f719d2cb893a5d2989a80f5fe09a5b49aeca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaling-global-functions"></a>Marshaling des fonctions globales
 Ces fonctions fournissent la prise en charge pour le marshaling et de conversion de données de marshaling des pointeurs d’interface.  
@@ -42,7 +37,7 @@ Ces fonctions fournissent la prise en charge pour le marshaling et de conversion
 ## <a name="requirements"></a>Configuration requise :
 **En-tête :** atlbase.h
   
-##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
+##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream  
  Libère les données de marshaling dans le flux, puis libère le pointeur de flux.  
 
 ```
@@ -56,7 +51,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
   
-##  <a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc  
+##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
  Crée un objet de flux, écrit le CLSID du proxy dans le flux, puis marshale le pointeur d’interface spécifié en écrivant les données nécessaires pour initialiser le proxy dans le flux.  
   
 ```
@@ -84,12 +79,12 @@ HRESULT AtlMarshalPtrInProc(
   
  Marshaling échoue, le pointeur de flux est libéré.  
   
- `AtlMarshalPtrInProc`peut uniquement être utilisé sur un pointeur vers un objet dans le processus.  
+ `AtlMarshalPtrInProc` peut uniquement être utilisé sur un pointeur vers un objet dans le processus.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
-##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
+##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr  
  Convertit les données de marshaling du flux en un pointeur d’interface qui peut être utilisé par le client.  
    
 ```

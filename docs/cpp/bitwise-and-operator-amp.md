@@ -1,12 +1,9 @@
 ---
-title: "Opérateur de bits AND : &amp; | Documents Microsoft"
-ms.custom: 
+title: 'Opérateur de bits AND : &amp; | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitand
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - bitwise operators [C++], AND operator
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3d74a39c68e4c16e55837a87e027e9e5991351f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="bitwise-and-operator-amp"></a>Opérateur de bits AND :&amp;
+# <a name="bitwise-and-operator-amp"></a>Opérateur de bits AND : &amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -48,7 +43,7 @@ expression
  Les deux opérandes de l’opérateur de bits AND doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md), sont appliquées aux opérandes.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé operator pour &  
- Le `bitand` opérateur est l’équivalent textuel de  **&** . Il existe deux moyens d’accéder à la `bitand` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+ Le `bitand` opérateur est l’équivalent textuel de **&**. Il existe deux moyens d’accéder à la `bitand` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,13 +1,10 @@
 ---
 title: EXPORTATIONS | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - EXPORTS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9a8e902e42d44ffa292b9f821839b8e948d7a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exports"></a>EXPORTS
 Introduit une section d'une ou plusieurs définitions d'exportation qui spécifient les ordinaux ou noms exportés des fonctions ou données. Chaque définition doit être sur une ligne distincte.  
@@ -77,7 +72,7 @@ EXPORTS
   
 3.  Un [/EXPORT](../../build/reference/export-exports-a-function.md) spécification dans une commande LINK  
   
-4.  A [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, de l’écran`#pragma comment(linker, "/export: definition ")`  
+4.  A [commentaire](../../preprocessor/comment-c-cpp.md) directive dans le code source, de l’écran `#pragma comment(linker, "/export: definition ")`  
   
  Ces quatre méthodes peuvent être utilisées dans le même programme. Quand LINK génère un programme qui contient des exportations, il crée également une bibliothèque d'importation, à moins qu'un fichier .EXP soit utilisé dans la build.  
   

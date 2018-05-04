@@ -1,27 +1,22 @@
 ---
 title: RUNTIME_FUNCTION, structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c2f28380d4a14cf7617653ede20468c45649a8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION, structure
 Gestion des exceptions basée sur une table requiert une entrée de table pour toutes les fonctions allouer de l’espace de pile ou d’appeler une autre fonction (par exemple, les fonctions non-feuille). Entrées de la table (fonction) ont le format suivant :  

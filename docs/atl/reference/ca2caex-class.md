@@ -2,11 +2,8 @@
 title: Classe de CA2CAEX | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2CAEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2caex-class"></a>Classe de CA2CAEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2CTEX` et `CT2CAEX`et le typedef **CA2CA**.  
@@ -88,10 +83,10 @@ class CA2CAEX
 ## <a name="example"></a>Exemple  
  Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
   
-##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
  Constructeur.  
   
 ```
@@ -109,7 +104,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Notes  
  Crée la mémoire tampon requise pour la traduction.  
   
-##  <a name="dtor"></a>CA2CAEX :: ~ CA2CAEX  
+##  <a name="dtor"></a>  CA2CAEX :: ~ CA2CAEX  
  Destructeur.  
   
 ```
@@ -119,14 +114,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
-##  <a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>  CA2CAEX::m_psz  
  Le membre de données qui stocke la chaîne source.  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
  Opérateur de conversion.  
   
 ```  

@@ -1,27 +1,22 @@
 ---
 title: Gestion des exceptions ARM | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 Windows on ARM utilise le même mécanisme de gestion des exceptions structurées pour les exceptions asynchrones générées par le matériel et les exceptions synchrones générées par les logiciels. Les gestionnaires d'exceptions propres aux langages s'appuient sur la gestion des exceptions structurées Windows en utilisant des fonctions d'assistance de langage. Ce document décrit la gestion des exceptions dans Windows on ARM, ainsi que les programmes d'assistance de langage utilisés par le code généré par MASM et le compilateur Visual C++.  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  Le code 0xFD est un code spécial pour la fin de la séquence qui signifie que l'épilogue est plus long que le prologue d'une instruction de 16 bits. Cela permet un plus grand partage de codes de déroulement.  
   
- Dans l'exemple, si une exception se produit pendant l'exécution du corps de la fonction entre le prologue et l'épilogue, le déroulement commence par le cas de l'épilogue au décalage 0 dans le code de l'épilogue. Cela correspond au décalage 0x140 dans l'exemple. Le dérouleur exécute la séquence de déroulement complète, car aucun nettoyage n'a été fait. En revanche, si l'exception se produit au niveau de la première instruction suivant le début du code de l'épilogue, le dérouleur peut procéder au déroulement en ignorant le premier code de déroulement. Étant donné un mappage entre les opcodes et les codes de déroulement, si le déroulement à partir de l’instruction  *n*  dans l’épilogue, le dérouleur doit ignorer la première  *n*  les codes de déroulement.  
+ Dans l'exemple, si une exception se produit pendant l'exécution du corps de la fonction entre le prologue et l'épilogue, le déroulement commence par le cas de l'épilogue au décalage 0 dans le code de l'épilogue. Cela correspond au décalage 0x140 dans l'exemple. Le dérouleur exécute la séquence de déroulement complète, car aucun nettoyage n'a été fait. En revanche, si l'exception se produit au niveau de la première instruction suivant le début du code de l'épilogue, le dérouleur peut procéder au déroulement en ignorant le premier code de déroulement. Étant donné un mappage entre les opcodes et les codes de déroulement, si le déroulement à partir de l’instruction *n* dans l’épilogue, le dérouleur doit ignorer la première *n* les codes de déroulement.  
   
- La logique qui prévaut dans le cas du prologue est identique mais inversée. Si le déroulement se produit à partir du décalage 0 dans le prologue, il n'y a rien à exécuter. Si le déroulement démarre à la première instruction, la séquence de déroulement doit commencer au premier code de déroulement en partant de la fin, car les codes de déroulement du prologue sont stockés dans l'ordre inverse. En règle générale, si le déroulement à partir de l’instruction  *n*  dans le prologue, l’opération doit commencer l’exécution à  *n*  les codes de la fin de la liste des codes de déroulement.  
+ La logique qui prévaut dans le cas du prologue est identique mais inversée. Si le déroulement se produit à partir du décalage 0 dans le prologue, il n'y a rien à exécuter. Si le déroulement démarre à la première instruction, la séquence de déroulement doit commencer au premier code de déroulement en partant de la fin, car les codes de déroulement du prologue sont stockés dans l'ordre inverse. En règle générale, si le déroulement à partir de l’instruction *n* dans le prologue, l’opération doit commencer l’exécution à *n* les codes de la fin de la liste des codes de déroulement.  
   
  Les codes de déroulement de prologue et d'épilogue ne correspondent pas toujours exactement. Dans ce cas, il se peut que le tableau des codes de déroulement doive contenir plusieurs séquences de codes. Pour déterminer à quel décalage commencer le traitement des codes, suivez cette logique :  
   
@@ -503,7 +498,7 @@ Epilogue:
   
     -   *Longueur de la fonction* = 0x2A (= 0 x 54/2)  
   
-    -   *RET* = 0, ce qui indique un {pc} pop-retour de style (dans ce cas un ldr pc, [sp], 0 x &#14; retour)  
+    -   *RET* = 0, ce qui indique un {pc} pop-retour de style (dans ce cas un ldr pc, [sp], 0 x 14 # retour)  
   
     -   *H* = 1, indiquant les paramètres étaient hébergés  
   

@@ -1,13 +1,10 @@
 ---
-title: "Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++ | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Utilisation de MSBuild pour créer un projet Visual C++ | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++
 Cette procédure pas à pas montre comment utiliser [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] pour générer un projet Visual C++ à l’invite de commande. Vous allez apprendre à créer des fichiers sources C++ et un fichier de projet basé sur XML pour une application console Visual C++. Après avoir généré le projet, vous allez apprendre à personnaliser le processus de génération.  
@@ -191,7 +186,7 @@ Cette procédure pas à pas montre comment utiliser [!INCLUDE[vstecmsbuild](../b
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]Crée un répertoire pour les fichiers de sortie, puis compile et lie votre projet pour générer le programme Myproject.exe. Une fois le processus de génération terminée, utilisez la commande suivante pour exécuter l’application :  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] Crée un répertoire pour les fichiers de sortie, puis compile et lie votre projet pour générer le programme Myproject.exe. Une fois le processus de génération terminée, utilisez la commande suivante pour exécuter l’application :  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  L’application doit afficher « Hello, à partir de MSBuild ! » dans la fenêtre de console.  
   
 ## <a name="customizing-your-project"></a>Personnalisation de votre projet  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]Permet d’exécuter des cibles de génération prédéfinies, appliquer des propriétés définies par l’utilisateur et utiliser des outils personnalisés, des événements et étapes de génération. Cette section décrit les tâches suivantes :  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] Permet d’exécuter des cibles de génération prédéfinies, appliquer des propriétés définies par l’utilisateur et utiliser des outils personnalisés, des événements et étapes de génération. Cette section décrit les tâches suivantes :  
   
 -   À l’aide de [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] avec des cibles de génération.  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>Ajout de personnalisations MSBuild  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]fournit différentes façons de personnaliser votre processus de génération. Les rubriques suivantes indiquent comment ajouter des étapes de génération personnalisée, des outils et des événements à votre [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] projet :  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] fournit différentes façons de personnaliser votre processus de génération. Les rubriques suivantes indiquent comment ajouter des étapes de génération personnalisée, des outils et des événements à votre [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] projet :  
   
 -   [Guide pratique pour ajouter une étape de génération personnalisée à des projets MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

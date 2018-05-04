@@ -1,13 +1,10 @@
 ---
-title: "CL appelle l’éditeur de liens | Documents Microsoft"
-ms.custom: 
+title: CL appelle l’éditeur de liens | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc9c5c4815dc83b37d0b7971d5fd0f31db51e39e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-invokes-the-linker"></a>CL appelle l'éditeur de liens
 CL appelle automatiquement l’éditeur de liens après la compilation, sauf si l’option /c est utilisée. CL passe à l’éditeur de liens les noms des fichiers .obj créés pendant la compilation et les noms de tous les fichiers spécifiés sur la ligne de commande. L’éditeur de liens utilise les options répertoriées dans la variable d’environnement LINK. Vous pouvez utiliser l’option /link pour spécifier les options de l’éditeur de liens sur la ligne de commande CL. Les options qui suivent l’option /link remplacent ceux de la variable d’environnement LINK. Les options dans le tableau suivant suppriment la liaison.  

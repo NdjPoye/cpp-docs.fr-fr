@@ -1,13 +1,10 @@
 ---
 title: Importations mutuelles | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Importations mutuelles
 Exporter ou importer dans un autre fichier exécutable présente des complications quand les importations sont mutuelles (ou circulaires). Par exemple, deux DLL importent des symboles de l’autre, semblables aux fonctions mutuellement récursives.  
@@ -87,14 +82,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- Lorsque.dll est généré, il est généré avec `/D A_IMPL` et lorsque B.dll est générée, elle est générée avec `/D B_IMPL`. À l’aide de symboles distincts pour chaque DLL, `CExampleB` est exporté et `CExampleA` est importé lors de la génération de B.dll. `CExampleA`est exporté lors de la génération.dll et importés lorsqu’il est utilisé par B.dll (ou un autre client).  
+ Lorsque.dll est généré, il est généré avec `/D A_IMPL` et lorsque B.dll est générée, elle est générée avec `/D B_IMPL`. À l’aide de symboles distincts pour chaque DLL, `CExampleB` est exporté et `CExampleA` est importé lors de la génération de B.dll. `CExampleA` est exporté lors de la génération.dll et importés lorsqu’il est utilisé par B.dll (ou un autre client).  
   
  Ce type de superposition ne peut pas être effectué lors de l’utilisation de la fonction intégrée **AFX_EXT_CLASS** et `_AFXEXT` symboles de préprocesseur. La technique décrite ci-dessus résout ce problème de manière à la différence pas que le mécanisme d’application MFC elle-même utilise lors de la génération de sa technologies Active, la base de données et la DLL d’extension MFC de réseau.  
   
 ## <a name="not-exporting-the-entire-class"></a>Exportez ne pas la classe entière  
  Lorsque vous n’exportez pas une classe entière, vous devez vous assurer que les éléments de données nécessaires créés par les macros MFC sont exportés correctement. Cela est possible en redéfinissant `AFX_DATA` macro de votre classe spécifique. Cela doit être effectuée à tout moment, que vous n’exportez pas la classe entière.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 /* A.H */  

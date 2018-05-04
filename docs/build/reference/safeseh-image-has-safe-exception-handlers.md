@@ -1,13 +1,10 @@
 ---
-title: "-SAFESEH (Image a des gestionnaires d’exceptions sécurisés) | Documents Microsoft"
-ms.custom: 
+title: -SAFESEH (Image a des gestionnaires d’exceptions sécurisés) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /SAFESEH
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (L'image est dotée de gestionnaires d'exceptions sécurisés)
 ```  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  Il n’est pas possible de marquer un fichier binaire comme ayant des gestionnaires d’exceptions sécurisés (ou aucun gestionnaire d’exceptions) ; plus d’informations sur la gestion des exceptions sécurisés doivent être ajoutées au moment de la génération.  
   
- Capacité de l’éditeur de liens pour générer une table de gestionnaires d’exceptions sécurisés dépend de l’application à l’aide de la bibliothèque runtime C. Si vous liez avec [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) et que vous souhaitez créer une table de gestionnaires d’exceptions sécurisés, vous devez fournir une structure de configuration de charge (par exemple, vous trouverez dans le fichier source CRT loadcfg.c) qui contient toutes les entrées définies pour Visual C++. Exemple :  
+ Capacité de l’éditeur de liens pour générer une table de gestionnaires d’exceptions sécurisés dépend de l’application à l’aide de la bibliothèque runtime C. Si vous liez avec [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) et que vous souhaitez créer une table de gestionnaires d’exceptions sécurisés, vous devez fournir une structure de configuration de charge (par exemple, vous trouverez dans le fichier source CRT loadcfg.c) qui contient toutes les entrées définies pour Visual C++. Par exemple :  
   
 ```  
 #include <windows.h>  

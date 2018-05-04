@@ -2,11 +2,8 @@
 title: Macros de table de service | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Macros de table de service
 Ces macros définissent des cartes de services et les entrées.  
@@ -38,10 +33,10 @@ Ces macros définissent des cartes de services et les entrées.
 |[SERVICE_ENTRY](#service_entry)|Indique que l’objet prend en charge un ID de service spécifique.|  
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Fait en sorte que [méthode IServiceProviderImpl::QueryService](#queryservice) à chaîne à l’objet spécifié.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Marque le début de la carte de service.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Marque la fin de la carte de service.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Indique que l’objet prend en charge l’id de service spécifié par *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Fait en sorte que [méthode IServiceProviderImpl::QueryService](#queryservice) à la chaîne de l’objet spécifié par `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>Méthode IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  Méthode IServiceProviderImpl::QueryService  
  Crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- [IN]`guidService`  
+ [IN] `guidService`  
  Pointeur vers un identificateur de service (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Identificateur de l’interface à laquelle l’appelant doit accéder.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Pointeur indirect vers l’interface demandée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|L’interface demandée ne fait pas partie de ce service, ou le service est inconnu.|  
   
 ### <a name="remarks"></a>Notes  
- `QueryService`Retourne un pointeur indirect vers l’interface demandée dans le service spécifié. L’appelant est responsable de la libération de ce pointeur lorsqu’il n’est plus nécessaire.  
+ `QueryService` Retourne un pointeur indirect vers l’interface demandée dans le service spécifié. L’appelant est responsable de la libération de ce pointeur lorsqu’il n’est plus nécessaire.  
   
  Lorsque vous appelez `QueryService`, vous passez à la fois un identificateur de service ( `guidService`) et un identificateur d’interface ( `riid`). Le `guidService` Spécifie le service auquel vous souhaitez accéder, et le `riid` identifie une interface qui fait partie du service. En retour, vous recevez un pointeur indirect vers l’interface.  
   

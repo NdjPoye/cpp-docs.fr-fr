@@ -1,30 +1,25 @@
 ---
-title: "Création d’un objet agrégé | Documents Microsoft"
-ms.custom: 
+title: Création d’un objet agrégé | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregation [C++], creating aggregated objects
 - aggregate objects [C++], creating
 ms.assetid: fc29d7aa-fd53-4276-9c2f-37379f71b179
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6b66a80c5459157b644ec6b264b707232c83e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35ddbd6b8db853967a70de0427cc842689d55c82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-an-aggregated-object"></a>Création d’un objet
 Les délégués d’agrégation **IUnknown** des appels, en fournissant un pointeur vers l’objet externe **IUnknown** à l’objet interne.  

@@ -1,29 +1,24 @@
 ---
-title: "Agrégats et Unions | Documents Microsoft"
-ms.custom: 
+title: Agrégats et Unions | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>Agrégats et unions
 D’autres types, tels que des tableaux, structures et unions, ont des exigences plus strictes alignement qui garantissent la cohérence union et d’agrégation stockage et extraction des données. Voici les définitions de tableau, la structure et union :  
@@ -46,14 +41,14 @@ D’autres types, tels que des tableaux, structures et unions, ont des exigences
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**int, long**|Doubleword|  
-|**UINT32**|**entier long non signé**|Doubleword|  
-|**INT64**|`__int64`|Quadword|  
-|**UINT64**|**unsigned __int64**|Quadword|  
-|**FP32 (simple précision)**|**float**|Doubleword|  
-|**FP64 (double précision)**|**double**|Quadword|  
-|**POINTER**|**\***|Quadword|  
-|`__m64`|**struct __m64**|Quadword|  
+|**INT32**|**int, long**|Mot double|  
+|**UINT32**|**entier long non signé**|Mot double|  
+|**INT64**|`__int64`|Mot quadruple|  
+|**UINT64**|**unsigned __int64**|Mot quadruple|  
+|**FP32 (simple précision)**|**float**|Mot double|  
+|**FP64 (double précision)**|**double**|Mot quadruple|  
+|**POINTEUR**|**\***|Mot quadruple|  
+|`__m64`|**__m64 struct**|Mot quadruple|  
 |`__m128`|**struct __m128**|Octaword|  
   
  Les règles d’alignement d’agrégation suivantes s’appliquent :  

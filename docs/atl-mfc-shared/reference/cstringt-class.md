@@ -1,12 +1,9 @@
 ---
 title: Classe CStringT | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringT
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d3b718249603c34d5a9a13eec966b586151f2e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f8a66f87b3c4a2c6712a1db93f97361a25b6955
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringt-class"></a>CStringT (classe)
 Cette classe représente un `CStringT` objet.  
@@ -120,9 +115,9 @@ public CSimpleStringT<BaseType,
  `BaseType`  
  Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suivantes :  
   
-- `char`(pour les chaînes de caractères ANSI).  
+- `char` (pour les chaînes de caractères ANSI).  
   
-- `wchar_t`(pour les chaînes de caractères Unicode).  
+- `wchar_t` (pour les chaînes de caractères Unicode).  
   
 - **TCHAR** (pour les chaînes de caractères ANSI et Unicode).  
   
@@ -202,18 +197,18 @@ public CSimpleStringT<BaseType,
 |[CStringT::operator +=](#operator_add_eq)|Concatène une nouvelle chaîne à la fin d’une chaîne existante.|  
 |[CStringT::operator ==](#operator_eq_eq)|Détermine si deux chaînes sont logiquement égales.|  
 |[CStringT::operator ! =](#operator_neq)|Détermine si deux chaînes sont logiquement pas égaux.|  
-|[CStringT::operator&lt;](#operator_lt)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur à la chaîne située à droite.|  
-|[CStringT::operator&gt;](#operator_gt)|Détermine si la chaîne sur le côté gauche de l’opérateur est supérieure à la chaîne située à droite.|  
-|[CStringT::operator&lt;=](#operator_lt_eq)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur ou égal à la chaîne située à droite.|  
-|[CStringT::operator&gt;=](#operator_gt_eq)|Détermine si la chaîne sur le côté gauche de l’opérateur est supérieur ou égal à la chaîne située à droite.|  
+|[CStringT::operator &lt;](#operator_lt)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur à la chaîne située à droite.|  
+|[CStringT::operator &gt;](#operator_gt)|Détermine si la chaîne sur le côté gauche de l’opérateur est supérieure à la chaîne située à droite.|  
+|[CStringT::operator &lt;=](#operator_lt_eq)|Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur ou égal à la chaîne située à droite.|  
+|[CStringT::operator &gt;=](#operator_gt_eq)|Détermine si la chaîne sur le côté gauche de l’opérateur est supérieur ou égal à la chaîne située à droite.|  
   
 ## <a name="remarks"></a>Notes  
- `CStringT`hérite de [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md). Les fonctionnalités avancées, telles que de la manipulation de caractères, de classement et de recherche, sont implémentées par `CStringT`.  
+ `CStringT` hérite de [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md). Les fonctionnalités avancées, telles que de la manipulation de caractères, de classement et de recherche, sont implémentées par `CStringT`.  
   
 > [!NOTE]
-> `CStringT`les objets sont capables de lever des exceptions. Cela se produit lorsqu’un `CStringT` objet s’exécute en dehors de la mémoire pour une raison quelconque.  
+> `CStringT` les objets sont capables de lever des exceptions. Cela se produit lorsqu’un `CStringT` objet s’exécute en dehors de la mémoire pour une raison quelconque.  
   
- A `CStringT` objet se compose d’une séquence de longueur variable de caractères. `CStringT`Fournit des fonctions et opérateurs à l’aide d’une syntaxe semblable à celle de base. Concaténation et les opérateurs de comparaison, ainsi que de la gestion simplifiée de la mémoire, rendent `CStringT` objets plus faciles à utiliser que les tableaux de caractères ordinaires.  
+ A `CStringT` objet se compose d’une séquence de longueur variable de caractères. `CStringT` Fournit des fonctions et opérateurs à l’aide d’une syntaxe semblable à celle de base. Concaténation et les opérateurs de comparaison, ainsi que de la gestion simplifiée de la mémoire, rendent `CStringT` objets plus faciles à utiliser que les tableaux de caractères ordinaires.  
   
 > [!NOTE]
 >  Bien qu’il soit possible de créer `CStringT` instances qui contiennent des caractères null incorporés, nous vous recommandons par rapport à elle. Appel de méthodes et opérateurs sur `CStringT` objets qui contiennent des caractères null incorporés peuvent produire des résultats inattendus.  
@@ -251,11 +246,11 @@ public CSimpleStringT<BaseType,
 |**CAtlStringW**|Un caractère Unicode de type chaîne avec la prise en charge CRT.|  
 |**CAtlString**|Types de caractères ANSI et Unicode avec prise en charge de CRT.|  
   
- `CString`objets présentent également les caractéristiques suivantes :  
+ `CString` objets présentent également les caractéristiques suivantes :  
   
-- `CStringT`objets peuvent augmenter en conséquence des opérations de concaténation.  
+- `CStringT` objets peuvent augmenter en conséquence des opérations de concaténation.  
   
-- `CStringT`les objets suivent la « sémantique des valeurs ». Imaginez un `CStringT` objet sous forme de chaîne réelle, et non comme un pointeur vers une chaîne.  
+- `CStringT` les objets suivent la « sémantique des valeurs ». Imaginez un `CStringT` objet sous forme de chaîne réelle, et non comme un pointeur vers une chaîne.  
   
 -   Vous pouvez utiliser librement `CStringT` objets `PCXSTR` les arguments de fonction.  
   
@@ -281,14 +276,14 @@ public CSimpleStringT<BaseType,
   
  `CStringT`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Header|Utilisation pour|  
 |------------|-------------|  
 |CStringT.h|Objets de chaîne MFC uniquement|  
 |atlstr.h|Objets de chaîne non-MFC|  
   
-##  <a name="allocsysstring"></a>CStringT::AllocSysString  
+##  <a name="allocsysstring"></a>  CStringT::AllocSysString  
  Alloue une chaîne compatibles Automation du type `BSTR` et copie le contenu de la `CStringT` objet, y compris le caractère null de fin.  
   
 ```  
@@ -312,7 +307,7 @@ BSTR AllocSysString() const;
   
  [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
   
-##  <a name="ansitooem"></a>CStringT::AnsiToOem  
+##  <a name="ansitooem"></a>  CStringT::AnsiToOem  
  Convertit tous les caractères de cette `CStringT` objet dans le jeu de caractères ANSI pour le jeu de caractères OEM.  
   
 ```  
@@ -325,7 +320,7 @@ void AnsiToOem();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
   
-##  <a name="appendformat"></a>CStringT::AppendFormat  
+##  <a name="appendformat"></a>  CStringT::AppendFormat  
  Ajoute des données mises en forme à un `CStringT` objet.  
   
 ```  
@@ -349,7 +344,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
   
-##  <a name="collate"></a>CStringT::Collate  
+##  <a name="collate"></a>  CStringT::Collate  
  Compare deux chaînes à l’aide de la fonction de texte générique `_tcscoll`.  
   
 ```  
@@ -366,7 +361,7 @@ int Collate(PCXSTR psz) const throw();
 ### <a name="remarks"></a>Notes  
  La fonction de texte générique `_tcscoll`, qui est défini dans TCHAR. H, correspond à une `strcoll`, `wcscoll`, ou `_mbscoll`, selon le jeu de caractères qui est défini au moment de la compilation. Chaque fonction effectue une comparaison respectant la casse des chaînes en fonction de la page de codes actuellement en cours d’utilisation. Pour plus d’informations, consultez [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
   
-##  <a name="collatenocase"></a>CStringT::CollateNoCase  
+##  <a name="collatenocase"></a>  CStringT::CollateNoCase  
  Compare deux chaînes à l’aide de la fonction de texte générique `_tcscoll`.  
   
 ```  
@@ -386,7 +381,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
   
-##  <a name="compare"></a>CStringT::Compare  
+##  <a name="compare"></a>  CStringT::Compare  
  Compare deux chaînes (sensible à la casse).  
   
 ```  
@@ -410,7 +405,7 @@ int Compare(PCXSTR psz) const;
   
  [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
   
-##  <a name="comparenocase"></a>CStringT::CompareNoCase  
+##  <a name="comparenocase"></a>  CStringT::CompareNoCase  
  Compare deux chaînes (sensible à la casse).  
   
 ```  
@@ -430,7 +425,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
   
-##  <a name="cstringt"></a>CStringT::CStringT  
+##  <a name="cstringt"></a>  CStringT::CStringT  
  Construit un objet `CStringT`.  
   
 ```  
@@ -531,11 +526,11 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  `BaseType`  
  Le type de caractère de la classe string. Il peut s'agir d'une des valeurs suivantes :  
   
- `char`(pour les chaînes de caractères ANSI).  
+ `char` (pour les chaînes de caractères ANSI).  
   
- `wchar_t`(pour les chaînes de caractères Unicode).  
+ `wchar_t` (pour les chaînes de caractères Unicode).  
   
- `TCHAR`(pour les chaînes ANSI et Unicode caractère).  
+ `TCHAR` (pour les chaînes ANSI et Unicode caractère).  
   
  `bMFCDLL`  
  Valeur booléenne qui spécifie si le projet est une DLL MFC (TRUE) ou non (FALSE).  
@@ -551,14 +546,14 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
   
 - `CStringT`( `LPCSTR` `lpsz` ) : Construit Unicode `CStringT` à partir d’une chaîne ANSI. Vous pouvez également utiliser ce constructeur pour charger une ressource de chaîne, comme indiqué dans l’exemple ci-dessous.  
   
-- `CStringT(``LPCWSTR` `lpsz` ) : Construit un `CStringT` à partir d’une chaîne Unicode.  
+- `CStringT(` `LPCWSTR` `lpsz` ) : Construit un `CStringT` à partir d’une chaîne Unicode.  
   
 - `CStringT`( `const unsigned char*` `psz` ) : Vous permet de construire un `CStringT` d’un pointeur vers `unsigned char`.  
   
 > [!NOTE]
 >  Définir le **_CSTRING_DISABLE_NARROW_WIDE_CONVERSION** macro pour désactiver la conversion de chaînes implicite entre [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] et [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] chaînes. La macro exclut à partir des constructeurs de compilation qui prennent en charge la conversion.  
   
- Notez que la `strSrc` paramètre peut être soit un `CStringT` ou `CThisSimpleString` objet. Pour `CStringT`, utilisez une de ses instanciations par défaut ( `CString`, `CStringA`, ou `CStringW`) ; pour `CThisSimpleString`, utilisez un `this` pointeur. `CThisSimpleString`déclare une instance de la [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md), qui est une classe de chaîne plus petite avec des fonctionnalités intégrées de moins que la `CStringT` classe.  
+ Notez que la `strSrc` paramètre peut être soit un `CStringT` ou `CThisSimpleString` objet. Pour `CStringT`, utilisez une de ses instanciations par défaut ( `CString`, `CStringA`, ou `CStringW`) ; pour `CThisSimpleString`, utilisez un `this` pointeur. `CThisSimpleString` déclare une instance de la [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md), qui est une classe de chaîne plus petite avec des fonctionnalités intégrées de moins que la `CStringT` classe.  
   
  L’opérateur de surcharge `CSimpleStringT<>&()` construit un `CStringT` de l’objet d’un `CSimpleStringT` déclaration.  
   
@@ -568,7 +563,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
   
-##  <a name="_dtorcstringt"></a>CStringT :: ~ CStringT  
+##  <a name="_dtorcstringt"></a>  CStringT :: ~ CStringT  
  Détruit le `CStringT` objet.  
   
 ```  
@@ -578,7 +573,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="remarks"></a>Notes  
  Détruit le `CStringT` objet.  
   
-##  <a name="delete"></a>CStringT::Delete  
+##  <a name="delete"></a>  CStringT::Delete  
  Supprime un ou plusieurs caractères à partir d’une chaîne commençant par le caractère situé à l’index donné.  
   
 ```  
@@ -608,7 +603,7 @@ After: Soccer best,
     but hockey is quicker!  
 ```  
   
-##  <a name="find"></a>CStringT::Find  
+##  <a name="find"></a>  CStringT::Find  
  Cette chaîne de recherche la première correspondance d’un caractère ou d’une sous-chaîne.  
   
 ```  
@@ -635,7 +630,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
   
-##  <a name="findoneof"></a>CStringT::FindOneOf  
+##  <a name="findoneof"></a>  CStringT::FindOneOf  
  Recherche de cette chaîne pour le premier caractère qui correspond à n’importe quel caractère contenue dans `pszCharSet`.  
   
 ```  
@@ -655,7 +650,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
-##  <a name="format"></a>CStringT::Format  
+##  <a name="format"></a>  CStringT::Format  
  Écrit mises en forme des données à un `CStringT` de la même façon que [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) des formats de données dans un tableau de caractères de style C.  
   
 ```  
@@ -685,7 +680,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
   
-##  <a name="formatmessage"></a>CStringT::FormatMessage  
+##  <a name="formatmessage"></a>  CStringT::FormatMessage  
  Met en forme une chaîne de message.  
   
 ```  
@@ -707,14 +702,14 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  La fonction requiert une définition de message en tant qu’entrée. La définition de message est déterminée par `pszFormat` ou à partir de la ressource de chaîne identifié par `nFormatID`. La fonction copie le texte du message mis en forme à le `CStringT` objet, traitement incorporé Insérer séquences si nécessaire.  
   
 > [!NOTE]
-> `FormatMessage`tente d’allouer la mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
+> `FormatMessage` tente d’allouer la mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
   
  Chaque insertion doit avoir une paramètre correspondant suivant le `pszFormat` ou `nFormatID` paramètre. Dans le texte du message, plusieurs séquences d’échappement sont pris en charge pour la mise en forme dynamique le message. Pour plus d’informations, consultez les fenêtres [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) fonction dans le SDK Windows.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
   
-##  <a name="formatmessagev"></a>CStringT::FormatMessageV  
+##  <a name="formatmessagev"></a>  CStringT::FormatMessageV  
  Met en forme une chaîne de message à l’aide d’une liste d’arguments variable.  
   
 ```  
@@ -732,11 +727,11 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
  La fonction requiert une définition de message en tant qu’entrée, déterminé par `pszFormat`. La fonction copie le texte du message mis en forme et une liste variable d’arguments pour le `CStringT` objet, traitement incorporé Insérer séquences si nécessaire.  
   
 > [!NOTE]
-> `FormatMessageV`appels [CStringT::FormatMessage](#formatmessage), qui tente d’allouer la mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
+> `FormatMessageV` appels [CStringT::FormatMessage](#formatmessage), qui tente d’allouer la mémoire système pour la chaîne qui vient d’être mis en forme. Si cette tentative échoue, une exception de mémoire est automatiquement levée.  
   
  Pour plus d’informations, consultez les fenêtres [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) fonction dans le SDK Windows.  
   
-##  <a name="formatv"></a>CStringT::FormatV  
+##  <a name="formatv"></a>  CStringT::FormatV  
  Met en forme une chaîne de message à l’aide d’une liste d’arguments variable.  
   
 ```  
@@ -758,7 +753,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
   
  [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
-##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
+##  <a name="getenvironmentvariable"></a>  CStringT::GetEnvironmentVariable  
  Définit la chaîne à la valeur de la variable d’environnement spécifié.  
   
 ```  
@@ -778,7 +773,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
   
-##  <a name="insert"></a>CStringT::Insert  
+##  <a name="insert"></a>  CStringT::Insert  
  Insère un caractère unique ou une sous-chaîne à l’index donné dans la chaîne.  
   
 ```  
@@ -805,7 +800,7 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
   
-##  <a name="left"></a>CStringT::Left  
+##  <a name="left"></a>  CStringT::Left  
  Extrait les caractères `nCount` les plus à gauche de cet objet `CStringT` et retourne une copie de la sous-chaîne extraite.  
   
 ```  
@@ -827,7 +822,7 @@ CStringT Left(int nCount) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
   
-##  <a name="loadstring"></a>CStringT::LoadString  
+##  <a name="loadstring"></a>  CStringT::LoadString  
  Lit une chaîne de ressource Windows, identifiée par `nID`, dans une `CStringT` objet.  
   
 ```  
@@ -855,7 +850,7 @@ BOOL LoadString(UINT nID);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
   
-##  <a name="makelower"></a>CStringT::MakeLower  
+##  <a name="makelower"></a>  CStringT::MakeLower  
  Convertit le `CStringT` objet à une chaîne en minuscules.  
   
 ```  
@@ -868,7 +863,7 @@ CStringT& MakeLower();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
   
-##  <a name="makereverse"></a>CStringT::MakeReverse  
+##  <a name="makereverse"></a>  CStringT::MakeReverse  
  Inverse l’ordre des caractères dans le `CStringT` objet.  
   
 ```  
@@ -881,7 +876,7 @@ CStringT& MakeReverse();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
   
-##  <a name="makeupper"></a>CStringT::MakeUpper  
+##  <a name="makeupper"></a>  CStringT::MakeUpper  
  Convertit le `CStringT` objet à une chaîne en majuscules.  
   
 ```  
@@ -896,7 +891,7 @@ CStringT& MakeUpper();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
   
-##  <a name="mid"></a>CStringT::Mid  
+##  <a name="mid"></a>  CStringT::Mid  
  Extrait une sous-chaîne de longueur `nCount` caractères à partir de ce `CStringT` objet, en commençant à la position `iFirst` (base zéro).  
   
 ```  
@@ -915,14 +910,14 @@ CStringT Mid(int iFirst) const;
  Objet `CStringT` qui contient une copie de la plage spécifiée des caractères. Notez que le texte retourné `CStringT` objet peut être vide.  
   
 ### <a name="remarks"></a>Notes  
- La fonction retourne une copie de la sous-chaîne extraite. `Mid`est similaire à la fonction Mid base (sauf que les index de base sont de base 1).  
+ La fonction retourne une copie de la sous-chaîne extraite. `Mid` est similaire à la fonction Mid base (sauf que les index de base sont de base 1).  
   
  Pour les jeux de caractères multioctets (MBCS), `nCount` fait référence à chaque octet de caractère ; autrement dit, un responsable et de piste de 8 bits dans un caractères multioctets sont comptés comme deux caractères.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
   
-##  <a name="oemtoansi"></a>CStringT::OemToAnsi  
+##  <a name="oemtoansi"></a>  CStringT::OemToAnsi  
  Convertit tous les caractères de cette `CStringT` objet dans le jeu de caractères OEM pour le jeu de caractères ANSI.  
   
 ```  
@@ -935,7 +930,7 @@ void OemToAnsi();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CStringT::AnsiToOem](#ansitooem).  
   
-##  <a name="operator_add"></a>CStringT::operator +  
+##  <a name="operator_add"></a>  CStringT::operator +  
  Concatène deux chaînes ou un caractère et une chaîne.  
   
 ```  
@@ -976,7 +971,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
   
-##  <a name="operator_add_eq"></a>CStringT::operator +=  
+##  <a name="operator_add_eq"></a>  CStringT::operator +=  
  Concatène les caractères jusqu'à la fin de la chaîne.  
   
 ```  
@@ -1028,7 +1023,7 @@ CStringT& operator+=(const VARIANT& var);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CStringT::operator ==  
+##  <a name="operator_eq_eq"></a>  CStringT::operator ==  
  Détermine si deux chaînes sont logiquement égales.  
   
 ```  
@@ -1066,7 +1061,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
   
-##  <a name="operator_neq"></a>CStringT::operator ! =  
+##  <a name="operator_neq"></a>  CStringT::operator ! =  
  Détermine si deux chaînes sont logiquement pas égales.  
   
 ```  
@@ -1104,7 +1099,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
   
-##  <a name="operator_lt"></a>CStringT::operator&lt;  
+##  <a name="operator_lt"></a>  CStringT::operator &lt;  
  Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur à la chaîne située à droite.  
   
 ```  
@@ -1138,7 +1133,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
   
-##  <a name="operator_gt"></a>CStringT::operator&gt;  
+##  <a name="operator_gt"></a>  CStringT::operator &gt;  
  Détermine si la chaîne sur le côté gauche de l’opérateur est supérieure à la chaîne située à droite.  
   
 ```  
@@ -1172,7 +1167,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
   
-##  <a name="operator_lt_eq"></a>CStringT::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CStringT::operator &lt;=  
  Détermine si la chaîne sur le côté gauche de l’opérateur est inférieur ou égal à la chaîne située à droite.  
   
 ```  
@@ -1206,7 +1201,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
   
-##  <a name="operator_gt_eq"></a>CStringT::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CStringT::operator &gt;=  
  Détermine si la chaîne sur le côté gauche de l’opérateur est supérieur ou égal à la chaîne située à droite.  
   
 ```  
@@ -1240,7 +1235,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
   
-##  <a name="remove"></a>CStringT::Remove  
+##  <a name="remove"></a>  CStringT::Remove  
  Supprime toutes les instances du caractère spécifié de la chaîne.  
   
 ```  
@@ -1260,7 +1255,7 @@ int Remove(XCHAR chRemove);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
   
-##  <a name="replace"></a>CStringT::Replace  
+##  <a name="replace"></a>  CStringT::Replace  
  Il existe deux versions de `Replace`. La première version remplace une ou plusieurs copies d’une sous-chaîne par une autre sous-chaîne. Les deux sous-chaînes sont se terminant par null. La deuxième version remplace une ou plusieurs copies d’un caractère à l’aide d’un autre caractère. Les deux versions ne fonctionne pas sur les données de caractères stockées dans `CStringT`.  
   
 ```  
@@ -1285,7 +1280,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
  Retourne le nombre d’instances remplacés de caractère ou sous-chaîne ou zéro si la chaîne n’est pas modifiée.  
   
 ### <a name="remarks"></a>Notes  
- `Replace`peut modifier la longueur de chaîne car `pszNew` et `pszOld` n’ont pas à être la même longueur, et plusieurs copies de la sous-chaîne ancien peuvent être remplacés par une nouvelle. La fonction effectue une correspondance qui respecte la casse.  
+ `Replace` peut modifier la longueur de chaîne car `pszNew` et `pszOld` n’ont pas à être la même longueur, et plusieurs copies de la sous-chaîne ancien peuvent être remplacés par une nouvelle. La fonction effectue une correspondance qui respecte la casse.  
   
  Exemples de `CStringT` sont des instances `CString`, `CStringA`, et `CStringW`.  
   
@@ -1303,7 +1298,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
   
-##  <a name="reversefind"></a>CStringT::ReverseFind  
+##  <a name="reversefind"></a>  CStringT::ReverseFind  
  Cette recherche `CStringT` objet pour la dernière correspondance d’un caractère.  
   
 ```  
@@ -1323,7 +1318,7 @@ int ReverseFind(XCHAR ch) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
   
-##  <a name="right"></a>CStringT::Right  
+##  <a name="right"></a>  CStringT::Right  
  Extrait la dernière (autrement dit, plus à droite) `nCount` caractères à partir de ce `CStringT` de l’objet et retourne une copie de la sous-chaîne extraite.  
   
 ```  
@@ -1338,14 +1333,14 @@ CStringT Right(int nCount) const;
  Objet `CStringT` qui contient une copie de la plage spécifiée des caractères. Notez que le texte retourné `CStringT` objet ne peut être vide.  
   
 ### <a name="remarks"></a>Notes  
- Si `nCount` dépasse la longueur de la chaîne, la chaîne entière est extraite. `Right`est similaire à la base `Right` (sauf que les index de base sont de base zéro) de la fonction.  
+ Si `nCount` dépasse la longueur de la chaîne, la chaîne entière est extraite. `Right` est similaire à la base `Right` (sauf que les index de base sont de base zéro) de la fonction.  
   
  Pour les jeux de caractères multioctets (MBCS), `nCount` fait référence à chaque octet de caractère ; autrement dit, un responsable et de piste de 8 bits dans un caractères multioctets sont comptés comme deux caractères.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
-##  <a name="setsysstring"></a>CStringT::SetSysString  
+##  <a name="setsysstring"></a>  CStringT::SetSysString  
  Réalloue le `BSTR` vers lequel pointe `pbstr` et copie le contenu de la `CStringT` objet, y compris les `NULL` caractères.  
   
 ```  
@@ -1367,7 +1362,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
   
-##  <a name="spanexcluding"></a>CStringT::SpanExcluding  
+##  <a name="spanexcluding"></a>  CStringT::SpanExcluding  
  Extrait les caractères de la chaîne, en commençant par le premier caractère qui ne sont pas dans le jeu de caractères identifié par `pszCharSet`.  
   
 ```  
@@ -1382,12 +1377,12 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
  Une sous-chaîne qui contient des caractères qui ne sont pas dans la chaîne `pszCharSet`, commençant par le premier caractère dans la chaîne et se terminant par le premier caractère trouvé dans la chaîne se trouve également dans `pszCharSet` (autrement dit, en commençant par le premier caractère dans le chaîne et jusqu'à excluant le premier caractère dans la chaîne est trouvée `pszCharSet`). Elle retourne la chaîne entière si aucun caractère dans `pszCharSet` se trouve dans la chaîne.  
   
 ### <a name="remarks"></a>Notes  
- `SpanExcluding`extrait et retourne tous les caractères qui précède la première occurrence d’un caractère à partir de `pszCharSet` (en d’autres termes, le caractère à partir de `pszCharSet` et tous les caractères suivant dans la chaîne, ne sont pas retournés). Si aucun caractère de `pszCharSet` est trouvé dans la chaîne, puis `SpanExcluding` retourne la chaîne entière.  
+ `SpanExcluding` extrait et retourne tous les caractères qui précède la première occurrence d’un caractère à partir de `pszCharSet` (en d’autres termes, le caractère à partir de `pszCharSet` et tous les caractères suivant dans la chaîne, ne sont pas retournés). Si aucun caractère de `pszCharSet` est trouvé dans la chaîne, puis `SpanExcluding` retourne la chaîne entière.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
   
-##  <a name="spanincluding"></a>CStringT::SpanIncluding  
+##  <a name="spanincluding"></a>  CStringT::SpanIncluding  
  Extrait les caractères de la chaîne, en commençant par le premier caractère, qui se trouvent dans le jeu de caractères identifié par `pszCharSet`.  
   
 ```  
@@ -1399,7 +1394,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Une chaîne est interprétée comme un jeu de caractères.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une sous-chaîne qui contienne des caractères dans la chaîne qui se trouvent dans `pszCharSet`, commençant par le premier caractère dans la chaîne et de fin quand un caractère est trouvé dans la chaîne qui n’est pas `pszCharSet`. `SpanIncluding`Retourne une sous-chaîne vide si le premier caractère dans la chaîne n’est pas dans le jeu spécifié.  
+ Une sous-chaîne qui contienne des caractères dans la chaîne qui se trouvent dans `pszCharSet`, commençant par le premier caractère dans la chaîne et de fin quand un caractère est trouvé dans la chaîne qui n’est pas `pszCharSet`. `SpanIncluding` Retourne une sous-chaîne vide si le premier caractère dans la chaîne n’est pas dans le jeu spécifié.  
   
 ### <a name="remarks"></a>Notes  
  Si le premier caractère de la chaîne n’est pas, dans le jeu de caractères `SpanIncluding` retourne une chaîne vide. Sinon, elle retourne une séquence de caractères consécutifs qui se trouvent dans le jeu.  
@@ -1407,7 +1402,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
   
-##  <a name="tokenize"></a>CStringT::Tokenize  
+##  <a name="tokenize"></a>  CStringT::Tokenize  
  Recherche le jeton suivant dans une chaîne cible  
   
 ```  
@@ -1441,7 +1436,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
   
  `Resulting Token: Third`  
   
-##  <a name="trim"></a>CStringT::Trim  
+##  <a name="trim"></a>  CStringT::Trim  
  Supprime les premiers et derniers caractères de la chaîne.  
   
 ```  
@@ -1463,9 +1458,9 @@ CStringT& Trim();
 ### <a name="remarks"></a>Notes  
  Supprime toutes les occurrences de début et de fin de l’une des opérations suivantes :  
   
--   Le caractère spécifié par`chTarget.`  
+-   Le caractère spécifié par `chTarget.`  
   
--   Tous les caractères ont été trouvés dans la chaîne spécifiée par`pszTargets.`  
+-   Tous les caractères ont été trouvés dans la chaîne spécifiée par `pszTargets.`  
   
 -   Espace blanc.  
   
@@ -1479,7 +1474,7 @@ CStringT& Trim();
   
  `After : "Soccer is best, but liquor is quicker"`  
   
-##  <a name="trimleft"></a>CStringT::TrimLeft  
+##  <a name="trimleft"></a>  CStringT::TrimLeft  
  Supprime les caractères de début de la chaîne.  
   
 ```  
@@ -1501,16 +1496,16 @@ CStringT& TrimLeft();
 ### <a name="remarks"></a>Notes  
  Supprime toutes les occurrences de début et de fin de l’une des opérations suivantes :  
   
--   Le caractère spécifié par`chTarget.`  
+-   Le caractère spécifié par `chTarget.`  
   
--   Tous les caractères ont été trouvés dans la chaîne spécifiée par`pszTargets.`  
+-   Tous les caractères ont été trouvés dans la chaîne spécifiée par `pszTargets.`  
   
 -   Espace blanc.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
   
-##  <a name="trimright"></a>CStringT::TrimRight  
+##  <a name="trimright"></a>  CStringT::TrimRight  
  Supprime les caractères de la chaîne.  
   
 ```  
@@ -1532,9 +1527,9 @@ CStringT& TrimRight();
 ### <a name="remarks"></a>Notes  
  Supprime les occurrences de l’une des opérations suivantes :  
   
--   Le caractère spécifié par`chTarget.`  
+-   Le caractère spécifié par `chTarget.`  
   
--   Tous les caractères ont été trouvés dans la chaîne spécifiée par`pszTargets.`  
+-   Tous les caractères ont été trouvés dans la chaîne spécifiée par `pszTargets.`  
   
 -   Espace blanc.  
   

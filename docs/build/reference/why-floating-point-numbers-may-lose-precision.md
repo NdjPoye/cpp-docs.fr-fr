@@ -1,13 +1,10 @@
 ---
-title: "Pourquoi les nombres à virgule flottante peuvent manquer de précision | Documents Microsoft"
-ms.custom: 
+title: Pourquoi les nombres à virgule flottante peuvent manquer de précision | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Pourquoi les nombres à virgule flottante peuvent manquer de précision
 Les valeurs décimales à virgule flottante n’ont généralement pas une représentation binaire exacte. Il s’agit d’un effet secondaire de la manière dont l’UC représente les données à virgule flottante. Pour cette raison, vous pouvez rencontrer une certaine perte de précision, et certaines opérations à virgule flottante peuvent produire des résultats inattendus.  

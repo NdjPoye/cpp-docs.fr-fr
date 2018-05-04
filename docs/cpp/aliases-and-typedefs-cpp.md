@@ -1,29 +1,24 @@
 ---
 title: Alias et typedefs (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 Vous pouvez utiliser un *déclaration d’alias* pour déclarer un nom à utiliser comme un synonyme pour un type déclaré précédemment. (Ce mécanisme est également appelé de manière informelle un *alias de type*). Vous pouvez également utiliser ce mécanisme pour créer un *modèle d’alias*, qui peut être particulièrement utile pour les allocateurs personnalisés.  
@@ -196,7 +191,7 @@ void myproc( int )
 }  
 ```  
   
- Lors de la déclaration d'un identificateur de portée locale du même nom qu'un typedef, ou lors de la déclaration d'un membre d'une structure ou d'une union dans la même portée ou dans une portée interne, le spécificateur de type doit être spécifié. Exemple :  
+ Lors de la déclaration d'un identificateur de portée locale du même nom qu'un typedef, ou lors de la déclaration d'un membre d'une structure ou d'une union dans la même portée ou dans une portée interne, le spécificateur de type doit être spécifié. Par exemple :  
   
 ```  
 typedef char FlagType;  
@@ -224,7 +219,7 @@ int;  // Illegal declaration
  Vous pouvez déclarer tout type avec typedef, y compris des types pointeur, fonction et tableau. Vous pouvez déclarer un nom typedef pour un pointeur vers une structure ou un type union avant de définir la structure ou le type union, tant que la définition a la même visibilité que la déclaration.  
   
 ### <a name="examples"></a>Exemples  
- Les déclarations `typedef` permettent de rendre les déclarations plus uniformes et compactes. Exemple :  
+ Les déclarations `typedef` permettent de rendre les déclarations plus uniformes et compactes. Par exemple :  
   
 ```cpp  
 typedef char CHAR;          // Character type.  
@@ -234,7 +229,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- Pour utiliser `typedef` afin de spécifier des types fondamentaux et dérivés dans la même déclaration, séparez les déclarateurs par des virgules. Exemple :  
+ Pour utiliser `typedef` afin de spécifier des types fondamentaux et dérivés dans la même déclaration, séparez les déclarateurs par des virgules. Par exemple :  
   
 ```  
 typedef char CHAR, *PSTR;  
@@ -284,7 +279,7 @@ int main()
 ```  
   
 ### <a name="re-declaration-of-typedefs"></a>Redéclaration de typedefs  
- La déclaration `typedef` peut être utilisée pour redéclarer le même nom pour faire référence au même type. Exemple :  
+ La déclaration `typedef` peut être utilisée pour redéclarer le même nom pour faire référence au même type. Par exemple :  
   
 ```cpp  
 // FILE1.H  

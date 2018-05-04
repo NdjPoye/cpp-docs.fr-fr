@@ -1,12 +1,9 @@
 ---
 title: Options, Assistant composant ASP ATL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 31549c812b4f523cb8026a0d0b15ae60e31cd1f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Options, Assistant Composant ASP ATL
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour une efficacité accrue et de prise en charge de l’erreur pour l’objet.  
@@ -40,9 +35,9 @@ Utilisez cette page de l’Assistant composant Active Server Page ATL pour une e
 |Option|Description|  
 |------------|-----------------|  
 |`Single`|Spécifie que l’objet utilise le modèle de thread unique. Dans le modèle de thread unique, un objet s’exécute toujours dans le thread COM principal. Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) et [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) pour plus d’informations.|  
-|**Apartment**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement du thread équivalent au seul. Chaque objet d’un composant avec thread cloisonné est attribué un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (par défaut).<br /><br /> Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) pour plus d’informations.|  
-|**Both**|Spécifie que l’objet peut utiliser cloisonné ou libre de threads, selon le type d’un thread est créé.|  
-|**Free**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](http://msdn.microsoft.com/library/windows/desktop/ms693421) pour plus d’informations.|  
+|**Cloisonnement**|Spécifie que l’objet utilise le modèle de thread cloisonné. Cloisonnement du thread équivalent au seul. Chaque objet d’un composant avec thread cloisonné est attribué un cloisonnement pour son thread, pour la durée de vie de l’objet. Toutefois, plusieurs threads peuvent être utilisés pour plusieurs objets. Chaque cloisonnement est lié à un thread spécifique et possède une pompe de messages Windows (par défaut).<br /><br /> Consultez [Single-Threaded cloisonnements](http://msdn.microsoft.com/library/windows/desktop/ms680112) pour plus d’informations.|  
+|**Les deux**|Spécifie que l’objet peut utiliser cloisonné ou libre de threads, selon le type d’un thread est créé.|  
+|**Gratuit**|Spécifie que l’objet utilise le modèle de thread libre. Ce qui équivaut à un modèle de cloisonnement multithread. Consultez [multithreads cloisonnés](http://msdn.microsoft.com/library/windows/desktop/ms693421) pour plus d’informations.|  
 |**Neutral**|Spécifie que l’objet suit les indications des multithreads cloisonnés, mais il peut s’exécuter sur n’importe quel type de thread.|  
   
  **Aggregation**  
@@ -54,7 +49,7 @@ Utilisez cette page de l’Assistant composant Active Server Page ATL pour une e
 |**Non**|Spécifie que l’objet n’est pas agrégée.|  
 |**Uniquement**|Spécifie que l’objet doit être agrégée.|  
   
- **Support**  
+ **Prise en charge**  
  (Description de l’élément à ajouter)  
   
 |Option|Description|  

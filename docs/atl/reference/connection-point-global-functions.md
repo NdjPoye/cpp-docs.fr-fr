@@ -1,12 +1,9 @@
 ---
 title: Fonctions globales de Point de connexion | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de Point de connexion
 Ces fonctions prennent en charge les points de connexion et le récepteur de cartes.  
@@ -41,10 +36,10 @@ Ces fonctions prennent en charge les points de connexion et le récepteur de car
 |[AtlUnadvise](#atlunadvise)|Met fin à la connexion établie via `AtlAdvise`.|  
 |[AtlAdviseSinkMap](#atladvisesinkmap)|Indique qu’il contient ou avertit les entrées dans une table de récepteur d’événements.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
    
-##  <a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>  AtlAdvise  
  Crée une connexion entre le point de connexion d'un objet et le récepteur d'un client.  
   
 > [!IMPORTANT]
@@ -80,7 +75,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>  AtlUnadvise  
  Met fin à la connexion établie via [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
@@ -109,7 +104,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap  
  Appelez cette fonction pour conseiller ou déconseiller toutes les entrées de la table d'événements du récepteur de l'objet.  
   
 > [!IMPORTANT]

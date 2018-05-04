@@ -1,13 +1,10 @@
 ---
-title: "-MANIFESTUAC (informations incorpore un compte d’utilisateur dans le manifeste) | Documents Microsoft"
-ms.custom: 
+title: -MANIFESTUAC (informations incorpore un compte d’utilisateur dans le manifeste) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UACUIAccess
 - VC.Project.VCLinkerTool.UACExecutionLevel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564c17336936866750d05137a7bcd101b3a6534d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd872b43fbabdb14457ca54e6c4dfbe039313f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incorporer des informations sur le contrôle de compte d'utilisateur dans le manifeste)
 Spécifie si les informations de contrôle de compte d’utilisateur sont incorporées dans le manifeste du programme.  
@@ -52,7 +47,7 @@ Spécifie si les informations de contrôle de compte d’utilisateur sont incorp
  Un des *asInvoker*, *highestAvailable*, ou *requireAdministrator*. La valeur par défaut est asInvoker. Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.  
   
  `_uiAccess`  
- `true`Si vous souhaitez que l’application ignore les niveaux de protection d’interface utilisateur et exécute l’entrée vers des fenêtres d’autorisation plus élevée sur le bureau. dans le cas contraire, `false`. La valeur par défaut est `false`. La valeur `true` uniquement pour les applications d’accessibilité d’interface utilisateur.  
+ `true` Si vous souhaitez que l’application ignore les niveaux de protection d’interface utilisateur et exécute l’entrée vers des fenêtres d’autorisation plus élevée sur le bureau. dans le cas contraire, `false`. La valeur par défaut est `false`. La valeur `true` uniquement pour les applications d’accessibilité d’interface utilisateur.  
   
 ## <a name="remarks"></a>Notes  
  Si vous spécifiez des options /MANIFESTUAC multiples sur la ligne de commande, la dernière entrée est prioritaire.  

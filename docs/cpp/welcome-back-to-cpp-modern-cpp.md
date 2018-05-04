@@ -1,27 +1,22 @@
 ---
 title: Bienvenue dans C++ (Modern C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Bienvenue dans C++ (Modern C++)
 C++ est l'un des langages de programmation les plus couramment utilisés au monde. Les programmes C++ bien écrits sont rapides et efficaces. Ce langage est plus flexible que d'autres, car il permet de créer une large gamme d'applications (jeux divertissants et passionnants, logiciels scientifiques de pointe, pilotes de périphériques, programmes incorporés et applications clientes Windows). Depuis plus de 20 ans, C++ est utilisé pour résoudre des problèmes similaires et beaucoup d'autres problèmes. Ce que vous ne savez peut-être pas, c'est qu'un nombre croissant de programmeurs C++ ont abandonné l'ancienne programmation de type C inélégante au profit de la programmation moderne C++.  
@@ -36,7 +31,7 @@ C++ est l'un des langages de programmation les plus couramment utilisés au mond
   
 -   Pointeurs intelligents au lieu de pointeurs bruts.  
   
--   `std::string`et `std::wstring` types (consultez [ \<chaîne >](../standard-library/string.md)) au lieu de brutes `char[]` tableaux.  
+-   `std::string` et `std::wstring` types (consultez [ \<chaîne >](../standard-library/string.md)) au lieu de brutes `char[]` tableaux.  
   
 -   [Bibliothèque C++ Standard](../standard-library/cpp-standard-library-header-files.md) comme des conteneurs `vector`, `list`, et `map` au lieu de tableaux bruts ou des conteneurs personnalisés. Consultez [ \<vecteur >](../standard-library/vector.md), [ \<liste >](../standard-library/list.md), et [ \<carte >](../standard-library/map.md).  
   

@@ -1,30 +1,25 @@
 ---
 title: Optimisation des meilleures pratiques | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>Meilleures pratiques pour l’optimisation
 Ce document décrit quelques-unes des meilleures pratiques pour l’optimisation dans Visual C++. Les rubriques suivantes sont présentées :  
@@ -80,7 +75,7 @@ Ce document décrit quelques-unes des meilleures pratiques pour l’optimisation
 ## <a name="optimization-declspecs"></a>L’optimisation declspec  
  Dans cette section, nous allons étudier deux declspec qui peuvent être utilisés dans les programmes pour améliorer les performances : `__declspec(restrict)` et `__declspec(noalias)`.  
   
- Le `restrict` declspec peut être appliqué uniquement aux déclarations de fonction qui retournent un pointeur, par exemple`__declspec(restrict) void *malloc(size_t size);`  
+ Le `restrict` declspec peut être appliqué uniquement aux déclarations de fonction qui retournent un pointeur, par exemple `__declspec(restrict) void *malloc(size_t size);`  
   
  Le `restrict` declspec est utilisé sur les fonctions qui retournent des pointeurs sans alias. Ce mot clé est utilisé pour l’implémentation de la bibliothèque Runtime C de `malloc` puisqu’il ne retourne jamais une valeur de pointeur qui est déjà en cours d’utilisation dans le programme en cours (sauf si vous effectuez une opération non autorisée, par exemple à l’aide de la mémoire une fois qu’il a été libéré).  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  La fonctionnalité inline est une des plus importantes optimisations que le compilateur effectue et nous parlons ici quelques des pragmas permettant de modifier ce comportement.  
   
- `#pragma inline_recursion`est utile pour spécifier ou non que l’application doit pouvoir inline un appel récurrent. Elle est désactivée par défaut. Vous pouvez pour activer pour la récursivité superficielle de petites fonctions. Pour plus d’informations, consultez [inline_recursion](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion` est utile pour spécifier ou non que l’application doit pouvoir inline un appel récurrent. Elle est désactivée par défaut. Vous pouvez pour activer pour la récursivité superficielle de petites fonctions. Pour plus d’informations, consultez [inline_recursion](../../preprocessor/inline-recursion.md).  
   
  Un autre pragma utile pour limiter la profondeur d’incorporation (inlining) est `#pragma inline_depth`. Cela est généralement utile dans les situations où vous essayez de limiter la taille d’un programme ou une fonction. Pour plus d’informations, consultez [inline_depth](../../preprocessor/inline-depth.md).  
   
 ## <a name="restrict-and-assume"></a>__restrict et \__assume  
  Il existe deux mots clés dans Visual C++ qui peut améliorer les performances : [__restrict](../../cpp/extension-restrict.md) et [__assume](../../intrinsics/assume.md).  
   
- Tout d’abord, il convient de noter que `__restrict` et `__declspec(restrict)` sont deux choses différentes. Pendant qu’ils sont similaires, leur sémantique est différents. `__restrict`est un qualificateur de type, comme `const` ou `volatile`, mais exclusivement pour les types pointeur.  
+ Tout d’abord, il convient de noter que `__restrict` et `__declspec(restrict)` sont deux choses différentes. Pendant qu’ils sont similaires, leur sémantique est différents. `__restrict` est un qualificateur de type, comme `const` ou `volatile`, mais exclusivement pour les types pointeur.  
   
  Un pointeur est modifié avec `__restrict` est appelé un *pointeur __restrict*. Un pointeur __restrict est un pointeur qui est accessible via la \__restreindre le pointeur. En d’autres termes, un autre pointeur ne peut pas être utilisé pour accéder aux données vers laquelle pointées le \__restreindre le pointeur.  
   
- `__restrict`peut être un outil puissant pour l’optimiseur Visual C++, mais l’utiliser avec précaution. Une utilisation incorrecte, l’optimiseur peut exécuter une optimisation qui arrête votre application.  
+ `__restrict` peut être un outil puissant pour l’optimiseur Visual C++, mais l’utiliser avec précaution. Une utilisation incorrecte, l’optimiseur peut exécuter une optimisation qui arrête votre application.  
   
  Le `__restrict` mot clé remplace la **/Oa** basculer à partir de versions précédentes.  
   
  Avec `__assume`, un développeur peut demander au compilateur d’émettre des hypothèses sur la valeur d’une variable.  
   
- Par exemple `__assume(a < 5);` indique que l’optimiseur à cette ligne de code, la variable `a` est inférieur à 5. Là encore, cela est une promesse au compilateur. Si `a` est réellement 6 à ce stade du programme, puis le comportement du programme après l’optimisation par le compilateur ne peut pas être celui que vous attendez. `__assume`est très utile avant les instructions switch et/ou les expressions conditionnelles.  
+ Par exemple `__assume(a < 5);` indique que l’optimiseur à cette ligne de code, la variable `a` est inférieur à 5. Là encore, cela est une promesse au compilateur. Si `a` est réellement 6 à ce stade du programme, puis le comportement du programme après l’optimisation par le compilateur ne peut pas être celui que vous attendez. `__assume` est très utile avant les instructions switch et/ou les expressions conditionnelles.  
   
  Il existe certaines limitations à `__assume`. Tout d’abord, `__restrict`, il s’agit uniquement d’une suggestion, par conséquent, le compilateur est libre pour l’ignorer. En outre, `__assume` actuellement fonctionne uniquement avec les inégalités variables par rapport aux constantes. Il ne propage pas inégalités symboliques, par exemple, assume(a < b).  
   

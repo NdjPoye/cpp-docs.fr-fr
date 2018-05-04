@@ -1,12 +1,9 @@
 ---
 title: Classe de CComObjectRootEx | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b147f0ad3f1a54c2ae640b6bf2426bcddf060b35
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (classe)
 Cette classe fournit des méthodes pour gérer la gestion du nombre de référence objet pour les objets brutes et non agrégées et agrégées.  
@@ -65,8 +60,8 @@ class CComObjectRootEx : public CComObjectRootBase
 |[CComObjectRootEx](#ccomobjectrootex)|Constructeur.|  
 |[InternalAddRef](#internaladdref)|Incrémente le décompte de références pour un objet brutes et non agrégée.|  
 |[InternalRelease](#internalrelease)|Décrémente le décompte de références pour un objet brutes et non agrégée.|  
-|[Verrou](#lock)|Si le modèle de thread est multithread, obtienne la propriété d’un objet de section critique.|  
-|[Déverrouiller](#unlock)|Si le modèle de thread est multithread, mises à jour de la propriété d’un objet de section critique.|  
+|[verrou](#lock)|Si le modèle de thread est multithread, obtienne la propriété d’un objet de section critique.|  
+|[déverrouiller](#unlock)|Si le modèle de thread est multithread, mises à jour de la propriété d’un objet de section critique.|  
   
 ### <a name="ccomobjectrootbase-methods"></a>Méthodes CComObjectRootBase  
   
@@ -93,7 +88,7 @@ class CComObjectRootEx : public CComObjectRootBase
 |[m_pOuterUnknown](#m_pouterunknown)|Avec `m_dwRef`dans le cadre d’une union. Utilisé lors de l’objet est agrégée pour contenir un pointeur vers l’inconnu extérieur.|  
   
 ## <a name="remarks"></a>Notes  
- `CComObjectRootEx`gère la gestion du nombre de référence objet pour les objets brutes et non agrégées et agrégées. Il conserve le décompte de références d’objet si votre objet n’est pas agrégée et maintient le pointeur vers l’inconnu extérieur si votre objet est en cours d’agrégation. Pour les objets agrégées, `CComObjectRootEx` méthodes peuvent être utilisées pour gérer l’échec de l’objet interne pour construire et à protéger l’objet externe d’une suppression lors de la publication des interfaces internes ou de l’objet interne est supprimé.  
+ `CComObjectRootEx` gère la gestion du nombre de référence objet pour les objets brutes et non agrégées et agrégées. Il conserve le décompte de références d’objet si votre objet n’est pas agrégée et maintient le pointeur vers l’inconnu extérieur si votre objet est en cours d’agrégation. Pour les objets agrégées, `CComObjectRootEx` méthodes peuvent être utilisées pour gérer l’échec de l’objet interne pour construire et à protéger l’objet externe d’une suppression lors de la publication des interfaces internes ou de l’objet interne est supprimé.  
   
  Une classe qui implémente un serveur COM doit hériter de `CComObjectRootEx` ou [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
@@ -107,17 +102,17 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Si votre objet n’est pas agrégée, **IUnknown** est implémentée par `CComObject` ou `CComPolyObject`. Dans ce cas, les appels à `QueryInterface`, `AddRef`, et **version** sont déléguées à `CComObjectRootEx`de `InternalQueryInterface`, `InternalAddRef`, et `InternalRelease` pour effectuer les opérations réelles.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx  
  Le constructeur initialise le décompte de références à 0.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct  
  Vous pouvez substituer cette méthode dans votre classe dérivée pour effectuer toute initialisation requise pour votre objet.  
   
 ```
@@ -141,7 +136,7 @@ HRESULT FinalConstruct();
      Toutefois, `FinalConstruct` est appelée immédiatement après le plus dérivé classe est entièrement construit, ce qui vous permet d’appeler des fonctions virtuelles et d’utiliser l’implémentation de comptage de références fournie par ATL.  
   
 ### <a name="example"></a>Exemple  
- En règle générale, substituez cette méthode dans la classe dérivée de `CComObjectRootEx` créer n’importe lequel agrégées des objets. Exemple :  
+ En règle générale, substituez cette méthode dans la classe dérivée de `CComObjectRootEx` créer n’importe lequel agrégées des objets. Par exemple :  
   
  [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
@@ -157,7 +152,7 @@ HRESULT FinalConstruct();
   
 -   Substituer `FinalRelease` pour libérer le **IUnknown** pointeur.  
   
-##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease  
  Vous pouvez substituer cette méthode dans votre classe dérivée pour effectuer tout nettoyage nécessaire pour votre objet.  
   
 ```
@@ -169,7 +164,7 @@ void FinalRelease();
   
  Effectuer un nettoyage dans `FinalRelease` est préférable à l’ajout de code pour le destructeur de votre classe, car l’objet est toujours entièrement construit au point auquel `FinalRelease` est appelée. Cela vous permet de vous permet d’accéder en toute sécurité les méthodes fournies par la classe la plus dérivée. Cela est particulièrement important pour la libération de tous les objets agrégées avant la suppression.  
   
-##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef  
  Incrémente le décompte de références d’un objet non regroupées en agrégats de 1.  
   
 ```
@@ -182,7 +177,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>Notes  
  Si le modèle de thread est multithread, **InterlockedIncrement** est utilisé pour empêcher plusieurs threads de modifier le nombre de références en même temps.  
   
-##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface  
  Récupère un pointeur vers l'interface demandée.  
   
 ```
@@ -212,7 +207,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>Notes  
  `InternalQueryInterface` gère seulement des interfaces dans le tableau de mappage COM. Si votre objet est agrégée, `InternalQueryInterface` ne délègue pas à inconnu externe. Vous pouvez entrer des interfaces dans la table de mappage COM avec la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou une de ses variantes.  
   
-##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease  
  Décrémente le décompte de références d’un objet brutes et non agrégée par 1.  
   
 ```
@@ -225,7 +220,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>Notes  
  Si le modèle de thread est multithread, **InterlockedDecrement** est utilisé pour empêcher plusieurs threads de modifier le nombre de références en même temps.  
   
-##  <a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>  CComObjectRootEx::Lock  
  Si le modèle de thread est multithread, cette méthode appelle la fonction API Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), qui attend jusqu'à ce que le thread peut prendre possession de l’objet de section critique obtenues via une donnée membre privée.  
   
 ```
@@ -237,7 +232,7 @@ void Lock();
   
  Si le modèle de thread est monothread, cette méthode ne fait rien.  
   
-##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef  
  Partie d’une union qui accède à quatre octets de mémoire.  
   
 ```
@@ -259,7 +254,7 @@ long m_dwRef;
   
  Si l’objet n’est pas agrégée, le nombre de références accessibles par `AddRef` et **version** est stocké dans `m_dwRef`. Si l’objet est agrégée, le pointeur vers l’inconnu extérieur est stocké dans [m_pOuterUnknown](#m_pouterunknown).  
   
-##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown  
  Partie d’une union qui accède à quatre octets de mémoire.  
   
 ```
@@ -282,7 +277,7 @@ IUnknown*
   
  Si l’objet est agrégée, le pointeur vers l’inconnu extérieur est stocké dans `m_pOuterUnknown`. Si l’objet n’est pas agrégée, le nombre de références accessibles par `AddRef` et **version** est stocké dans [m_dwRef](#m_dwref).  
   
-##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
  Pour chaque classe répertoriée dans le [de mappage des objets](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), cette fonction est appelée une fois lorsque le module est initialisé, et à nouveau une fois celui-ci est terminé.  
   
 ```
@@ -296,12 +291,12 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Notes  
  La valeur de le `bStarting` paramètre indique si le module est initialisé ou arrêtée. L’implémentation par défaut de `ObjectMain` ne fait rien, mais vous pouvez remplacer cette fonction dans votre classe d’initialiser ou de nettoyer les ressources que vous souhaitez allouer pour la classe. Notez que `ObjectMain` est appelée avant que toutes les instances de la classe sont demandées.  
   
- `ObjectMain`est appelé à partir du point d’entrée de la DLL, par conséquent, le type d’opération que la fonction de point d’entrée peut effectuer est restreint. Pour plus d’informations sur ces restrictions, consultez [DLL et Visual C++ comportement de la bibliothèque Runtime](../../build/run-time-library-behavior.md) et [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` est appelé à partir du point d’entrée de la DLL, par conséquent, le type d’opération que la fonction de point d’entrée peut effectuer est restreint. Pour plus d’informations sur ces restrictions, consultez [DLL et Visual C++ comportement de la bibliothèque Runtime](../../build/run-time-library-behavior.md) et [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef  
  Incrémente le décompte de références d’inconnu externe d’une agrégation.  
   
 ```
@@ -311,7 +306,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui peut être utile pour les tests de diagnostic et de test.  
   
-##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface  
  Récupère un pointeur indirect vers l’interface demandée.  
   
 ```
@@ -328,7 +323,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Valeur de retour  
  Un de la norme `HRESULT` valeurs.  
   
-##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease  
  Décrémente le décompte de références inconnu externe d’une agrégation.  
   
 ```
@@ -338,7 +333,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>Valeur de retour  
  Dans les versions non debug, retourne toujours 0. Dans les versions debug, retourne une valeur qui peut être utile pour les tests de diagnostic ou de test.  
   
-##  <a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
  Si le modèle de thread est multithread, cette méthode appelle la fonction API Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), l’approprier les versions de l’objet de section critique obtenues via une donnée membre privée.  
   
 ```

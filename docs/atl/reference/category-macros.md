@@ -2,11 +2,8 @@
 title: Macros de catégorie | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -34,17 +31,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1eba97ef5253041752d4b8abfcd6ea7300b8492
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="category-macros"></a>Macros de catégorie
 Ces macros définissent les mappages de catégorie.  
@@ -59,7 +54,7 @@ Ces macros définissent les mappages de catégorie.
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP  
  Marque le début de la carte de catégorie.  
   
 ```
@@ -85,7 +80,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>  END_CATEGORY_MAP  
  Marque la fin de la carte de catégorie.  
   
 ```
@@ -95,7 +90,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY  
  Ajouter un `IMPLEMENTED_CATEGORY` macro de votre composant [correspondance des catégories de](#begin_category_map) pour spécifier qu’il doit être enregistré en tant que la mise en œuvre de la catégorie identifiée par le `catID` paramètre.  
   
 ```
@@ -120,7 +115,7 @@ IMPLEMENTED_CATEGORY(catID)
 |Sûrs pour l’écriture de scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Sûr pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
 |Relation contenant-contenu de cadre simple Site|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
-|Liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
+|liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |Objets prenant en charge Internet|Consultez [objets prenant en charge Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) dans le Kit de développement pour un exemple de liste.||  
@@ -128,7 +123,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>  REQUIRED_CATEGORY  
  Ajouter un `REQUIRED_CATEGORY` macro de votre composant [correspondance des catégories de](#begin_category_map) pour spécifier qu’il doit être enregistré comme nécessitant la catégorie identifiée par le `catID` paramètre.  
   
 ```
@@ -153,7 +148,7 @@ REQUIRED_CATEGORY( catID )
 |Sûrs pour l’écriture de scripts|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Sûr pour l’initialisation|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
 |Relation contenant-contenu de cadre simple Site|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|  
-|Liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
+|liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |Objets prenant en charge Internet|Consultez [objets prenant en charge Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) dans le Kit de développement pour un exemple de liste.||  

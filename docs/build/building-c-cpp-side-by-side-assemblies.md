@@ -1,29 +1,24 @@
 ---
-title: "Création d’assemblys de C/C++ côte-à-côte | Documents Microsoft"
-ms.custom: 
+title: Création d’assemblys de C/C++ côte-à-côte | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a45062af5648c7b3565d959fd1d2dce13aeca4b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Génération d'assemblys côte à côte C/C++
 A [côte-à-côte assembly](http://msdn.microsoft.com/library/windows/desktop/ff951640) est une collection de ressources, un groupe de DLL, classes de fenêtres, serveurs COM, bibliothèques de types ou interfaces : une application à utiliser lors de l’exécution. Le principal avantage de la réintégration des DLL dans des assemblys est que plusieurs versions d’assemblys peuvent être utilisées par les applications en même temps, et il est possible d’assemblys de service est actuellement installé en cas de mise à jour.  

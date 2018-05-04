@@ -2,11 +2,8 @@
 title: fopen, _wfopen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfopen
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb44d99d635891561c4b73d87e737ea594b0b05f
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 3b606f168448f833a8e244ad35e52faf4f0afd75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -153,7 +148,7 @@ Outre les valeurs précédentes, les caractères suivants peuvent être ajoutés
 
 En mode texte, CTRL + Z est interprété comme un caractère EOF en entrée. Dans les fichiers qui sont ouverts en lecture/écriture à l’aide de **« a + »**, **fopen** recherche un CTRL + z à la fin du fichier et le supprime, s’il est possible. Pour cela, car il est à l’aide de [fseek](fseek-fseeki64.md) et **ftell** pour se déplacer dans un fichier qui se termine par CTRL + Z peut provoquer [fseek](fseek-fseeki64.md) comportement incorrect vers la fin du fichier.
 
-En mode texte, combinaisons de sauts de ligne de chariot sont traduites en sauts de ligne uniques en entrée, et les caractères de saut de ligne sont traduits en combinaisons de sauts de ligne de chariot en sortie. Lorsqu'une fonction d'E/S de flux Unicode s'exécute en mode texte (comportement par défaut), on suppose que le flux source ou de destination est une séquence de caractères multioctets. Par conséquent, les fonctions d’entrée de flux Unicode convertissent les caractères multioctets en caractères larges (comme suite à un appel à la **mbtowc** fonction). Pour la même raison, les fonctions de flux de sortie Unicode convertissent les caractères larges en caractères multioctets (comme suite à un appel à la **wctomb** fonction).
+En mode texte, combinaisons de sauts de ligne de chariot sont traduites en sauts de ligne uniques en entrée, et les caractères de saut de ligne sont traduits en combinaisons de sauts de ligne de chariot en sortie. Lorsqu'une fonction d'E/S de flux Unicode s'exécute en mode texte (comportement par défaut), on suppose que le flux source ou de destination est une séquence de caractères multioctets. Par conséquent, les fonctions d’entrée de flux Unicode convertissent les caractères multioctets en caractères larges (comme après un appel à la fonction **mbtowc**). Pour la même raison, les fonctions de flux de sortie Unicode convertissent les caractères larges en caractères multioctets (comme après un appel à la fonction **wctomb**).
 
 Si **t** ou **b** n’est pas donné dans *mode*, le mode de traduction par défaut est défini par la variable globale [_fmode](../../c-runtime-library/fmode.md). Si **t** ou **b** est préfixé à l’argument, la fonction échoue et le retourne **NULL**.
 

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variables d'environnement pour les optimisations guidées par profil
 
@@ -47,7 +46,7 @@ Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser la vari
 
 ### <a name="pogosafemode-syntax"></a>Syntaxe de PogoSafeMode
 
-> **set PogoSafeMode**[**=**_value_]
+> **définir PogoSafeMode**[**=**_valeur_]
 
 Définissez **PogoSafeMode** à n’importe quelle valeur pour activer le mode sans échec. Définir sans une valeur pour effacer une valeur précédente et l’activer à nouveau en mode rapide.
 
@@ -59,7 +58,7 @@ Modifier la **VCPROFILE_ALLOC_SCALE** variable d’environnement pour modifier l
 
 ### <a name="vcprofileallocscale-syntax"></a>Syntaxe VCPROFILE_ALLOC_SCALE
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **définir VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 
 Le *scale_value* paramètre est un facteur d’échelle pour la quantité de mémoire pour les scénarios de test en cours d’exécution.  La valeur par défaut est 1. Par exemple, cette ligne de commande définit le facteur d’échelle 2 :
 

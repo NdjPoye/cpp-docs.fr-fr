@@ -1,13 +1,10 @@
 ---
-title: "-fp (spécifier le comportement de virgule flottante) | Documents Microsoft"
-ms.custom: 
+title: -fp (spécifier le comportement de virgule flottante) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Spécifier le comportement de virgule flottante)
 Spécifie le comportement de la virgule flottante dans un fichier de code source.  
@@ -42,7 +37,7 @@ Spécifie le comportement de la virgule flottante dans un fichier de code source
 ```  
   
 ## <a name="flags"></a>Indicateurs  
- **précis**  
+ **Précis**  
  Valeur par défaut.  
   
  Améliore la cohérence des tests à virgule flottante à des fins d'égalité ou d'inégalité en désactivant les optimisations qui peuvent modifier la précision des calculs à virgule flottante. (Le maintien d'une précision spécifique est requis pour des raisons de conformité stricte à la norme ANSI.) Par défaut, dans le code des architectures x86, le compilateur utilise les registres 80 bits du coprocesseur pour stocker les résultats intermédiaires des calculs à virgule flottante. Cette approche augmente la vitesse du programme tout en diminuant sa taille. Cependant, dans la mesure où le calcul implique des types de données à virgule flottante qui sont représentés en mémoire sur moins de 80 bits, le fait de faire subir aux bits supplémentaires de précision (80 bits moins le nombre de bits dans un type à virgule flottante plus petit) un long calcul peut donner lieu à des résultats incohérents.  
@@ -67,7 +62,7 @@ Spécifie le comportement de la virgule flottante dans un fichier de code source
   
  **/ fp : precise** remplace le **/Op** option du compilateur.  
   
- **rapide**  
+ **Le traitement rapide**  
  Crée le code le plus rapide dans la plupart des cas en assouplissant les règles pour l'optimisation des opérations à virgule flottante. Cela permet au compilateur d'optimiser le code à virgule flottante en matière de vitesse au détriment de la précision. Lorsque **Fast** est spécifié, le compilateur ne peut pas arrondir correctement instructions d’assignation, conversions de type, ou les appels de fonction et ne peut pas effectuer d’arrondi des expressions intermédiaires. Le compilateur peut réorganiser des opérations ou effectuer des transformations algébriques, par exemple en suivant les règles associatives et distributives, sans tenir compte de leur effet sur la précision finie des résultats. Le compilateur peut changer les opérations et les opérandes en simple précision au lieu de suivre les règles de promotion de type C++. Floating-point-spécifiques contraction optimisations sont toujours activées ([fp_contract](../../preprocessor/fp-contract.md) a la valeur ON). Exceptions de virgule flottante et l’accès à l’environnement FPU sont désactivées (**/fp : à l’exception de-** est implicite et [fenv_access](../../preprocessor/fenv-access.md) a la valeur OFF).  
   
  **Fast** ne peut pas être utilisé avec **/fp : strict** ou **/fp : precise**. La dernière option spécifiée sur la ligne de commande est utilisée. Le fait de spécifier **Fast** et **/fp : sauf** génère une erreur du compilateur.  

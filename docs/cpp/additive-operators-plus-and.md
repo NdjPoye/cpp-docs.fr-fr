@@ -1,12 +1,9 @@
 ---
-title: "Opérateurs additifs : + et - | Documents Microsoft"
-ms.custom: 
+title: 'Opérateurs additifs : + et - | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 ## <a name="syntax"></a>Syntaxe  
@@ -58,21 +53,21 @@ expression - expression
   
 |Type|Signification|  
 |----------|-------------|  
-|*arithmetic*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|  
-|*integral*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|  
+|*Opérations arithmétiques*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|  
+|*intégrale*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|  
 |*scalar*|Les opérandes scalaires sont des opérandes de type arithmétique ou pointeur.|  
   
  Les combinaisons valides pour ces opérateurs sont les suivantes :  
   
- *arithmetic* + *arithmetic*  
+ *arithmétique* + *arithmétique*  
   
- *scalar* + *integral*  
+ *scalaire* + *intégrale*  
   
- *integral* + *scalar*  
+ *intégraux* + *scalaire*  
   
- *arithmetic* - *arithmetic*  
+ *arithmétique* - *arithmétique*  
   
- *scalar* - *scalar*  
+ *scalaire* - *scalaire*  
   
  Notez que l'addition et la soustraction ne sont pas des opérations équivalentes.  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Soustraction de pointeur  
  Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction génère un résultat intégral signé de type ptrdiff_t (défini dans le fichier include standard \<stddef.h >).  
   
- L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers la (*n* - *i*))-ième élément de tableau, où  *n*  est l’élément vers lequel pointe le pointeur d’origine et *i* la valeur intégrale du second opérande.  
+ L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers la (*n* - *i*))-ième élément de tableau, où *n* est l’élément vers lequel pointe le pointeur d’origine et *je* la valeur intégrale du second opérande.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs binaires](../cpp/expressions-with-binary-operators.md)   

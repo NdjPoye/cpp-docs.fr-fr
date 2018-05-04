@@ -1,12 +1,9 @@
 ---
 title: Classe de CAccessToken | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>Classe de CAccessToken
 Cette classe est un wrapper pour un jeton d’accès.  
@@ -91,7 +86,7 @@ class CAccessToken
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CAccessToken::~CAccessToken](#dtor)|Destructeur.|  
+|[CAccessToken :: ~ CAccessToken](#dtor)|Destructeur.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -148,7 +143,7 @@ class CAccessToken
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="attach"></a>  CAccessToken::Attach  
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreateImpersonationToken`appels [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.  
+ `CreateImpersonationToken` appels [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) pour créer un nouveau jeton d’emprunt d’identité.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Appelez cette méthode pour créer un nouveau jeton principal.  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreatePrimaryToken`appels [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) pour créer un nouveau jeton principal.  
+ `CreatePrimaryToken` appels [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) pour créer un nouveau jeton principal.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Appelez cette méthode pour créer un nouveau processus en cours d’exécution dans le contexte de sécurité de l’utilisateur représenté par le `CAccessToken` objet.  
@@ -292,7 +287,7 @@ bool CreateProcessAsUser(
  *pThreadAttributes*  
  Pointeur vers un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure qui spécifie un descripteur de sécurité pour le nouveau thread et détermine si les processus enfants peuvent hériter le handle retourné. Si *pThreadAttributes* a la valeur NULL, le thread obtient un descripteur de sécurité par défaut et le handle ne peut pas être hérité.  
   
- *bInherit*  
+ *case bHériter*  
  Indique si le nouveau processus hérite des handles du processus appelant. Si la valeur est true, chaque handle ouvert peut être hérité dans le processus appelant est héritée par le nouveau processus. Handles hérités ont les mêmes privilèges d’accès et la valeur en tant que les handles d’origine.  
   
  *pCurrentDirectory*  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- `CreateRestrictedToken`utilise le [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) fonction Win32 pour créer un nouveau `CAccessToken` objet, avec des restrictions.  
+ `CreateRestrictedToken` utilise le [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) fonction Win32 pour créer un nouveau `CAccessToken` objet, avec des restrictions.  
   
 > [!IMPORTANT]
 >  Lorsque vous utilisez `CreateRestrictedToken`, vérifiez les points suivants : le jeton existant est valide (et pas entré par l’utilisateur) et `SidsToDisable` et `PrivilegesToDelete` sont valides (et pas entré par l’utilisateur). Si la méthode retourne la valeur false, refuser les fonctionnalités.  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  Retourne la valeur true en cas de réussite, false en cas d'échec.  
   
 ### <a name="remarks"></a>Notes  
- `OpenThreadToken`est semblable à [CAccessToken::GetThreadToken](#getthreadtoken), mais permet de définir le niveau d’emprunt d’identité avant d’initialiser le `CAccessToken` à partir du jeton d’accès du thread.  
+ `OpenThreadToken` est semblable à [CAccessToken::GetThreadToken](#getthreadtoken), mais permet de définir le niveau d’emprunt d’identité avant d’initialiser le `CAccessToken` à partir du jeton d’accès du thread.  
   
  Le [CAutoRevertImpersonation classe](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisé pour rétablir automatiquement les jetons d’accès avec emprunt d’identité créés en définissant le `bImpersonate` indicateur *true*.  
   

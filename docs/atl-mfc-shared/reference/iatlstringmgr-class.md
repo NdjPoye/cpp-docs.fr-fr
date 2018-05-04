@@ -1,12 +1,9 @@
 ---
 title: Classe de IAtlStringMgr | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b99b0b1f35ecbc35b4096ac8c2260d0a55680d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05d7ff0a38c0a557016887e6fce92fcb0bf28226
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iatlstringmgr-class"></a>Classe de IAtlStringMgr
 Cette classe représente l’interface pour un `CStringT` Gestionnaire de mémoire.  
@@ -61,10 +56,10 @@ __interface IAtlStringMgr
   
  Vous pouvez également utiliser cette classe pour implémenter un gestionnaire de mémoire personnalisés pour votre classe de chaîne personnalisée. Pour plus d’informations, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsimpstr.h  
   
-##  <a name="allocate"></a>IAtlStringMgr::Allocate  
+##  <a name="allocate"></a>  IAtlStringMgr::Allocate  
  Alloue une nouvelle structure de données de chaîne.  
   
 ```
@@ -90,7 +85,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>  IAtlStringMgr::Clone  
  Retourne un pointeur vers un nouveau gestionnaire de chaîne pour une utilisation avec une autre instance de `CSimpleStringT`.  
   
 ```
@@ -108,7 +103,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>  IAtlStringMgr::Free  
  Libère une structure de données de chaîne.  
   
 ```
@@ -125,7 +120,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString  
  Retourne un pointeur vers une structure de données de chaîne pour une chaîne vide.  
   
 ```
@@ -144,7 +139,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
+##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate  
  Réalloue une structure de données de chaîne.  
   
 ```

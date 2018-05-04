@@ -2,11 +2,8 @@
 title: decltype (C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 Le spécificateur de type `decltype` génère le type d'une expression spécifiée. Le `decltype` spécificateur de type avec la [auto, mot clé](../cpp/auto-cpp.md), est particulièrement utile pour les développeurs qui écrivent des bibliothèques de modèles. Utilisez `auto` et `decltype` pour déclarer une fonction de modèle dont le type de retour dépend des types de ses arguments template. Sinon, utilisez `auto` et `decltype` pour déclarer une fonction de modèle qui encapsule un appel à une autre fonction, puis retourne le type de retour de la fonction encapsulée.  
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  Le prototype suivant illustre la syntaxe d'une autre déclaration de fonction. Notez que la `const` et `volatile` qualificateurs et le `throw` [spécification d’exception](../cpp/exception-specifications-throw-cpp.md) sont facultatifs. Le *function_body* espace réservé représente une instruction composée qui spécifie ce que fait la fonction. En matière de codage pratique, le *expression* espace réservé dans le `decltype` instruction doit correspondre à l’expression spécifiée par le `return` instruction, le cas échéant, dans le *function_body*.  
   
- **Auto** *function_name* **(** *paramètres*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub>  **->**  **decltype (** *expression* **)** **lever**<sub>opt</sub> **{** *function_body* **};**  
+ **Auto** *function_name* **(** *paramètres*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *expression* **)** **lever**<sub>opt</sub> **{** *function_body* **};**  
   
  Dans l'exemple de code suivant, le type de retour spécifié à la fin de la fonction de modèle `myFunc` est déterminé par les types des arguments template de `t` et de `u`. Comme une meilleure pratique de programmation, l’exemple de code utilise également les références rvalue et les `forward` modèle de fonction, qui prennent en charge *un transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -210,8 +205,8 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Visual C++ 2010 ou versions ultérieures.  
   
- `decltype(auto)`requiert Visual Studio 2015 ou version ultérieure.  
+ `decltype(auto)` requiert Visual Studio 2015 ou version ultérieure.  
   

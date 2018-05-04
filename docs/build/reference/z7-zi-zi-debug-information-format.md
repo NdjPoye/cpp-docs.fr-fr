@@ -1,6 +1,6 @@
 ---
-title: "-Z7, - Zi, - ZI (Format des informations de débogage) | Documents Microsoft"
-ms.custom: 
+title: -Z7, - Zi, - ZI (Format des informations de débogage) | Documents Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Format des informations de débogage)
 
@@ -52,7 +51,7 @@ Spécifie le type d’informations de débogage créées pour votre programme et
 
 Lorsque le code est compilé et généré en mode débogage, le compilateur génère des noms de symboles pour les fonctions et les variables, les informations de type et les emplacements de numéro de ligne pour une utilisation par le débogueur. Ces informations de débogage symboliques peuvent être incluses dans les fichiers objets (fichiers .obj) générés par le compilateur, ou dans un fichier PDB distinct (fichier .pdb) pour le fichier exécutable.  Les options de format des informations de débogage sont décrits dans les sections suivantes.  
   
-### <a name="none"></a>Aucun.
+### <a name="none"></a>Aucun
 
 Par défaut, si aucune option de format d’informations de débogage est spécifiée, le compilateur ne produit aucune information de débogage, d'où une compilation plus rapide.  
   
@@ -79,7 +78,7 @@ Si vous créez une bibliothèque d’objets qui ont été compilés à l’aide 
 
 ### <a name="zi"></a>/ZI
 
-Le **/Zi** option équivaut à **/Zi**, mais il génère un fichier PDB dans un format qui prend en charge la [Modifier & Continuer](/visualstudio/debugger/edit-and-continue-visual-cpp) fonctionnalité. Pour utiliser les fonctionnalités de débogage Modifier & Continuer, vous devez utiliser cette option. La fonctionnalité Modifier & Continuer est utile pour la productivité des développeurs, mais peut entraîner des problèmes de mise en conformité du compilateur, les performances et la taille du code. Étant donné que la plupart des optimisations sont incompatibles avec Modifier & Continuer, à l’aide **/Zi** désactive toutes `#pragma optimize` instructions dans votre code. Le **/Zi** option est également incompatible avec l’utilisation de la [&#95; &#95; LIGNE &#95; &#95; macro prédéfinie](../../preprocessor/predefined-macros.md); le code compilé avec **/Zi** ne pouvez pas utiliser **&#95; &#95; LIGNE &#95; &#95;**  comme argument de modèle sans type, bien que **&#95; &#95; LIGNE &#95; &#95;**  peut être utilisé dans les expansions de macros.
+Le **/Zi** option équivaut à **/Zi**, mais il génère un fichier PDB dans un format qui prend en charge la [Modifier & Continuer](/visualstudio/debugger/edit-and-continue-visual-cpp) fonctionnalité. Pour utiliser les fonctionnalités de débogage Modifier & Continuer, vous devez utiliser cette option. La fonctionnalité Modifier & Continuer est utile pour la productivité des développeurs, mais peut entraîner des problèmes de mise en conformité du compilateur, les performances et la taille du code. Étant donné que la plupart des optimisations sont incompatibles avec Modifier & Continuer, à l’aide **/Zi** désactive toutes `#pragma optimize` instructions dans votre code. Le **/Zi** option est également incompatible avec l’utilisation de la [ &#95; &#95;ligne&#95; &#95; macro prédéfinie](../../preprocessor/predefined-macros.md); le code compilé avec **/Zi** ne peut pas utiliser **&#95; &#95;Ligne&#95; &#95;** comme argument de modèle sans type, bien que **&#95; &#95;ligne&#95; &#95;** peut être utilisé dans les expansions de macros.
 
 Le **/Zi** option force à la fois le [/Gy (activer la liaison au niveau des fonctions)](../../build/reference/gy-enable-function-level-linking.md) et [/FC (complet chemin d’accès du fichier de Code Source dans les Diagnostics)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) options à utiliser dans la compilation.
 

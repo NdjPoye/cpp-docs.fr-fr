@@ -2,11 +2,8 @@
 title: _mbctombb, _mbctombb_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctombb_l
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45567a2486a0783cd4b1f82e5a81046e529c49df
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
@@ -84,7 +79,7 @@ En cas de réussite, **_mbctombb** et **_mbctombb_l** retourne le caractère sur
 
 Le **_mbctombb** et **_mbctombb_l** fonctions convertissent un caractère multioctet fourni pour un caractère multioctet sur un octet correspondant. Caractères doivent correspondre à des caractères codés sur un octet dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.
 
-La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale](setlocale-wsetlocale.md) pour plus d’informations. La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’il utilise les paramètres régionaux transmis dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **_l** suffixe utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le **_l** suffixe est identique, sauf qu’il utilise les paramètres régionaux transmis dans à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Dans les versions précédentes, **_mbctombb** a été appelé **zentohan**. Utilisez **_mbctombb** à la place.
 

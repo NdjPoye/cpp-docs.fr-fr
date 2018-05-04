@@ -2,28 +2,23 @@
 title: typeid (opérateur) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27f3bcb7358b3ea05907df1a4372c107538dfb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb99b3dbc656d43701eebafbd7d34de125d1a31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typeid-operator"></a>typeid, opérateur
 ## <a name="syntax"></a>Syntaxe  
@@ -51,7 +46,7 @@ typeid( expression )
   
 -   Un pointeur indicé ([ ] par exemple). (Notez qu'il n'est généralement pas possible d'utiliser un indice avec un pointeur vers un type polymorphe.)  
   
- Si le *expression* pointe vers un type de classe de base, l’objet est réellement d’un type dérivé de cette classe de base, un **type_info** référence de la classe dérivée est le résultat. Le *expression* doit pointer vers un type polymorphe (une classe avec des fonctions virtuelles). Dans le cas contraire, le résultat est le **type_info** pour la classe statique référencée dans le *expression*. De plus, le pointeur doit être déréférencé afin que l'objet qu'il pointe soit utilisé. Sans le déréférencement du pointeur, le résultat sera le **type_info** du pointeur, pas à ce qu’il pointe vers. Exemple :  
+ Si le *expression* pointe vers un type de classe de base, l’objet est réellement d’un type dérivé de cette classe de base, un **type_info** référence de la classe dérivée est le résultat. Le *expression* doit pointer vers un type polymorphe (une classe avec des fonctions virtuelles). Dans le cas contraire, le résultat est le **type_info** pour la classe statique référencée dans le *expression*. De plus, le pointeur doit être déréférencé afin que l'objet qu'il pointe soit utilisé. Sans le déréférencement du pointeur, le résultat sera le **type_info** du pointeur, pas à ce qu’il pointe vers. Par exemple :  
   
 ```  
 // expre_typeid_Operator.cpp  

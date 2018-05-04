@@ -1,12 +1,9 @@
 ---
 title: Classe de IDispatchImpl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispatchImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3008d42986fcdc4b98ba6a1f9c85c437f2d335c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fddf556eba07264f6ea0b01edea3e3d1e8a3a7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl (classe)
 Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |----------|-----------------|  
 |[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Constructeur. Appels `AddRef` sur la variable membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle `Release`.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -90,7 +85,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |[IDispatchImpl::Invoke](#invoke)|Fournit l’accès aux méthodes et propriétés exposées par l’interface double.|  
   
 ## <a name="remarks"></a>Notes  
- `IDispatchImpl`Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double sur un objet. Une interface double dérive `IDispatch` et utilise uniquement des types compatibles Automation. Comme une dispinterface, une interface double prend en charge la liaison anticipée et liaison tardive ; Toutefois, une interface double prend également en charge liaison par vtable.  
+ `IDispatchImpl` Fournit une implémentation par défaut pour le `IDispatch` dans le cadre d’une interface double sur un objet. Une interface double dérive `IDispatch` et utilise uniquement des types compatibles Automation. Comme une dispinterface, une interface double prend en charge la liaison anticipée et liaison tardive ; Toutefois, une interface double prend également en charge liaison par vtable.  
   
  L’exemple suivant montre une implémentation classique des `IDispatchImpl`.  
   
@@ -98,7 +93,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
   
  Par défaut, le `IDispatchImpl` recherche les informations de type classe `T` dans le Registre. Pour implémenter une interface non inscrite, vous pouvez utiliser la `IDispatchImpl` classe sans accès au Registre à l’aide d’un numéro de version prédéfinies. Si vous créez un `IDispatchImpl` objet ayant 0xFFFF comme valeur pour `wMajor` et 0xFFFF comme valeur pour `wMinor`, la `IDispatchImpl` classe récupère la bibliothèque de types à partir du fichier .dll au lieu du Registre.  
   
- `IDispatchImpl`contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type pour l’interface double. Si vous avez plusieurs objets qui implémentent la même double interface, une seule instance de `CComTypeInfoHolder` est utilisé.  
+ `IDispatchImpl` contient un membre statique de type `CComTypeInfoHolder` qui gère les informations de type pour l’interface double. Si vous avez plusieurs objets qui implémentent la même double interface, une seule instance de `CComTypeInfoHolder` est utilisé.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `T`  
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames  
  Mappe un jeu de noms avec un jeu correspondant d'identificateurs de dispatch.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) dans le Kit de développement logiciel Windows.  
   
-##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo  
  Récupère les informations de type pour l’interface double.  
   
 ```
@@ -136,7 +131,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>Notes  
  Consultez [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) dans le Kit de développement logiciel Windows.  
   
-##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount  
  Détermine si les informations de type est disponible pour l’interface double.  
   
 ```
@@ -146,14 +141,14 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>Notes  
  Consultez `IDispatch::GetTypeInfoCount` dans le Kit de développement logiciel Windows.  
   
-##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
+##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl  
  Constructeur. Appels `AddRef` sur la variable membre protégé qui gère les informations de type pour l’interface double. Le destructeur appelle **version**.  
   
 ```
 IDispatchImpl();
 ```  
   
-##  <a name="invoke"></a>IDispatchImpl::Invoke  
+##  <a name="invoke"></a>  IDispatchImpl::Invoke  
  Fournit l’accès aux méthodes et propriétés exposées par l’interface double.  
   
 ```

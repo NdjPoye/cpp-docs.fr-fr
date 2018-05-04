@@ -2,12 +2,9 @@
 title: Appeler des fonctions DLL à partir d’Applications Visual Basic | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Appel de fonctions de la DLL à partir d'applications Visual Basic
 Pour les applications Visual Basic (ou les applications dans d’autres langages tels que Pascal ou Fortran) appeler des fonctions dans une DLL C/C++, les fonctions doivent être exportées à l’aide de la convention d’appel correcte sans la décoration de noms effectuée par le compilateur.  
   
- `__stdcall`crée la convention d’appel correcte pour la fonction (la fonction appelée nettoie la pile et les paramètres sont passés de droite à gauche) mais décore le nom de la fonction différemment. Ainsi, lorsque **__declspec (dllexport)** est utilisée sur une fonction exportée dans une DLL, le nom décoré est exporté.  
+ `__stdcall` crée la convention d’appel correcte pour la fonction (la fonction appelée nettoie la pile et les paramètres sont passés de droite à gauche) mais décore le nom de la fonction différemment. Ainsi, lorsque **__declspec (dllexport)** est utilisée sur une fonction exportée dans une DLL, le nom décoré est exporté.  
   
  Le `__stdcall` décoration de nom précéder le nom de symbole d’un trait de soulignement (_) et ajoute le symbole avec un arobase (@) suivi par le nombre d’octets dans la liste d’arguments (l’espace de pile requis). Par conséquent, lorsqu’elle est déclarée en tant que :  
   

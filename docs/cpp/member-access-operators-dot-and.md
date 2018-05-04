@@ -1,12 +1,9 @@
 ---
-title: "Opérateurs d’accès au membre :. et -&gt; | Documents Microsoft"
-ms.custom: 
+title: Opérateurs d’accès au membre :. et -&gt; | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Opérateurs d’accès au membre :. et -&gt;
 ## <a name="syntax"></a>Syntaxe  
@@ -44,13 +39,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>Notes  
- Les opérateurs d’accès au membre **.** et  **->**  sont utilisés pour faire référence aux membres de classes, structures et unions. Les expressions d’accès au membre ont la valeur et le type du membre sélectionné.  
+ Les opérateurs d’accès au membre **.** et **->** sont utilisés pour faire référence aux membres de classes, structures et unions. Les expressions d’accès au membre ont la valeur et le type du membre sélectionné.  
   
  Il existe deux formes d’expressions d’accès au membre :  
   
 1.  Dans la première forme, *postfix-expression* représente une valeur de type d’union, classe ou struct et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur de l’opération est celle de *nom* et est une l-value Si *postfix-expression* est une l-value.  
   
-2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le  **->**  opérateur de déréférence le pointeur. Par conséquent, les expressions * e ***->**`member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs **->** ou **\*** sont surchargées).  
+2.  Dans la deuxième forme *postfix-expression* représente un pointeur vers une structure, union ou classe, et *nom* désigne un membre de la structure spécifiée, union ou classe. La valeur est celle de *nom* et est une l-value. Le **->** opérateur de déréférence le pointeur. Par conséquent, les expressions * e ***->**`member` et **(\****e***)**.`member` (où *e* représente un pointeur) produisent des résultats identiques (sauf lorsque les opérateurs **->** ou **\*** sont surchargées).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre les deux formes de l'opérateur d'accès aux membres.  

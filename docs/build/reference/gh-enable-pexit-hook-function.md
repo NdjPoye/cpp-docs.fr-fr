@@ -1,13 +1,10 @@
 ---
 title: -GH (activer la fonction de raccordement _pexit) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _pexit
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cfdd783a698a3397e84fa62b7252399570dc84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57e11c27af36eb539b22f3833a73341ff3065e97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Activer la fonction de raccordement _pexit)
 Appelle le `_pexit` fonction à la fin de chaque méthode ou fonction.  
@@ -48,7 +43,7 @@ Appelle le `_pexit` fonction à la fin de chaque méthode ou fonction.
 void __declspec(naked) _cdecl _pexit( void );  
 ```  
   
- `_pexit`est semblable à `_penter`; consultez [/Gh (Enable _penter Hook Function)](../../build/reference/gh-enable-penter-hook-function.md) pour obtenir un exemple montrant comment écrire un `_pexit` (fonction).  
+ `_pexit` est semblable à `_penter`; consultez [/Gh (Enable _penter Hook Function)](../../build/reference/gh-enable-penter-hook-function.md) pour obtenir un exemple montrant comment écrire un `_pexit` (fonction).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   

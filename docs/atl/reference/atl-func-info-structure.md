@@ -1,12 +1,9 @@
 ---
 title: Les structures _ATL_FUNC_INFO structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d5f3b759591333a41c3bc9da083e8e724249d13d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atlfuncinfo-structure"></a>Les structures _ATL_FUNC_INFO structure
 Contient des informations de type utilisées pour décrire une méthode ou propriété sur une dispinterface.  
@@ -69,13 +64,13 @@ struct _ATL_FUNC_INFO {
   
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
 ## <a name="see-also"></a>Voir aussi  
  [Structures](../../atl/reference/atl-structures.md)   
  [IDispEventSimpleImpl (classe)](../../atl/reference/idispeventsimpleimpl-class.md)   
- [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
+ [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
 
 

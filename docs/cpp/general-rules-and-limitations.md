@@ -2,26 +2,21 @@
 title: Règles générales et Limitations | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f92844e993671a3423c04523ccf4e03f7f7e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218bd2fb58ccc4d3a3c2e1d297be930350577d18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-and-limitations"></a>Règles générales et limitations
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
@@ -30,7 +25,7 @@ ms.lasthandoff: 12/21/2017
   
      Si vous déclarez une fonction ou un objet avec l'attribut `dllexport`, sa définition doit apparaître dans un module du même programme. Sinon, une erreur d'éditeur de liens est générée.  
   
--   Si un seul module de votre programme contient à la fois **dllimport** et `dllexport` déclarations pour la même fonction ou l’objet, le `dllexport` attribut est prioritaire sur la **dllimport** attribut. Toutefois, un avertissement du compilateur est généré. Exemple :  
+-   Si un seul module de votre programme contient à la fois **dllimport** et `dllexport` déclarations pour la même fonction ou l’objet, le `dllexport` attribut est prioritaire sur la **dllimport** attribut. Toutefois, un avertissement du compilateur est généré. Par exemple :  
   
     ```  
     __declspec( dllimport ) int i;  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
                                      // dllexport takes precedence.  
     ```  
   
--   En C++, vous pouvez initialiser un pointeur déclaré globalement ou statique des données locales ou avec l’adresse d’un objet de données déclaré avec le **dllimport** attribut, ce qui génère une erreur en C. En outre, vous pouvez initialiser un pointeur fonction local statique avec l’adresse d’une fonction déclarée avec le **dllimport** attribut. En C, ce type d'assignation définit le pointeur sur l'adresse de la conversion de code d'importation de la DLL (stub de code qui transfère un contrôle à la fonction) plutôt que l'adresse de la fonction. En C++, il définit le pointeur sur l'adresse de la fonction. Exemple :  
+-   En C++, vous pouvez initialiser un pointeur déclaré globalement ou statique des données locales ou avec l’adresse d’un objet de données déclaré avec le **dllimport** attribut, ce qui génère une erreur en C. En outre, vous pouvez initialiser un pointeur fonction local statique avec l’adresse d’une fonction déclarée avec le **dllimport** attribut. En C, ce type d'assignation définit le pointeur sur l'adresse de la conversion de code d'importation de la DLL (stub de code qui transfère un contrôle à la fonction) plutôt que l'adresse de la fonction. En C++, il définit le pointeur sur l'adresse de la fonction. Par exemple :  
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Si vous appliquez `dllexport` à une classe normale qui possède une classe de base qui n’est pas marquée comme `dllexport`, le compilateur génère une erreur C4275.  
   
-     Le compilateur génère le même avertissement si la classe de base est une spécialisation d'un modèle de classe. Pour contourner ce problème, marquez la classe de base avec `dllexport`. Le problème avec une spécialisation de modèle de classe est l’endroit où placer le **__declspec (dllexport)**; vous n’êtes pas autorisé à marquer le modèle de classe. Au lieu de cela, instanciez le modèle de classe et marquez cette instanciation explicite avec `dllexport`. Exemple :  
+     Le compilateur génère le même avertissement si la classe de base est une spécialisation d'un modèle de classe. Pour contourner ce problème, marquez la classe de base avec `dllexport`. Le problème avec une spécialisation de modèle de classe est l’endroit où placer le **__declspec (dllexport)**; vous n’êtes pas autorisé à marquer le modèle de classe. Au lieu de cela, instanciez le modèle de classe et marquez cette instanciation explicite avec `dllexport`. Par exemple :  
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
     // ...  
     ```  
   
-     Cette solution de contournement échoue si l’argument template est la classe dérivée. Exemple :  
+     Cette solution de contournement échoue si l’argument template est la classe dérivée. Par exemple :  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  

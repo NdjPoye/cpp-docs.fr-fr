@@ -1,13 +1,10 @@
 ---
-title: "Exécuter LIB | Documents Microsoft"
-ms.custom: 
+title: Exécuter LIB | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c306ba58bfef11f92d7e861272aad2aa605c8fde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-lib"></a>Exécution de LIB
 Différentes options de ligne de commande peuvent être utilisé pour contrôler LIB.  
@@ -74,7 +69,7 @@ LIB @commandfile
   
  Les options suivantes s’appliquent à tous les modes de LIB :  
   
- / ERRORREPORT [NONE &#124; INVITE DE COMMANDES &#124; FILE D’ATTENTE &#124; ENVOI]  
+ / ERRORREPORT [NONE &AMP;#124; INVITE &AMP;#124; FILE D’ATTENTE &AMP;#124; ENVOI]  
  Si lib.exe échoue au moment de l’exécution, vous pouvez utiliser /ERRORREPORT pour envoyer des informations à Microsoft à propos de ces erreurs internes.  
   
  Pour plus d’informations sur/errorreport, consultez [/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md).  

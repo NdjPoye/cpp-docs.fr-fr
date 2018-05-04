@@ -1,13 +1,10 @@
 ---
-title: "@ (Spécifier un fichier de réponse du compilateur) | Documents Microsoft"
-ms.custom: 
+title: '@ (Spécifier un fichier de réponse du compilateur) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '@'
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '@ compiler option'
 - cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 698039e22a8c760097d009454db5a3872666729b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f291ed9a0ccc86ea1ef6fe6703205d76cdcd0fa1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (Spécifier un fichier réponse du compilateur)
 Spécifie un fichier de réponse du compilateur.  
@@ -45,7 +40,7 @@ Spécifie un fichier de réponse du compilateur.
 ## <a name="remarks"></a>Notes  
  Un fichier réponse peut contenir toutes les commandes que vous spécifiez sur la ligne de commande. Cela peut être utile si vos arguments de ligne de commande plus de 127 caractères.  
   
- Il n’est pas possible de spécifier le  **@**  option à partir d’un fichier réponse. Autrement dit, un fichier réponse ne peut pas incorporer un autre fichier réponse.  
+ Il n’est pas possible de spécifier le **@** option à partir d’un fichier réponse. Autrement dit, un fichier réponse ne peut pas incorporer un autre fichier réponse.  
   
  À partir de la ligne de commande, vous pouvez spécifier autant d’options fichier réponse (par exemple, `@respfile.1 @respfile.2`) que vous le souhaitez.  
   

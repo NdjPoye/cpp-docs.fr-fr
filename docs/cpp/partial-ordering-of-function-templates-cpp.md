@@ -1,29 +1,24 @@
 ---
-title: "Classement partiel des modèles de fonction (C++) | Documents Microsoft"
-ms.custom: 
+title: Classement partiel des modèles de fonction (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
@@ -49,7 +44,7 @@ Utilisez le processus suivant pour déterminer si un candidat de modèle de fonc
 
      2. Un modèle en prenant uniquement __T\*__  est plus spécialisé qu’un prenant uniquement __T__, car le type d’un hypothétique __X\*__  est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __T\*__  argument template.
 
-     3. __const T__ est plus spécialisé que __T__, car __X const__ est un argument valid pour un __T__ argument de modèle, mais __X__ n’est pas un argument valide pour un __const T__ argument template.
+     3. __const T__ est plus spécialisé que __T__, car __X const__ est un argument valid pour un __T__ argument de modèle, mais __X__ est argument non valide pour un __const T__ argument template.
 
      4. __const T\*__  est plus spécialisé que __T\*__, car __X const\*__  est un argument valid pour un __T\*__  argument de modèle, mais __X\*__  n’est pas un argument valide pour un __const T\*__  argument template.
 

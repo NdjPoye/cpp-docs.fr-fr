@@ -1,12 +1,9 @@
 ---
-title: "Portée (Visual C++) | Documents Microsoft"
-ms.custom: 
+title: Portée (Visual C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Portée (Visual C++)
 Les noms C++ peuvent être utilisés uniquement dans certaines zones d'un programme. Cette zone est appelée « portée » du nom. La portée détermine la « durée de vie » d'un nom qui ne désigne pas un objet d'étendue static. La portée détermine également la visibilité d'un nom, lorsque les constructeurs et les destructeurs de classe sont appelés, et lorsque des variables locales à la portée sont initialisées. (Pour plus d’informations, consultez [constructeurs](../cpp/constructors-cpp.md) et [destructeurs](../cpp/destructors-cpp.md).) Il existe cinq types de portée :  
@@ -50,7 +45,7 @@ Les noms C++ peuvent être utilisés uniquement dans certaines zones d'un progr
   
      En C++, la portée de fichier est également appelée portée de l'espace de noms.  
   
--   **Portée de classe** noms de membres de classe ont une portée de classe. Fonctions membres de classe sont accessibles seulement via les opérateurs de sélection de membre (**.** ou  **->** ) ou des opérateurs de pointeur vers membre (**.\***  ou  **-> \*** ) sur un objet ou un pointeur vers un objet de cette classe ; les données de membre de classe non statique sont considérée comme locales à l’objet de cette classe. Prenons la déclaration de classe suivante :  
+-   **Portée de classe** noms de membres de classe ont une portée de classe. Fonctions membres de classe sont accessibles seulement via les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.\***  ou **-> \***) sur un objet ou un pointeur vers un objet de cette classe ; les données de membre de classe non statique sont considérée comme locales à l’objet de cette classe. Prenons la déclaration de classe suivante :  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ Les noms C++ peuvent être utilisés uniquement dans certaines zones d'un progr
 ## <a name="hiding-names"></a>Masquage des noms  
  Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l'illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.  
   
- ![Bloc &#45; le masquage de nom de portée](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Bloc&#45;masquage d’un nom d’étendue](../cpp/media/vc38sf1.png "vc38SF1")  
 Masquage de la portée de bloc et du nom  
   
  La sortie du programme représentée dans l'illustration est la suivante :  

@@ -2,12 +2,9 @@
 title: -OPT (optimisations) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 Contrôle les optimisations effectuées par LINK pendant une génération.  
@@ -63,7 +58,7 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
   
  Spécification de **/OPT : ICF** n’active pas la **/OPT : REF** option.  
   
- **ICF [=** `iterations` **] &AMP;#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**  
  Utilisez **/OPT : ICF [=**`iterations`**]** pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif `iterations` spécifie la fréquence de recherche des doublons parmi les symboles. Le nombre d'itérations par défaut est de deux. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.  
   
  L’éditeur de liens se comporte différemment lorsque **/OPT : REF** est spécifié, et **ICF** est activée par défaut — que c’est le cas lorsque **/OPT : REF, ICF** est spécifié explicitement. La forme de **ICF** activée avec **/OPT : REF** uniquement ne replie pas les données en lecture seule, cela inclut .rdata, .pdata et .xdata. Par conséquent, moins de fonctions sont repliées lors de la production d'images pour [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], car les fonctions de ces modules dépendent davantage des données en lecture seule, par exemple .pdata et .xdata. Pour obtenir un total **ICF** pliage de comportement, spécifiez explicitement **/OPT : ICF**.  

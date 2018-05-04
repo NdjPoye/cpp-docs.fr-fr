@@ -1,12 +1,9 @@
 ---
-title: "Opérateur d’indice : | Documents Microsoft"
-ms.custom: 
+title: 'Opérateur d’indice : | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>Opérateur d’indice :
 ## <a name="syntax"></a>Syntaxe  
@@ -55,7 +50,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
- L’adresse transmise par l’expression n’est pas *e2* octets à partir de l’adresse *e1*. Au lieu de cela, l’adresse est à l’échelle pour parvenir à l’objet suivant dans le tableau *e2*. Exemple :  
+ L’adresse transmise par l’expression n’est pas *e2* octets à partir de l’adresse *e1*. Au lieu de cela, l’adresse est à l’échelle pour parvenir à l’objet suivant dans le tableau *e2*. Par exemple :  
   
 ```  
 double aDbl[2];  
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1***[***expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
+ Les expressions d'indice s'associent de gauche à droite. L’expression d’indice extrême gauche, *expression1 ***[*** expression2***]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (**\***) est appliquée après la dernière expression d’indice est évaluée, sauf si la valeur de pointeur finale traite un type tableau.  
   
  Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions. L'exemple suivant déclare et initialise un tableau de caractères simple à deux dimensions :  
   

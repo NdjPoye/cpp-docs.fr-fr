@@ -1,30 +1,25 @@
 ---
 title: Conventions lexicales | Documents Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894baf715113ebdf8dbead6600f9c906784fbd37
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lexical-conventions"></a>Conventions lexicales
 Cette section introduit les éléments fondamentaux d'un programme C++. Vous utilisez ces éléments, appelés « éléments lexicaux » ou « jetons », pour élaborer les instructions, les définitions, les déclarations, etc., utilisées pour construire des programmes complets. Les éléments lexicaux suivants sont présentés dans cette section :

@@ -1,27 +1,22 @@
 ---
 title: Ajout d’une Page de propriétés (ATL didacticiel, partie 6) | Documents Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 Pages de propriétés sont implémentées en tant qu’objets COM distincts, et les autoriser à être partagé si nécessaire. Dans cette étape, vous exécuterez les tâches suivantes pour ajouter une page de propriétés au contrôle :  
@@ -104,7 +99,7 @@ Pages de propriétés sont implémentées en tant qu’objets COM distincts, et 
   
  Le code vérifie désormais ce paramètre la `Sides` propriété effectivement travaillée. En cas d’échec, le code affiche une boîte de message affiche les détails d’erreur à partir de la **IErrorInfo** interface. En règle générale, un conteneur interroge un objet pour le **ISupportErrorInfo** interface et les appels `InterfaceSupportsErrorInfo` première, afin de déterminer si l’objet prend en charge les informations d’erreur de paramètre. Vous pouvez ignorer cette tâche.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) vous aide à en gérant automatiquement le décompte de références, vous n’avez pas besoin d’appeler `Release` sur l’interface. `CComBSTR`vous aide à avec `BSTR` du traitement, donc vous n’avez pas à effectuer la dernière `SysFreeString` appeler. Vous utiliser l’une des classes de conversion de chaîne différentes, vous pouvez convertir le `BSTR` si nécessaire (c’est pourquoi le `USES_CONVERSION` macro est au début de la fonction).  
+ [CComPtr](../atl/reference/ccomptr-class.md) vous aide à en gérant automatiquement le décompte de références, vous n’avez pas besoin d’appeler `Release` sur l’interface. `CComBSTR` vous aide à avec `BSTR` du traitement, donc vous n’avez pas à effectuer la dernière `SysFreeString` appeler. Vous utiliser l’une des classes de conversion de chaîne différentes, vous pouvez convertir le `BSTR` si nécessaire (c’est pourquoi le `USES_CONVERSION` macro est au début de la fonction).  
   
  Vous devez également définir l’indicateur de changement de la page de propriété pour indiquer que le **appliquer** bouton doit être activé. Cela se produit lorsque l’utilisateur modifie la valeur dans la **côtés** zone d’édition.  
   
@@ -126,7 +121,7 @@ Pages de propriétés sont implémentées en tant qu’objets COM distincts, et 
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`sera appelée lorsque un **WM_COMMAND** message est envoyé avec la **EN_CHANGE** notification pour le `IDC_SIDES` contrôle. `OnEnChangeSides`appelle ensuite `SetDirty` et passe `TRUE` pour indiquer la propriété de la page est désormais incorrecte et **appliquer** bouton doit être activé.  
+ `OnEnChangeSides` sera appelée lorsque un **WM_COMMAND** message est envoyé avec la **EN_CHANGE** notification pour le `IDC_SIDES` contrôle. `OnEnChangeSides` appelle ensuite `SetDirty` et passe `TRUE` pour indiquer la propriété de la page est désormais incorrecte et **appliquer** bouton doit être activé.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Ajout de la Page de propriétés au contrôle  
  L’Assistant Ajout de classes ATL et l’Assistant Page de propriétés ATL n’ajoutent pas la page de propriétés à votre contrôle pour vous automatiquement, car il peut y avoir plusieurs contrôles dans votre projet. Vous devez ajouter une entrée au mappage de propriété du contrôle.  

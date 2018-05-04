@@ -1,12 +1,9 @@
 ---
 title: Classe de CSid | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>Classe de CSid
 Cette classe est un wrapper pour un `SID` structure de (l’identificateur de sécurité).  
@@ -90,7 +85,7 @@ class CSid
   
 |||  
 |-|-|  
-|[operator =](#operator_eq)|Opérateur d'assignation.|  
+|[opérateur =](#operator_eq)|Opérateur d'assignation.|  
 |[les SID const opérateur *](#operator_const_sid__star)|Les casts un `CSid` objet vers un pointeur vers un `SID` structure.|  
   
 ### <a name="global-operators"></a>Opérateurs globaux  
@@ -99,9 +94,9 @@ class CSid
 |-|-|  
 |[opérateur ==](#operator_eq_eq)|Teste l’égalité de deux objets de descripteur de sécurité|  
 |[opérateur ! =](#operator_neq)|Teste si deux objets de descripteur de sécurité d’inégalité|  
-|[(opérateur)\<](#operator_lt_)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
+|[(opérateur) \<](#operator_lt_)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
 |[opérateur >](#operator_gt_)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
-|[(opérateur)\<=](#operator_lt__eq)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
+|[(opérateur) \<=](#operator_lt__eq)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
 |[opérateur > =](#operator_gt__eq)|Compare la valeur relative de deux objets de descripteur de sécurité.|  
   
 ## <a name="remarks"></a>Notes  
@@ -111,7 +106,7 @@ class CSid
   
  Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [le contrôle d’accès](http://msdn.microsoft.com/library/windows/desktop/aa374860) dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
 ##  <a name="accountname"></a>  CSid::AccountName  
@@ -342,7 +337,7 @@ bool LoadAccount(
  Retourne **true** en cas de réussite, **false** en cas d’échec. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.  
   
 ### <a name="remarks"></a>Notes  
- `LoadAccount`tente de trouver un identificateur de sécurité pour le nom spécifié. Consultez [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) pour plus d’informations.  
+ `LoadAccount` tente de trouver un identificateur de sécurité pour le nom spécifié. Consultez [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) pour plus d’informations.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Opérateur d'assignation.  
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si les descripteurs de sécurité sont identiques, sinon **false**.  
   
-##  <a name="operator_neq"></a>  CSid::operator !=  
+##  <a name="operator_neq"></a>  CSid::operator ! =  
  Teste si deux objets de descripteur de sécurité d’inégalité.  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valeur de retour  
  **true** si `lhs` est supérieur ou égal à `rhs`, sinon **false**.  
   
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  Les SID const CSid::operator *  
  Les casts un `CSid` objet vers un pointeur vers un `SID` structure de (l’identificateur de sécurité).  
   
 ```  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Indique un `SID` pour un ordinateur.|  
   
 ### <a name="remarks"></a>Notes  
- Appelez [CSid::LoadAccount](#loadaccount) pour mettre à jour le `CSid` objet avant d’appeler `SidNameUse` pour renvoyer son état. `SidNameUse`ne modifie pas l’état de l’objet (en appelant **LookupAccountName** ou **LookupAccountSid**), mais renvoie uniquement l’état actuel.  
+ Appelez [CSid::LoadAccount](#loadaccount) pour mettre à jour le `CSid` objet avant d’appeler `SidNameUse` pour renvoyer son état. `SidNameUse` ne modifie pas l’état de l’objet (en appelant **LookupAccountName** ou **LookupAccountSid**), mais renvoie uniquement l’état actuel.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de sécurité](../../visual-cpp-samples.md)   

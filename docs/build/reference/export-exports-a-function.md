@@ -2,12 +2,9 @@
 title: -EXPORT (exporter une fonction) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporter une fonction)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Notes  
  Avec cette option, vous pouvez exporter une fonction à partir de votre programme afin que d’autres programmes peuvent appeler la fonction. Vous pouvez également exporter des données. Les exportations sont généralement définies dans une DLL.  
   
- Le *nom d’entrée* est le nom de l’élément de données ou de la fonction tel qu’il doit être utilisé par le programme appelant. `ordinal`Spécifie un index dans la table d’exportations compris entre 1 et 65 535 ; Si vous ne spécifiez pas `ordinal`, assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans une *nom d’entrée*.  
+ Le *nom d’entrée* est le nom de l’élément de données ou de la fonction tel qu’il doit être utilisé par le programme appelant. `ordinal` Spécifie un index dans la table d’exportations compris entre 1 et 65 535 ; Si vous ne spécifiez pas `ordinal`, assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans une *nom d’entrée*.  
   
  Le **données** mot clé indique que l’élément exporté est un élément de données. L’élément de données dans le programme client doit être déclaré à l’aide de **extern __declspec (dllimport)**.  
   

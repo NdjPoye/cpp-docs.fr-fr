@@ -2,12 +2,9 @@
 title: -Yc (créer le fichier d’en-tête précompilé) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
 - /yc
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Créer un fichier d’en-tête précompilé)
 Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui représente l’état de la compilation à un certain point.  
@@ -42,7 +37,7 @@ Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui
 ## <a name="syntax"></a>Syntaxe  
   
 > __/Yc__
-> __/Yc__*nom de fichier*  
+>  __/Yc__*nom de fichier*  
   
   
 ## <a name="arguments"></a>Arguments  
@@ -60,7 +55,7 @@ Indique au compilateur de créer un fichier d’en-tête précompilé (.pch) qui
   
  Pour plus d’informations sur les en-têtes précompilés, consultez :  
   
--   [/Y (en-têtes précompilés)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (En-têtes précompilés)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)  
   

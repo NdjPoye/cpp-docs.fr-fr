@@ -1,13 +1,10 @@
 ---
-title: "-U, -u (annuler la définition de symboles) | Documents Microsoft"
-ms.custom: 
+title: -U, -u (annuler la définition de symboles) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annuler la définition de symboles)
 Le **/U** option du compilateur annule la définition du symbole de préprocesseur spécifié. Le **/u** option du compilateur annule les symboles spécifiques à Microsoft que le compilateur définit.  
@@ -86,4 +81,4 @@ Le **/U** option du compilateur annule la définition du symbole de préprocesse
  [/J (caractère par défaut est de Type non signé)](../../build/reference/j-default-char-type-is-unsigned.md)   
  [/GR (activer les informations de Type au moment de l’exécution)](../../build/reference/gr-enable-run-time-type-information.md)   
  [/EH (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md)   
- [/ MD, / MT, /LD (utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md)
+ [/MD, /MT, /LD (Utiliser la bibliothèque Runtime)](../../build/reference/md-mt-ld-use-run-time-library.md)

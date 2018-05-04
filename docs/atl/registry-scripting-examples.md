@@ -1,13 +1,10 @@
 ---
 title: Exemples de scripts de Registre | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Exemples de scripts du Registre
 Les exemples de script dans cette rubrique montrent comment ajouter une clé au Registre du système, inscrire le serveur Registrar COM et spécifier plusieurs arborescences d’analyse.  
@@ -59,7 +54,7 @@ HKCU
   
  À présent, le script ajoute une sous-clé, `HasASubkey`à `MyVeryOwnKey`. Cette sous-clé, il ajoute les deux le `PrettyCool` sous-clé (avec une valeur par défaut `DWORD` valeur de 55) et la `ANameValue` nommé valeur (avec une valeur de chaîne `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Inscrire le serveur COM de bureau d’enregistrement  
+##  <a name="_atl_register_the_registrar_com_server"></a> Inscrire le serveur COM de bureau d’enregistrement  
  Le script suivant inscrit le serveur Registrar COM lui-même.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Ajoute `ATL Registrar Class` en tant que valeur de chaîne par défaut pour `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- L’arborescence d’analyse ajoute à présent deux nouvelles sous-clés à `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. La première clé `ProgID`, obtient une valeur de chaîne par défaut est le ProgID. La deuxième clé, `InprocServer32`, obtient une valeur de chaîne par défaut, `%MODULE%`, qui est la valeur du préprocesseur expliquée dans la section, [à l’aide des paramètres remplaçables (le préprocesseur de Registrar)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), de cet article. `InprocServer32`Obtient également une valeur nommée, `ThreadingModel`, avec une valeur de chaîne `Apartment`.  
+ L’arborescence d’analyse ajoute à présent deux nouvelles sous-clés à `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. La première clé `ProgID`, obtient une valeur de chaîne par défaut est le ProgID. La deuxième clé, `InprocServer32`, obtient une valeur de chaîne par défaut, `%MODULE%`, qui est la valeur du préprocesseur expliquée dans la section, [à l’aide des paramètres remplaçables (le préprocesseur de Registrar)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), de cet article. `InprocServer32` Obtient également une valeur nommée, `ThreadingModel`, avec une valeur de chaîne `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Spécifier plusieurs arborescences d’analyse  
  Pour spécifier plus d’une arborescence d’analyse dans un script, vous devez simplement placer une arborescence à la fin d’un autre. Par exemple, le script suivant ajoute la clé, `MyVeryOwnKey`, pour les arborescences d’analyse pour les deux `HKEY_CLASSES_ROOT` et `HKEY_CURRENT_USER`:  

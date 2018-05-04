@@ -1,30 +1,25 @@
 ---
-title: "Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++) | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++) | Documents Microsoft'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : Créer et utiliser votre propre bibliothèque de liens dynamiques (C++)
 
@@ -89,7 +84,7 @@ Dans cet ensemble de tâches, vous créez un projet pour votre DLL, ajoutez le c
 >
 >1. Dans la barre de menus, choisissez **Projet**, **Propriétés**.
 >
->1. Dans le volet gauche de la **Pages de propriétés** boîte de dialogue, sélectionnez **préprocesseur** sous **propriétés de Configuration**, **C/C++**. Vérifier le contenu de la **définitions de préprocesseur** propriété.<br/><br/>![Vérifiez la propriété de définitions de préprocesseur](media/mathlibrary-153bug-preprocessor-definitions-check.png "Vérifiez la propriété de définitions de préprocesseur")<br/><br/>Si vous voyez **MATHLIBRARY &#95; EXPORTATIONS** dans les **définitions de préprocesseur** liste, vous n’avez pas besoin de rien modifier. Si vous voyez **MathLibrary &#95; EXPORTATIONS** à la place, puis continuer à suivre ces étapes.
+>1. Dans le volet gauche de la **Pages de propriétés** boîte de dialogue, sélectionnez **préprocesseur** sous **propriétés de Configuration**, **C/C++**. Vérifier le contenu de la **définitions de préprocesseur** propriété.<br/><br/>![Vérifiez la propriété de définitions de préprocesseur](media/mathlibrary-153bug-preprocessor-definitions-check.png "Vérifiez la propriété de définitions de préprocesseur")<br/><br/>Si vous voyez **MATHLIBRARY&#95;exportations** dans les **définitions de préprocesseur** liste, vous n’avez pas besoin de rien modifier. Si vous voyez **MathLibrary&#95;exportations** à la place, puis continuer à suivre ces étapes.
 >
 >1. En haut de la **Pages de propriétés** boîte de dialogue Modifier le **Configuration** liste déroulante **toutes les Configurations**.
 >
@@ -176,9 +171,9 @@ Droit à présent, cette DLL ne fait pas grand-chose très. Ensuite, vous créez
 
 Ce fichier d’en-tête déclare certaines fonctions pour produire une séquence de Fibonacci généralisée, donnés deux valeurs initiales. Un appel à `fibonacci_init(1, 1)` génère la séquence de nombre de Fibonacci familier.
 
-Notez que les instructions de préprocesseur en haut du fichier. Par défaut, le modèle de projet pour une DLL ajoute  ***NOM_PROJET*&#95; EXPORTATIONS** pour les macros de préprocesseur définies pour le projet de DLL. Dans cet exemple, Visual Studio définit **MATHLIBRARY &#95; EXPORTATIONS** lorsque votre projet MathLibrary DLL est générée. (L’Assistant dans Visual Studio 2017 version 15.3 ne force pas cette définition de symbole en majuscules. Si vous nommez votre projet « MathLibrary », le symbole défini est MathLibrary &#95; EXPORTATIONS au lieu de MATHLIBRARY &#95; EXPORTE. That's Pourquoi existe-t-il des étapes supplémentaires ci-dessus pour ajouter ce symbole.)
+Notez que les instructions de préprocesseur en haut du fichier. Par défaut, le modèle de projet pour une DLL ajoute ***NomProjet *&#95;exportations** pour les macros de préprocesseur définies pour le projet de DLL. Dans cet exemple, Visual Studio définit **MATHLIBRARY&#95;exportations** lorsque votre projet MathLibrary DLL est générée. (L’Assistant dans Visual Studio 2017 version 15.3 ne force pas cette définition de symbole en majuscules. Si vous nommez votre projet « MathLibrary », le symbole défini est MathLibrary&#95;exportations au lieu de MATHLIBRARY&#95;exportations. That's Pourquoi existe-t-il des étapes supplémentaires ci-dessus pour ajouter ce symbole.)
 
-Lorsque le **MATHLIBRARY &#95; EXPORTATIONS** macro est définie, le **MATHLIBRARY &#95; API** macro définit le `__declspec(dllexport)` modificateur sur les déclarations de fonction. Ce modificateur indique au compilateur et l’éditeur de liens pour exporter une fonction ou une variable à partir de la DLL afin qu’il peut être utilisé par d’autres applications. Lorsque **MATHLIBRARY &#95; EXPORTATIONS** n’est pas défini, par exemple, lorsque le fichier d’en-tête est inclus dans une application cliente, **MATHLIBRARY &#95; API** s’applique le `__declspec(dllimport)` modificateur aux déclarations. Ce modificateur optimise l’importation de la fonction ou une variable dans une application. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Lorsque le **MATHLIBRARY&#95;exportations** macro est définie, le **MATHLIBRARY&#95;API** macro définit le `__declspec(dllexport)` modificateur sur les déclarations de fonction. Ce modificateur indique au compilateur et l’éditeur de liens pour exporter une fonction ou une variable à partir de la DLL afin qu’il peut être utilisé par d’autres applications. Lorsque **MATHLIBRARY&#95;exportations** n’est pas défini, par exemple, lorsque le fichier d’en-tête est inclus dans une application cliente, **MATHLIBRARY&#95;API** s’applique le `__declspec(dllimport)` modificateur à la déclarations. Ce modificateur optimise l’importation de la fonction ou une variable dans une application. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Pour ajouter une implémentation à la DLL
 

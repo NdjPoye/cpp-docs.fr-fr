@@ -1,12 +1,9 @@
 ---
-title: "Macros de Conversion de chaîne | Documents Microsoft"
-ms.custom: 
+title: Macros de Conversion de chaîne | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>Macros de Conversion de chaînes
 
 Ces macros fournissent des fonctionnalités de conversion de chaîne.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>Macros de Conversion de chaînes MFC et ATL
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macros de Conversion de chaînes MFC et ATL
 
 Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion de chaînes MFC, consultez [TN059 : à l’aide de Macros de Conversion MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) et [MFC Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE et Macros de Conversion de chaînes TEXTMETRIC
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE et Macros de Conversion de chaînes TEXTMETRIC
 
 Ces macros créent une copie d’un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) ou [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structurer et convertir les chaînes dans la nouvelle structure en un nouveau type de chaîne. Les macros allocation de mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.  
   
@@ -50,7 +45,7 @@ MACRONAME( address_of_structure )
   
 ### <a name="remarks"></a>Notes
 
-Exemple :  
+Par exemple :  
   
 [!code-cpp[NVC_ATL_Utilities#128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   

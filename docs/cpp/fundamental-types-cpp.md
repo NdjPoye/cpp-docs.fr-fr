@@ -1,12 +1,9 @@
 ---
 title: Types fondamentaux (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Types fondamentaux (C++)
 En C++, les types fondamentaux sont divisés en trois catégories : intégral, virgule flottante et void. Les types intégraux sont capables de gérer les nombres entiers. Les types virgule flottante peuvent spécifier des valeurs pouvant avoir des parties fractionnaires.  
@@ -85,9 +80,9 @@ En C++, les types fondamentaux sont divisés en trois catégories : intégral, v
 ||`bool`|Le type `bool` est un type intégral qui peut avoir l’une des deux valeurs `true` ou `false`. Sa taille n'est pas spécifiée.|  
 ||`short`|Le type `short` `int` (ou simplement `short`) est un type intégral supérieur ou égal à la taille du type `char`, et inférieur ou égal à la taille du type `int`.<br /><br /> Les objets de type `short` peuvent être déclarés comme étant `signed` `short` ou `unsigned short`. `Signed short` est un synonyme de `short`.|  
 ||`int`|Le type `int` est un type intégral supérieur ou égal à la taille du type `short` `int`, et inférieur ou égal à la taille du type `long`.<br /><br /> Les objets de type `int` peuvent être déclarés comme étant `signed` `int` ou `unsigned` `int`. `Signed` `int` est un synonyme de `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Entier dimensionné `__int n`, où `n` est la taille, en bits, de la variable entière. `__int8`, `__int16`, `__int32` et `__int64` sont des mots clés spécifiques à Microsoft. Tous les types ne sont disponibles sur toutes les architectures. `(__int128`est pas pris en charge.)|  
+||`__int8`, `__int16`, `__int32`, `__int64`|Entier dimensionné `__int n`, où `n` est la taille, en bits, de la variable entière. `__int8`, `__int16`, `__int32` et `__int64` sont des mots clés spécifiques à Microsoft. Tous les types ne sont disponibles sur toutes les architectures. `(__int128` est pas pris en charge.)|  
 ||`long`|Le type `long` (ou `long` `int`) est un type intégral supérieur ou égal à la taille du type `int`.<br /><br /> Les objets de type `long` peuvent être déclarés comme étant `signed` `long` ou `unsigned` `long`. `Signed` `long` est un synonyme de `long`.|  
-||`long` `long`|Plus grand qu’un `long`non signé.<br /><br /> Les objets de type `long long` peuvent être déclarés comme étant `signed` `long long` ou `unsigned` `long long`. `signed``long long` est un synonyme de `long long`.|  
+||`long` `long`|Plus grand qu’un `long`non signé.<br /><br /> Les objets de type `long long` peuvent être déclarés comme étant `signed` `long long` ou `unsigned` `long long`. `signed` `long long` est un synonyme de `long long`.|  
 ||`wchar_t`, `__wchar_t`|Une variable de type `wchar_t` désigne un type caractères larges ou caractères multioctets. Par défaut, `wchar_t` est un type natif, mais vous pouvez utiliser [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour faire de `wchar_t` un typedef pour `unsigned short`. Le type `__wchar_t` est un synonyme spécifique à Microsoft pour le type natif `wchar_t` .<br /><br /> Utilisez le préfixe L avant un caractère ou un littéral de chaîne pour désigner le type caractère large.|  
 |Virgule flottante|`float`|Le type `float` est le plus petit type virgule flottante.|  
 ||`double`|Le type `double` est un type virgule flottante supérieur ou égal au type `float`, mais inférieur ou égal à la taille du type `long` `double`.<br /><br /> Spécifique à Microsoft : la représentation de `long double` et `double` est identique. Toutefois, `long double` et `double` sont des types distincts.|  

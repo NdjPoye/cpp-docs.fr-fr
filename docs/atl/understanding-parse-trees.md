@@ -2,28 +2,23 @@
 title: ATL (inscription) et les arborescences d’analyse | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb5b132e5e55ab5336254acaf4d2d3ae25440697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-parse-trees"></a>Présentation des arborescences d’analyse
 Vous pouvez définir une ou plusieurs arborescences d’analyse dans votre script registrar où chaque arborescence d’analyse a la forme suivante :  
@@ -52,7 +47,7 @@ Vous pouvez définir une ou plusieurs arborescences d’analyse dans votre scrip
 ```  
   
 > [!NOTE]
-> `HKEY_CLASSES_ROOT`et `HKCR` sont équivalentes ; `HKEY_CURRENT_USER` et `HKCU` sont équivalents ; et ainsi de suite.  
+> `HKEY_CLASSES_ROOT` et `HKCR` sont équivalentes ; `HKEY_CURRENT_USER` et `HKCU` sont équivalents ; et ainsi de suite.  
   
  Une arborescence d’analyse peut ajouter plusieurs clés et des sous-clés pour la \<clé racine >. Ce faisant, il conserve un handle de sous-clé ouvert jusqu'à ce que l’analyseur a terminé l’analyse de toutes ses sous-clés. Cette approche est plus efficace que le traitement d’une clé unique à la fois, comme illustré dans l’exemple suivant :  
   

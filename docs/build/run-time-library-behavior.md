@@ -2,12 +2,9 @@
 title: DLL et le comportement de la bibliothèque d’exécution Visual C++ | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLL et le comportement de la bibliothèque d’exécution Visual C++  
   
-Lorsque vous générez une bibliothèque de liens dynamiques (DLL) à l’aide de Visual C++, par défaut, l’éditeur de liens inclut la bibliothèque d’exécution Visual C++ (VCRuntime). VCRuntime contient le code requis pour l’initialisation et de fin d’un fichier exécutable C/C++. Quand liées dans une DLL, le code VCRuntime fournit une fonction de point d’entrée DLL interne appelée `_DllMainCRTStartup` qui gère les messages de système d’exploitation Windows à la DLL à attacher ou détacher un processus ou thread. Le `_DllMainCRTStartup` fonction effectue les tâches essentielles, telles que la sécurité de mémoire tampon de pile configuré, l’initialisation de C Runtime library (CRT) et l’arrêt et appelle à des constructeurs et les destructeurs des objets statiques et globales. `_DllMainCRTStartup`appelle de raccordement également des fonctions pour les autres bibliothèques telles que WinRT, MFC et ATL pour effectuer leurs propres l’initialisation et l’arrêt. Sans cette initialisation, la bibliothèque CRT et autres bibliothèques, ainsi que des variables statiques, serait un état non initialisé. Les routines de fin et le même initialisation interne VCRuntime sont appelées si votre DLL utilise un CRT lié de manière statique ou une DLL de bibliothèque CRT liée dynamiquement.  
+Lorsque vous générez une bibliothèque de liens dynamiques (DLL) à l’aide de Visual C++, par défaut, l’éditeur de liens inclut la bibliothèque d’exécution Visual C++ (VCRuntime). VCRuntime contient le code requis pour l’initialisation et de fin d’un fichier exécutable C/C++. Quand liées dans une DLL, le code VCRuntime fournit une fonction de point d’entrée DLL interne appelée `_DllMainCRTStartup` qui gère les messages de système d’exploitation Windows à la DLL à attacher ou détacher un processus ou thread. Le `_DllMainCRTStartup` fonction effectue les tâches essentielles, telles que la sécurité de mémoire tampon de pile configuré, l’initialisation de C Runtime library (CRT) et l’arrêt et appelle à des constructeurs et les destructeurs des objets statiques et globales. `_DllMainCRTStartup` appelle de raccordement également des fonctions pour les autres bibliothèques telles que WinRT, MFC et ATL pour effectuer leurs propres l’initialisation et l’arrêt. Sans cette initialisation, la bibliothèque CRT et autres bibliothèques, ainsi que des variables statiques, serait un état non initialisé. Les routines de fin et le même initialisation interne VCRuntime sont appelées si votre DLL utilise un CRT lié de manière statique ou une DLL de bibliothèque CRT liée dynamiquement.  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Par défaut _DllMainCRTStartup de point d’entrée DLL  
   

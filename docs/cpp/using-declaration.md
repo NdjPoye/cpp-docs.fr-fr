@@ -2,11 +2,8 @@
 title: à l’aide de la déclaration | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - using keyword [C++]
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-declaration"></a>déclaration using
 La déclaration using introduit un nom dans la région déclarative dans laquelle la déclaration using s’affiche.  
@@ -228,7 +223,7 @@ void g() {
  Dans l’exemple ci-dessus, le `using B::i` instruction provoque une seconde `int i` à être déclarés dans le `g()` (fonction). Le `using B::f` instruction n’est pas en conflit avec le `f(char)` de fonction, car les noms de fonctions introduites par `B::f` ont des types de paramètres différents.  
   
 ## <a name="example"></a>Exemple  
- Une déclaration de fonction locale ne peut pas avoir le même nom et le type en tant que fonction introduite à l’aide de déclaration. Exemple :  
+ Une déclaration de fonction locale ne peut pas avoir le même nom et le type en tant que fonction introduite à l’aide de déclaration. Par exemple :  
   
 ```cpp  
 // functions_in_namespaces2.cpp  

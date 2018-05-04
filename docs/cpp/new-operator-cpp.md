@@ -1,29 +1,24 @@
 ---
-title: "Opérateur new (C++) | Documents Microsoft"
-ms.custom: 
+title: Opérateur new (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 Alloue de la mémoire pour un objet ou un tableau d’objets de *type-name* du magasin gratuit et retourne un pointeur différent de zéro, correctement typé vers l’objet.  
@@ -73,7 +68,7 @@ delete *p;
   
  La liste suivante décrit les éléments de la grammaire de **nouveau**:  
   
- *placement*  
+ *sélection élective*  
  Offre un moyen de passer des arguments supplémentaires si vous surchargez **nouveau**.  
   
  *type-name*  
@@ -127,7 +122,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemple  
- Si vous utilisez la nouvelle forme positionnement de la **nouveau** (opérateur), la forme avec arguments en plus de la taille d’allocation, le compilateur ne prend pas en charge une forme positionnement de le **supprimer** opérateur si les constructeur lève une exception. Exemple :  
+ Si vous utilisez la nouvelle forme positionnement de la **nouveau** (opérateur), la forme avec arguments en plus de la taille d’allocation, le compilateur ne prend pas en charge une forme positionnement de le **supprimer** opérateur si les constructeur lève une exception. Par exemple :  
   
 ```  
 // expre_new_Operator2.cpp  
@@ -201,7 +196,7 @@ int main()
  Comme avec les appels de fonction, l'ordre dans lequel les expressions initialisées sont évaluées n'est pas défini. En outre, vous ne devez pas vous attendre à ce que ces expressions soient complètement évaluées avant que l'allocation de mémoire soit exécutée. Si l’allocation de mémoire échoue et le **nouveau** opérateur retourne la valeur zéro, certaines expressions dans l’initialiseur ne peuvent pas être évaluées complètement.  
   
 ## <a name="lifetime-of-objects-allocated-with-new"></a>Durée de vie des objets alloués avec new  
- Les objets alloués avec le **nouveau** opérateur ne sont pas détruits lorsque vous quittez la portée dans laquelle ils sont définis. Étant donné que la **nouveau** opérateur retourne un pointeur vers les objets qu’il alloue, le programme doit définir un pointeur avec une portée appropriée pour accéder à ces objets. Exemple :  
+ Les objets alloués avec le **nouveau** opérateur ne sont pas détruits lorsque vous quittez la portée dans laquelle ils sont définis. Étant donné que la **nouveau** opérateur retourne un pointeur vers les objets qu’il alloue, le programme doit définir un pointeur avec une portée appropriée pour accéder à ces objets. Par exemple :  
   
 ```  
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  

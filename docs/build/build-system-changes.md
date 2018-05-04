@@ -2,12 +2,9 @@
 title: Modifications du système de génération | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>Modifications du système de génération
 Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefois, dans Visual Studio 2008 et versions antérieures, le système de VCBuild a été utilisé. Certains types de fichiers et les concepts qui dépendaient de VCBuild n’existent pas ou sont représentés différemment dans le système actuel. Ce document explique les différences dans le système de génération en cours.  
@@ -65,10 +60,10 @@ Le système MSBuild est utilisé pour générer des projets Visual C++. Toutefoi
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>.vcxproj.user Files  
+## <a name="vcxprojuser-files"></a>. vcxproj.user fichiers  
  Un fichier utilisateur (. vcxproj.user) stocke des propriétés spécifiques à l’utilisateur pour les paramètres de l’exemple, de débogage et de déploiement. Le fichier vcxproj.user s’applique à tous les projets pour un utilisateur particulier.  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters fichier  
  Lorsque **l’Explorateur de solutions** est utilisée pour ajouter un fichier à un projet, le fichier de filtres (. vcxproj.filters) définit où, dans le **l’Explorateur de solutions** arborescence le fichier est ajouté, en fonction de son extension de nom de fichier.  
   
 ## <a name="vc-directories-settings"></a>Paramètres de répertoires VC ++  

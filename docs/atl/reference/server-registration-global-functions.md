@@ -1,12 +1,9 @@
 ---
-title: "Fonctions globales de serveur d’inscription | Documents Microsoft"
-ms.custom: 
+title: Fonctions globales de serveur d’inscription | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales de l’inscription de serveur
 Ces fonctions fournissent la prise en charge pour l’inscription et la désinscription des objets serveur dans la table des objets.  
@@ -46,7 +41,7 @@ Ces fonctions fournissent la prise en charge pour l’inscription et la désinsc
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Cette fonction est appelée pour inscrire chaque objet du mappage d'objets.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `AtlComModuleRegisterServer`présente le mappage d’objets ATL générées automatiquement et inscrit chaque objet dans le mappage. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est inscrite ; sinon, tous les objets sont enregistrés.  
+ `AtlComModuleRegisterServer` présente le mappage d’objets ATL générées automatiquement et inscrit chaque objet dans le mappage. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est inscrite ; sinon, tous les objets sont enregistrés.  
   
  Cette fonction est appelée par [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Cette fonction est appelée pour annuler l'inscription de chaque objet du mappage d'objets.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
 ### <a name="remarks"></a>Notes  
- `AtlComModuleUnregisterServer`présente le mappage d’objets ATL et annule l’inscription de chaque objet de la carte. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est désinscrite ; sinon tous les objets sont annulées.  
+ `AtlComModuleUnregisterServer` présente le mappage d’objets ATL et annule l’inscription de chaque objet de la carte. Si `pCLSID` n’est pas NULL, alors seulement l’objet référencé par `pCLSID` est désinscrite ; sinon tous les objets sont annulées.  
   
  Cette fonction est appelée par [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Cette fonction est appelée pour inscrire des objets de classe.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsolète dans ATL 7.0) et [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Cette fonction est appelée pour supprimer la ou les fabriques de classes de la table des objets en cours d'exécution (ROT).  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Notes  
  Cette fonction d’assistance utilisée par [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsolète dans ATL 7.0) et [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Cette fonction est appelée pour retourner la fabrique de classe.  
   
 ```

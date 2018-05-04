@@ -1,13 +1,10 @@
 ---
-title: "Exportation de fonctions C++ à utiliser dans des exécutables en langage C | Documents Microsoft"
-ms.custom: 
+title: Exportation de fonctions C++ à utiliser dans des exécutables en langage C | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf5f348675752ff9c0b548693c442812fa6be697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportation de fonctions C++ à utiliser dans des exécutables en langage C  
   
 Si vous avez des fonctions dans une DLL écrite en C++, que vous souhaitez accéder à partir d’un module en langage C, vous devez déclarer ces fonctions avec liaison C au lieu d’une liaison C++. Sauf indication contraire, le compilateur C++ utilise C++ d’affectation de noms (également appelé décoration de nom) de type sécurisé et C++, conventions d’appel, ce qui peuvent être difficiles de les appeler à partir de C.  
   
-Pour spécifier une liaison C, spécifiez `extern "C"` pour les déclarations de fonction. Exemple :  
+Pour spécifier une liaison C, spécifiez `extern "C"` pour les déclarations de fonction. Par exemple :  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  

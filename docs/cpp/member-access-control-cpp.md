@@ -2,11 +2,8 @@
 title: Contrôle d’accès aux membres (C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 Des contrôles d’accès permettent de séparer la [public](../cpp/public-cpp.md) interface d’une classe à partir de la [privé](../cpp/private-cpp.md) détails d’implémentation et la [protégé](../cpp/protected-cpp.md) membres qui sont uniquement pour les utilisent en classes dérivées. Le spécificateur d'accès s'applique à tous les membres déclarés après lui jusqu'à ce que le spécificateur d'accès suivant soit rencontré.  
@@ -190,7 +185,7 @@ int Derived2::ShowCount()
  Les membres et les amis d'une classe dérivée, `T`, peuvent convertir un pointeur vers `T` en pointeur vers une classe de base directe privée de `T`.  
   
 ## <a name="access-to-virtual-functions"></a>Accès aux fonctions virtuelles  
- Le contrôle d’accès appliquée à [virtuels](../cpp/virtual-cpp.md) fonctions est déterminé par le type utilisé pour appeler la fonction. La substitution des déclarations de fonction n'affectent pas le contrôle d'accès pour un type donné. Exemple :  
+ Le contrôle d’accès appliquée à [virtuels](../cpp/virtual-cpp.md) fonctions est déterminé par le type utilisé pour appeler la fonction. La substitution des déclarations de fonction n'affectent pas le contrôle d'accès pour un type donné. Par exemple :  
   
 ```  
 // access_to_virtual_functions.cpp  

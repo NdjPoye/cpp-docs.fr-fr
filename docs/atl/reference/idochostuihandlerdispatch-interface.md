@@ -2,11 +2,8 @@
 title: Interface de IDocHostUIHandlerDispatch | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbd91deb1d80c49dd403e8e08cc50f5fd8c8ec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interface de IDocHostUIHandlerDispatch
 Interface utilisée pour l’analyse Microsoft HTML et de moteur de rendu.  
@@ -45,7 +40,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 > [!NOTE]
->  Les liens dans le tableau suivant sont INet SDK rubriques de référence pour les membres de la [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interface. `IDocHostUIHandlerDispatch`a les mêmes fonctionnalités que **IDocUIHostHandler**, la différence étant que `IDocHostUIHandlerDispatch` est une dispinterface alors que **IDocUIHostHandler** est une interface personnalisée.  
+>  Les liens dans le tableau suivant sont INet SDK rubriques de référence pour les membres de la [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interface. `IDocHostUIHandlerDispatch` a les mêmes fonctionnalités que **IDocUIHostHandler**, la différence étant que `IDocHostUIHandlerDispatch` est une dispinterface alors que **IDocUIHostHandler** est une interface personnalisée.  
   
 |||  
 |-|-|  
@@ -68,7 +63,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ## <a name="remarks"></a>Notes  
  Un hôte peut remplacer les menus, barres d’outils et les menus contextuels utilisés par le moteur de rendu (MSHTML) et de l’analyse Microsoft HTML en implémentant cette interface.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  La définition de cette interface est disponible en tant que fichier IDL ou C++, comme indiqué ci-dessous.  
   
 |Type de définition|Fichier|  

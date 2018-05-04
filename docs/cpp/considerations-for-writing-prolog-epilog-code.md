@@ -1,12 +1,9 @@
 ---
-title: "Considérations sur l’écriture de Code d’épilogue de prologue | Documents Microsoft"
-ms.custom: 
+title: Considérations sur l’écriture de Code d’épilogue de prologue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9578e106c536f14059be95724ac1c2c9af92f3cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considérations sur l'écriture de code de prologue/épilogue
 ## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
  Avant d'écrire vos propres séquences de code de prologue et d'épilogue, il importe de comprendre comment le frame de pile est disposé. Il est également utile de savoir comment utiliser le **__LOCAL_SIZE** symbole.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a>Disposition du Frame de pile  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Disposition du Frame de pile  
  Cet exemple montre le code de prologue standard qui peut apparaître dans une fonction 32 bits :  
   
 ```  
@@ -54,10 +49,10 @@ ret                       ; Return from function
   
  La pile se réduit toujours (des adresses de mémoire supérieures aux adresses de mémoire inférieures). Le pointeur de base (`ebp`) pointe vers la valeur de `ebp` qui fait l'objet d'un push. La zone Variables locales commence à `ebp-4`. Pour accéder aux variables locales, calculez un décalage à partir de `ebp` en soustrayant la valeur appropriée de `ebp`.  
   
-##  <a name="_pluslang___local_size"></a>__LOCAL_SIZE  
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
  Le compilateur fournit un symbole, **__LOCAL_SIZE**, pour une utilisation dans le bloc assembleur inline de code de prologue de fonction. Ce symbole est utilisé pour allouer de l'espace pour les variables locales sur le frame de pile dans le code de prologue personnalisé.  
   
- Le compilateur détermine la valeur de **__LOCAL_SIZE**. Sa valeur représente le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de ce symbole. Exemple :  
+ Le compilateur détermine la valeur de **__LOCAL_SIZE**. Sa valeur représente le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de ce symbole. Par exemple :  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  

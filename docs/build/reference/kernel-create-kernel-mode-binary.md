@@ -1,30 +1,25 @@
 ---
-title: "-noyau (créer Kernel Mode binaire) | Documents Microsoft"
-ms.custom: 
+title: -noyau (créer Kernel Mode binaire) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Créer un fichier binaire pour le mode noyau)
 Crée un fichier binaire qui peut être exécuté dans le noyau Windows.  
@@ -36,7 +31,7 @@ Crée un fichier binaire qui peut être exécuté dans le noyau Windows.
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **/Kernel**  
+ **/kernel**  
  Le code dans le projet actuel est compilé et lié à l’aide d’un ensemble de règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.  
   
  **/Kernel-**  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Certaines combinaisons suivantes de l’architecture cible et le **/arch** option génère une erreur lorsqu’elles sont utilisées avec **/kernel**:  
   
--   **/ arch : {SSE &#124; SSE2 &#124; AVX}** ne sont pas pris en charge sur x86. Uniquement **/arch:IA32** est pris en charge avec **/kernel** sur x86.  
+-   **/ arch : {SSE&#124;SSE2&#124;AVX}** ne sont pas pris en charge sur x86. Uniquement **/arch:IA32** est pris en charge avec **/kernel** sur x86.  
   
 -   **/ arch : AVX** n’est pas pris en charge avec **/kernel** sur x64.  
   
@@ -91,7 +86,7 @@ class NONPAGESECTION MyNonPagedClass
     ||**/Kernel** obj|**/Kernel-** obj, MASM obj, ou cvtresed|Un mélange de **/kernel** et **/kernel-** objs|  
     |-|----------------------|-----------------------------------------------|-------------------------------------------------|  
     |**lien /kernel**|Oui|Oui|Oui avec avertissement LNK4257|  
-    |**lien**|Oui|Oui|Oui|  
+    |**Lien**|Oui|Oui|Oui|  
   
      **Objet de liaison de LNK4257 ne pas compilé avec /KERNEL ; image ne peut pas s’exécuter**  
   

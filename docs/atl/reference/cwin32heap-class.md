@@ -2,11 +2,8 @@
 title: Classe de CWin32Heap | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWin32Heap
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwin32heap-class"></a>Classe de CWin32Heap
 Cette classe implémente [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) à l’aide des fonctions d’allocation du tas Win32.  
@@ -77,7 +72,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Handle vers l’objet de tas.|  
   
 ## <a name="remarks"></a>Notes  
- `CWin32Heap`implémente les méthodes d’allocation de mémoire à l’aide des fonctions d’allocation de tas Win32, y compris [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) et [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Contrairement aux autres classes de segment de mémoire, `CWin32Heap` requiert un handle de tas valide doit être fourni avant que la mémoire est allouée : l’autres classes valeur par défaut à l’aide du tas du processus. Le handle peut être fourni au constructeur ou à la [CWin32Heap::Attach](#attach) (méthode). Consultez le [CWin32Heap::CWin32Heap](#cwin32heap) méthode pour plus de détails.  
+ `CWin32Heap` implémente les méthodes d’allocation de mémoire à l’aide des fonctions d’allocation de tas Win32, y compris [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) et [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Contrairement aux autres classes de segment de mémoire, `CWin32Heap` requiert un handle de tas valide doit être fourni avant que la mémoire est allouée : l’autres classes valeur par défaut à l’aide du tas du processus. Le handle peut être fourni au constructeur ou à la [CWin32Heap::Attach](#attach) (méthode). Consultez le [CWin32Heap::CWin32Heap](#cwin32heap) méthode pour plus de détails.  
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -87,10 +82,10 @@ class CWin32Heap : public IAtlMemMgr
   
  `CWin32Heap`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlmem.h  
   
-##  <a name="allocate"></a>CWin32Heap::Allocate  
+##  <a name="allocate"></a>  CWin32Heap::Allocate  
  Alloue un bloc de mémoire à partir de l'objet de tas.  
   
 ```
@@ -109,7 +104,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implémentation à l’aide [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
-##  <a name="attach"></a>CWin32Heap::Attach  
+##  <a name="attach"></a>  CWin32Heap::Attach  
  Attache l’objet de segment de mémoire à un tas existant.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>Notes  
  Si `bTakeOwnership` a la valeur TRUE, le `CWin32Heap` objet est chargé de supprimer le handle de tas.  
   
-##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  Constructeur.  
   
 ```
@@ -168,7 +163,7 @@ CWin32Heap(
   
  Le troisième paramètre est 0 par défaut, ce qui permet au tas de s'accroître en fonction des besoins. Consultez [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) pour une explication de la taille de la mémoire et les indicateurs.  
   
-##  <a name="dtor"></a>CWin32Heap :: ~ CWin32Heap  
+##  <a name="dtor"></a>  CWin32Heap :: ~ CWin32Heap  
  Destructeur.  
   
 ```
@@ -178,7 +173,7 @@ CWin32Heap(
 ### <a name="remarks"></a>Notes  
  Détruit le handle de tas si la `CWin32Heap` objet est le propriétaire du segment de mémoire.  
   
-##  <a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>  CWin32Heap::Detach  
  Détache l’objet de segment de mémoire à partir d’un tas existant.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le handle vers le segment de mémoire à laquelle l’objet a été précédemment attaché.  
   
-##  <a name="free"></a>CWin32Heap::Free  
+##  <a name="free"></a>  CWin32Heap::Free  
  Libère la mémoire précédemment allouée à partir du tas par [CWin32Heap::Allocate](#allocate) ou [CWin32Heap::Reallocate](#reallocate).  
   
 ```
@@ -199,7 +194,7 @@ virtual void Free(void* p) throw();
  `p`  
  Pointeur vers le bloc de mémoire à libérer. NULL est une valeur valide et ne fait rien.  
   
-##  <a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>  CWin32Heap::GetSize  
  Retourne la taille d’un bloc de mémoire allouée à partir de l’objet de tas.  
   
 ```
@@ -213,14 +208,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la taille, en octets, du bloc de mémoire alloué.  
   
-##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
  Indicateur utilisé pour déterminer le propriétaire actuel du handle de tas stocké dans [m_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap  
  Handle vers l’objet de tas.  
   
 ```
@@ -230,7 +225,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>Notes  
  Une variable est utilisée pour stocker un handle vers l’objet de segment de mémoire.  
   
-##  <a name="reallocate"></a>CWin32Heap::Reallocate  
+##  <a name="reallocate"></a>  CWin32Heap::Reallocate  
  Réalloue un bloc de mémoire à partir de l'objet de tas.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Expressions suffixées | Documents Microsoft"
-ms.custom: 
+title: Expressions suffixées | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 Les expressions suffixées se composent d'expressions primaires ou d'expressions dans lesquelles les opérateurs suffixés suivent une expression primaire. Les opérateurs suffixés sont répertoriées dans le tableau suivant.  
@@ -37,7 +32,7 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 |[Opérateur d’indice](../cpp/subscript-operator.md)|**[ ]**|  
 |[Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **)**|  
-|[Opérateur d’accès aux membres](../cpp/member-access-operators-dot-and.md)|**.** ou**->**|  
+|[Opérateur d’accès aux membres](../cpp/member-access-operators-dot-and.md)|**.** Ou **->**|  
 |[Opérateur d’Incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
 |[Opérateur de décrémentation suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   

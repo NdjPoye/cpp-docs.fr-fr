@@ -2,11 +2,8 @@
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcstok_s_l
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be62937a5c687c93f0280a8f3ca9d8acc955567
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -156,7 +151,7 @@ Le premier appel à **strtok_s** ignore les délimiteurs de début de la fonctio
 
 Étant donné que la *contexte* paramètre remplace les tampons statiques utilisés dans **strtok** et **_strtok_l**, il est possible d’analyser les deux chaînes simultanément dans le même thread.
 
-La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sans le **_l** suffixe utilisent les paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place la *paramètres régionaux* paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **_l** suffixe utilisent les paramètres régionaux du thread actuel pour ce comportement dépendant des paramètres régionaux. Les versions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent à la place la *paramètres régionaux* paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Spécifications
 

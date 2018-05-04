@@ -1,13 +1,10 @@
 ---
-title: "@ (Spécifier un fichier de réponse de l’éditeur de liens) | Documents Microsoft"
-ms.custom: 
+title: '@ (Spécifier un fichier de réponse de l’éditeur de liens) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '@'
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d384bc3cf657b7e81ea116dd317370ee1ea17cc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f182abcb26561bd07d62581b3beb9c0d3497ddb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Spécifier un fichier réponse de l'Éditeur de liens)
 ```  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Notes  
- où :  
+ où :  
   
  `response_file`  
  Un fichier texte spécifiant des commandes de l’éditeur de liens.  

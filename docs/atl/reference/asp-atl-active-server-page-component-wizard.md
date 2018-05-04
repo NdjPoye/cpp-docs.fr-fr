@@ -1,12 +1,9 @@
 ---
 title: ASP, Assistant composant ASP ATL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.asp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe27a64a2086f08c5a29e2961d069771fdbc4e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Assistant Composant ASP ATL
 Utilisez cette page de l’Assistant composant Active Server Page ATL pour spécifier des paramètres facultatifs pour la gestion des informations et l’état associé à votre composant ASP.  
@@ -40,7 +35,7 @@ Utilisez cette page de l’Assistant composant Active Server Page ATL pour spéc
   
 |Option|Description|  
 |------------|-----------------|  
-|**Demande**|Fournit l’accès à l’intrinsèque Active Server Pages **demande** objet. L’objet de demande est utilisé pour passer d’une requête HTTP.|  
+|**Requête**|Fournit l’accès à l’intrinsèque Active Server Pages **demande** objet. L’objet de demande est utilisé pour passer d’une requête HTTP.|  
 |**Réponse**|Fournit l’accès à l’intrinsèque Active Server Pages **réponse** objet. En réponse à une demande, l’objet Response envoie des informations au navigateur pour afficher à l’utilisateur.|  
 |**Session**|Fournit l’accès à l’intrinsèque Active Server Pages **Session** objet. Le **Session** objet conserve les informations sur la session utilisateur en cours, y compris le stockage et la récupération des informations d’état.|  
 |**Application**|Fournit l’accès à l’intrinsèque Active Server Pages **Application** objet. Le **Application** objet gère l’état partagé entre plusieurs objets ASP.|  

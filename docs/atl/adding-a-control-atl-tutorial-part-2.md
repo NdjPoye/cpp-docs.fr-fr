@@ -1,27 +1,22 @@
 ---
 title: Ajout d’un contrôle (ATL didacticiel, partie 2) | Documents Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Ajout d'un contrôle (Didacticiel ATL, Partie 2)
 Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et tester sur une page Web.  
@@ -50,7 +45,7 @@ Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et te
 |**Classe**|Le nom de classe C++ créé pour implémenter le contrôle.|  
 |**fichier .h**|Le fichier est créé pour contenir la définition de la classe C++.|  
 |**fichier .cpp**|Le fichier est créé pour contenir l’implémentation de la classe C++.|  
-|**CoClass**|Le nom de la classe de composant pour ce contrôle.|  
+|**Coclasse**|Le nom de la classe de composant pour ce contrôle.|  
 |**Interface**|Le nom de l’interface sur laquelle le contrôle implémentera ses méthodes et propriétés personnalisées.|  
 |**Type**|Description pour le contrôle.|  
 |**ProgID**|Nom lisible qui peut être utilisé pour rechercher le CLSID du contrôle.|  
@@ -116,5 +111,5 @@ Dans cette étape, vous ajoutez un contrôle à votre projet, générez-le et te
  [À l’étape 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [à l’étape 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tutorial](../atl/active-template-library-atl-tutorial.md)
+ [Didacticiel](../atl/active-template-library-atl-tutorial.md)
 
