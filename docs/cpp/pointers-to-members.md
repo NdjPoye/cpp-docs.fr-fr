@@ -1,12 +1,9 @@
 ---
 title: Pointeurs vers des membres | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :  
@@ -53,7 +48,7 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
   
     -   Opérateur ::.  
   
-    -   Le  **\***  opérateur.  
+    -   Le **\*** opérateur.  
   
     -   Facultatif **const** et/ou `volatile` spécificateurs.  
   
@@ -61,9 +56,9 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
   
     -   Initialiseur facultatif :  
   
- Le  **=**  opérateur.  
+ Le **=** opérateur.  
   
- Le  **&**  opérateur.  
+ Le **&** opérateur.  
   
  Nom qualifié de la classe.  
   
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La différence entre la **.\***  et  **-> \***  opérateurs (les opérateurs de pointeur vers membre) est que le **.\***  opérateur sélectionne des membres étant donné un objet ou une référence d’objet, alors que le  **-> \***  opérateur sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ La différence entre la **.\***  et **-> \*** opérateurs (les opérateurs de pointeur vers membre) est que le **.\***  opérateur sélectionne des membres étant donné un objet ou une référence d’objet, alors que le **-> \*** opérateur sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Le résultat des opérateurs pointeur vers membre est le type du membre : dans ce cas, **char \*** .  
   

@@ -1,12 +1,9 @@
 ---
 title: Structure de _AtlCreateWndData | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::_AtlCreateWndData
@@ -18,19 +15,17 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc663429cc7cc1fe8ff6fc917f3150d621f9f75
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc8bf88ce5258dc36a06f32ebaa5e2cdf15092fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
+# <a name="atlcreatewnddata-structure"></a>Structure de _AtlCreateWndData
 Cette structure contient les données d’instance de classe dans le code de fenêtrage dans ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -53,7 +48,7 @@ Cette structure contient les données d’instance de classe dans le code de fen
  **m_pNext**  
  Pointeur vers la prochaine `_AtlCreateWndData` objet.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
 ## <a name="see-also"></a>Voir aussi  

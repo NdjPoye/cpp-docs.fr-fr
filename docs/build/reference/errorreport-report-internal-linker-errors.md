@@ -1,13 +1,10 @@
 ---
-title: "-/ERRORREPORT (signaler les erreurs internes de l’éditeur de liens) | Documents Microsoft"
-ms.custom: 
+title: -/ERRORREPORT (signaler les erreurs internes de l’éditeur de liens) | Documents Microsoft
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 
@@ -68,6 +63,6 @@ L’option **/errorreport : send** envoie automatiquement les informations d’
 
 ## <a name="see-also"></a>Voir aussi
 
-[/errorReport (signaler les erreurs du compilateur interne)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
+[/errorReport (Signaler les erreurs internes du compilateur)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
 [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)  
 [Options de l’éditeur de liens](../../build/reference/linker-options.md)  

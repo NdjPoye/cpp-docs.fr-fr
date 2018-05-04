@@ -2,12 +2,9 @@
 title: À l’aide de la base de données, OLE et Sockets MFC DLL d’extension dans la DLL régulière MFC | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>À l’aide de la base de données, OLE et Sockets MFC DLL d’extension dans la DLL régulière MFC
 Lors de l’utilisation d’une DLL à partir d’une DLL régulière MFC d’extension MFC si l’extension MFC DLL n’est pas raccordée à la **CDynLinkLibrary** chaîne de l’objet de la DLL régulière MFC, vous pouvez rencontrer un ou plusieurs des problèmes connexes. Étant donné que les versions debug de la base de données MFC, OLE et Sockets prennent en charge DLL sont implémentés en tant que DLL d’extension MFC, vous pouvez voir des problèmes similaires si vous utilisez ces MFC fonctionnalités, même si vous n’utilisez pas explicitement l’une de vos propres DLL d’extension MFC. Certains problèmes sont :  
@@ -38,7 +33,7 @@ Lors de l’utilisation d’une DLL à partir d’une DLL régulière MFC d’ex
   
 -   `DllGetClassObject`, `DllCanUnloadNow`et le `UpdateRegistry`, `Revoke`, `RevokeAll`, et `RegisterAll` les fonctions membres de `COleObjectFactory` ne parviennent pas à trouver une fabrique de classe définie dans la DLL d’extension MFC.  
   
--   `AfxDoForAllClasses`ne fonctionne pas pour les classes dans la DLL d’extension MFC.  
+-   `AfxDoForAllClasses` ne fonctionne pas pour les classes dans la DLL d’extension MFC.  
   
 -   Base de données MFC standard, les sockets ou les ressources OLE échouent du chargement. Par exemple, **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) retourne une chaîne vide, même quand la DLL régulière MFC utilise correctement les classes de base de données MFC.  
   
@@ -140,13 +135,13 @@ BOOL CYourRegularDLL::InitInstance()
 }  
 ```  
   
-### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
+### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  
   
 -   [Initialiser une DLL d’extension MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)  
   
 -   [Initialiser des DLL régulière MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   
 -   [DLL d’extension de MFC](../build/extension-dlls.md)  
   

@@ -2,12 +2,9 @@
 title: -D (définitions de préprocesseur) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Définitions de préprocesseur)
 Définit un symbole de prétraitement pour un fichier source.  
@@ -50,7 +45,7 @@ Définit un symbole de prétraitement pour un fichier source.
   
  Par défaut, la valeur associée à un symbole est 1. Par exemple, **/D** `name` équivaut à **/D**`name`**= 1**. Dans l’exemple à la fin de cet article, la définition de **TEST** affiche `1`.  
   
- La compilation à l’aide de **/D** `name`  **=**  , n’ont aucune valeur associée au symbole. Bien que le symbole puisse toujours être utilisé pour effectuer une compilation de code conditionnelle, il ne retourne rien. Dans l’exemple, si vous compilez à l’aide de **DTEST =**, une erreur se produit. Ce comportement ressemble à l'utilisation de `#define` avec ou sans valeur.  
+ La compilation à l’aide de **/D** `name` **=** , n’ont aucune valeur associée au symbole. Bien que le symbole puisse toujours être utilisé pour effectuer une compilation de code conditionnelle, il ne retourne rien. Dans l’exemple, si vous compilez à l’aide de **DTEST =**, une erreur se produit. Ce comportement ressemble à l'utilisation de `#define` avec ou sans valeur.  
   
  Cette commande définit le symbole DEBUG dans TEST.c:  
   
@@ -72,7 +67,7 @@ SET CL=/DTEST#0
 CL /DTEST=%% TEST.C  
 ```  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
 1.  Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   

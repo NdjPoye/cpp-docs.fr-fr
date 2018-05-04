@@ -1,13 +1,10 @@
 ---
-title: "-SUBSYSTEM (spécifier le sous-système) | Documents Microsoft"
-ms.custom: 
+title: -SUBSYSTEM (spécifier le sous-système) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Spécifier le sous-système)
 ```  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  WINDOWS  
  Application ne requiert pas une console, probablement parce qu’il crée ses propres fenêtres d’interaction avec l’utilisateur. Si `WinMain` ou `wWinMain` est défini pour le code natif, ou `WinMain(HISTANCE *, HINSTANCE *, char *, int)` ou `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` est défini pour le code managé, WINDOWS est la valeur par défaut.  
   
- `Major`et `minor` (facultatif)  
+ `Major` et `minor` (facultatif)  
  Spécifiez la version minimale requise du sous-système. Les arguments sont des nombres décimaux compris entre 0 et 65 535. Consultez la section Notes pour plus d’informations. Il n’y a aucune limite supérieure pour les numéros de version.  
   
 ## <a name="remarks"></a>Notes  

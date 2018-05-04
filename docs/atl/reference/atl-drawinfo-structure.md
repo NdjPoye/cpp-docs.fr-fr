@@ -1,12 +1,9 @@
 ---
 title: Structure ATL_DRAWINFO | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atldrawinfo-structure"></a>Structure ATL_DRAWINFO
 Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.  
@@ -97,7 +92,7 @@ struct ATL_DRAWINFO {
   
  Cette structure stocke des informations pertinentes permet de restituer l’apparence d’un objet pour l’appareil cible. Les informations fournies peuvent servir de dessin à l’écran, une imprimante ou même un métafichier.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
 ## <a name="see-also"></a>Voir aussi  

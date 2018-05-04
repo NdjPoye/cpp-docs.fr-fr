@@ -1,13 +1,10 @@
 ---
-title: "-vmm, - VM, - /vmv (représentation à but général) | Documents Microsoft"
-ms.custom: 
+title: -vmm, - VM, - /vmv (représentation à but général) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Représentation à but général)
 Utilisé lorsque [/vmb, /vmg (méthode de représentation)](../../build/reference/vmb-vmg-representation-method.md) est sélectionné comme le [méthode de représentation](../../build/reference/vmb-vmg-representation-method.md). Ces options indiquent le modèle d’héritage de la définition de classe d’a pas encore été rencontrée.  
@@ -57,7 +52,7 @@ Utilisé lorsque [/vmb, /vmg (méthode de représentation)](../../build/referenc
 |Option|Description|  
 |------------|-----------------|  
 |**/ VMM**|Spécifie la représentation la plus générale d’un pointeur vers un membre d’une classe qui utilise l’héritage multiple.<br /><br /> Correspondants [mot clé d’héritage](../../cpp/inheritance-keywords.md) et l’argument de [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) est **multiple_inheritance**.<br /><br /> Cette représentation est supérieure à celle requise pour un héritage simple.<br /><br /> Si le modèle d’héritage d’une définition de classe pour laquelle un pointeur vers un membre est déclaré est virtuel, le compilateur génère une erreur.|  
-|**/ VMS**|Spécifie la représentation la plus générale d’un pointeur vers un membre d’une classe pour qu’il n’utilise pas l’héritage ou un héritage simple.<br /><br /> Correspondants [mot clé d’héritage](../../cpp/inheritance-keywords.md) et l’argument de [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) est **héritage unique**.<br /><br /> Il s’agit de la plus petite représentation possible d’un pointeur vers un membre d’une classe.<br /><br /> Si le modèle d’héritage d’une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel, le compilateur génère une erreur.|  
+|**/vms**|Spécifie la représentation la plus générale d’un pointeur vers un membre d’une classe pour qu’il n’utilise pas l’héritage ou un héritage simple.<br /><br /> Correspondants [mot clé d’héritage](../../cpp/inheritance-keywords.md) et l’argument de [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) est **héritage unique**.<br /><br /> Il s’agit de la plus petite représentation possible d’un pointeur vers un membre d’une classe.<br /><br /> Si le modèle d’héritage d’une définition de classe pour laquelle un pointeur vers un membre est déclaré est de type multiple ou virtuel, le compilateur génère une erreur.|  
 |**/vmv**|Spécifie la représentation la plus générale d’un pointeur vers un membre d’une classe qui utilise l’héritage virtuel. Il jamais provoque une erreur et la valeur par défaut.<br /><br /> Correspondants [mot clé d’héritage](../../cpp/inheritance-keywords.md) et l’argument de [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) est **virtual_inheritance**.<br /><br /> Cette option requiert un pointeur plus large et du code supplémentaire pour interpréter le pointeur que les autres options.|  
   
  Lorsque vous spécifiez une de ces options de modèle d’héritage, ce modèle est utilisé pour tous les pointeurs vers des membres de classe, quel que soit leur type d’héritage ou, si le pointeur est déclaré avant ou après la classe. Par conséquent, si vous utilisez toujours des classes d’héritage simple, vous pouvez réduire la taille du code en compilant avec **/VMS**; Cependant, si vous souhaitez utiliser la plupart des cas (au détriment de la représentation de données), compilez avec **/vmv**.  

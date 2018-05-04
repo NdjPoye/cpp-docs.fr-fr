@@ -1,12 +1,9 @@
 ---
 title: Objets temporaires | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,24 +11,22 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="temporary-objects"></a>Objets temporaires
 Dans certains cas, le compilateur a besoin de créer des objets temporaires. Ces objets temporaires peuvent être créés pour les raisons suivantes :  
   
 -   pour initialiser une référence `const` avec un initialiseur d'un type différent de celui du type sous-jacent de la référence initialisée ;  
   
--   pour stocker la valeur de retour d'une fonction qui retourne un type défini par l'utilisateur. Ces objets temporaires sont créés uniquement si votre programme ne copie pas la valeur de retour passée à un objet. Exemple :  
+-   pour stocker la valeur de retour d'une fonction qui retourne un type défini par l'utilisateur. Ces objets temporaires sont créés uniquement si votre programme ne copie pas la valeur de retour passée à un objet. Par exemple :  
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

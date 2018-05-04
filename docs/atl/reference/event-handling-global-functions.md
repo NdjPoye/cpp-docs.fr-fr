@@ -1,12 +1,9 @@
 ---
-title: "Fonctions globales de la gestion des événements | Documents Microsoft"
-ms.custom: 
+title: Fonctions globales de la gestion des événements | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlWaitWithMessageLoop
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6670ef283d24f57b407ad70693421feae427855f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-global-functions"></a>Fonctions globales de la gestion des événements
 Cette fonction fournit un gestionnaire d’événements.  
@@ -38,10 +33,10 @@ Cette fonction fournit un gestionnaire d’événements.
 |-|-|  
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Attend un objet soit signalé, en attendant la distribution des messages de fenêtre en fonction des besoins.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
 
-##  <a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop  
+##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop  
  Attend que l'objet soit signalé tout en distribuant les messages de fenêtre en fonction des besoins.  
   
 > [!IMPORTANT]

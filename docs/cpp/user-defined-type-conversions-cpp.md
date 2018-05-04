@@ -1,12 +1,9 @@
 ---
-title: "Conversions de Type (C++) défini par l’utilisateur | Documents Microsoft"
-ms.custom: 
+title: Conversions de Type (C++) défini par l’utilisateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversions de type définies par l'utilisateur (C++)
 A *conversion* génère une nouvelle valeur d’un type à partir d’une valeur d’un type différent. *Conversions standard* sont générés dans le langage C++ et la prise en charge ses types intégrés, vous pouvez créer *conversions définies par l’utilisateur* pour effectuer des conversions vers, d’ou entre les types définis par l’utilisateur.  
@@ -83,7 +78,7 @@ A *conversion* génère une nouvelle valeur d’un type à partir d’une valeur
   
  Le mot clé `explicit` peut être appliqué aux constructeurs de conversion depuis C++98 et aux fonctions de conversion depuis C++11. Les sections suivantes contiennent plus d'informations sur la façon d'utiliser le mot clé `explicit`.  
   
-##  <a name="ConvCTOR"></a>Constructeurs de conversion  
+##  <a name="ConvCTOR"></a> Constructeurs de conversion  
  Les constructeurs de conversion définissent les conversions de types définis par l'utilisateur ou intégrés en type défini par l'utilisateur. L'exemple suivant décrit un constructeur de conversion convertissant le type intégré `double` en type `Money` défini par l'utilisateur.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  Même si vous pouvez être tenté par la commodité de l'autorisation des conversions implicites, celle-ci peut introduire des bogues difficiles à trouver. De manière générale, il vaut mieux que tous les constructeurs de conversion soient explicites, sauf quand vous êtes sûr que vous voulez qu'une conversion spécifique se produise de manière implicite.  
   
-##  <a name="ConvFunc"></a>Fonctions de conversion  
+##  <a name="ConvFunc"></a> Fonctions de conversion  
  Les fonctions de conversion définissent des conversions d'un type défini par l'utilisateur en d'autres types. Ces fonctions sont parfois qualifiées d'« opérateurs de transtypage », car elles sont appelées, en même temps que les constructeurs de conversion, quand une valeur est transtypée vers un type différent. L'exemple suivant décrit une fonction de conversion convertissant le type `Money` défini par l'utilisateur en type intégré `double` :  
   
 ```  

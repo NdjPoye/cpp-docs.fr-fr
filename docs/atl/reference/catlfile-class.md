@@ -2,11 +2,8 @@
 title: Classe de CAtlFile | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>Classe de CAtlFile
 Cette classe fournit un wrapper mince entourant les fenêtres des API de gestion de fichiers.  
@@ -61,7 +56,7 @@ class CAtlFile : public CHandle
 |----------|-----------------|  
 |[CAtlFile::CAtlFile](#catlfile)|Constructeur.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -79,7 +74,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>Membres de données protégés  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` objet|  
   
@@ -94,7 +89,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  Constructeur.  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Notes  
  Le constructeur de copie transfère la propriété du handle de fichier d’origine `CAtlFile` objet à l’objet qui vient d’être construit.  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  Appelez cette méthode pour créer ou ouvrir un fichier.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Notes  
  Appels [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) pour créer ou ouvrir le fichier.  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  Appelez cette méthode pour effacer les mémoires tampons pour le fichier et de provoquer de toutes les données mises en mémoire tampon à écrire dans le fichier.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Notes  
  Appels [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) pour vider les données mises en mémoire tampon dans le fichier.  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Appelez cette méthode pour obtenir les résultats d’une opération superposée sur le fichier.  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Notes  
  Appels [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) pour obtenir les résultats d’une opération superposée sur le fichier.  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Appelez cette méthode pour obtenir la position actuelle du pointeur de fichier.  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Notes  
  Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour obtenir la position actuelle du pointeur de fichier.  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  Appelez cette méthode pour obtenir la taille en octets du fichier.  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Notes  
  Appels [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) pour obtenir la taille en octets du fichier.  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Appelez cette méthode pour le verrouillage d’une région dans le fichier pour empêcher les autres processus d’y accéder.  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Appels [fichier de verrouillage](http://msdn.microsoft.com/library/windows/desktop/aa365202) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. `LockRange`ne fusionne pas les zones adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller chacune séparément.  
+ Appels [fichier de verrouillage](http://msdn.microsoft.com/library/windows/desktop/aa365202) verrouillage d’une région dans le fichier. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Vous pouvez verrouiller plus d’une région d’un fichier, mais aucune région qui se chevauche n’est autorisées. Lorsque vous déverrouillez une région, à l’aide [CAtlFile::UnlockRange](#unlockrange), la plage d’octets doit correspondre exactement à la région qui a été précédemment verrouillée. `LockRange` ne fusionne pas les zones adjacentes ; Si deux régions verrouillées sont adjacentes, vous devez déverrouiller chacune séparément.  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Pointeur vers un `CAtlTransactionManager` objet.  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  Appelez cette méthode pour lire des données à partir d’un fichier en commençant à la position indiquée par le pointeur de fichier.  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Notes  
  Les trois premières formes appellent [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), le dernier [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) pour lire des données à partir du fichier. Utilisez [CAtlFile::Seek](#seek) pour déplacer le pointeur de fichier.  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  Appelez cette méthode pour déplacer le pointeur de fichier du fichier.  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Notes  
  Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) pour déplacer le pointeur de fichier.  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  Appelez cette méthode pour définir la taille du fichier.  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Notes  
  Appels [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) et [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) pour définir la taille du fichier. En retour, le pointeur de fichier est placé à la fin du fichier.  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Appelez cette méthode pour déverrouiller une région du fichier.  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Notes  
  Appels [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) pour déverrouiller une région du fichier.  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  Appelez cette méthode pour écrire des données dans le fichier en commençant à la position indiquée par le pointeur de fichier.  
   
 ```

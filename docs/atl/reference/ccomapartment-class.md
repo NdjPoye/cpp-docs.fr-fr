@@ -1,12 +1,9 @@
 ---
 title: Classe de CComApartment | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComApartment
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fecd77e93c0c51a37d7363e6ec1472d157d6d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e08d50cec36366df2423d31082b97d41b5061f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomapartment-class"></a>Classe de CComApartment
 Cette classe prend en charge la gestion d’un appartement dans un module EXE mis en pool de threads.  
@@ -75,12 +70,12 @@ class CComApartment
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|Contient le nombre de verrous du thread actuel.|  
   
 ## <a name="remarks"></a>Notes  
- `CComApartment`est utilisé par [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) pour gérer un thread cloisonné dans un module EXE mis en pool de threads. `CComApartment`Fournit des méthodes pour incrémenter et décrémenter le verrou comptent sur un thread.  
+ `CComApartment` est utilisé par [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) pour gérer un thread cloisonné dans un module EXE mis en pool de threads. `CComApartment` Fournit des méthodes pour incrémenter et décrémenter le verrou comptent sur un thread.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>  CComApartment::Apartment  
  Marque l’adresse de départ du thread.  
   
 ```
@@ -93,7 +88,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>Notes  
  Définir automatiquement au cours de [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-##  <a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>  CComApartment::CComApartment  
  Constructeur.  
   
 ```
@@ -103,7 +98,7 @@ CComApartment();
 ### <a name="remarks"></a>Notes  
  Initialise le `CComApartment` membres de données [m_nLockCnt](#m_nlockcnt) et [m_hThread](#m_hthread).  
   
-##  <a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>  CComApartment::GetLockCount  
  Retourne le nombre de verrous du thread actuel.  
   
 ```
@@ -113,7 +108,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de verrous sur le thread.  
   
-##  <a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>  CComApartment::Lock  
  Incrémente le nombre de verrous du thread.  
   
 ```
@@ -128,28 +123,28 @@ LONG Lock();
   
  Le nombre de verrous sur le thread est utilisé à des fins statistiques.  
   
-##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID  
  Contient l’identificateur de la thread.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>  CComApartment::m_hThread  
  Contient le handle du thread.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt  
  Contient le nombre de verrous du thread actuel.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>  CComApartment::Unlock  
  Décrémente de nombre de verrous du thread.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Tableaux (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 Un tableau est une collection d’objets similaires. Le cas le plus simple d'un tableau est celui d'un vecteur, qui peut être déclaré par la séquence suivante :  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Initialiseur facultatif.  Consultez [initialiseurs](../cpp/initializers.md).  
   
- Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où  *n*  est le nombre d’éléments du tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est autorisé uniquement lorsque le tableau est le dernier champ dans un `struct` ou **union** et que les extensions Microsoft (/Ze) sont activées.  
+ Le nombre d'éléments du tableau est fourni par l'expression constante. Le premier élément du tableau est l’élément 0, et le dernier élément est le (*n*-1) élément, où *n* est le nombre d’éléments du tableau peut contenir. Le *expression constante* doit être de type intégral et doit être supérieure à 0. Un tableau de taille zéro est autorisé uniquement lorsque le tableau est le dernier champ dans un `struct` ou **union** et que les extensions Microsoft (/Ze) sont activées.  
   
  L'exemple suivant montre comment définir un tableau au moment de l'exécution :  
   
@@ -92,10 +87,10 @@ int i2[5][7];
   
  Elle spécifie un tableau de type `int`, organisé conceptuellement selon une matrice à deux dimensions de cinq lignes et sept colonnes, comme indiqué dans l'illustration suivante :  
   
- ![Disposition conceptuelle d’une a &#45; tableau unidimensionnel](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Disposition conceptuelle d’un multiple&#45;tableau unidimensionnel](../cpp/media/vc38rc1.gif "vc38RC1")  
 Disposition conceptuelle d'un tableau multidimensionnel  
   
- Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Exemple :  
+ Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Par exemple :  
   
 ```  
 // arrays2.cpp  

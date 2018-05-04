@@ -2,29 +2,24 @@
 title: Programmation avec CComBSTR (ATL) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CComBSTR class, programming with
 - Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8f496dd73c2d15f8f78ddbdc205f31a8520c674
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b957cca4ff1af93d3f62ab0bf667462c91b81bba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programmation avec CComBSTR (ATL)
 La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper autour de le `BSTR` type de données. Alors que `CComBSTR` est un outil utile, il existe plusieurs situations nécessitant une attention.  
@@ -39,7 +34,7 @@ La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper 
   
 -   [Problèmes de fuite de mémoire](#programmingwithccombstr_memoryleaks)  
   
-##  <a name="programmingwithccombstr_conversionissues"></a>Problèmes de conversion  
+##  <a name="programmingwithccombstr_conversionissues"></a> Problèmes de conversion  
  Bien que plusieurs `CComBSTR` méthodes convertissent automatiquement un argument de chaîne ANSI en Unicode, les méthodes retournera toujours des chaînes au format Unicode. Pour convertir la chaîne de sortie en ANSI, utilisez une classe de conversion ATL. Pour plus d’informations sur les classes de conversion ATL, consultez [ATL et MFC Macros de Conversion de chaînes](reference/string-conversion-macros.md).  
   
 ### <a name="example"></a>Exemple  
@@ -50,25 +45,25 @@ La classe ATL [CComBSTR](../atl/reference/ccombstr-class.md) fournit un wrapper 
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
-##  <a name="programmingwithccombstr_scopeissues"></a>Problèmes de portée  
+##  <a name="programmingwithccombstr_scopeissues"></a> Problèmes de portée  
  Comme avec toute classe valide, `CComBSTR` permettra de libérer ses ressources lorsqu’il devient hors de portée. Si une fonction retourne un pointeur vers le `CComBSTR` chaîne, cela peut provoquer des problèmes, le pointeur de la référence de la mémoire qui a déjà été libéré. Dans ces cas, utilisez le **copie** méthode, comme indiqué ci-dessous.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a>Libération explicite de l’objet CComBSTR  
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Libération explicite de l’objet CComBSTR  
  Il est possible de libérer explicitement la chaîne contenue dans le `CComBSTR` avant que l’objet sort de l’étendue de l’objet. Si la chaîne est libérée, le `CComBSTR` objet n’est pas valide.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
-##  <a name="programmingwithccombstr_usingloops"></a>Utilisation d’objets CComBSTR dans des boucles  
+##  <a name="programmingwithccombstr_usingloops"></a> Utilisation d’objets CComBSTR dans des boucles  
  Comme le `CComBSTR` classe alloue une mémoire tampon pour effectuer certaines opérations, telles que la `+=` opérateur ou **Append** (méthode), il est déconseillé d’effectuer de manipulation de chaînes dans une boucle étroite. Dans ces situations, `CStringT` offre de meilleures performances.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a>Problèmes de fuite de mémoire  
+##  <a name="programmingwithccombstr_memoryleaks"></a> Problèmes de fuite de mémoire  
  Transmission de l’adresse d’initialisé `CComBSTR` à une fonction comme un **[out]** paramètre entraîne une fuite de mémoire.  
   
  Dans l’exemple ci-dessous, la chaîne allouée pour contenir la chaîne `"Initialized"` fuite lorsque la fonction `MyGoodFunction` remplace la chaîne.  

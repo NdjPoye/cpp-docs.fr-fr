@@ -1,13 +1,10 @@
 ---
 title: -Fp (nom. Aucun fichier PCH) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nom de fichier .pch)
 Fournit un nom de chemin d’accès pour un en-tête précompilé au lieu d’utiliser le nom de chemin d’accès par défaut.  
@@ -44,7 +39,7 @@ Fournit un nom de chemin d’accès pour un en-tête précompilé au lieu d’ut
 > **/ Fp**_chemin d’accès_  
   
 ## <a name="remarks"></a>Notes  
- Utilisez cette option avec [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (utiliser un en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md) pour fournir un nom de chemin d’accès pour un en-tête précompilé au lieu d’utiliser le nom de chemin d’accès par défaut. Vous pouvez également utiliser **/FP** avec **/Yc** pour spécifier l’utilisation d’un fichier d’en-tête précompilé qui diffère de la **/Yc***nom de fichier* argument et le nom de base du fichier source.  
+ Utilisez cette option avec [/Yc (créer un en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (utiliser un en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md) pour fournir un nom de chemin d’accès pour un en-tête précompilé au lieu d’utiliser le nom de chemin d’accès par défaut. Vous pouvez également utiliser **/FP** avec **/Yc** pour spécifier l’utilisation d’un fichier d’en-tête précompilé qui diffère de la **/Yc *** filename* argument et le nom de base du fichier source.  
   
  Si vous ne spécifiez pas une extension en tant que partie du nom de chemin d’accès, une extension .pch est supposée. Si vous spécifiez un répertoire sans nom de fichier, le nom de fichier par défaut est VC*x*0.pch, où *x* est la version principale de Visual C++ en cours d’utilisation.  
   

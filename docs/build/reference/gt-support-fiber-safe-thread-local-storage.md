@@ -2,12 +2,9 @@
 title: -GT (stockage Local des threads de fibres sécurisées prise en charge) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations
 - /gt
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c027a1796f42d7b2932f68aff00136ee0d217f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 493199cf4d5e66a866fbaa87aafc4098c3114cf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Prendre en charge le stockage local des threads avec fibres sécurisées)
 Prend en charge la sécurité des fibres pour les données allouées à l’aide du stockage local des threads statique, autrement dit, les données allouées avec `__declspec(thread)`.  
@@ -47,7 +42,7 @@ Prend en charge la sécurité des fibres pour les données allouées à l’aide
   
  Une fibre est un objet léger qui se compose d’une pile et un contexte de Registre et permettre être planifié sur des threads différents. Une fibre peut s’exécuter sur n’importe quel thread. Car une fibre peut être transférée et redémarrée ultérieurement sur un autre thread, l’adresse du tableau TLS ne doit pas être mis en cache ou optimisée en tant qu’une sous-expression commune dans un appel de fonction (consultez le [/Og (optimisations globales)](../../build/reference/og-global-optimizations.md) est définie sur Détails). **/GT** évite de telles optimisations.  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
 1.  Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [utilisation des propriétés de projet](../../ide/working-with-project-properties.md).  
   

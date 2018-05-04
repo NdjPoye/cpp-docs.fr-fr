@@ -1,12 +1,9 @@
 ---
 title: Classe de CComMultiThreadModelNoCS | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModelNoCS
@@ -23,20 +20,18 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc32ab53469b1f125b56343806c7920461c64bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 758811b10757cd7903b4f1d6218a5f34f8a98462
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Classe de CComMultiThreadModelNoCS
-`CComMultiThreadModelNoCS`Fournit des méthodes thread-safe pour incrémenter et décrémenter la valeur d’une variable, sans verrouillage de section critique ou de la fonctionnalité de déverrouillage.  
+`CComMultiThreadModelNoCS` Fournit des méthodes thread-safe pour incrémenter et décrémenter la valeur d’une variable, sans verrouillage de section critique ou de la fonctionnalité de déverrouillage.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +49,7 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Fait référence à la classe `CComFakeCriticalSection`.|  
 |[CComMultiThreadModelNoCS::ThreadModelNoCS](#threadmodelnocs)|Fait référence à la classe `CComMultiThreadModelNoCS`.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -62,7 +57,7 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Statique) Incrémente la valeur de la variable spécifiée de manière thread-safe.|  
   
 ## <a name="remarks"></a>Notes  
- `CComMultiThreadModelNoCS`est semblable à [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) car il fournit des méthodes de thread-safe pour incrémenter et décrémenter une variable. Toutefois, lorsque vous référencez une section critique de la classe via `CComMultiThreadModelNoCS`, méthodes telles que `Lock` et `Unlock` n’aura aucun effet.  
+ `CComMultiThreadModelNoCS` est semblable à [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) car il fournit des méthodes de thread-safe pour incrémenter et décrémenter une variable. Toutefois, lorsque vous référencez une section critique de la classe via `CComMultiThreadModelNoCS`, méthodes telles que `Lock` et `Unlock` n’aura aucun effet.  
   
  En général, vous utilisez `CComMultiThreadModelNoCS` via la `ThreadModelNoCS` `typedef` nom. Cela `typedef` est défini dans `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, et [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
   
@@ -74,7 +69,7 @@ class CComMultiThreadModelNoCS
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComMultiThreadModelNoCS::AutoCriticalSection  
  Lorsque vous utilisez `CComMultiThreadModelNoCS`, le `typedef` nom `AutoCriticalSection` fait référence à la classe [la classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -97,7 +92,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>Exemple  
  Consultez [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>  CComMultiThreadModelNoCS::CriticalSection  
  Lorsque vous utilisez `CComMultiThreadModelNoCS`, le `typedef` nom `CriticalSection` fait référence à la classe [la classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -120,7 +115,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>Exemple  
  Consultez [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
  Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), qui décrémente la valeur de la variable vers laquelle pointe `p`.  
   
 ```
@@ -137,7 +132,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>Notes  
  **InterlockedDecrement** empêche que plusieurs threads simultanément à l’aide de cette variable.  
   
-##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
  Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), qui incrémente la valeur de la variable vers laquelle pointée `p`.  
   
 ```
@@ -154,7 +149,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>Notes  
  **InterlockedIncrement** empêche que plusieurs threads simultanément à l’aide de cette variable.  
   
-##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComMultiThreadModelNoCS::ThreadModelNoCS  
  Lorsque vous utilisez `CComMultiThreadModelNoCS`, le `typedef` nom `ThreadModelNoCS` simplement fait référence à `CComMultiThreadModelNoCS`.  
   
 ```

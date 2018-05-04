@@ -1,27 +1,22 @@
 ---
-title: "Chaînés Structures d’informations de déroulement | Documents Microsoft"
-ms.custom: 
+title: Chaînés Structures d’informations de déroulement | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chained-unwind-info-structures"></a>Structures d'informations de déroulement chaînées
 Si l’indicateur UNW_FLAG_CHAININFO est défini, une structure d’informations de déroulement est secondaire, et le champ adresse exception-Gestionnaire/informations chaînées partagée contient les informations de déroulement principales. Le code suivant extrait le réplica principal informations de déroulement, en supposant que `unwindInfo` est la structure qui a le UNW_FLAG_CHAININFO l’indicateur.  

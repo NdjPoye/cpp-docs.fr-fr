@@ -1,12 +1,9 @@
 ---
 title: align (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -38,13 +33,13 @@ Utilisez `__declspec(align(#))` pour contrôler avec précision l'alignement des
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec( align(** *#* **) )** *declarator*  
+> **__declspec (align (** *#* **))** *déclarateur*  
 
 ## <a name="remarks"></a>Notes
 
 L'écriture d'applications qui utilisent les dernières instructions du processeur introduit de nouvelles contraintes et de nouveaux problèmes. En particulier, de nombreuses nouvelles instructions nécessitent que les données soient alignées sur des limites de 16 octets. En outre, en alignant fréquemment les données utilisées sur la taille de ligne de cache d'un processeur spécifique, vous améliorez la performance du cache. Par exemple, si vous définissez une structure dont la taille est inférieure à 32 octets, vous pouvez l'aligner sur 32 octets pour garantir que les objets de ce type de structure sont mis en cache efficacement.
 
-\#est la valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator` correspond aux données que vous déclarez comme alignées.
+\# est la valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator` correspond aux données que vous déclarez comme alignées.
 
 Pour plus d’informations sur la façon de retourner une valeur de type `size_t` qui représente la spécification d’alignement du type, consultez [__alignof](../cpp/alignof-operator.md). Pour plus d’informations sur la façon de déclarer des pointeurs non alignés lors du ciblage de processeurs 64 bits, consultez [__unaligned](../cpp/unaligned.md).
 
@@ -94,7 +89,7 @@ Pour plus d'informations, voir :
 
 - [Exemples d’alignement de Structure](../build/examples-of-structure-alignment.md) (x64 spécifique)
 
-##  <a name="vclrfalignexamples"></a>Exemples d’alignement
+##  <a name="vclrfalignexamples"></a> Exemples d’alignement
 
 Les exemples suivants montrent comment `__declspec(align(#))` affecte la taille et l'alignement des structures de données. Les exemples supposent les définitions suivantes :
 
@@ -185,7 +180,7 @@ void fn() {
 
 Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d'opérande. Si *arg* > = 8, la mémoire retournée est alignée sur 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée est la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez malloc (7), l'alignement est sur 4 octets.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Définition de nouveaux Types avec __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Définition de nouveaux Types avec __declspec(align(#))
 
 Vous pouvez définir un type avec une caractéristique d'alignement.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Maintenant, `aType` et `bType` sont la même taille (8 octets), mais les variables de type `bType` sont alignées sur 32 octets.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Alignement des données dans le stockage Local des threads
+##  <a name="vclrfthreadlocalstorageallocation"></a> Alignement des données dans le stockage Local des threads
 
 Le stockage local des threads de type statique (TLS) créé avec l'attribut `__declspec(thread)` et placé dans la section TLS de l'image contribue à l'alignement exactement comme les données statiques normales. Pour créer des données TLS, le système d'exploitation alloue de la mémoire de la taille de la section TLS et respecte l'attribut d'alignement de la section TLS.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Comment aligner des travaux avec une compression de données
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Comment aligner des travaux avec une compression de données
 
 Le **/Zp** option du compilateur et le `pack` pragma ont pour effet de compresser les données pour les membres de structure et d’union. Cet exemple montre comment **/Zp** et `__declspec(align(#))` fonctionnent ensemble :
 

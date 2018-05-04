@@ -2,11 +2,8 @@
 title: Fonctions globales de contrôle composite | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 Ces fonctions fournissent la prise en charge pour la création de boîtes de dialogue et de création, d’hébergement et de licences des contrôles ActiveX.  
@@ -48,7 +43,7 @@ Ces fonctions fournissent la prise en charge pour la création de boîtes de dia
 |||  
 |-|-|  
 |[AtlAxDialogBox](#atlaxdialogbox)|Crée une boîte de dialogue modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue peut contenir des contrôles ActiveX.|  
-|[AtlAxCreateDialog](#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue peut contenir des contrôles ActiveX.|  
+|[API AtlAxCreateDialog](#atlaxcreatedialog)|Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur. La boîte de dialogue peut contenir des contrôles ActiveX.|  
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Crée un contrôle ActiveX, puis initialise et héberge ce dernier dans la fenêtre spécifiée.|  
 |[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Crée un contrôle ActiveX, lui, héberge ce dernier dans la fenêtre spécifiée et récupère un pointeur d’interface (ou pointeurs) à partir du contrôle.|  
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée.|  
@@ -103,11 +98,11 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Pour plus d’informations sur la modification de scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](http://msdn.microsoft.com/library/windows/desktop/aa380902) sous Windows SDK*: outils du Kit de développement logiciel*.  
+ Pour plus d’informations sur la modification de scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de ressource de contrôle, consultez [les paramètres de contrôle communs](http://msdn.microsoft.com/library/windows/desktop/aa380902) sous Windows SDK *: outils du Kit de développement logiciel*.  
   
  Pour plus d’informations sur les boîtes de dialogue en général, reportez-vous à [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans le Kit de développement logiciel Windows.  
   
-##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  API AtlAxCreateDialog  
  Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur.  
   
 ```

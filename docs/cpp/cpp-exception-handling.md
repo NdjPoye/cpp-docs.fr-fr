@@ -1,12 +1,9 @@
 ---
 title: Gestion des exceptions C++ | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - C++ exception handling
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6cbe3489b0d45111a527102c85e6d8c207715ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ce782000ac1767034d00aa3e0280b8e3820e3d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-exception-handling"></a>Gestion d'exceptions C++
 Le langage C++ fournit une prise en charge intégrée des levées et des interceptions d'exceptions. Lorsque vous programmez en C++, vous devez presque toujours utiliser la prise en charge intégrée des exceptions C++, comme décrit dans cette section.  
@@ -36,7 +31,7 @@ Le langage C++ fournit une prise en charge intégrée des levées et des interc
   
 -   [Try, catch et throw (instructions)](../cpp/try-throw-and-catch-statements-cpp.md)  
   
--   [L’évaluation des blocs Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
+-   [Évaluation des blocs catch](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
   
 -   [Exceptions et déroulement de pile](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
   

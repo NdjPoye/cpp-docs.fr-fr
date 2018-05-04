@@ -1,12 +1,9 @@
 ---
 title: extracteurs _variant_t | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>Extracteurs _variant_t
 **Section spécifique à Microsoft**  
@@ -119,9 +114,9 @@ operator unsigned __int64() const;
   
 -   **operator _bstr_t ()** extrait une chaîne, qui est encapsulée dans un `_bstr_t` objet.  
   
--   **opérateur IDispatch\*()** extrait un pointeur dispinterface un encapsulé **variante**. `AddRef`est appelé sur le pointeur résultant, il vous appartient donc d’appeler **version** pour le libérer.  
+-   **opérateur IDispatch\*()** extrait un pointeur dispinterface un encapsulé **variante**. `AddRef` est appelé sur le pointeur résultant, il vous appartient donc d’appeler **version** pour le libérer.  
   
--   **opérateur IUnknown\*()** extrait un pointeur d’interface COM à partir d’un élément encapsulé **variante**. `AddRef`est appelé sur le pointeur résultant, il vous appartient donc d’appeler **version** pour le libérer.  
+-   **opérateur IUnknown\*()** extrait un pointeur d’interface COM à partir d’un élément encapsulé **variante**. `AddRef` est appelé sur le pointeur résultant, il vous appartient donc d’appeler **version** pour le libérer.  
   
  **FIN de la section spécifique à Microsoft**  
   

@@ -1,12 +1,9 @@
 ---
 title: Rendre un objet ATL comme Noncreatable | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.objects
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e37779b081de457782ee59324a00cca5fedaea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05707c6771d641d383825a07d0b26a90fdf46cb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendre un objet ATL comme Noncreatable
 Vous pouvez modifier les attributs d’un objet COM fondés sur ATL afin qu’un client ne peut pas créer directement l’objet. Dans ce cas, l’objet serait être retournée via un appel de méthode sur un autre objet au lieu créé directement.  
@@ -35,7 +30,7 @@ Vous pouvez modifier les attributs d’un objet COM fondés sur ATL afin qu’un
   
 1.  Supprimer le [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) pour l’objet. Si vous souhaitez que l’objet comme noncreatable mais le contrôle à inscrire, remplacez OBJECT_ENTRY_AUTO avec [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
-2.  Ajouter le [noncreatable](../../windows/noncreatable.md) d’attribut à la coclasse dans le fichier .idl. Exemple :  
+2.  Ajouter le [noncreatable](../../windows/noncreatable.md) d’attribut à la coclasse dans le fichier .idl. Par exemple :  
   
  ```  
  [  

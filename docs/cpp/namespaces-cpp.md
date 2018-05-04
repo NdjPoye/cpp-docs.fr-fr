@@ -1,12 +1,9 @@
 ---
 title: Espaces de noms (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque identificateur, par exemple `std::vector<std::string> vec;`, ou par un [à l’aide de la déclaration](../cpp/using-declaration.md) pour un identificateur unique (`using std::string`), ou un [à l’aide de la Directive](../cpp/namespaces-cpp.md#using_directives) pour tous les identificateurs dans l’espace de noms (`using namespace std;`). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.  
@@ -116,7 +111,7 @@ int ContosoDataServer::Bar(){return 0;}
   
  Un espace de noms peut être déclaré dans plusieurs blocs, dans un seul fichier et dans plusieurs fichiers. Le compilateur joint les parties pendant le prétraitement et l'espace de noms obtenu contient tous les membres déclarés dans toutes les parties. Un exemple de ceci est l'espace de noms std qui est déclaré dans chacun des fichiers d'en-tête de la bibliothèque standard.  
   
- Membres d’un espace de noms nommé peuvent être définies à l’extérieur de l’espace de noms dans lequel ils sont déclarés par qualification explicite de nom actuellement défini. Toutefois, la définition doit figurer après le point de déclaration dans un espace de noms qui englobe l'espace de noms de la déclaration. Exemple :  
+ Membres d’un espace de noms nommé peuvent être définies à l’extérieur de l’espace de noms dans lequel ils sont déclarés par qualification explicite de nom actuellement défini. Toutefois, la définition doit figurer après le point de déclaration dans un espace de noms qui englobe l'espace de noms de la déclaration. Par exemple :  
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -260,7 +255,7 @@ namespace Contoso
 ```  
   
 ## <a id="namespace_aliases"></a> Alias de Namespace  
- Les noms des espaces de noms doivent être uniques, ce qui signifie qu'ils ne doivent pas être trop courts. Si la longueur d'un nom rend le code difficile à lire ou est fastidieux à taper dans un fichier d'en-tête où les directives using ne peuvent pas être utilisées, vous pouvez créer un alias d'espaces de noms qui sert d'abréviation pour le nom réel. Exemple :  
+ Les noms des espaces de noms doivent être uniques, ce qui signifie qu'ils ne doivent pas être trop courts. Si la longueur d'un nom rend le code difficile à lire ou est fastidieux à taper dans un fichier d'en-tête où les directives using ne peuvent pas être utilisées, vous pouvez créer un alias d'espaces de noms qui sert d'abréviation pour le nom réel. Par exemple :  
   
 ```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  

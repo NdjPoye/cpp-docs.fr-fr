@@ -1,12 +1,9 @@
 ---
-title: "Modèles (C++) | Documents Microsoft"
-ms.custom: 
+title: Modèles (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Modèles (C++)
 Les modèles constituent la base pour la programmation générique en C++. Comme un langage fortement typé, C++ exige toutes les variables ayant un type spécifique, soit explicitement déclarés par le programmeur ou déduit par le compilateur. Toutefois, plusieurs algorithmes et des structures de données identiques, quel que soit le type, elles s’exécutent sur. Activer les modèles vous permet de définir les opérations d’une classe ou une fonction et vous permettent de spécifier quels concrète des types ces opérations doit fonctionner sur.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Le code ci-dessus décrit un modèle pour une fonction générique avec un paramètre de type `T`, dont valeur de retour et appeler des paramètres (lhs et rhs) sont de ce type. Vous pouvez nommer un paramètre de type que comme mais par convention unique majuscules sont couramment utilisés. `T`est un paramètre de modèle ; le `typename` mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace toutes les instances de `T` avec l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou fonction à partir d’un modèle est appelée *instanciation de modèle*;   `minimum<int>` est une instanciation du modèle `minimum<T>`.  
+ Le code ci-dessus décrit un modèle pour une fonction générique avec un paramètre de type `T`, dont valeur de retour et appeler des paramètres (lhs et rhs) sont de ce type. Vous pouvez nommer un paramètre de type que comme mais par convention unique majuscules sont couramment utilisés. `T` est un paramètre de modèle ; le `typename` mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace toutes les instances de `T` avec l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou fonction à partir d’un modèle est appelée *instanciation de modèle*;   `minimum<int>` est une instanciation du modèle `minimum<T>`.  
   
  Par ailleurs, un utilisateur peut déclarer une instance du modèle qui est spécialisé pour int. Supposons que get_a() et get_b() sont des fonctions qui retournent une valeur int :  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Les règles de la façon dont le compilateur effectue la déduction de type dans les modèles de fonction sont basées sur les règles pour les fonctions ordinaires. Pour plus d’informations, consultez [surcharge résolution de modèle d’appels de fonction](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Paramètres de type  
+## <a id="type_parameters"></a> Paramètres de type  
  Dans le `minimum` modèle ci-dessus, notez que le paramètre de type `T` n’est pas qualifié en aucune façon jusqu'à ce qu’il est utilisé dans les paramètres d’appel de fonction, où la const et qualificateurs de référence sont ajoutés.  
   
  Il n’existe aucune limite pratique au nombre de paramètres de type. Séparez plusieurs paramètres par des virgules :  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Autres types de valeurs, y compris les pointeurs et références peuvent être passés dans en tant que paramètres sans type. Par exemple, vous pouvez passer un pointeur à une fonction ou un objet de fonction pour personnaliser certaines opérations dans le code du modèle.  
   
-## <a id="template_parameters"></a>Modèles en tant que paramètres de modèle  
+## <a id="template_parameters"></a> Modèles en tant que paramètres de modèle  
  Un modèle peut être un paramètre de modèle. Dans cet exemple, MyClass2 possède deux paramètres de modèle : un paramètre typename `T` et un paramètre de modèle `Arr`:  
   
 ```cpp  

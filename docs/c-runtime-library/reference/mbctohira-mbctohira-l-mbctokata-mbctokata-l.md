@@ -2,11 +2,8 @@
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctohira
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f82098a033f7a3dec8cdb475476644381bed8d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -106,7 +101,7 @@ Le **_mbctohira** et **_mbctokata** fonctions testent un caractère *c* et, si p
 |**_mbctohira**, **_mbctohira_l**|Katakana multioctet en hiragana multioctet.|
 |**_mbctokata**, **_mbctokata_l**|Hiragana multioctet en katakana multioctet.|
 
-La valeur de sortie est affectée par la définition de la **LC_CTYPE** catégorie des paramètres régionaux ; consultez [setlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, sauf que ceux qui n’ont le **_l** suffixe utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et ceux qui ont le **_l** suffixe à la place Utilisez les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que ceux qui n’ont le **_l** suffixe utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et ceux qui ont le **_l** suffixe à la place Utilisez les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Dans les versions antérieures, **_mbctohira** a été nommé **jtohira** et **_mbctokata** a été nommé **jtokata**. Pour le nouveau code, utilisez les nouveaux noms.
 

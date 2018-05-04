@@ -1,12 +1,12 @@
 ---
 title: CFileDialog Class | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CFileDialog
@@ -141,17 +141,17 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-caps.latest.revision: 
+caps.latest.revision: 47
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611f26b07bc8ebd14fc394437ddda07cb65ab4e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 68c07bd6a172c704003ac2e4d83ef27fc1efc64a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (classe)
 Encapsule la boîte de dialogue commune qui est utilisée pour le fichier ouvert ou opérations d’enregistrement.  
@@ -250,29 +250,29 @@ class CFileDialog : public CCommonDialog
 ## <a name="remarks"></a>Notes  
  Boîtes de dialogue de fichier communes vous permettent d’implémenter des boîtes de dialogue Sélection de fichier, par exemple, **ouvrir le fichier** et **Enregistrer sous**, d’une manière qui est compatible avec les standards Windows.  
   
- Vous pouvez utiliser `CFileDialog` en l’état avec le constructeur fourni, ou vous pouvez dériver votre propre classe de boîte de dialogue de `CFileDialog` et écrire un constructeur pour l’adapter à vos besoins. Dans les deux cas, ces boîtes de dialogue seront comporte comme des boîtes de dialogue MFC standard, car ils sont dérivés de la [CCommonDialog classe](../../mfc/reference/ccommondialog-class.md). `CFileDialog`s’appuie sur le COMMDLG. Fichier DLL qui est inclus dans Windows.  
+ Vous pouvez utiliser `CFileDialog` en l’état avec le constructeur fourni, ou vous pouvez dériver votre propre classe de boîte de dialogue de `CFileDialog` et écrire un constructeur pour l’adapter à vos besoins. Dans les deux cas, ces boîtes de dialogue seront comporte comme des boîtes de dialogue MFC standard, car ils sont dérivés de la [CCommonDialog classe](../../mfc/reference/ccommondialog-class.md). `CFileDialog` s’appuie sur le COMMDLG. Fichier DLL qui est inclus dans Windows.  
   
- L’apparence et les fonctionnalités de la `CFileDialog` avec [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] diffèrent des versions antérieures de Windows. La valeur par défaut `CFileDialog` utilise automatiquement la nouvelle [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style sans les modifications du code si un programme est compilé et exécuté sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Utilisez la `bVistaStyle` dans le constructeur de remplacer manuellement cette mise à jour automatique. L’exception à la mise à jour automatique est boîtes de dialogue personnalisées. Ils ne seront pas convertis vers le nouveau style. Pour plus d’informations sur le constructeur, consultez [CFileDialog::CFileDialog](#cfiledialog).  
+ L’apparence et la fonctionnalité de le `CFileDialog` avec Windows Vista ou versions ultérieures diffèrent des versions antérieures de Windows. La valeur par défaut `CFileDialog` utilise automatiquement le nouveau Windows Vista ou un style ultérieure sans modification du code si un programme est compilé et exécuté sous Windows Vista ou version ultérieure. Utilisez la `bVistaStyle` dans le constructeur de remplacer manuellement cette mise à jour automatique. L’exception à la mise à jour automatique est boîtes de dialogue personnalisées. Ils ne seront pas convertis vers le nouveau style. Pour plus d’informations sur le constructeur, consultez [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
->  Le système de contrôle de code diffère dans [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] à partir de versions antérieures de Windows, lorsque vous utilisez un `CFileDialog`. Vous devez mettre à jour toutes les références à `CFileDialog` contrôles dans le code avant que vous pouvez déplacer votre projet à partir d’une version antérieure de Windows.  
+>  Le système de contrôle de code diffère dans Windows Vista ou version ultérieure à partir de versions antérieures de Windows, lorsque vous utilisez un `CFileDialog`. Vous devez mettre à jour toutes les références à `CFileDialog` contrôles dans le code avant que vous pouvez déplacer votre projet à partir d’une version antérieure de Windows.  
   
- Certains `CFileDialog` méthodes ne sont pas prises en charge sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Consultez la rubrique de la méthode individuelle pour savoir si la méthode est prise en charge. En outre, les fonctions héritées suivantes ne sont pas pris en charge sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
+ Certains `CFileDialog` méthodes ne sont pas prises en charge sous Windows Vista ou version ultérieure. Consultez la rubrique de la méthode individuelle pour savoir si la méthode est prise en charge. En outre, les fonctions héritées suivantes ne sont pas pris en charge sous Windows Vista ou version ultérieure :  
   
 - [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)  
   
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)  
   
- Les messages windows pour le `CFileDialog` classe varient selon le système d’exploitation que vous utilisez. Par exemple, Windows XP ne prend pas en charge [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) et [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pour la `CFileDialog` classe. Toutefois, [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] les prend en charge. Pour plus d’informations sur les différents messages qui sont générés et l’ordre dans lequel ils sont reçus, consultez [CFileDialog, exemple : ordre des événements de journalisation](../../visual-cpp-samples.md).  
+ Les messages windows pour le `CFileDialog` classe varient selon le système d’exploitation que vous utilisez. Par exemple, Windows XP ne prend pas en charge [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) et [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pour la `CFileDialog` classe. Toutefois, Windows Vista et versions ultérieures prennent en charge les. Pour plus d’informations sur les différents messages qui sont générés et l’ordre dans lequel ils sont reçus, consultez [CFileDialog, exemple : ordre des événements de journalisation](../../visual-cpp-samples.md).  
   
  Pour utiliser un `CFileDialog` de l’objet, commencez par créer l’objet à l’aide de la `CFileDialog` constructeur. Une fois que la boîte de dialogue a été construite, vous pouvez définir ou modifier des valeurs de la [CFileDialog::m_ofn](#m_ofn) structure pour initialiser les valeurs ou les États de contrôle de la boîte de dialogue. Le `m_ofn` structure est de type `OPENFILENAME`. Pour plus d’informations, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure dans le SDK Windows.  
   
- Après avoir initialisé les contrôles de boîte de dialogue, appelez le [CFileDialog::DoModal](#domodal) méthode pour afficher la boîte de dialogue zone afin que l’utilisateur peut taper le chemin d’accès et nom de fichier. `DoModal`Retourne si l’utilisateur clique sur OK (IDOK) ou sur le bouton Annuler (IDCANCEL). Si `DoModal` retourne IDOK, vous pouvez utiliser l’une de le `CFileDialog` les fonctions membres publiques pour récupérer les informations insérées par l’utilisateur.  
+ Après avoir initialisé les contrôles de boîte de dialogue, appelez le [CFileDialog::DoModal](#domodal) méthode pour afficher la boîte de dialogue zone afin que l’utilisateur peut taper le chemin d’accès et nom de fichier. `DoModal` Retourne si l’utilisateur clique sur OK (IDOK) ou sur le bouton Annuler (IDCANCEL). Si `DoModal` retourne IDOK, vous pouvez utiliser l’une de le `CFileDialog` les fonctions membres publiques pour récupérer les informations insérées par l’utilisateur.  
   
 > [!NOTE]
->  Sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], plusieurs appels à [IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980) provoque une erreur. Le deuxième appel à `SetFileTypes` pour n’importe quelle instance d’un `CFileDialog` retournera `E_UNEXPECTED` dans [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Certains `CFileDialog` méthode fonctions appellent `SetFileTypes`. Par exemple, deux appels à `CFileDialog::DoModal` pour la même instance d’un `CFileDialog` génère [ASSERT](diagnostic-services.md#assert).  
+> Sous Windows Vista ou version ultérieure, plusieurs appels à [IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980) provoque une erreur. Le deuxième appel à `SetFileTypes` pour n’importe quelle instance d’un `CFileDialog` retournera `E_UNEXPECTED` dans Windows Vista ou version ultérieure. Certains `CFileDialog` méthode fonctions appellent `SetFileTypes`. Par exemple, deux appels à `CFileDialog::DoModal` pour la même instance d’un `CFileDialog` génère [ASSERT](diagnostic-services.md#assert).  
   
- `CFileDialog`inclut plusieurs membres protégés qui vous permettent d’effectuer une gestion personnalisée des violations de partage, validation du nom du fichier et notification de modification de zone de liste. Ces membres protégés sont des fonctions de rappel que la plupart des applications n’ont pas à utiliser, car la gestion par défaut est effectuée automatiquement. Les entrées de table des messages pour ces fonctions ne sont pas requises, car elles sont des fonctions virtuelles standards.  
+ `CFileDialog` inclut plusieurs membres protégés qui vous permettent d’effectuer une gestion personnalisée des violations de partage, validation du nom du fichier et notification de modification de zone de liste. Ces membres protégés sont des fonctions de rappel que la plupart des applications n’ont pas à utiliser, car la gestion par défaut est effectuée automatiquement. Les entrées de table des messages pour ces fonctions ne sont pas requises, car elles sont des fonctions virtuelles standards.  
   
  Vous pouvez utiliser les fenêtres [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et en savoir plus sur l’erreur.  
   
@@ -280,7 +280,7 @@ class CFileDialog : public CCommonDialog
   
  Pour permettre à l’utilisateur de sélectionner plusieurs fichiers, définissez le `OFN_ALLOWMULTISELECT` indicateur avant d’appeler `DoModal`. Vous devez fournir votre propre tampon du nom de fichier pour prendre en charge de la liste retournée de plusieurs noms de fichiers. Cela en remplaçant `m_ofn.lpstrFile` avec un pointeur vers une mémoire tampon vous avez alloué, après avoir construit la `CFileDialog`, mais avant d’appeler `DoModal`.  
   
- En outre, vous devez définir `m_ofn.nMaxFile` en utilisant le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de la mémoire tampon requise est `n * (_MAX_PATH + 1) + 1`. Le premier élément retourné dans la mémoire tampon est le chemin d’accès au dossier dans lequel les fichiers ont été sélectionnés. Pour [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]-boîtes de dialogue, les chaînes de noms de répertoires et les fichiers sont terminée par null, avec un caractère null supplémentaire après le dernier nom de fichier. Ce format permet les boîtes de dialogue de style Explorateur retourner les noms de fichiers longs incluant des espaces. Pour les boîtes de dialogue de style ancien, les chaînes de noms de répertoires et les fichiers sont séparés par des espaces et la fonction utilise les noms de fichiers courts pour les noms de fichiers avec des espaces.  
+ En outre, vous devez définir `m_ofn.nMaxFile` en utilisant le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de la mémoire tampon requise est `n * (_MAX_PATH + 1) + 1`. Le premier élément retourné dans la mémoire tampon est le chemin d’accès au dossier dans lequel les fichiers ont été sélectionnés. Pour Windows Vista ou les boîtes de dialogue de versions ultérieures de style, les chaînes de noms de répertoires et les fichiers sont terminée par null, avec un caractère null supplémentaire après le dernier nom de fichier. Ce format permet les boîtes de dialogue de style Explorateur retourner les noms de fichiers longs incluant des espaces. Pour les boîtes de dialogue de style ancien, les chaînes de noms de répertoires et les fichiers sont séparés par des espaces et la fonction utilise les noms de fichiers courts pour les noms de fichiers avec des espaces.  
   
  L’exemple suivant montre comment utiliser une mémoire tampon pour récupérer et liste de plusieurs noms de fichiers.  
   
@@ -292,7 +292,7 @@ class CFileDialog : public CCommonDialog
   
  Pour personnaliser la boîte de dialogue, dérivez une classe de `CFileDialog`, de fournir un modèle de boîte de dialogue personnalisée et ajouter une table des messages pour traiter les messages de notification à partir de contrôles étendus. Passer des messages non traités à la classe de base. Vous n’avez pas à personnaliser la fonction de raccordement.  
   
- Lorsque vous utilisez la [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style de la `CFileDialog`, vous ne pouvez pas utiliser les tables des messages et les modèles de boîte de dialogue. Au lieu de cela, vous devez utiliser les interfaces COM pour une fonctionnalité similaire.  
+ Lorsque vous utilisez le Windows Vista ou ultérieur style de la `CFileDialog`, vous ne pouvez pas utiliser les tables des messages et les modèles de boîte de dialogue. Au lieu de cela, vous devez utiliser les interfaces COM pour une fonctionnalité similaire.  
   
  Pour plus d’informations sur l’utilisation de `CFileDialog`, consultez [des Classes de boîte de dialogue communes](../../mfc/common-dialog-classes.md).  
   
@@ -309,10 +309,10 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdlgs.h  
   
-##  <a name="addcheckbutton"></a>CFileDialog::AddCheckButton  
+##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton  
  Ajoute un bouton de vérification de la boîte de dialogue.  
   
 ```  
@@ -330,11 +330,11 @@ HRESULT AddCheckButton(
  Nom du bouton de vérification.  
   
  `bChecked`  
- Valeur booléenne qui indique l’état actuel de la coche. `TRUE`Si elle est activée ; `FALSE` dans le cas contraire  
+ Valeur booléenne qui indique l’état actuel de la coche. `TRUE` Si elle est activée ; `FALSE` dans le cas contraire  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addcombobox"></a>CFileDialog::AddComboBox  
+##  <a name="addcombobox"></a>  CFileDialog::AddComboBox  
  Ajoute une zone de liste déroulante à la boîte de dialogue.  
   
 ```  
@@ -347,7 +347,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addcontrolitem"></a>CFileDialog::AddControlItem  
+##  <a name="addcontrolitem"></a>  CFileDialog::AddControlItem  
  Ajoute un élément à un contrôle conteneur dans la boîte de dialogue.  
   
 ```  
@@ -369,7 +369,7 @@ HRESULT AddControlItem(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addeditbox"></a>CFileDialog::AddEditBox  
+##  <a name="addeditbox"></a>  CFileDialog::AddEditBox  
  Ajoute une zone d’édition à la boîte de dialogue.  
   
 ```  
@@ -387,7 +387,7 @@ HRESULT AddEditBox(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addmenu"></a>CFileDialog::AddMenu  
+##  <a name="addmenu"></a>  CFileDialog::AddMenu  
  Ajoute un menu à la boîte de dialogue.  
   
 ```  
@@ -405,7 +405,7 @@ HRESULT AddMenu(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addplace"></a>CFileDialog::AddPlace  
+##  <a name="addplace"></a>  CFileDialog::AddPlace  
  Ajoute qu'un dossier à la liste des places disponible pour l’utilisateur à ouvrir ou enregistrer des éléments.  
   
 ```  
@@ -431,7 +431,7 @@ void AddPlace(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addpushbutton"></a>CFileDialog::AddPushButton  
+##  <a name="addpushbutton"></a>  CFileDialog::AddPushButton  
  Ajoute un bouton à la boîte de dialogue.  
   
 ```  
@@ -449,7 +449,7 @@ HRESULT AddPushButton(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList  
+##  <a name="addradiobuttonlist"></a>  CFileDialog::AddRadioButtonList  
  Ajoute un groupe d’options (également appelé bouton radio) à la boîte de dialogue.  
   
 ```  
@@ -462,7 +462,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addseparator"></a>CFileDialog::AddSeparator  
+##  <a name="addseparator"></a>  CFileDialog::AddSeparator  
  Ajoute un séparateur à la boîte de dialogue.  
   
 ```  
@@ -475,7 +475,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addtext"></a>CFileDialog::AddText  
+##  <a name="addtext"></a>  CFileDialog::AddText  
  Ajoute du texte à la boîte de dialogue.  
   
 ```  
@@ -493,7 +493,7 @@ HRESULT AddText(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog  
+##  <a name="applyofntoshelldialog"></a>  CFileDialog::ApplyOFNToShellDialog  
  Met à jour l’état actuel de la [CFileDialog](../../mfc/reference/cfiledialog-class.md) basées sur les valeurs stockées dans le `m_ofn` structure de données.  
   
 ```  
@@ -501,16 +501,16 @@ void ApplyOFNToShellDialog();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Dans les versions de Windows antérieures à [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre ont été répercutées immédiatement dans l’état de la boîte de dialogue. En outre, toute modification apportée à l’état de la boîte de dialogue Mettre à jour immédiatement la `m_ofn` variable membre.  
+ Dans les versions de Windows antérieures à Windows Vista, le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre ont été répercutées immédiatement dans l’état de la boîte de dialogue. En outre, toute modification apportée à l’état de la boîte de dialogue Mettre à jour immédiatement la `m_ofn` variable membre.  
   
- Dans [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], les valeurs dans le `m_ofn` variable membre et l’état de la `CFileDialog` n’est pas garanti pour être synchronisé. Cette fonction force l’état de la `CFileDialog` mise à jour pour correspondre à la `m_ofn` structure. Windows appelle cette fonction automatiquement lors de la [CFileDialog::DoModal](#domodal).  
+ Dans Windows Vista ou version ultérieure, les valeurs dans le `m_ofn` variable membre et l’état de la `CFileDialog` n’est pas garanti pour être synchronisé. Cette fonction force l’état de la `CFileDialog` mise à jour pour correspondre à la `m_ofn` structure. Windows appelle cette fonction automatiquement lors de la [CFileDialog::DoModal](#domodal).  
   
- Pour plus d’informations sur l’utilisation de la `CFileDialog` classe sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
+ Pour plus d’informations sur l’utilisation de la `CFileDialog` classe sous Windows Vista ou version ultérieure, consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog).  
   
-##  <a name="cfiledialog"></a>CFileDialog::CFileDialog  
+##  <a name="cfiledialog"></a>  CFileDialog::CFileDialog  
  Appelez cette fonction pour construire une boîte de dialogue Windows standard.  
   
 ```  
@@ -545,10 +545,10 @@ explicit CFileDialog(
  Pointeur vers la fenêtre parente ou propriétaire de la boîte de dialogue de fichier.  
   
  [in] `dwSize`  
- La taille de la `OPENFILENAME` structure. Cette valeur dépend de la version du système d’exploitation. MFC utilisé ce paramètre pour déterminer le type approprié de la boîte de dialogue pour créer (par exemple, nou [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] boîtes de dialogue au lieu de boîtes de dialogue NT4). La taille par défaut de 0 signifie que le code MFC déterminent la taille de la boîte de dialogue correct à utiliser en fonction de la version du système d’exploitation sur lequel le programme est exécuté.  
+ La taille de la `OPENFILENAME` structure. Cette valeur dépend de la version du système d’exploitation. MFC permet de déterminer le type approprié de la boîte de dialogue pour créer ce paramètre. La taille par défaut de 0 signifie que le code MFC déterminent la taille de la boîte de dialogue correct à utiliser en fonction de la version du système d’exploitation sur lequel le programme est exécuté.  
   
  [in] `bVistaStyle`  
- **Remarque** ce paramètre est disponible dans Visual Studio 2008 et versions ultérieures et elle va entraîner la boîte de dialogue Nouveau style à utiliser uniquement si vous exécutez [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] ou version ultérieure.  
+ **Remarque** ce paramètre est disponible dans Visual Studio 2008 et versions ultérieures et elle va entraîner la boîte de dialogue Nouveau style à utiliser uniquement si vous exécutez dans Windows Vista ou version ultérieure.  
   
  Le paramètre qui spécifie le style de la boîte de dialogue de fichier. Affectez-lui la valeur `TRUE` à utiliser les boîtes de dialogue de fichier de style Vista nouvelle. Dans le cas contraire, l’ancien style des boîtes de dialogue servira. Consultez la section Notes pour plus d’informations en cours d’exécution sous Vista.  
   
@@ -557,28 +557,28 @@ explicit CFileDialog(
   
  Spécification d’une extension par défaut à l’aide `lpszDefExt` peut ne pas produire le comportement que vous attendez, car il est rarement prévisibles les extensions ont des associations de fichiers sur l’ordinateur de l’utilisateur. Si vous avez besoin de davantage de contrôle sur l’ajout d’une extension par défaut, vous pouvez dériver votre propre classe de `CFileDialog`et remplacez le `CFileDialog::OnFileNameOK` méthode pour effectuer votre propre gestion de l’extension.  
   
- Pour activer l’utilisateur de sélectionner plusieurs fichiers, définissez le `OFN_ALLOWMULTISELECT` indicateur avant d’appeler [DoModal](#domodal). Vous devez fournir votre propre tampon du nom de fichier pour stocker la liste retournée de plusieurs noms de fichiers. Cela en remplaçant `m_ofn.lpstrFile` avec un pointeur vers une mémoire tampon vous avez alloué, après avoir construit la [CFileDialog](../../mfc/reference/cfiledialog-class.md), mais avant d’appeler `DoModal`. En outre, vous devez définir `m_ofn.nMaxFile` avec le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de mémoire tampon nécessaire est `n`*(_MAX_PATH + 1) + 1. Exemple :  
+ Pour activer l’utilisateur de sélectionner plusieurs fichiers, définissez le `OFN_ALLOWMULTISELECT` indicateur avant d’appeler [DoModal](#domodal). Vous devez fournir votre propre tampon du nom de fichier pour stocker la liste retournée de plusieurs noms de fichiers. Cela en remplaçant `m_ofn.lpstrFile` avec un pointeur vers une mémoire tampon vous avez alloué, après avoir construit la [CFileDialog](../../mfc/reference/cfiledialog-class.md), mais avant d’appeler `DoModal`. En outre, vous devez définir `m_ofn.nMaxFile` avec le nombre de caractères dans la mémoire tampon pointée par `m_ofn.lpstrFile`. Si vous définissez le nombre maximal de fichiers à sélectionner pour `n`, la taille de mémoire tampon nécessaire est `n`*(_MAX_PATH + 1) + 1. Par exemple :  
   
  [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
   
  Pour activer l’utilisateur de redimensionner une boîte de dialogue Explorer-style à l’aide de la souris ou du clavier, définissez la `OFN_ENABLESIZING` indicateur. Définition de cet indicateur est uniquement nécessaire si vous fournissez une procédure de raccordement ou d’un modèle personnalisé. L’indicateur fonctionne uniquement avec une boîte de dialogue Explorer-style ; boîtes de dialogue de l’ancienne ne peut pas être redimensionnés.  
   
- Le `lpszFilter` paramètre est utilisé pour déterminer le type d’un fichier doit avoir pour être affiché dans la liste des fichiers de nom de fichier. La première chaîne de la paire de chaîne décrit le filtre ; la seconde indique l’extension de nom de fichier à utiliser. Plusieurs extensions peuvent être spécifiées à l’aide d’un point-virgule (le caractère « ; ») comme délimiteur. La chaîne se termine par deux signes « &#124;' caractères suivis d’un `NULL` caractère. Vous pouvez également utiliser un [CString](../../atl-mfc-shared/using-cstring.md) objet pour ce paramètre.  
+ Le `lpszFilter` paramètre est utilisé pour déterminer le type d’un fichier doit avoir pour être affiché dans la liste des fichiers de nom de fichier. La première chaîne de la paire de chaîne décrit le filtre ; la seconde indique l’extension de nom de fichier à utiliser. Plusieurs extensions peuvent être spécifiées à l’aide d’un point-virgule (le caractère « ; ») comme délimiteur. La chaîne se termine avec deux '&#124;' caractères suivis d’un `NULL` caractère. Vous pouvez également utiliser un [CString](../../atl-mfc-shared/using-cstring.md) objet pour ce paramètre.  
   
  Par exemple, [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] permet aux utilisateurs d’ouvrir des fichiers qui ont des extensions .xlc (graphique) ou .xls (feuille de calcul), entre autres. Le filtre pour Excel peut être écrite en tant que :  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
- Toutefois, si vous envisagez d’utiliser cette chaîne directement mettre à jour le `OPENFILENAME` structure, vous devez délimiter vos chaînes avec le caractère null, « \0 », au lieu des barres verticales (« &#124;').  
+ Toutefois, si vous envisagez d’utiliser cette chaîne directement mettre à jour le `OPENFILENAME` structure, vous devez délimiter vos chaînes avec le caractère null, « \0 », au lieu des barres verticales («&#124;»).  
   
- Le `bVistaStyle` paramètre s’applique uniquement lors de l’exécution sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Dans les versions antérieures de Windows, ce paramètre est ignoré. Si `bVistaStyle` a la valeur `TRUE`, lorsque vous compilez un programme avec Visual Studio 2008 ou version ultérieure, le nouveau style Vista **boîte de dialogue fichier** sera utilisé. Dans le cas contraire, le style MFC précédent **boîte de dialogue fichier** sera utilisé.  
+ Le `bVistaStyle` paramètre s’applique uniquement lors de l’exécution sous Windows Vista ou version ultérieure. Dans les versions antérieures de Windows, ce paramètre est ignoré. Si `bVistaStyle` a la valeur `TRUE`, lorsque vous compilez un programme avec Visual Studio 2008 ou version ultérieure, le nouveau style Vista **boîte de dialogue fichier** sera utilisé. Dans le cas contraire, le style MFC précédent **boîte de dialogue fichier** sera utilisé.  
   
- Modèles de boîte de dialogue ne sont pas pris en charge sur les boîtes de dialogue en fonction de`bVistaStyle`  
+ Modèles de boîte de dialogue ne sont pas pris en charge sur les boîtes de dialogue en fonction de `bVistaStyle`  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFileDialog::DoModal](#domodal).  
   
-##  <a name="domodal"></a>CFileDialog::DoModal  
+##  <a name="domodal"></a>  CFileDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue Fichier commune Windows et autoriser l’utilisateur à parcourir des fichiers et des répertoires et entrez un nom de fichier.  
   
 ```  
@@ -597,12 +597,12 @@ virtual INT_PTR DoModal();
   
  Lorsque l’utilisateur clique sur la boîte de dialogue boutons OK ou sur Annuler, ou qu’il sélectionne la fermeture d’option à partir de la boîte de dialogue contrôle de menu, le contrôle est renvoyé à votre application. Vous pouvez ensuite appeler d’autres fonctions membres pour récupérer les paramètres ou les informations de l’entrée d’utilisateur dans la boîte de dialogue.  
   
- `DoModal`est une fonction virtuelle substituée à partir de la classe `CDialog`.  
+ `DoModal` est une fonction virtuelle substituée à partir de la classe `CDialog`.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]  
   
-##  <a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown  
+##  <a name="enableopendropdown"></a>  CFileDialog::EnableOpenDropDown  
  Permet à une liste déroulante à l’ouverture ou de bouton dans la boîte de dialogue Enregistrer.  
   
 ```  
@@ -615,7 +615,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="endvisualgroup"></a>CFileDialog::EndVisualGroup  
+##  <a name="endvisualgroup"></a>  CFileDialog::EndVisualGroup  
  Arrête l’ajout d’éléments à un groupe visual dans la boîte de dialogue.  
   
 ```  
@@ -627,7 +627,7 @@ HRESULT EndVisualGroup();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState  
+##  <a name="getcheckbuttonstate"></a>  CFileDialog::GetCheckButtonState  
  Récupère l’état actuel d’un bouton de vérification (case à cocher) dans la boîte de dialogue.  
   
 ```  
@@ -641,11 +641,11 @@ HRESULT GetCheckButtonState(
  ID de la case à cocher.  
   
  `bChecked`  
- L’état de la case à cocher. `TRUE`Indique activé ; `FALSE` indique est désactivée.  
+ L’état de la case à cocher. `TRUE` Indique activé ; `FALSE` indique est désactivée.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState  
+##  <a name="getcontrolitemstate"></a>  CFileDialog::GetControlItemState  
  Récupère l’état actuel d’un élément dans un contrôle de conteneur trouvé dans la boîte de dialogue.  
   
 ```  
@@ -667,7 +667,7 @@ HRESULT GetControlItemState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getcontrolstate"></a>CFileDialog::GetControlState  
+##  <a name="getcontrolstate"></a>  CFileDialog::GetControlState  
  Récupère la visibilité et activé des États d’un contrôle donné.  
   
 ```  
@@ -685,7 +685,7 @@ HRESULT GetControlState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="geteditboxtext"></a>CFileDialog::GetEditBoxText  
+##  <a name="geteditboxtext"></a>  CFileDialog::GetEditBoxText  
  Récupère le texte actuel dans un contrôle de zone d’édition.  
   
 ```  
@@ -703,7 +703,7 @@ HRESULT GetEditBoxText(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getfileext"></a>CFileDialog::GetFileExt  
+##  <a name="getfileext"></a>  CFileDialog::GetFileExt  
  Appelez cette fonction pour récupérer de l’extension du nom de fichier entré dans la boîte de dialogue.  
   
 ```  
@@ -718,7 +718,7 @@ CString GetFileExt() const;
   
  Si `m_ofn.Flags` a le `OFN_ALLOWMULTISELECT` indicateur est défini, cette chaîne contient une séquence de chaînes se terminant par null, avec la première chaîne est le chemin d’accès du répertoire du groupe de fichiers sélectionné, suivie des noms de tous les fichiers sélectionnés par l’utilisateur. Pour récupérer les chemins d’accès de fichier, utilisez le [GetStartPosition](#getstartposition) et [GetNextPathName](#getnextpathname) fonctions membres.  
   
-##  <a name="getfilename"></a>CFileDialog::GetFileName  
+##  <a name="getfilename"></a>  CFileDialog::GetFileName  
  Appelez cette fonction pour récupérer le nom du nom de fichier entré dans la boîte de dialogue.  
   
 ```  
@@ -733,7 +733,7 @@ CString GetFileName() const;
   
  Si `m_ofn.Flags` a le `OFN_ALLOWMULTISELECT` l’indicateur est défini, vous devez appeler [GetStartPosition](#getstartposition) et [GetNextPathName](#getnextpathname) pour récupérer un chemin d’accès de fichier.  
   
-##  <a name="getfiletitle"></a>CFileDialog::GetFileTitle  
+##  <a name="getfiletitle"></a>  CFileDialog::GetFileTitle  
  Appelez cette fonction pour récupérer le titre du fichier entré dans la boîte de dialogue.  
   
 ```  
@@ -751,7 +751,7 @@ CString GetFileTitle() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFileDialog::DoModal](#domodal).  
   
-##  <a name="getfolderpath"></a>CFileDialog::GetFolderPath  
+##  <a name="getfolderpath"></a>  CFileDialog::GetFolderPath  
  Appelez cette fonction membre pour récupérer le chemin d’accès du dossier actuellement ouvert ou du répertoire pour une boîte de dialogue commune Explorer-style ouvrir ou enregistrer sous.  
   
 ```  
@@ -766,7 +766,7 @@ CString GetFolderPath() const;
   
  Vous pouvez appeler cette méthode uniquement lors de la boîte de dialogue s’affiche. La boîte de dialogue a été fermée, cette fonction ne fonctionnera plus et la méthode échoue avec une assertion.  
   
-##  <a name="getifiledialogcustomize"></a>CFileDialog::GetIFileDialogCustomize  
+##  <a name="getifiledialogcustomize"></a>  CFileDialog::GetIFileDialogCustomize  
  Récupère un pointeur vers l’objet COM interne pour une donnée [CFileDialog](../../mfc/reference/cfiledialog-class.md).  
   
 ```  
@@ -777,16 +777,16 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] avec un objet qui a `bVistaStyle` la valeur `true`. Si vous utilisez cette fonction lorsque `bVistaStyle` est `false`, elle retournera `NULL` en mode version finale et lève une assertion en mode débogage.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Si vous utilisez cette fonction lorsque `bVistaStyle` est `false`, elle retournera `NULL` en mode version finale et lève une assertion en mode débogage.  
   
  Pour plus d’informations sur la `IFileDialogCustomize` l’interface, consultez [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
 ### <a name="example"></a>Exemple  
- Cet exemple récupère l’objet COM interne. Pour exécuter cet exemple de code, vous devez le compiler sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Cet exemple récupère l’objet COM interne. Pour exécuter cet exemple de code, vous devez le compiler sous Windows Vista ou version ultérieure.  
   
  [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]  
   
-##  <a name="getifileopendialog"></a>CFileDialog::GetIFileOpenDialog  
+##  <a name="getifileopendialog"></a>  CFileDialog::GetIFileOpenDialog  
  Récupère un pointeur vers l’objet COM interne pour une donnée `CFileDialog`.  
   
 ```  
@@ -797,16 +797,16 @@ IFileOpenDialog* GetIFileOpenDialog();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **ouvrir** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **ouvrir** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
   
  Pour plus d’informations sur la `IFileOpenDialog` l’interface, consultez [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
 ### <a name="example"></a>Exemple  
- Cet exemple récupère l’objet COM interne. Pour exécuter ce code, vous devez le compiler sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Cet exemple récupère l’objet COM interne. Pour exécuter ce code, vous devez le compiler sous Windows Vista ou version ultérieure.  
   
  [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]  
   
-##  <a name="getifilesavedialog"></a>CFileDialog::GetIFileSaveDialog  
+##  <a name="getifilesavedialog"></a>  CFileDialog::GetIFileSaveDialog  
  Récupère un pointeur vers l’objet COM interne pour une donnée `CFileDialog`.  
   
 ```  
@@ -817,16 +817,16 @@ IFileSaveDialog* GetIFileSaveDialog();
  Le pointeur vers l’objet COM interne pour le `CFileDialog`. Il vous incombe de libérer ce pointeur en conséquence.  
   
 ### <a name="remarks"></a>Notes  
- Utilisez cette fonction uniquement sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **enregistrer** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
+ Utilisez cette fonction uniquement sous Windows Vista ou version ultérieure avec un objet qui a `bVistaStyle` la valeur `true`. Cette fonction retourne `NULL` si le `CFileDialog` n’est pas un **enregistrer** boîte de dialogue ou si `bVistaStyle` a la valeur `false`. Dans ce dernier cas, la fonction retourne uniquement `NULL` en mode release - en mode débogage il lèvera une assertion.  
   
  Pour plus d’informations sur la `IFileSaveDialog` l’interface, consultez [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
 ### <a name="example"></a>Exemple  
- Cet exemple récupère l’objet COM interne. Pour exécuter cet exemple de code, vous devez le compiler sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Cet exemple récupère l’objet COM interne. Pour exécuter cet exemple de code, vous devez le compiler sous Windows Vista ou version ultérieure.  
   
  [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]  
   
-##  <a name="getnextpathname"></a>CFileDialog::GetNextPathName  
+##  <a name="getnextpathname"></a>  CFileDialog::GetNextPathName  
  Appelez cette fonction pour récupérer le nom de fichier suivant dans le groupe sélectionné dans la boîte de dialogue.  
   
 ```  
@@ -845,7 +845,7 @@ CString GetNextPathName(POSITION& pos) const;
   
  Si la sélection se compose d’un seul fichier, ce nom de fichier s’affichera.  
   
-##  <a name="getofn"></a>CFileDialog::GetOFN  
+##  <a name="getofn"></a>  CFileDialog::GetOFN  
  Récupère les informations associé **OPENFILENAME** structure.  
   
 ```  
@@ -860,7 +860,7 @@ OPENFILENAME& GetOFN();
 ### <a name="remarks"></a>Notes  
  Utiliser la deuxième version de cette fonction pour initialiser l’apparence d’un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue une fois qu’il est construit mais avant qu’il est affiché avec la `DoModal` fonction membre. Par exemple, vous pouvez définir le **lpstrTitle** membre **m_ofn** à la légende vous souhaitez disposer de la boîte de dialogue.  
   
-##  <a name="getpathname"></a>CFileDialog::GetPathName  
+##  <a name="getpathname"></a>  CFileDialog::GetPathName  
  Appelez cette fonction pour récupérer le chemin d’accès complet du fichier entré dans la boîte de dialogue.  
   
 ```  
@@ -878,7 +878,7 @@ CString GetPathName() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFileDialog::DoModal](#domodal).  
   
-##  <a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref  
+##  <a name="getreadonlypref"></a>  CFileDialog::GetReadOnlyPref  
  Appelez cette fonction pour déterminer si la case à cocher lecture seule a été sélectionnée dans les Windows File Open et enregistrez le fichier sous boîtes de dialogue standard.  
   
 ```  
@@ -892,9 +892,9 @@ BOOL GetReadOnlyPref() const;
  Vous pouvez masquer la case à cocher lecture seule en définissant le `OFN_HIDEREADONLY` de style dans le `CFileDialog` constructeur.  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]style `CFileDialog` objets ne prennent pas en charge cette fonction. Toute tentative d’utilisation de cette fonction sur un [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style `CFileDialog` lève [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).   
+> Windows Vista ou versions ultérieur style `CFileDialog` objets ne prennent pas en charge cette fonction. Toute tentative d’utilisation de cette fonction sur Windows Vista ou versions ultérieur style `CFileDialog` lève [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).   
   
-##  <a name="getresult"></a>CFileDialog::GetResult  
+##  <a name="getresult"></a>  CFileDialog::GetResult  
  Récupère le choix de l’utilisateur dans la boîte de dialogue.  
   
 ```  
@@ -906,7 +906,7 @@ IShellItem* GetResult() throw();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getresults"></a>CFileDialog::GetResults  
+##  <a name="getresults"></a>  CFileDialog::GetResults  
  Récupère le choix de l’utilisateur dans une boîte de dialogue qui permet la sélection multiple.  
   
 ```  
@@ -918,7 +918,7 @@ IShellItemArray* GetResults() throw();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem  
+##  <a name="getselectedcontrolitem"></a>  CFileDialog::GetSelectedControlItem  
  Récupère un élément particulier à partir du contrôle conteneur spécifié dans la boîte de dialogue.  
   
 ```  
@@ -936,7 +936,7 @@ HRESULT GetSelectedControlItem(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getstartposition"></a>CFileDialog::GetStartPosition  
+##  <a name="getstartposition"></a>  CFileDialog::GetStartPosition  
  Appelez cette fonction membre pour récupérer la position du premier chemin d’accès de fichier dans la liste, si `m_ofn.Flags` a le `OFN_ALLOWMULTISELECT` l’indicateur.  
   
 ```  
@@ -946,7 +946,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui peut être utilisé pour l’itération ; **NULL** si la liste est vide.  
   
-##  <a name="hidecontrol"></a>CFileDialog::HideControl  
+##  <a name="hidecontrol"></a>  CFileDialog::HideControl  
  Appelez cette fonction membre pour masquer le contrôle spécifié dans la boîte de dialogue commune Explorer-style ouvrir ou enregistrer sous.  
   
 ```  
@@ -960,7 +960,7 @@ void HideControl(int nID);
 ### <a name="remarks"></a>Notes  
  La boîte de dialogue doit avoir été créée avec la **OFN_EXPLORER** style ; sinon, la fonction échoue avec une assertion.  
   
-##  <a name="ispickfoldersmode"></a>CFileDialog::IsPickFoldersMode  
+##  <a name="ispickfoldersmode"></a>  CFileDialog::IsPickFoldersMode  
  Détermine si la boîte de dialogue active est en mode de sélecteur de dossier.  
   
 ```  
@@ -968,21 +968,21 @@ BOOL IsPickFoldersMode() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la boîte de dialogue est en mode de sélecteur de dossier ; dans le cas contraire `FALSE`.  
+ `TRUE` Si la boîte de dialogue est en mode de sélecteur de dossier ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="m_ofn"></a>CFileDialog::m_ofn  
- `m_ofn`est une structure de type `OPENFILENAME`. Les données de cette structure représentent l’état actuel de la `CFileDialog`.  
+##  <a name="m_ofn"></a>  CFileDialog::m_ofn  
+ `m_ofn` est une structure de type `OPENFILENAME`. Les données de cette structure représentent l’état actuel de la `CFileDialog`.  
   
 ### <a name="remarks"></a>Notes  
  Utiliser cette structure pour initialiser l’apparence d’un **ouvrir le fichier** ou **enregistrer le fichier sous** boîte de dialogue après avoir il construit mais avant de les afficher avec les [DoModal](#domodal) (méthode). Par exemple, vous pouvez définir le `lpstrTitle` membre `m_ofn` à la légende vous souhaitez disposer de la boîte de dialogue.  
   
- Avec la [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style de [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` toujours correspondre à l’état de la boîte de dialogue n’est pas garantie. Il est synchronisé avec la boîte de dialogue dans les versions antérieures de Windows. Consultez [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) et [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) pour plus d’informations sur la synchronisation de la `m_ofn` structure et le `CFileDialog` état sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Avec le Windows Vista ou ultérieur style de [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` toujours correspondre à l’état de la boîte de dialogue n’est pas garantie. Il est synchronisé avec la boîte de dialogue dans les versions antérieures de Windows. Consultez [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) et [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) pour plus d’informations sur la synchronisation de la `m_ofn` structure et le `CFileDialog` état sous Windows Vista ou version ultérieure.  
   
- [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]boîtes de dialogue de fichier style ne prennent pas en charge les certains membres et les indicateurs de le `CFileDialog`. Par conséquent, il aura aucun effet.  
+ Windows Vista ou les boîtes de dialogue de fichier style ultérieure ne gèrent pas certains membres et les indicateurs de le `CFileDialog`. Par conséquent, il aura aucun effet.  
   
- Voici une liste des membres qui ne sont pas pris en charge par [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]:  
+ Voici une liste des membres qui ne sont pas pris en charge par Windows Vista ou version ultérieure :  
   
 - `lpstrCustomFilter`  
   
@@ -994,7 +994,7 @@ BOOL IsPickFoldersMode() const;
   
 - `lpTemplateName`  
   
- Les indicateurs suivants ne sont pas prises en charge et par conséquent n’ont aucun effet lorsque vous utilisez la [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] style de `CFileDialog`:  
+ Les indicateurs suivants ne sont pas prises en charge et par conséquent n’ont aucun effet lorsque vous utilisez le Windows Vista ou ultérieur style de `CFileDialog`:  
   
 -   OFN_ENABLEHOOK  
   
@@ -1010,11 +1010,11 @@ BOOL IsPickFoldersMode() const;
   
 -   OFN_HIDEREADONLY  
   
--   OFN_LONGNAMES - efficacement toujours sur dans[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_LONGNAMES - efficacement toujours sur Windows Vista ou version ultérieure  
   
--   OFN_NOLONGNAMES - efficacement toujours inactif dans[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_NOLONGNAMES - off efficacement toujours dans Windows Vista ou version ultérieure  
   
--   OFN_NONETWORKBUTTON - efficacement toujours sur dans[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+-   OFN_NONETWORKBUTTON - efficacement toujours sur Windows Vista ou version ultérieure  
   
 -   OFN_READONLY  
   
@@ -1022,7 +1022,7 @@ BOOL IsPickFoldersMode() const;
   
  Pour plus d’informations sur cette structure, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure dans le SDK Windows.  
   
-##  <a name="makeprominent"></a>CFileDialog::MakeProminent  
+##  <a name="makeprominent"></a>  CFileDialog::MakeProminent  
  Place un contrôle dans la boîte de dialogue afin qu’il soit par rapport à d’autres contrôles.  
   
 ```  
@@ -1035,7 +1035,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked  
+##  <a name="onbuttonclicked"></a>  CFileDialog::OnButtonClicked  
  Appelé lorsque le bouton est activé.  
   
 ```  
@@ -1048,7 +1048,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled  
+##  <a name="oncheckbuttontoggled"></a>  CFileDialog::OnCheckButtonToggled  
  Appelé lorsque la case à cocher est activée ou désactivée.  
   
 ```  
@@ -1066,7 +1066,7 @@ virtual void OnCheckButtonToggled(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="oncontrolactivating"></a>CFileDialog::OnControlActivating  
+##  <a name="oncontrolactivating"></a>  CFileDialog::OnControlActivating  
  Appelé lorsque le contrôle est activé.  
   
 ```  
@@ -1079,7 +1079,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onfilenamechange"></a>CFileDialog::OnFileNY` `modification  
+##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNY` `modification  
  Substituez cette méthode si vous souhaitez gérer les `WM_NOTIFY` `CDN_SELCHANGE` message.  
   
 ```  
@@ -1091,7 +1091,7 @@ virtual void OnFileNameChange();
   
  Le système envoie ce message uniquement si la boîte de dialogue a été créée avec l’indicateur OFN_EXPLORER sous tension. Pour plus d’informations sur la notification, consultez [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865). Pour plus d’informations sur l’indicateur OFN_EXPLORER, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure et [ouvrir et enregistrer en tant que boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="onfilenameok"></a>CFileDialog::OnFileNameOK  
+##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK  
  Remplacez cette fonction uniquement si vous souhaitez fournir une validation personnalisée des noms de fichiers qui sont entrés dans une boîte de dialogue de fichier.  
   
 ```  
@@ -1106,7 +1106,7 @@ virtual BOOL OnFileNameOK();
   
  Si 1 est retournée, la boîte de dialogue restera affichée pour l’utilisateur à entrer un autre nom de fichier. La procédure de boîte de dialogue ferme la boîte de dialogue si la valeur de retour est 0. Autres différente de zéro valeurs de retour sont actuellement réservés et ne doivent pas être utilisés.  
   
-##  <a name="onfolderchange"></a>CFileDialog::OnFolderChange  
+##  <a name="onfolderchange"></a>  CFileDialog::OnFolderChange  
  Remplacez cette fonction pour gérer la **WM_NOTIFYCDN_FOLDERCHANGE** message.  
   
 ```  
@@ -1118,7 +1118,7 @@ virtual void OnFolderChange();
   
  Notification est envoyée uniquement si la boîte de dialogue a été créée avec le style OFN_EXPLORER. Pour plus d’informations sur la notification, consultez [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859). Pour plus d’informations sur le style OFN_EXPLORER, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure et [ouvrir et enregistrer en tant que boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="oninitdone"></a>CFileDialog::OnInitDone  
+##  <a name="oninitdone"></a>  CFileDialog::OnInitDone  
  Remplacez cette fonction pour gérer la `WM_NOTIFY` `CDN_INITDONE` message.  
   
 ```  
@@ -1131,9 +1131,9 @@ virtual void OnInitDone();
  Le système envoie cet uniquement si la boîte de dialogue a été créée avec le style OFN_EXPLORER. Pour plus d’informations sur la notification, consultez [CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863). Pour plus d’informations sur le style OFN_EXPLORER, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure et [ouvrir et enregistrer en tant que boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]boîtes de dialogue de fichier style ne prennent pas en charge cette fonction. Toute tentative d’utilisation de cette fonction sur un [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] boîte de dialogue de fichier style lève [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). 
+> Windows Vista ou les boîtes de dialogue de fichier style plus loin ne prennent pas en charge cette fonction. Si vous essayez d’utiliser cette fonction sur un Windows Vista ou une boîte de dialogue de fichier style plus loin [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). 
   
-##  <a name="onitemselected"></a>CFileDialog::OnItemSelected  
+##  <a name="onitemselected"></a>  CFileDialog::OnItemSelected  
  Appelé lorsque l’élément de conteneur est sélectionné.  
   
 ```  
@@ -1151,7 +1151,7 @@ virtual void OnItemSelected(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify  
+##  <a name="onlbselchangednotify"></a>  CFileDialog::OnLBSelChangedNotify  
  Cette fonction est appelée chaque fois que la sélection actuelle dans une zone de liste est sur le point de changer.  
   
 ```  
@@ -1182,7 +1182,7 @@ virtual void OnLBSelChangedNotify(
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour fournir une gestion personnalisée des modifications de sélection dans la zone de liste. Par exemple, vous pouvez utiliser cette fonction pour afficher les droits d’accès ou date-last-modified de chaque fichier de l’utilisateur sélectionne.  
   
-##  <a name="onshareviolation"></a>CFileDialog::OnShareViolation  
+##  <a name="onshareviolation"></a>  CFileDialog::OnShareViolation  
  Remplacez cette fonction pour fournir une gestion personnalisée des violations de partage.  
   
 ```  
@@ -1207,7 +1207,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
   
  Si vous souhaitez désactiver la vérification de violation de partage, utilisez l’opérateur OR pour combiner l’indicateur **OFN_SHAREAWARE** avec `m_ofn.Flags`.  
   
-##  <a name="ontypechange"></a>CFileDialog::OnTypeChange  
+##  <a name="ontypechange"></a>  CFileDialog::OnTypeChange  
  Remplacez cette fonction pour gérer la **WM_NOTIFYCDN_TYPECHANGE** message.  
   
 ```  
@@ -1219,7 +1219,7 @@ virtual void OnTypeChange();
   
  Notification est envoyée uniquement si la boîte de dialogue a été créée avec le style OFN_EXPLORER. Pour plus d’informations sur la notification, consultez [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868). Pour plus d’informations sur le style OFN_EXPLORER, consultez la [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) structure et [ouvrir et enregistrer en tant que boîtes de dialogue](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
   
-##  <a name="removecontrolitem"></a>CFileDialog::RemoveControlItem  
+##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem  
  Supprime un élément à partir d’un contrôle conteneur dans la boîte de dialogue.  
   
 ```  
@@ -1237,7 +1237,7 @@ HRESULT RemoveControlItem(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState  
+##  <a name="setcheckbuttonstate"></a>  CFileDialog::SetCheckButtonState  
  Définit l’état actuel d’un bouton de vérification (case à cocher) dans la boîte de dialogue.  
   
 ```  
@@ -1251,11 +1251,11 @@ HRESULT SetCheckButtonState(
  ID de la case à cocher.  
   
  `bChecked`  
- L’état de la case à cocher. `TRUE`Indique activé ; `FALSE` indique désactivé.  
+ L’état de la case à cocher. `TRUE` Indique activé ; `FALSE` indique désactivé.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState  
+##  <a name="setcontrolitemstate"></a>  CFileDialog::SetControlItemState  
  Définit l’état actuel d’un élément dans un contrôle conteneur trouvé dans la boîte de dialogue.  
   
 ```  
@@ -1277,7 +1277,7 @@ HRESULT SetControlItemState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText  
+##  <a name="setcontrolitemtext"></a>  CFileDialog::SetControlItemText  
  Définit le texte d’un élément de contrôle. Par exemple, le texte qui accompagne une case d’option ou d’un élément dans un menu.  
   
 ```  
@@ -1299,7 +1299,7 @@ HRESULT SetControlItemText(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcontrollabel"></a>CFileDialog::SetControlLabel  
+##  <a name="setcontrollabel"></a>  CFileDialog::SetControlLabel  
  Définit le texte associé à un contrôle, telles que le texte du bouton ou une étiquette de zone d’édition.  
   
 ```  
@@ -1317,7 +1317,7 @@ HRESULT SetControlLabel(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcontrolstate"></a>CFileDialog::SetControlState  
+##  <a name="setcontrolstate"></a>  CFileDialog::SetControlState  
  Définit la visibilité et activé des États d’un contrôle donné.  
   
 ```  
@@ -1335,7 +1335,7 @@ HRESULT SetControlState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setcontroltext"></a>CFileDialog::SetControlText  
+##  <a name="setcontroltext"></a>  CFileDialog::SetControlText  
  Appelez cette méthode pour définir le texte pour le contrôle spécifié dans un style de l’Explorateur de **ouvrir** ou **Enregistrer sous** boîte de dialogue.  
   
 ```  
@@ -1361,7 +1361,7 @@ void SetControlText(
   
  Pour utiliser cette méthode, vous devez créer la boîte de dialogue avec le style OFN_EXPLORER. Sinon, la fonction échoue avec une assertion.  
   
-##  <a name="setdefext"></a>CFileDialog::SetDefExt  
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt  
  Appelez cette fonction pour définir l’extension de nom de fichier par défaut pour une boîte de dialogue commune Explorer-style ouvrir ou enregistrer sous.  
   
 ```  
@@ -1375,7 +1375,7 @@ void SetDefExt(LPCSTR lpsz);
 ### <a name="remarks"></a>Notes  
  La boîte de dialogue doit avoir été créée avec la **OFN_EXPLORER** style ; sinon, la fonction échoue avec une assertion.  
   
-##  <a name="seteditboxtext"></a>CFileDialog::SetEditBoxText  
+##  <a name="seteditboxtext"></a>  CFileDialog::SetEditBoxText  
  Définit le texte actuel dans un contrôle de zone d’édition.  
   
 ```  
@@ -1393,7 +1393,7 @@ HRESULT SetEditBoxText(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setproperties"></a>CFileDialog::SetProperties  
+##  <a name="setproperties"></a>  CFileDialog::SetProperties  
  Fournit une banque de propriétés qui définit les valeurs par défaut à utiliser pour l'élément en cours d'enregistrement.  
   
 ```  
@@ -1406,7 +1406,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem  
+##  <a name="setselectedcontrolitem"></a>  CFileDialog::SetSelectedControlItem  
  Définit l’état sélectionné d’un élément particulier dans un groupe de bouton d’option ou une zone de liste modifiable trouvée dans la boîte de dialogue.  
   
 ```  
@@ -1424,7 +1424,7 @@ HRESULT SetSelectedControlItem(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="settemplate"></a>CFileDialog::SetTemplate  
+##  <a name="settemplate"></a>  CFileDialog::SetTemplate  
  Définit le modèle de boîte de dialogue pour le [CFileDialog](../../mfc/reference/cfiledialog-class.md) objet.  
   
 ```  
@@ -1455,9 +1455,9 @@ void SetTemplate(
  Le système utilise uniquement un des modèles spécifiés. Le système détermine le modèle à utiliser en fonction de la présence du style OFN_EXPLORER et le système d’exploitation que l’application est en cours d’exécution. En spécifiant un modèle de style Explorateur et non-Explorer, il est facile de prise en charge de Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] et versions ultérieures, et Windows 95 et versions ultérieures.  
   
 > [!NOTE]
-> [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]boîtes de dialogue de fichier de style ne prennent pas en charge cette fonction. Toute tentative d’utilisation de cette fonction sur un [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] boîte de dialogue de fichier style lève [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Une alternative consiste à utiliser une boîte de dialogue personnalisée. Pour plus d’informations sur l’aide d’un `CFileDialog`, consultez [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
+> Windows Vista ou versions ultérieures boîtes de dialogue de fichier de style ne prennent pas en charge cette fonction. Si vous essayez d’utiliser cette fonction sur Windows Vista ou versions ultérieur boîte de dialogue de fichier de style [exception CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Une alternative consiste à utiliser une boîte de dialogue personnalisée. Pour plus d’informations sur l’aide d’un `CFileDialog`, consultez [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
-##  <a name="startvisualgroup"></a>CFileDialog::StartVisualGroup  
+##  <a name="startvisualgroup"></a>  CFileDialog::StartVisualGroup  
  Déclare un groupe visual dans la boîte de dialogue. Les appels suivants à n’importe quelle méthode de « ajouter » ajoutent ces éléments à ce groupe.  
   
 ```  
@@ -1475,7 +1475,7 @@ HRESULT StartVisualGroup(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog  
+##  <a name="updateofnfromshelldialog"></a>  CFileDialog::UpdateOFNFromShellDialog  
  Les mises à jour le `m_ofn` structure de données de la [CFileDialog](../../mfc/reference/cfiledialog-class.md) selon l’état actuel de l’objet interne.  
   
 ```  
@@ -1483,11 +1483,11 @@ void UpdateOFNFromShellDialog();
 ```  
   
 ### <a name="remarks"></a>Notes  
- Dans les versions de Windows antérieures à [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre directement affecté l’état de la boîte de dialogue. En outre, toute modification apportée à l’état de la boîte de dialogue Mise à jour la variable de membre m_ofn immédiatement.  
+ Dans les versions de Windows antérieures à Windows Vista, le membre [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) structure de données a été soit constamment synchronisée avec l’état de la `CFileDialog`. Toute modification apportée à la [m_ofn](#m_ofn) variable membre directement affecté l’état de la boîte de dialogue. En outre, toute modification apportée à l’état de la boîte de dialogue Mise à jour la variable de membre m_ofn immédiatement.  
   
- Dans [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], le `m_ofn` structure de données n’est pas automatiquement mis à jour. Pour garantir l’exactitude des données dans le `m_ofn` variable membre, vous devez appeler la `UpdateOFNFromShellDialog` (fonction) avant d’accéder aux données. Windows appelle cette fonction automatiquement lors du traitement de [IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879).  
+ Dans Windows Vista ou version ultérieure, le `m_ofn` structure de données n’est pas automatiquement mis à jour. Pour garantir l’exactitude des données dans le `m_ofn` variable membre, vous devez appeler la `UpdateOFNFromShellDialog` (fonction) avant d’accéder aux données. Windows appelle cette fonction automatiquement lors du traitement de [IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879).  
   
- Pour plus d’informations sur l’utilisation de la `CFileDialog` classe sous [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
+ Pour plus d’informations sur l’utilisation de la `CFileDialog` classe sous Windows Vista ou version ultérieure, consultez [CFileDialog Class](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Exemple  
  Cet exemple met à jour le `CFileDialog` avant de les afficher. Avant de mettre à jour le `m_ofn` variable membre, nous avons besoin synchroniser l’état actuel de la boîte de dialogue.  

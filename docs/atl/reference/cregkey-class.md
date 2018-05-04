@@ -1,12 +1,9 @@
 ---
 title: Classe de CRegKey | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRegKey
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cregkey-class"></a>Classe de CRegKey
 Cette classe fournit des méthodes pour manipuler des entrées dans le Registre système.  
@@ -132,19 +127,19 @@ class CRegKey
 |[CRegKey::m_pTM](#m_ptm)|Pointeur vers `CAtlTransactionManager` objet|  
   
 ## <a name="remarks"></a>Notes  
- `CRegKey`Fournit des méthodes pour la création et la suppression de clés et valeurs dans le Registre système. Le Registre contient un ensemble spécifique à l’installation des définitions pour les composants système, telles que les numéros de version des logiciels, des mappages de logique physique du matériel installé et les objets COM.  
+ `CRegKey` Fournit des méthodes pour la création et la suppression de clés et valeurs dans le Registre système. Le Registre contient un ensemble spécifique à l’installation des définitions pour les composants système, telles que les numéros de version des logiciels, des mappages de logique physique du matériel installé et les objets COM.  
   
- `CRegKey`Fournit une interface de programmation dans le Registre système pour un ordinateur donné. Par exemple, pour ouvrir une clé de Registre spécifiques, appelez `CRegKey::Open`. Pour récupérer ou modifier une valeur de données, appelez `CRegKey::QueryValue` ou `CRegKey::SetValue`, respectivement. Pour fermer une clé, appelez `CRegKey::Close`.  
+ `CRegKey` Fournit une interface de programmation dans le Registre système pour un ordinateur donné. Par exemple, pour ouvrir une clé de Registre spécifiques, appelez `CRegKey::Open`. Pour récupérer ou modifier une valeur de données, appelez `CRegKey::QueryValue` ou `CRegKey::SetValue`, respectivement. Pour fermer une clé, appelez `CRegKey::Close`.  
   
  Lorsque vous fermez une clé, ses données de Registre sont écrit (vidées) sur le disque dur. Ce processus peut prendre plusieurs secondes. Si votre application doit écrire explicitement des données du Registre sur le disque dur, vous pouvez appeler la [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) fonction Win32. Toutefois, **RegFlushKey** utilise beaucoup de ressources système et doit être appelée uniquement lorsque cela est absolument nécessaire.  
   
 > [!IMPORTANT]
 >  Toutes les méthodes qui permettent à l’appelant de spécifier un emplacement du Registre ont la possibilité de lire des données qui ne peut pas être approuvées. Utilisent des méthodes qui permettent de [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) à prendre en compte cette fonction ne gère pas explicitement les chaînes qui sont de terminaison par NULL. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>  CRegKey::Attach  
  Appelez cette méthode pour attacher une clé HKEY à la `CRegKey` objet en définissant le [m_hKey](#m_hkey) handle de membre à `hKey`.  
   
 ```
@@ -158,7 +153,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>Notes  
  **Attacher** vérifie si `m_hKey` n’est pas NULL.  
   
-##  <a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>  CRegKey::Close  
  Appelez cette méthode pour libérer la [m_hKey](#m_hkey) membre gérer et affectez-lui la valeur NULL.  
   
 ```
@@ -168,7 +163,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, retourne ERROR_SUCCESS ; Sinon, retourne une valeur d’erreur.  
   
-##  <a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>  CRegKey::Create  
  Appelez cette méthode pour créer la clé spécifiée, si elle n’existe pas comme une sous-clé de `hKeyParent`.  
   
 ```
@@ -210,7 +205,7 @@ LONG Create(
 ### <a name="remarks"></a>Notes  
  **Créer** définit le [m_hKey](#m_hkey) membre vers le handle de cette clé.  
   
-##  <a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>  CRegKey::CRegKey  
  Constructeur.  
   
 ```
@@ -233,7 +228,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Notes  
  Crée un objet `CRegKey`. L’objet peut être créé à partir d’un fichier `CRegKey` objet, ou à partir d’un handle à une clé de Registre.  
   
-##  <a name="dtor"></a>CRegKey :: ~ CRegKey  
+##  <a name="dtor"></a>  CRegKey :: ~ CRegKey  
  Destructeur.  
   
 ```
@@ -243,7 +238,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Notes  
  Les versions de destructeur `m_hKey`.  
   
-##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  Appelez cette méthode pour supprimer la clé spécifiée à partir du Registre.  
   
 ```
@@ -258,9 +253,9 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
  En cas de réussite, retourne ERROR_SUCCESS. Si la méthode échoue, la valeur de retour est un code d’erreur différent de zéro défini dans WINERROR. H.  
   
 ### <a name="remarks"></a>Notes  
- `DeleteSubKey`peut supprimer uniquement une clé qui ne comporte des sous-clés aucun. Si la clé a des sous-clés, appelez [RecurseDeleteKey](#recursedeletekey) à la place.  
+ `DeleteSubKey` peut supprimer uniquement une clé qui ne comporte des sous-clés aucun. Si la clé a des sous-clés, appelez [RecurseDeleteKey](#recursedeletekey) à la place.  
   
-##  <a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
  Appelez cette méthode pour supprimer un champ de valeur à partir de [m_hKey](#m_hkey).  
   
 ```
@@ -274,7 +269,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>Valeur de retour  
  En cas de réussite, retourne ERROR_SUCCESS. Si la méthode échoue, la valeur de retour est un code d’erreur différent de zéro défini dans WINERROR. H.  
   
-##  <a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>  CRegKey::Detach  
  Appeler cette méthode pour détacher le [m_hKey](#m_hkey) descripteur de membre à partir de la `CRegKey` et définissez `m_hKey` avec la valeur NULL.  
   
 ```
@@ -284,7 +279,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Clé HKEY associé le `CRegKey` objet.  
   
-##  <a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>  CRegKey::EnumKey  
  Appelez cette méthode pour énumérer les sous-clés de la clé de Registre ouverte.  
   
 ```
@@ -314,7 +309,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>Notes  
  Pour énumérer les sous-clés, appelez `CRegKey::EnumKey` avec un index de zéro. Incrémenter la valeur d’index et répétez jusqu'à ce que la méthode retourne ERROR_NO_MORE_ITEMS. Pour plus d’informations, consultez [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) dans le Kit de développement logiciel Windows.  
   
-##  <a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>  CRegKey::Flush  
  Appelez cette méthode pour écrire tous les attributs de la clé de Registre ouverte dans le Registre.  
   
 ```
@@ -327,7 +322,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) dans le Kit de développement logiciel Windows.  
   
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Appelez cette méthode pour récupérer une copie du descripteur de sécurité qui protège la clé de Registre ouverte.  
   
 ```
@@ -353,14 +348,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
   
-##  <a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Contient un handle de la clé de Registre associée avec le `CRegKey` objet.  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>  CRegKey::m_pTM  
  Pointeur vers un `CAtlTransactionManager` objet.  
   
 ```
@@ -369,7 +364,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
  Cette méthode notifie l’appelant sur les modifications apportées au contenu de la clé de Registre ouverte ou attributs.  
   
 ```
@@ -410,7 +405,7 @@ LONG NotifyChangeKeyValue(
   
  Pour plus d’informations et un exemple de programme, consultez [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
   
-##  <a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>  CRegKey::Open  
  Appelez cette méthode pour ouvrir la clé spécifiée et définir [m_hKey](#m_hkey) au handle de cette clé.  
   
 ```
@@ -438,14 +433,14 @@ LONG Open(
   
  Contrairement aux [CRegKey::Create](#create), **ouvrir** ne crée pas la clé spécifiée si elle n’existe pas.  
   
-##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  Convertit un `CRegKey` objet à une clé HKEY.  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>  CRegKey::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -462,7 +457,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>Notes  
  Cet opérateur détache `key` à partir de son objet en cours et affecte à la `CRegKey` à la place de l’objet.  
   
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  Appelez cette méthode pour récupérer les données binaires pour un nom de la valeur spécifiée.  
   
 ```
@@ -491,7 +486,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, le [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) fonction utilisée par cette méthode ne gère pas explicitement les chaînes qui sont NULL terminé. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Appelez cette méthode pour récupérer les données DWORD pour un nom de la valeur spécifiée.  
   
 ```
@@ -516,7 +511,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, le [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) fonction utilisée par cette méthode ne gère pas explicitement les chaînes qui sont NULL terminé. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Appelez cette méthode pour récupérer les données GUID pour un nom de la valeur spécifiée.  
   
 ```
@@ -541,7 +536,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées.  
   
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  Appelez cette méthode pour récupérer les données de chaîne multiple pour un nom de la valeur spécifiée.  
   
 ```
@@ -570,7 +565,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, le [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) fonction utilisée par cette méthode ne gère pas explicitement les chaînes qui sont NULL terminé. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Appelez cette méthode pour récupérer les données QWORD pour un nom de la valeur spécifiée.  
   
 ```
@@ -595,7 +590,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, le [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) fonction utilisée par cette méthode ne gère pas explicitement les chaînes qui sont NULL terminé. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Appelez cette méthode pour récupérer les données de chaîne pour un nom de la valeur spécifiée.  
   
 ```
@@ -624,7 +619,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, le [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) fonction utilisée par cette méthode ne gère pas explicitement les chaînes qui sont NULL terminé. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Appelez cette méthode pour récupérer les données pour le champ de valeur spécifiée de [m_hKey](#m_hkey). Les versions antérieures de cette méthode ne sont plus prises en charge et sont marquées comme **ATL_DEPRECATED**.  
   
 ```
@@ -680,7 +675,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  Cette méthode permet à l’appelant de spécifier n’importe quel emplacement de registre potentiellement la lecture des données qui ne peut pas être approuvées. En outre, la fonction RegQueryValueEx utilisée par cette méthode ne gère pas explicitement les chaînes qui sont `NULL` terminée. Les deux conditions doivent être vérifiées pour par le code appelant.  
   
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
  Appelez cette méthode pour supprimer la clé spécifiée à partir du Registre et supprimer toutes les sous-clés de manière explicite.  
   
 ```
@@ -697,7 +692,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>Notes  
  Si la clé possède des sous-clés, vous devez appeler cette méthode pour supprimer la clé.  
   
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
  Appelez cette méthode pour définir la valeur binaire de la clé de Registre.  
   
 ```
@@ -723,7 +718,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pour écrire la valeur dans le Registre.  
   
-##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Appelez cette méthode pour définir la valeur DWORD de la clé de Registre.  
   
 ```
@@ -743,7 +738,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pour écrire la valeur dans le Registre.  
   
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Appelez cette méthode pour définir la valeur GUID de la clé de Registre.  
   
 ```
@@ -763,7 +758,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise `CRegKey::SetStringValue` et il convertit le GUID d’un à l’aide de la chaîne [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
   
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Appelez cette méthode pour stocker les données dans un champ de valeur spécifiée d’une clé spécifiée.  
   
 ```
@@ -789,7 +784,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>Notes  
  Appeler cette méthode pour créer ou ouvrir le `lpszKeyName` de clé et de stocker le `lpszValue` les données dans le `lpszValueName` champ de valeur.  
   
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
  Appelez cette méthode pour définir la sécurité de la clé de Registre.  
   
 ```
@@ -816,7 +811,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>Notes  
  Définit les attributs de sécurité de la clé. Consultez [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) pour plus d’informations.  
   
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Appelez cette méthode pour définir la valeur de chaîne multiple de la clé de Registre.  
   
 ```
@@ -836,7 +831,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pour écrire la valeur dans le Registre.  
   
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Appelez cette méthode pour définir la valeur QWORD de la clé de Registre.  
   
 ```
@@ -856,7 +851,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) pour écrire la valeur dans le Registre.  
   
-##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Appelez cette méthode pour définir la valeur de chaîne de la clé de Registre.  
   
 ```
@@ -882,7 +877,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) pour écrire la valeur dans le Registre.  
   
-##  <a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>  CRegKey::SetValue  
  Appelez cette méthode pour stocker des données dans le champ de valeur spécifiée de [m_hKey](#m_hkey). Les versions antérieures de cette méthode ne sont plus prises en charge et sont marquées comme **ATL_DEPRECATED**.  
   
 ```

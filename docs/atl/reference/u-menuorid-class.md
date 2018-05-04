@@ -1,12 +1,9 @@
 ---
 title: Classe de _U_MENUorID | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umenuorid-class"></a>Classe de _U_MENUorID
 Cette classe fournit des wrappers pour **CreateWindow** et **CreateWindowEx**.  
@@ -64,17 +59,17 @@ class _U_MENUorID
   
  La classe définit deux surcharges de constructeur : une accepte un **UINT** argument et l’autre accepte un `HMENU` argument. Le **UINT** argument est uniquement effectué en une `HMENU` dans le constructeur et le résultat stocké dans le membre de données de la classe, [m_hMenu](#_u_menuorid__m_hmenu). L’argument de la `HMENU` constructeur est stocké directement, sans conversion.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
   
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
  La classe contient la valeur passée à un de ses constructeurs comme publique `HMENU` membre de données.  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
  Le **UINT** argument est uniquement effectué en une `HMENU` dans le constructeur et le résultat stocké dans le membre de données de la classe, [m_hMenu](#_u_menuorid__m_hmenu).  
   
 ```

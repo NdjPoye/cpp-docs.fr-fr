@@ -1,11 +1,12 @@
 ---
-title: "Configurer un projet CMake Linux dans Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Configurer un projet CMake Linux dans Visual Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 Dans la sortie, recherchez « serverMode:true ». Notez que même lorsque vous compilez un projet CMake à partir de la source, comme cela est décrit ci-dessous, vous devez vérifier les fonctionnalités à la fin de l’opération. En effet, votre système Linux peut avoir des limitations qui empêchent l’activation du mode serveur.
 
-Pour préparer la génération à partir de la source dans l’interpréteur de commandes de votre système Linux, vérifiez que votre gestionnaire de package est à jour et que git et cmake sont disponibles. Tout d’abord, clonez les sources CMake :
+Pour préparer la génération à partir de la source dans l’interpréteur de commandes de votre système Linux, vérifiez que votre gestionnaire de package est à jour et que git et cmake sont disponibles. Tout d’abord, clonez les sources CMake à partir du référentiel que nous utilisons pour la prise en charge de CMake dans Visual Studio :
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-Ensuite, vérifiez que vous utilisez une version de CMake prise en charge dans Visual Studio. Nous suivons attentivement le développement de CMake, mais nous ne pouvons pas garantir la prise en charge de la toute dernière version. Pour générer CMake 3.9.0, par exemple, exécutez d’abord :
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 Ensuite, exécutez les commandes suivantes :

@@ -1,13 +1,10 @@
 ---
-title: "Création d’une bibliothèque d’importation et d’un fichier d’exportation | Documents Microsoft"
-ms.custom: 
+title: Création d’une bibliothèque d’importation et d’un fichier d’exportation | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 Pour générer une bibliothèque d’importation et exportation de fichier, utilisez la syntaxe suivante :  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Une spécification de /EXPORT :*nom* sur la ligne de commande LIB  
   
-3.  Une définition dans un **exportations** instruction dans un`deffile`  
+3.  Une définition dans un **exportations** instruction dans un `deffile`  
   
  Ce sont les mêmes méthodes que vous utilisez pour spécifier des exportations lors de la liaison d’un programme d’exportation. Un programme peut utiliser plusieurs méthodes. Vous pouvez spécifier les parties de la commande LIB (par exemple plusieurs *objfiles* ou des spécifications /EXPORT) dans un fichier de commandes dans la commande LIB, tout comme vous pouvez dans une commande LINK.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  Le *nom d’entrée* est le nom de l’élément de données ou de la fonction tel qu’il doit être utilisé par le programme appelant. Si vous le souhaitez, vous pouvez spécifier le *internalname* en tant que fonction connue dans le programme de définition ; par défaut, *internalname* est identique à *nom d’entrée*. Le `ordinal` spécifie un index dans la table d’exportation compris entre 1 et 65 535 ; si vous ne spécifiez pas `ordinal`, LIB en assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans une *nom d’entrée*. Le **données** est utilisé pour exporter des objets de données uniquement.  
   
- / SONT LES SUIVANTES :`symbol`  
+ / SONT LES SUIVANTES : `symbol`  
  Ajoute le symbole spécifié à la table de symboles. Cette option est utile pour forcer l’utilisation d’un objet de bibliothèque qui autrement n’est pas inclus.  
   
  Notez que si vous créez votre bibliothèque d’importation dans une étape préliminaire, avant de créer votre fichier .dll, vous devez passer le même jeu de fichiers objets lors de la génération du fichier .dll que vous avez passé lors de la création de la bibliothèque d’importation.  
