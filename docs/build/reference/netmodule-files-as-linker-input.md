@@ -1,13 +1,10 @@
 ---
-title: "fichiers .netmodule en tant qu’entrée de l’éditeur de liens | Documents Microsoft"
-ms.custom: 
+title: fichiers .netmodule en tant qu’entrée de l’éditeur de liens | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23a1ecdff483118d92ac2c5fd01c24e8f2599bc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>Fichiers .netmodule en tant qu'entrée de l'Éditeur de liens
 Link.exe accepte désormais .obj et .netmodule MSIL en tant qu’entrée. Le fichier de sortie produit par l’éditeur de liens sera un assembly ou un fichier .netmodule sans dépendance d’exécution sur n’importe quel fichier .obj ou .netmodule entrés dans l’éditeur de liens.  

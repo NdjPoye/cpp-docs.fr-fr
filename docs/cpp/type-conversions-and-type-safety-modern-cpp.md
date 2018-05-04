@@ -2,26 +2,21 @@
 title: Conversions de types et sécurité de Type (Modern C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dabba7b7cfc769d91471c2dfc6f92f1b414996
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversions de types et sécurité de type (Modern C++)
 Ce document identifie les problèmes de conversion de type courants et explique comment les éviter dans votre code C++.  
@@ -38,7 +33,7 @@ Ce document identifie les problèmes de conversion de type courants et explique 
   
 |From|À|  
 |----------|--------|  
-|Tout signés ou non signés de type intégral sauf `long long` ou`__int64`|`double`|  
+|Tout signés ou non signés de type intégral sauf `long long` ou `__int64`|`double`|  
 |`bool` ou `char`|Tout autre type intégré|  
 |`short` ou `wchar_t`|`int`, `long`, `long long`|  
 |`int`, `long`|`long long`|  
@@ -113,7 +108,7 @@ int(x); // old-style cast, functional syntax
   
  L’opérateur de cast de style C est identique à l’opérateur d’appel () et est donc discrète dans le code et facile d’oublier. Les deux sont incorrectes, car ils sont difficiles à reconnaître à le œil ou recherchez pour, et elles sont suffisamment disparates à appeler n’importe quelle combinaison de `static`, `const`, et `reinterpret_cast`. Essayer de comprendre ce que fait un cast de style ancien peut être difficile et sujette à erreurs. Pour toutes ces raisons, lorsqu’un cast est requis, nous vous recommandons d’utiliser un des opérateurs de cast C++ suivants, qui, dans certains cas sont considérablement plus de type sécurisé et qui expriment beaucoup plus explicitement l’intention de programmation :  
   
--   `static_cast`, des casts sont vérifiées à la compilation de l’heure seulement. `static_cast`Retourne une erreur si le compilateur détecte que vous tentez d’effectuer un cast entre des types qui ne sont pas complètement compatibles. Vous pouvez également l’utiliser pour effectuer un cast entre un pointeur vers base et de pointeur vers dérivé, mais le compilateur ne peut pas toujours déterminer si ces conversions est sécurisées lors de l’exécution.  
+-   `static_cast`, des casts sont vérifiées à la compilation de l’heure seulement. `static_cast` Retourne une erreur si le compilateur détecte que vous tentez d’effectuer un cast entre des types qui ne sont pas complètement compatibles. Vous pouvez également l’utiliser pour effectuer un cast entre un pointeur vers base et de pointeur vers dérivé, mais le compilateur ne peut pas toujours déterminer si ces conversions est sécurisées lors de l’exécution.  
   
     ```cpp  
     double d = 1.58947;  

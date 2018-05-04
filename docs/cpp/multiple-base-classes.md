@@ -2,11 +2,8 @@
 title: Plusieurs Classes de Base | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Plusieurs classes de base
 Comme décrit dans [l’héritage Multiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), une classe peut être dérivée de plusieurs classes de base. Dans un modèle d’héritage multiple (où les classes sont dérivées de plusieurs classes de base), les classes de base sont spécifiées à l’aide de la *base-list* élément de grammaire. Par exemple, la déclaration de classe pour `CollectionOfBook`, dérivé de `Collection` et `Book`, peut être spécifiée :  
@@ -69,7 +64,7 @@ Graphique de Lunch-Line simulé
   
  Dans la figure, `Queue` représente la classe de base de `CashierQueue` et `LunchQueue`. Toutefois, lorsque les deux classes sont combinées pour former `LunchCashierQueue`, le problème suivant survient : la nouvelle classe contient deux sous-objets de type `Queue`, l'un provenant de `CashierQueue` et l'autre de `LunchQueue`. La figure suivante montre la disposition de mémoire conceptuelle (la disposition de mémoire réelle peut être optimisée).  
   
- ![Déjeuner simulé &#45; objet ligne](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulée déjeuner&#45;objet ligne](../cpp/media/vc38xp2.gif "vc38XP2")  
 Objet Lunch-Line simulé  
   
  Notez que deux sous-objets `Queue` figurent dans l'objet `LunchCashierQueue`. Le code suivant déclare `Queue` en tant que classe de base virtuelle :  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  Le mot clé `virtual` garantit qu'une seule copie du sous-objet `Queue` est incluse (voir la figure suivante).  
   
- ![Déjeuner simulé &#45; objet, de classes de base virtuelles](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulée déjeuner&#45;objet ligne, les classes de base virtuelles](../cpp/media/vc38xp3.gif "vc38XP3")  
 Objet Lunch-Line simulé avec classes de base virtuelles  
   
  Une classe peut avoir à la fois un composant virtuel et un composant non virtuel d'un type donné. Cela se produit dans les conditions illustrées à la figure suivante.  

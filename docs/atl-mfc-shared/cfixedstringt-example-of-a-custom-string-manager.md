@@ -1,32 +1,27 @@
 ---
-title: "CFixedStringT : Exemple d’un gestionnaire de chaîne personnalisé. | Documents Microsoft"
-ms.custom: 
+title: 'CFixedStringT : Exemple d’un gestionnaire de chaîne personnalisé. | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT : Exemple d’un gestionnaire de chaîne personnalisé.
-La bibliothèque ATL implémente un exemple d’un gestionnaire de chaîne personnalisé utilisé par la classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), appelé **CFixedStringMgr**. `CFixedStringT`est dérivé de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) et implémente une chaîne qui alloue ses données de caractères dans le cadre de la `CFixedStringT` de l’objet lui-même, que la chaîne est inférieure à la longueur spécifiée par le **t_nChars** paramètre de modèle de `CFixedStringT`. Avec cette approche, la chaîne n'a pas besoin du tas, sauf si la longueur de la chaîne dépasse la taille de la mémoire tampon fixe. Étant donné que `CFixedStringT` n’utilise pas toujours un segment de mémoire pour allouer ses données de chaîne, il ne peut pas utiliser **CAtlStringMgr** en tant que gestionnaire de chaînes. Elle utilise un gestionnaire de chaîne personnalisée (**CFixedStringMgr**), qui implémente le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Cette interface est décrite dans [implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+La bibliothèque ATL implémente un exemple d’un gestionnaire de chaîne personnalisé utilisé par la classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), appelé **CFixedStringMgr**. `CFixedStringT` est dérivé de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) et implémente une chaîne qui alloue ses données de caractères dans le cadre de la `CFixedStringT` de l’objet lui-même, que la chaîne est inférieure à la longueur spécifiée par le **t_nChars** paramètre de modèle de `CFixedStringT`. Avec cette approche, la chaîne n'a pas besoin du tas, sauf si la longueur de la chaîne dépasse la taille de la mémoire tampon fixe. Étant donné que `CFixedStringT` n’utilise pas toujours un segment de mémoire pour allouer ses données de chaîne, il ne peut pas utiliser **CAtlStringMgr** en tant que gestionnaire de chaînes. Elle utilise un gestionnaire de chaîne personnalisée (**CFixedStringMgr**), qui implémente le [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interface. Cette interface est décrite dans [implémentation d’un gestionnaire de chaînes personnalisé (méthode avancée)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
  Le constructeur de **CFixedStringMgr** accepte trois paramètres :  
   
@@ -65,7 +60,7 @@ La bibliothèque ATL implémente un exemple d’un gestionnaire de chaîne perso
   
  Chaque fois que la mémoire tampon fixe n’est pas en cours d’utilisation, **CFixedStringMgr** permet de s’assurer qu’elle est initialisée avec une longueur nulle. Ainsi, pour être utilisée en tant que chaîne nulle. En prime, le `nAllocLength` membre de la mémoire tampon fixe est toujours définie sur la taille totale de la mémoire tampon fixe. Cela signifie que `CStringT` peut atteindre la chaîne sans appeler [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), même pour la chaîne nulle.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** cstringt.h  
   
 ## <a name="see-also"></a>Voir aussi  

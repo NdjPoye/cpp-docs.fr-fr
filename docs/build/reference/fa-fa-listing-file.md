@@ -1,13 +1,10 @@
 ---
 title: / FA, /Fa (fichier Listing) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Fichier listing)
 Crée un fichier listing contenant du code assembleur.  
@@ -60,7 +55,7 @@ Facultatif. Inclut le code machine dans la liste.
 `s`  
 Facultatif. Inclut le code source dans la liste.  
   
-`u`Facultatif. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est encodé comme ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source comme entrée pour le compilateur.  
+`u` Facultatif. Encode le fichier d’annonce au format UTF-8 et inclut un marqueur d’ordre d’octet. Par défaut, le fichier est encodé comme ANSI. Utilisez `u` pour créer un fichier listing qui s’affiche correctement sur n’importe quel système, ou si vous utilisez Unicode des fichiers de code source comme entrée pour le compilateur.  
   
 Si les deux `s` et `u` sont spécifiés et si une source de fichier de code utilise un encodage Unicode autre que UTF-8, puis les lignes de code dans le fichier .asm peut ne pas affichent correctement.  
   
@@ -73,7 +68,7 @@ Un *source*fichier .asm est créé pour chaque fichier de code source dans la co
 *nomfichier.extension*  
 Un fichier listing nommé *nomfichier.extension* est placé dans le répertoire actif. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  
   
-*répertoire*\  
+*Répertoire*\  
 Un *source_file*.asm est créé et placé dans le texte spécifié *répertoire* pour chaque fichier de code source dans la compilation. Notez la barre oblique de fin requise. Uniquement les chemins d’accès sur le disque en cours sont autorisés.  
   
 *répertoire*\\*nom de fichier* un fichier listing nommé *nom de fichier*.asm est placé dans le texte spécifié *active*. Cela n’est valide que lors de la compilation d’un fichier de code source unique.  

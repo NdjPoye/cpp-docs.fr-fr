@@ -1,13 +1,10 @@
 ---
-title: "-DV (désactiver les déplacements de Construction) | Documents Microsoft"
-ms.custom: 
+title: -DV (désactiver les déplacements de Construction) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Désactiver les déplacements de construction)
 ## <a name="syntax"></a>Syntaxe  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Notes  
  Ces options s’appliquent uniquement au code C++ qui utilise des bases virtuelles.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implémente la prise en charge de déplacement de construction C++ dans les situations où l’héritage virtuel est utilisé. Les déplacements de construction résout le problème créé lorsqu’une fonction virtuelle, déclarée dans une base virtuelle et de substitution dans une classe dérivée, est appelée à partir d’un constructeur pendant la construction d’une classe plus dérivée.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implémente la prise en charge de déplacement de construction C++ dans les situations où l’héritage virtuel est utilisé. Les déplacements de construction résout le problème créé lorsqu’une fonction virtuelle, déclarée dans une base virtuelle et de substitution dans une classe dérivée, est appelée à partir d’un constructeur pendant la construction d’une classe plus dérivée.  
   
  Le problème est que la fonction virtuelle peut être passée incorrect `this` pointeur en conséquence des différences entre les déplacements vers le serveur virtuel de base d’une classe et les déplacements vers les classes dérivées. La solution fournit un ajustement de déplacement de construction unique, appelé champ vtordisp, pour chaque base virtuelle d’une classe.  
   

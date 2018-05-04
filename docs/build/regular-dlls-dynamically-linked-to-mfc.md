@@ -1,13 +1,10 @@
 ---
-title: "DLL régulière MFC liées dynamiquement à MFC | Documents Microsoft"
-ms.custom: 
+title: DLL régulière MFC liées dynamiquement à MFC | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e20a3937786d65945256eeadcf0bf08b0314470
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL régulière MFC liées dynamiquement à MFC
 Une expression régulière que MFC DLL liée dynamiquement à MFC est une DLL qui utilise MFC en interne, et les fonctions exportées de la DLL peuvent être appelées par des exécutables MFC ou non MFC. Comme son nom l’indique, ce type de DLL est généré à l’aide de la version de la bibliothèque de liens dynamiques des MFC (également appelée la version partagée de MFC). Les fonctions sont généralement exportées à partir d’une expression régulière DLL MFC à l’aide de l’interface C standard.  

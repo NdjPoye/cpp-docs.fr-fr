@@ -2,12 +2,9 @@
 title: Référence de génération C/C++ | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-building-reference"></a>Référence à la génération C/C++
 Visual C++ propose deux méthodes de création d’un programme C/C++. La plus simple (et le plus courant) consiste à [générer dans l’environnement de développement Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). L’autre méthode consiste à [construire à partir d’une invite de commandes à l’aide des outils de ligne de commande](../../build/building-on-the-command-line.md). Dans les deux cas, vous pouvez créer vos fichiers sources à l’aide de l’éditeur de code source Visual C++ ou un éditeur tiers de votre choix.  

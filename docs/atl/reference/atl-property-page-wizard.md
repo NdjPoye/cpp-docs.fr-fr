@@ -1,12 +1,9 @@
 ---
-title: "Assistant Page de propriétés ATL | Documents Microsoft"
-ms.custom: 
+title: Assistant Page de propriétés ATL | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou à un projet MFC avec prise en charge ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou en appelant les méthodes) d’un ou plusieurs objets COM.  
@@ -55,7 +50,7 @@ Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/ref
 ### <a name="com"></a>COM  
  Fournit des informations sur les fonctionnalités COM pour l’objet.  
   
- **Coclasse**  
+ **coclasse**  
  Définit le nom de la classe de composant qui contient la liste des interfaces prises en charge par l’objet.  
   
 > [!NOTE]

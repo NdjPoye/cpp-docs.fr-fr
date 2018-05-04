@@ -1,12 +1,9 @@
 ---
-title: "Comment les blocs Catch sont évalués (C++) | Documents Microsoft"
-ms.custom: 
+title: Comment les blocs Catch sont évalués (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744f75f86fd7d3e2ca2a2545a7914f923c4454b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Mode d'évaluation des blocs Catch (C++)
 C++ vous permet de lever des exceptions de tout type, bien qu'en général il soit recommandé de lever des types dérivés de std::exception. Une exception C++ peut être interceptée par un **catch** gestionnaire qui spécifie le même type que l’exception levée ou par un gestionnaire qui peut intercepter tout type d’exception.  
@@ -52,7 +47,7 @@ C++ vous permet de lever des exceptions de tout type, bien qu'en général il so
   
 -   Gestionnaire qui accepte un pointeur vers lequel un objet pointeur levé peut être converti via des règles de conversion de pointeur standard.  
   
- L’ordre dans lequel **catch** gestionnaires sont placés est important, car gestionnaires pour une donnée **essayez** bloc sont examinés dans leur ordre d’apparition. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. Après une mise en correspondance **catch** gestionnaire est trouvé, les gestionnaires suivants ne sont pas examinés. Par conséquent, les points de suspension **catch** gestionnaire doit être le dernier gestionnaire son **essayez** bloc. Exemple :  
+ L’ordre dans lequel **catch** gestionnaires sont placés est important, car gestionnaires pour une donnée **essayez** bloc sont examinés dans leur ordre d’apparition. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. Après une mise en correspondance **catch** gestionnaire est trouvé, les gestionnaires suivants ne sont pas examinés. Par conséquent, les points de suspension **catch** gestionnaire doit être le dernier gestionnaire son **essayez** bloc. Par exemple :  
   
 ```  
 // ...  

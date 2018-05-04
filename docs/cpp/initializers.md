@@ -1,12 +1,9 @@
 ---
 title: Initialiseurs | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Initialiseurs
 Un initialiseur spécifie la valeur initiale d'une variable. Vous pouvez initialiser des variables dans les contextes suivants :  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Initialisation par défaut  
+### <a name="default_initialization"></a> Initialisation par défaut  
  L'initialisation par défaut des classes, des structs et des unions utilise un constructeur par défaut. Le constructeur par défaut peut être appelé sans expression d'initialisation ou avec le mot clé `new` :  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Initialisation d’agrégats  
+### <a name="agginit"></a> Initialisation d’agrégats  
  L'initialisation d'agrégats est un type d'initialisation de liste utilisé pour les tableaux et les types de classes (souvent des structs ou des unions) qui n'ont :  
   
 -   aucun membre privé ou protégé ;  
@@ -479,7 +474,7 @@ int main() {
 ```  
   
 ### <a name="reference-initialization"></a>Initialisation de références  
- Les variables de type référence doivent être initialisées avec un objet du type à partir duquel le type référence est dérivé, ou avec un objet d'un type pouvant être converti en type à partir duquel le type référence est dérivé. Exemple :  
+ Les variables de type référence doivent être initialisées avec un objet du type à partir duquel le type référence est dérivé, ou avec un objet d'un type pouvant être converti en type à partir duquel le type référence est dérivé. Par exemple :  
   
 ```  
 // initializing_references.cppint   
@@ -502,25 +497,25 @@ int main()
   
  Les variables de type référence peuvent être déclarées sans initialiseurs uniquement dans les éléments suivants :  
   
--   Déclarations de fonction (prototypes). Exemple :  
+-   Déclarations de fonction (prototypes). Par exemple :  
   
     ```  
     int func( int& );  
     ```  
   
--   Déclarations de type retour de fonction. Exemple :  
+-   Déclarations de type retour de fonction. Par exemple :  
   
     ```  
     int& func( int& );  
     ```  
   
--   Déclaration d'un membre de classe de type référence. Exemple :  
+-   Déclaration d'un membre de classe de type référence. Par exemple :  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   Déclaration d'une variable spécifiée explicitement comme `extern`. Exemple :  
+-   Déclaration d'une variable spécifiée explicitement comme `extern`. Par exemple :  
   
     ```  
     extern int& iVal;  
@@ -531,7 +526,7 @@ int main()
  ![Graphique de décision pour l’initialisation des types ref](../cpp/media/vc38s71.gif "vc38S71")  
 Graphique de décision pour l'initialisation des types référence  
   
- Des références aux `volatile` types (déclarés comme `volatile` *typename*  **&**  *identificateur*) peut être initialisée avec `volatile` objets du même type ou avec des objets qui n’ont pas été déclarés en tant que `volatile`. Ils ne peuvent pas, toutefois, être initialisées avec **const** objets de ce type. De même, des références aux **const** types (déclarés comme **const** *typename*  **&**  *identificateur* ) peut être initialisée avec **const** objets du même type (ou tout ce qui a une conversion vers ce type ou avec des objets qui n’ont pas été déclarés en tant que **const**). En revanche, elles ne peuvent pas être initialisées avec des objets `volatile` de ce type.  
+ Des références aux `volatile` types (déclarés comme `volatile` *typename *** &** *identificateur*) peut être initialisée avec `volatile` objets du même type ou avec les objets qui n’ont pas été déclarés en tant que `volatile`. Ils ne peuvent pas, toutefois, être initialisées avec **const** objets de ce type. De même, des références aux **const** types (déclarés comme **const** *typename *** &** *identificateur*) peut être initialisé avec **const** objets du même type (ou tout ce qui a une conversion vers ce type ou avec des objets qui n’ont pas été déclarés en tant que **const**). En revanche, elles ne peuvent pas être initialisées avec des objets `volatile` de ce type.  
   
  Les références qui ne sont pas qualifiées avec le **const** ou `volatile` mot clé peut être initialisé qu’avec les objets déclarés comme ni **const** ni `volatile`.  
   

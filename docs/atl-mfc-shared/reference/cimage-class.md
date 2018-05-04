@@ -1,12 +1,9 @@
 ---
 title: CImage (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage (classe)
-`CImage`Fournit une prise en charge améliorée des images bitmap, y compris la possibilité de charger et enregistrer des images dans les formats JPEG, GIF, BMP et PNG Portable Network Graphics ().  
+`CImage` Fournit une prise en charge améliorée des images bitmap, y compris la possibilité de charger et enregistrer des images dans les formats JPEG, GIF, BMP et PNG Portable Network Graphics ().  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -146,7 +141,7 @@ class CImage
 |[CImage::operator HBITMAP](#operator_hbitmap)|Retourne le handle Windows associé à la `CImage` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CImage`prend les bitmaps qui sont soit sections le bitmap indépendante du périphérique (DIB) ou non ; Toutefois, vous pouvez utiliser [créer](#create) ou [CImage::Load](#load) avec uniquement des sections DIB. Vous pouvez attacher une image bitmap à la section non-DIB à un `CImage` à l’aide de l’objet [Attach](#attach), mais vous ne pouvez pas utiliser les éléments suivants `CImage` méthodes qui prennent en charge uniquement les bitmaps de section DIB :  
+ `CImage` prend les bitmaps qui sont soit sections le bitmap indépendante du périphérique (DIB) ou non ; Toutefois, vous pouvez utiliser [créer](#create) ou [CImage::Load](#load) avec uniquement des sections DIB. Vous pouvez attacher une image bitmap à la section non-DIB à un `CImage` à l’aide de l’objet [Attach](#attach), mais vous ne pouvez pas utiliser les éléments suivants `CImage` méthodes qui prennent en charge uniquement les bitmaps de section DIB :  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  À l’aide de global `CImage` objets dans une DLL n’est pas recommandée. Si vous devez utiliser global `CImage` objet dans une DLL, l’appel [CImage::ReleaseGDIPlus](#releasegdiplus) libérer explicitement les ressources utilisées par GDI +.  
   
- `CImage`ne peut pas être sélectionné dans un nouveau [CDC](../../mfc/reference/cdc-class.md). `CImage`crée sa propre **HDC** pour l’image. Car un `HBITMAP` peut être sélectionné uniquement en une seule **HDC** à la fois, le `HBITMAP` associé à la `CImage` ne peuvent pas être sélectionnés dans un autre **HDC**. Si vous avez besoin d’un `CDC`, récupérer le **HDC** à partir de la `CImage` et lui donner à [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
+ `CImage` ne peut pas être sélectionné dans un nouveau [CDC](../../mfc/reference/cdc-class.md). `CImage` crée sa propre **HDC** pour l’image. Car un `HBITMAP` peut être sélectionné uniquement en une seule **HDC** à la fois, le `HBITMAP` associé à la `CImage` ne peuvent pas être sélectionnés dans un autre **HDC**. Si vous avez besoin d’un `CDC`, récupérer le **HDC** à partir de la `CImage` et lui donner à [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.  
   
 ## <a name="example"></a>Exemple  
 ```cpp  
@@ -209,7 +204,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 >   
 >  De même, vous devez inclure `atlimage.h` avant d’inclure `atlimpl.cpp`. Pour faire cela facilement, inclure `atlimage.h` dans votre `stdafx.h`.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlimage.h  
   
 ##  <a name="alphablend"></a>  CImage::AlphaBlend  
@@ -685,7 +680,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  `pszAllFilesDescription`  
  Si ce paramètre n’est pas **NULL**, la chaîne de filtrage aura un filtre supplémentaire au début de la liste. Ce filtre a la valeur actuelle de `pszAllFilesDescription` pour sa description et accepte les fichiers de n’importe quelle extension pris en charge par n’importe quel autre exportateur dans la liste.  
   
- Exemple :  
+ Par exemple :  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  Le paramètre *strExporter* a le format :  
   
- fichiers description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... description du fichier  *n* &#124;\*. Ext  *n* &#124; &#124;  
+ fichier description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file description *n*&#124;\*.ext *n*&#124;&#124;  
   
- où « &#124;' est le caractère de séparation spécifié par `chSeparator`. Exemple :  
+ où «&#124;» est le caractère de séparation spécifié par `chSeparator`. Par exemple :  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Utiliser le séparateur par défaut ' &#124;' Si vous passez cette chaîne à une MFC `CFileDialog` objet. Utilisez le séparateur null '\0' Si vous passez cette chaîne à une boîte de dialogue d’enregistrement du fichier.  
+ Utiliser le séparateur par défaut '&#124;' Si vous passez cette chaîne à une MFC `CFileDialog` objet. Utilisez le séparateur null '\0' Si vous passez cette chaîne à une boîte de dialogue d’enregistrement du fichier.  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  Récupère la hauteur, en pixels, d’une image.  
@@ -774,7 +769,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  `pszAllFilesDescription`  
  Si ce paramètre n’est pas **NULL**, la chaîne de filtrage aura un filtre supplémentaire au début de la liste. Ce filtre a la valeur actuelle de `pszAllFilesDescription` pour sa description et accepte les fichiers de n’importe quelle extension pris en charge par n’importe quel autre exportateur dans la liste.  
   
- Exemple :  
+ Par exemple :  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  Le paramètre *strImporter* a le format :  
   
- fichiers description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... description du fichier  *n* &#124;\*. Ext  *n* &#124; &#124;  
+ fichier description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. .file description *n*&#124;\*.ext *n*&#124;&#124;  
   
- où « &#124;' est le caractère de séparation spécifié par `chSeparator`. Exemple :  
+ où «&#124;» est le caractère de séparation spécifié par `chSeparator`. Par exemple :  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Utiliser le séparateur par défaut ' &#124;' Si vous passez cette chaîne à une MFC `CFileDialog` objet. Utilisez le séparateur de valeur null '\0' Si vous passez cette chaîne à commune **ouvrir le fichier** boîte de dialogue.  
+ Utiliser le séparateur par défaut '&#124;' Si vous passez cette chaîne à une MFC `CFileDialog` objet. Utilisez le séparateur de valeur null '\0' Si vous passez cette chaîne à commune **ouvrir le fichier** boîte de dialogue.  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Récupère le nombre maximal d’entrées dans la table des couleurs.  
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **TRUE** en cas de réussite, sinon **FALSE**.  
   
 ### <a name="remarks"></a>Notes  
- `TransparentBlt`est pris en charge pour les images bitmap de la source de 4 bits par pixel et de 8 bits par pixel. Utilisez [CImage::AlphaBlend](#alphablend) pour spécifier les bitmaps de 32 bits par pixel avec une transparence.  
+ `TransparentBlt` est pris en charge pour les images bitmap de la source de 4 bits par pixel et de 8 bits par pixel. Utilisez [CImage::AlphaBlend](#alphablend) pour spécifier les bitmaps de 32 bits par pixel avec une transparence.  
   
   
 ### <a name="example"></a>Exemple  
@@ -1550,7 +1545,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
   
 ## <a name="see-also"></a>Voir aussi  
- [MMXSwarm Sample](../../visual-cpp-samples.md)   
+ [MMXSwarm, exemple](../../visual-cpp-samples.md)   
  [Exemple SimpleImage](../../visual-cpp-samples.md)   
  [Images bitmap indépendante du périphérique](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   

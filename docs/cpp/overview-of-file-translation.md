@@ -2,11 +2,8 @@
 title: Vue d’ensemble de Translation de fichier | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>Vue d'ensemble de la traduction de fichier
 Les programmes C++, comme les programmes C, se composent d'un ou plusieurs fichiers. Chacun de ces fichiers est traduit dans l'ordre conceptuel suivant (l'ordre réel suit la règle « comme si » : la traduction doit avoir lieu comme si les étapes ci-dessous avaient été suivies) :  
@@ -37,7 +32,7 @@ Les programmes C++, comme les programmes C, se composent d'un ou plusieurs fic
   
 2.  Prétraitement. Cette phase de traduction apporte les fichiers sources auxiliaires référencés par `#include` directives, gère les « chaîne » et « charizing » les directives et effectue l’expansion de macro et de collage de jeton (consultez [Directives de préprocesseur](../preprocessor/preprocessor-directives.md) dans le *référence du préprocesseur* pour plus d’informations). Le résultat de la phase de prétraitement est une séquence de jetons qui, une fois combinés, définissent une unité de traduction.  
   
-     Directives de préprocesseur commencent toujours par le signe dièse (**#**) caractère (autrement dit, le premier caractère d’un espace blanc sur la ligne doit être un signe dièse). Une seule directive de préprocesseur peut apparaître sur une ligne donnée. Exemple :  
+     Directives de préprocesseur commencent toujours par le signe dièse (**#**) caractère (autrement dit, le premier caractère d’un espace blanc sur la ligne doit être un signe dièse). Une seule directive de préprocesseur peut apparaître sur une ligne donnée. Par exemple :  
   
     ```  
     #include <iostream>  // Include text of iostream in   
@@ -58,7 +53,7 @@ Les programmes C++, comme les programmes C, se composent d'un ou plusieurs fic
   
 -   Une macro prédéfinie, **__cplusplus**, est défini uniquement pour C++. Consultez [Macros prédéfinies](../preprocessor/predefined-macros.md) dans les *référence du préprocesseur* pour plus d’informations.  
   
--   Le préprocesseur C ne reconnaît pas les opérateurs C++ : **.\*** ,  **-> \*** , et `::`. Consultez [opérateurs](../cpp/cpp-built-in-operators-precedence-and-associativity.md) et [Expressions](../cpp/expressions-cpp.md), pour plus d’informations sur les opérateurs.  
+-   Le préprocesseur C ne reconnaît pas les opérateurs C++ : **.\*** , **-> \***, et `::`. Consultez [opérateurs](../cpp/cpp-built-in-operators-precedence-and-associativity.md) et [Expressions](../cpp/expressions-cpp.md), pour plus d’informations sur les opérateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conventions lexicales](../cpp/lexical-conventions.md)

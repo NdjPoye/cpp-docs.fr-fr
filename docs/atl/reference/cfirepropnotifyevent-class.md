@@ -1,12 +1,9 @@
 ---
 title: Classe de CFirePropNotifyEvent | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9571ad4ba928c208c6c028f6e30cf7c27c196d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (classe)
 Cette classe fournit des méthodes de notification du récepteur du conteneur en ce qui concerne les modifications apportées aux propriétés de contrôle.  
@@ -54,16 +49,16 @@ class CFirePropNotifyEvent
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statique) Notifie le récepteur du conteneur qui a une propriété de contrôle est sur le point de changer.|  
   
 ## <a name="remarks"></a>Notes  
- `CFirePropNotifyEvent`a deux méthodes pour avertir les récepteurs du conteneur qui a une propriété de contrôle a été modifié ou est sur le point de changer.  
+ `CFirePropNotifyEvent` a deux méthodes pour avertir les récepteurs du conteneur qui a une propriété de contrôle a été modifié ou est sur le point de changer.  
   
  Si la classe qui implémente votre contrôle est dérivée `IPropertyNotifySink`, le `CFirePropNotifyEvent` les méthodes sont appelées lorsque vous appelez `FireOnRequestEdit` ou `FireOnChanged`. Si votre classe de contrôle n’est pas dérivée de `IPropertyNotifySink`, les appels à ces fonctions retournent `S_OK`.  
   
  Pour plus d’informations sur la création de contrôles, consultez la [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
  Avertit tous connectés [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (sur chaque point de connexion de l’objet), les interfaces que la propriété de l’objet spécifié a changé.  
   
 ```
@@ -83,7 +78,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>Notes  
  Cette fonction peut appeler, même si votre contrôle ne prend pas en charge les points de connexion.  
   
-##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
  Avertit tous connectés [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (sur chaque point de connexion de l’objet) des interfaces dont la propriété de l’objet spécifié est sur le point de changer.  
   
 ```

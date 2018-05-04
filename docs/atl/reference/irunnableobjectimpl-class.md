@@ -1,12 +1,9 @@
 ---
 title: Classe de IRunnableObjectImpl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IRunnableObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1ac939d723596f4b0fc3f1013dd3f02cf2aa06b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a08fec0fd38e30729c9131def1831e5e5d8f633e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="irunnableobjectimpl-class"></a>Classe de IRunnableObjectImpl
 Cette classe implémente **IUnknown** et fournit une implémentation par défaut de la [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interface.  
@@ -76,10 +71,10 @@ class IRunnableObjectImpl
   
  `IRunnableObjectImpl`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
+##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
  Retourne le CLSID du contrôle en cours d’exécution.  
   
 ```
@@ -92,7 +87,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 ### <a name="remarks"></a>Notes  
  Consultez [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) dans le Kit de développement logiciel Windows.  
   
-##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
+##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
  Détermine si le contrôle est en cours d’exécution.  
   
 ```
@@ -105,7 +100,7 @@ virtual BOOL IsRunning();
 ### <a name="remarks"></a>Notes  
  Consultez [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) dans le Kit de développement logiciel Windows.  
   
-##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
+##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
  Verrouille le contrôle à l’état en cours d’exécution.  
   
 ```
@@ -118,7 +113,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ### <a name="remarks"></a>Notes  
  Consultez [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) dans le Kit de développement logiciel Windows.  
   
-##  <a name="run"></a>IRunnableObjectImpl::Run  
+##  <a name="run"></a>  IRunnableObjectImpl::Run  
  Force le contrôle à exécuter.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ### <a name="remarks"></a>Notes  
  Consultez [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) dans le Kit de développement logiciel Windows.  
   
-##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
+##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
  Indique que le contrôle est incorporé.  
   
 ```

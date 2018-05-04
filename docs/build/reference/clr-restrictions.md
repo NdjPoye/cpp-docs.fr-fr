@@ -1,29 +1,24 @@
 ---
 title: -clr Restrictions | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 697e2a50e8c63928a52bd1d960dcdefad0fe87bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-restrictions"></a>Restrictions de /clr
 Notez les restrictions suivantes sur l’utilisation de **/CLR**:  
@@ -68,7 +63,7 @@ Notez les restrictions suivantes sur l’utilisation de **/CLR**:
   
 -   Lorsque vous utilisez **/Zi** avec **/CLR**, il existe des conséquences sur les performances. Pour plus d’informations, consultez [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
--   La routine de sortie en passant un caractère large à .NET Framework sans spécifier également [/Zc :](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ou sans casting du caractère en `__wchar_t` entraîne la sortie apparaisse comme un `unsigned short int`. Exemple :  
+-   La routine de sortie en passant un caractère large à .NET Framework sans spécifier également [/Zc :](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ou sans casting du caractère en `__wchar_t` entraîne la sortie apparaisse comme un `unsigned short int`. Par exemple :  
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  

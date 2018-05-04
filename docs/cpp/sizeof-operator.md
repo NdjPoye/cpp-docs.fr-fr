@@ -1,12 +1,9 @@
 ---
-title: "sizeof, opérateur | Documents Microsoft"
-ms.custom: 
+title: sizeof, opérateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sizeof_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sizeof-operator"></a>sizeof, opérateur
 Donne la taille de son opérande par rapport à la taille du type `char`.  
@@ -49,7 +44,7 @@ sizeof  ( type-name )
   
 -   d'une expression. Quand il est utilisé avec une expression, `sizeof` peut être spécifié avec ou sans parenthèses. L'expression n'est pas évaluée.  
   
- Quand l'opérateur `sizeof` est appliqué à un objet de type `char`, il donne 1. Quand l'opérateur `sizeof` est appliqué à un tableau, il donne le nombre total d'octets dans ce tableau, et non la taille du pointeur représenté par l'identificateur du tableau. Pour obtenir la taille du pointeur représenté par l'identificateur du tableau, passez-le en tant que paramètre à une fonction utilisant `sizeof`. Exemple :  
+ Quand l'opérateur `sizeof` est appliqué à un objet de type `char`, il donne 1. Quand l'opérateur `sizeof` est appliqué à un tableau, il donne le nombre total d'octets dans ce tableau, et non la taille du pointeur représenté par l'identificateur du tableau. Pour obtenir la taille du pointeur représenté par l'identificateur du tableau, passez-le en tant que paramètre à une fonction utilisant `sizeof`. Par exemple :  
   
 ## <a name="example"></a>Exemple  
   

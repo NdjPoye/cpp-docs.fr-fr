@@ -1,12 +1,9 @@
 ---
-title: "Opérateur AND logique : &amp; &amp; | Documents Microsoft"
-ms.custom: 
+title: 'Opérateur AND logique : &amp; &amp; | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="logical-and-operator-ampamp"></a>Opérateur AND logique :&amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Opérateur AND logique : &amp;&amp;
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -58,7 +53,7 @@ char *pch = 0;
  Si `pch` est null (0), le côté droit de l'expression n'est jamais évalué. Par conséquent, l'assignation via un pointeur null est impossible.  
   
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour &&  
- Le **et** opérateur est l’équivalent textuel de  **&&** . Il existe deux moyens d’accéder à la **et** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
+ Le **et** opérateur est l’équivalent textuel de **&&**. Il existe deux moyens d’accéder à la **et** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Générer une build instrumentée de profilage)
 
@@ -32,28 +31,28 @@ Spécifie la génération d’un fichier .pgd par l’éditeur de liens pour pre
 ## <a name="syntax"></a>Syntaxe
 
 > **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Chemin d’accès**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_nom de fichier_}]<br/>
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]
+> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Chemin d’accès**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_nom de fichier_}]
 
 ### <a name="arguments"></a>Arguments
 
 Un des arguments suivants peut être spécifié pour **/genprofile** ou **/fastgenprofile**. Les arguments répertoriés ici séparés par une barre verticale (**|**) caractère s’excluent mutuellement. Utilisez une virgule (**,**) caractère pour séparer les options.
 
-**COUNTER32** &#124; **COUNTER64**<br/>
+**COUNTER32** &AMP;#124; **COUNTER64**<br/>
 Utilisez **COUNTER32** pour spécifier l’utilisation des compteurs de sonde 32 bits, et **COUNTER64** pour spécifier des compteurs de sonde 64 bits. Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **COUNTER64**. Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **COUNTER32**.
 
-**EXACT** &#124; **NOEXACT**<br/>
+**EXACT** &AMP;#124; **NOEXACT**<br/>
 Utilisez **EXACT** pour spécifier des incréments à blocage de thread-safe pour les sondes. **NOEXACT** spécifie les opérations d’incrément non protégées pour les sondes. La valeur par défaut est **NOEXACT**.
 
-**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
+**MEMMAX**=*valeur*, **MEMMIN**=*valeur*<br/>
 Utilisez **MEMMAX** et **MEMMIN** pour spécifier les tailles de réservation maximale et minimale pour les données d’apprentissage en mémoire. La valeur est la quantité de mémoire à réserver en octets. Par défaut, ces valeurs sont déterminées par une méthode heuristique interne.
 
-**PATH**  &#124; **NOPATH** <br/>
+**CHEMIN D’ACCÈS** &AMP;#124; **NOPATH**  <br/>
 Utilisez **chemin d’accès** pour spécifier un ensemble distinct de compteurs PGO pour chaque chemin unique vers une fonction. Utilisez **NOPATH** pour ne spécifier qu’un ensemble de compteurs pour chaque fonction. Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **chemin d’accès** . Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **NOPATH** .
 
-**TRACKEH**  &#124; **NOTRACKEH** <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
 Spécifie s’il faut utiliser des compteurs supplémentaires pour conserver un décompte précis quand des exceptions sont levées au cours de l’apprentissage. Utilisez **TRACKEH** pour spécifier des compteurs supplémentaires pour un nombre exact. Utilisez **NOTRACKEH** pour spécifier des compteurs uniques pour le code qui n’utilise pas d’exception manipulation ou qui ne rencontrent pas d’exceptions dans vos scénarios de formation.  Lorsque vous spécifiez **/genprofile**, la valeur par défaut est **TRACKEH** . Lorsque vous spécifiez **/FASTGENPROFILE**, la valeur par défaut est **NOTRACKEH** .
 
-**PGD**=*filename*<br/>
+**PGD**=*nom de fichier*<br/>
 Spécifie un nom de fichier de base pour le fichier .pgd. Par défaut, l’éditeur de liens utilise le nom du fichier image exécutable de base avec une extension .pgd.
 
 ## <a name="remarks"></a>Notes

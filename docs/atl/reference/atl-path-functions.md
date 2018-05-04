@@ -1,10 +1,7 @@
 ---
-title: "Les fonctions de chemin d’accès ATL | Documents Microsoft"
-ms.custom: 
+title: Les fonctions de chemin d’accès ATL | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - ATL, path
@@ -46,16 +43,15 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa9795af90e28b2c021b179876a9f69609c7884
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-path-functions"></a>Fonctions de chemin d’accès ATL
 
@@ -116,7 +112,7 @@ ATL fournit la classe ATLPath permettant de manipuler des chemins d’accès sou
 |[ATLPath::StripToRoot](#striptoroot)|Cette fonction est un wrapper surchargé de [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).|  
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Cette fonction est un wrapper surchargé de [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlpath.h  
 
 ## <a name="addbackslash"></a> ATLPath::AddBackSlash
@@ -149,7 +145,7 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ### <a name="remarks"></a>Notes  
  Consultez [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) pour plus d’informations. 
   
-## <a name="append">ATLPath::Append</a>
+## <a name="append"></a> ATLPath::Append
  Cette fonction est un wrapper surchargé de [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ### <a name="syntax"></a>Syntaxe  

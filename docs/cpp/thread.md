@@ -1,12 +1,9 @@
 ---
 title: thread | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - thread_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread"></a>thread
 
@@ -38,7 +33,7 @@ Le **thread** modificateur de classe de stockage étendu est utilisé pour décl
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec( thread )** *declarator*  
+> **__declspec (thread)** *déclarateur*  
 
 ## <a name="remarks"></a>Notes
 
@@ -85,7 +80,7 @@ En outre, vous devez respecter ces indications lorsque vous déclarez des variab
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- Le langage C standard permet l'initialisation d'un objet ou d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Même si C++ admet normalement l’initialisation dynamique d’un objet à l’aide d’une référence impliquant une auto-référence, ce type d’initialisation n’est pas permis avec les objets locaux de thread. Exemple :
+- Le langage C standard permet l'initialisation d'un objet ou d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Même si C++ admet normalement l’initialisation dynamique d’un objet à l’aide d’une référence impliquant une auto-référence, ce type d’initialisation n’est pas permis avec les objets locaux de thread. Par exemple :
 
    ```cpp
    // declspec_thread_3.cpp

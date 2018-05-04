@@ -1,12 +1,9 @@
 ---
-title: "opérateur __uuidof | Documents Microsoft"
-ms.custom: 
+title: opérateur __uuidof | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d83f99b40e6eb897212fbcfb03c01b4f6b55e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uuidof-operator"></a>__uuidof, opérateur
 **Section spécifique à Microsoft**  
@@ -82,7 +77,7 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Commentaires  
- Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser __LIBID\_ au lieu de `__uuidof`. Exemple :  
+ Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser __LIBID\_ au lieu de `__uuidof`. Par exemple :  
   
 ```  
 StringFromCLSID(__LIBID_, &lpolestr);  

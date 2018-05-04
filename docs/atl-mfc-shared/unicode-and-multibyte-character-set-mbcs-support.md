@@ -1,12 +1,9 @@
 ---
-title: "Caractères Unicode et définir la prise en charge (MBCS) | Documents Microsoft"
-ms.custom: 
+title: Caractères Unicode et définir la prise en charge (MBCS) | Documents Microsoft
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
@@ -48,7 +44,7 @@ Ces fichiers de bibliothèque, débogueur et DLL sont utilisés pour prendre en 
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
 |MFC*version*U.LIB|MFC*version*U.PDB|MFC*version*U.DLL|MFC*version*UD. LIB|
 |MFC*version*UD. PDB|MFC*version*UD. DLL|MFCS*version*U.LIB|MFCS*version*U.PDB|
 |MFCS*version*UD. LIB|MFCS*version*UD. PDB|MFCM*version*U.LIB|MFCM*version*U.PDB|
@@ -56,7 +52,7 @@ Ces fichiers de bibliothèque, débogueur et DLL sont utilisés pour prendre en 
 
 (*version* représente le numéro de version du fichier ; par exemple, « 140 » signifie que la version 14.0.)
 
-`CString`est basé sur le `TCHAR` type de données. Si le symbole `_UNICODE` est défini pour une génération de votre programme, `TCHAR` est défini en tant que type `wchar_t`, un type de codage de caractères de 16 bits. Dans le cas contraire, `TCHAR` est défini comme `char`, l’encodage de caractères 8 bits normal. Par conséquent, sous Unicode, un `CString` est composé de caractères de 16 bits. Sans Unicode, il est composé de caractères de type `char`.
+`CString` est basé sur le `TCHAR` type de données. Si le symbole `_UNICODE` est défini pour une génération de votre programme, `TCHAR` est défini en tant que type `wchar_t`, un type de codage de caractères de 16 bits. Dans le cas contraire, `TCHAR` est défini comme `char`, l’encodage de caractères 8 bits normal. Par conséquent, sous Unicode, un `CString` est composé de caractères de 16 bits. Sans Unicode, il est composé de caractères de type `char`.
 
 Pour compléter la programmation Unicode de votre application, vous devez également :
 
@@ -72,9 +68,9 @@ Pour compléter la programmation Unicode de votre application, vous devez égale
 
    - Utilisez `LPTSTR` où vous utiliseriez `char*`.
 
-   - Utilisez `LPCTSTR` où vous utiliseriez `const char*`. `CString`fournit l’opérateur `LPCTSTR` pour effectuer une conversion entre `CString` et `LPCTSTR`.
+   - Utilisez `LPCTSTR` où vous utiliseriez `const char*`. `CString` fournit l’opérateur `LPCTSTR` pour effectuer une conversion entre `CString` et `LPCTSTR`.
 
-`CString`fournit également des constructeurs, les opérateurs d’assignation et les opérateurs de comparaison compatibles Unicode.
+`CString` fournit également des constructeurs, les opérateurs d’assignation et les opérateurs de comparaison compatibles Unicode.
 
 Le [Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md) définit les versions portables de toutes ses fonctions de gestion des chaînes. Pour plus d’informations, consultez la catégorie [internationalisation](../c-runtime-library/internationalization.md).
 
@@ -91,12 +87,12 @@ Sous DBCS, une chaîne donnée peut contenir tous les caractères de ANSI sur un
 > [!NOTE]
 > Sérialisation des chaînes Unicode dans MFC peut lire des chaînes Unicode et MBCS, quelle que soit la version de l’application que vous exécutez. Les fichiers de données sont portables entre les versions Unicode et MBCS de votre programme.
 
-`CString`fonctions membres utilisent des versions « texte générique » spéciales des fonctions runtime C qu'ils appellent, ou les fonctions prenant en charge Unicode. Par conséquent, par exemple, si un `CString` fonction appelez généralement `strcmp`, il appelle la fonction de texte générique correspondante `_tcscmp` à la place. Selon la manière dont les symboles `_MBCS` et `_UNICODE` sont définies, `_tcscmp` mappe comme suit :
+`CString` fonctions membres utilisent des versions « texte générique » spéciales des fonctions runtime C qu'ils appellent, ou les fonctions prenant en charge Unicode. Par conséquent, par exemple, si un `CString` fonction appelez généralement `strcmp`, il appelle la fonction de texte générique correspondante `_tcscmp` à la place. Selon la manière dont les symboles `_MBCS` et `_UNICODE` sont définies, `_tcscmp` mappe comme suit :
 
 |||
 |-|-|
-|`_MBCS`défini|`_mbscmp`|
-|`_UNICODE`défini|`wcscmp`|
+|`_MBCS` défini|`_mbscmp`|
+|`_UNICODE` défini|`wcscmp`|
 |Aucun symbole défini|`strcmp`|
 
 > [!NOTE]

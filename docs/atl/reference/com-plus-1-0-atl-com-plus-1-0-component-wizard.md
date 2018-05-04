@@ -1,29 +1,24 @@
 ---
 title: COM + 1.0, Assistant composant ATL COM + 1.0 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 dev_langs:
 - C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a23f148fbdc611c8a11d8116b2e7dff34fc9d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Assistant Composant COM+ 1.0 ATL
 Utilisez cette page de l’Assistant composant ATL COM + 1.0 pour spécifier le type d’interface et les interfaces supplémentaires à prendre en charge.  

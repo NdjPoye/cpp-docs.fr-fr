@@ -1,12 +1,9 @@
 ---
 title: Classe de CRBMultiMap | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmultimap-class"></a>Classe de CRBMultiMap
 Cette classe représente une structure de mappage qui permet à que chaque clé peut être associé à plusieurs valeurs, à l’aide d’un arbre binaire rouge-noire.  
@@ -80,7 +75,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMultiMap::RemoveKey](#removekey)|Appelez cette méthode pour supprimer tous les éléments clé/valeur d’une clé spécifique.|  
   
 ## <a name="remarks"></a>Notes  
- `CRBMultiMap`prend en charge un tableau de mappage d’un type donné, la gestion d’un tableau ordonné d’éléments clés et valeurs. Contrairement à la [CRBMap](../../atl/reference/crbmap-class.md) (classe), chaque clé peut être associé à plusieurs valeurs.  
+ `CRBMultiMap` prend en charge un tableau de mappage d’un type donné, la gestion d’un tableau ordonné d’éléments clés et valeurs. Contrairement à la [CRBMap](../../atl/reference/crbmap-class.md) (classe), chaque clé peut être associé à plusieurs valeurs.  
   
  Éléments (composé d’une clé et une valeur) sont stockés dans une arborescence binaire de la structure, à l’aide de la [CRBMultiMap::Insert](#insert) (méthode). Les éléments peuvent être supprimés à l’aide de la [CRBMultiMap::RemoveKey](#removekey) (méthode), ce qui supprime tous les éléments qui correspondent à la clé donnée.  
   
@@ -88,7 +83,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  Le `KTraits` et `VTraits` paramètres sont des classes de caractéristiques contenant tout code supplémentaire est nécessaire pour copier ou déplacer des éléments.  
   
- `CRBMultiMap`est dérivé de [CRBTree](../../atl/reference/crbtree-class.md), qui implémente un arbre binaire à l’aide de l’algorithme rouge-noire. Une alternative à `CRBMultiMap` et `CRBMap` est proposé par le [CAtlMap](../../atl/reference/catlmap-class.md) classe. Lorsque seul un petit nombre d’éléments doit être stockée, envisagez d’utiliser le [CSimpleMap](../../atl/reference/csimplemap-class.md) classe à la place.  
+ `CRBMultiMap` est dérivé de [CRBTree](../../atl/reference/crbtree-class.md), qui implémente un arbre binaire à l’aide de l’algorithme rouge-noire. Une alternative à `CRBMultiMap` et `CRBMap` est proposé par le [CAtlMap](../../atl/reference/catlmap-class.md) classe. Lorsque seul un petit nombre d’éléments doit être stockée, envisagez d’utiliser le [CSimpleMap](../../atl/reference/csimplemap-class.md) classe à la place.  
   
  Pour obtenir une description plus complète de diverses classes de collection et leurs fonctions et les caractéristiques de performances, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -97,10 +92,10 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `CRBMultiMap`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap  
  Constructeur.  
   
 ```
@@ -119,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMultiMap :: ~ CRBMultiMap  
+##  <a name="dtor"></a>  CRBMultiMap :: ~ CRBMultiMap  
  Destructeur.  
   
 ```
@@ -131,7 +126,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les méthodes disponibles.  
   
-##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
  Appelez cette méthode pour rechercher la position du premier élément avec une clé donnée.  
   
 ```
@@ -153,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
  Appelez cette méthode pour obtenir la valeur associée à une clé donnée et mettre à jour la valeur de position.  
   
 ```
@@ -183,7 +178,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
  Appelez cette méthode pour obtenir l’élément associé à une clé donnée et mettre à jour la valeur de position.  
   
 ```
@@ -210,7 +205,7 @@ CPair* GetNextWithKey(
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les méthodes disponibles.  
   
-##  <a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>  CRBMultiMap::Insert  
  Appelez cette méthode pour insérer une paire de l’élément dans le mappage.  
   
 ```
@@ -233,7 +228,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
  Appelez cette méthode pour supprimer tous les éléments clé/valeur d’une clé spécifique.  
   
 ```
@@ -248,7 +243,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
  Retourne le nombre de valeurs associées à la clé donnée.  
   
 ### <a name="remarks"></a>Notes  
- `RemoveKey`Supprime tous les éléments clé/valeur qui ont une clé qui correspond à `key`.  
+ `RemoveKey` Supprime tous les éléments clé/valeur qui ont une clé qui correspond à `key`.  
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les méthodes disponibles.  
   

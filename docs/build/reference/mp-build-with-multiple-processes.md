@@ -1,6 +1,6 @@
 ---
-title: "/MP (générer avec plusieurs processus) | Documents Microsoft"
-ms.custom: 
+title: /MP (générer avec plusieurs processus) | Documents Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Générer avec plusieurs processus)
 
@@ -123,7 +122,7 @@ Le compilateur ne prend pas en charge l’utilisation de la directive [#import](
 
 #### <a name="the-msbuildexe-tool"></a>L’outil MSBUILD.exe
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] utilise le [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) outil pour générer des solutions et projets. Le **/maxcpucount :**_nombre_ (ou **/m:**_nombre_) une option de ligne de commande de l’outil MSBuild.exe peut générer plusieurs projets à la à la fois. L’option de compilateur **/MP** peut aussi générer plusieurs unités de compilation en même temps. Si c’est approprié pour votre application, améliorez le temps de génération de votre solution en utilisant **/MP** ou **/maxcpucount**, ou les deux.
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] utilise l’outil [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) pour générer des solutions et des projets. Le **/maxcpucount :**_nombre_ (ou **/m:**_nombre_) une option de ligne de commande de l’outil MSBuild.exe peut générer plusieurs projets à la à la fois. L’option de compilateur **/MP** peut aussi générer plusieurs unités de compilation en même temps. Si c’est approprié pour votre application, améliorez le temps de génération de votre solution en utilisant **/MP** ou **/maxcpucount**, ou les deux.
 
 Le temps de génération de votre solution dépend en partie du nombre de processus qui effectuent la génération. Le *nombre* argument de la [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild option spécifie le nombre maximal de projets à générer en même temps. De même, la *processMax* argument de la **/MP** option du compilateur spécifie le nombre maximal d’unités de compilation à générer en même temps. Si le **/maxcpucount** option spécifie *P* projets et **/MP** option spécifie *C* traite, un maximum de *P*  x *C* processus s’exécutent en même temps.
 
@@ -143,4 +142,4 @@ Par défaut, la génération d’un projet active l’option de compilateur **/G
 
 [#import (directive)](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Informations de référence sur la ligne de commande](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/ZF (génération PDB plus rapide)](zf.md)<br/>
+[/Zf (génération PDB plus rapide)](zf.md)<br/>

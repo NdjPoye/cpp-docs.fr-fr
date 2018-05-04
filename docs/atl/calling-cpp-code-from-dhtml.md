@@ -1,29 +1,24 @@
 ---
-title: "Appeler le Code C++ à partir de DHTML | Documents Microsoft"
-ms.custom: 
+title: Appeler le Code C++ à partir de DHTML | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e2d0da431249ef886ceca1e2b7f6cbfc99418dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9e369396c68a041dc5fe027802859c6071e50e8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-c-code-from-dhtml"></a>Appel du Code C++ depuis DHTML
 Un contrôle DHTML peut être hébergé dans un conteneur, comme le conteneur de Test ou d’Internet Explorer. Consultez [test des propriétés et des événements avec le conteneur de Test](../mfc/testing-properties-and-events-with-test-container.md) pour plus d’informations sur la façon d’accéder au conteneur de Test.  

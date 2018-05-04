@@ -1,13 +1,10 @@
 ---
-title: "À l’aide des paramètres remplaçables (inscription ATL) | Documents Microsoft"
-ms.custom: 
+title: À l’aide des paramètres remplaçables (inscription ATL) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>À l’aide des paramètres remplaçables (le bureau d’enregistrement &#39; s préprocesseur)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>À l’aide des paramètres remplaçables (le bureau d’enregistrement&#39;s préprocesseur)
 Paramètres remplaçables autorisent le client du bureau d’enregistrement spécifier les données de l’exécution. Pour ce faire, Registrar maintient un mappage de remplacement dans laquelle il entre les valeurs associées aux paramètres remplaçables dans votre script. Le bureau d’enregistrement effectue ces entrées au moment de l’exécution.  
   
-##  <a name="_atl_using_.25.module.25"></a>À l’aide du MODULE %  
+##  <a name="_atl_using_.25.module.25"></a> À l’aide du MODULE %  
  Le [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md) génère automatiquement un script qui utilise `%MODULE%`. ATL utilise ce paramètre remplaçable pour l’emplacement réel du fichier DLL ou EXE de votre serveur.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Concaténation de données de l’exécution avec les données du Script  

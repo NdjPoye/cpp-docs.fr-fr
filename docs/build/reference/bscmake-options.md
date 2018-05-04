@@ -2,12 +2,9 @@
 title: Options BSCMAKE | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>Options BSCMAKE
 Cette section décrit les options disponibles pour contrôler BSCMAKE. Plusieurs options contrôlent le contenu du fichier d’informations de consultation en excluant ou incluant certaines informations. Les options d’exclusion peuvent autoriser BSCMAKE pour s’exécuter plus rapidement et peuvent entraîner un fichier .bsc plus petit. Noms d’options respectent la casse (à l’exception de **/Help** et **/NOLOGO**).  
@@ -82,12 +77,12 @@ Cette section décrit les options disponibles pour contrôler BSCMAKE. Plusieurs
  Inclut les symboles non référencés. Par défaut, BSCMAKE n’enregistre pas tous les symboles qui sont définis mais pas référencés. Si un fichier .sbr a été compressé, cette option n’a aucun effet sur ce fichier, car le compilateur a déjà supprimé les symboles non référencés.  
   
  /n  
- Force une génération non incrémentielle. Utilisez  **/n**  pour forcer une génération complète du fichier d’informations Parcourir ou non un fichier .bsc existe et pour empêcher la troncature des fichiers .sbr. Consultez [génération d’un fichier .bsc par BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ Force une génération non incrémentielle. Utilisez **/n** pour forcer une génération complète du fichier d’informations Parcourir ou non un fichier .bsc existe et pour empêcher la troncature des fichiers .sbr. Consultez [génération d’un fichier .bsc par BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Supprime le message de copyright de BSCMAKE.  
   
- /o`filename`  
+ /o `filename`  
  Spécifie un nom pour le fichier d’informations. Par défaut, BSCMAKE donne le fichier d’informations de consultation le nom de base du premier fichier .sbr et une extension .bsc.  
   
  /S ( `filename`...)  

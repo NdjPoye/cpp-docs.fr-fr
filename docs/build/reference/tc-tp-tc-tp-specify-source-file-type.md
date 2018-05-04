@@ -1,10 +1,9 @@
 ---
-title: "/ Tc, / TP, /TP (spécifier le Type de fichier Source) | Documents Microsoft"
+title: / Tc, / TP, /TP (spécifier le Type de fichier Source) | Documents Microsoft
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,14 +21,13 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 
@@ -39,8 +37,8 @@ Le **/Tc** option spécifie que son argument de nom de fichier est un fichier so
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Tc** _filename_  
-> **/Tp** _filename_  
+> **/TC** _nom de fichier_  
+> **/TP** _nom de fichier_  
 > **/TC**  
 > **/TP**  
 
@@ -75,7 +73,7 @@ Cette ligne de commande CL Spécifie que MAIN.c, TEST.prg et COLLATE.prg sont to
 
 Cette ligne de commande CL Spécifie que TEST1.c, TEST2.cxx, TEST3.huh et TEST4.o sont compilés en tant que fichiers C++, et que TEST5.z est compilé en tant qu’un fichier C.
 
-> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
+> CL TEST1. C TEST2. CXX TEST3. NON TEST4. O /Tc TEST5. Z /TP
 
 ## <a name="see-also"></a>Voir aussi
 

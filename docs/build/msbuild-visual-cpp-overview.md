@@ -2,28 +2,23 @@
 title: Vue d’ensemble de MSBuild (Visual C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Vue d'ensemble de MSBuild (Visual C++)  
   
@@ -84,9 +79,9 @@ Par défaut, les fichiers de prise en charge de Visual C++ principales sont situ
   
 |Répertoire|Description|  
 |---------------|-----------------|  
-|*lecteur*: \Program Files *(x86)*\Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ <br /><br />*lecteur*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*version*\ |Contient les fichiers cibles (.targets) et les fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $ (VCTargetsPath) fait référence à ce répertoire.|  
-|*lecteur*: \Program Files *(x86)*\Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ Plateformes\\*plateforme*\ <br /><br />*lecteur*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*plateforme*\ |Contient les fichiers spécifiques à la plateforme cible et la propriété qui substituent les cibles et les propriétés de son répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisés par les cibles dans ce répertoire.<br /><br /> Le *plateforme* espace réservé représente le ARM, Win32 ou x64 sous-répertoire.|  
-|*lecteur*: \Program Files *(x86)*\Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ Plateformes\\*plateforme*\PlatformToolsets\\*ensemble d’outils*\ <br /><br />*lecteur*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*plateforme*\ Ensemble\\*ensemble d’outils*\ <br /><br />*lecteur*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plateforme*\PlatformToolsets\\*ensemble d’outils*\ |Contient les répertoires qui permettent de générer des applications Visual C++ à l’aide de l’élément spécifié de la build *ensemble d’outils*.<br /><br /> Le *année* et *édition* espaces réservés sont utilisés par Visual Studio 2017 et éditions ultérieures. Le *version* espace réservé est V110 pour Visual Studio 2012, V120 pour Visual Studio 2013 ou V140 pour Visual Studio 2015. Le *plateforme* espace réservé représente le ARM, Win32 ou x64 sous-répertoire. Le *ensemble d’outils* espace réservé représente le sous-répertoire ensemble d’outils, par exemple, v140 pour la création d’applications Windows à l’aide de l’ensemble d’outils Visual Studio 2015, v120_xp de génération pour Windows XP à l’aide de l’ensemble d’outils Visual Studio 2013, ou v110_wp80 à générer des applications Windows Phone 8.0 à l’aide de l’ensemble d’outils de Visual Studio 2012.<br /><br />Le chemin d’accès qui contient les répertoires qui permettent la génération de générer des applications Visual C++ 2008 ou de Visual C++ 2010 n’inclut pas le *version*et le *plateforme* espace réservé représente Itanium, Win32 ou x64 sous-répertoire. Le *ensemble d’outils* espace réservé représente le sous-répertoire v90 ou v100 ensemble d’outils.|  
+|*lecteur*: \Program Files *(x86)* \Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ <br /><br />*lecteur*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*version*\ |Contient les fichiers cibles (.targets) et les fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $ (VCTargetsPath) fait référence à ce répertoire.|  
+|*lecteur*: \Program Files *(x86)* \Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ Plateformes\\*plateforme*\ <br /><br />*lecteur*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*plateforme*\ |Contient les fichiers spécifiques à la plateforme cible et la propriété qui substituent les cibles et les propriétés de son répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisés par les cibles dans ce répertoire.<br /><br /> Le *plateforme* espace réservé représente le ARM, Win32 ou x64 sous-répertoire.|  
+|*lecteur*: \Program Files *(x86)* \Microsoft Visual Studio\\*année*\\*édition*\Common7\IDE\VC\VCTargets\ Plateformes\\*plateforme*\PlatformToolsets\\*ensemble d’outils*\ <br /><br />*lecteur*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*plateforme*\ Ensemble\\*ensemble d’outils*\ <br /><br />*lecteur*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plateforme*\PlatformToolsets\\*ensemble d’outils*\ |Contient les répertoires qui permettent de générer des applications Visual C++ à l’aide de l’élément spécifié de la build *ensemble d’outils*.<br /><br /> Le *année* et *édition* espaces réservés sont utilisés par Visual Studio 2017 et éditions ultérieures. Le *version* espace réservé est V110 pour Visual Studio 2012, V120 pour Visual Studio 2013 ou V140 pour Visual Studio 2015. Le *plateforme* espace réservé représente le ARM, Win32 ou x64 sous-répertoire. Le *ensemble d’outils* espace réservé représente le sous-répertoire ensemble d’outils, par exemple, v140 pour la création d’applications Windows à l’aide de l’ensemble d’outils Visual Studio 2015, v120_xp de génération pour Windows XP à l’aide de l’ensemble d’outils Visual Studio 2013, ou v110_wp80 à générer des applications Windows Phone 8.0 à l’aide de l’ensemble d’outils de Visual Studio 2012.<br /><br />Le chemin d’accès qui contient les répertoires qui permettent la génération de générer des applications Visual C++ 2008 ou de Visual C++ 2010 n’inclut pas le *version*et le *plateforme* espace réservé représente Itanium, Win32 ou x64 sous-répertoire. Le *ensemble d’outils* espace réservé représente le sous-répertoire v90 ou v100 ensemble d’outils.|  
   
 ### <a name="support-files"></a>Fichiers de prise en charge  
   

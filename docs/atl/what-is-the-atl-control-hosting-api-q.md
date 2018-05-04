@@ -1,13 +1,10 @@
 ---
-title: "Quelle est la bibliothèque ATL API d’hébergement de contrôle ? | Microsoft Docs"
-ms.custom: 
+title: Quelle est la bibliothèque ATL API d’hébergement de contrôle ? | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Quelle est la bibliothèque ATL API d’hébergement de contrôle ?
 ATL qui héberge le contrôle de l’API est l’ensemble de fonctions qui permet de n’importe quelle fenêtre d’agir comme un conteneur de contrôles ActiveX. Ces fonctions peuvent être statiquement ou dynamiquement liées dans votre projet, car elles sont disponibles en tant que code source et exposées par ATL90.dll. Les fonctions de contrôle d’hébergement sont répertoriées dans le tableau ci-dessous.  

@@ -2,11 +2,8 @@
 title: 'Opération de bits OR inclusif ou opérateur : || Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaef650cc747cdb9e628ae3b786bc1c1e21b5bdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc43460bc2c20262156bfdc6bd7f69a693c222f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Opérateur de bits OR inclusif : |
 ## <a name="syntax"></a>Syntaxe  
@@ -47,7 +42,7 @@ expression
   
  Les deux opérandes de l’opérateur OR inclusif de bits doivent être de types intégraux. Les conversions arithmétiques courantes traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.  
   
-## <a name="operator-keyword-for-124"></a>Mot clé operator pour &#124;  
+## <a name="operator-keyword-for-124"></a>Mot clé operator pour&#124;  
  Le `bitor` opérateur est l’équivalent textuel de **&#124;**. Il existe deux moyens d’accéder à la `bitor` opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
 ## <a name="example"></a>Exemple  

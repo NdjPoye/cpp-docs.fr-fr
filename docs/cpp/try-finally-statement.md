@@ -2,11 +2,8 @@
 title: Instruction try-finally | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 **Section spécifique à Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Grammaire  
  *try-finally-statement* :  
- `__try`*compound-statement*  
+ `__try` *instruction composée*  
   
- `__finally`*compound-statement*  
+ `__finally` *instruction composée*  
   
  L'instruction `try-finally` est une extension Microsoft des langages C et C++ qui permet aux applications cibles de garantir l'exécution du code de nettoyage lorsque l'exécution d'un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. L'instruction `try-finally` est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur qui peut provoquer un retour prématuré de la routine.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l'ordre suivant à mesure que le système déroule la pile : D, C, B.  
   
- ![Commande d’arrêt &#45; l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Commande d’arrêt&#45;l’exécution du gestionnaire](../cpp/media/vc38cx1.gif "vc38CX1")  
 Fin de l'ordre d'exécution du gestionnaire  
   
 > [!NOTE]

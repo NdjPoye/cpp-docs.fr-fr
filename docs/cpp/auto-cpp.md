@@ -1,12 +1,9 @@
 ---
 title: automatique (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,19 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="auto-c"></a>auto (C++)
+# <a name="auto-c"></a>automatique (C++)
 Déduit le type d'une variable déclarée de son expression d'initialisation.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -227,7 +222,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [auto Keyword](../cpp/auto-keyword.md)   
+ [auto, mot clé](../cpp/auto-keyword.md)   
  [Mots clés](../cpp/keywords-cpp.md)   
  [/ Zc : auto (déduire le Type de Variable)](../build/reference/zc-auto-deduce-variable-type.md)   
  [sizeof, opérateur](../cpp/sizeof-operator.md)   

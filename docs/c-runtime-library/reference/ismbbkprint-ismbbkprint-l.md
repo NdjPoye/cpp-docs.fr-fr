@@ -2,11 +2,8 @@
 title: _ismbbkprint, _ismbbkprint_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkprint
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1309b86415d58d4f6c0bc94ae2ec03ab515341c
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -75,7 +70,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkprint** retourne une valeur différente de zéro si l’entier *c* est un fichier texte non ASCII ou symbole de ponctuation non ASCII ou 0 s’il n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkprint** des tests de katakanas alphanumériques ou des signes de ponctuation katakana (plage : 0xA1 - 0xDF). **_ismbbkprint** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkprint_l** est identique, sauf qu’elle utilise les paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** retourne une valeur différente de zéro si l’entier *c* est un fichier texte non ASCII ou symbole de ponctuation non ASCII ou 0 s’il n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkprint** teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). **_ismbbkprint** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendant des paramètres régionaux. **_ismbbkprint_l** est identique, sauf qu’elle utilise les paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Spécifications
 

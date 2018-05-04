@@ -1,12 +1,9 @@
 ---
 title: Classe de CComCachedTearOffObject | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1072faed01033bec9fec127318334f8a61ac29e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe de CComCachedTearOffObject
 Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable.  
@@ -80,7 +75,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` objet dérivé votre classe détachable (la classe `contained`).|  
   
 ## <a name="remarks"></a>Notes  
- `CComCachedTearOffObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable. Cette classe est différente de `CComTearOffObject` dans ce `CComCachedTearOffObject` possède son propre **IUnknown**, distinct de l’objet propriétaire **IUnknown** (le propriétaire est l’objet pour lequel le détachable est en cours de création). `CComCachedTearOffObject`maintient son propre nombre de références sur son **IUnknown** et supprimée automatiquement une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez pour une de ses détachable interfaces, le nombre de références de l’objet propriétaire **IUnknown** est incrémenté.  
+ `CComCachedTearOffObject` implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour une interface détachable. Cette classe est différente de `CComTearOffObject` dans ce `CComCachedTearOffObject` possède son propre **IUnknown**, distinct de l’objet propriétaire **IUnknown** (le propriétaire est l’objet pour lequel le détachable est en cours de création). `CComCachedTearOffObject` maintient son propre nombre de références sur son **IUnknown** et supprimée automatiquement une fois que son décompte de références est égal à zéro. Toutefois, si vous interrogez pour une de ses détachable interfaces, le nombre de références de l’objet propriétaire **IUnknown** est incrémenté.  
   
  Si le `CComCachedTearOffObject` de l’objet implémentant le détachable est déjà instanciée, et l’interface détachable est interrogé pour là encore, dans le même `CComCachedTearOffObject` objet est réutilisé. En revanche, si une interface détachable implémentée par un `CComTearOffObject` est à nouveau interrogée pour via l’objet propriétaire, un autre `CComTearOffObject` seront instanciés.  
   
@@ -95,10 +90,10 @@ public CComObjectRootEx<contained
   
  `CComCachedTearOffObject`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  
  Incrémente le décompte de références de le `CComCachedTearOffObject` objet de 1.  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui peut être utile pour les tests de diagnostic et de test.  
   
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject  
  Constructeur.  
   
 ```
@@ -122,7 +117,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Notes  
  Initialise le `CComContainedObject` membre, [m_contained](#m_contained).  
   
-##  <a name="dtor"></a>CComCachedTearOffObject :: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>  CComCachedTearOffObject :: ~ CComCachedTearOffObject  
  Destructeur.  
   
 ```
@@ -132,7 +127,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Notes  
  Libère toutes les ressources attribuées et les appels [FinalRelease](#finalrelease).  
   
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct  
  Appels **m_contained::FinalConstruct** créer `m_contained`, le `CComContainedObject` <  `contained`> objet utilisé pour accéder à l’interface implémentée par la classe détachable.  
   
 ```
@@ -142,14 +137,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease  
  Appels **m_contained::FinalRelease** pour libérer `m_contained`, le `CComContainedObject` <  `contained`> objet.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé votre classe détachable.  
   
 ```
@@ -163,7 +158,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>Notes  
  Les méthodes `m_contained` hérite sont utilisés pour accéder à l’interface détachable dans votre classe détachable via l’objet mis en cache détachable `QueryInterface`, `FinalConstruct`, et `FinalRelease`.  
   
-##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface  
  Récupère un pointeur vers l'interface demandée.  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Si l’interface demandée est **IUnknown**, retourne un pointeur vers le `CComCachedTearOffObject`de propre **IUnknown** et incrémente le décompte de références. Sinon, les requêtes pour l’interface sur votre classe détachables à l’aide de la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) héritée de la méthode `CComObjectRootEx`.  
 
   
-##  <a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>  CComCachedTearOffObject::Release  
  Décrémente le décompte de références de 1 et, si le décompte de références est 0, supprime la `CComCachedTearOffObject` objet.  
   
 ```

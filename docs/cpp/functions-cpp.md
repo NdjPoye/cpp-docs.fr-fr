@@ -2,11 +2,8 @@
 title: Fonctions (C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< HEAD
-4. Outre l’utilisation de la valeur de retour, vous pouvez « valeurs de retour » en définissant un nombre quelconque de paramètres à utiliser le passage par référence afin que la fonction peut modifier ou initialiser les valeurs des objets qui fournit de l’appelant. Pour plus d’informations, consultez [Arguments de fonction de Type référence](reference-type-function-arguments.md).  
-  
-## <a name="function-pointers"></a>Pointeurs fonction  
- C++ prend en charge les pointeurs de fonction de la même manière que le langage C. Toutefois, une alternative de type plus sécurisé consiste généralement à utiliser un objet de fonction.  
-  
- Il est recommandé d'utiliser `typedef` pour déclarer un alias pour le type de pointeur fonction si vous déclarez une fonction qui retourne un type de pointeur fonction.  Exemple :  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- Si vous ne procédez pas ainsi, la syntaxe appropriée pour la déclaration de fonction peut être déduite de la syntaxe des déclarateurs pour le pointeur fonction, en remplaçant l'identificateur (`fp` dans l'exemple ci-dessus) par la liste de noms et d'arguments de fonctions, comme suit :  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- La déclaration précédente est équivalente à la déclaration utilisant typedef ci-dessus.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Surcharge de fonction](../cpp/function-overloading.md)   
- [Fonctions avec listes d’arguments variables](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [Fonctions définies par défaut et supprimées explicitement](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [Arguments par défaut](../cpp/default-arguments.md)   
- [Fonctions inline](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>Renvoi de plusieurs valeurs à partir d’une fonction
 
 Il existe différentes façons de retourner plusieurs valeurs à partir d’une fonction :
@@ -475,4 +441,3 @@ La déclaration précédente est équivalente à la déclaration utilisant typed
 - [Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Arguments par défaut](../cpp/default-arguments.md)
 - [Fonctions inline](../cpp/inline-functions-cpp.md)
->>>>>>> maître

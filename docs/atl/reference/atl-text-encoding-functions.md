@@ -1,10 +1,7 @@
 ---
 title: Codage des fonctions de texte ATL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>Codage des fonctions de texte ATL
 Ces fonctions prennent en charge le codage et décodage de texte.
@@ -69,7 +65,7 @@ Ces fonctions prennent en charge le codage et décodage de texte.
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Appelez cette fonction pour obtenir la valeur numérique d'un chiffre hexadécimal.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Valeur de retour  
  La valeur numérique du caractère d’entrée est interprété comme un chiffre hexadécimal. Par exemple, une entrée de '0' Retourne une valeur égale à 0 et une entrée de 'A' Retourne une valeur de 10. Si le caractère d’entrée n’est pas un chiffre hexadécimal, cette fonction retourne -1.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Appelez cette fonction pour obtenir la version de la bibliothèque ATL que vous utilisez.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Décode une chaîne de données qui a été encodées sous forme de texte hexadécimal, notamment par un appel précédent à [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en octets d'une mémoire tampon qui peut contenir des données décodées à partir d'une chaîne encodée au format hexadécimal de longueur spécifique.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets requis pour une mémoire tampon qui peut contenir une chaîne décodée de `nSrcLen` caractères.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Appelez cette fonction pour encoder des données sous forme de chaîne hexadécimale.  
   
 ```  
@@ -173,10 +169,10 @@ int * pnDestLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Chaque octet de source de données est encodé comme 2 caractères hexadécimaux.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Appelez cette fonction pour obtenir la valeur numérique d'un chiffre hexadécimal.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Valeur de retour  
  La valeur numérique du caractère d’entrée est interprété comme un chiffre hexadécimal. Par exemple, une entrée de '0' Retourne une valeur égale à 0 et une entrée de 'A' Retourne une valeur de 10. Si le caractère d’entrée n’est pas un chiffre hexadécimal, cette fonction retourne -1.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Appelez cette fonction pour convertir une chaîne Unicode au format UTF-8.  
   
 ```  
@@ -231,10 +227,10 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de caractères pour la chaîne convertie.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour déterminer la taille de la mémoire tampon requise pour la chaîne convertie, appelez cette fonction passer la valeur 0 `szDest` et `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Appelez cette fonction pour convertir certaines données à l'aide de l'encodage « B ».  
   
 ```  
@@ -265,10 +261,10 @@ inline BOOL BEncode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma d’encodage « B » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.  
   
 ```  
@@ -285,10 +281,10 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma d’encodage « B » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Appelez cette fonction pour convertir les caractères dont l'utilisation n'est pas sécurisée dans du code XML en leurs équivalents sécurisés.  
   
 ```  
@@ -316,15 +312,15 @@ inline int EscapeXML(
  `dwFlags`  
  Indicateurs ATL_ESC décrivant la façon dont la conversion doit être effectuée. 
 
-- `ATL_ESC_FLAG_NONE`Comportement par défaut. Guillemet les marques et les apostrophes ne sont pas convertis.
-- `ATL_ESC_FLAG_ATTR`Guillemet les marques et les apostrophes sont convertis en `&quot;` et `&apos;` respectivement.
+- `ATL_ESC_FLAG_NONE` Comportement par défaut. Guillemet les marques et les apostrophes ne sont pas convertis.
+- `ATL_ESC_FLAG_ATTR` Guillemet les marques et les apostrophes sont convertis en `&quot;` et `&apos;` respectivement.
 
 
   
 ### <a name="return-value"></a>Valeur de retour  
  La longueur en caractères de la chaîne convertie.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les conversions possibles effectuées par cette fonction sont affichées dans la table :  
   
 |Source|Destination|  
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Appelez cette fonction pour obtenir le nombre de caractères étendus d'une chaîne.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de caractères étendus trouvé dans la chaîne, comme déterminé par [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Appelez cette fonction pour déterminer si un caractère donné est un caractère étendu (inférieur à 32, supérieur à 126 et qui n'est pas une tabulation, un saut de ligne ou un retour chariot)  
   
 ```  
@@ -360,13 +356,13 @@ inline int IsExtendedChar(char ch) throw();
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *CH*  
+ *ch*  
  Le caractère à tester  
   
 ### <a name="return-value"></a>Valeur de retour  
  **TRUE** si le caractère a été étendu, **FALSE** dans le cas contraire.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Appelez cette fonction pour convertir certaines données à l'aide de l'encodage « Q ».  
   
 ```  
@@ -401,10 +397,10 @@ inline BOOL QEncode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma d’encodage « Q » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.  
   
 ```  
@@ -421,10 +417,10 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma d’encodage « Q » est décrite dans la RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Décode une chaîne de données qui a été encodées au format quoted-printable, notamment par un appel précédent à [QPEncode](#qpencode).  
   
 ```  
@@ -455,10 +451,10 @@ inline BOOL QPDecode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `TRUE` en cas de réussite, `FALSE` en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en octets d'une mémoire tampon qui peut contenir des données décodées à partir d'une chaîne encodée au format Quoted-Printable (QP) de longueur spécifique.  
   
 ```  
@@ -472,10 +468,10 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets requis pour une mémoire tampon qui peut contenir une chaîne décodée de `nSrcLen` caractères.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Appelez cette fonction pour encoder des données au format Quoted-Printable (QP).  
   
 ```  
@@ -502,18 +498,18 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  Indicateurs ATLSMTP_QPENCODE décrivant la façon dont la conversion doit être effectuée. 
-- `ATLSMTP_QPENCODE_DOT`Si une période apparaît au début d’une ligne, elle est ajoutée à la sortie ainsi qu’encodé.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Ajoute `=\r\n` à la chaîne encodée.
+- `ATLSMTP_QPENCODE_DOT` Si une période apparaît au début d’une ligne, elle est ajoutée à la sortie ainsi qu’encodé.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Ajoute `=\r\n` à la chaîne encodée.
 
 Le schéma de codage quoted-printable est décrit dans [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.  
   
 ```  
@@ -527,10 +523,10 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le schéma de codage quoted-printable est décrite dans RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Décode une chaîne de données qui a été convertie au format UUENCODE tels que par un appel précédent à [UUEncode](#uuencode).  
   
 ```  
@@ -557,10 +553,10 @@ inline BOOL UUDecode(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en octets d'une mémoire tampon qui peut contenir des données décodées à partir d'une chaîne encodée au format UUEncode de longueur spécifique.  
   
 ```  
@@ -574,10 +570,10 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets requis pour une mémoire tampon qui peut contenir une chaîne décodée de `nSrcLen` caractères.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Appelez cette fonction pour convertir des données au format UUEncode.  
   
 ```  
@@ -608,17 +604,17 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Indicateurs de contrôler le comportement de cette fonction. 
-- `ATLSMTP_UUENCODE_HEADE`L’en-tête doit être encodé.
-- `ATLSMTP_UUENCODE_END`La fin doit être encodée.
-- `ATLSMTP_UUENCODE_DOT`Bourrage de données sera effectuée.  
+- `ATLSMTP_UUENCODE_HEADE` L’en-tête doit être encodé.
+- `ATLSMTP_UUENCODE_END` La fin doit être encodée.
+- `ATLSMTP_UUENCODE_DOT` Bourrage de données sera effectuée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.  
   
 ```  
@@ -632,7 +628,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de caractères requis pour une mémoire tampon qui peut contenir des données encodées de `nSrcLen` octets.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette implémentation uuencoding suit la spécification de POSIX P1003.2b/D11.  
   
 ### <a name="see-also"></a>Voir aussi  
