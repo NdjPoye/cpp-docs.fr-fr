@@ -1,12 +1,9 @@
 ---
-title: CRowset::GetRowStatus | Microsoft Docs
-ms.custom: 
+title: CRowset::GetRowStatus | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowset.GetRowStatus
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GetRowStatus method
 ms.assetid: 7a29a235-cb7e-40c1-92ce-5441751febee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dd42846eb6ee46ea38c808c7542af8fd9990201
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e3a0fb71a06a407a80a98717af53da926436f57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetgetrowstatus"></a>CRowset::GetRowStatus
 Retourne l’état de toutes les lignes.  
@@ -55,7 +50,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 ## <a name="remarks"></a>Notes  
  Cette méthode requiert l’interface facultative `IRowsetUpdate`, qui ne peut pas être pris en charge sur tous les fournisseurs ; si c’est le cas, la méthode retourne **E_NOINTERFACE**. Vous devez également définir **DBPROP_IRowsetUpdate** à `VARIANT_TRUE` avant d’appeler **ouvrir** sur la table ou d’une commande qui contient l’ensemble de lignes.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

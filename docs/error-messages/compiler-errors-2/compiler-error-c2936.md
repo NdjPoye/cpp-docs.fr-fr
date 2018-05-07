@@ -1,13 +1,10 @@
 ---
 title: Erreur du compilateur C2936 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2936
 dev_langs:
@@ -15,26 +12,24 @@ dev_langs:
 helpviewer_keywords:
 - C2936
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c8c8661d4f1c1ecaf80ed35ec2153616e03b87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d3cfd6e9142e5c10906eaa94d5a1466b0d0bd19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2936"></a>Erreur du compilateur C2936
-'class' : type-class-id redéfini comme variable globale de données  
+'class' : type-class-id redéfini comme variable globale de données  
   
  Vous ne pouvez pas utiliser une classe générique ni de modèle comme variable globale de données.  
   
  Cette erreur peut être provoquée par une mise en correspondance incorrecte des accolades.  
   
- L’exemple suivant génère l’erreur C2936 :  
+ L’exemple suivant génère l’erreur C2936 :  
   
 ```  
 // C2936.cpp  
@@ -47,7 +42,7 @@ struct TC2 { };
 int TC2;  
 ```  
   
- L’erreur C2936 peut également se produire lors de l’utilisation de génériques :  
+ L’erreur C2936 peut également se produire lors de l’utilisation de génériques :  
   
 ```  
 // C2936b.cpp  

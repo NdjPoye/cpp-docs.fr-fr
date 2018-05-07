@@ -1,31 +1,26 @@
 ---
-title: "Déclarations de membre dans une classe ou Interface (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: Déclarations de membre dans une classe ou Interface (C + c++ / CLI) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - members, declaration syntax
 - class members, declaration syntax
 ms.assetid: 95d312a4-198b-46f0-b8f5-15253807c55e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d42ef381d175512fc9e1173a2187d5f77b408cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Déclarations de membre dans une classe ou interface (C++/CLI)
 La déclaration de propriétés et d’opérateurs a été largement revue à partir des Extensions managées pour C++ vers Visual C++, masquer les détails d’implémentation sous-jacents exposés dans la conception des Extensions managées. Déclarations d’événements ont été modifiées ainsi.  

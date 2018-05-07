@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Architecture (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Architecture (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 169d371327137cf4f51ed10429eb5e9708a0e088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5be3ec16ec01a6c6db2e24b1b6a6260f3a44bfec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-architecture-odbc"></a>Recordset : architecture (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -49,7 +44,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 > [!NOTE]
 >  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si l’extraction de lignes en bloc est implémentée, l’architecture est similaire. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_a_sample_class"></a>Exemple de classe  
+##  <a name="_core_a_sample_class"></a> Exemple de classe  
  Lorsque vous utilisez la [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **ajouter une classe** dérivé de l’Assistant pour déclarer une classe de recordset `CRecordset`, la classe obtenue possède la structure générale illustrée dans l’exemple suivant simple classe :  
   
 ```  
@@ -66,14 +61,14 @@ public:
   
  Au début de la classe, l’Assistant écrit un ensemble de [données membres de champ](#_core_field_data_members). Lorsque vous créez la classe, vous devez spécifier un ou plusieurs membres de données de champ. Si la classe est paramétrée, comme l’exemple de classe est (avec le membre de données `m_strIDParam`), vous devez ajouter manuellement [les membres de données de paramètre](#_core_parameter_data_members). L’Assistant ne prend pas en charge l’ajout de paramètres à une classe.  
   
-##  <a name="_core_field_data_members"></a>Données membres de champ  
+##  <a name="_core_field_data_members"></a> Données membres de champ  
  Membres les plus importants de votre classe de recordset sont les membres de données de champ. Pour chaque colonne que vous sélectionnez à partir de la source de données, la classe contient un membre de données de type de données approprié pour cette colonne. Par exemple, le [exemple de classe](#_core_a_sample_class) présenté au début de cette rubrique a deux membres de données de champ, les deux de type `CString`, appelé `m_strCourseID` et `m_strCourseTitle`.  
   
  Lorsque le jeu d’enregistrements sélectionne un ensemble d’enregistrements, la structure lie automatiquement les colonnes de l’enregistrement actuel (après le **ouvrir** appel, le premier enregistrement est en cours) aux données membres de champ de l’objet. Autrement dit, l’infrastructure utilise le membre de données de champ approprié en tant qu’une mémoire tampon dans lequel stocker le contenu d’une colonne de l’enregistrement.  
   
  Quand l’utilisateur passe à un nouvel enregistrement, l’infrastructure utilise les données membres de champ pour représenter l’enregistrement actif. L’infrastructure actualise les données membres de champ, en remplaçant les valeurs de l’enregistrement précédent. Données membres de champ sont également utilisés pour mettre à jour l’enregistrement en cours et pour ajouter de nouveaux enregistrements. Dans le cadre du processus de mise à jour un enregistrement, vous spécifiez les valeurs de mise à jour en assignant des valeurs directement au membre de données de champ approprié ou de membres.  
   
-##  <a name="_core_parameter_data_members"></a>Membres de données de paramètre  
+##  <a name="_core_parameter_data_members"></a> Membres de données de paramètre  
  Si la classe est paramétrée, elle a un ou plusieurs membres de données de paramètre. Une classe paramétrée vous permet de baser une requête de jeu d’enregistrements sur les informations obtenues ou calculées au moment de l’exécution.  
   
  En règle générale, le paramètre permet d’affiner la sélection, comme dans l’exemple suivant. Selon le [exemple de classe](#_core_a_sample_class) au début de cette rubrique, l’objet recordset susceptible d’exécuter l’instruction SQL suivante :  
@@ -96,7 +91,7 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 > [!NOTE]
 >  L’ordre des paramètres est important. Pour plus d’informations à ce sujet et plus d’informations sur les paramètres, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-##  <a name="_core_using_m_nfields_and_m_nparams"></a>Utilisation de m_nFields et m_nParams  
+##  <a name="_core_using_m_nfields_and_m_nparams"></a> Utilisation de m_nFields et m_nParams  
 
  Quand un Assistant écrit un constructeur pour votre classe, il initialise aussi la [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membre de données, qui spécifie le nombre de [données membres de champ](#_core_field_data_members) dans la classe. Si vous ajoutez un [paramètres](#_core_parameter_data_members) à votre classe, vous devez également ajouter une initialisation pour le [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membre de données, qui spécifie le nombre de membres de données de paramètre. L’infrastructure utilise ces valeurs pour travailler avec les membres de données.  
   

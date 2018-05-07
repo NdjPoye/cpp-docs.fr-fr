@@ -1,12 +1,9 @@
 ---
-title: IRowsetCreatorImpl::SetSite | Microsoft Docs
-ms.custom: 
+title: IRowsetCreatorImpl::SetSite | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetCreatorImpl.SetSite
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec7621972020d15068d53ccb3351983bc2b1b825
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: af2883b261b754cee04e2c5090d1ef9b9887c04f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
 Définit le site qui contient l’objet d’ensemble de lignes. Pour plus d’informations, consultez [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
@@ -54,7 +49,7 @@ Définit le site qui contient l’objet d’ensemble de lignes. Pour plus d’in
 ## <a name="remarks"></a>Notes  
  En outre, `IRowsetCreatorImpl::SetSite` permet d’OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS** propriétés.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

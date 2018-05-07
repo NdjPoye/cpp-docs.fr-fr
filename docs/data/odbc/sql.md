@@ -1,13 +1,10 @@
 ---
 title: SQL | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) est un moyen pour communiquer avec une base de données relationnelle qui vous permet de définir, interroger, de modifier et de contrôler les données. À l’aide de la syntaxe SQL, vous pouvez construire une instruction qui extrait des enregistrements en fonction de critères que vous spécifiez.  
@@ -47,10 +42,10 @@ SQL (Structured Query Language) est un moyen pour communiquer avec une base de d
   
 -   [Utilisent de SQL par les classes de base de données](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  Les classes de base de données sont implémentées avec ODBC, qui utilise une interface de niveau d’appel, plutôt que de l’incorporation de commandes SQL dans le code. ODBC utilise SQL pour communiquer avec un [source de données](../../data/odbc/data-source-odbc.md) via les pilotes ODBC. Ces pilotes interprètent le langage SQL et traduisent, si nécessaire, pour une utilisation avec un format de base de données particulière, telle que Microsoft Access. Pour plus d’informations sur l’utilisation de SQL par ODBC, consultez [ODBC](../../data/odbc/odbc-basics.md) et le SDK ODBC *de référence du programmeur* sur le CD-ROM MSDN Library.  
   
-##  <a name="_core_the_database_classes"></a>Classes de base de données  
+##  <a name="_core_the_database_classes"></a> Classes de base de données  
  Les classes de base de données sont conçues pour vous permettre de manipuler et mettre à jour des données dans un fichier [source de données](../../data/odbc/data-source-odbc.md). Le [Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md), le [Assistant Consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (accessibles via **ajouter une classe**), et les classes de base de données construisent la plupart des instructions SQL pour vous.  
   
  Les classes de base de données utilisent une partie de SQL connu en tant que le langage DML (Data Manipulation). Ces commandes vous permettent de travailler avec tout ou partie de la source de données, ajouter de nouveaux enregistrements, modifier des enregistrements et supprimer des enregistrements. Le tableau suivant répertorie les mots clés SQL courants, et l’une des manières les classes de base de données utilisent.  
@@ -79,7 +74,7 @@ SQL (Structured Query Language) est un moyen pour communiquer avec une base de d
   
  Vous trouverez plus d’informations sur SQL, y compris une liste des instructions SQL prises en charge, les types de données, grammaire SQL principale et une liste de lecture de publications recommandées sur SQL, dans le *ODBC SDK* *de référence du programmeur*  sur le CD-ROM MSDN Library.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Utilisent de SQL par les Classes de base de données  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Utilisent de SQL par les Classes de base de données  
  Les jeux d’enregistrements d' que vous dérivez des classes de base de données utilisation de ODBC pour communiquer avec une source de données et ODBC extrait des enregistrements à partir de la source de données en envoyant des instructions SQL. Cette rubrique explique la relation entre les classes de base de données et SQL.  
   
  Un jeu d’enregistrements crée une instruction SQL en ajoutant les différents éléments d’une instruction SQL dans un `CString`. La chaîne est construite comme un **sélectionnez** instruction, qui retourne un jeu d’enregistrements.  

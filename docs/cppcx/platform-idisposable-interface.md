@@ -1,11 +1,8 @@
 ---
 title: Platform::IDisposable (Interface) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::IDisposable
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ff9deff5df9bb0e0b3bdc88a482aa8063bef3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 68c5425d5d65acc194287a97068df7da15f37275
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable (interface)
 Utilisée pour libérer des ressources non managées.  
@@ -51,7 +46,7 @@ public interface class IDisposable
 |------------|-----------------|  
 |Suppression|Utilisée pour libérer des ressources non managées.|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

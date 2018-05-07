@@ -1,12 +1,9 @@
 ---
-title: "Vue d’ensemble de la programmation OLE DB | Documents Microsoft"
-ms.custom: 
+title: Vue d’ensemble de la programmation OLE DB | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-programming-overview"></a>Vue d'ensemble de la programmation OLE DB
 OLE DB est une technologie de base de données hautes performances, basé sur COM. Il fournit une méthode courante pour accéder aux données, quel que soit le formulaire dans lequel il est stocké. Dans une situation d’entreprise classique, une grande quantité d’informations est stockée en dehors des bases de données d’entreprise. Ces informations se trouve dans les systèmes de fichiers (tel que FAT ou NTFS), des fichiers séquentiels indexés, des bases de données personnelles (tels que l’accès), des feuilles de calcul (par exemple, Excel), applications de planification de projet (par exemple, le projet) et messagerie (par exemple, Outlook). OLE DB permet d’accéder à n’importe quel type de magasin de données de la même manière, tant que le magasin de données a un fournisseur OLE DB.

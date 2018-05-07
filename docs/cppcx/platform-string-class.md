@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::String | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
 Représente une collection séquentielle de caractères Unicode utilisée pour représenter du texte. Pour plus d’informations et d’exemples, consultez [chaînes](../cppcx/strings-c-cx.md).  
@@ -76,12 +71,12 @@ public ref class String sealed : Object,
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[String::Begin](#begin)|Retourne un pointeur au début de la chaîne actuelle.|  
+|[String::BEGIN](#begin)|Retourne un pointeur au début de la chaîne actuelle.|  
 |[String::CompareOrdinal](#compareordinal)|Compare deux objets `String` en évaluant les valeurs numériques des caractères correspondants dans les deux valeurs de chaîne représentées par les objets.|  
 |[String::Concat](#concat)|Concatène les valeurs de deux objets String.|  
 |[String::Data](#data)|Retourne un pointeur au début de la chaîne actuelle.|  
-|[String::Dispose](#dispose)|Libère des ressources.|  
-|[String::End](#end)|Retourne un pointeur après la fin de la chaîne actuelle.|  
+|[String::dispose](#dispose)|Libère des ressources.|  
+|[String::end](#end)|Retourne un pointeur après la fin de la chaîne actuelle.|  
 |[String::Equals](#equals)|Indique si l'objet spécifié est égal à l'objet actif.|  
 |[String::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|  
 |[String::IsEmpty](#isempty)|Indique si l'objet String actuel est vide.|  
@@ -95,14 +90,14 @@ public ref class String sealed : Object,
   
 |Membre|Description|  
 |------------|-----------------|  
-|[String::operator== Operator](#operator-equality)|Indique si deux objets String spécifiés ont la même valeur.|  
+|[String::operator ==, opérateur](#operator-equality)|Indique si deux objets String spécifiés ont la même valeur.|  
 |[Opérateur opérateur+](#operator-plus)|Concatène deux objets String en un nouvel objet String.|  
 |[String::operator > (opérateur)](#operator-greater-than)|Indique si la valeur d'un objet String est supérieure à la valeur d'un deuxième objet String.|  
 |[String::operator > = (opérateur)](#operator-greater-than-or-equals)|Indique si la valeur d'un objet String est supérieure ou égale à la valeur d'un deuxième objet String.|  
-|[String::operator!= Operator](#operator-inequality)|Indique si deux objets String spécifiés ont des valeurs différentes.|  
+|[String::operator ! =, opérateur](#operator-inequality)|Indique si deux objets String spécifiés ont des valeurs différentes.|  
 |[String::operator < (opérateur)](#operator-less-than)|Indique si la valeur d'un objet String est inférieure à la valeur d'un deuxième objet String.|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -125,7 +120,7 @@ char16* Begin()
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur au début de la chaîne actuelle.  
   
-## <a name="compareordinal"></a>  String::CompareOrdinal Method
+## <a name="compareordinal"></a>  String::CompareOrdinal, méthode
 Compare deux objets `String` en évaluant les valeurs numériques des caractères correspondants dans les deux valeurs de chaîne représentées par les objets.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  String::GetHashCode, méthode
 Retourne le code de hachage de cette instance.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  String::operator + (opérateur)
 Concatène deux [chaîne](../cppcx/platform-string-class.md) objets dans un nouveau [chaîne](../cppcx/platform-string-class.md) objet.
   
 ### <a name="syntax"></a>Syntaxe  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Notes  
  Cet opérateur crée un objet `String^` qui contient les données des deux opérandes. Utilisez-le pour des raisons pratiques lorsque la performance extrême n'est pas critique. Certains appels à « `+` » dans une fonction ne seront peut-être pas visibles, mais si vous manipulez des objets volumineux ou des données texte dans une boucle serrée, utilisez ensuite les mécanismes et les types C++ standard.  
   
-##  <a name="operator-equality"></a> String::operator== Operator
+##  <a name="operator-equality"></a> String::operator ==, opérateur
 Indique si deux objets String spécifiés ont la même valeur de type texte.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String::operator ! = 
 Indique si deux objets String spécifiés ont des valeurs différentes.  
   
 ### <a name="syntax"></a>Syntaxe  

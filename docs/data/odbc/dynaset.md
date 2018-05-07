@@ -1,13 +1,10 @@
 ---
-title: "Feuille de réponse dynamique | Documents Microsoft"
-ms.custom: 
+title: Feuille de réponse dynamique | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>Feuille de réponse dynamique
 Cette rubrique décrit les feuilles de réponse dynamiques et explique leur [disponibilité](#_core_availability_of_dynasets).  
@@ -52,7 +47,7 @@ Cette rubrique décrit les feuilles de réponse dynamiques et explique leur [dis
 > [!NOTE]
 >  Modifiables, votre pilote ODBC doit prendre en charge deux instructions de mise à jour positionnée ou **:: SQLSetPos** fonction d’API ODBC. Si les deux sont pris en charge, MFC utilise **:: SQLSetPos** par souci d’efficacité.  
   
-##  <a name="_core_availability_of_dynasets"></a>Disponibilité des feuilles de réponse dynamiques  
+##  <a name="_core_availability_of_dynasets"></a> Disponibilité des feuilles de réponse dynamiques  
  Les classes de base de données MFC prennent en charge les feuilles de réponse dynamiques si les conditions suivantes sont remplies :  
   
 -   La bibliothèque de curseurs ODBC DLL ne doit pas être en cours d’utilisation pour cette source de données.  

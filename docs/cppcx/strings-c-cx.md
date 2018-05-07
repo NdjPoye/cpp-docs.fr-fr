@@ -1,24 +1,19 @@
 ---
-title: "Chaînes (C + c++ / CX) | Documents Microsoft"
-ms.custom: 
+title: Chaînes (C + c++ / CX) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-ccx"></a>Chaînes (C++/CX)
 Le texte dans le Windows Runtime est représenté dans C + c++ / CX par le [classe Platform::String](../cppcx/platform-string-class.md). Utilisez le `Platform::String Class` lorsque vous passez des chaînes dans les deux sens aux méthodes des classes Windows Runtime ou lors de l’interaction avec d’autres composants Windows Runtime au-delà des limites (ABI) de l’interface binaire d’application. La `Platform::String Class` fournit des méthodes pour plusieurs opérations de chaînes courantes mais elle n'est pas conçue pour être une classe de chaîne complète. Dans votre module C++, utilisez les types de chaînes C++ standard tels que [wstring](../standard-library/basic-string-class.md) pour tout traitement de texte significatif, puis convertissez le résultat final en [Platform::String^](../cppcx/platform-string-class.md) avant de le passer vers ou à partir d'une interface publique. Il est facile et efficace de convertir entre `wstring` ou `wchar_t*` et `Platform::String`.  

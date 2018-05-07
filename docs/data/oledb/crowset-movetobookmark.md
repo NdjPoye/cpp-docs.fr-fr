@@ -1,12 +1,9 @@
 ---
-title: CRowset::MoveToBookmark | Microsoft Docs
-ms.custom: 
+title: CRowset::MoveToBookmark | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRowset::MoveToBookmark
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 81109bf910f24ab2d0cc4d49023537baafdf70c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f638f928c9fee0383e5ed50cd4b3dd547ad4939
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
 Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (`lSkip`) à partir de ce signet.  
@@ -60,7 +55,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
  Pour plus d’informations sur l’utilisation de signets dans des consommateurs, consultez [à l’aide de signets](../../data/oledb/using-bookmarks.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

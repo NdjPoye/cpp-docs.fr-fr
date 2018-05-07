@@ -1,12 +1,9 @@
 ---
 title: CBulkRowset (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CBulkRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CBulkRowset class
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 288599a85cc63c59bf8b1bd013e197908adc9cc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7dddf645b8795b12f6da70081327366b62946303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 Récupère et manipule des lignes à fonctionner sur des données en bloc en récupérant plusieurs handles de ligne avec un seul appel.  
@@ -68,7 +63,7 @@ class CBulkRowset : public CRowset<TAccessor>
   
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

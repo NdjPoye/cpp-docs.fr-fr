@@ -2,35 +2,30 @@
 title: Littéral de chaîne | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - string literals
 - strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac847f67421802fe4d31f2d66b34128e4b24794
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-literal"></a>Littéral de chaîne
 La gestion des littéraux de chaîne a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  
   
- Dans les Extensions managées pour la conception du langage C++, un littéral de chaîne managé a été indiqué par en le faisant précéder le littéral de chaîne avec un `S`. Exemple :  
+ Dans les Extensions managées pour la conception du langage C++, un littéral de chaîne managé a été indiqué par en le faisant précéder le littéral de chaîne avec un `S`. Par exemple :  
   
 ```  
 String *ps1 = "hello";  
@@ -55,13 +50,13 @@ stloc.0
   
  Qui est une économie tout simplement mémorisation ou learning préfixer une chaîne littérale avec un `S`. Dans la nouvelle syntaxe, la gestion des littéraux de chaîne est rendue transparente, déterminé par le contexte d’utilisation. Le `S` n’a plus besoin d’être spécifiés.  
   
- Concernant les cas dans lesquels nous devez explicitement demander au compilateur d’une interprétation ou une autre ? Dans ce cas, nous appliquons un cast explicite. Exemple :  
+ Concernant les cas dans lesquels nous devez explicitement demander au compilateur d’une interprétation ou une autre ? Dans ce cas, nous appliquons un cast explicite. Par exemple :  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- En outre, le littéral de chaîne correspond à présent un `String` avec une simple conversion plutôt qu’une conversion standard. Alors que cela peut ne pas semble beaucoup il modifie la résolution des jeux de fonction surchargée qui incluent un `String` et un `const char*` en tant que paramètres formels concurrents. La résolution d’une fois résolu en un `const char*` instance est désormais signalée comme ambiguë. Exemple :  
+ En outre, le littéral de chaîne correspond à présent un `String` avec une simple conversion plutôt qu’une conversion standard. Alors que cela peut ne pas semble beaucoup il modifie la résolution des jeux de fonction surchargée qui incluent un `String` et un `const char*` en tant que paramètres formels concurrents. La résolution d’une fois résolu en un `const char*` instance est désormais signalée comme ambiguë. Par exemple :  
   
 ```  
 ref struct R {  

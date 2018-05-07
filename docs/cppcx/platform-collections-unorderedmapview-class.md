@@ -1,26 +1,21 @@
 ---
-title: "Classe Platform::Collections :: unorderedmapview | Documents Microsoft"
-ms.custom: 
+title: 'Classe Platform::Collections :: unorderedmapview | Documents Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView, classe
 Représente une vue en lecture seule dans une *carte*, qui est une collection de paires clé/valeur.  
@@ -43,7 +38,7 @@ ref class UnorderedMapView sealed;
  Type de la valeur dans la paire clé-valeur.  
   
  `C`  
- Type qui fournit un objet de fonction qui peut comparer l'égalité de deux valeurs de clés. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
+ Type qui fournit un objet de fonction qui peut comparer l'égalité de deux valeurs de clés. Par défaut, [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Notes  
  UnorderedMapView est une implémentation C++ concrète de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interface est passée à travers l’interface binaire d’application (ABI). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -69,7 +64,7 @@ ref class UnorderedMapView sealed;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `UnorderedMapView`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  

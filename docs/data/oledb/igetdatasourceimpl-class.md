@@ -1,12 +1,9 @@
 ---
 title: Igetdatasourceimpl, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IGetDataSourceImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IGetDataSourceImpl class
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d162e775a2f419693d5563b98bd380ac71b90faa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 50ffa3f176bbd5691a3ea0bc4e23aa8245712e17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl, classe
 Fournit une implémentation de la [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx) objet.  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ## <a name="remarks"></a>Notes  
  Ceci est une interface obligatoire sur la session pour obtenir un pointeur d’interface à l’objet de source de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

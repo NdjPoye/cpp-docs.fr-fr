@@ -1,12 +1,9 @@
 ---
 title: CCommand::Unprepare | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - Unprepare
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Unprepare method
 ms.assetid: 4fe59988-fe51-4c7c-a156-72b68e3d642b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c84ff1f12572c2eaffe701471374dff1da82138
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ab5fdd595e646e181aa3815d6385595f3fee21a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandunprepare"></a>CCommand::Unprepare
 Ignore le plan d’exécution de commande en cours.  
@@ -46,7 +41,7 @@ HRESULT CCommandBase::Unprepare() throw();
 ## <a name="remarks"></a>Notes  
  Cette méthode encapsule la méthode OLE DB [ICommandPrepare::Unprepare](https://msdn.microsoft.com/en-us/library/ms719635.aspx).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

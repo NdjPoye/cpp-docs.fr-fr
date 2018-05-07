@@ -1,12 +1,9 @@
 ---
 title: Accesseurs et jeux de lignes | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 49f5415f6c75984f968b25fb709c20d80dde554f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 Pour définir et récupérer des données, les modèles OLE DB utilisent un accesseur et un ensemble de lignes via la [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Cette classe peut gérer plusieurs accesseurs de différents types.  
@@ -75,7 +70,7 @@ Classes d’accesseurs
   
  La figure suivante illustre les types de l’ensemble de lignes.  
   
- ![RowsetType graphic](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
+ ![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Classes de l’ensemble de lignes  
   
  [Ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) ne pas accéder aux données dans les données de stocker mais à la place accéder aux informations sur le magasin de données, appelée métadonnées. Ensembles de lignes de schéma sont généralement utilisés dans les situations dans lesquelles la structure de base de données n’est pas connue au moment de la compilation et doit être obtenue en cours d’exécution.  

@@ -1,12 +1,9 @@
 ---
-title: CDynamicStringAccessor::SetString | Microsoft Docs
-ms.custom: 
+title: CDynamicStringAccessor::SetString | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor::SetString
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d425159b1234a152fc5e914db4a664abd91e599
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5f4b7f9354de7f6c6ad10ba472bfd31873a0355
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 Définit les données de la colonne spécifiée sous forme de chaîne.  
@@ -65,7 +60,7 @@ HRESULT SetString(const WCHAR* pColumnName,
   
  Si `_SECURE_ATL` est défini pour avoir une valeur différente de zéro, un échec d’assertion runtime sera généré si l’entrée `data` chaîne est plus longue que la longueur maximale autorisée de la colonne de données référencée. Sinon, la chaîne d’entrée sera être tronquée si elle est supérieure à la longueur maximale autorisée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -2,12 +2,9 @@
 title: 'SQL : Personnalisation d’instruction SQL de votre jeu d’enregistrements (ODBC) | Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL : personnalisation de l'instruction SQL du recordset (ODBC)
 Cette rubrique explique :  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  Si vous utilisez des chaînes littérales dans vos filtres (ou d’autres parties de l’instruction SQL), vous devrez peut-être « quote » (placer des délimiteurs spécifiés) suffixe de ces chaînes avec le préfixe littéral propres au SGBD et littéral (ou les caractères).  
   
- Vous pouvez également rencontrer des exigences syntaxiques particulières pour les opérations telles que les jointures externes, en fonction de votre SGBD. Utilisez les fonctions ODBC pour obtenir ces informations à partir de votre pilote du SGBD. Par exemple, appeler **:: SQLGetTypeInfo** pour un type de données particulier, tel que **SQL_VARCHAR**, pour demander le **LITERAL_PREFIX** et **LITERAL_SUFFIX** caractères. Si vous écrivez du code indépendant de la base de données, consultez l’annexe C le *ODBC SDK**de référence du programmeur* sur le CD-ROM MSDN Library pour les informations de syntaxe détaillées.  
+ Vous pouvez également rencontrer des exigences syntaxiques particulières pour les opérations telles que les jointures externes, en fonction de votre SGBD. Utilisez les fonctions ODBC pour obtenir ces informations à partir de votre pilote du SGBD. Par exemple, appeler **:: SQLGetTypeInfo** pour un type de données particulier, tel que **SQL_VARCHAR**, pour demander le **LITERAL_PREFIX** et **LITERAL_SUFFIX** caractères. Si vous écrivez du code indépendant de la base de données, consultez l’annexe C le *ODBC SDK ** de référence du programmeur* sur le CD-ROM MSDN Library pour les informations de syntaxe détaillées.  
   
  Un objet recordset construit l’instruction SQL qu’il utilise pour sélectionner des enregistrements, sauf si vous passez d’une instruction SQL personnalisée. Cette opération dépend principalement de la valeur que vous passez dans le `lpszSQL` paramètre de la **ouvrir** fonction membre.  
   
@@ -80,7 +75,7 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]  
 ```  
   
- Une façon d’ajouter le **DISTINCT** mot clé à l’instruction SQL du recordset consiste à incorporer le mot clé dans le premier appel de fonction RFX dans `DoFieldExchange`. Exemple :  
+ Une façon d’ajouter le **DISTINCT** mot clé à l’instruction SQL du recordset consiste à incorporer le mot clé dans le premier appel de fonction RFX dans `DoFieldExchange`. Par exemple :  
   
 ```  
 ...  
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Case|Vous passez à lpszSQL|L’instruction SELECT résultante|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**Sélectionnez** *liste de champs de rfx* **FROM** *-nom de la table*<br /><br /> `CRecordset::Open`appels `GetDefaultSQL` pour obtenir le nom de la table. La chaîne obtenue est un des cas 2 à 5, selon ce qui `GetDefaultSQL` retourne.|  
+|1|**NULL**|**Sélectionnez** *liste de champs de rfx* **FROM** *-nom de la table*<br /><br /> `CRecordset::Open` appels `GetDefaultSQL` pour obtenir le nom de la table. La chaîne obtenue est un des cas 2 à 5, selon ce qui `GetDefaultSQL` retourne.|  
 |2|Un nom de table|**Sélectionnez** *liste de champs de rfx* **FROM** *-nom de la table*<br /><br /> La liste de champs est extraite des instructions RFX dans `DoFieldExchange`. Si **m_strFilter** et `m_strSort` ne sont pas vides, ajoute le **où** et/ou **ORDER BY** clauses.|  
 |3 *|Complète **sélectionnez** instruction mais sans un **où** ou **ORDER BY** clause|Comme réussi. Si **m_strFilter** et `m_strSort` ne sont pas vides, ajoute le **où** et/ou **ORDER BY** clauses.|  
 |4 *|Complète **sélectionnez** instruction avec un **où** et/ou **ORDER BY** clause|Comme réussi. **m_strFilter** et/ou `m_strSort` doivent rester vides, ou deux filtre et/ou les instructions de tri sont produites.|  
 |5 *|Un appel à une procédure stockée|Comme réussi.|  
   
- \*`m_nFields` doit être inférieur ou égal au nombre de colonnes spécifié dans le **sélectionnez** instruction. Le type de données de chaque colonne spécifiée dans le **sélectionnez** instruction doit être le même que le type de données de la colonne de sortie RFX correspondante.  
+ \* `m_nFields` doit être inférieur ou égal au nombre de colonnes spécifié dans le **sélectionnez** instruction. Le type de données de chaque colonne spécifiée dans le **sélectionnez** instruction doit être le même que le type de données de la colonne de sortie RFX correspondante.  
   
 ### <a name="case-1---lpszsql--null"></a>Cas 1 lpszSQL = NULL  
  La sélection du recordset dépend `GetDefaultSQL` retourne lorsque `CRecordset::Open` appelle. Cas 2 à 5 décrivent les chaînes possibles.  

@@ -1,12 +1,9 @@
 ---
-title: IRowsetImpl::AddRefRows | Microsoft Docs
-ms.custom: 
+title: IRowsetImpl::AddRefRows | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetImpl::AddRefRows
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddRefRows method
 ms.assetid: adc0989b-7592-432e-82d9-df4445431531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6df1067b8c63ce98fb0234178aaba59c6260557a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 687ee3630e5ba579f40ace30ca32ac0ed9fc16fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimpladdrefrows"></a>IRowsetImpl::AddRefRows
 Ajoute un décompte de références à un handle de ligne existant.  
@@ -47,7 +42,7 @@ Ajoute un décompte de références à un handle de ligne existant.
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  
