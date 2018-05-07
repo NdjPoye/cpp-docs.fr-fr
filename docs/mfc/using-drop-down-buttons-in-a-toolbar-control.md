@@ -1,13 +1,10 @@
 ---
-title: "À l’aide des boutons de liste déroulante dans un contrôle de barre d’outils | Documents Microsoft"
-ms.custom: 
+title: À l’aide des boutons de liste déroulante dans un contrôle de barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_DROPDOWN
 - TBSTYLE_EX_DRAWDDARROWS
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - TBSTYLE_EX_DRAWDDARROWS
 - TBN_DROPDOWN notification [MFC]
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c09cb2bec4b466928557434767ce49948f46ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39edda143e28d262e8eea826ced5c24855fb310b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Utilisation de boutons de liste déroulante dans un contrôle ToolBar
 En plus des boutons de commande standards, une barre d’outils peut également comporter des boutons de liste déroulante. Un bouton de liste déroulante est généralement indiqué par la présence d’une flèche bas attachée.  

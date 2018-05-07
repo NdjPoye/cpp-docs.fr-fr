@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCAcceleratorKey | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>Cmfcacceleratorkey, classe
 Une classe d’assistance qui implémente le mappage de clé virtuel et la mise en forme.  
@@ -72,10 +67,10 @@ class CMFCAcceleratorKey : public CObject
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  Construit un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.  
   
 ```  
@@ -90,7 +85,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>Notes  
  Si vous ne fournissez pas une touche de raccourci lorsque vous créez un `CMFCAccleratorKey`, utilisez le [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) méthode permet d’associer une touche de raccourci avec votre `CMFCAcceleratorKey` objet.  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  Convertit la structure d’accélération à sa valeur de chaîne associée.  
   
 ```  
@@ -104,7 +99,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode récupère le format de chaîne de la touche de raccourci associé. Vous pouvez définir le format de chaîne d’un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) utilisant le constructeur ou la méthode de l’objet [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Définit la touche de raccourci pour la [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.  
   
 ```  

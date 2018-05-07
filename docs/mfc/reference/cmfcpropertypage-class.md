@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCPropertyPage | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyPage
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11f9e4849a0c632e6a63d794dc294fa504d196a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertypage-class"></a>Classe de CMFCPropertyPage
 La `CMFCPropertyPage` classe prend en charge l’affichage des menus contextuels sur une page de propriétés.  
@@ -74,10 +69,10 @@ class CMFCPropertyPage : public CPropertyPage
   
  [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpropertypage.h  
   
-##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
+##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage  
  Construit un objet `CMFCPropertyPage`.  
   
 ```  

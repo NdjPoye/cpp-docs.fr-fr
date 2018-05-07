@@ -1,13 +1,10 @@
 ---
-title: "Attributs de contrôle onglet et des onglets | Documents Microsoft"
-ms.custom: 
+title: Attributs de contrôle onglet et des onglets | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Onglets et attributs de contrôle d'onglet
 Vous avez un contrôle important sur l’apparence et le comportement des onglets qui constituent un contrôle tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Chaque onglet peut avoir une étiquette, une icône, un état d’élément et une valeur 32 bits définie par l’application associée. Pour chaque onglet, vous pouvez afficher l’icône, l’étiquette ou les deux.  

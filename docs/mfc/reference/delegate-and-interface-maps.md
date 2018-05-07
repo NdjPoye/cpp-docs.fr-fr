@@ -1,13 +1,10 @@
 ---
-title: "Interface et délégué mappent les Macros (MFC) | Documents Microsoft"
-ms.custom: 
+title: Interface et délégué mappent les Macros (MFC) | Documents Microsoft
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE](#make_delegate)|Attache un gestionnaire d’événements à un contrôle géré.|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 Commence un mappage de délégué.  
    
 ### <a name="syntax"></a>Syntaxe    
@@ -53,7 +48,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="remarks"></a>Notes  
  Cette macro marque le début d’une liste d’entrées de délégué, qui composent un mappage de délégué. Pour obtenir un exemple d’utilisation de cette macro, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** msclr\event.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -78,7 +73,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
   
  Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
  
 ##  <a name="commandhandler"></a>CommandHandler (délégué)
@@ -99,7 +94,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
   
  Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -120,11 +115,11 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  L’ID de message de commande.  
    
 ### <a name="remarks"></a>Notes  
- Ce délégué inscrit les méthodes de rappel avec un message de commande de mise à jour interface utilisateur. `CommandUIHandler`est semblable à [CommandHandler](#commandhandler) , sauf que ce délégué est utilisé avec les commandes de mise à jour l’objet interface utilisateur. Commandes de mise à jour de l’interface utilisateur doivent être mappés un à un avec les méthodes de gestionnaire de messages.  
+ Ce délégué inscrit les méthodes de rappel avec un message de commande de mise à jour interface utilisateur. `CommandUIHandler` est semblable à [CommandHandler](#commandhandler) , sauf que ce délégué est utilisé avec les commandes de mise à jour l’objet interface utilisateur. Commandes de mise à jour de l’interface utilisateur doivent être mappés un à un avec les méthodes de gestionnaire de messages.  
   
  Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -142,7 +137,7 @@ END_DELEGATE_MAP();
 ### <a name="remarks"></a>Notes  
  Cette macro marque la fin d’une liste d’entrées de délégué, qui composent un mappage de délégué. Pour obtenir un exemple d’utilisation de cette macro, consultez [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** msclr\event.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -161,7 +156,7 @@ END_INTERFACE_MAP( )
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -199,7 +194,7 @@ END_DELEGATE_MAP()
 
 ```  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** msclr\event.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -228,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
   
  Pour plus d’informations sur les cartes d’interface, consultez [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
    
  
@@ -262,7 +257,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** msclr\event.h  
    
 ### <a name="see-also"></a>Voir aussi  

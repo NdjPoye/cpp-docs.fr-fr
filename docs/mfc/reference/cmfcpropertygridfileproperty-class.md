@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCPropertyGridFileProperty | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4111c7da24300d83128d56b85266ee808b304ace
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe de CMFCPropertyGridFileProperty
 La `CMFCPropertyGridFileProperty` classe prend en charge un élément de contrôle de liste de propriétés qui ouvre une boîte de dialogue de sélection de fichier.  
@@ -63,10 +58,10 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
+##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty  
  Construit un objet `CMFCPropertyGridFileProperty`.  
   
 ```  
@@ -86,7 +81,7 @@ CMFCPropertyGridFileProperty(
  Nom de la propriété.  
   
  [in] `bOpenFileDialog`  
- `TRUE`Pour ouvrir un **ouvrir un fichier** boîte de dialogue. `FALSE` pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
+ `TRUE` Pour ouvrir un **ouvrir un fichier** boîte de dialogue. `FALSE` pour ouvrir un **enregistrer le fichier** boîte de dialogue.  
   
  [in] `strFileName`  
  Nom de fichier initial.  

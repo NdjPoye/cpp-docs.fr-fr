@@ -2,11 +2,8 @@
 title: CDC (classe) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC (classe)
 Définit une classe d’objets de contexte de périphérique.  
@@ -474,12 +469,12 @@ class CDC : public CObject
 |[CDC::DrawState](#drawstate)|Affiche une image et applique un effet visuel pour indiquer un état.|  
 |[CDC::DrawText](#drawtext)|Dessine mis en forme le texte dans le rectangle spécifié.|  
 |[CDC::DrawTextEx](#drawtextex)|Dessine mis en forme le texte dans le rectangle spécifié à l’aide des formats supplémentaires.|  
-|[CDC::Ellipse](#ellipse)|Dessine une ellipse.|  
+|[CDC::ellipse](#ellipse)|Dessine une ellipse.|  
 |[CDC::EndDoc](#enddoc)|Met fin à un travail d’impression démarré par le `StartDoc` fonction membre.|  
 |[CDC::EndPage](#endpage)|Informe le pilote de périphérique, une page se termine.|  
 |[CDC::EndPath](#endpath)|Ferme un crochet de chemin d’accès et de sélectionner le chemin d’accès défini par le crochet dans le contexte de périphérique.|  
 |[CDC::EnumObjects](#enumobjects)|Énumère les stylets et pinceaux disponibles dans un contexte de périphérique.|  
-|[CDC::Escape](#escape)|Permet aux applications d’accéder à des fonctionnalités qui ne sont pas directement disponibles à partir d’un périphérique particulier via GDI. Autorise également l’accès aux fonctions d’échappement de Windows. Les appels d’échappement effectués par une application sont traduits et envoyées au pilote de périphérique.|  
+|[CDC::escape](#escape)|Permet aux applications d’accéder à des fonctionnalités qui ne sont pas directement disponibles à partir d’un périphérique particulier via GDI. Autorise également l’accès aux fonctions d’échappement de Windows. Les appels d’échappement effectués par une application sont traduits et envoyées au pilote de périphérique.|  
 |[CDC::ExcludeClipRect](#excludecliprect)|Crée une nouvelle zone de découpage qui se compose de la zone de découpage existant moins le rectangle spécifié.|  
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Empêche le dessin dans les zones non valides d’une fenêtre en excluant une région de mise à jour dans la fenêtre à partir d’une zone de découpage.|  
 |[CDC::ExtFloodFill](#extfloodfill)|Remplit une zone avec le pinceau actuel. Fournit plus de flexibilité que la [CDC::FloodFill](#floodfill) fonction membre.|  
@@ -583,7 +578,7 @@ class CDC : public CObject
 |[CDC::PolyPolyline](#polypolyline)|Dessine plusieurs séries de segments de ligne connectés. La position actuelle n’est ni utilisée ni mise à jour par cette fonction.|  
 |[CDC::PtVisible](#ptvisible)|Spécifie si le point donné se trouve dans la zone de découpage.|  
 |[CDC::RealizePalette](#realizepalette)|Mappe des entrées dans la palette logique en cours de la palette à la palette système.|  
-|[CDC::Rectangle](#rectangle)|Dessine un rectangle à l’aide du stylet courant et remplit à l’aide de la brosse courante.|  
+|[CDC::rectangle](#rectangle)|Dessine un rectangle à l’aide du stylet courant et remplit à l’aide de la brosse courante.|  
 |[CDC::RectVisible](#rectvisible)|Détermine si une partie du rectangle donné se trouve dans la zone de découpage.|  
 |[CDC::ReleaseAttribDC](#releaseattribdc)|Les versions `m_hAttribDC`, le contexte de l’attribut.|  
 |[CDC::ReleaseOutputDC](#releaseoutputdc)|Les versions `m_hDC`, le contexte de périphérique de sortie.|  
@@ -687,7 +682,7 @@ class CDC : public CObject
   
  `CDC`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
 ##  <a name="abortdoc"></a>  CDC::AbortDoc  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  Spécifie la hauteur, en unités logiques, du rectangle source.  
   
- *blend*  
+ *Blend*  
  Spécifie un [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -1370,7 +1365,7 @@ void Draw3dRect(
  *y*  
  Spécifie la coordonnée y logique de l’angle supérieur gauche du rectangle à trois dimensions.  
   
- cx  
+ CX  
  Spécifie la largeur du rectangle à trois dimensions.  
   
  CY  
@@ -1541,7 +1536,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_MENUARROW** flèche de sous-menu  
   
-    - **DFCS_MENUBULLET** Bullet  
+    - **DFCS_MENUBULLET** puce  
   
     - **DFCS_MENUCHECK** case à cocher  
   
@@ -5233,9 +5228,9 @@ int SetArcDirection(int nArcDirection);
   
 |Arc|Secteur|  
 |---------|---------|  
-|`ArcTo`|**Rectangle**|  
+|`ArcTo`|**rectangle**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**ellipse**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  Appelez cette fonction pour définir le contexte de périphérique d’attribut, `m_hAttribDC`.  

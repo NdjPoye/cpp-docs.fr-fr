@@ -1,12 +1,9 @@
 ---
 title: CDataExchange (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataExchange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e56df3ec4604a02ba9cf1075152a11eefe7e28f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataexchange-class"></a>CDataExchange (classe)
 Prend en charge les routines d’échange de données de boîtes de dialogue (DDX) et de validation de données de boîtes de dialogue (DDV) utilisées par les classes MFC (Microsoft Foundation Class).  
@@ -75,7 +70,7 @@ class CDataExchange
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|La boîte de dialogue ou la fenêtre dans lequel l’échange de données a lieu.|  
   
 ## <a name="remarks"></a>Notes  
- `CDataExchange`ne dispose pas d’une classe de base.  
+ `CDataExchange` ne dispose pas d’une classe de base.  
   
  Utilisez cette classe si vous écrivez des routines d’échange de données de types de données personnalisés ou des contrôles, ou si vous écrivez vos propres routines de validation des données. Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [boîtes de dialogue](../../mfc/dialog-boxes.md).  
   
@@ -84,10 +79,10 @@ class CDataExchange
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CDataExchange`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
  Appelez cette fonction membre pour construire un `CDataExchange` objet.  
   
 ```  
@@ -109,7 +104,7 @@ CDataExchange(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>  CDataExchange::Fail  
  L’infrastructure appelle cette fonction membre en cas d’échec d’une opération de validation (DDV) de données de boîte de dialogue.  
   
 ```  
@@ -123,7 +118,7 @@ void Fail();
   
  Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [rubriques de la boîte de dialogue](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
  Cet indicateur indique la direction d’une opération d’échange de données boîte de dialogue.  
   
 ```  
@@ -137,7 +132,7 @@ BOOL m_bSaveAndValidate;
   
  Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [rubriques de la boîte de dialogue](../../mfc/dialog-boxes.md).  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
  Contient un pointeur vers le [CWnd](../../mfc/reference/cwnd-class.md) objet pour la boîte de dialogue d'où l’échange de données (DDX) ou validation (DDV) est en cours.  
   
 ```  
@@ -149,7 +144,7 @@ CWnd* m_pDlgWnd;
   
  Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [rubriques de la boîte de dialogue](../../mfc/dialog-boxes.md).  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
  L’infrastructure appelle cette fonction membre pour préparer le contrôle spécifié pour l’échange de données de boîtes de dialogue (DDX) et validation (DDV).  
   
 ```  
@@ -172,7 +167,7 @@ HWND PrepareCtrl(int nIDC);
   
  Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [rubriques de la boîte de dialogue](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
  L’infrastructure appelle cette fonction membre pour préparer le contrôle d’édition spécifié pour l’échange de données de boîtes de dialogue (DDX) et validation (DDV).  
   
 ```  
@@ -195,7 +190,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  Pour plus d’informations sur l’écriture de vos propres routines DDX et DDV, consultez [Technical Note 26](../../mfc/tn026-ddx-and-ddv-routines.md). Pour une vue d’ensemble de DDX et DDV, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md) et [rubriques de la boîte de dialogue](../../mfc/dialog-boxes.md).  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
  L’infrastructure appelle cette fonction membre pour préparer le contrôle OLE spécifié pour l’échange de données de boîtes de dialogue (DDX) et validation (DDV).  
   
 ```  

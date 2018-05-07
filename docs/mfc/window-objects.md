@@ -1,13 +1,10 @@
 ---
-title: "Objets fenêtres | Documents Microsoft"
-ms.custom: 
+title: Objets fenêtres | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Visual C++, window objects [MFC]
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15f53db2d0ec6a57261e22c58abd3e5e8423b716
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-objects"></a>Objets fenêtres
 MFC fournit la classe [CWnd](../mfc/reference/cwnd-class.md) pour encapsuler la `HWND` handle d’une fenêtre. L'objet `CWnd` est un objet Windows C++, distinct de `HWND` qui représente une fenêtre Windows mais qui le contient. Utilisez `CWnd` pour dériver vos classes de la fenêtre enfant, ou utilisez l'une des nombreuses classes MFC dérivées de `CWnd`. La classe `CWnd` est la classe de base pour toutes les fenêtres, en particulier les fenêtres frame, les boîtes de dialogue, les fenêtres enfants, les contrôles et les barres de contrôle, telles que les barres d'outils. Une bonne compréhension des [la relation entre un objet fenêtre C++ et HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) est cruciale pour la programmation efficace avec MFC.  
@@ -45,7 +40,7 @@ MFC fournit la classe [CWnd](../mfc/reference/cwnd-class.md) pour encapsuler la 
  La documentation générale sur la programmation pour Windows constitue une bonne ressource pour apprendre à utiliser les fonctions membres de `CWnd`, qui encapsulent les API `HWND`.  
   
 ## <a name="functions-for-operating-on-a-cwnd"></a>Fonctions pour une exécution CWnd  
- `CWnd`et ses [dérivées des classes de fenêtre](../mfc/derived-window-classes.md) fournissent des constructeurs, destructeurs et des fonctions membres pour initialiser l’objet, créent les structures Windows sous-jacentes et d’accès encapsulé `HWND`. `CWnd` fournit également des fonctions membres qui encapsulent les API Windows pour envoyer des messages, accéder à l'état de la fenêtre, convertir des coordonnées, mettre à jour, défiler, accéder au Presse-papiers, et bien d'autres tâches. La plupart des API de gestion de fenêtre Windows qui prennent un argument `HWND` sont encapsulées en fonctions membres de `CWnd`. Les noms des fonctions et leurs paramètres sont conservés dans la fonction membre de `CWnd`. Pour plus d’informations sur les API Windows encapsulés par `CWnd`, consultez la classe [CWnd](../mfc/reference/cwnd-class.md).  
+ `CWnd` et ses [dérivées des classes de fenêtre](../mfc/derived-window-classes.md) fournissent des constructeurs, destructeurs et des fonctions membres pour initialiser l’objet, créent les structures Windows sous-jacentes et d’accès encapsulé `HWND`. `CWnd` fournit également des fonctions membres qui encapsulent les API Windows pour envoyer des messages, accéder à l'état de la fenêtre, convertir des coordonnées, mettre à jour, défiler, accéder au Presse-papiers, et bien d'autres tâches. La plupart des API de gestion de fenêtre Windows qui prennent un argument `HWND` sont encapsulées en fonctions membres de `CWnd`. Les noms des fonctions et leurs paramètres sont conservés dans la fonction membre de `CWnd`. Pour plus d’informations sur les API Windows encapsulés par `CWnd`, consultez la classe [CWnd](../mfc/reference/cwnd-class.md).  
   
 ## <a name="cwnd-and-windows-messages"></a>Messages Windows et CWnd  
  Un des objectifs premiers de `CWnd` est de fournir une interface pour gérer les messages Windows, tels que `WM_PAINT` ou `WM_MOUSEMOVE`. Un grand nombre des fonctions membres de `CWnd` sont des gestionnaires de messages standards : ceux commençant par l’identificateur **afx_msg** et le préfixe « On », tel que `OnPaint` et **OnMouseMove**. [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md) couvre les messages et la gestion des messages en détail. Les informations s'appliquent identiquement aux fenêtres de le framework et celles que vous créez vous-même à des fins spéciales.  

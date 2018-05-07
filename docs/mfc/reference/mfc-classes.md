@@ -1,12 +1,9 @@
 ---
 title: Classes MFC | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>Classes MFC
 Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Microsoft Foundation Class).  
@@ -826,7 +821,7 @@ Les classes de la liste suivante sont incluses dans la bibliothèque MFC (Micros
  Gère les images de barre d'outils chargées à partir de ressources d'application ou de fichiers.  
   
  [CMFCToolBarInfo, classe](../../mfc/reference/cmfctoolbarinfo-class.md)  
- Contient les ID de ressources des images de barre d'outils dans différents états. `CMFCToolBarInfo`est une classe d’assistance qui est utilisée en tant que paramètre de la [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) (méthode).  
+ Contient les ID de ressources des images de barre d'outils dans différents états. `CMFCToolBarInfo` est une classe d’assistance qui est utilisée en tant que paramètre de la [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) (méthode).  
   
  [CMFCToolBarMenuButton, classe](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  Bouton de barre d'outils qui contient un menu contextuel.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CScrollView | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView (classe)
 A [CView](../../mfc/reference/cview-class.md) avec les possibilités de défilement.  
@@ -127,10 +122,10 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  Appelez cette fonction membre pour déterminer si la vue de défilement a barres horizontale et verticale.  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Indique que l’application a une barre de défilement verticale.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  Construit un objet `CScrollView`.  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>Notes  
  Vous devez appeler `SetScrollSizes` ou `SetScaleToFitSize` avant le défilement vue est utilisable.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  Appelez `FillOutsideRect` pour remplir la zone de la vue qui s’affiche en dehors de la zone de défilement.  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  Appelez `GetDeviceScrollPosition` lorsque vous avez besoin de la position horizontale et verticale actuelle des curseurs de défilement dans les barres de défilement.  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>Notes  
  Cette paire de coordonnées correspondant à l’emplacement dans le document auquel le coin supérieur gauche de la vue de défilement. Cela est utile pour la compensation de positions de périphérique de la souris à défilement-afficher les postes de périphérique.  
   
- `GetDeviceScrollPosition`Retourne les valeurs dans les unités de périphérique. Si vous souhaitez que les unités logiques, utilisez `GetScrollPosition` à la place.  
+ `GetDeviceScrollPosition` Retourne les valeurs dans les unités de périphérique. Si vous souhaitez que les unités logiques, utilisez `GetScrollPosition` à la place.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Obtient le mode de mappage en cours, la taille totale et les tailles de page et de ligne de la vue de défilement.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` Obtient le mode de mappage en cours, la taille totale et les tailles de page et de ligne de la vue de défilement.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Notes  
  Les tailles sont en unités de périphérique. Cette fonction membre est rarement appelée.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  Appelez `GetScrollPosition` lorsque vous avez besoin de la position horizontale et verticale actuelle des curseurs de défilement dans les barres de défilement.  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>Notes  
  Cette paire de coordonnées correspondant à l’emplacement dans le document auquel le coin supérieur gauche de la vue de défilement.  
   
- `GetScrollPosition`Retourne les valeurs dans les unités logiques. Si vous souhaitez que les unités de périphérique, utilisez `GetDeviceScrollPosition` à la place.  
+ `GetScrollPosition` Retourne les valeurs dans les unités logiques. Si vous souhaitez que les unités de périphérique, utilisez `GetDeviceScrollPosition` à la place.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  Appelez `GetTotalSize` pour récupérer les tailles horizontales et verticales actuelles de la vue de défilement.  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  La taille totale de la vue de défilement en unités logiques. La taille horizontale est dans le **cx** membre de la `CSize` valeur de retour. La taille verticale est dans le **cy** membre.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  Appelez `ResizeParentToFit` pour vous permettre de la taille de votre vue déterminent la taille de la fenêtre frame.  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>Notes  
  Cela est recommandé uniquement pour les vues dans des fenêtres frame enfants MDI. Utilisez `ResizeParentToFit` dans les `OnInitialUpdate` fonction de gestionnaire de votre dérivée `CScrollView` classe. Pour obtenir un exemple de cette fonction membre, consultez [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`suppose que la taille de la fenêtre d’affichage a été définie. Si la taille de fenêtre de la vue ne possède pas été définie lorsque `ResizeParentToFit` est appelée, vous obtiendrez une assertion. Pour vous assurer que cela ne se produit pas, effectuer l’appel suivant avant d’appeler `ResizeParentToFit`:  
+ `ResizeParentToFit` suppose que la taille de la fenêtre d’affichage a été définie. Si la taille de fenêtre de la vue ne possède pas été définie lorsque `ResizeParentToFit` est appelée, vous obtiendrez une assertion. Pour vous assurer que cela ne se produit pas, effectuer l’appel suivant avant d’appeler `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  Appelez `ScrollToPosition` pour accéder à un moment donné dans la vue.  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Notes  
  Est de faire défiler la vue afin que ce point est à l’angle supérieur gauche de la fenêtre. Cette fonction membre ne doit pas être appelée si la vue est ajustée en fonction.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  Appelez `SetScaleToFitSize` lorsque vous souhaitez mettre à l’échelle automatique de la taille de la fenêtre d’affichage à la taille actuelle de la fenêtre.  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  En général, placez l’appel à `SetScaleToFitSize` de la substitution de la vue `OnInitialUpdate` fonction membre. Si vous ne souhaitez pas que la mise à l’échelle automatique, appelez le `SetScrollSizes` fonction de membre à la place.  
   
- `SetScaleToFitSize`peut être utilisé pour implémenter une opération « Zoom ajustement ». Utilisez `SetScrollSizes` pour réinitialiser le défilement.  
+ `SetScaleToFitSize` peut être utilisé pour implémenter une opération « Zoom ajustement ». Utilisez `SetScrollSizes` pour réinitialiser le défilement.  
   
- `SetScaleToFitSize`suppose que la taille de la fenêtre d’affichage a été définie. Si la taille de fenêtre de la vue ne possède pas été définie lorsque `SetScaleToFitSize` est appelée, vous obtiendrez une assertion. Pour vous assurer que cela ne se produit pas, effectuer l’appel suivant avant d’appeler `SetScaleToFitSize`:  
+ `SetScaleToFitSize` suppose que la taille de la fenêtre d’affichage a été définie. Si la taille de fenêtre de la vue ne possède pas été définie lorsque `SetScaleToFitSize` est appelée, vous obtiendrez une assertion. Pour vous assurer que cela ne se produit pas, effectuer l’appel suivant avant d’appeler `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  Appelez `SetScrollSizes` lorsque la vue est sur le point d’être mis à jour.  
   
 ```  

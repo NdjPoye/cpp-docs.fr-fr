@@ -1,12 +1,9 @@
 ---
 title: Classe de COleDropTarget | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>Classe de COleDropTarget
 Fournit le mécanisme de communication entre une fenêtre et les bibliothèques OLE.  
@@ -89,10 +84,10 @@ class COleDropTarget : public CCmdTarget
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  Construit un objet de classe `COleDropTarget`.  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>Notes  
  Appelez [inscrire](#register) à associer à cet objet avec une fenêtre.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  Appelé par l’infrastructure quand le curseur est déplacé tout d’abord dans la fenêtre.  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>Valeur de retour  
  L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
   
-- `DROPEFFECT_NONE`La suppression ne serait pas autorisée.  
+- `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
-- `DROPEFFECT_SCROLL`Une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
+- `DROPEFFECT_SCROLL` Une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction pour autoriser les opérations de suppression dans la fenêtre. L’implémentation par défaut appelle [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), qui renvoie simplement `DROPEFFECT_NONE` par défaut.  
   
  Pour plus d’informations, consultez [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) dans le Kit de développement logiciel Windows.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Appelé par le framework lorsque le curseur quitte la fenêtre pendant une opération de glisser-déplacer est en vigueur.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  Pour plus d’informations, consultez [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) dans le Kit de développement logiciel Windows.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Appelé par le framework lorsque le curseur est déplacé sur la fenêtre.  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>Valeur de retour  
  L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
   
-- `DROPEFFECT_NONE`La suppression ne serait pas autorisée.  
+- `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
-- `DROPEFFECT_SCROLL`Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
+- `DROPEFFECT_SCROLL` Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être substituée pour autoriser les opérations de suppression dans la fenêtre. L’implémentation par défaut de cette fonction appelle [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), qui retourne `DROPEFFECT_NONE` par défaut. Étant donné que cette fonction est appelée fréquemment pendant une opération de glisser-déplacer, il doit être optimisé autant que possible.  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  Appelé par le framework avant d’appeler [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) pour déterminer si `point` est dans la zone de défilement.  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>Valeur de retour  
  L’effet que si la suppression a été tentée à l’emplacement spécifié par `point`. Il peut être un ou plusieurs des opérations suivantes :  
   
-- `DROPEFFECT_NONE`La suppression ne serait pas autorisée.  
+- `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
-- `DROPEFFECT_SCROLL`Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
+- `DROPEFFECT_SCROLL` Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
   
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction lorsque vous souhaitez fournir un comportement spécial pour cet événement. L’implémentation par défaut de cette fonction appelle [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), qui retourne `DROPEFFECT_NONE` et fait défiler la fenêtre lorsque le curseur est déplacé dans la zone de défilement par défaut à l’intérieur de la bordure de la fenêtre.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  Appelé par l’infrastructure quand une opération de suppression doit se produire.  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  L’effet que l’utilisateur a choisi pour l’opération de suppression. Il peut être un ou plusieurs des opérations suivantes :  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
  `point`  
  Contient l’emplacement du curseur, en pixels, par rapport à l’écran.  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  Pour plus d’informations, consultez [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) dans le Kit de développement logiciel Windows.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Appelé par l’infrastructure quand une opération de suppression doit se produire.  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  Effets de dépôt décrivent l’action associée à une opération de suppression. Consultez la liste suivante des effets de déplacement :  
   
-- `DROPEFFECT_NONE`La suppression ne serait pas autorisée.  
+- `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
-- `DROPEFFECT_SCROLL`Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
+- `DROPEFFECT_SCROLL` Indique qu’une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
   
  Pour plus d’informations, consultez [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) dans le Kit de développement logiciel Windows.  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  Appelez cette fonction pour inscrire votre fenêtre avec les DLL OLE comme cible de déplacement valide.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  Pour plus d’informations, consultez [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) dans le Kit de développement logiciel Windows.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Appelez cette fonction avant de détruire une fenêtre qui a été enregistrée comme une cible de dépôt via un appel à [inscrire](#register) pour le supprimer de la liste des cibles de dépôt.  
   
 ```  

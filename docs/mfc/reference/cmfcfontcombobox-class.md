@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCFontComboBox | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe de CMFCFontComboBox
 La `CMFCFontComboBox` classe crée un contrôle de zone de liste déroulante qui contient une liste de polices.  
@@ -87,10 +82,10 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Construit un objet `CMFCFontComboBox`.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Récupère des informations sur la police actuellement sélectionnée.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Indique à l’infrastructure de police à utiliser pour dessiner les étiquettes d’élément dans la zone de liste déroulante de police actuelle.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Notes  
  Attribuez à ce membre `TRUE` pour indiquer à l’infrastructure d’utiliser la même police pour dessiner chaque étiquette d’élément. Attribuez à ce membre `FALSE` pour indiquer à l’infrastructure pour dessiner chaque étiquette d’élément avec la police dont le nom est identique à l’étiquette. La valeur par défaut de ce membre est `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Sélectionne la police qui correspond aux critères spécifiés dans la zone de liste déroulante de police.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Spécifie un jeu de caractères. La valeur par défaut est DEFAULT_CHARSET. Pour plus d’informations, consultez la `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si un élément dans la zone de liste modifiable police correspond à l’objet de description de police spécifiée ou de nom de la police et de jeu de caractères ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si un élément dans la zone de liste modifiable police correspond à l’objet de description de police spécifiée ou de nom de la police et de jeu de caractères ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode permet de sélectionner et faire défiler à l’élément dans la zone de liste déroulante de police qui correspond à la police spécifiée.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Initialise la liste des éléments dans la zone de liste déroulante de police.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Spécifie la hauteur de police et de la famille. La valeur par défaut est DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la zone de liste modifiable police a été initialisée avec succès ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si la zone de liste modifiable police a été initialisée avec succès ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode initialise la zone de liste déroulante de police en énumérant les polices actuellement installées qui correspondent aux paramètres spécifiés et en insérant les noms de police dans la zone de liste déroulante de police.  

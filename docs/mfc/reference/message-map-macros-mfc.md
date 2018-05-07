@@ -1,13 +1,10 @@
 ---
 title: Macros de table (MFC) du message | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 28b8a6e6e34399cb16ba3ec9e4f25562962c2dd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les macros suivantes :  
@@ -86,7 +81,7 @@ Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les
  Pour plus d’informations sur les tables des messages, la déclaration de la table des messages et des macros de délimitation et les macros de mappage des messages, consultez [tables des messages](../../mfc/reference/message-maps-mfc.md) et [gestion des messages et des rubriques de mappage](../../mfc/message-handling-and-mapping.md). Pour plus d’informations sur les plages de la table des messages, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).  
 
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 Commence la définition de votre table des messages.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -114,7 +109,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 END_MESSAGE_MAP()
 ```
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h 
 
 ##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
@@ -139,10 +134,10 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
   
  Pour plus d’informations sur l’implémentation des tables des messages pour les classes de modèle, consultez [Comment : créer une table des messages pour une classe de modèle](../how-to-create-a-message-map-for-a-template-class.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
  
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
  Déclare que la classe définit une table des messages. Chaque `CCmdTarget`-classe dérivée dans votre programme doit fournir une table des messages pour traiter les messages.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -168,11 +163,11 @@ class CMainFrame : public CMDIFrameWnd
    // Remainder of class declaration omitted.
 ``` 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
 
 
-## <a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
 Met fin à la définition de votre table des messages.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -184,10 +179,10 @@ END_MESSAGE_MAP( )
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur le message est mappé et le `END_MESSAGE_MAP` (macro), consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
 
-## <a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a>  ON_COMMAND
 Cette macro est mappé à un message de commande à une fonction membre.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -217,10 +212,10 @@ BEGIN_MESSAGE_MAP(CMFCListViewDoc, CDocument)
 END_MESSAGE_MAP()
 ``` 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>ON_COMMAND_EX
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
 Les étendues de fonction membre de gestionnaire de commandes.  
    
 ### <a name="syntax"></a>Syntaxe  
@@ -254,7 +249,7 @@ ON_COMMAND_EX(id,  memberFxn);
  Une forme étendue de gestionnaires de messages de commande est disponible pour des utilisations avancées. Le `ON_COMMAND_EX` macro est utilisée pour ces gestionnaires de messages, et il fournit un sur-ensemble de la [ON_COMMAND](message-map-macros-mfc.md#on_command) fonctionnalité. Fonctions membres de gestionnaire de commandes étendue prennent un seul paramètre, un **UINT** contenant l’ID de commande et retourner un **BOOL**. La valeur de retour doit être TRUE pour indiquer que la commande a été gérée ; routage dans le cas contraire, il continuera à d’autres objets cibles de commande.  
 Pour plus d’informations, consultez la Note technique [TN006 : tables des messages] tm006-message-maps.md).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Fichier d’en-tête : afxmsg_.h  
    
 ### <a name="see-also"></a>Voir aussi  
@@ -262,7 +257,7 @@ Pour plus d’informations, consultez la Note technique [TN006 : tables des mes
  [TN006 : tables des messages] tm006-message-maps.md)
 
   
-## <a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a>  ON_CONTROL
 Indique que la fonction gère un message de notification des contrôles personnalisés.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -288,11 +283,11 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
   
  Pour plus d’informations et d’exemples, consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
   
 
-## <a name="on_message"></a>ON_MESSAGE  
+## <a name="on_message"></a>  ON_MESSAGE  
 Indique que la fonction gère un message défini par l’utilisateur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -342,10 +337,10 @@ END_MESSAGE_MAP()
 }
 ```   
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
 
-## <a name="on_olecmd"></a>ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD  
 Achemine les commandes via l’interface de dispatch de commande `IOleCommandTarget`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -365,9 +360,9 @@ ON_OLECMD( pguid, olecmdid, id )
  L’ID de menu, ID de la barre d’outils, ID de bouton ou autres ID de la ressource ou un objet de la commande.  
   
 ### <a name="remarks"></a>Notes  
- `IOleCommandTarget`permet à un conteneur de recevoir des commandes qui proviennent de l’interface utilisateur de DocObject et permet au conteneur d’envoyer les mêmes commandes (telles que nouveau, ouvrir, enregistrer sous et impression dans le menu fichier ; et copier, coller, Annuler, et ainsi de suite dans le menu Edition) à DocObject.  
+ `IOleCommandTarget` permet à un conteneur de recevoir des commandes qui proviennent de l’interface utilisateur de DocObject et permet au conteneur d’envoyer les mêmes commandes (telles que nouveau, ouvrir, enregistrer sous et impression dans le menu fichier ; et copier, coller, Annuler, et ainsi de suite dans le menu Edition) à DocObject.  
   
- `IOleCommandTarget`est plus simple que OLE Automation `IDispatch`. `IOleCommandTarget`repose entièrement sur un ensemble standard de commandes ont que rarement des arguments, et aucune information de type n’est impliquée (sécurité de type est également réduite pour les arguments de commande). Si vous n’avez pas besoin de distribuer les commandes avec des arguments, utilisez [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
+ `IOleCommandTarget` est plus simple que OLE Automation `IDispatch`. `IOleCommandTarget` repose entièrement sur un ensemble standard de commandes ont que rarement des arguments, et aucune information de type n’est impliquée (sécurité de type est également réduite pour les arguments de commande). Si vous n’avez pas besoin de distribuer les commandes avec des arguments, utilisez [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
  Le `IOleCommandTarget` des commandes de menu standard ont été implémentés par MFC dans les macros suivantes :  
   
@@ -467,14 +462,14 @@ ON_OLECMD( pguid, olecmdid, id )
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdocob.h  
   
 ### <a name="see-also"></a>Voir aussi  
  [Classe de COleCmdUI](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 Les fenêtres **RegisterWindowMessage** fonction est utilisée pour définir un nouveau message de fenêtre est assuré d’être uniques dans le système.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -505,14 +500,14 @@ BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
 END_MESSAGE_MAP()
 ```  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
   
 ### <a name="see-also"></a>Voir aussi  
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Gestionnaires définis par l’utilisateur](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
 Indique que la fonction gère le message enregistré par la fonction Windows RegisterWindowMessage.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -531,10 +526,10 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 ### <a name="remarks"></a>Notes  
  RegisterWindowMessage est utilisé pour définir un nouveau message de fenêtre est assuré d’être uniques dans le système. ON_REGISTERED_THREAD_MESSAGE doit être utilisé au lieu de ON_REGISTERED_MESSAGE lorsque vous avez une CWinThread (classe). 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
 
-## <a name="on_thread_message"></a>ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
 Indique que la fonction gère un message défini par l’utilisateur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -551,12 +546,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
  Le nom de la `CWinThread`-message-fonction de gestionnaire à laquelle le message est mappé.  
   
 ### <a name="remarks"></a>Notes  
- `ON_THREAD_MESSAGE`doit être utilisé à la place de `ON_MESSAGE` lorsque vous avez un `CWinThread` classe. Les messages définis par l’utilisateur sont des messages qui ne sont pas standard Windows **WM_MESSAGE** messages. Il doit y avoir un seul `ON_THREAD_MESSAGE` instruction macro dans votre table des messages pour tous les messages définis par l’utilisateur qui doivent être mappé à une fonction de gestionnaire de messages.  
+ `ON_THREAD_MESSAGE` doit être utilisé à la place de `ON_MESSAGE` lorsque vous avez un `CWinThread` classe. Les messages définis par l’utilisateur sont des messages qui ne sont pas standard Windows **WM_MESSAGE** messages. Il doit y avoir un seul `ON_THREAD_MESSAGE` instruction macro dans votre table des messages pour tous les messages définis par l’utilisateur qui doivent être mappé à une fonction de gestionnaire de messages.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
 
-## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
 Cette macro indique quelle est la fonction gère un message de commande de mise à jour de l’interface utilisateur.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -577,13 +572,13 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
   
  Pour plus d’informations et d’exemples, consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
 ### <a name="see-also"></a>Voir aussi  
  [CCmdUI, classe](ccmdui-class.md)
 
-## <a name="on_command_range"></a>ON_COMMAND_RANGE  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
 Utilisez cette macro pour mapper une plage contiguë de l’ID de commande à une fonction de gestionnaire de message unique.  
   
 ### <a name="syntax"></a>Syntaxe
@@ -630,10 +625,10 @@ void CChildFrame::OnRangeCmds(UINT nID)
 }
 ```
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
 Mappe une plage contiguë de l’ID de commande à une fonction de gestionnaire de messages de mise à jour unique.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -657,10 +652,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
   
  Il n’existe aucune prise en charge automatique des plages des tables des messages, donc vous devez placer la macro vous-même.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
 
-## <a name="on_control_range"></a>ON_CONTROL_RANGE     
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
 Utilisez cette macro pour mapper une plage contiguë d’ID de contrôle à une fonction de gestionnaire de message unique pour un message de notification Windows spécifié, tel que **BN_CLICKED**.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -689,7 +684,7 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
   
  Pour plus d’informations sur l’implémentation des fonctions de gestionnaire pour une plage d’ID de contrôle, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxmsg_.h  
   
 

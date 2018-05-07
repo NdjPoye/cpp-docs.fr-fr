@@ -1,13 +1,10 @@
 ---
-title: "Services CWinApp spéciaux | Documents Microsoft"
-ms.custom: 
+title: Services CWinApp spéciaux | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
@@ -39,22 +36,20 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-cwinapp-services"></a>Services CWinApp spéciaux
 Outre la boucle de messages en cours d’exécution et de vous donner la possibilité d’initialiser l’application et nettoyer après cela, [CWinApp](../mfc/reference/cwinapp-class.md) fournit plusieurs autres services.  
   
-##  <a name="_core_shell_registration"></a>Inscription du shell  
+##  <a name="_core_shell_registration"></a> Inscription du shell  
  Par défaut, l'Application MFC permet à l'utilisateur d'ouvrir les fichiers de données que votre application a créés en double-cliquant dessus dans l'Explorateur de fichiers ou le gestionnaire de fichiers. Si votre application est une application MDI et que vous spécifiez une extension pour les fichiers de votre application crée, l’Assistant Application MFC ajoute des appels à la [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) et [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen)fonctions membres de [CWinApp](../mfc/reference/cwinapp-class.md) à la `InitInstance` remplacement qu’il écrit pour vous.  
   
  `RegisterShellFileTypes` stocke les types de documents de votre application avec l'Explorateur de fichiers ou le gestionnaire de fichiers. La fonction ajoute des entrées à la base de données d'inscription que Windows gère. Les entrées enregistrent chaque type de document, associent une extension au type de fichier, spécifient une ligne de commande pour ouvrir l’application, puis spécifient une commande d’échange dynamique de données (DDE) pour ouvrir un document de ce type.  
@@ -71,7 +66,7 @@ Outre la boucle de messages en cours d’exécution et de vous donner la possibi
   
  Si vous ne supprimez pas le thread GDI+ d'arrière-plan, les commandes DDE peuvent être publiées prématurément dans l'application avant que la fenêtre principale soit créée. Les commandes DDE publiées par le shell peuvent être suspendues prématurément, ce qui aboutit à des messages d'erreur.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a>Le Gestionnaire de fichiers glisser -déplacer  
+##  <a name="_core_file_manager_drag_and_drop"></a> Le Gestionnaire de fichiers glisser -déplacer  
  Les fichiers peuvent être glissés de la fenêtre d'affichage des fichiers dans le gestionnaire de fichiers ou l'Explorateur de fichiers vers une fenêtre de votre application. Vous pouvez, par exemple, activer un ou plusieurs fichiers à faire glisser vers la fenêtre principale d'une application MDI, où l'application peut extraire le nom et les fenêtres enfants MDI ouverts pour ces fichiers.  
   
  Pour activer la fonction glisser-déplacer dans votre application, l’Assistant Application MFC écrit un appel à la [CWnd](../mfc/reference/cwnd-class.md) fonction membre [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) pour votre fenêtre frame principale de votre `InitInstance`. Supprimez cet appel si vous ne souhaitez pas implémenter la fonctionnalité Glisser-déposer.  
@@ -79,7 +74,7 @@ Outre la boucle de messages en cours d’exécution et de vous donner la possibi
 > [!NOTE]
 >  Vous pouvez également implémenter des fonctionnalités Glisser-déposer plus générales (comme faire glisser des données entre ou à l’intérieur de documents) avec OLE. Pour plus d’informations, consultez l’article [glisser-déplacer (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Le suivi de la plupart des Documents utilisés récemment  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Le suivi de la plupart des Documents utilisés récemment  
  Lorsque l'utilisateur ouvre et ferme des fichiers, l'objet d'application gère les quatre fichiers récemment utilisés. Les noms de ces fichiers sont ajoutés au menu Fichier et mis à jour lorsqu'ils sont modifiés. Le framework stocke ces noms de fichiers dans le Registre ou dans le fichier .ini, avec le même nom que le projet et les lit à partir du fichier au démarrage de votre application. Le `InitInstance` remplacer que l’Assistant Application MFC crée pour vous inclut un appel à la [CWinApp](../mfc/reference/cwinapp-class.md) fonction membre [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), ce qui charge à partir du Registre ou .ini fichier, y compris les derniers utilisé des noms de fichiers.  
   
  Ces entrées sont stockées comme suit :  
