@@ -1,13 +1,10 @@
 ---
-title: "Suppression de tous les objets d’une Collection CObject | Documents Microsoft"
-ms.custom: 
+title: Suppression de tous les objets d’une Collection CObject | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Suppression de tous les objets d’une collection CObject
 Cet article explique comment supprimer tous les objets d’une collection (sans supprimer l’objet collection lui-même).  
@@ -47,7 +42,7 @@ Cet article explique comment supprimer tous les objets d’une collection (sans 
   
 -   [Un mappage](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Pour supprimer tous les objets dans une liste de pointeurs vers CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Pour supprimer tous les objets dans une liste de pointeurs vers CObject  
   
 1.  Utilisez `GetHeadPosition` et `GetNext` pour parcourir la liste.  
   
@@ -63,7 +58,7 @@ Cet article explique comment supprimer tous les objets d’une collection (sans 
   
  Notez la différence entre supprimer l'élément d'un objet et supprimer l'élément lui-même. Supprimer un élément de la liste supprime uniquement la référence de la liste à l'objet. L'objet existe encore en mémoire. Lorsque vous supprimez un objet, il arrête d'exister et sa mémoire est libérée. Par conséquent, il est important de supprimer un élément dès que l'objet de l'élément a été supprimé afin que la liste ne tente pas d'accéder aux objets qui n'existent plus.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>Pour supprimer tous les éléments dans un tableau  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Pour supprimer tous les éléments dans un tableau  
   
 1.  Utilisez `GetSize` et des valeurs d'index entiers pour effectuer une itération au sein du tableau.  
   
@@ -77,7 +72,7 @@ Cet article explique comment supprimer tous les objets d’une collection (sans 
   
  Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un tableau ou `RemoveAt` pour supprimer chaque élément un par un.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Pour supprimer tous les éléments dans un mappage  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Pour supprimer tous les éléments dans un mappage  
   
 1.  Utilisez `GetStartPosition` et `GetNextAssoc` pour effectuer une itération au sein du tableau.  
   

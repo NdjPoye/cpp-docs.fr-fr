@@ -1,12 +1,9 @@
 ---
 title: Classe de CMDITabInfo | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>Classe de CMDITabInfo
 Le `CMDITabInfo` classe est utilisée pour passer des paramètres à [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) (méthode). Définissez les membres de cette classe de manière à contrôler le comportement des groupes avec onglet MDI.  
@@ -99,10 +94,10 @@ class CMDITabInfo
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton ;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton ;  
  Spécifie si un **fermer** bouton est affiché sur l’étiquette de l’onglet actif.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, l’étiquette de l’onglet actif affichera un **fermer** bouton. Le **fermer** bouton sera supprimé de l’angle supérieur droit de la zone d’onglet. Dans le cas contraire, l’étiquette de l’onglet actif n’affichera pas un **fermer** bouton. Le **fermer** bouton s’affiche dans le coin supérieur droit de la zone d’onglet.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Spécifie si chaque onglet MDI possède sa propre couleur.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, chaque onglet aura sa propre couleur. Le jeu de couleurs est géré par la bibliothèque MFC. Dans le cas contraire, les onglets sont affichés en blanc. La valeur par défaut est `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Spécifie si chaque onglet affiche un menu contextuel qui affiche une liste des documents ouverts sur le bord droit de la zone d’onglet.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, windows de chaque onglet affiche un menu contextuel qui affiche une liste des documents ouverts sur le bord droit de la zone d’onglet ; Dans le cas contraire, la fenêtre de l’onglet affiche les boutons de défilement sur le bord droit de la zone d’onglet. La valeur par défaut est `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Spécifie si l’utilisateur peut échanger les positions des onglets en faisant glisser.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, l’utilisateur peut modifier les positions des onglets en faisant glisser les onglets. Dans le cas contraire, l’utilisateur ne peut pas modifier les positions des onglets. La valeur par défaut est `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Spécifie si chaque fenêtre de l’onglet possède un cadre plat.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Spécifie si chaque fenêtre de l’onglet affiche une **fermer** bouton.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, chaque fenêtre de l’onglet affiche les **fermer** bouton sur le bord droit de l’onglet. Dans le cas contraire, le **fermer** bouton n’est pas affiché. La valeur par défaut est `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Spécifie si les onglets affichent des info-bulles.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, l’application envoie une `AFX_WM_ON_GET_TAB_TOOLTIP` message au frame principal. Vous pouvez gérer ce message à l’aide de la `ON_REGISTERED_MESSAGE` (macro).  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Spécifie s’il faut afficher les icônes sous les onglets MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Notes  
  Si `TRUE`, icônes sont affichées sous chaque onglet MDI. Dans le cas contraire, les icônes ne sont pas affichés sur les onglets. La valeur par défaut est `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Spécifie la taille de la bordure, en pixels, de chaque fenêtre de l’onglet.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Notes  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) renvoie la valeur par défaut.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Spécifie le style des étiquettes d’onglet.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Style 3D avec des étiquettes d’onglets round.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Spécifie si les étiquettes d’onglets sont situés en haut ou bas de la page.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP : les étiquettes d’onglets figurent en haut de la page  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Lit ou écrit cet objet à partir d’une archive dans une archive.  
   
 ```  

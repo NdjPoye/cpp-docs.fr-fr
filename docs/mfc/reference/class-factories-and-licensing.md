@@ -1,13 +1,10 @@
 ---
 title: Fabriques de classes et licences | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>Fabriques de classes et gestion des licences
 Pour créer une instance de votre contrôle OLE, une application conteneur appelle une fonction membre de la fabrique de classe du contrôle. Étant donné que votre contrôle est un objet OLE réel, la fabrique de classe est responsable de la création d’instances de votre contrôle. Chaque classe de contrôle OLE doit avoir une fabrique de classe.  
@@ -44,7 +39,7 @@ Pour créer une instance de votre contrôle OLE, une application conteneur appel
 |[END_OLEFACTORY](#end_olefactory)|Met fin à la déclaration de toutes les fonctions de gestion des licences.|  
 |[AfxVerifyLicFile](#afxverifylicfile)|Vérifie si un contrôle est concédé sous licence pour une utilisation sur un ordinateur particulier.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  Déclare une fabrique de classe et le `GetClassID` fonction membre de classe de votre contrôle.  
   
 ```   
@@ -62,10 +57,10 @@ DECLARE_OLECREATE_EX(class_name)
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  Implémente la fabrique de classe de votre contrôle et la [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) fonction membre de classe de votre contrôle.  
   
 ```   
@@ -98,10 +93,10 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="remarks"></a>Notes  
  Cette macro doit apparaître dans le fichier d’implémentation pour les classes de contrôle qui utilisent le `DECLARE_OLECREATE_EX` macro ou `BEGIN_OLEFACTORY` et `END_OLEFACTORY` macros. Le nom externe est l’identificateur du contrôle OLE qui est exposé à d’autres applications. Conteneurs utilisent ce nom pour demander un objet de cette classe de contrôle.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  Commence la déclaration de votre fabrique de classe dans le fichier d’en-tête de la classe du contrôle.  
   
 ``` 
@@ -115,10 +110,10 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="remarks"></a>Notes  
  Les déclarations de fonctions de gestion de licences de fabrique de classe doivent commencer immédiatement après `BEGIN_OLEFACTORY`.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  Met fin à la déclaration de la fabrique de classe de votre contrôle.  
   
 ```  
@@ -129,10 +124,10 @@ END_OLEFACTORY(class_name)
  *CLASS_NAME*  
  Le nom de la classe de contrôle dont il s’agit de fabrique de classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  Appelez cette fonction pour vérifier que le fichier de licence nommé par `pszLicFileName` est valide pour le contrôle OLE.  
   
 ```   
@@ -164,7 +159,7 @@ BOOL AFXAPI AfxVerifyLicFile(
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
 
 ## <a name="see-also"></a>Voir aussi  

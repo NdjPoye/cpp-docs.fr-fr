@@ -1,13 +1,10 @@
 ---
-title: "Assistant Ajout de classes d’une Typelib | Documents Microsoft"
-ms.custom: 
+title: Assistant Ajout de classes d’une Typelib | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistant Ajout de classes d'une Typelib
 Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponibles. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.  
@@ -58,9 +53,9 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
 |**<\<**|Supprime toutes les classes dans le **classes générées** liste. If grisé le **classes générées** liste est vide.|  
   
  **Classes générées**  
- Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide de la  **>**  ou  **>>**  bouton. Vous pouvez cliquer sur cette zone pour sélectionner une classe, puis haut ou bas pour faire défiler la liste, afficher chaque nom de classe dans le `Class` boîte et nom de fichier dans le **fichier** boîte généré par l’Assistant lorsque vous cliquez sur  **Terminer**. Vous pouvez sélectionner qu’une seule classe à la fois dans cette zone.  
+ Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide de la **>** ou **>>** bouton. Vous pouvez cliquer sur cette zone pour sélectionner une classe, puis haut ou bas pour faire défiler la liste, afficher chaque nom de classe dans le `Class` boîte et nom de fichier dans le **fichier** boîte généré par l’Assistant lorsque vous cliquez sur  **Terminer**. Vous pouvez sélectionner qu’une seule classe à la fois dans cette zone.  
   
- Vous pouvez supprimer une classe en la sélectionnant dans cette liste en cliquant sur  **<** . Vous n’avez pas besoin de sélectionner une classe dans la zone de classes générées pour supprimer toutes les classes ; en cliquant sur  **<<** , vous supprimez toutes les classes dans le **classes générées** boîte.  
+ Vous pouvez supprimer une classe en la sélectionnant dans cette liste en cliquant sur **<**. Vous n’avez pas besoin de sélectionner une classe dans la zone de classes générées pour supprimer toutes les classes ; en cliquant sur **<<**, vous supprimez toutes les classes dans le **classes générées** boîte.  
   
  `Class`  
  Spécifie le nom de la classe sélectionnée dans la **classes générées** zone que l’Assistant ajoute lorsque vous cliquez sur **Terminer**. Vous pouvez modifier le nom dans la `Class` boîte.  

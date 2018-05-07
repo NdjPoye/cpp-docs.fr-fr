@@ -2,12 +2,9 @@
 title: À l’aide de Visual C++ modèles Ajouter un nouvel élément | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilisation de modèles Ajouter un nouvel élément de Visual C++
 Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visual C++ à l’aide de la **ajouter un nouvel élément** commande. Lorsque vous utilisez la **ajouter un nouvel élément** commande, le `Add New Item` boîte de dialogue s’affiche avec une liste des modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.  
@@ -53,7 +48,7 @@ Vous pouvez facilement ajouter des éléments qui sont communs aux projets Visua
 |Fichier de définition de module (.def)|Crée un fichier de définition d’exportation de DLL.|  
 |Feuille de propriétés (.props)|Crée un fichier de feuille de propriétés de Visual C++.|  
 |Script d’inscription (.rgs)|Crée un fichier de script d’inscription ATL.|  
-|Report (.rdlc)|Crée un fichier de rapport.|  
+|Rapport (.rdlc)|Crée un fichier de rapport.|  
 |Fichier de ressources (.rc)|Crée un fichier de ressources Win32.|  
 |Fichier de modèle de ressource (.rct)|Crée un fichier de modèle de ressource.|  
 |Ruban (.mfcribbon-ms)|Crée un fichier de ruban.|  

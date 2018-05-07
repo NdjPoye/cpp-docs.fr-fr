@@ -1,13 +1,10 @@
 ---
-title: "Considérations sur les performances de l’interopérabilité (C++) | Documents Microsoft"
-ms.custom: 
+title: Considérations sur les performances de l’interopérabilité (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9223c52e4ef831a9a1ff657db1a0d7859dd6ce6c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considérations sur les performances de l'interopérabilité (C++)
 Cette rubrique fournit des recommandations pour réduire l’effet de transitions d’interopérabilité managés/non managés non sur les performances d’exécution.  
@@ -40,7 +35,7 @@ Cette rubrique fournit des recommandations pour réduire l’effet de transition
 ## <a name="reducing-transitions"></a>Réduction des Transitions  
  Un pour éviter ou réduire le coût des thunks d’interopérabilité consiste à refactoriser les interfaces impliquées afin de réduire les transitions managées/non managées. Améliore les performances peut être effectuées en ciblant les interfaces bavardes sont celles qui impliquent des appels fréquents entre la limite managée /. Une fonction managée qui appelle une fonction non managée dans une boucle serrée, est, par exemple, un bon candidat pour la refactorisation. Si la boucle elle-même est déplacée vers le côté non managé, ou si une alternative managée à l’appel non managé est créée (peut-être être des files d’attente de données du côté managé et son marshaling à l’API non managée à la fois après la boucle), le nombre de transitions peut être réduite de signe ificantly.  
   
-## <a name="pinvoke-vs-c-interop"></a>Vs de P/Invoke. interopérabilité C++  
+## <a name="pinvoke-vs-c-interop"></a>Vs de P/Invoke. Interopérabilité C++  
  Pour les langages .NET, tels que Visual Basic et c#, la méthode prescrite pour interagir avec des composants natifs est P/Invoke. P/Invoke est pris en charge par le .NET Framework, Visual C++ prend également en charge, mais Visual C++ fournit aussi sa propre prise en charge de l’interopérabilité, qui est appelé interopérabilité C++. Interopérabilité C++ est préférable P/Invoke, car P/Invoke n’est pas un type sécurisé. Par conséquent, principalement les erreurs sont signalées au moment de l’exécution, mais interopérabilité C++ a également les avantages de performances P/Invoke.  
   
  Ces deux techniques nécessitent plusieurs choses se produire chaque fois qu’une fonction managée appelle une fonction non managée :  

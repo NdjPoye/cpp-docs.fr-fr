@@ -1,13 +1,10 @@
 ---
-title: "Comment : marshaler des chaînes ANSI pour ADO.NET (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: 'Comment : marshaler des chaînes ANSI pour ADO.NET (C + c++ / CLI) | Documents Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling ANSI strings
 - strings [C++], ADO.NET
 ms.assetid: 6759d5a2-515f-4079-856b-73b1c1e68f2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 91d97658436e2d5563c70765da5c3c98e1cbeed5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d06f12a8a8d900e4604bea2800a1ba4c5c966770
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>Comment : marshaler des chaînes ANSI pour ADO.NET (C++/CLI)
 Montre comment ajouter une chaîne native (`char *`) pour une base de données et comment marshaler un <xref:System.String?displayProperty=fullName> à partir d’une base de données vers une chaîne native.  

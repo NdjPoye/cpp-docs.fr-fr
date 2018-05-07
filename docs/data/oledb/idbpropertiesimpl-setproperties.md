@@ -1,12 +1,9 @@
 ---
 title: IDBPropertiesImpl::SetProperties | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl.SetProperties
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - SetProperties method
 ms.assetid: 2f9fc1de-7f35-4bca-bab3-7b427bf92c26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f556cf112f9364cd2459bd4d1fdc30691281ca30
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5067173da531bb8a4f437666ccfc9c9c61bb47f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimplsetproperties"></a>IDBPropertiesImpl::SetProperties
 Définit les propriétés dans les groupes de propriétés de Source de données et de l’initialisation, pour les objets de source de données, ou le groupe de propriétés d’initialisation, pour les énumérateurs.  
@@ -46,7 +41,7 @@ Définit les propriétés dans les groupes de propriétés de Source de données
 ## <a name="remarks"></a>Notes  
  Si le fournisseur est initialisé, cette méthode définit les valeurs des propriétés dans le **DBPROPSET_DATASOURCE**, **DBPROPSET_DATASOURCEINFO**, **DBPROPSET_DBINIT** propriété groupes de l’objet de source de données. Si le fournisseur n’est pas initialisé, il définit **DBPROPSET_DBINIT** uniquement les propriétés de groupe.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

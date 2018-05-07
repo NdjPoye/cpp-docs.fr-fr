@@ -1,12 +1,9 @@
 ---
 title: Avertissements du compilateur C4200 via C4399 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Avertissements du compilateur C4200 via C4399
 
@@ -175,7 +170,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importer la bibliothèque de types à références croisées '*bibliothèque1*'avant d’importer'*bibliothèque2*'|
 |[Avertissement du compilateur (niveau 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|bibliothèque de types à références croisées '*bibliothèque1*'in'*bibliothèque2*' en cours|
 |Avertissement du compilateur (niveau 4) C4338|#pragma *directive*: section standard '*section*' est utilisé|
-|[Avertissement du compilateur (niveau 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*type*' : utilisation du type non défini a détecté dans ' WinRT &#124; CLR « métadonnées de ce type peut provoquer une exception runtime|
+|[Avertissement du compilateur (niveau 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*type*' : utilisation du type non défini a détecté dans ' WinRT&#124;CLR « métadonnées de ce type peut provoquer une exception runtime|
 |[Avertissement du compilateur (niveau 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*valeur*' : valeur renvoyée de positive à une valeur négative|
 |[Avertissement du compilateur (niveau 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|changement de comportement : '*fonction*' appelé, mais un opérateur de membre a été appelé dans les versions précédentes|
 |Avertissement du compilateur (niveau 4) C4343|#pragma optimize("g",off) se substitue à l’option /Og|

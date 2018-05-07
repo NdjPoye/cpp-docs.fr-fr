@@ -1,13 +1,10 @@
 ---
-title: "Source de données : Gestion des connexions (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Source de données : Gestion des connexions (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b83093496d355fdba8b5d714875d08040ae28ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 100c06773a8f0ffa79631339384bd4ec42fa4b52
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-managing-connections-odbc"></a>Source de données : gestion des connexions (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -61,7 +56,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Vous pouvez vous connecter à n’importe quelle source de données pour lequel vous avez un pilote ODBC. Les utilisateurs de votre application doivent également avoir le même pilote ODBC pour leur source de données. Pour plus d’informations sur la redistribution de pilotes ODBC, consultez [redistribution des composants ODBC à vos clients](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
   
-##  <a name="_core_configuring_a_data_source"></a>Configuration d’une Source de données  
+##  <a name="_core_configuring_a_data_source"></a> Configuration d’une Source de données  
  Administrateur ODBC est utilisé pour configurer vos sources de données. Vous pouvez également utiliser l’administrateur ODBC après l’installation pour ajouter ou supprimer des sources de données. Lorsque vous créez des applications, vous pouvez diriger vos utilisateurs à l’administrateur ODBC pour leur permettre d’ajouter des sources de données, ou vous pouvez intégrer cette fonctionnalité dans votre application en effectuant des appels d’installation ODBC directs. Pour plus d’informations, consultez [administrateur ODBC](../../data/odbc/odbc-administrator.md).  
   
  Vous pouvez utiliser un fichier Excel comme source de données, et vous devez configurer le fichier afin qu’il est enregistré et s’affiche dans le **sélectionner une Source de données** boîte de dialogue.  
@@ -83,10 +78,10 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 2.  Dans le **installation ODBC pour Microsoft Excel** boîte de dialogue, sélectionnez la base de données de Version et le classeur.  
   
-##  <a name="_core_working_in_a_multiuser_environment"></a>Vous travaillez dans un environnement multi-utilisateur  
+##  <a name="_core_working_in_a_multiuser_environment"></a> Vous travaillez dans un environnement multi-utilisateur  
  Si plusieurs utilisateurs sont connectés à une source de données, ils peuvent modifier les données pendant que vous manipulez dans vos jeux d’enregistrements. De même, les modifications peuvent affecter les recordsets des autres utilisateurs. Pour plus d’informations, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_generalizing_the_connection_string"></a>La généralisation de la chaîne de connexion  
+##  <a name="_core_generalizing_the_connection_string"></a> La généralisation de la chaîne de connexion  
  Les Assistants utilisent une chaîne de connexion par défaut pour établir une connexion à une source de données. Cette connexion vous permet d’afficher les tables et colonnes lorsque vous développez votre application. Toutefois, cette chaîne de connexion par défaut ne peut pas être appropriée pour les connexions des utilisateurs à la source de données via votre application. Par exemple, leur source de données et le chemin d’accès à son emplacement peuvent être différents de celui utilisé dans le développement de votre application. Dans ce cas, vous devez réimplémenter les [CRecordset::GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) membre fonctionne de façon plus générique et abandonner l’implémentation de l’Assistant. Par exemple, utilisez une des approches suivantes :  
   
 -   Enregistrez et gérez les chaînes de connexion à l’aide de l’administrateur ODBC.  
@@ -115,7 +110,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";  
     ```  
   
-##  <a name="_core_connecting_to_a_specific_data_source"></a>Connexion à une Source de données spécifique  
+##  <a name="_core_connecting_to_a_specific_data_source"></a> Connexion à une Source de données spécifique  
  Pour vous connecter à une source de données spécifique, votre source de données doit déjà avoir été configurée avec [administrateur ODBC](../../data/odbc/odbc-administrator.md).  
   
 #### <a name="to-connect-to-a-specific-data-source"></a>Pour vous connecter à une source de données spécifique  
@@ -126,7 +121,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Pour plus d’informations sur la façon de spécifier la source de données s’il s’agit d’un élément autre que celui que vous avez spécifié à l’aide d’un Assistant, consultez [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) dans le *MFC Référence*.  
   
-##  <a name="_core_disconnecting_from_a_data_source"></a>Déconnexion d’une Source de données  
+##  <a name="_core_disconnecting_from_a_data_source"></a> Déconnexion d’une Source de données  
  Vous devez fermer tous les recordsets ouverts avant d’appeler le **fermer** fonction membre de `CDatabase`. Dans les jeux d’enregistrements associés la `CDatabase` vous voulez fermer, tout en attente de l’objet `AddNew` ou **modifier** instructions sont et toutes les transactions en attente sont annulées.  
   
 #### <a name="to-disconnect-from-a-data-source"></a>Pour se déconnecter d’une source de données  
@@ -135,7 +130,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 2.  Détruire l’objet, sauf si vous souhaitez réutiliser.  
   
-##  <a name="_core_reusing_a_cdatabase_object"></a>Réutilisation d’un objet CDatabase  
+##  <a name="_core_reusing_a_cdatabase_object"></a> Réutilisation d’un objet CDatabase  
  Vous pouvez réutiliser un `CDatabase` objet après la déconnexion, si vous l’utilisez pour vous reconnecter à la même source de données ou pour vous connecter à une autre source de données.  
   
 #### <a name="to-reuse-a-cdatabase-object"></a>Pour réutiliser un objet CDatabase  

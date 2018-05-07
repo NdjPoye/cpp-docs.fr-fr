@@ -1,12 +1,9 @@
 ---
 title: CRecordView (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordView
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ffc45e73a2e56acf17bd1a7107e599967b3279b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordview-class"></a>CRecordView (classe)
 Vue qui affiche des enregistrements de base de données dans des contrôles.  
@@ -71,7 +66,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 |[CRecordView::OnMove](#onmove)|Si l’enregistrement actif a été modifié, il met à jour sur la source de données, puis passe à l’enregistrement spécifié (suivante, précédente, première ou dernière).|  
   
 ## <a name="remarks"></a>Notes  
- La vue est une vue de formulaire directement connectée à un `CRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de la `CRecordset` objet dans les contrôles du modèle de boîte de dialogue. Le `CRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements (RFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’objet recordset. `CRecordView`fournit également une implémentation par défaut pour le déplacement à la première, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement affiché.  
+ La vue est une vue de formulaire directement connectée à un `CRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de la `CRecordset` objet dans les contrôles du modèle de boîte de dialogue. Le `CRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements (RFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’objet recordset. `CRecordView` fournit également une implémentation par défaut pour le déplacement à la première, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement affiché.  
   
 > [!NOTE]
 >  Si vous travaillez avec les classes d’objets d’accès aux données (DAO) plutôt que les classes de base de données ODBC (Open Connectivity), utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).  
@@ -82,7 +77,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  Pour plus d’informations sur l’implémentation par défaut pour le déplacement d’un enregistrement à l’autre, consultez `IsOnFirstRecord` et `IsOnLastRecord` et l’article [à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
- `CRecordView`conserve le suivi de la position de l’utilisateur dans le jeu d’enregistrements afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Quand l’utilisateur passe à des extrémités de l’objet recordset, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou des boutons de barre d’outils, pour déplacer ultérieurement dans la même direction.  
+ `CRecordView` conserve le suivi de la position de l’utilisateur dans le jeu d’enregistrements afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Quand l’utilisateur passe à des extrémités de l’objet recordset, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou des boutons de barre d’outils, pour déplacer ultérieurement dans la même direction.  
   
  Pour plus d’informations sur la déclaration et utilisation de votre vue d’enregistrement et les classes de jeu d’enregistrements, consultez « Conception et création d’une vue enregistrement » dans l’article [vues des enregistrements](../../data/record-views-mfc-data-access.md). Pour plus d’informations sur comment vues travail d’enregistrement et comment les utiliser, consultez l’article [à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -101,10 +96,10 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  `CRecordView`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
-##  <a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>  CRecordView::CRecordView  
  Lorsque vous créez un objet d’un type dérivé de `CRecordView`, appelez des deux formes du constructeur pour initialiser l’objet de vue et d’identifier la ressource de boîte de dialogue sur lequel est basée la vue.  
   
 ```  
@@ -133,7 +128,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le premier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL IsOnFirstRecord();
   
  Si l’utilisateur se déplace vers le premier enregistrement, le framework désactive les objets d’interface utilisateur pour le déplacement vers le premier ou l’enregistrement précédent.  
   
-##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CRecordView::IsOnLastRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le dernier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -162,9 +157,9 @@ BOOL IsOnLastRecord();
  Cette fonction est utile pour écrire vos propres implémentations de la valeur par défaut des gestionnaires de mise à jour des commandes qui ClassWizard écrit pour prendre en charge une interface utilisateur pour le déplacement d’un enregistrement à l’autre.  
   
 > [!CAUTION]
->  Le résultat de cette fonction est fiable, à ceci près que la vue ne peut pas détecter la fin de l’objet recordset jusqu'à ce que l’utilisateur a été déplacé au-delà de celle-ci. L’utilisateur doit passer au-delà du dernier enregistrement, avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur permettant de passer à l’enregistrement suivant ou la dernière. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement. `IsOnLastRecord`est également peu fiable après un appel à la fonction de mise en œuvre **OnRecordLast**, qui gère le `ID_RECORD_LAST` commande, ou `CRecordset::MoveLast`.  
+>  Le résultat de cette fonction est fiable, à ceci près que la vue ne peut pas détecter la fin de l’objet recordset jusqu'à ce que l’utilisateur a été déplacé au-delà de celle-ci. L’utilisateur doit passer au-delà du dernier enregistrement, avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur permettant de passer à l’enregistrement suivant ou la dernière. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement. `IsOnLastRecord` est également peu fiable après un appel à la fonction de mise en œuvre **OnRecordLast**, qui gère le `ID_RECORD_LAST` commande, ou `CRecordset::MoveLast`.  
   
-##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Retourne un pointeur vers le `CRecordset`-dérivée d’objet associé à la vue de l’enregistrement.  
   
 ```  
@@ -179,7 +174,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>  CRecordView::OnMove  
  Appelez cette fonction membre pour déplacer vers un autre enregistrement dans le jeu d’enregistrements et afficher ses champs dans les contrôles de la vue de l’enregistrement.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Une des valeurs d’ID de commande standard suivantes :  
   
-- `ID_RECORD_FIRST`Déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
+- `ID_RECORD_FIRST` Déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
   
-- `ID_RECORD_LAST`Déplacer au dernier enregistrement dans le jeu d’enregistrements.  
+- `ID_RECORD_LAST` Déplacer au dernier enregistrement dans le jeu d’enregistrements.  
   
-- `ID_RECORD_NEXT`Déplacer vers l’enregistrement suivant dans le jeu d’enregistrements.  
+- `ID_RECORD_NEXT` Déplacer vers l’enregistrement suivant dans le jeu d’enregistrements.  
   
-- `ID_RECORD_PREV`Déplacer vers l’enregistrement précédent dans le jeu d’enregistrements.  
+- `ID_RECORD_PREV` Déplacer vers l’enregistrement précédent dans le jeu d’enregistrements.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le déplacement a réussi ; 0 dans le cas contraire, si la demande de déplacement a été refusée.  

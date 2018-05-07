@@ -1,29 +1,24 @@
 ---
-title: "Nouveau projet à partir de Code existant - fichiers de code Source (Visual C++) | Documents Microsoft"
-ms.custom: 
+title: Nouveau projet à partir de Code existant - fichiers de code Source (Visual C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.location
 dev_langs:
 - C++
 ms.assetid: 29ddffb9-5918-4d72-8c7a-a365f9de96dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Spécifier l'emplacement du projet et les fichiers sources, Assistant Créer un projet à partir de fichiers de code existants
 Utilisez cette page de l’Assistant créer un projet à partir de fichiers de Code existants pour spécifier :  

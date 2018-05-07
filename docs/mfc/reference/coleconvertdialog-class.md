@@ -1,12 +1,9 @@
 ---
 title: Classe de la classe COleConvertDialog | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>Classe de la classe COleConvertDialog
 Pour plus d’informations, consultez la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure dans le SDK Windows.  
@@ -99,10 +94,10 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  Construit uniquement un `COleConvertDialog` objet.  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS** Spécifie que la case Activer en tant que sera sélectionnée initialement lorsque la boîte de dialogue est appelée.  
   
-- **CF_SETCONVERTDEFAULT** Spécifie que la classe dont **CLSID** est spécifiée par le **clsidConvertDefault** membre de la `m_cv` structure sera utilisée comme la valeur par défaut sélection de la zone de liste de la classe lors de la convertir en case d’option est sélectionnée.  
+- **CF_SETCONVERTDEFAULT** Spécifie que la classe dont **CLSID** est spécifiée par le **clsidConvertDefault** membre de la `m_cv` structure sera utilisée comme la sélection par défaut dans la liste des classes lors de la convertir en case d’option est activée.  
   
 - **CF_SETACTIVATEDEFAULT** Spécifie que la classe dont **CLSID** est spécifiée par le **clsidActivateDefault** membre de la `m_cv` structure sera utilisée comme la valeur par défaut sélection de la zone de liste de la classe lors de l’activer en tant que case d’option est sélectionnée.  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) et [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) structure.  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Appelez cette fonction, après le retour avec succès à partir de [DoModal](#domodal)à convertir ou activer un objet de type [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>Notes  
  L’élément est converti en ou activé selon les informations sélectionnées par l’utilisateur dans la boîte de dialogue Convertir.  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue Convertir OLE.  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` retourne **IDOK**, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations qu’il a été entrées par l’utilisateur dans la boîte de dialogue autres membres.  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  Appelez cette fonction pour obtenir le **CLSID** l’élément associé à l’utilisateur sélectionné dans la boîte de dialogue de conversion.  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans le Kit de développement logiciel Windows.  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Appelez cette fonction pour déterminer si l’utilisateur a choisi d’afficher l’élément sélectionné sous forme d’icône.  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Valeur de retour  
  La méthode nécessaire pour restituer l’objet.  
   
-- `DVASPECT_CONTENT`Retourné si la case à cocher Afficher comme icône n’a pas été activée.  
+- `DVASPECT_CONTENT` Retourné si la case à cocher Afficher comme icône n’a pas été activée.  
   
-- `DVASPECT_ICON`Retourné si la case à cocher Afficher comme icône a été vérifiée.  
+- `DVASPECT_ICON` Retourné si la case à cocher Afficher comme icône a été vérifiée.  
   
 ### <a name="remarks"></a>Notes  
  Appel de cette fonction uniquement après [DoModal](#domodal) retourne **IDOK**.  
   
  Pour plus d’informations sur l’aspect de dessin, consultez la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure de données dans le SDK Windows.  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Appelez cette fonction pour obtenir un handle de métafichier qui contient l’aspect sous forme d’icône de l’élément sélectionné.  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du métafichier contenant l’aspect sous forme d’icône de l’élément sélectionné, si la case à cocher Afficher comme icône a été vérifiée lors du rejet de la boîte de dialogue en choisissant **OK**; sinon **NULL**.  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  Appelez cette fonction pour déterminer le type de conversion sélectionné dans la boîte de dialogue de conversion.  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs** retourné si la case Activer en tant qu’a été activée, l’utilisateur a sélectionné un autre élément à activer, et `DoModal` retourné **IDOK**.  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  Structure de type **OLEUICONVERT** utilisé pour contrôler le comportement de la boîte de dialogue de conversion.  
   
 ```  

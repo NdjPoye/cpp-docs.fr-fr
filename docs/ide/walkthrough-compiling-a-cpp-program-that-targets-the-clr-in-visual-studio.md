@@ -1,13 +1,10 @@
 ---
-title: "Compilation d’un programme C++ qui cible le CLR | Documents Microsoft"
-ms.custom: 
+title: Compilation d’un programme C++ qui cible le CLR | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : compilation d'un programme C++ qui cible le CLR dans Visual Studio
 Vous pouvez créer des programmes Visual C++ qui utilisent des classes .NET et les compiler à l’aide de l’environnement de développement Visual Studio.  
@@ -84,7 +79,7 @@ Vous pouvez créer des programmes Visual C++ qui utilisent des classes .NET et l
     >  En choisissant le CLR vide le modèle de projet définit automatiquement le **/CLR** option du compilateur. Pour vérifier cela, cliquez sur le projet dans **l’Explorateur de solutions** et en cliquant sur **propriétés**, puis vérifiez la **prise en charge du Common Language Runtime** option dans le  **Général** nœud de **propriétés de Configuration**.  
   
 ## <a name="whats-next"></a>Étapes suivantes  
- **Précédente :** [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **Suivant :**[procédure pas à pas : compilation d’un programme C sur la ligne de commande](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **Précédente :** [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **suivant :**[procédure pas à pas : compilation d’un programme C sur la ligne de commande](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage C++](../cpp/cpp-language-reference.md)   

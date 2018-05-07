@@ -1,13 +1,10 @@
 ---
-title: "Pages de propriétés (MFC) | Documents Microsoft"
-ms.custom: 
+title: Pages de propriétés (MFC) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 Pages de propriétés affichent les valeurs actuelles des propriétés de contrôle OLE spécifiques dans une interface graphique pour afficher et modifier en prenant en charge un mécanisme de mappage de données en fonction de l’échange de données de boîtes de dialogue (DDX) personnalisable.  
@@ -60,7 +55,7 @@ Pages de propriétés affichent les valeurs actuelles des propriétés de contr�
 |[END_PROPPAGEIDS](#end_proppageids)|Met fin à la liste des ID de page de propriété.|  
 |[PROPPAGEID](#proppageid)|Déclare une page de propriétés de la classe du contrôle.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```   
@@ -87,10 +82,10 @@ void AFXAPI DDP_CBIndex(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_CBIndex` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de propriété de type chaîne avec la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```  
@@ -117,10 +112,10 @@ void AFXAPI DDP_CBString(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_CBString` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété de chaîne qui correspond exactement à la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```  
@@ -147,10 +142,10 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_CBStringExact` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>  DDP_Check  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de la propriété avec le contrôle de case à cocher de page de propriété associée.  
   
 ```   
@@ -177,10 +172,10 @@ void AFXAPI DDP_Check(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_Check` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -207,10 +202,10 @@ void AFXAPI DDP_LBIndex(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_LBIndex` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de propriété de type chaîne avec la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -237,10 +232,10 @@ void AFXAPI DDP_LBString(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_LBString` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété de chaîne qui correspond exactement à la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -267,10 +262,10 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_LBStringExact` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction), pour terminer le transfert des valeurs de propriété à partir de la page de propriétés à votre contrôle lors de l’enregistrement des valeurs de propriété.  
   
 ```   
@@ -282,14 +277,14 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
  Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction doit être appelée une fois que toutes les fonctions d’échange de données sont terminées. Exemple :  
+ Cette fonction doit être appelée une fois que toutes les fonctions d’échange de données sont terminées. Par exemple :  
   
  [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>  DDP_Radio  
  Appelez cette fonction dans votre contrôle de code `DoPropExchange` (fonction) pour synchroniser la valeur de la propriété du contrôle de bouton de case d’option page propriété associée.  
   
 ```   
@@ -316,10 +311,10 @@ void AFXAPI DDP_Radio(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_Radio` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_TEXT  
+##  <a name="ddp_text"></a>  DDP_TEXT  
  Appelez cette fonction dans votre contrôle de code `DoDataExchange` (fonction) pour synchroniser la valeur de la propriété avec le contrôle de page de propriété associée.  
   
 ```   
@@ -388,10 +383,10 @@ void AFXAPI DDP_Text(
 ### <a name="remarks"></a>Notes  
  Cette fonction doit être appelée avant la correspondant `DDX_Text` l’appel de fonction.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
  Commence la définition de liste de votre contrôle de l’ID de page de propriété.  
   
 ```   
@@ -410,10 +405,10 @@ BEGIN_PROPPAGEIDS(class_name,  count)
   
  Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : Pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
  Met fin à la définition de votre liste de ID de page de propriétés.  
   
 ```   
@@ -424,10 +419,10 @@ END_PROPPAGEIDS(class_name)
  *CLASS_NAME*  
  Le nom de la classe du contrôle qui est propriétaire de la page de propriétés.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>  PROPPAGEID  
  Ajoute une page de propriétés pour une utilisation par votre contrôle OLE.  
   
 ```   
@@ -441,7 +436,7 @@ PROPPAGEID(clsid)
 ### <a name="remarks"></a>Notes  
  Tous les `PROPPAGEID` macros doivent être placées entre les `BEGIN_PROPPAGEIDS` et `END_PROPPAGEIDS` macros dans le fichier d’implémentation de votre contrôle.  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
     
 ## <a name="see-also"></a>Voir aussi  

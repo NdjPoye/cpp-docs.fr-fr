@@ -1,13 +1,10 @@
 ---
 title: Erreur du compilateur C3007 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3007
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3007
 ms.assetid: e415ef42-bdc9-4f32-8198-5e25b289a089
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1342cd9f028987ec33659e6bc3b7e7020e0979a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1424683db17247c6e31d0d26bce31f420353968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3007"></a>Erreur du compilateur C3007
-'arg' : un argument est refusé dans la clause de la directive 'directive' OpenMP  
+'arg' : un argument est refusé dans la clause de la directive 'directive' OpenMP  
   
  Une directive OpenMP avait un argument, mais la directive refuse les arguments.  
   
- L’exemple suivant génère l’erreur C3007 :  
+ L’exemple suivant génère l’erreur C3007 :  
   
 ```  
 // C3007.c  

@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Utilisation de polices | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Utilisation de polices | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Contrôles ActiveX MFC : utilisation des polices
 Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisateur du contrôle modifier l’apparence du texte en modifiant une propriété de police. Propriétés de police sont implémentées en tant qu’objets de police et peut prendre l’une des deux types : stock ou personnalisée. Propriétés stock Font sont des propriétés de polices préimplémentées que vous pouvez ajouter à l’aide de l’Assistant Ajout de propriété. Les propriétés de police personnalisées ne sont pas préimplémentées et le développeur contrôle détermine le comportement et l’utilisation de la propriété.  
@@ -49,7 +44,7 @@ Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisate
   
 -   [À l’aide des propriétés de la police personnalisée dans votre contrôle](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>À l’aide de la propriété Stock Font  
+##  <a name="_core_using_the_stock_font_property"></a> À l’aide de la propriété Stock Font  
  Propriétés stock Font sont préimplémentées par la classe [COleControl](../mfc/reference/colecontrol-class.md). En outre, une page de propriétés de police standard est également disponible, permettant à l’utilisateur de modifier divers attributs de l’objet de police, telles que son nom, la taille et le style.  
   
  Accéder à l’objet de police via le [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), et [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) fonctions de `COleControl`. L’utilisateur du contrôle accédera à l’objet de police via le `GetFont` et `SetFont` les fonctions de la même manière que n’importe quelle autre propriété Get/Set. Lors de l’accès à l’objet de police est requis à partir d’un contrôle, utilisez la `InternalGetFont` (fonction).  
@@ -102,14 +97,14 @@ Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisate
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>Modification de la fonction OnDraw  
+##  <a name="_core_modifying_the_ondraw_function"></a> Modification de la fonction OnDraw  
  L’implémentation par défaut de `OnDraw` utilise la police système Windows pour tout le texte affiché dans le contrôle. Cela signifie que vous devez modifier le `OnDraw` code en sélectionnant l’objet de police dans le contexte de périphérique. Pour ce faire, appelez [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) et transmettre le contexte de périphérique du contrôle, comme indiqué dans l’exemple suivant :  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  Après le `OnDraw` fonction a été modifiée pour utiliser l’objet de police, de n’importe quel texte dans le contrôle s’affiche avec les caractéristiques de la propriété du contrôle stock Font.  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>À l’aide des propriétés de la police personnalisée dans votre contrôle  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> À l’aide des propriétés de la police personnalisée dans votre contrôle  
  En plus de la propriété stock Font, le contrôle ActiveX peut avoir des propriétés personnalisées de la police. Pour ajouter une propriété de police personnalisée, vous devez :  
   
 -   Utilisez l’Assistant Ajout de propriété pour implémenter la propriété de police personnalisée.  
@@ -118,7 +113,7 @@ Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisate
   
 -   [Implémentation d’une nouvelle interface de notification de police](#_core_implementing_a_new_font_notification_interface).  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>Implémentation d’une propriété de police personnalisée  
+###  <a name="_core_implementing_a_custom_font_property"></a> Implémentation d’une propriété de police personnalisée  
  Pour implémenter une propriété de police personnalisée, vous utilisez l’Assistant Ajout de propriété pour ajouter la propriété et puis apporter des modifications au code. Les sections suivantes décrivent comment ajouter personnalisé `HeadingFont` propriété à l’exemple de contrôle.  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>Pour ajouter la propriété de police personnalisée à l’aide de l’Assistant Ajout de propriété  
@@ -206,7 +201,7 @@ Si votre contrôle ActiveX affiche du texte, vous pouvez autoriser l’utilisate
   
  Après ont apporté ces modifications, régénérez l’ensemble du projet pour incorporer les fonctionnalités supplémentaires.  
   
-###  <a name="_core_processing_font_notifications"></a>Traitement des Notifications de police  
+###  <a name="_core_processing_font_notifications"></a> Traitement des Notifications de police  
  Dans la plupart des cas, le contrôle doit savoir quand les caractéristiques de l’objet de police ont été modifiées. Chaque objet de police est capable de fournir des notifications quand il change en appelant une fonction membre de la **IFontNotification** interface implémentée par `COleControl`.  
   
  Si le contrôle utilise la propriété stock Font, ses notifications sont gérées par le `OnFontChanged` fonction membre de `COleControl`. Lorsque vous ajoutez des propriétés de police personnalisée, vous pouvez les installer à utiliser la même implémentation. Dans l’exemple de la section précédente, cela a été accompli en passant &**m_xFontNotification** lors de l’initialisation du **m_fontHeading** variable membre.  
@@ -218,7 +213,7 @@ Implémentation de plusieurs Interfaces d’objet Font
   
  La première consiste à faire la distinction entre les notifications d’objet police du contrôle pour créer une implémentation distincte de la **IFontNotification** interface pour chaque objet de police dans le contrôle. Cette technique vous permet d’optimiser le code de dessin en mettant à jour uniquement la chaîne, ou des chaînes, qui utilisent la police récemment modifiée. Les sections suivantes présentent les étapes nécessaires pour implémenter des interfaces de notification séparées pour une deuxième propriété de police. La deuxième propriété de police est censée pour être le `HeadingFont` propriété qui a été ajoutée dans la section précédente.  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>Implémentation d’une nouvelle Interface de Notification de police  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implémentation d’une nouvelle Interface de Notification de police  
  Pour faire la distinction entre les notifications de deux ou plusieurs polices, une nouvelle interface de notification doit être implémentée pour chaque police utilisée dans le contrôle. Les sections suivantes décrivent comment implémenter une nouvelle interface de notification de police en modifiant les fichiers d’en-tête et d’implémentation de contrôle.  
   
 ### <a name="additions-to-the-header-file"></a>Ajouts au fichier d’en-tête  

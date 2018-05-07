@@ -1,13 +1,10 @@
 ---
-title: "Initialisation des parties d’un objet CStatusBarCtrl | Documents Microsoft"
-ms.custom: 
+title: Initialisation des parties d’un objet CStatusBarCtrl | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CStatusBarCtrl
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - icons, using in status bars
 - CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b713a46db13508df5ba80b21e3dfe938261eec65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89cea1516924530f821003affd96e2848687882b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initialisation des parties d'un objet CStatusBarCtrl
 Par défaut, une barre d’état affiche des informations d’état à l’aide des volets séparés. Ces volets (également appelés en tant que parties) peuvent contenir une chaîne de texte, une icône ou les deux.  

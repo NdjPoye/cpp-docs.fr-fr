@@ -1,12 +1,9 @@
 ---
 title: CSpinButtonCtrl (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fournit les fonctionnalités du contrôle commun de bouton toupie (spin) Windows.  
@@ -112,7 +107,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  Crée un contrôle de bouton toupie (spin) et l’attache à un `CSpinButtonCtrl` objet...  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  Pour créer un contrôle de bouton toupie (spin) avec les styles de fenêtre étendus, appelez [CSpinButtonCtrl::CreateEx](#createex) au lieu de **créer**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Crée un contrôle (une fenêtre enfant) et l’associe le `CSpinButtonCtrl` objet.  
   
 ```  
@@ -173,19 +168,19 @@ virtual BOOL CreateEx(
  ID de fenêtre enfant. du contrôle  
   
 ### <a name="return-value"></a>Valeur de retour  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Construit un objet `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  Récupère les informations de l’accélération d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Valeur de retour  
  Nombre de structures d’accélérateur à récupérer.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  Extrait de la base d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de base en cours.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  Récupère un pointeur vers la fenêtre associée en cours.  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la fenêtre associée en cours.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  Récupère la position actuelle d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>Notes  
  Lors du traitement de la valeur retournée, le contrôle met à jour sa position actuelle en fonction de la légende de la fenêtre associée. Le contrôle retourne une erreur s’il n’existe aucune fenêtre associée, ou si la légende spécifie une valeur non valide ou est hors limites.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  Récupère les limites supérieures et inférieures (plage) d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -259,7 +254,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *inférieure*  
+ *Inférieure*  
  Référence à un entier qui reçoit la limite inférieure pour le contrôle.  
   
  *supérieur*  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>Notes  
  La fonction membre `GetRange32` récupère la plage du contrôle de bouton toupie (spin) comme un entier 32 bits.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  Définit l’accélération d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -288,9 +283,9 @@ BOOL SetAccel(
  Pointeur vers un tableau de `UDACCEL` structures qui contiennent des informations de l’accélération. Les éléments doivent être triés dans l’ordre croissant selon la **nSec** membre.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  Définit la base d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>Notes  
  La valeur de base détermine si la fenêtre associée affiche les nombres sous forme décimale ou hexadécimale. Nombres hexadécimaux sont toujours non signés ; nombres décimaux sont signés.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  Définit la fenêtre associée pour un contrôle de bouton toupie (spin).  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>Notes  
  Un contrôle spin est presque toujours associé à une autre fenêtre, par exemple un contrôle d’édition, qui affiche du contenu. Cette autre fenêtre est appelée « associé » du contrôle spin.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  Définit la position actuelle d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  La position précédente (précision 16 bits pour `SetPos`32 bits precision pour `SetPos32`).  
   
 ### <a name="remarks"></a>Notes  
- `SetPos32`définit la position de 32 bits.  
+ `SetPos32` définit la position de 32 bits.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
  Définit les limites supérieures et inférieures (plage) d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -358,7 +353,7 @@ void SetRange32(
   
 ### <a name="parameters"></a>Paramètres  
  `nLower` et `nUpper`  
- Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à **UD_MAXVAL** ou inférieur à **UD_MINVAL**; en outre, la différence entre les deux limites ne peut pas dépasser **UD_MAXVAL**. `SetRange32`n’impose aucune restriction sur les limites ; utiliser des entiers.  
+ Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à **UD_MAXVAL** ou inférieur à **UD_MINVAL**; en outre, la différence entre les deux limites ne peut pas dépasser **UD_MAXVAL**. `SetRange32` n’impose aucune restriction sur les limites ; utiliser des entiers.  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre `SetRange32` définit la plage de 32 bits pour le contrôle de bouton toupie (spin).  

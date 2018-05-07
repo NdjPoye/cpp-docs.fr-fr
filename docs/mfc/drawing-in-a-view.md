@@ -1,13 +1,10 @@
 ---
 title: Dessin dans une vue | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>Dessin dans une vue
 La quasi-totalité de dessin dans votre application se produit dans la vue `OnDraw` fonction membre, que vous devez remplacer dans votre classe d’affichage. (L’exception est la souris de dessin, présentés dans [interprétation entrée via une vue utilisateur](../mfc/interpreting-user-input-through-a-view.md).) Votre `OnDraw` remplacer :  
@@ -39,9 +34,9 @@ La quasi-totalité de dessin dans votre application se produit dans la vue `OnDr
   
 2.  Affiche les données en appelant les fonctions membres d’un objet de contexte de périphérique que l’infrastructure transmet à `OnDraw`.  
   
- Lorsque les données d’un document changent d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En règle générale, cela se produit lorsque l’utilisateur effectue une modification via une vue sur le document. Dans ce cas, la vue appelle du document [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) fonction membre pour avertir toutes les vues du même document se mettre à jour. `UpdateAllViews`appelle chaque vue [OnUpdate](../mfc/reference/cview-class.md#onupdate) fonction membre. L’implémentation par défaut de `OnUpdate` invalide la zone cliente de la vue. Vous pouvez substituer pour invalider les régions de la zone cliente correspondant aux parties modifiées du document.  
+ Lorsque les données d’un document changent d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En règle générale, cela se produit lorsque l’utilisateur effectue une modification via une vue sur le document. Dans ce cas, la vue appelle du document [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) fonction membre pour avertir toutes les vues du même document se mettre à jour. `UpdateAllViews` appelle chaque vue [OnUpdate](../mfc/reference/cview-class.md#onupdate) fonction membre. L’implémentation par défaut de `OnUpdate` invalide la zone cliente de la vue. Vous pouvez substituer pour invalider les régions de la zone cliente correspondant aux parties modifiées du document.  
   
- Le `UpdateAllViews` fonction membre de classe **CDocument** et `OnUpdate` fonction membre de classe `CView` permettent de passer des informations qui décrivent les parties du document ont été modifiés. Ce mécanisme « indicateur » vous permet de limiter la zone de la vue doit redessiner. `OnUpdate`accepte deux arguments « indicateur ». La première, `lHint`, de type **LPARAM**, vous permet de transmettre toutes les données de votre choix, tandis que le second, `pHint`, de type `CObject`*, vous permet de passer un pointeur à n’importe quel objet dérivé de `CObject`.  
+ Le `UpdateAllViews` fonction membre de classe **CDocument** et `OnUpdate` fonction membre de classe `CView` permettent de passer des informations qui décrivent les parties du document ont été modifiés. Ce mécanisme « indicateur » vous permet de limiter la zone de la vue doit redessiner. `OnUpdate` accepte deux arguments « indicateur ». La première, `lHint`, de type **LPARAM**, vous permet de transmettre toutes les données de votre choix, tandis que le second, `pHint`, de type `CObject`*, vous permet de passer un pointeur à n’importe quel objet dérivé de `CObject`.  
   
  Lorsqu’une devient non valide, Windows envoie une `WM_PAINT` message. La vue [OnPaint](../mfc/reference/cwnd-class.md#onpaint) fonction gestionnaire répond au message en créant un objet de contexte de périphérique de la classe [CPaintDC](../mfc/reference/cpaintdc-class.md) et appels de votre vue `OnDraw` fonction membre. Il est généralement inutile d’écrire une substitution `OnPaint` fonction gestionnaire.  
   

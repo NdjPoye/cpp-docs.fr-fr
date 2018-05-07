@@ -1,12 +1,9 @@
 ---
 title: Classe de CDumpContext | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDumpContext
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d54a461bece96faeb11f78a1788049abcabbae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdumpcontext-class"></a>Classe de CDumpContext
 Prend en charge la sortie de diagnostic en fonction du flux dans un format contrôlable de visu.  
@@ -70,10 +65,10 @@ class CDumpContext
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|Insère des variables et des objets dans le contexte de dump.|  
+|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Insère des variables et des objets dans le contexte de dump.|  
   
 ## <a name="remarks"></a>Notes  
- `CDumpContext`ne dispose pas d’une classe de base.  
+ `CDumpContext` ne dispose pas d’une classe de base.  
   
  Vous pouvez utiliser [afxDump](diagnostic-services.md#afxdump), un prédéclarée `CDumpContext` objet, pour la plupart de vos le vidage. Le `afxDump` objet est disponible uniquement dans la version Debug de la bibliothèque Microsoft Foundation Class.  
   
@@ -81,7 +76,7 @@ class CDumpContext
   
  Dans l’environnement Windows, la sortie de prédéfinis `afxDump` objet, conceptuellement semblable à la `cerr` stream, est routé vers le débogueur via la fonction Windows **OutputDebugString**.  
   
- Le `CDumpContext` classe a une insertion surchargée (  **<<** ) opérateur pour `CObject` des pointeurs qui exporte les données de l’objet. Si vous avez besoin d’un format dump personnalisé pour un objet dérivé, substituez [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La plupart des classes Microsoft Foundation implémentent substitué `Dump` fonction membre.  
+ Le `CDumpContext` classe a une insertion surchargée ( **<<**) opérateur pour `CObject` des pointeurs qui exporte les données de l’objet. Si vous avez besoin d’un format dump personnalisé pour un objet dérivé, substituez [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La plupart des classes Microsoft Foundation implémentent substitué `Dump` fonction membre.  
   
  Les classes qui ne sont pas dérivés de `CObject`, tel que `CString`, `CTime`, et `CTimeSpan`, ont leurs propres surchargé `CDumpContext` des opérateurs d’insertion, en tant que structures souvent utilisé comme **CFileStatus**, `CPoint`, et `CRect`.  
   
@@ -101,7 +96,7 @@ class CDumpContext
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
  Construit un objet de classe `CDumpContext`.  
   
 ```  
@@ -120,7 +115,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
  Exporte le type spécifié sous formaté de nombres hexadécimaux.  
   
 ```  
@@ -143,7 +138,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>  CDumpContext::Flush  
  Force toutes les données restantes dans les mémoires tampon à écrire dans le fichier attaché dans le contexte de dump.  
   
 ```  
@@ -153,7 +148,7 @@ void Flush();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>  CDumpContext::GetDepth  
  Détermine si une image complète ou superficielle est en cours.  
   
 ```  
@@ -166,7 +161,7 @@ int GetDepth() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [SetDepth](#setdepth).  
   
-##  <a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>  CDumpContext::HexDump  
  Exporte un tableau d’octets sous formaté de nombres hexadécimaux.  
   
 ```  
@@ -196,7 +191,7 @@ void HexDump(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;  
  Génère les données spécifiées dans le contexte de dump.  
   
 ```  
@@ -234,7 +229,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>  CDumpContext::SetDepth  
  Définit la profondeur de l’image mémoire.  
   
 ```  

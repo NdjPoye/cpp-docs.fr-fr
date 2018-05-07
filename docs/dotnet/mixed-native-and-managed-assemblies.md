@@ -1,13 +1,10 @@
 ---
-title: "Mixte (natifs et managés) assemblys | Documents Microsoft"
-ms.custom: 
+title: Mixte (natifs et managés) assemblys | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assemblys mixtes (natif et managé)
 Assemblys mixtes sont capables de contenir des instructions machine non managées et des instructions MSIL. Cela leur permet d’appeler et d’être appelé par les composants de .NET, tout en conservant la compatibilité avec les composants qui ne sont pas entièrement gérés. À l’aide d’assemblys mixtes, les développeurs peuvent créer des applications à l’aide d’un mélange de fonctionnalités managées et non managées. Assemblys mixtes sont donc la solution idéale pour la migration d’applications Visual C++ existantes vers la plateforme .NET.  
@@ -69,7 +64,7 @@ Assemblys mixtes sont capables de contenir des instructions machine non managée
  [Guide pratique pour créer une application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT](../dotnet/create-a-partially-trusted-application.md)  
  Explique comment créer une application partiellement approuvée de Common Language Runtime à l’aide de Visual C++ en supprimant la dépendance vis-à-vis de msvcm90.dll.  
   
- Pour plus d’informations sur les instructions de codage pour les assemblys mixtes, consultez l’article MSDN « Une vue d’ensemble de Managed/Unmanaged interopérabilité du Code » à [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Pour plus d’informations sur les instructions de codage pour les assemblys mixtes, consultez l’article MSDN « Une vue d’ensemble de Managed/Unmanaged interopérabilité du Code » à [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)

@@ -1,12 +1,9 @@
 ---
-title: CBulkRowset::MoveToBookmark | Microsoft Docs
-ms.custom: 
+title: CBulkRowset::MoveToBookmark | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBulkRowset<TAccessor>::MoveToBookmark
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveToBookmark method
 ms.assetid: 76aab025-819e-4ecd-ae0a-d8d3fb2d2099
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07703acbe483f30c2d458f481b7ff301c937d6d4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4b1911fe170262e65ef06e65649f837a0b723d05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
 Extrait la ligne marquée par un signet ou la ligne à l’offset spécifié (`lSkip`) à partir de ce signet.  
@@ -54,7 +49,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 ## <a name="return-value"></a>Valeur de retour  
  Consultez [IRowset::GetData](https://msdn.microsoft.com/en-us/library/ms716988.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

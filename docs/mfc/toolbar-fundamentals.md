@@ -1,13 +1,10 @@
 ---
-title: "Notions de base de barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Notions de base de barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-fundamentals"></a>Notions de base de barre d'outils
 Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter une barre d’outils par défaut pour votre application en sélectionnant une option dans l’Assistant Application. Les sujets abordés sont les suivantes :  
@@ -52,14 +47,14 @@ Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter 
   
 -   [Plusieurs barres d’outils](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a>L’Option de barre d’outils Assistant Application  
+##  <a name="_core_the_appwizard_toolbar_option"></a> L’Option de barre d’outils Assistant Application  
  Pour obtenir une seule barre d’outils avec les boutons par défaut, sélectionnez l’option de la barre d’outils ancrage Standard dans la page fonctionnalités de l’Interface utilisateur. Cela ajoute du code à votre application qui :  
   
 -   Crée l’objet de barre d’outils.  
   
 -   Gère la barre d’outils, et notamment la possibilité pour ancrer ou faire flotter.  
   
-##  <a name="_core_the_toolbar_in_code"></a>La barre d’outils dans le Code  
+##  <a name="_core_the_toolbar_in_code"></a> La barre d’outils dans le Code  
  La barre d’outils est un [CToolBar](../mfc/reference/ctoolbar-class.md) objet déclaré comme un membre de données de votre application **CMainFrame** classe. En d’autres termes, l’objet de barre d’outils est incorporé dans l’objet de fenêtre frame principale. Cela signifie que MFC crée la barre d’outils lorsqu’il crée la fenêtre frame et détruit la barre d’outils lorsqu’il détruit la fenêtre frame. La déclaration de classe partielle suivante, pour une application d’interface (multidocument MDI) document plusieurs, présente les membres de données pour une barre d’outils incorporée et une barre d’état incorporée. Il montre également la substitution de la `OnCreate` fonction membre.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
@@ -77,7 +72,7 @@ Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter 
   
  L’ancrage, flottant et outil conseils appels sont facultatifs. Vous pouvez supprimer des lignes à partir de `OnCreate` si vous préférez. Le résultat est une barre d’outils reste fixe, flottante ou re-Impossible d’et ne peut pas afficher les info-bulles.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a>Modification de la ressource de barre d’outils  
+##  <a name="_core_editing_the_toolbar_resource"></a> Modification de la ressource de barre d’outils  
  La barre d’outils par défaut que vous obtenez avec l’Assistant Application est basée sur un **RT_TOOLBAR** ressource personnalisée, introduite dans la version 4.0 de MFC. Vous pouvez modifier cette ressource avec la [éditeur de barre d’outils](../windows/toolbar-editor.md). L’éditeur vous permet de facilement ajouter, supprimer et réorganiser les boutons. Il contienne un éditeur graphique pour les boutons qui sont très similaires à l’éditeur graphique en général dans Visual C++. Si vous avez modifié des barres d’outils dans les versions précédentes de Visual C++, vous trouverez la tâche beaucoup plus facile maintenant.  
   
  Pour vous connecter à un bouton de barre d’outils à une commande, attribuez au bouton un ID de commande, tel que `ID_MYCOMMAND`. Spécifiez l’ID de commande dans la page de propriétés du bouton dans l’éditeur de la barre d’outils. Puis créez une fonction de gestionnaire pour la commande (consultez [mappage de Messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md) pour plus d’informations).  
@@ -86,7 +81,7 @@ Cet article décrit l’implémentation MFC de base qui vous permet d’ajouter 
   
  Pour plus d’informations sur l’utilisation de l’éditeur de la barre d’outils, consultez [barre d’outils Éditeur](../windows/toolbar-editor.md).  
   
-##  <a name="_core_multiple_toolbars"></a>Plusieurs barres d’outils  
+##  <a name="_core_multiple_toolbars"></a> Plusieurs barres d’outils  
  L’Assistant Application fournit une barre d’outils par défaut. Si vous avez besoin de plusieurs barres d’outils dans votre application, vous pouvez modéliser votre code pour les barres d’outils supplémentaires en fonction du code généré par l’Assistant pour la barre d’outils par défaut.  
   
  Si vous souhaitez afficher une barre d’outils à la suite d’une commande, vous devez :  

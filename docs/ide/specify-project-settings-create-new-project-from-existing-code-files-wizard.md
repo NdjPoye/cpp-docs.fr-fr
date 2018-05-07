@@ -1,13 +1,10 @@
 ---
-title: "Spécifier les paramètres de projet, créez le projet à partir de l’Assistant de fichiers de Code existants | Documents Microsoft"
-ms.custom: 
+title: Spécifier les paramètres de projet, créez le projet à partir de l’Assistant de fichiers de Code existants | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.appsettings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Spécifier les paramètres du projet, Assistant Créer un projet à partir de fichiers de code existants
 Utilisez cette page de l’Assistant créer un projet à partir de fichiers de Code existants pour spécifier :  
@@ -37,7 +32,7 @@ Utilisez cette page de l’Assistant créer un projet à partir de fichiers de C
 ## <a name="task-list"></a>Liste des tâches  
  [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## <a name="uielement-list"></a>Liste UIElement  
+## <a name="uielement-list"></a>Liste des éléments d’interface  
  **Utilisez Visual Studio**  
  Spécifie l’utilisation des outils de génération qui sont inclus dans Visual Studio pour générer le nouveau projet. Cette option est activée par défaut.  
   

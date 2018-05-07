@@ -1,13 +1,10 @@
 ---
 title: Utilisation de CImageList | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CImageList
 dev_langs:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053e670b5a6d932c50e2f967ee38cf9191710ff4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dd30b21b1ec635c6d5b5f2f5c6c6d9eb6fc3fa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cimagelist"></a>Utilisation de CImageList
 Une liste d’images, représentée par la classe [CImageList](../mfc/reference/cimagelist-class.md), est une collection d’images de même taille, chacun d’eux peut être référencé par son index. Listes d’images sont utilisées pour gérer efficacement les grands ensembles d’icônes ou de bitmaps. Listes d’images pas eux-mêmes sont des contrôles, car ils ne sont pas windows ; Toutefois, ils sont utilisés avec différents types de contrôles, y compris les contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)), contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) et les contrôles de tabulation ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
   
- Toutes les images dans une liste d’images sont contenues dans une seule grande bitmap au format de l’appareil à l’écran. Une liste d’images peut-être également inclure une image bitmap monochrome contenant des masques utilisés pour dessiner des images en toute transparence (style d’icône). `CImageList`Fournit des fonctions membres qui vous permettent de dessiner des images, créer et détruire des listes d’images, ajouter et supprimer des images, remplacer les images, fusionner des images et faire glisser des images.  
+ Toutes les images dans une liste d’images sont contenues dans une seule grande bitmap au format de l’appareil à l’écran. Une liste d’images peut-être également inclure une image bitmap monochrome contenant des masques utilisés pour dessiner des images en toute transparence (style d’icône). `CImageList` Fournit des fonctions membres qui vous permettent de dessiner des images, créer et détruire des listes d’images, ajouter et supprimer des images, remplacer les images, fusionner des images et faire glisser des images.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  
   

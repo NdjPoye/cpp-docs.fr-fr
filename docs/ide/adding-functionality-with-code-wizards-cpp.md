@@ -1,13 +1,10 @@
 ---
-title: "Ajout de fonctionnalités à l’aide des Assistants de Code (C++) | Documents Microsoft"
-ms.custom: 
+title: Ajout de fonctionnalités à l’aide des Assistants de Code (C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27aeb10a58c828b6503ce96ddaadf138c258f27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités avec les Assistants Code (C++)
 Une fois que vous avez créé un projet, vous devez modifier ou ajouter des fonctionnalités. Ces tâches comprennent la création de nouvelles classes, ajouter de nouvelles fonctions membres et variables, ajout Automation et méthodes. Les Assistants code sont conçus pour vous permettre d’effectuer toutes ces tâches.  

@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 Une des utilisations plus puissantes de contrôles ActiveX est la liaison de données, ce qui permet une propriété du contrôle à lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle notifie la base de données et les demandes que le champ d’enregistrement est mis à jour. La base de données puis vous avertit que le contrôle de la réussite ou l’échec de la demande.  
   
  Cet article traite du côté du contrôle de votre tâche. Mise en œuvre les interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. Comment gérer les interactions de la base de données dans votre conteneur est dépasse le cadre de cette documentation. Comment vous préparez le contrôle de liaison de données est expliqué dans le reste de cet article.  
   
- ![Diagramme conceptuel de des données &#45; contrôle lié](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Diagramme conceptuel d’une donnée&#45;contrôle lié aux](../mfc/media/vc374v1.gif "vc374v1")  
 Diagramme conceptuel d’un contrôle lié aux données  
   
  La `COleControl` classe fournit deux fonctions membres qui implémentent du processus de liaison de données. La première fonction [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), est utilisé pour demander l’autorisation de modifier la valeur de propriété. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la deuxième fonction est appelée une fois que la valeur de propriété a été modifiée.  
@@ -51,7 +46,7 @@ Diagramme conceptuel d’un contrôle lié aux données
   
 -   [Création d’une méthode Get/Set pouvant être liées](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Création d’une propriété Stock  
+##  <a name="vchowcreatingbindablestockproperty"></a> Création d’une propriété Stock  
  Il est possible de créer une propriété stock lié aux données, même s’il est probable que vous pouvez un [méthode get/set peut être liée](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Diagramme conceptuel d’un contrôle lié aux données
   
  Vous pouvez ensuite générer le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, la **champ de données** et **Source de données** propriétés a été ajoutées et vous pouvez maintenant sélectionner une source de données et le champ à afficher dans le contrôle.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Création d’une méthode Get/Set pouvant être liées  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Création d’une méthode Get/Set pouvant être liées  
  En plus d’une propriété get/set (méthode), vous pouvez également créer un [propriété stock peut être liée](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

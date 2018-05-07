@@ -1,12 +1,9 @@
 ---
-title: "marshal_context :: ~ marshal_context | Documents Microsoft"
-ms.custom: 
+title: 'marshal_context :: ~ marshal_context | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshal_context::~marshal_context
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 42af11d58804a000e630d916cd5887c5005aa955
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a6cb7ed3c7b1ee5b28c4943d83b6a8ca6166b6d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
 Détruit un objet `marshal_context`.  
@@ -46,7 +41,7 @@ Détruit un objet `marshal_context`.
   
  Suppression d’un `marshal_context` objet invalide les données converties par ce contexte. Si vous souhaitez conserver vos données après un `marshal_context` objet est détruit, vous devez copier manuellement les données à une variable qui est conservés.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Fichier d’en-tête :** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, ou \<msclr\marshal_atl.h >  
   
  **Namespace :** msclr::interop  

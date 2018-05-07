@@ -1,12 +1,9 @@
 ---
 title: CBookmark, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CBookmark
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CBookmark class
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b5c0f5f7a2af7c5b744fcad31ae6901988e92b9e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c14fde6fb07a35ef9e2955ce61f991bede6b11a7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 Contient une valeur de signet dans sa mémoire tampon.  
@@ -64,12 +59,12 @@ class CBookmark< 0 > : public CBookmarkBase
   
 |||  
 |-|-|  
-|[operator =](../../data/oledb/cbookmark-operator-equal.md)|Assigne un `CBookmark` classe vers un autre.|  
+|[opérateur =](../../data/oledb/cbookmark-operator-equal.md)|Assigne un `CBookmark` classe vers un autre.|  
   
 ## <a name="remarks"></a>Notes  
  **CBookmark\<0 >** est une spécialisation de modèle de `CBookmark`; sa mémoire tampon est créé dynamiquement au moment de l’exécution.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

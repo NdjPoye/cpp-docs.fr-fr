@@ -1,12 +1,9 @@
 ---
 title: IRowsetInfoImpl::GetSpecification | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetInfoImpl::GetSpecification
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetSpecification method
 ms.assetid: 8e14289d-9cca-4df7-a9e0-f4ef03c61e30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d740431452dd37de9cd361e524b45d99a6325f3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d46b2adcbe6d1e3c49699bf8ecfceff0ec8dfd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimplgetspecification"></a>IRowsetInfoImpl::GetSpecification
 Retourne un pointeur d’interface sur l’objet (commande ou session) qui a créé cet ensemble de lignes.  
@@ -48,7 +43,7 @@ Retourne un pointeur d’interface sur l’objet (commande ou session) qui a cr�
 ## <a name="remarks"></a>Notes  
  Utilisez cette méthode avec [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer les propriétés de l’objet de source de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

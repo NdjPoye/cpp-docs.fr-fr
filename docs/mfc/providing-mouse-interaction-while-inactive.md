@@ -1,29 +1,24 @@
 ---
-title: "Interaction souris pendant l’inactivité | Documents Microsoft"
-ms.custom: 
+title: Interaction souris pendant l’inactivité | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf1ea1958d6a6381bbe1c6e7d3db26f5f5b7c17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Prise en charge de l'interaction souris pendant l'inactivité
 Si votre contrôle n’est pas activé immédiatement, vous souhaiterez à traiter `WM_SETCURSOR` et `WM_MOUSEMOVE` des messages, même si le contrôle n’a pas de fenêtre. Cela peut être accompli en activant `COleControl`d’implémentation de la `IPointerInactive` interface, qui est désactivée par défaut. (Consultez la *ActiveX SDK* pour obtenir une description de cette interface.) Pour l’activer, vous devez inclure le `pointerInactive` indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

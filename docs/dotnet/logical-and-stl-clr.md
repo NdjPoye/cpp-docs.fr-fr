@@ -1,12 +1,9 @@
 ---
 title: logical_and (STL/CLR) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::logical_and
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - logical_and function [STL/CLR]
 ms.assetid: ae103802-11e0-4060-a4f3-4f6fdc209e7c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72f14aca5c4c2649475482cb8417e23ca2eae35c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 La classe de modèle décrit un functor que, lorsqu’elle est appelée, retourne true uniquement si le premier argument et le deuxième test en tant que la valeur true. Vous l’utilisez spécifier un objet de fonction en termes de son type d’argument.  
@@ -127,7 +122,7 @@ int main()
 1 0  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/fonctionnel >  
   
  **Namespace :** cliext  

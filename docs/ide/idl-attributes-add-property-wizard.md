@@ -1,29 +1,24 @@
 ---
-title: "Attributs IDL, Assistant Ajout de propriété | Documents Microsoft"
-ms.custom: 
+title: Attributs IDL, Assistant Ajout de propriété | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
 dev_langs:
 - C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Attributs IDL, Assistant Ajout de propriété
 Utilisez cette page de l’Assistant Ajout de propriété pour spécifier les paramètres interface definition language (IDL) pour la propriété.  
@@ -49,7 +44,7 @@ Utilisez cette page de l’Assistant Ajout de propriété pour spécifier les pa
 |**defaultcollelem**|Indique que la propriété est une fonction d’accesseur pour un élément de la collection par défaut. Consultez [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) dans les *référence MIDL*.|  
 |**nonbrowsable**|Un membre d’interface ou une dispinterface ne doit pas être affiché dans un navigateur de propriétés des balises. Consultez [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) dans les *référence MIDL*.|  
 |**requestedit**|Indique que la propriété prend en charge la **OnRequestEdit** notification voir [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) dans les *référence MIDL*. Pour l’implémentation de la propriété stock, cette option a la valeur par défaut et n’est pas modifiable.|  
-|**source**|Indique qu’un membre de la propriété est une source d’événements. Consultez [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) dans les *référence MIDL*.|  
+|**Source**|Indique qu’un membre de la propriété est une source d’événements. Consultez [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) dans les *référence MIDL*.|  
 |**hidden**|Indique que la propriété existe mais qu’il ne doit pas être affichée dans un navigateur orienté utilisateur. Consultez [masqué](http://msdn.microsoft.com/library/windows/desktop/aa366861) dans les *référence MIDL*.|  
 |**restricted**|Spécifie que la propriété ne peut pas être appelée arbitrairement. Consultez [restreint](http://msdn.microsoft.com/library/windows/desktop/aa367157) dans les *référence MIDL*.|  
 |`local`|Spécifie au compilateur MIDL que la propriété n’est pas distante. Consultez [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) dans les *référence MIDL*.|  

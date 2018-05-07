@@ -1,30 +1,25 @@
 ---
-title: "Contrôles ActiveX MFC : Ajout de propriétés personnalisées | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Ajout de propriétés personnalisées | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
 Propriétés personnalisées la différence des propriétés stock de propriétés personnalisées ne sont pas déjà implémentées par la `COleControl` classe. Une propriété personnalisée est utilisée pour exposer un état ou une apparence d’un contrôle ActiveX à un programmeur utilisant le contrôle.  
@@ -53,7 +48,7 @@ Propriétés personnalisées la différence des propriétés stock de propriét�
   
      Implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrée (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs via une seule propriété de votre contrôle. Pour cette implémentation, la macro d’entrée de la table de dispatch est `DISP_PROPERTY_PARAM`. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrable](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : rubriques avancées.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> À l’aide de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée  
  La procédure suivante illustre l’ajout d’une propriété personnalisée, CircleOffset, qui utilise l’implémentation de méthodes Get/Set. La propriété personnalisée CircleOffset permet à l’utilisateur du contrôle décaler le cercle à partir du centre du rectangle englobant du contrôle. La procédure d’ajout de propriétés personnalisées avec une implémentation d’un autre que les méthodes Get/Set est très similaire.  
   
  Cette procédure peut également être utilisée pour ajouter d’autres propriétés personnalisées que vous souhaitez. Remplacez le nom de votre propriété personnalisée pour les paramètres et le nom de la propriété CircleOffset.  
@@ -80,7 +75,7 @@ Propriétés personnalisées la différence des propriétés stock de propriét�
   
 9. Cliquez sur **Terminer**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Ajouter un Assistant de propriété est modifiée pour les propriétés personnalisées  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Ajouter un Assistant de propriété est modifiée pour les propriétés personnalisées  
  Lorsque vous ajoutez la propriété personnalisée CircleOffset, l’Assistant Ajout de propriété apporte des modifications à l’en-tête (. (H) et l’implémentation (. (CPP) de la classe du contrôle.  
   
  Les lignes suivantes sont ajoutées à la. Fichier H pour déclarer deux fonctions appelées `GetCircleOffset` et `SetCircleOffset`:  

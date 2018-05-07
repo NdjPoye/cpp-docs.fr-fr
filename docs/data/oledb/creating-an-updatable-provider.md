@@ -1,12 +1,9 @@
 ---
-title: "Création d’un fournisseur actualisable | Documents Microsoft"
-ms.custom: 
+title: Création d’un fournisseur actualisable | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Création d'un fournisseur actualisable
 Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qui peuvent mettre à jour (modifier) le magasin de données. Cette rubrique explique comment créer des fournisseurs de mettre à jour à l’aide de modèles OLE DB.  
@@ -74,14 +69,14 @@ Visual C++ prend en charge les fournisseurs actualisables ou des fournisseurs qu
     > [!NOTE]
     >  Vous devez supprimer la `IRowsetChangeImpl` ligne à partir de votre chaîne d’héritage. Cette unique exception à la directive mentionnée doit inclure le code de `IRowsetChangeImpl`.  
   
-2.  Ajoutez le code suivant à votre mappage COM (**BEGIN_COM_MAP... END_COM_MAP**):  
+2.  Ajoutez le code suivant à votre mappage COM (**BEGIN_COM_MAP... END_COM_MAP**) :  
   
     |Si vous implémentez|Ajouter au mappage COM|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Dans votre commande, ajoutez le code suivant à votre carte de jeu de propriétés (**BEGIN_PROPSET_MAP... END_PROPSET_MAP**):  
+3.  Dans votre commande, ajoutez le code suivant à votre carte de jeu de propriétés (**BEGIN_PROPSET_MAP... END_PROPSET_MAP**) :  
   
     |Si vous implémentez|Ajoutez au mappage des propriétés|  
     |----------------------|-----------------------------|  
@@ -414,7 +409,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Indicateurs de colonne  
- Si vous prenez en charge les valeurs par défaut sur les colonnes, vous devez définir à l’aide de métadonnées dans le **\<***classe de fournisseur***>SchemaRowset** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Si vous prenez en charge les valeurs par défaut sur les colonnes, vous devez définir à l’aide de métadonnées dans le **\<***classe de fournisseur***>SchemaRowset** classe. Définissez *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Vous pouvez définir les indicateurs de colonnes, qui sont spécifiées à l’aide de la **DBCOLUMNFLAGS** type énuméré. Les indicateurs de colonnes décrivent les caractéristiques de la colonne.  
   

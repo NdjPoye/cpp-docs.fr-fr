@@ -1,13 +1,10 @@
 ---
-title: "TN023 : Ressources MFC Standard | Documents Microsoft"
-ms.custom: 
+title: 'TN023 : Ressources MFC Standard | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.resources
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fded011fda52dfde46804b03699dc93469e5e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023 : ressources MFC standard
 Cette note décrit les ressources standard fournies et requises par la bibliothèque MFC.  
@@ -84,7 +79,7 @@ Cette note décrit les ressources standard fournies et requises par la biblioth�
 >  Les fichiers de ressources .rc contiennent une ressource `TEXTINCLUDE` particulière qui vous empêche d'écraser par erreur les fichiers .rc standard.  
   
 ### <a name="customizing-standard-framework-resources"></a>Personnalisation des ressources framework standard  
- Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l’élément de modification "Compile-Time Directives". Exemple :  
+ Les ressources framework standard sont généralement incluses dans une application avec la commande #include dans le fichier de ressources d'une application. AppWizard génère un fichier de ressources. Ce fichier contient les ressources framework standard adéquates, en fonction des options AppWizard que vous sélectionnez. Vous pouvez examiner, ajouter ou supprimer les ressources incluses en modifiant les directives au moment de la compilation. Pour ce faire, ouvrez le **ressource** menu et sélectionnez **Set Includes**. Recherchez l’élément de modification "Compile-Time Directives". Par exemple :  
   
 ```  
 #include "afxres.rc"  

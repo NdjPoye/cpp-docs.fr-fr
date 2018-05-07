@@ -1,12 +1,9 @@
 ---
-title: IDBSchemaRowsetImpl::CheckRestrictions | Microsoft Docs
-ms.custom: 
+title: IDBSchemaRowsetImpl::CheckRestrictions | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CheckRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CheckRestrictions method
 ms.assetid: 3c9d77d2-0e4b-48fa-80db-d735da19f1cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 44e661bc782af4a162936caae7c8c1be06585647
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c951c892a2e6d875fb1085b1d3208d43938347c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplcheckrestrictions"></a>IDBSchemaRowsetImpl::CheckRestrictions
 Vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.  
@@ -57,10 +52,10 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
   
  Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) dans les *de référence du programmeur OLE DB* dans le Kit de développement logiciel Windows.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  
- [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [IDBSchemaRowsetImpl (classe)](../../data/oledb/idbschemarowsetimpl-class.md)   
  [Membres IDBSchemaRowsetImpl (classe)](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

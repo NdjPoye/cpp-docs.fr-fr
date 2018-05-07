@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Comment Recordsets sélection d’enregistrements (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Comment Recordsets sélection d’enregistrements (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset : sélection d'enregistrements par les recordsets (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -44,7 +39,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Jeux d’enregistrements de sélectionner des enregistrements à partir d’une source de données via un pilote ODBC en envoyant des instructions SQL au pilote. L’instruction SQL envoyée dépend de votre conception et ouvrez votre classe de recordset.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>Vos Options de sélection des enregistrements  
+##  <a name="_core_your_options_in_selecting_records"></a> Vos Options de sélection des enregistrements  
  Le tableau suivant répertorie les options de sélection des enregistrements.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Quand et comment vous pouvez affecter un jeu d’enregistrements  
@@ -59,7 +54,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 
 | Appelez **Requery** pour actualiser le jeu d’enregistrements avec les valeurs les plus récentes sur la source de données | Spécifiez les nouveaux paramètres, filtrer ou trier. Consultez [Recordset : actualisation d’un jeu d’enregistrements (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Comment un Recordset construit son instruction SQL  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Comment un Recordset construit son instruction SQL  
  Lorsque vous appelez l’objet recordset [ouvrir](../../mfc/reference/crecordset-class.md#open) fonction membre, **ouvrir** construit une instruction SQL à l’aide de tout ou partie des éléments suivants :  
   
 -   Le **lpszSQL** paramètre passé à **ouvrir**. Si ce n’est pas **NULL**, ce paramètre spécifie une chaîne SQL personnalisée ou une partie d’un. La structure analyse la chaîne. Si la chaîne SQL **sélectionnez** instruction ou une application ODBC **appeler** instruction, le framework utilise la chaîne comme instruction SQL du recordset. Si la chaîne ne commence pas par « SELECT » ou « {CALL », l’infrastructure utilise ce qui est fourni pour construire SQL **FROM** clause.  
@@ -85,7 +80,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Vous pouvez utiliser une combinaison de ces techniques pour ouvrir [tables](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) et pour construire une requête basée sur un [jointure](../../data/odbc/recordset-performing-a-join-odbc.md) de plusieurs tables. Avec une personnalisation supplémentaire, vous pouvez appeler [requêtes prédéfinies](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (procédures stockées), sélectionnez les colonnes ne pas connus au moment du design de la table et [lier](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) les champs du recordset, ou vous peuvent effectuer la plupart des autres tâches d’accès aux données. Tâches que vous ne pouvez pas effectuer en personnalisant les recordsets peuvent toujours être accomplies en [appel de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) ou directement en exécutant les instructions SQL avec [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Personnalisation de la sélection  
+##  <a name="_core_customizing_the_selection"></a> Personnalisation de la sélection  
  En plus de fournir un filtre, un ordre de tri ou des paramètres, vous pouvez effectuer les actions suivantes pour personnaliser la sélection du recordset :  
   
 -   Passer une chaîne SQL personnalisée dans **lpszSQL** lorsque vous appelez [ouvrir](../../mfc/reference/crecordset-class.md#open) pour l’ensemble d’enregistrements. Tout ce que vous passez dans **lpsqSQL** est prioritaire sur ce que le [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) fonction membre retourne.  

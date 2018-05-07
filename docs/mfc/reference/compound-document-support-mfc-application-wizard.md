@@ -1,29 +1,24 @@
 ---
-title: "Prise en charge de Document, Assistant Application MFC composés | Documents Microsoft"
-ms.custom: 
+title: Prise en charge de Document, Assistant Application MFC composés | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Prise en charge des documents composés, Assistant Application MFC
 Dans cette page de l’Assistant Application MFC, indiquer à quel niveau votre application fournit la prise en charge des documents composés et actifs. Votre application doit prendre en charge l’architecture document/vue pour prendre en charge des documents composés et les modèles de document.  
@@ -40,7 +35,7 @@ Dans cette page de l’Assistant Application MFC, indiquer à quel niveau votre 
 |Option|Description|  
 |------------|-----------------|  
 |**Aucun**|N’indique aucune prise en charge pour la liaison et incorporation d’objets (OLE). Par défaut, l’Assistant application crée une application sans prise en charge ActiveX.|  
-|**Conteneur**|Contient des objets liés et incorporés.|  
+|**conteneur**|Contient des objets liés et incorporés.|  
 |**Mini-serveur**|Indique l’application peut créer et gérer des objets de document composé. Notez que les mini-serveurs ne peut pas s’exécuter en mode autonome et prennent uniquement en charge les éléments incorporés.|  
 |**Serveur complet**|Indique l’application peut créer et gérer des objets de document composé. Serveurs complets sont en mesure d’exécuter en mode autonome et la prise en charge les deux éléments liés et incorporés.|  
 |**Conteneur/serveur complet**|Indique que l’application peut être un conteneur et un serveur. Un conteneur est une application qui peut incorporer des éléments liés ou incorporés dans ses propres documents. Un serveur est une application qui peut créer des éléments Automation pour une utilisation par les applications de conteneur.|  

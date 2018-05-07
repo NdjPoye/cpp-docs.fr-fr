@@ -1,13 +1,10 @@
 ---
 title: Utilisation de CToolTipCtrl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolTipCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82785d29d57fcdbd64addbe69dcc90ed3d2c9829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b08f2dfcff0c4df17def326e3a047507bb2a3c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctooltipctrl"></a>Utilisation de CToolTipCtrl
 Le [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe encapsule les fonctionnalités d’un contrôle d’info-bulle, une petite fenêtre contextuelle qui affiche une ligne unique de texte qui décrit le rôle d’un outil dans une application. Une info-bulle est masquée à la plupart du temps, qui apparaissent uniquement lorsque l’utilisateur place le curseur sur un outil et il quitte ensuite pendant environ une demi-seconde. L’info-bulle s’affiche à proximité du curseur et disparaît quand l’utilisateur clique sur un bouton de la souris ou déplace le curseur de l’outil.  

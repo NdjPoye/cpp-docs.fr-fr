@@ -1,12 +1,9 @@
 ---
 title: Classe de CResourceException | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CResourceException
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2e17b859042a5712a998eaeebe9f16f81c91200
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6fdbfb29b00eaac40b4da2b78753df6a0596764f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cresourceexception-class"></a>Classe de CResourceException
 Générée lorsque Windows ne peut pas trouver ou allouer une ressource demandée.  
@@ -60,10 +55,10 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="cresourceexception"></a>CResourceException::CResourceException  
+##  <a name="cresourceexception"></a>  CResourceException::CResourceException  
  Construit un objet `CResourceException`.  
   
 ```  

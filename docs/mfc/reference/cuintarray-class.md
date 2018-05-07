@@ -1,12 +1,9 @@
 ---
 title: Classe de CUIntArray | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>Classe de CUIntArray
 Prend en charge des tableaux d'entiers non signés.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Notes  
  Entier non signé, ou **UINT**, diffère de mots et de mots doubles dans qui la taille physique d’un **UINT** peut changer en fonction de la cible de système d’exploitation. A **UINT** est la même taille qu’un mot double.  
   
- `CUIntArray`incorpore la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objet. Si vous avez besoin d’un vidage d’éléments de l’entier non signé individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur. Tableaux d’entiers non signés ne peut pas être sérialisés.  
+ `CUIntArray` incorpore la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objet. Si vous avez besoin d’un vidage d’éléments de l’entier non signé individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur. Tableaux d’entiers non signés ne peut pas être sérialisés.  
   
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.  
@@ -130,7 +125,7 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

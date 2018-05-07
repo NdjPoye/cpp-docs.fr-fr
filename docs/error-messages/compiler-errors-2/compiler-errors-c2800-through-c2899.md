@@ -1,12 +1,9 @@
 ---
-title: "Erreurs du compilateur C2800 à C2899 | Documents Microsoft"
-ms.custom: 
+title: Erreurs du compilateur C2800 à C2899 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Erreurs du compilateur C2800 à C2899
 
@@ -88,7 +83,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2812](compiler-error-c2812.md)|#import n’est pas pris en charge avec/clr : pure et/CLR : safe|
 |[Erreur du compilateur C2813](compiler-error-c2813.md)|#import n'est pas pris en charge avec /MP|
 |[Erreur du compilateur C2814](compiler-error-c2814.md)|'*membre*' : un type natif ne peut pas être imbriqué dans un type managé/WinRT '*classe*'|
-|[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void *', mais '*type *' a été utilisé|
+|[Erreur du compilateur C2815](compiler-error-c2815.md)|'operator delete' : le premier paramètre formel doit être ' void *', mais '* type *' a été utilisé|
 |C2816 d’erreur du compilateur|Obsolète.|
 |[Erreur du compilateur C2817](compiler-error-c2817.md)|type de retour de 'operator delete' doit être 'void'|
 |[Erreur du compilateur C2818](compiler-error-c2818.md)|application de surchargé 'operator ->' est récurrente à travers le type '*classe*'|

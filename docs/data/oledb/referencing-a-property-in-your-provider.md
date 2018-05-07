@@ -1,12 +1,9 @@
 ---
-title: "Référencement d’une propriété dans votre fournisseur | Documents Microsoft"
-ms.custom: 
+title: Référencement d’une propriété dans votre fournisseur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,25 +12,23 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a034c1f925a5b5d422be234118782b283a3d74c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 36965ac33fc0a563951c0c0dfdce60d9d0e4f55b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Référencement d'une propriété dans votre fournisseur
 Permet de trouver le groupe de propriétés et l’ID de propriété pour la propriété que vous voulez. Pour plus d’informations, consultez [propriétés OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) dans les *de référence du programmeur OLE DB*.  
   
  L’exemple suivant suppose que vous tentez d’obtenir une propriété à partir de l’ensemble de lignes. Le code pour l’utilisation de la session ou la commande est similaire, mais utilise une autre interface.  
   
- Créer un [CDBPropSet](../../data/oledb/cdbpropset-class.md) utilisant le groupe de propriétés comme paramètre au constructeur de l’objet. Exemple :  
+ Créer un [CDBPropSet](../../data/oledb/cdbpropset-class.md) utilisant le groupe de propriétés comme paramètre au constructeur de l’objet. Par exemple :  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  

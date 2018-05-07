@@ -1,12 +1,9 @@
 ---
 title: Classe de CButton | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CButton
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbutton-class"></a>Classe de CButton
 Fournit les fonctionnalités des contrôles bouton Windows.  
@@ -165,7 +160,7 @@ class CButton : public CWnd
   
  Chaque entrée de table des messages prend la forme suivante :  
   
- **ON_**Notification **(**`id`, `memberFxn` **)**  
+ **ON_** Notification **(**`id`, `memberFxn` **)**  
   
  où `id` Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer la notification.  
   
@@ -196,7 +191,7 @@ class CButton : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="cbutton"></a>CButton::CButton  
+##  <a name="cbutton"></a>  CButton::CButton  
  Construit un objet `CButton`.  
   
 ```  
@@ -206,7 +201,7 @@ CButton();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
-##  <a name="create"></a>CButton::Create  
+##  <a name="create"></a>  CButton::Create  
  Crée le contrôle de bouton Windows et l’attache à le `CButton` objet.  
   
 ```  
@@ -235,7 +230,7 @@ virtual BOOL Create(
  Spécifie l’ID. du contrôle de bouton  
   
 ### <a name="return-value"></a>Valeur de retour  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Vous construisez un `CButton` objet en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de bouton Windows et l’attache à le `CButton` objet.  
@@ -257,7 +252,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CButton::DrawItem  
+##  <a name="drawitem"></a>  CButton::DrawItem  
  Appelé par l’infrastructure quand un aspect visuel d’un bouton owner-drawn a changé.  
   
 ```  
@@ -276,7 +271,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
-##  <a name="getbitmap"></a>CButton::GetBitmap  
+##  <a name="getbitmap"></a>  CButton::GetBitmap  
  Appelez cette fonction membre pour obtenir le handle d’une image bitmap, précédemment défini avec [SetBitmap](#setbitmap), qui est associé à un bouton.  
   
 ```  
@@ -289,7 +284,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CButton::GetButtonStyle  
  Récupère des informations sur le style du contrôle bouton.  
   
 ```  
@@ -302,7 +297,7 @@ UINT GetButtonStyle() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="getcheck"></a>CButton::GetCheck  
+##  <a name="getcheck"></a>  CButton::GetCheck  
  Récupère l’état d’activation d’une case d’option ou une case à cocher.  
   
 ```  
@@ -312,7 +307,7 @@ int GetCheck() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de retour à partir d’un contrôle bouton créé avec le **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, ou **BS_3STATE** style est une des valeurs suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|État du bouton est désactivé.|  
 |**BST_CHECKED**|État du bouton est activé.|  
@@ -323,7 +318,7 @@ int GetCheck() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="getcursor"></a>CButton::GetCursor  
+##  <a name="getcursor"></a>  CButton::GetCursor  
  Appelez cette fonction membre pour obtenir le handle d’un curseur défini précédemment avec [SetCursor](#setcursor), qui est associé à un bouton.  
   
 ```  
@@ -336,7 +331,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="geticon"></a>CButton::GetIcon  
+##  <a name="geticon"></a>  CButton::GetIcon  
  Appelez cette fonction membre pour obtenir le descripteur d’une icône définie précédemment avec [SetIcon](#seticon), qui est associé à un bouton.  
   
 ```  
@@ -349,7 +344,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>CButton::GetIdealSize  
+##  <a name="getidealsize"></a>  CButton::GetIdealSize  
  Récupère la taille idéale pour le contrôle bouton.  
   
 ```  
@@ -361,12 +356,12 @@ BOOL GetIdealSize(SIZE* psize);
  Pointeur vers la taille actuelle du bouton.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETIDEALSIZE** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
-##  <a name="getimagelist"></a>CButton::GetImageList  
+##  <a name="getimagelist"></a>  CButton::GetImageList  
  Appelez cette méthode pour obtenir la liste d’images à partir du contrôle de bouton.  
   
 ```  
@@ -378,12 +373,12 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Un pointeur vers la liste d’images de la `CButton` objet.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETIMAGELIST** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
-##  <a name="getnote"></a>CButton::GetNote  
+##  <a name="getnote"></a>  CButton::GetNote  
  Récupère le texte de note associé au contrôle de lien de commande en cours.  
   
 ```  
@@ -404,7 +399,7 @@ BOOL GetNote(
 ### <a name="return-value"></a>Valeur de retour  
  Dans la première surcharge, une [CString](../../atl-mfc-shared/using-cstring.md) objet qui contient le texte de la note associé au contrôle de lien de commande en cours.  
   
- ou  
+ - ou -  
   
  Dans la seconde surcharge, `true` si cette méthode réussit ; sinon, `false`.  
   
@@ -413,7 +408,7 @@ BOOL GetNote(
   
  Cette méthode envoie le [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="getnotelength"></a>CButton::GetNoteLength  
+##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  Récupère la longueur du texte de la note pour le contrôle de lien de commande en cours.  
   
 ```  
@@ -428,7 +423,7 @@ UINT GetNoteLength() const;
   
  Cette méthode envoie le [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="getsplitglyph"></a>CButton::GetSplitGlyph  
+##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  Récupère le glyphe associé avec le contrôle de bouton partagé actuel.  
   
 ```  
@@ -445,7 +440,7 @@ TCHAR GetSplitGlyph() const;
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_GLYPH` indicateur, puis envoie la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message décrit dans le SDK Windows. Retour de la fonction de message, cette méthode récupère le glyphe à partir de la `himlGlyph` membre de la structure.  
   
-##  <a name="getsplitimagelist"></a>CButton::GetSplitImageList  
+##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  Récupère le [liste d’images](../../mfc/reference/cimagelist-class.md) pour le contrôle de bouton partagé actuel.  
   
 ```  
@@ -460,7 +455,7 @@ CImageList* GetSplitImageList() const;
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur, puis envoie la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message décrit dans le SDK Windows. Retour de la fonction de message, cette méthode récupère la liste d’images à partir de la `himlGlyph` membre de la structure.  
   
-##  <a name="getsplitinfo"></a>CButton::GetSplitInfo  
+##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  Récupère les paramètres qui déterminent la manière dont Windows crée le contrôle de bouton partagé actuel.  
   
 ```  
@@ -474,14 +469,14 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 |[out] `pInfo`|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui reçoit des informations sur le contrôle de bouton partagé actuel. L’appelant est responsable de l’allocation de la structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode envoie le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="getsplitsize"></a>CButton::GetSplitSize  
+##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  Récupère le rectangle englobant du composant de liste déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -495,7 +490,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 |[out] `pSize`|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui reçoit la description d’un rectangle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -504,7 +499,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_SIZE` indicateur, puis envoie la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message décrit dans le SDK Windows. Retour de la fonction de message, cette méthode récupère le rectangle englobant de le `size` membre de la structure.  
   
-##  <a name="getsplitstyle"></a>CButton::GetSplitStyle  
+##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  Récupère les styles de bouton de fractionnement qui définissent le contrôle de bouton partagé actuel.  
   
 ```  
@@ -521,7 +516,7 @@ UINT GetSplitStyle() const;
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_STYLE` indicateur, puis envoie la structure dans le [adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message décrit dans le SDK Windows. Retour de la fonction de message, cette méthode récupère les styles de bouton de fractionnement à partir de la `uSplitStyle` membre de la structure.  
   
-##  <a name="getstate"></a>CButton::GetState  
+##  <a name="getstate"></a>  CButton::GetState  
  Récupère l’état d’un contrôle bouton.  
   
 ```  
@@ -531,7 +526,7 @@ UINT GetState() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un champ de bits qui contient la combinaison de valeurs qui indiquent l’état actuel d’un contrôle bouton. Le tableau suivant répertorie les valeurs possibles.  
   
-|État du bouton|Valeur|Description|  
+|État du bouton|Value|Description|  
 |------------------|-----------|-----------------|  
 |`BST_UNCHECKED`|0x0000|L’état initial.|  
 |`BST_CHECKED`|0 x 0001|Le contrôle de bouton est activé.|  
@@ -545,7 +540,7 @@ UINT GetState() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="gettextmargin"></a>CButton::GetTextMargin  
+##  <a name="gettextmargin"></a>  CButton::GetTextMargin  
  Appelez cette méthode pour obtenir la marge de texte de la `CButton` objet.  
   
 ```  
@@ -560,12 +555,12 @@ BOOL GetTextMargin(RECT* pmargin);
  Retourne la marge de texte.  
   
 ### <a name="remarks"></a>Notes  
- Non nul en cas de réussite ; sinon 0.  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_GETTEXTMARGIN** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
-##  <a name="setbitmap"></a>CButton::SetBitmap  
+##  <a name="setbitmap"></a>  CButton::SetBitmap  
  Appelez cette fonction membre pour associer une nouvelle image bitmap avec le bouton.  
   
 ```  
@@ -601,7 +596,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CButton::SetButtonStyle  
  Modifie le style d’un bouton.  
   
 ```  
@@ -623,7 +618,7 @@ void SetButtonStyle(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="setcheck"></a>CButton::SetCheck  
+##  <a name="setcheck"></a>  CButton::SetCheck  
  Active ou désactive la vérification de l’état d’une case d’option ou une case à cocher.  
   
 ```  
@@ -634,7 +629,7 @@ void SetCheck(int nCheck);
  `nCheck`  
  Spécifie l’état d’activation. Ce paramètre peut être une des opérations suivantes :  
   
-|Valeur|Signification|  
+|Value|Signification|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|Définir l’état du bouton de la case à cocher.|  
 |**BST_CHECKED**|Définir l’état activé.|  
@@ -646,7 +641,7 @@ void SetCheck(int nCheck);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="setcursor"></a>CButton::SetCursor  
+##  <a name="setcursor"></a>  CButton::SetCursor  
  Appelez cette fonction membre pour associer un nouveau curseur avec le bouton.  
   
 ```  
@@ -680,7 +675,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
+##  <a name="setdropdownstate"></a>  CButton::SetDropDownState  
  Définit l’état de la liste déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -691,10 +686,10 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true`Pour définir `BST_DROPDOWNPUSHED` état ; sinon, `false`.|  
+|[in] `fDropDown`|`true` Pour définir `BST_DROPDOWNPUSHED` état ; sinon, `false`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Un contrôle bouton partagé a un style de `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON` et se compose d’un bouton et une flèche de déroulement située à sa droite. Pour plus d’informations, consultez [les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb775951). En règle générale, l’état de la liste déroulante est définie lorsque l’utilisateur clique sur la flèche déroulante. Utilisez cette méthode pour définir par programme l’état de la liste déroulante du contrôle. La flèche de déroulement est dessinée grisée pour indiquer l’état.  
@@ -711,7 +706,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
  [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
-##  <a name="setelevationrequired"></a>CButton::SetElevationRequired  
+##  <a name="setelevationrequired"></a>  CButton::SetElevationRequired  
  Définit l’état du contrôle bouton actuel pour `elevation required`, ce qui est nécessaire pour le contrôle afficher une icône avec élévation de privilèges de sécurité.  
   
 ```  
@@ -722,17 +717,17 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true`Pour définir `elevation required` état ; sinon, `false`.|  
+|[in] `fElevationRequired`|`true` Pour définir `elevation required` état ; sinon, `false`.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Si un contrôle de lien de bouton ou la commande requiert l’autorisation de sécurité avec élévation de privilèges pour exécuter une action, la valeur du contrôle `elevation required` état. Par la suite, Windows affiche l’icône de bouclier du contrôle de compte d’utilisateur (UAC) sur le contrôle. Pour plus d’informations, consultez « Contrôle de compte d’utilisateur » à [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Cette méthode envoie le [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, ce qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="seticon"></a>CButton::SetIcon  
+##  <a name="seticon"></a>  CButton::SetIcon  
  Appelez cette fonction membre pour associer une icône de nouveau avec le bouton.  
   
 ```  
@@ -766,7 +761,7 @@ HICON SetIcon(HICON hIcon);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="setimagelist"></a>CButton::SetImageList  
+##  <a name="setimagelist"></a>  CButton::SetImageList  
  Appelez cette méthode pour définir la liste d’images de la `CButton` objet.  
   
 ```  
@@ -783,7 +778,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la **BCM_SETIMAGELIST** d’un message, comme décrit dans la [boutons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section du Kit de développement Windows.  
   
-##  <a name="setnote"></a>CButton::SetNote  
+##  <a name="setnote"></a>  CButton::SetNote  
  Définit le texte de note pour le contrôle de lien de commande en cours.  
   
 ```  
@@ -797,7 +792,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 |[in] `lpszNote`|Pointeur vers une chaîne Unicode qui est définie en tant que texte de la note pour le contrôle de lien de commande.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_COMMANDLINK` ou `BS_DEFCOMMANDLINK`.  
@@ -814,7 +809,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
  [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
-##  <a name="setsplitglyph"></a>CButton::SetSplitGlyph  
+##  <a name="setsplitglyph"></a>  CButton::SetSplitGlyph  
  Associe un glyphe spécifié avec le contrôle de bouton partagé actuel.  
   
 ```  
@@ -828,7 +823,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 |[in] `chGlyph`|Un caractère qui spécifie le glyphe à utiliser en tant que la fractionnement bouton flèche de déroulement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles qui ont le style de bouton `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -837,7 +832,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_GLYPH` indicateur et le `himlGlyph` membre avec le `chGlyph` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="setsplitimagelist"></a>CButton::SetSplitImageList  
+##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  Associe un [liste d’images](../../mfc/reference/cimagelist-class.md) avec le contrôle de bouton partagé actuel.  
   
 ```  
@@ -851,14 +846,14 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 |[in] `pSplitImageList`|Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) objet à affecter pour le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
   
  Cette méthode initialise le `mask` membre un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure avec le `BCSIF_IMAGE` indicateur et le `himlGlyph` membre avec le `pSplitImageList` paramètre, puis envoie la structure dans le [ Adaptées à vos](http://msdn.microsoft.com/library/windows/desktop/bb775969) message qui est décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="setsplitinfo"></a>CButton::SetSplitInfo  
+##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  Spécifie les paramètres qui déterminent la manière dont Windows crée le contrôle de bouton partagé actuel.  
   
 ```  
@@ -872,7 +867,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 |[in] `pInfo`|Pointeur vers un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure qui définit le contrôle de bouton partagé actuel.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -889,7 +884,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
  [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
-##  <a name="setsplitsize"></a>CButton::SetSplitSize  
+##  <a name="setsplitsize"></a>  CButton::SetSplitSize  
  Définit le rectangle englobant du composant de liste déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -903,7 +898,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 |[in] `pSize`|Pointeur vers un [taille](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure qui décrit un rectangle englobant.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -922,7 +917,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
-##  <a name="setsplitstyle"></a>CButton::SetSplitStyle  
+##  <a name="setsplitstyle"></a>  CButton::SetSplitStyle  
  Définit le style du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -936,7 +931,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 |[in] `uSplitStyle`|Combinaison de bits de styles de bouton de fractionnement. Pour plus d’informations, consultez la `uSplitStyle` membre de la [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode uniquement avec les contrôles dont le style de bouton est `BS_SPLITBUTTON` ou `BS_DEFSPLITBUTTON`.  
@@ -955,7 +950,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
  [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
-##  <a name="setstate"></a>CButton::SetState  
+##  <a name="setstate"></a>  CButton::SetState  
  Définit si un contrôle bouton est mis en surbrillance ou non.  
   
 ```  
@@ -974,7 +969,7 @@ void SetState(BOOL bHighlight);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="settextmargin"></a>CButton::SetTextMargin  
+##  <a name="settextmargin"></a>  CButton::SetTextMargin  
  Appelez cette méthode pour définir les marges du texte de la `CButton` objet.  
   
 ```  

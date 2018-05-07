@@ -2,7 +2,7 @@
 title: C4400 des avertissements du compilateur via C4599 | Documents Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 des avertissements du compilateur via C4599
 
@@ -182,7 +181,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ sont unsafe à passer entre le code pure et mixte ou natif.|
 |Avertissement C4413 du compilateur|'classname::member' : membre de référence est initialisé en temporaire qui ne persiste pas après l’arrêt du constructeur|
 |[Avertissement du compilateur (niveau 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*fonction*' : saut de type short vers la fonction converti en near|
-|Avertissement du compilateur (niveau 1) C4415|duplicate __declspec(code_seg('*name*'))|
+|Avertissement du compilateur (niveau 1) C4415|en double __declspec (code_seg ('*nom*'))|
 |Avertissement du compilateur (niveau 1) C4416|__declspec(code_seg(...)) contient une chaîne vide : ignoré|
 |Avertissement du compilateur (niveau 1) C4417|une instanciation explicite du modèle ne peut pas avoir __declspec(code_seg(...)) : ignoré|
 |Avertissement du compilateur (niveau 1) C4418|__declspec(code_seg(...)) ignoré sur un enum|
@@ -227,7 +226,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*' : cette classe a un finaliseur ' ! *finaliseur*' mais pas de destructeur ' ~*dtor*'|
 |[Avertissement (niveau 1, erreur) du compilateur C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*type*' : ne peut pas déterminer le GUID du type. Le programme risque d'échouer au moment de l'exécution.|
 |[Avertissement du compilateur (niveau 4) C4463](compiler-warning-level-4-c4463.md)|dépassement de capacité ; affectation '*valeur*'pour le champ de bits qui peut contenir uniquement des valeurs à partir de'*min_value*'à'*max_value*'|
-|[Avertissement du compilateur (niveau 4) C4464](../../error-messages/compiler-warnings/c4464.md)|chemin include relatif contient '..'|
+|[Avertissement du compilateur (niveau 4) C4464](../../error-messages/compiler-warnings/c4464.md)|chemin include relatif contient '..'|
 |[Avertissement du compilateur (niveau 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de contrôle à virgule flottante ignorés sous /clr|
 |[Avertissement du compilateur (niveau 4) C4471](compiler-warning-level-4-c4471.md)|'*énumération*' : une déclaration anticipée d’une énumération non délimitée doit avoir un type sous-jacent (int pris par défaut)|
 |Avertissement du compilateur (niveau 1) C4472|'*identificateur*' est un enum natif : ajoutez un spécificateur d’accès (private/public) pour déclarer un ' WinRT&#124;gérés ' enum|

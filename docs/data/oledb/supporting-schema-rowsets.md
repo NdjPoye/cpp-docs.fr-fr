@@ -1,12 +1,9 @@
 ---
-title: "Prise en charge des ensembles de lignes de schéma | Documents Microsoft"
-ms.custom: 
+title: Prise en charge des ensembles de lignes de schéma | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 Ensembles de lignes de schéma permettent aux consommateurs d’obtenir des informations sur une banque de données sans connaître sa structure sous-jacente, ou son schéma. Par exemple, un magasin de données peut avoir des tables organisés selon une hiérarchie définie par l’utilisateur, afin qu’il n’y aucun moyen pour vous assurer de la connaissance du schéma à l’exception de par sa lecture. (Un autre exemple, notez que les Assistants Visual C++ utilisent les ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur pour ce faire, objet de session du fournisseur expose des méthodes sur le [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interface. Dans les applications Visual C++, vous utilisez la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe pour implémenter **IDBSchemaRowset**.  
@@ -107,7 +102,7 @@ class CUpdateSessionTRSchemaRowset :
 |-------------------------------|-----------------------|  
 |**TABLE_CATALOG**|0 x 1 (binaire 1)|  
 |**TABLE_SCHEMA**|0 x 2 (binaire 10)|  
-|**TABLE_NAME**|0 x 4 (binaire 100)|  
+|**NOM_TABLE**|0 x 4 (binaire 100)|  
 |**TABLE_TYPE**|0 x 8 (binaire 1000)|  
   
  Ensuite, notez qu’il existe un bit pour chaque restriction. Étant donné que vous souhaitez prendre en charge **TABLE_NAME** uniquement, vous devez retourner 0 x 4 dans la `rgRestrictions` élément. Si vous prenez en charge **TABLE_CATALOG** et **nom_table**, vous devez retourner 0 x 5 (binaire 101).  

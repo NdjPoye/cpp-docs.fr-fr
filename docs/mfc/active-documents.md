@@ -1,13 +1,10 @@
 ---
 title: Documents actifs | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Documents actifs
 Les documents actifs étendent la technologie de document composé OLE. Ces extensions sont fournies sous la forme d'autres interfaces qui gèrent les vues, afin que les objets puissent s'exécuter dans des conteneurs tout en conservant le contrôle de l'affichage et des fonctions d'impression. Ce processus permet d'afficher des documents dans des frames étrangers (tels que le Classeur Microsoft Office ou Microsoft Internet Explorer) et dans des frames natifs (tels que les propres ports de vue du produit).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Un document actif peut créer un ou plusieurs types de [vues](#requirements_for_view_objects) de ses données (par exemple, normal, plan, mise en page et ainsi de suite). Les vues agissent comme des filtres dans lesquels les données peuvent être affichées. Même si le document contient uniquement un type de vue, vous souhaiterez toujours prendre en charge plusieurs vues comme un moyen de prendre en charge les nouvelles fonctionnalités de la fenêtre (par exemple, le **nouvelle fenêtre** élément sur le **fenêtre** menu dans Office applications).  
   
-##  <a name="requirements_for_active_documents"></a>Configuration requise pour les Documents actifs  
+##  <a name="requirements_for_active_documents"></a> Configuration requise pour les Documents actifs  
  Un document actif qui peut être affiché dans un conteneur de documents actifs doit :  
   
 -   Utiliser les fichiers composés OLE comme mécanisme de stockage en implémentant `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  Savoir quand et comment utiliser les interfaces côté conteneur est nécessaire pour les exigences.  
   
-##  <a name="requirements_for_view_objects"></a>Configuration requise pour les objets de vue  
+##  <a name="requirements_for_view_objects"></a> Configuration requise pour les objets de vue  
  Un document actif peut créer une ou plusieurs vues de ses données. Fonctionnellement, ces vues sont comme les ports d'une méthode particulière permettant d'afficher les données. Si un document actif ne prend en charge qu'une vue, le document actif et cette vue peuvent être implémentés en utilisant une seule classe. **IOleDocument::CreateView** retourne le même objet `IOleDocumentView` pointeur d’interface.  
   
  Pour être représentées dans un conteneur de documents actifs, un composant de vue doit prendre en charge **IOleInPlaceObject** et **IOleInPlaceActiveObject** à `IOleDocumentView`:  

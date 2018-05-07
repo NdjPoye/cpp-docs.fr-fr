@@ -1,13 +1,10 @@
 ---
-title: "Objets de données et Sources de données : création et Destruction | Documents Microsoft"
-ms.custom: 
+title: 'Objets de données et Sources de données : création et Destruction | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et sources de données : création et destruction
 Comme expliqué dans l’article [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md), objets de données et sources de données représentent les deux côtés d’un transfert de données. Cet article explique la création et la destruction des objets et sources pour effectuer les transferts de données correctement, notamment :  
@@ -47,7 +42,7 @@ Comme expliqué dans l’article [des objets de données et Sources de données 
   
 -   [Destruction des sources de données](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a>Création d’objets de données  
+##  <a name="_core_creating_data_objects"></a> Création d’objets de données  
  Les objets de données sont utilisés par l'application de destination : le client ou le serveur. Un objet de données dans l'application de destination est une extrémité d'une connexion entre l'application source et l'application de destination. Un objet de données dans l'application de destination permet d'accéder et d'interagir avec les données de la source de données.  
   
  Il existe deux cas fréquents où un objet de données est nécessaire. Lorsque les données sont déplacées dans votre application à l'aide de la fonction Glisser-déplacer représente le premier cas. Lorsque le collage ou le collage spécial est sélectionné dans le menu Edition représente le deuxième cas.  
@@ -56,12 +51,12 @@ Comme expliqué dans l’article [des objets de données et Sources de données 
   
  Si l'application effectue une opération de collage ou de collage spécial, vous devrez créer un objet `COleDataObject` et appeler ses fonctions membres `AttachClipboard`. Cette opération permet d'associer l'objet de données aux données dans le Presse-papiers. Vous pouvez ensuite utiliser cet objet de données dans votre fonction de collage.  
   
-##  <a name="_core_destroying_data_objects"></a>Détruire des objets de données  
+##  <a name="_core_destroying_data_objects"></a> Détruire des objets de données  
  Si vous suivez le schéma décrit dans [création des objets de données](#_core_creating_data_objects), détruire des objets de données sont un aspect trivial des transferts de données. L’objet de données créé dans votre fonction de collage est détruit par MFC lorsque votre fonction de collage retourne son résultat.  
   
  Si vous suivez une autre méthode de gestion d’opérations de collage, assurez-vous que l’objet de données est détruit une fois l’opération de collage terminée. Tant que l’objet de données est détruit, il est impossible pour toute application de copier avec succès des données dans le Presse-papiers.  
   
-##  <a name="_core_creating_data_sources"></a>Création de Sources de données  
+##  <a name="_core_creating_data_sources"></a> Création de Sources de données  
  Les sources de données sont utilisées par la source de transfert de données, qui peut être le côté client ou le côté serveur du transfert des données. Une source de données dans l'application source est une extrémité d'une connexion entre l'application source et l'application de destination. Un objet de données dans l'application de destination est utilisé pour interagir avec les données de la source de données.  
   
  Les sources de données sont créées lorsqu'une application doit copier des données dans le Presse-papiers. Un scénario fonctionne comme suit :  
@@ -82,8 +77,8 @@ Comme expliqué dans l’article [des objets de données et Sources de données 
   
  Une autre situation dans laquelle vous pouvez créer un objet `COleDataSource` se produit si vous modifiez le comportement par défaut d'une opération Glisser-déplacer. Pour plus d’informations, consultez la [glisser -déplacer : personnalisation](../mfc/drag-and-drop-customizing.md) l’article.  
   
-##  <a name="_core_destroying_data_sources"></a>Destruction des Sources de données  
- Les sources de données doivent être détruites par l’application actuellement chargée de ces derniers. Dans les cas où vous remettez la source de données à OLE, telles que l’appel de [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), vous devez appeler **pDataSrc -> InternalRelease**. Exemple :  
+##  <a name="_core_destroying_data_sources"></a> Destruction des Sources de données  
+ Les sources de données doivent être détruites par l’application actuellement chargée de ces derniers. Dans les cas où vous remettez la source de données à OLE, telles que l’appel de [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), vous devez appeler **pDataSrc -> InternalRelease**. Par exemple :  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

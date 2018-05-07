@@ -1,12 +1,9 @@
 ---
-title: "Erreur LNK2001 des outils Éditeur de liens | Documents Microsoft"
-ms.custom: 
+title: Erreur LNK2001 des outils Éditeur de liens | Documents Microsoft
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 symbole externe non résolu «*symbole*»  
@@ -76,7 +71,7 @@ Cette erreur peut se produire si vous la liaison avec les bibliothèques en mode
   
 Cette erreur peut se produire si votre code fait référence à un symbole d’une version d’une bibliothèque, mais que vous fournissez une version différente de la bibliothèque pour l’éditeur de liens. En règle générale, vous ne pouvez pas mélanger des fichiers objets ou bibliothèques qui sont générés pour les différentes versions du compilateur. Les bibliothèques qui sont fournis dans une nouvelle version peuvent contenir des symboles qui ne figure pas dans les bibliothèques incluses dans les versions précédentes et vice versa. Pour résoudre ce problème, générez tous les fichiers objets et les bibliothèques avec la même version du compilateur avant de les relier.  
   
--  Les outils &#124; Options &#124; Projets &#124; Boîte de dialogue répertoires VC ++, dans la sélection de fichiers de bibliothèque, vous permet de modifier l’ordre de recherche de bibliothèque. Le dossier de l’éditeur de liens dans la boîte de dialogue Pages de propriétés du projet peut également contenir des chemins d’accès qui peuvent être obsolètes.  
+-  Les outils &#124; Options &#124; projets &#124; boîte de dialogue répertoires VC ++, dans la sélection de fichiers de bibliothèque, vous permet de modifier l’ordre de recherche de bibliothèque. Le dossier de l’éditeur de liens dans la boîte de dialogue Pages de propriétés du projet peut également contenir des chemins d’accès qui peuvent être obsolètes.  
   
 -  Ce problème peut apparaître lorsqu’un nouveau SDK est installé (par exemple pour un emplacement différent), et l’ordre de recherche n’est pas mis à jour pour pointer vers le nouvel emplacement. En règle générale, vous devez placer le chemin d’accès au nouveau SDK include et lib répertoires devant l’emplacement de Visual C++ par défaut. Également, un projet contenant des chemins incorporés peut pointer vers d’anciens chemins qui sont valides, mais il est plus à jour des nouvelles fonctionnalités ajoutées par la nouvelle version qui est installée dans un autre emplacement.  
   

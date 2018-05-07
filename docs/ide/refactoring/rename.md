@@ -1,42 +1,40 @@
 ---
 title: Renommer | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>Renommer
-**Ce que :** vous permet de renommer les identificateurs pour les symboles de code, tels que les champs, les variables locales, les méthodes, les espaces de noms, les propriétés et les types.
+**Quoi :** vous permet de renommer des identificateurs pour des symboles de code, tels que des champs, variables locales, méthodes, espaces de noms, propriétés et types.
 
-**Quand :** à quelque chose renommer en toute sécurité sans avoir à rechercher toutes les instances et copier/coller le nouveau nom.  
+**Quand :** vous voulez renommer en toute sécurité un élément sans avoir à rechercher toutes les instances et à copier/coller le nouveau nom.  
 
-**Pourquoi :** en copiant et collant le nouveau nom dans un projet entier probablement entraîner des erreurs.  Cet outil refactorisation précisément effectue l’action de changement de nom.
+**Pourquoi :** un copier-coller du nouveau nom dans un projet entier entraînera probablement des erreurs.  Cet outil de refactorisation effectuera avec précision le changement de nom.
 
-**Comment faire :**
+**Comment :**
 
-1. Mettez en surbrillance ou placez le curseur de texte à l’intérieur de l’élément à renommer :
+1. Mettez en surbrillance ou placez le curseur de texte dans l’élément à renommer :
 
-   ![Code en surbrillance](images/rename_highlight.png)
+   ![Code mis en surbrillance](images/rename_highlight.png)
 
-1. Ensuite, effectuez l’une des opérations suivantes :
+1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
-     * Appuyez sur **Ctrl + R**, puis **Ctrl + R**.  (Notez que le raccourci clavier peut varier en fonction du profil que vous avez sélectionné.)
+     * Appuyez sur **Ctrl+R**, puis **Ctrl+R**.  (Notez que le raccourci clavier peut varier en fonction du profil que vous avez sélectionné.)
    * **Souris**
-     * Sélectionnez **Modifier > refactoriser > Renommer**.
-     * Le code d’avec le bouton droit et sélectionnez **renommer**.
+     * Sélectionnez **Modifier > Refactoriser > Renommer**.
+     * Cliquez avec le bouton droit et sélectionnez **Renommer**.
 
 1. Dans le **renommer** fenêtre qui s’affiche, entrez le nouveau nom pour l’élément sélectionné et cliquez sur le **aperçu** bouton.  Modifier la **étendue de recherche** si vous avez besoin élargir ou restreindre l’étendue de la modification du nom.
 

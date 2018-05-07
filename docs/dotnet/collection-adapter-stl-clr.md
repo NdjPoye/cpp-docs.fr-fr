@@ -2,11 +2,8 @@
 title: collection_adapter (STL/CLR) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - collection_adapter class [STL/CLR]
 ms.assetid: 31964058-1f50-48bf-82c2-b0b3cc8a7887
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fb5dc48175d755771960e9121c3371a0292595
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Encapsule une collection de .NET à utiliser comme un conteneur STL/CLR. A `collection_adapter` est une classe de modèle qui décrit un objet de conteneur STL/CLR simple. Il inclut une interface de bibliothèque de classes de Base (BCL) et retourne une paire itérateur qui vous permet de manipuler la séquence contrôlée.  
@@ -109,7 +104,7 @@ template<typename Key,
 ## <a name="remarks"></a>Notes  
  Cette classe de modèle vous permet de manipuler un conteneur BCL comme un conteneur STL/CLR. La `collection_adapter` stocke un handle vers une interface BCL, qui à son tour contrôle une séquence d’éléments. A `collection_adapter` objet `X` retourne une paire d’itérateurs d’entrée `X.begin()` et `X.end()` que vous utilisez pour consulter des éléments dans l’ordre. Parmi les spécialisations vous permettent également d’écrire `X.size()` pour déterminer la longueur de la séquence contrôlée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/carte >  
   
  **Namespace :** cliext  

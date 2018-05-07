@@ -2,12 +2,9 @@
 title: Fonctions de rappel utilisées par MFC | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, étant donné que les exceptions ne peut pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
@@ -39,10 +34,10 @@ Trois fonctions de rappel s’affichent dans la bibliothèque Microsoft Foundati
 |[Fonction de rappel pour CDC::GrayString](#graystring)||
 |[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)|| 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h 
 
-## <a name="enum_objects"></a>Fonction de rappel pour CDC::EnumObjects
+## <a name="enum_objects"></a> Fonction de rappel pour CDC::EnumObjects
 Le *ObjectFunc* nom est un espace réservé pour le nom de la fonction fournie par l’application.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Notes  
  Le nom réel doit être exporté.  
   
-## <a name="graystring"></a>Fonction de rappel pour CDC::GrayString
+## <a name="graystring"></a>  Fonction de rappel pour CDC::GrayString
 *OutputFunc* est un espace réservé pour le nom de fonction de rappel fournie par l’application.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Notes  
  La fonction de rappel (*OutputFunc*) doit dessiner une image par rapport aux coordonnées (0,0) plutôt que (*x*, *y*).  
 
-## <a name="setabortproc"></a>Fonction de rappel pour CDC::SetAbortProc
+## <a name="setabortproc"></a>  Fonction de rappel pour CDC::SetAbortProc
 Le nom *AbortFunc* est un espace réservé pour le nom de la fonction fournie par l’application.  
   
 ### <a name="syntax"></a>Syntaxe  

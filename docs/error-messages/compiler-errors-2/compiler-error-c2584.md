@@ -1,12 +1,9 @@
 ---
 title: Erreur du compilateur C2584 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2584
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a8e28a6e57273d9609a8658b1e963a269b52e2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae9ea7a4b0ce44231925f4231c5876f352765ad6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2584"></a>Erreur du compilateur C2584
 'Classe' : directe 'Base2' de base est inaccessible ; déjà une base de 'Base1'  
   
- `Class`dérive déjà directement à partir de `Base1`. `Base2`dérive également de `Base1`. `Class`ne peut pas dériver `Base2` car cela équivaudrait héritant (indirectement) `Base1` , qui n’est pas conforme parce que `Base1` est déjà une classe de base directe.  
+ `Class` dérive déjà directement à partir de `Base1`. `Base2` dérive également de `Base1`. `Class` ne peut pas dériver `Base2` car cela équivaudrait héritant (indirectement) `Base1` , qui n’est pas conforme parce que `Base1` est déjà une classe de base directe.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère C2584.  

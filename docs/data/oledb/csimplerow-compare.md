@@ -1,12 +1,9 @@
 ---
-title: CSimpleRow::Compare | Microsoft Docs
-ms.custom: 
+title: CSimpleRow::Compare | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CSimpleRow.Compare
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Compare method
 ms.assetid: 0bb65f09-c7bc-449b-aa4e-c828cac13510
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2649fcf708abaf9e971490d3e88a746c264b1009
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75d79e753f1f4af630c26ef07fbb7241576535ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimplerowcompare"></a>CSimpleRow::Compare
 Compare deux lignes pour voir s’ils font référence à la même instance de ligne.  
@@ -45,7 +40,7 @@ HRESULT Compare(CSimpleRow* pRow);
 ## <a name="return-value"></a>Valeur de retour  
  Un `HRESULT` valeur généralement `S_OK`, indiquant les deux lignes sont la même instance de ligne, ou **S_FALSE**, indiquant les deux lignes sont différentes. Consultez [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) dans les *de référence du programmeur OLE DB* pour d’autres valeurs de retournés possibles.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

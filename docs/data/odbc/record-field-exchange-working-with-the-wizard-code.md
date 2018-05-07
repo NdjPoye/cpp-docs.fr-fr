@@ -1,13 +1,10 @@
 ---
-title: "Record Field Exchange : Utilisation du Code de l’Assistant | Documents Microsoft"
-ms.custom: 
+title: 'Record Field Exchange : Utilisation du Code de l’Assistant | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code écrit par l'Assistant
 Cette rubrique explique le code que l’Assistant Application MFC et **ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) prendre en charge RFX et comment vous pouvez souhaiter modifier ce code d’écriture.  
@@ -47,11 +42,11 @@ Cette rubrique explique le code que l’Assistant Application MFC et **ajouter u
   
 -   Déclarations des membres de données du champ recordset dans la classe de recordset  
   
--   Une substitution de`CRecordset::DoFieldExchange`  
+-   Une substitution de `CRecordset::DoFieldExchange`  
   
 -   Initialisation des membres de données de champ de recordset dans le constructeur de classe de recordset  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Déclarations de membre de données de champ  
+##  <a name="_core_the_field_data_member_declarations"></a> Déclarations de membre de données de champ  
  Les Assistants écrivent la déclaration de classe du recordset dans un fichier .h similaire au suivant pour la classe `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Remarquez également que l’Assistant remplace la `DoFieldExchange` fonction membre de classe `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>De DoFieldExchange  
+##  <a name="_core_the_dofieldexchange_override"></a> De DoFieldExchange  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est au cœur de RFX. Le framework appelle `DoFieldExchange` lorsqu’il a besoin pour déplacer des données à partir de la source de données vers le recordset ou du recordset vers la source de données. `DoFieldExchange`également les données des membres par le biais de champ de prend en charge l’obtention d’informations sur la [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) et [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) fonctions membres.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est au cœur de RFX. Le framework appelle `DoFieldExchange` lorsqu’il a besoin pour déplacer des données à partir de la source de données vers le recordset ou du recordset vers la source de données. `DoFieldExchange` également les données des membres par le biais de champ de prend en charge l’obtention d’informations sur la [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) et [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) fonctions membres.  
   
  Les éléments suivants `DoFieldExchange` remplacement concerne la `CSections` classe. L’Assistant écrit la fonction dans le fichier .cpp de la classe de recordset.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   Le `pFX` pointeur vers un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objet que l’infrastructure passe lorsqu’il appelle `DoFieldExchange`. Le `CFieldExchange` objet spécifie l’opération qui `DoFieldExchange` consiste à effectuer, la direction de transfert et d’autres informations de contexte.  
   
-##  <a name="_core_the_recordset_constructor"></a>Constructeur de jeu d’enregistrements  
+##  <a name="_core_the_recordset_constructor"></a> Constructeur de jeu d’enregistrements  
  Le constructeur de jeu d’enregistrements écrit par l’Assistant comporte deux éléments associés à RFX :  
   
 -   Initialisation de chaque membre de données de champ  

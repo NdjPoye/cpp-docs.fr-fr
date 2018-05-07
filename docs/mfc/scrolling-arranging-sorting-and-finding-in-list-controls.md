@@ -1,13 +1,10 @@
 ---
-title: "Défilement, organisation, tri et recherche dans les contrôles de liste | Documents Microsoft"
-ms.custom: 
+title: Défilement, organisation, tri et recherche dans les contrôles de liste | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddf04fdb32d34c83761623acffbcbc3bdc88d369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04f9ff7afa5440e0d0b83240b1248c33ab0d385e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Défilement, organisation, tri et recherche dans les contrôles de liste
 Contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)) permettent le défilement par défaut. Pour plus d’informations, consultez [Position de défilement](http://msdn.microsoft.com/library/windows/desktop/bb774736) dans le Kit de développement et le [défilement](../mfc/reference/clistctrl-class.md#scroll) fonction membre.  

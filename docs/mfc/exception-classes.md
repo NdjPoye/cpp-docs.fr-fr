@@ -1,13 +1,10 @@
 ---
-title: "Classes d’exceptions | Documents Microsoft"
-ms.custom: 
+title: Classes d’exceptions | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.exception
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b848cf1a839940925222a50ce016ba91da4d371d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce4085d0f5f2dcc73d126d04b7560ef8360ffd9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-classes"></a>Classes d'exceptions
 La bibliothèque de classes fournit un mécanisme de gestion des exceptions en fonction de la classe `CException`. L’infrastructure d’application utilise des exceptions dans son code ; Vous pouvez également les utiliser dans le vôtre. Pour plus d’informations, consultez l’article [Exceptions](../mfc/exception-handling-in-mfc.md). Vous pouvez dériver vos propres types d’exceptions à partir de `CException`.  
@@ -37,7 +32,7 @@ La bibliothèque de classes fournit un mécanisme de gestion des exceptions en f
  [CException](../mfc/reference/cexception-class.md)  
  Classe de base des exceptions.  
   
- [Exception CArchiveException](../mfc/reference/carchiveexception-class.md)  
+ [CArchiveException](../mfc/reference/carchiveexception-class.md)  
  Une exception de l’archive.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
@@ -52,7 +47,7 @@ La bibliothèque de classes fournit un mécanisme de gestion des exceptions en f
  [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
  Une exception de mémoire insuffisante.  
   
- [Exception CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
+ [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
  Une exception résultant à l’aide d’une fonctionnalité non prise en charge.  
   
  [COleException](../mfc/reference/coleexception-class.md)  

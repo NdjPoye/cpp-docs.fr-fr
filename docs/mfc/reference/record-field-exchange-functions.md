@@ -1,13 +1,10 @@
 ---
-title: "Enregistrer les fonctions d’échange de champ | Documents Microsoft"
-ms.custom: 
+title: Enregistrer les fonctions d’échange de champ | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Fonctions Record Field Exchange (RFX)
 Cette rubrique répertorie les Record Field Exchange (RFX en bloc RFX et DFX) utilisées pour automatiser le transfert de données entre un objet recordset et sa source de données et effectuer d’autres opérations sur les données.  
@@ -160,7 +155,7 @@ void RFX_Binary(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_bool"></a>  RFX_Bool
@@ -188,7 +183,7 @@ void RFX_Bool(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_byte"></a>  RFX_Byte
@@ -216,7 +211,7 @@ void RFX_Byte(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_date"></a>  RFX_Date
@@ -261,7 +256,7 @@ void RFX_Date(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_double"></a>  RFX_Double
@@ -289,7 +284,7 @@ void RFX_Double(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_int"></a>  RFX_Int
@@ -317,7 +312,7 @@ void RFX_Int(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_long"></a>  RFX_Long
@@ -346,7 +341,7 @@ value );
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
 ## <a name="rfx_longbinary"></a>  RFX_LongBinary
@@ -374,7 +369,7 @@ void RFX_LongBinary(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_single"></a>  RFX_Single
@@ -402,7 +397,7 @@ void RFX_Single(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
 
@@ -438,7 +433,7 @@ void RFX_Text(
  Utilisé principalement pour les paramètres. Entier indiquant le type de données du paramètre. Le type est un type de données ODBC sous la forme **SQL_XXX**.  
   
  `nScale`  
- Spécifie l’échelle pour les valeurs de type ODBC **SQL_DECIMAL** ou **SQL_NUMERIC**. `nScale`est utile uniquement lors de la définition des valeurs de paramètre. Pour plus d’informations, consultez la rubrique « Précision, échelle, longueur et taille d’affichage » dans l’annexe D de la *de référence du programmeur ODBC SDK*.  
+ Spécifie l’échelle pour les valeurs de type ODBC **SQL_DECIMAL** ou **SQL_NUMERIC**. `nScale` est utile uniquement lors de la définition des valeurs de paramètre. Pour plus d’informations, consultez la rubrique « Précision, échelle, longueur et taille d’affichage » dans l’annexe D de la *de référence du programmeur ODBC SDK*.  
   
 ### <a name="remarks"></a>Notes  
  Les données dans la source de données de tous ces types sont mappées vers et à partir `CString` dans le jeu d’enregistrements.  
@@ -464,7 +459,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 
@@ -511,7 +506,7 @@ void RFX_Binary_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
@@ -553,7 +548,7 @@ void RFX_Bool_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
@@ -595,7 +590,7 @@ void RFX_Byte_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
 ## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
@@ -637,7 +632,7 @@ void RFX_Date_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
@@ -679,7 +674,7 @@ void RFX_Double_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
@@ -707,7 +702,7 @@ void RFX_Int(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
@@ -749,7 +744,7 @@ void RFX_Long_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
@@ -791,7 +786,7 @@ void RFX_Single_Bulk(
 ### <a name="example"></a>Exemple  
  Consultez [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
 
@@ -853,7 +848,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ``` 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
 
 ## <a name="dfx_binary"></a>  DFX_Binary
@@ -895,7 +890,7 @@ void AFXAPI DFX_Binary(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 
@@ -934,7 +929,7 @@ void AFXAPI DFX_Bool(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_byte"></a>  DFX_Byte
@@ -972,7 +967,7 @@ void AFXAPI DFX_Byte(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_currency"></a>  DFX_Currency
@@ -1010,7 +1005,7 @@ void AFXAPI DFX_Currency(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_datetime"></a>  DFX_DateTime
@@ -1046,12 +1041,12 @@ void AFXAPI DFX_DateTime(
  Les données sont mappées entre le type **DAO_DATE** dans DAO et type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) dans le jeu d’enregistrements.  
   
 > [!NOTE]
->  `COleDateTime`remplace [CTime](../../atl-mfc-shared/reference/ctime-class.md) et **TIMESTAMP_STRUCT** à cet effet dans les classes DAO. `CTime`et **TIMESTAMP_STRUCT** sont toujours utilisé pour les classes d’accès aux données basées sur ODBC.  
+>  `COleDateTime` remplace [CTime](../../atl-mfc-shared/reference/ctime-class.md) et **TIMESTAMP_STRUCT** à cet effet dans les classes DAO. `CTime` et **TIMESTAMP_STRUCT** sont toujours utilisé pour les classes d’accès aux données basées sur ODBC.  
   
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_double"></a>  DFX_Double
@@ -1089,7 +1084,7 @@ void AFXAPI DFX_Double(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_long"></a>  DFX_Long
@@ -1127,7 +1122,7 @@ void AFXAPI DFX_Long(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 
@@ -1165,12 +1160,12 @@ void AFXAPI DFX_LongBinary(
 >  Vous pouvez contrôler si les données sont doubles tampon par défaut en définissant [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Notes  
- `DFX_LongBinary`est fourni pour la compatibilité avec les classes ODBC MFC. Le `DFX_LongBinary` fonction transfère les données binaires-objets volumineux (BLOB) à l’aide de la classe `CLongBinary` entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement de la source de données. Les données sont mappées entre le type **DAO_BYTES** dans DAO et type [CLongBinary](clongbinary-class.md) dans le jeu d’enregistrements.  
+ `DFX_LongBinary` est fourni pour la compatibilité avec les classes ODBC MFC. Le `DFX_LongBinary` fonction transfère les données binaires-objets volumineux (BLOB) à l’aide de la classe `CLongBinary` entre les membres de données de champ d’un [CDaoRecordset](cdaorecordset-class.md) objet et les colonnes d’un enregistrement de la source de données. Les données sont mappées entre le type **DAO_BYTES** dans DAO et type [CLongBinary](clongbinary-class.md) dans le jeu d’enregistrements.  
   
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_short"></a>  DFX_Short
@@ -1206,12 +1201,12 @@ void AFXAPI DFX_Short(
  Les données sont mappées entre le type **DAO_I2** dans DAO et type **court** dans le jeu d’enregistrements.  
   
 > [!NOTE]
->  `DFX_Short`équivaut à [RFX_Int](#rfx_int) pour les classes ODBC.  
+>  `DFX_Short` équivaut à [RFX_Int](#rfx_int) pour les classes ODBC.  
   
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 
@@ -1250,7 +1245,7 @@ void AFXAPI DFX_Single(
 ### <a name="example"></a>Exemple  
  Consultez [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
 
 ## <a name="dfx_text"></a>  DFX_Text
@@ -1308,7 +1303,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

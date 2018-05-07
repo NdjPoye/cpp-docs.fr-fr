@@ -1,11 +1,8 @@
 ---
-title: "Classe Platform::Collections :: inputiterator | Documents Microsoft"
-ms.custom: 
+title: 'Classe Platform::Collections :: inputiterator | Documents Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 Fournit un InputIterator de bibliothèque de modèles Standard pour les collections dérivées de l’exécution de Windows.  
@@ -71,12 +66,12 @@ class InputIterator;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `InputIterator`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
 
-## <a name="ctor"></a>  InputIterator::InputIterator Constructor
+## <a name="ctor"></a>  InputIterator::InputIterator (constructeur)
 Initialise une nouvelle instance de la classe InputIterator.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -92,7 +87,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
+## <a name="operator-arrow"></a>  InputIterator::operator -&gt; (opérateur)
 Récupère l’adresse de l’élément spécifié par l’objet InputIterator actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -106,7 +101,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  InputIterator::operator* Operator
+## <a name="operator-dereference"></a>  Opérateur de InputIterator::operator
 Récupère une référence à l’élément spécifié par l’InputIterator actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -120,7 +115,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  InputIterator::operator== Operator
+## <a name="operator-equality"></a>  InputIterator::operator == (opérateur)
 Indique si l'InputIterator actif est égal à un InputIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -138,7 +133,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  InputIterator::operator++ Operator
+## <a name="operator-increment"></a>  InputIterator::operator ++ (opérateur)
 Incrémente l'objet InputIterator actuel.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -158,7 +153,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
+## <a name="operator-inequality"></a>  InputIterator::operator ! =, opérateur
 Indique si l'InputIterator actif n'est pas égal à un InputIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  

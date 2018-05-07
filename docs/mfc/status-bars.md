@@ -1,30 +1,25 @@
 ---
-title: "Barres d’état | Documents Microsoft"
-ms.custom: 
+title: Barres d’état | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - status bars
 - control bars [MFC], status bar
 ms.assetid: fcbc5029-1aab-4e14-adf7-419038a4935e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ee2a1d9270c45bacbcaca7e5a0b2d7cbdd41ef5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="status-bars"></a>Barres d'état
 Barres d’état donnent à votre application à afficher des messages et des informations utiles à l’utilisateur sans interrompre le travail de l’utilisateur. Généralement affiché au bas d’une fenêtre, barres d’état ont « volets », qui incluent « indicateurs » et « ligne de message ». Les indicateurs de donner à l’état des éléments tels que les verrous de défilement, si l’enregistrement de macro est activée, et ainsi de suite. La ligne du message dans la barre d’état peut afficher des informations sur l’état du programme ou un élément de bouton ou menu de barre d’outils qui pointe vers l’utilisateur avec la souris.  

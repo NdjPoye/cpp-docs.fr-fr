@@ -1,11 +1,8 @@
 ---
 title: Platform::Enum, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Enum
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2afb907f0e4bae4f8ad0867420d9ba8da0fe5bcc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dcb6dddb02f13a2138689672535f01c935383740
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformenum-class"></a>Platform::Enum, classe
 Classe value qui représente un ensemble de constantes nommées.  
@@ -41,7 +36,7 @@ public class Enum
 ### <a name="remarks"></a>Notes  
  Utilisez le mot clé [classe enum publique](../windows/enum-class-cpp-component-extensions.md) pour créer des énumérations. N'utilisez pas le type Platform::Enum explicitement. Pour plus d'informations, consultez [Énumérations](../cppcx/enums-c-cx.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

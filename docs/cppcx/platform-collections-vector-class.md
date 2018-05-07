@@ -1,11 +1,8 @@
 ---
-title: "Classe Platform::Collections :: Vector | Documents Microsoft"
-ms.custom: 
+title: 'Classe Platform::Collections :: Vector | Documents Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
@@ -114,7 +109,7 @@ Si vous tentez d’utiliser un **vecteur** type dans une valeur de retour public
 
 `Vector`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
@@ -269,7 +264,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*item*  
+*Élément*  
 Un élément à insérer dans l’objet Vector après l’élément spécifié par *index*. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="removeat"></a>  Vector::RemoveAt, méthode
@@ -327,7 +322,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 Entier non signé de base zéro qui spécifie un élément particulier dans l'objet Vector.
 
-*item*  
+*Élément*  
 Valeur à assigner à l’élément spécifié. Le type de *élément* est défini par le *T* typename.
 
 ## <a name="size"></a>  Vector::Size, méthode
@@ -344,7 +339,7 @@ virtual property unsigned int Size;
 
 Nombre d’éléments dans l’objet Vector actuel.
 
-## <a name="ctor"></a>  Vector::Vector Constructor
+## <a name="ctor"></a>  Vector::Vector (constructeur)
 
 Initialise une nouvelle instance de la classe Vector.
 

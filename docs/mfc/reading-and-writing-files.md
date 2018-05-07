@@ -1,13 +1,10 @@
 ---
-title: "Lors de la lecture et écriture de fichiers | Documents Microsoft"
-ms.custom: 
+title: Lors de la lecture et écriture de fichiers | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-and-writing-files"></a>Lecture et écriture de fichiers
 Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runtime C, MFC, la lecture et l’écriture des opérations apparaîtra familier. Cet article décrit directement lire et écrire directement à un `CFile` objet. Vous pouvez également en mémoire tampon d’e/s de fichier avec le [CArchive](../mfc/reference/carchive-class.md) classe.  
@@ -40,7 +35,7 @@ Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runt
   
 1.  Utilisez le **en lecture** et **écrire** des fonctions membres pour lire et écrire des données dans le fichier.  
   
-     ou  
+     - ou -  
   
 2.  Le `Seek` fonction membre est également disponible pour atteindre un certain décalage dans le fichier.  
   

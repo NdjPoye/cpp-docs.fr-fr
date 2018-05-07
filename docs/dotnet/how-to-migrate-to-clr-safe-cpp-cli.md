@@ -1,13 +1,10 @@
 ---
-title: "Comment : migrer vers - clr : safe (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: 'Comment : migrer vers - clr : safe (C + c++ / CLI) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - verifiable assemblies [C++], migrating to
 - /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b12efce8d3566c4fa8824c70e0a6c7ae9d486dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>Comment : effectuer une migration vers /clr:safe (C++/CLI)
 Visual C++ peut générer des composants vérifiables à l’aide de **/CLR : safe**, ce qui entraîne le compilateur à générer des erreurs pour chaque construction de code non vérifiable.  
@@ -55,7 +50,7 @@ Visual C++ peut générer des composants vérifiables à l’aide de **/CLR : s
   
 -   Si vous générez un fichier EXE, d’une fonction principale ne peut pas déclarer de paramètres, par conséquent, <xref:System.Environment.GetCommandLineArgs%2A> doit être utilisé pour récupérer les arguments de ligne de commande.  
   
--   Effectue un appel non virtuel à une fonction virtuelle. Exemple :  
+-   Effectue un appel non virtuel à une fonction virtuelle. Par exemple :  
   
     ```  
     // not_verifiable.cpp  
@@ -82,7 +77,7 @@ Visual C++ peut générer des composants vérifiables à l’aide de **/CLR : s
   
 -   [__based](../cpp/based-grammar.md)  
   
--   [__try](../cpp/try-except-statement.md) et`__except`  
+-   [__try](../cpp/try-except-statement.md) et `__except`  
   
 ## <a name="see-also"></a>Voir aussi  
  [Code pur et vérifiable (C++-CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

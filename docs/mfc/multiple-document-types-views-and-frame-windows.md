@@ -1,13 +1,10 @@
 ---
-title: "Plusieurs Types de documents, vues et fenêtres Frame | Documents Microsoft"
-ms.custom: 
+title: Plusieurs Types de documents, vues et fenêtres Frame | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Types multidocuments, vues et fenêtres frame
 La relation standard entre un document, sa vue et sa fenêtre frame est décrite dans [Création d’un document/d’une vue](../mfc/document-view-creation.md). De nombreuses applications prennent en charge un type de document unique (éventuellement plusieurs documents ouverts de ce type) avec une seule vue du document et une seule fenêtre frame par document. Mais certaines applications peuvent avoir besoin de modifier une ou plusieurs de ces valeurs par défaut.  
@@ -75,7 +70,7 @@ La relation standard entre un document, sa vue et sa fenêtre frame est décrite
   
  La figure suivante, divisée en plusieurs parties (a, b et c), présente les trois modèles d’interface utilisateur dans l’ordre indiqué ci-dessus.  
   
- ![Plusieurs &#45; afficher des interfaces utilisateur](../mfc/media/vc37a71.gif "vc37a71")  
+ ![Plusieurs&#45;afficher des interfaces utilisateur](../mfc/media/vc37a71.gif "vc37a71")  
 Interfaces utilisateur à plusieurs vues  
   
  Pour proposer ces modèles, l’infrastructure implémente la commande Nouvelle fenêtre et fournit la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), comme indiqué dans [Fenêtres fractionnées](#_core_splitter_windows). Vous pouvez implémenter d’autres modèles en utilisant ceux-ci comme point de départ. Pour obtenir des exemples de programmes qui illustrent différentes configurations de vues, de fenêtres frame et de fenêtres fractionnées, consultez [Exemples MFC](../visual-cpp-samples.md).  

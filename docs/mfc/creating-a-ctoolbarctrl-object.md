@@ -1,13 +1,10 @@
 ---
-title: "Création d’un objet CToolBarCtrl | Documents Microsoft"
-ms.custom: 
+title: Création d’un objet CToolBarCtrl | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Création d'un objet CToolBarCtrl
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objets contiennent plusieurs structures de données interne, une liste d’images bitmap, une liste de chaînes d’étiquette de bouton et une liste de `TBBUTTON` structures — qui associer une image et/ou de chaîne avec la position, le style, l’état, et ID de commande du bouton. Chacun des éléments de ces structures de données constitue un index de base zéro. Avant de pouvoir utiliser un `CToolBarCtrl` de l’objet, vous devez configurer ces structures de données. Pour obtenir la liste des structures de données, consultez [des contrôles de barre d’outils](controls-mfc.md) dans le Kit de développement logiciel Windows. La liste des chaînes utilisable uniquement pour les étiquettes de bouton ; Impossible de récupérer des chaînes à partir de la barre d’outils.  

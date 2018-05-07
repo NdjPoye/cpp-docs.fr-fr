@@ -1,30 +1,25 @@
 ---
-title: "Informations sur les éléments de contrôle d’arborescence | Documents Microsoft"
-ms.custom: 
+title: Informations sur les éléments de contrôle d’arborescence | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - tree controls [MFC], item information
 - CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e4a707c4bc1f0fde76ab3a146424d2d34d5ec8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e9d7c4e0ee7db80f024c30e363612cb40fed1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-information"></a>Informations sur les éléments de contrôle d’arborescence
 Contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) contenant un nombre de fonctions membres qui récupèrent des informations sur les éléments dans le contrôle. Le [GetItem](../mfc/reference/ctreectrl-class.md#getitem) fonction membre extrait tout ou partie des données associées à un élément. Ces données peut inclure de texte de l’élément, état, images, le nombre d’éléments enfants et une valeur de données de 32 bits définies par l’application. Il existe également un [SetItem](../mfc/reference/ctreectrl-class.md#setitem) fonction que vous pouvez définir tout ou partie des données associées à un élément.  

@@ -1,12 +1,9 @@
 ---
-title: "C3100 d’erreurs du compilateur via C3199 | Documents Microsoft"
-ms.custom: 
+title: C3100 d’erreurs du compilateur via C3199 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3102
@@ -75,17 +72,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc05c482c112753ffeb52d49b1badcfcab549cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 062ab968a51c38e9418a96b0df07eec3ae399ac3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>C3100 d’erreurs du compilateur via C3199
 
@@ -95,7 +90,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 
 ## <a name="error-messages"></a>Messages d’erreur
 
-|Erreur|Message|
+|Error|Message|
 |-----------|-------------|
 |[Erreur du compilateur C3100](compiler-error-c3100.md)|'*identificateur*' : qualificateur d’attribut inconnu|
 |[Erreur du compilateur C3101](compiler-error-c3101.md)|expression non conforme pour l’argument d’attribut nommé '*identificateur*'|

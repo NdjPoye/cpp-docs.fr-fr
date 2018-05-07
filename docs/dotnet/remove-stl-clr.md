@@ -2,11 +2,8 @@
 title: Supprimer (STL/CLR) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::remove
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - remove function [STL/CLR]
 ms.assetid: 85a11883-3e25-49aa-b4a0-b2cffd6dc110
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c866d920451cd9ae21d161630520813b699a3eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9ef7b6039a3243c52f4c2de56ef73f3afc13b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="remove-stlclr"></a>remove (STL/CLR)
 Élimine une valeur spécifiée d'une plage donnée sans modifier l'ordre des éléments restants, et retourne la fin d'une nouvelle plage exempte de la valeur spécifiée.  
@@ -41,7 +36,7 @@ template<class _FwdIt, class _Ty> inline
 ## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `remove`. Pour plus d’informations, consultez [supprimer](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

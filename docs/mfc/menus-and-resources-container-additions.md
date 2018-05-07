@@ -1,13 +1,10 @@
 ---
-title: "Menus et ressources : ajouts de conteneurs | Documents Microsoft"
-ms.custom: 
+title: 'Menus et ressources : ajouts de conteneurs | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Menus et ressources : ajouts de conteneurs
 Cet article décrit les modifications qui doivent être apportées aux menus et aux autres ressources dans une application conteneur d’édition visuelle.  
@@ -52,7 +47,7 @@ Cet article décrit les modifications qui doivent être apportées aux menus et 
   
 -   [Ajouts de Table de chaînes](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Ajouts au Menu du conteneur  
+##  <a name="_core_container_menu_additions"></a> Ajouts au Menu du conteneur  
  Vous devez ajouter les éléments suivants dans le menu Edition :  
   
 |Élément|Objectif|  
@@ -66,7 +61,7 @@ Cet article décrit les modifications qui doivent être apportées aux menus et 
   
  Si vous souhaitez prendre en charge l’activation sur place des éléments contenus, vous devez créer un nouveau menu pour votre application conteneur. Ce menu comprend le même menu fichier et les menus contextuels de fenêtre utilisés lorsque les fichiers sont ouverts, mais il comporte deux séparateurs placés entre eux. Les séparateurs sont utilisés pour indiquer où l’élément du serveur (composant) (application) doit placer ses menus lorsqu’activé sur place. Pour plus d’informations sur cette technique de fusion de menus, consultez [Menus et ressources : fusion de menus](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Ajouts à la Table d’accélérateurs Application conteneur  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Ajouts à la Table d’accélérateurs Application conteneur  
  Petites modifications apportées aux ressources de la table d’accélérateurs d’une application conteneur sont nécessaires si vous prenez en charge l’activation sur place. La première modification permet à l’utilisateur d’appuyer sur la touche ÉCHAP pour annuler le mode de modification sur place. Ajoutez l’entrée suivante à la table d’accélérateurs principale :  
   
 |Id|Touche|Type|  
@@ -85,7 +80,7 @@ Cet article décrit les modifications qui doivent être apportées aux menus et 
 |**ID_PREV_PANE**|MAJ + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Ajouts de Table de chaînes des Applications conteneur  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Ajouts de Table de chaînes des Applications conteneur  
  La plupart des modifications aux tables de chaînes pour les applications de conteneur correspondent aux éléments de menu supplémentaires mentionnés dans [ajouts au Menu du conteneur](#_core_container_menu_additions). Elles fournissent le texte affiché dans la barre d’état lorsque chaque élément de menu est affichée. Par exemple, voici les entrées de table de chaînes que génère de l’Assistant application :  
   
 |Id|Chaîne|  

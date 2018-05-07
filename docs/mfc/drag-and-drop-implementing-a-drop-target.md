@@ -1,13 +1,10 @@
 ---
-title: "Glisser -déplacer : implémentation d’une cible de dépôt | Documents Microsoft"
-ms.custom: 
+title: 'Glisser -déplacer : implémentation d’une cible de dépôt | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Glisser-déposer : implémentation d’une cible de dépôt
 Cet article explique comment rendre votre application à une cible de dépôt. Implémentation d’une cible de dépôt prend plus de temps que l’implémentation d’une source de déplacement, mais elle est toujours relativement simple. Ces techniques s’appliquent également aux applications non-OLE.  
@@ -34,7 +29,7 @@ Cet article explique comment rendre votre application à une cible de dépôt. I
   
 1.  Ajouter une variable membre à chaque vue dans l’application que vous souhaitez être une cible de dépôt. Cette variable membre doit être de type `COleDropTarget` ou à une classe dérivée.  
   
-2.  À partir de la fonction de la classe d’affichage qui gère la `WM_CREATE` message (généralement `OnCreate`), appelez la nouvelle variable de membre `Register` fonction membre. `Revoke`sera appelé automatiquement pour vous lors de la destruction de la vue.  
+2.  À partir de la fonction de la classe d’affichage qui gère la `WM_CREATE` message (généralement `OnCreate`), appelez la nouvelle variable de membre `Register` fonction membre. `Revoke` sera appelé automatiquement pour vous lors de la destruction de la vue.  
   
 3.  Substituer les fonctions suivantes. Si vous souhaitez que le même comportement dans l’ensemble de votre application, substituez ces fonctions dans votre classe d’affichage. Si vous souhaitez modifier le comportement dans certains cas isolés ou souhaitez activer la suppression non -`CView` windows, remplacez ces fonctions dans votre `COleDropTarget`-classe dérivée.  
   
@@ -48,7 +43,7 @@ Cet article explique comment rendre votre application à une cible de dépôt. I
   
  Consultez le fichier MAINVIEW. Cpp qui fait partie de l’exemple OLE MFC [OCLIENT](../visual-cpp-samples.md) pour obtenir un exemple de la façon dont ces fonctions fonctionnent ensemble.  
   
- Pour plus d'informations, voir :  
+ Pour plus d'informations, voir :  
   
 -   [Implémentation d’une Source de dépôt](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   

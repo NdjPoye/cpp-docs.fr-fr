@@ -1,13 +1,10 @@
 ---
-title: "Contrôles de liste virtuels | Documents Microsoft"
-ms.custom: 
+title: Contrôles de liste virtuels | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Contrôles de liste virtuels
 Un contrôle de liste virtuelle est un contrôle list view qui a le **est LVS_OWNERDATA** style. Ce style permet au contrôle prendre en charge d’un nombre d’éléments jusqu'à une `DWORD` (le nombre d’éléments par défaut s’étend uniquement à un `int`). Toutefois, le principal avantage de ce style est la possibilité d’avoir uniquement un sous-ensemble d’éléments de données en mémoire à tout moment. Ainsi, la liste virtuelle contrôle view lui-même pour une utilisation avec des bases de données de grande taille où les méthodes spécifiques de l’accès aux données sont déjà en place.  
@@ -43,15 +38,15 @@ Un contrôle de liste virtuelle est un contrôle list view qui a le **est LVS_OW
   
  Dans le gestionnaire pour le **LVN_GETDISPINFO** message de notification, vous devez vérifier pour voir quel type d’information est demandé. Les valeurs possibles sont :  
   
--   `LVIF_TEXT`Le `pszText` membre doit être renseigné.  
+-   `LVIF_TEXT` Le `pszText` membre doit être renseigné.  
   
--   `LVIF_IMAGE`Le `iImage` membre doit être renseigné.  
+-   `LVIF_IMAGE` Le `iImage` membre doit être renseigné.  
   
 -   **LVIF_INDENT** le *iIndent* membre doit être renseigné.  
   
--   `LVIF_PARAM`Le *lParam* membre doit être renseigné. (Ne présente pas de sous-éléments.)  
+-   `LVIF_PARAM` Le *lParam* membre doit être renseigné. (Ne présente pas de sous-éléments.)  
   
--   `LVIF_STATE`Le *état* membre doit être renseigné.  
+-   `LVIF_STATE` Le *état* membre doit être renseigné.  
   
  Vous devez ensuite fournir les informations demandées sur l’infrastructure.  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCCaptionButton | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe de CMFCCaptionButton
 La `CMFCCaptionButton` classe implémente un bouton qui s’affiche dans la barre de légende pour un volet d’ancrage ou une fenêtre mini-frame. En général, l'infrastructure crée les boutons de légende automatiquement.  
@@ -94,10 +89,10 @@ class CMFCCaptionButton : public CObject
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
  Construit un objet `CMFCCaptionButton`.  
   
 ```  
@@ -133,7 +128,7 @@ CMFCCaptionButton(
   
  Boutons de légende sont alignés sur la droite ou gauche.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  Retourne la commande représentée par le bouton.  
   
 ```  
@@ -155,7 +150,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|La flèche de menu.|  
 |`HTNOWHERE`|La valeur par défaut ; ne représente aucune commande.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
  Retourne l’ID de l’image associée au bouton.  
   
 ```  
@@ -166,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>Paramètres  
  [in] `bHorz`  
- `TRUE`pour l’image de gauche ou droite ID ; `FALSE` pour haut ou flèche ID d’image.  
+ `TRUE` pour l’image de gauche ou droite ID ; `FALSE` pour haut ou flèche ID d’image.  
   
  [in] `bMaximized`  
- `TRUE`Pour agrandir l’image ID ; `FALSE` pour une réduction de l’image ID.  
+ `TRUE` Pour agrandir l’image ID ; `FALSE` pour une réduction de l’image ID.  
   
 ### <a name="return-value"></a>Valeur de retour  
  L’ID de l’image.  
@@ -177,7 +172,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>Notes  
  Les paramètres de spécifient les ID d’image pour réduire ou agrandir des boutons de légende.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  Retourne le rectangle occupé par le bouton.  
   
 ```  
@@ -190,7 +185,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>Notes  
  Si vous ne voyez pas le bouton, la valeur retournée est 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  Retourne la largeur et la hauteur du bouton.  
   
 ```  
@@ -203,7 +198,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>Notes  
  La taille retournée inclut la bordure et marge du bouton.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
  Indique si la hauteur de barre de titre est définie à la taille de miniature.  
   
 ```  
@@ -211,11 +206,11 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la légende est définie sur la taille mini ; dans le cas contraire `FALSE`.  
+ `TRUE` Si la légende est définie sur la taille mini ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
  Définit l’emplacement du bouton de dessin et l’état de la fenêtre Afficher.  
   
 ```  
@@ -231,7 +226,7 @@ void Move(
  [in] `bHide`  
  Indique s’il faut ou non afficher le bouton.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Dessine le bouton de légende.  
   
 ```  
@@ -262,7 +257,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Notes  
  Le `bMaximized` paramètre n’est utilisé avec le bouton Agrandir ou réduire le bouton.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Définit la taille de miniature de la barre de titre.  
   
 ```  
@@ -271,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Paramètres  
  [in] `bSet`  
- `TRUE`hauteur de barre de titre mini ; `FALSE` pour la hauteur par défaut de la barre de titre.  
+ `TRUE` hauteur de barre de titre mini ; `FALSE` pour la hauteur par défaut de la barre de titre.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

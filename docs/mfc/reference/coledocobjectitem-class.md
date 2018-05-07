@@ -1,12 +1,9 @@
 ---
 title: Classe COleDocObjectItem | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 Implémente la relation contenant-contenu de document actif.  
@@ -101,10 +96,10 @@ class COleDocObjectItem : public COleClientItem
   
  `COleDocObjectItem`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  Appelez cette fonction membre pour initialiser le `COleDocObjectItem` objet.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Un pointeur vers le `COleDocument` objet agissant en tant que le conteneur de documents actifs. Ce paramètre doit être **NULL** pour activer **IMPLEMENT_SERIALIZE**. Normalement les éléments OLE sont construits avec un non - **NULL** pointeur de document.  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  Appelé par l’infrastructure à un document en utilisant les paramètres par défaut.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Un pointeur vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) objet qui décrit le travail d’impression.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Appelez cette fonction membre pour exécuter la commande spécifiée par l’utilisateur.  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Une erreur inattendue s’est produite.|  
 |**E_FAIL**|Erreur s’est produite.|  
 |**E_NOTIMPL**|Indique les MFC elle-même doit tenter de traduction et de distribuer la commande.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`est non - **NULL** mais ne spécifie ne pas un groupe de commandes reconnu.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`n’est pas reconnu comme une commande valide dans le groupe pGroup.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` est non - **NULL** mais ne spécifie ne pas un groupe de commandes reconnu.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` n’est pas reconnu comme une commande valide dans le groupe pGroup.|  
 |**OLECMDERR_DISABLED**|La commande identifiée par `nCmdID` est désactivé et ne peut pas être exécutée.|  
 |**OLECMDERR_NOHELP**|L’appelant a demandé de l’aide sur la commande identifiée par `nCmdID` mais aucune aide n’est disponible.|  
 |**OLECMDERR_CANCELLED**|L’utilisateur a annulé l’exécution.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Notes  
  Le `pguidCmdGroup` et `nCmdID` paramètres identifier de façon unique la commande à appeler. Le `nCmdExecOpt` paramètre spécifie l’action exacte à appliquer.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Appelez cette fonction membre pour obtenir un pointeur vers le `IOleDocumentView` interface de la vue actuellement active.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Notes  
  Le décompte de références sur le `IOleDocumentView` pointeur n’est pas incrémenté avant d’être retournée par cette fonction.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  Appelez cette fonction membre pour récupérer le nombre de pages dans le document.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  Cette fonction membre est appelée par l’infrastructure pour préparer un document pour l’impression.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  Cette fonction membre est appelée par l’infrastructure pour imprimer un document.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  Spécifie si l’ensemble du document doit être imprimé.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Demande l’état d’une ou plusieurs commandes générées par des événements d’interface utilisateur.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule la fonctionnalité de la [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) (méthode), comme décrit dans le Kit de développement logiciel Windows.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  Libère la connexion à l’élément lié OLE et la ferme s’il est ouvert. Ne supprime pas l’élément client.  
   
 ```  

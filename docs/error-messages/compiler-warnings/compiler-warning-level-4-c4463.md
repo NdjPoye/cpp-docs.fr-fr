@@ -1,12 +1,9 @@
 ---
-title: "Du compilateur (niveau 4) d’avertissement C4463 | Documents Microsoft"
-ms.custom: 
+title: Du compilateur (niveau 4) d’avertissement C4463 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Du compilateur (niveau 4) d’avertissement C4463  
   
 > dépassement de capacité ; affectation *valeur* au champ de bits qui peut contenir uniquement des valeurs à partir de *low_value* à *high_value*  
   
-Assigné *valeur* est en dehors de la plage de valeurs que le champ de bits peut contenir. Les types de champ de bits signés utilisent le poids de bits pour la connexion, par conséquent, si  *n*  est la taille de champ de bits, la plage pour les champs de bits signés est de -2<sup>n-1</sup> 2<sup>n-1</sup>-1, tandis que champs de bits non signés ont une plage de 0 à 2<sup>n</sup>-1.  
+Assigné *valeur* est en dehors de la plage de valeurs que le champ de bits peut contenir. Les types de champ de bits signés utilisent le poids de bits pour la connexion, par conséquent, si *n* est la taille de champ de bits, la plage pour les champs de bits signés est de -2<sup>n-1</sup> 2<sup>n-1</sup>-1, tandis que non signé les champs de bits ont une plage de 0 à 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Exemple  
   

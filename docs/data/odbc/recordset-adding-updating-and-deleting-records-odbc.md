@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Ajout, modification et suppression d’enregistrements (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Ajout, modification et suppression d’enregistrements (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset : ajout, modification et suppression d'enregistrements (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -71,16 +66,16 @@ Cette rubrique s’applique aux classes ODBC MFC.
 |En mode Append-only|Y|N|N|Y|  
 |Pleinement modifiable|Y|Y|Y|Y|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>Déterminer si votre jeu d’enregistrements est modifiable  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> Déterminer si votre jeu d’enregistrements est modifiable  
  Un objet recordset est modifiable si la source de données est modifiable et que vous avez ouvert le jeu d’enregistrements en tant que mise à jour. Sa mise à jour dépend également de l’instruction SQL que vous utilisez, les fonctionnalités du pilote ODBC, et si la bibliothèque de curseurs ODBC est en mémoire. Vous ne pouvez pas mettre à jour une source de données ou le jeu d’enregistrements en lecture seule.  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>Pour déterminer si le jeu d’enregistrements est modifiable  
   
 1.  Appelez l’objet recordset [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre.  
   
-     `CanUpdate`Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable.  
+     `CanUpdate` Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable.  
   
- Par défaut, les jeux d’enregistrements est entièrement modifiables (vous pouvez effectuer `AddNew`, **modifier**, et **supprimer** operations). Mais vous pouvez également utiliser le [appendOnly](../../mfc/reference/crecordset-class.md#open) option pour ouvrir des recordsets modifiables. Un jeu d’enregistrements ouvert de cette façon permet uniquement l’ajout de nouveaux enregistrements avec `AddNew`. Vous ne pouvez pas modifier ou supprimer des enregistrements existants. Vous pouvez tester si un jeu d’enregistrements est ouvert uniquement pour l’ajout en appelant le [CanAppend](../../mfc/reference/crecordset-class.md#canappend) fonction membre. `CanAppend`Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable ou ouvert uniquement pour l’ajout.  
+ Par défaut, les jeux d’enregistrements est entièrement modifiables (vous pouvez effectuer `AddNew`, **modifier**, et **supprimer** operations). Mais vous pouvez également utiliser le [appendOnly](../../mfc/reference/crecordset-class.md#open) option pour ouvrir des recordsets modifiables. Un jeu d’enregistrements ouvert de cette façon permet uniquement l’ajout de nouveaux enregistrements avec `AddNew`. Vous ne pouvez pas modifier ou supprimer des enregistrements existants. Vous pouvez tester si un jeu d’enregistrements est ouvert uniquement pour l’ajout en appelant le [CanAppend](../../mfc/reference/crecordset-class.md#canappend) fonction membre. `CanAppend` Retourne une valeur différente de zéro si le jeu d’enregistrements est modifiable ou ouvert uniquement pour l’ajout.  
   
  Le code suivant montre comment vous pouvez utiliser `CanUpdate` pour un objet recordset appelé `rsStudentSet`:  
   
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  Lorsque vous vous préparez à mettre à jour un jeu d’enregistrements en appelant **mettre à jour**, prenez soin que le jeu d’enregistrements comporte toutes les colonnes constituant la clé primaire de la table (ou toutes les colonnes d’un index unique sur la table). Dans certains cas, l’infrastructure peut utiliser uniquement les colonnes sélectionnées dans le jeu d’enregistrements pour identifier l’enregistrement de la table à mettre à jour. Sans toutes les colonnes nécessaires, plusieurs enregistrements peuvent être mis à jour dans la table, éventuellement endommager l’intégrité référentielle de la table. Dans ce cas, le framework lève des exceptions lorsque vous appelez **mise à jour**.  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>Ajout d’un enregistrement à un jeu d’enregistrements  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> Ajout d’un enregistrement à un jeu d’enregistrements  
  Vous pouvez ajouter de nouveaux enregistrements à un jeu d’enregistrements si sa [CanAppend](../../mfc/reference/crecordset-class.md#canappend) fonction membre retourne une valeur différente de zéro.  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>Pour ajouter un nouvel enregistrement à un jeu d’enregistrements  
@@ -106,7 +101,7 @@ if( !rsStudentSet.CanUpdate( ) )
   
 2.  Appelez l’objet recordset [AddNew](../../mfc/reference/crecordset-class.md#addnew) fonction membre.  
   
-     `AddNew`prépare le jeu d’enregistrements en tant que tampon d’édition. Tous les membres de données de champ sont définis sur la valeur spéciale Null et marqués comme non modifié afin que modifié (erronée) les valeurs sont écrites dans la source de données lorsque vous appelez [mise à jour](../../mfc/reference/crecordset-class.md#update).  
+     `AddNew` prépare le jeu d’enregistrements en tant que tampon d’édition. Tous les membres de données de champ sont définis sur la valeur spéciale Null et marqués comme non modifié afin que modifié (erronée) les valeurs sont écrites dans la source de données lorsque vous appelez [mise à jour](../../mfc/reference/crecordset-class.md#update).  
   
 3.  Définir les valeurs des membres de données de champ du nouvel enregistrement.  
   
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Pour annuler un `AddNew` ou **modifier** appeler, rendez un autre appel à `AddNew` ou **modifier** ou appelez **déplacer** avec la **AFX_MOVE_REFRESH**  paramètre. Membres de données sont réinitialisés à leurs valeurs précédentes et vous êtes toujours dans **modifier** ou **ajouter** mode.  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>Modification d’un enregistrement dans un jeu d’enregistrements  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> Modification d’un enregistrement dans un jeu d’enregistrements  
  Vous pouvez modifier des enregistrements existants si le jeu d’enregistrements [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre retourne une valeur différente de zéro.  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>Pour modifier un enregistrement existant dans un jeu d’enregistrements  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  Pour annuler un `AddNew` ou **modifier** appeler, rendez un autre appel à `AddNew` ou **modifier** ou appelez **déplacer** avec la **AFX_MOVE_REFRESH**  paramètre. Membres de données sont réinitialisés à leurs valeurs précédentes et vous êtes toujours dans **modifier** ou **ajouter** mode.  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>Suppression d’un enregistrement à partir d’un jeu d’enregistrements  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> Suppression d’un enregistrement à partir d’un jeu d’enregistrements  
  Vous pouvez supprimer des enregistrements si votre jeu d’enregistrements [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) fonction membre retourne une valeur différente de zéro.  
   
 #### <a name="to-delete-a-record"></a>Pour supprimer un enregistrement  

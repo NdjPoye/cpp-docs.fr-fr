@@ -1,12 +1,9 @@
 ---
 title: CMyProviderSource (MyProviderDS.H) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - myproviderds.h
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0bdb766abd034868fe12fc0913fbdd99287b9e4f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f141ad7565a78ff4e7a02b3847287879b81ccd6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 Les classes de fournisseur utilisent l’héritage multiple. Le code suivant montre la chaîne d’héritage de l’objet de source de données :  
@@ -165,7 +160,7 @@ struct UPROPINFO
 ## <a name="user-defined-property-sets"></a>Jeux de propriétés défini par l’utilisateur  
  Visual C++ prend en charge les ensembles de propriétés défini par l’utilisateur. Vous n’êtes pas obligé de remplacer **GetProperties** ou `GetPropertyInfo`. Au lieu de cela, les modèles détectent tout jeu de propriétés défini par l’utilisateur et l’ajouter à l’objet approprié.  
   
- Si vous avez un jeu de propriétés défini par l’utilisateur qui doit être disponible au moment de l’initialisation (autrement dit, avant que le consommateur appelle **IDBInitialize::Initialize**), vous pouvez le spécifier à l’aide de la **UPROPSET_USERINIT** indicateur conjointement avec la macro BEGIN_PROPERTY_SET_EX. Le jeu de propriétés doit être dans l’objet de source de données pour que cela fonctionne (comme la spécification OLE DB exige). Exemple :  
+ Si vous avez un jeu de propriétés défini par l’utilisateur qui doit être disponible au moment de l’initialisation (autrement dit, avant que le consommateur appelle **IDBInitialize::Initialize**), vous pouvez le spécifier à l’aide de la **UPROPSET_USERINIT** indicateur conjointement avec la macro BEGIN_PROPERTY_SET_EX. Le jeu de propriétés doit être dans l’objet de source de données pour que cela fonctionne (comme la spécification OLE DB exige). Par exemple :  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  

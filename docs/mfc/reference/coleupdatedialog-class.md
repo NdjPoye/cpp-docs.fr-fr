@@ -1,12 +1,9 @@
 ---
 title: Classe de COleUpdateDialog | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleupdatedialog-class"></a>Classe de COleUpdateDialog
 Utilisée pour un cas particulier de la boîte de dialogue OLE Modifier les liens, qui doit être utilisée lorsque vous devez mettre à jour uniquement les objets liés ou incorporés d'un document.  
@@ -77,7 +72,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
  Construit un objet `COleUpdateDialog`.  
   
 ```  
@@ -104,7 +99,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>Notes  
  Cette fonction crée uniquement une `COleUpdateDialog` objet. Pour afficher la boîte de dialogue, appelez [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Cette classe doit être utilisée à la place de `COleLinksDialog` lorsque vous souhaitez mettre à jour uniquement les éléments liés ou incorporés.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
  Affiche la boîte de dialogue Modifier les liaisons zone mettre à jour le mode.  
   
 ```  

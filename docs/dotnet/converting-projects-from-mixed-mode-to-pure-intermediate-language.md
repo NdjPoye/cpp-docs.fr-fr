@@ -1,13 +1,10 @@
 ---
-title: "Conversion de projets à partir de Mode mixte au langage intermédiaire pur | Documents Microsoft"
-ms.custom: 
+title: Conversion de projets à partir de Mode mixte au langage intermédiaire pur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversion de projets du mode mixte en langage intermédiaire pur
 Tous les projets Visual C++ CLR lier aux bibliothèques Runtime C par défaut. Par conséquent, ces projets sont classés en tant que les applications en mode mixte, parce qu’elles combinent du code natif avec du code qui cible le common language runtime (code managé). Quand elles sont compilées, elles sont compilées en langage intermédiaire (IL), également appelé Microsoft intermediate langage MSIL.  
@@ -65,7 +60,7 @@ Tous les projets Visual C++ CLR lier aux bibliothèques Runtime C par défaut. P
         // #include <tchar.h>  
         ```  
   
-    6.  Pour les applications Windows Forms, dans Form1.cpp, transformez en commentaire la `#include` instruction qui fait référence à windows.h. Exemple :  
+    6.  Pour les applications Windows Forms, dans Form1.cpp, transformez en commentaire la `#include` instruction qui fait référence à windows.h. Par exemple :  
   
         ```  
         // #include <windows.h>  
@@ -104,4 +99,4 @@ Tous les projets Visual C++ CLR lier aux bibliothèques Runtime C par défaut. P
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Représente un entier non signé 32 bits.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Représente un entier non signé 64 bits.|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Indique une méthode qui ne retourne pas de valeur ; Autrement dit, la méthode a le type de retour void.|
+        |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Indique une méthode qui ne retourne pas de valeur ; Autrement dit, la méthode a le type de retour void.|

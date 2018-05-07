@@ -1,13 +1,10 @@
 ---
 title: RgnData, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - RGNDATA
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RGNDATA structure [MFC]
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4170b3590cc841f3edc10d4767045a4fede9782
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591c2dd65fdb9dde00f0ac1373c39affbe82da85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rgndata-structure"></a>RGNDATA, structure
 Le `RGNDATA` structure contient un en-tête et un tableau de rectangles qui composent une région. Ces rectangles, triées de haut en bas à gauche à droite, ne se chevauchent pas.  
@@ -46,7 +41,7 @@ typedef struct _RGNDATA { /* rgnd */
  `Buffer`  
  Spécifie un tampon de taille arbitraire qui contient la [RECT](../../mfc/reference/rect-structure1.md) structures qui composent la région.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

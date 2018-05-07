@@ -1,12 +1,9 @@
 ---
-title: IRowsetChangeImpl::DeleteRows | Microsoft Docs
-ms.custom: 
+title: IRowsetChangeImpl::DeleteRows | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetChangeImpl.DeleteRows
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRows method
 ms.assetid: 462ad4f1-3b2a-4134-9733-be65708aa1d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce0051c47144e5197eeba58ff04238d3cf58dbd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6b8c8f361166d90d62aeec911aa0fd1df90b68af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetchangeimpldeleterows"></a>IRowsetChangeImpl::DeleteRows
 Supprime les lignes à partir de l’ensemble de lignes.  
@@ -47,7 +42,7 @@ Supprime les lignes à partir de l’ensemble de lignes.
 #### <a name="parameters"></a>Paramètres  
  Consultez [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

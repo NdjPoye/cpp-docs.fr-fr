@@ -1,12 +1,9 @@
 ---
 title: PROVIDER_COLUMN_ENTRY_GN | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROVIDER_COLUMN_ENTRY_GN
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ff73cda1e676387b4f8ca79ce1ef7cbf8fce13e1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: be0cfa80b0d2a18d04dd329feda6547b5d89e6e1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
 Représente une colonne spécifique pris en charge par le fournisseur.  
@@ -66,7 +61,7 @@ PROVIDER_COLUMN_ENTRY_GN (name
 ## <a name="remarks"></a>Notes  
  Vous permet de spécifier la taille de la colonne, type de données, précision, échelle et de lignes du schéma GUID.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

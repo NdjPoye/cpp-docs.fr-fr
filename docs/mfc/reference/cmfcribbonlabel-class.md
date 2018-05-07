@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCRibbonLabel | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe de CMFCRibbonLabel
 Implémente une étiquette de texte non interactive pour un ruban.  
@@ -71,10 +66,10 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Construit et initialise un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objet qui affiche la chaîne de texte spécifiée.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  Le texte à afficher dans l’étiquette.  
   
  [in] `bIsMultiLine`  
- `TRUE`Pour spécifier que l’étiquette est une étiquette multiligne. dans le cas contraire, `FALSE`.  
+ `TRUE` Pour spécifier que l’étiquette est une étiquette multiligne. dans le cas contraire, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Détermine les données d’accessibilité de l’élément label de ruban en cours.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Un objet de type `CAccessibilityData` qui est remplie avec les données d’accessibilité de l’étiquette de ruban actuelle.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le `data` paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, `FALSE`.  
+ `TRUE` Si le `data` paramètre a été correctement remplis avec les données d’accessibilité de l’étiquette de ruban actuelle ; sinon, `FALSE`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   

@@ -1,13 +1,10 @@
 ---
-title: "TN031 : Barres de contrôles | Documents Microsoft"
-ms.custom: 
+title: 'TN031 : Barres de contrôles | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn031-control-bars"></a>TN031 : Barres de contrôles
 > [!NOTE]
@@ -203,7 +198,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Activé = 0  
   
--   Bouton de souris enfoncé = TBBS_PRESSED (&#124; aucun autre style)  
+-   Bouton de souris enfoncé = TBBS_PRESSED (&#124; tout autre style)  
   
 -   Désactivé = TBBS_DISABLED  
   

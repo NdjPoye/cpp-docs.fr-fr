@@ -1,12 +1,9 @@
 ---
 title: CCmdUI (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdUI
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdui-class"></a>CCmdUI (classe)
 Est utilisé uniquement dans un `ON_UPDATE_COMMAND_UI` gestionnaire dans un `CCmdTarget`-classe dérivée.  
@@ -79,7 +74,7 @@ class CCmdUI
 |[CCmdUI::m_pSubMenu](#m_psubmenu)|Pointe vers le sous-menu contenu représenté par le `CCmdUI` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CCmdUI`ne dispose pas d’une classe de base.  
+ `CCmdUI` ne dispose pas d’une classe de base.  
   
  Lorsqu’un utilisateur de votre application extrait un menu, chaque élément de menu doit savoir si elle doit être affiché comme activé ou désactivé. La cible d’une commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur de commande dans votre application, utilisez la fenêtre Propriétés pour créer un prototype d’entrée et de la fonction table des messages pour chaque gestionnaire.  
   
@@ -94,18 +89,18 @@ class CCmdUI
 |Menu Item|Active ou désactive|Active ou désactive|Vérifications à l’aide d’un point|Texte d’élément de jeux|  
 |Bouton de barre d’outils|Active ou désactive|Sélectionne, est désélectionnée, ou indéterminé|Identique à `SetCheck`|(Non applicable)|  
 |Volet de barre d’état|Rend le texte visible ou invisible|Bordure contextuelle ou normale de jeux|Identique à `SetCheck`|Définit le texte du volet|  
-|Bouton normal dans`CDialogBar`|Active ou désactive|Active ou désactive la case à cocher|Identique à `SetCheck`|Texte du bouton de jeux|  
-|Contrôle normal dans`CDialogBar`|Active ou désactive|(Non applicable)|(Non applicable)|Définit le texte de la fenêtre|  
+|Bouton normal dans `CDialogBar`|Active ou désactive|Active ou désactive la case à cocher|Identique à `SetCheck`|Texte du bouton de jeux|  
+|Contrôle normal dans `CDialogBar`|Active ou désactive|(Non applicable)|(Non applicable)|Définit le texte de la fenêtre|  
   
  Pour plus d’informations sur l’utilisation de cette classe, consultez [comment les objets d’Interface utilisateur de mise à jour](../../mfc/how-to-update-user-interface-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CCmdUI`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
  Appelez cette fonction membre pour indiquer le mécanisme de routage des commandes pour continuer le routage du message en cours dans la chaîne de gestionnaires.  
   
 ```  
@@ -115,7 +110,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Notes  
  Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un `ON_COMMAND_EX` gestionnaire retourne **FALSE**. Pour plus d’informations, consultez [Technical Note 6](../../mfc/tn006-message-maps.md).  
   
-##  <a name="enable"></a>CCmdUI::Enable  
+##  <a name="enable"></a>  CCmdUI::Enable  
  Appelez cette fonction membre pour activer ou désactiver l’élément d’interface utilisateur pour cette commande.  
   
 ```  
@@ -131,21 +126,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>  CCmdUI::m_nID  
  L’ID de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par le `CCmdUI` objet.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>  CCmdUI::m_nIndex  
  L’index de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par le `CCmdUI` objet.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu  
  Pointeur (de `CMenu` type) au menu représenté par le `CCmdUI` objet.  
   
 ```  
@@ -155,7 +150,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>Notes  
  **NULL** si l’élément n’est pas un menu.  
   
-##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
  Pointeur (de `CMenu` type) pour le sous-menu contenu représenté par le `CCmdUI` objet.  
   
 ```  
@@ -165,7 +160,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>Notes  
  **NULL** si l’élément n’est pas un menu. Si le sous-menu est une fenêtre contextuelle, `m_nID` contient l’ID du premier élément dans le menu contextuel. Pour plus d’informations, consultez [Note technique 21](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Pointeur (de type `CWnd`) à l’objet fenêtre, comme une barre d’outil ou d’état, qui la notification est envoyée.  
   
 ```  
@@ -175,7 +170,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>Notes  
  **NULL** si l’élément est un menu ou non - `CWnd` objet.  
   
-##  <a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>  CCmdUI::SetCheck  
  Appelez cette fonction membre pour définir l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée.  
   
 ```  
@@ -189,7 +184,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre fonctionne pour les éléments de menu et boutons de barre d’outils. L’état indéterminé s’applique uniquement aux boutons de barre d’outils.  
   
-##  <a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>  CCmdUI::SetRadio  
  Appelez cette fonction membre pour définir l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée.  
   
 ```  
@@ -203,7 +198,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre fonctionne comme `SetCheck`, à ceci près qu’elle fonctionne sur les éléments d’interface utilisateur qui agit en tant que partie d’un groupe de cases d’option. Si vous décochez les autres éléments dans le groupe n’est pas automatique, sauf si les éléments proprement dits préserver le comportement de groupe de cases d’option.  
   
-##  <a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>  CCmdUI::SetText  
  Appelez cette fonction membre pour définir le texte de l’élément d’interface utilisateur pour cette commande.  
   
 ```  

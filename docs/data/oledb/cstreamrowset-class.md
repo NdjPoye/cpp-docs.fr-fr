@@ -1,12 +1,9 @@
 ---
 title: CStreamRowset (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CStreamRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 817d9454ad97580cdfb3eb6d68fbc819ed64dd90
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3365767ed36bcdc45e87f08fb038500fa9ac6d82
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset, classe
 Utilisé dans un `CCommand` ou `CTable` déclaration.  
@@ -64,7 +59,7 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le **en lecture** méthode pour récupérer les données (chaîne Unicode) au format XML. Exemple :  
+ `ICommand::Execute` Retourne un `ISequentialStream` pointeur, qui est stocké dans `m_spStream`. Vous utilisez ensuite le **en lecture** méthode pour récupérer les données (chaîne Unicode) au format XML. Par exemple :  
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
@@ -73,7 +68,7 @@ class CStreamRowset
 > [!NOTE]
 >  Cette fonctionnalité fonctionne uniquement avec SQL Server 2000.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

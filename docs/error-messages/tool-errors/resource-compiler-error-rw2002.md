@@ -2,11 +2,8 @@
 title: Erreur RW2002 du compilateur de ressources | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources 
 Erreur d’analyse  
@@ -64,7 +59,7 @@ Erreur d’analyse
   
      Un caractère de contrôle dans l’instruction **ACCELERATORS** n’est pas valide. Le caractère qui suit le signe insertion (**^**) doit être compris entre A et Z, inclusif.  
   
-9. **Menus vides non autorisés**  
+9. **menus vides non autorisés**  
   
      Un **fin** mot clé apparaît avant les éléments de menu sont définis dans le **MENU** instruction. Le compilateur de ressources n’autorise pas les menus vides. Assurez-vous que vous n’avez pas de guillemets ouvrants le **MENU** instruction.  
   
@@ -80,7 +75,7 @@ Erreur d’analyse
   
      Le compilateur de ressources exige une virgule entre les champs `event` et *idvalue* dans l’instruction **ACCELERATORS** .  
   
-13. **Nom de classe de contrôle attendu**  
+13. **nom de classe de contrôle attendu**  
   
      Le `class` champ un **contrôle** instruction dans le **boîte de dialogue** instruction doit être un des types suivants : bouton, COMBOBOX, EDIT, LISTBOX, barre de défilement, statique, ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.  
   
@@ -108,7 +103,7 @@ Erreur d’analyse
   
      Le champ *pointsize* de l’option FONT dans l’instruction **DIALOG** doit être une valeur de taille de point entière.  
   
-20. **Constante de la boîte de dialogue numérique attendue**  
+20. **constante de la boîte de dialogue numérique attendue**  
   
      A **boîte de dialogue** instruction requiert des valeurs entières pour les *x, y, largeur*, et *hauteur* champs. Assurez-vous que ces valeurs sont placées après le **boîte de dialogue** (mot clé) et qu’ils ne sont pas négatifs.  
   
@@ -120,7 +115,7 @@ Erreur d’analyse
   
      Le compilateur de ressources n’a pas pu déterminer quel type de clé est défini pour l’accélérateur. Le champ `event` de l’instruction **ACCELERATORS** peut ne pas être valide.  
   
-23. **Numéro d’ID est attendu**  
+23. **numéro d’ID est attendu**  
   
      Un numéro est attendu la `id` champ d’une instruction de contrôle de la **boîte de dialogue** instruction. Assurez-vous que vous disposez d’un nombre ou `#define` instruction pour l’ID de contrôle.  
   
@@ -148,11 +143,11 @@ Erreur d’analyse
   
      Le champ `type` de l’instruction **ACCELERATORS** doit contenir la valeur ASCII ou VIRTKEY.  
   
-30. **Caractère de contrôle non valide**  
+30. **caractère de contrôle non valide**  
   
      Un caractère de contrôle dans l’instruction **ACCELERATORS** n’est pas valide. Un caractère de contrôle valide se compose d’une seule lettre (uniquement) après le signe insertion (^).  
   
-31. **Type de contrôle non valide**  
+31. **type de contrôle non valide**  
   
      Chaque instruction de contrôle dans un **boîte de dialogue** instruction doit être une des valeurs suivantes : case à cocher, COMBOBOX, contrôle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, icône, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, barre de défilement. Assurez-vous que ces instructions de contrôle sont correctement orthographiées.  
   
@@ -172,6 +167,6 @@ Erreur d’analyse
   
      Les valeurs de *données brutes* de l’instruction **RCDATA** doivent être des entiers ou des chaînes, séparés par une virgule. Assurez-vous de ne pas avoir oublié une virgule ou un guillemet autour d’une chaîne.  
   
-36. **Sous-type de menu inconnu**  
+36. **sous-type de menu inconnu**  
   
      Le *définition d’élément* champ le **MENU** instruction peut uniquement contenir **MENUITEM** et **POPUP** instructions.

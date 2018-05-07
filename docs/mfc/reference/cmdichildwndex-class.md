@@ -1,12 +1,9 @@
 ---
 title: Classe CMDIChildWndEx | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWndEx
@@ -121,17 +118,15 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 La `CMDIChildWndEx` classe fournit les fonctionnalités de Windows fenêtre interface multidocument (MDI) enfant. Il étend les fonctionnalités de [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). L'infrastructure requiert cette classe lorsqu'une application MDI utilise certaines classes MFC.  
@@ -230,10 +225,10 @@ class CMDIChildWndEx : public CMDIChildWnd
   
  [CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxMDIChildWndEx.h  
   
-##  <a name="addpane"></a>CMDIChildWndEx::AddPane  
+##  <a name="addpane"></a>  CMDIChildWndEx::AddPane  
  Ajoute un volet.  
   
 ```  
@@ -247,12 +242,12 @@ BOOL AddPane(
  Pointeur vers le volet.  
   
  [in] `bTail`  
- `TRUE`Pour ajouter le volet à la fin de la liste des volets pour le Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
+ `TRUE` Pour ajouter le volet à la fin de la liste des volets pour le Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le volet a été correctement inscrit auprès du Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si le volet a été correctement inscrit auprès du Gestionnaire d’ancrage ; dans le cas contraire, `FALSE`.  
   
-##  <a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
+##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
  Ajoute un volet à onglets.  
   
 ```  
@@ -263,7 +258,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
  [in] `pControlBar`  
  Pointeur vers le volet.  
   
-##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Ajuste la disposition d’ancrage.  
   
 ```  
@@ -274,7 +269,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  [in] `hdwp`  
  Handle vers une structure de fenêtre différée.  
   
-##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
+##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
   
 ```  
@@ -285,7 +280,7 @@ virtual BOOL CanShowOnMDITabs();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
+##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList  
  Spécifie si le nom de la fenêtre enfant MDI peut être affiché dans le [CMFCWindowsManagerDialog classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) boîte de dialogue.  
   
 ```  
@@ -293,12 +288,12 @@ virtual BOOL CanShowOnWindowsList();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la fenêtre peut être affichée dans le **Windows** boîte de dialogue ; sinon, `FALSE`.  
+ `TRUE` Si la fenêtre peut être affichée dans le **Windows** boîte de dialogue ; sinon, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée et retournez `FALSE` si la fenêtre ne doit pas être affichée dans le **Windows** boîte de dialogue. Cette fonction est appelée à partir de `CMFCWindowsManagerDialog`.  
   
-##  <a name="dockpane"></a>CMDIChildWndEx::DockPane  
+##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
  Ancre un volet.  
   
 ```  
@@ -321,7 +316,7 @@ void DockPane(
 ### <a name="remarks"></a>Notes  
  Le `lpRect` paramètre n’est pas utilisé.  
   
-##  <a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Ancre un volet à gauche d’un autre volet.  
   
 ```  
@@ -338,14 +333,14 @@ BOOL DockPaneLeftOf(
  Pointeur vers le volet qui sert de point de référence.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`en cas de réussite, `FALSE` en cas d’échec.  
+ `TRUE` en cas de réussite, `FALSE` en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode prend le volet spécifié par `pBar` et il est ancré sur le côté gauche du volet spécifié par `pLeftOf`.  
   
  Appelez cette méthode lorsque vous souhaitez ancrer les volets plusieurs dans un ordre prédéfini.  
   
-##  <a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
  Permet de mode de masquage automatique pour les volets lorsqu’elles sont ancrées sur les côtés spécifiées de la fenêtre.  
   
 ```  
@@ -365,9 +360,9 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 - `CBRS_ALIGN_BOTTOM`  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la méthode réussit ; dans le cas contraire `FALSE`.  
+ `TRUE` Si la méthode réussit ; dans le cas contraire `FALSE`.  
   
-##  <a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
  Permet d’ancrage de la fenêtre enfant au frame principal.  
   
 ```  
@@ -379,12 +374,12 @@ BOOL EnableDocking(DWORD dwDockStyle);
  Spécifie l’alignement d’ancrage à activer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la méthode réussit ; dans le cas contraire `FALSE`.  
+ `TRUE` Si la méthode réussit ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour permettre l’alignement d’ancrage au frame principal. Vous pouvez passer d’une combinaison d’indicateurs CBRS_ALIGN_ (pour plus d’informations, consultez [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
-##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager  
 
   
 ```  
@@ -395,7 +390,7 @@ CDockingManager* GetDockingManager();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
+##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName  
  Retourne le nom du document qui s’affiche dans la fenêtre enfant MDI.  
   
 ```  
@@ -410,7 +405,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  Si la fenêtre affiche un document qui n’est pas chargé à partir d’un fichier, substituez cette méthode dans une classe dérivée et renvoyer un identificateur de document unique.  
   
- `GetDocumentName`est appelé par l’infrastructure lorsqu’il enregistre l’état de tous les documents ouverts. La chaîne retournée est écrit dans le Registre.  
+ `GetDocumentName` est appelé par l’infrastructure lorsqu’il enregistre l’état de tous les documents ouverts. La chaîne retournée est écrit dans le Registre.  
   
  Lorsque l’infrastructure est restauration de l’état ultérieurement, le nom du document est lu à partir du Registre et passé [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Substituez cette méthode dans un [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-classe dérivée et créer ou ouvrir un document portant ce nom et lire le fichier qui porte ce nom. Si le document n’est pas basé sur un fichier, créez le document en fonction de l’identificateur de document lui-même. Vous devez effectuer les actions précédentes uniquement si vous souhaitez enregistrer et restaurer des documents.  
   
@@ -419,7 +414,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
-##  <a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
+##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon  
  Appelé par l’infrastructure pour récupérer l’icône de la fenêtre enfant MDI.  
   
 ```  
@@ -434,7 +429,7 @@ virtual HICON GetFrameIcon() const;
   
  Par défaut, cette méthode retourne l’icône de fenêtre. Substituer `GetFrameIcon` dans un `CMDIChildWndEx`-personnaliser le comportement de cet classe dérivée.  
   
-##  <a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
+##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText  
  Appelé par l’infrastructure pour récupérer le texte de la fenêtre enfant MDI.  
   
 ```  
@@ -449,7 +444,7 @@ virtual CString GetFrameText() const;
   
  Par défaut, cette méthode retourne le texte de la fenêtre. Substituer `GetFrameText` dans un `CMDIChildWndEx`-personnaliser le comportement de cet classe dérivée.  
   
-##  <a name="getpane"></a>CMDIChildWndEx::GetPane  
+##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
  Recherche un volet par l’ID de contrôle spécifié.  
   
 ```  
@@ -463,7 +458,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le volet si trouvée, sinon `NULL`.  
   
-##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
+##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
   
 ```  
@@ -474,7 +469,7 @@ CMFCTabCtrl* GetRelatedTabGroup();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
+##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane  
  Retourne un pointeur vers un volet d’ancrage qui fait partie d’un groupe de MDI les documents avec onglet.  
   
 ```  
@@ -484,7 +479,7 @@ CDockablePane* GetTabbedPane() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un volet d’ancrage qui fait partie d’un groupe de MDI les documents avec onglet.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText  
  Appelé par l’infrastructure pour récupérer une info-bulle pour un bouton de barre d’outils.  
   
 ```  
@@ -494,12 +489,12 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’info-bulle s’affiche. L'implémentation par défaut retourne la valeur `FALSE`.  
+ `TRUE` Si l’info-bulle s’affiche. L'implémentation par défaut retourne la valeur `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode si vous souhaitez afficher les conseils d’un outil personnalisé pour les boutons de barre d’outils.  
   
-##  <a name="insertpane"></a>CMDIChildWndEx::InsertPane  
+##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
  Enregistre le volet spécifié avec le Gestionnaire d’ancrage.  
   
 ```  
@@ -520,9 +515,9 @@ BOOL InsertPane(
  Si `TRUE`, `pControlBar` est inséré après `pTarget`. Si `FALSE`, `pControlBar` est inséré avant `pTarget`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la méthode réussit, `FALSE` dans le cas contraire.  
+ `TRUE` Si la méthode réussit, `FALSE` dans le cas contraire.  
   
-##  <a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
  Détermine si un point spécifié est proche du site d’ancrage.  
   
 ```  
@@ -537,18 +532,18 @@ BOOL IsPointNearDockSite(
  Le point spécifié.  
   
  [in] `dwBarAlignment`  
- Spécifie le bord le point est proche. Les valeurs possibles sont `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, et`CBRS_ALIGN_BOTTOM`  
+ Spécifie le bord le point est proche. Les valeurs possibles sont `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, et `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`Si le point est proche de la bordure externe du site d’ancrage ; `FALSE` dans le cas contraire.  
+ `TRUE` Si le point est proche de la bordure externe du site d’ancrage ; `FALSE` dans le cas contraire.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le point est proche du site d’ancrage ; dans le cas contraire `FALSE`.  
+ `TRUE` Si le point est proche du site d’ancrage ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Le point est proche du site d’ancrage lorsqu’il se trouve dans le respect de la définir dans le Gestionnaire d’ancrage. Le respect de la valeur par défaut est de 15 pixels.  
   
-##  <a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
+##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
  Spécifie si le document qui s’affiche dans la fenêtre enfant est en lecture seule.  
   
 ```  
@@ -556,7 +551,7 @@ virtual BOOL IsReadOnly();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le document est en lecture seule ; dans le cas contraire `FALSE`.  
+ `TRUE` Si le document est en lecture seule ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction est utilisée pour empêcher l’enregistrement de documents en lecture seule.  
@@ -566,7 +561,7 @@ virtual BOOL IsReadOnly();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
-##  <a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
+##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane  
  Spécifie si la fenêtre enfant MDI contient un volet d’ancrage.  
   
 ```  
@@ -574,9 +569,9 @@ BOOL IsTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la fenêtre enfant MDI contient un volet d’ancrage qui a été converti en un document à onglets. dans le cas contraire `FALSE`.  
+ `TRUE` Si la fenêtre enfant MDI contient un volet d’ancrage qui a été converti en un document à onglets. dans le cas contraire `FALSE`.  
   
-##  <a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
  Appelé par l’infrastructure pour déplacer une fenêtre mini-frame.  
   
 ```  
@@ -588,9 +583,9 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  Pointeur vers une fenêtre mini-frame.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la méthode réussit, sinon `FALSE`.  
+ `TRUE` Si la méthode réussit, sinon `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
  Appelé par l’infrastructure pour entrer ou quitter le mode d’aperçu avant impression.  
   
 ```  
@@ -606,7 +601,7 @@ virtual void OnSetPreviewMode(
  [in] `pState`  
  Pointeur vers la structure d’état de l’aperçu avant impression.  
   
-##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Appelé par l’infrastructure pour mettre à jour le titre du frame.  
   
 ```  
@@ -617,7 +612,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
  [in] `bAddToTitle`  
  Si `TRUE`, ajoutez le nom du document pour le titre.  
   
-##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Retourne le volet qui contient le point donné.  
   
 ```  
@@ -642,7 +637,7 @@ CBasePane* PaneFromPoint(
  Augmenter la zone de recherche de ce montant. Un volet satisfait les critères de recherche si le point donné se situe dans la zone accrue.  
   
  [in] `bExactBar`  
- `TRUE`pour ignorer la `nSensitivity` paramètre ; sinon, `FALSE`.  
+ `TRUE` pour ignorer la `nSensitivity` paramètre ; sinon, `FALSE`.  
   
  [in] `pRTCBarType`  
  Si ce n’est pas `NULL`, la méthode recherche uniquement les volets du type spécifié.  
@@ -658,7 +653,7 @@ CBasePane* PaneFromPoint(
   
  Lorsque la fonction retourne et un volet a été trouvé, `dwAlignment` contient l’alignement du point spécifié. Par exemple, si le point est la plus proche de la partie supérieure du volet, `dwAlignment` a la valeur `CBRS_ALIGN_TOP`.  
   
-##  <a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Recalcule la disposition de la fenêtre.  
   
 ```  
@@ -669,7 +664,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
  [in] `bNotify`  
  Si `TRUE`, l’élément actif de la place de la fenêtre reçoit la notification de la modification de la disposition.  
   
-##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Supprime un volet à partir du Gestionnaire d’ancrage.  
   
 ```  
@@ -697,7 +692,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  Pointeur vers un volet qui remplace le volet supprimé.  
   
-##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
+##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
   
 ```  
@@ -709,7 +704,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
+##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane  
 
   
 ```  
@@ -728,7 +723,7 @@ void ShowPane(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
+##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
  Met à jour l’icône d’onglet de la barre des tâches Windows 7.  
   
 ```  
@@ -741,7 +736,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
+##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
  Supprime l’enfant MDI d’onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -754,7 +749,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
+##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect  
  Appelé par l’infrastructure pour définir le rectangle de découpage pour sélectionner une partie de la zone du client d’une fenêtre pour afficher sous forme de miniature de cette fenêtre dans la barre des tâches.  
   
 ```  
@@ -770,7 +765,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
+##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties  
  Définit les propriétés d’un onglet de la barre des tâches Windows 7.  
   
 ```  
@@ -783,7 +778,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
+##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
  Insère l’enfant MDI avant de la fenêtre spécifiée sur les onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -796,7 +791,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
+##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
  Active l’onglet de la barre des tâches Windows 7 correspondant.  
   
 ```  
@@ -805,7 +800,7 @@ void SetTaskbarTabActive();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
+##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
  Enregistre l’enfant MDI avec onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
+##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
  Appelé par l’infrastructure lorsqu’il a besoin d’étendre une bitmap pour un aperçu de miniature du onglet de barre des tâches Windows 7 de l’enfant MDI.  
   
 ```  
@@ -845,7 +840,7 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ### <a name="remarks"></a>Notes  
  Requirementher ou lui lui lui lui lui lui lui **:** afxmdichildwndex.h  
   
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
  Appelé par l’infrastructure lors de la miniature d’onglet de la barre des tâches doit traiter le message WM_MOUSEACTIVATE.  
   
 ```  
@@ -868,7 +863,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut active la fenêtre enfant MDI connexe.  
   
-##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
+##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
  Appelé par l’infrastructure lors de la miniature d’onglet de la barre des tâches doit traiter le message WM_ACTIVATE.  
   
 ```  
@@ -891,7 +886,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut active la fenêtre enfant MDI connexe.  
   
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
  Appelé par le framework lorsque l’utilisateur appuie sur le bouton Fermer dans la miniature d’onglet de la barre des tâches.  
   
 ```  
@@ -900,7 +895,7 @@ virtual void OnPressTaskbarThmbnailCloseButton();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
+##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail  
  Appelé par l’infrastructure lorsqu’il a besoin obtenir une image bitmap de la miniature sous forme d’icône de l’enfant MDI.  
   
 ```  
@@ -918,7 +913,7 @@ virtual HBITMAP OnGetIconicThumbnail(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
+##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
  Appelé par l’infrastructure lorsqu’il a besoin obtenir une image bitmap pour un aperçu instantané de l’enfant MDI.  
   
 ```  
@@ -940,7 +935,7 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée et retourner une bitmap 32 BPP valide pour l’aperçu instantané de l’enfant MDI. Cette méthode est appelée uniquement lorsque l’enfant MDI est affichée sur les onglets de la barre des tâches Windows 7. Si vous retournez `NULL`, MFC appelle les gestionnaires par défaut et obtient à l’aide de bitmaps `PrintClient` ou `PrintWindow`.  
   
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
  Une combinaison d’indicateurs, qui est passée par l’infrastructure pour le `SetTaskbarTabProperties` (méthode), lorsqu’un onglet (MDI enfants) est en cours d’inscription avec des onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -950,7 +945,7 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 ### <a name="remarks"></a>Notes  
  La combinaison de la valeur par défaut est STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.  
   
-##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
+##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
  Indique si la sélection automatique d’une partie de la zone du client d’une fenêtre pour afficher sous forme de miniature de cette fenêtre dans la barre des tâches est activée ou désactivée.  
   
 ```  
@@ -962,7 +957,7 @@ BOOL IsTaskbarThumbnailClipRectEnabled() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
+##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
  Indique si l’enfant MDI peut apparaître sur les onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -970,11 +965,11 @@ BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’enfant MDI peut apparaître sur les onglets de la barre des tâches Windows 7 ; `FALSE` si l’enfant MDI ne peut pas apparaître sur les onglets de la barre des tâches Windows 7.  
+ `TRUE` Si l’enfant MDI peut apparaître sur les onglets de la barre des tâches Windows 7 ; `FALSE` si l’enfant MDI ne peut pas apparaître sur les onglets de la barre des tâches Windows 7.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
+##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
  Retourne `TRUE` si l’enfant MDI a été correctement inscrit auprès d’onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -982,11 +977,11 @@ BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’enfant MDI est inscrit auprès d’onglets de la barre des tâches Windows 7 ; dans le cas contraire `FALSE`.  
+ `TRUE` Si l’enfant MDI est inscrit auprès d’onglets de la barre des tâches Windows 7 ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
+##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps  
  Invalide une représentation sous forme d’icône bitmap d’un enfant MDI.  
   
 ```  
@@ -999,7 +994,7 @@ BOOL InvalidateIconicBitmaps();
 ### <a name="remarks"></a>Notes  
  Doit être appelée lorsque le contenu en direct ou la taille d’un enfant MDI a changé.  
   
-##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
+##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
  Appelé par l’infrastructure lorsqu’il a besoin sélectionner une partie de la zone du client d’une fenêtre pour afficher sous forme de miniature de cette fenêtre dans la barre des tâches.  
   
 ```  
@@ -1011,7 +1006,7 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
+##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
  Appelé par l’infrastructure lorsqu’il a besoin obtenir une fenêtre enfant (généralement une vue ou une fenêtre fractionnée) à afficher sur une miniature d’onglet de la barre des tâches Windows 7.  
   
 ```  
@@ -1023,7 +1018,7 @@ virtual CWnd* GetTaskbarPreviewWnd();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
+##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
  Retourne la fenêtre de proxy d’onglet inscrite avec des onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -1035,7 +1030,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
+##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
  Active ou désactive la sélection automatique d’une partie de la zone du client d’une fenêtre pour afficher sous forme de miniature de cette fenêtre dans la barre des tâches.  
   
 ```  
@@ -1048,7 +1043,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
+##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
  Indique à l’infrastructure indique si cet enfant MDI peut être affiché sur les onglets de la barre des tâches Windows 7.  
   
 ```  
@@ -1056,12 +1051,12 @@ virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le contenu de l’enfant MDI peut être affiché sur les miniatures de la barre des tâches Windows 7.  
+ `TRUE` Si le contenu de l’enfant MDI peut être affiché sur les miniatures de la barre des tâches Windows 7.  
   
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée et retournez `FALSE` pour désactiver l’apparence de cet enfant MDI sur les onglets de la barre des tâches Windows 7.  
   
-##  <a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
+##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
  Appelé par l’infrastructure pour activer le frame de niveau supérieur lorsque l’application est activée à partir d’un onglet de la barre des tâches.  
   
 ```  

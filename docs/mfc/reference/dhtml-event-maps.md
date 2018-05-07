@@ -1,13 +1,10 @@
 ---
-title: "DHTML, tables d’événements | Documents Microsoft"
-ms.custom: 
+title: DHTML, tables d’événements | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.macros.shared
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-event-maps"></a>DHTML, tables d'événements
 Les macros suivantes peuvent être utilisés pour gérer les événements DHTML.  
@@ -90,10 +85,10 @@ Les macros suivantes peuvent être utilisés pour gérer les événements DHTML.
 |[END_URL_ENTRIES](#end_url_entries)|Marque la fin d’une table d’entrée d’événement URL.|  
 |[URL_EVENT_ENTRY](#url_event_entry)|Mappe une ressource URL ou HTML à une page dans une boîte de dialogue multipage.|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP  
  Marque le début de la table d’événements DHTML lorsqu’elle est placée dans le fichier source pour la classe identifiée par `className`.  
   
 ```   
@@ -111,10 +106,10 @@ BEGIN_DHTML_EVENT_MAP(className)
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
  Marque le début de la table d’événements DHTML au sein de la définition de classe pour `className`.  
   
 ```   
@@ -132,11 +127,11 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP  
  Déclare une table d’événements DHTML dans une définition de classe.  
   
 ```   
@@ -152,10 +147,10 @@ DECLARE_DHTML_EVENT_MAP()
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap( );`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT  
+##  <a name="dhtml_event"></a>  DHTML_EVENT  
  Gère (au niveau du document), un événement identifié par `dispid` émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -175,10 +170,10 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
  Gère l’événement identifié par `dispid` déclenchés par le contrôle ActiveX identifié par `controlName`.  
   
 ```   
@@ -198,10 +193,10 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
  Gère (au niveau du document), un événement identifié par `dispid` émane par n’importe quel élément HTML de la classe CSS identifiée par `elemName`.  
   
 ```   
@@ -221,10 +216,10 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
  Handles (à l’élément identifié par `elemName`) un événement identifié par `dispid`.  
   
 ```   
@@ -248,10 +243,10 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
   
  Si cette macro est utilisée pour gérer les événements de propagation, l’élément identifié par `elemName` ne peut pas être la source de l’événement (la source peut être n’importe quel élément contenu dans `elemName`).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
  Gère (au niveau du document) le **onafterupdate** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -268,10 +263,10 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
  Gère (au niveau du document) le **onbeforeupdate** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -288,10 +283,10 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
  Gère (au niveau de l’élément) le **onblur** événement. Il s’agit d’un événement nonbubbling.  
   
 ```   
@@ -308,10 +303,10 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE  
  Gère (au niveau de l’élément) le `onchange` événement. Il s’agit d’un événement nonbubbling.  
   
 ```   
@@ -328,10 +323,10 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
  Gère (au niveau du document) le **onclick** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -348,10 +343,10 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
  Gère (au niveau du document) le **ondataavailable** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -368,10 +363,10 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
  Gère (au niveau du document) le **ondatasetchanged** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -388,10 +383,10 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
  Gère (au niveau du document) le **ondatasetcomplete** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -409,10 +404,10 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
  Gère (au niveau du document) le **ondblclick** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -429,10 +424,10 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
  Gère (au niveau du document) le **ondragstart** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -449,10 +444,10 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
  Gère (au niveau du document) le **onerrorupdate** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```   
@@ -470,10 +465,10 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
  Gère (au niveau du document) le **onfilterchange** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -492,10 +487,10 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
  Gère (au niveau de l’élément) le **onfocus** événement. Il s’agit d’un événement nonbubbling.  
   
 ```  
@@ -514,10 +509,10 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
  Gère (au niveau du document) le `onhelp` événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -536,10 +531,10 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
  Gère (au niveau du document) le **onkeydown** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -558,10 +553,10 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
  Gère (au niveau du document) le **onkeypress** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -580,10 +575,10 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
  Gère (au niveau du document) le **onkeyup** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -602,10 +597,10 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
  Gère (au niveau du document) le **onmousedown** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -624,10 +619,10 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
  Gère (au niveau du document) le `onmousemove` événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -646,10 +641,10 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
  Gère (au niveau du document) le **onmouseout** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -668,10 +663,10 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
  Gère (au niveau du document) le **onmouseover** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -690,10 +685,10 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
  Gère (au niveau du document) le **onmouseup** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -712,10 +707,10 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
  Gère (au niveau de l’élément) le **onresize** événement. Il s’agit d’un événement nonbubbling.  
   
 ```  
@@ -734,10 +729,10 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
  Gère (au niveau du document) le **onrowenter** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -756,10 +751,10 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
  Gère (au niveau du document) le **onrowexit** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -778,10 +773,10 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
  Gère (au niveau du document) le **onselectstart** événement émis par l’élément HTML identifié par `elemName`.  
   
 ```  
@@ -800,10 +795,10 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
  Gère (au niveau du document), un événement identifié par `dispid` émis par n’importe quel élément HTML avec la balise HTML identifiée par `elemName`.  
   
 ```   
@@ -823,10 +818,10 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP  
  Marque la fin de la table d’événements DHTML.  
   
 ```   
@@ -836,10 +831,10 @@ END_DHTML_EVENT_MAP()
 ### <a name="remarks"></a>Notes  
  Doit être utilisé conjointement avec [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP  
  Démarre la définition d’une table d’événements DHTML et l’URL dans une boîte de dialogue multipage.  
   
 ```  
@@ -853,10 +848,10 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP  
  Démarre la définition d’une table d’événements DHTML incorporée dans une boîte de dialogue multipage.  
   
 ```  
@@ -881,10 +876,10 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES  
  Démarre la définition d’une table d’entrée d’événement URL dans une boîte de dialogue multipage.  
   
 ```  
@@ -902,10 +897,10 @@ BEGIN_URL_ENTRIES(className)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP  
  Déclare une table d’événements DHTML et l’URL dans une définition de classe.  
   
 ```  
@@ -918,10 +913,10 @@ DECLARE_DHTML_URL_EVENT_MAP()
   
  Une table d’événements DHTML et l’URL contient [incorporé DHTML, tables d’événements](#begin_embed_dhtml_event_map) et [entrées d’événement URL](#begin_url_entries) pour mapper les événements DHTML aux gestionnaires sur une base par page. Utilisez [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) pour implémenter le mappage.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP  
  Marque la fin d’une table d’événements DHTML et l’URL.  
   
 ```  
@@ -936,10 +931,10 @@ END_DHTML_URL_EVENT_MAP(className)
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP  
  Marque la fin d’une table d’événements DHTML incorporée.  
   
 ```  
@@ -950,10 +945,10 @@ END_EMBED_DHTML_EVENT_MAP()
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES  
  Marque la fin d’une table d’entrée d’événement URL.  
   
 ```  
@@ -964,10 +959,10 @@ END_URL_ENTRIES()
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY  
  Mappe une ressource URL ou HTML à une page dans une boîte de dialogue multipage.  
   
 ```  
@@ -993,7 +988,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
  Consultez l’exemple de [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
 
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdhtml.h  
 
 ##  <a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
@@ -1007,7 +1002,7 @@ END_DHTML_EVENT_MAP_INLINE( )
 ### <a name="remarks"></a>Notes  
  Doit être utilisé conjointement avec [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline).  
    
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdhtml.h  
    
 ### <a name="see-also"></a>Voir aussi  

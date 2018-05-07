@@ -1,30 +1,25 @@
 ---
-title: "Définition des Images d’un élément individuel | Documents Microsoft"
-ms.custom: 
+title: Définition des Images d’un élément individuel | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7f3dbdf4d386e40802d74459dd2854035b5b7c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Définition des images d'un élément individuel
 Les différents types d’images utilisée par l’élément de zone de liste déroulante étendue sont déterminés par les valeurs dans le `iImage`, **iSelectedImage**, et **transport** membres de le [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) structure. Chaque valeur est l’index d’une image dans la liste d’images associée du contrôle. Par défaut, ces membres sont définis sur 0, le contrôle affiche pas d’image pour l’élément. Si vous souhaitez utiliser des images pour un élément spécifique, vous pouvez modifier la structure en conséquence, lors de l’insertion de l’élément de zone de liste déroulante ou en modifiant un élément de zone de liste déroulante existant.  

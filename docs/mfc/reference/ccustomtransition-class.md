@@ -1,12 +1,9 @@
 ---
 title: CCustomTransition, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCustomTransition
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition, classe
 Implémente une transition personnalisée.  
@@ -90,10 +85,10 @@ class CCustomTransition : public CBaseTransition;
   
  `CCustomTransition`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
  Construit un objet de transition personnalisée.  
   
 ```  
@@ -104,7 +99,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Pointeur vers l’interpolateur personnalisé.  
   
-##  <a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>  CCustomTransition::Create  
  Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -122,42 +117,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  Cette méthode peut également définir la valeur initiale et la rapidité initiale à appliquer à une variable d’animation, qui est associée à cette transition. Pour cela, vous devez appeler SetInitialValue et SetInitialVelocity avant que l’infrastructure crée l’objet COM encapsulé transition (il se produit lorsque vous appelez CAnimationController::AnimateGroup).  
   
-##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
  Spécifie si la valeur initiale a été spécifiée avec SetInitialValue.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
  Spécifie si la rapidité initiale a été spécifiée avec SetInitialVelocity.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
  Stocke la valeur initiale.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
  Stocke la rapidité initiale.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
  Stocke un pointeur à un interpolateur personnalisé.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
  Définit une valeur initiale, qui est appliquée à une variable d’animation associée à cette transition.  
   
 ```  
@@ -167,7 +162,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>Paramètres  
  `initialValue`  
   
-##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Définit une rapidité initiale, qui est appliquée à une variable d’animation associée à cette transition.  
   
 ```  

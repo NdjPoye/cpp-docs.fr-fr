@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Sous-classement d’un contrôle Windows | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e41eefdf1c1be2d0e91061e0efce5f5408c1848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95d6109bdc6ae28b748ee0be78e14ab62bba10fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 Cet article explique le processus de sous-classement d'un contrôle Windows commun pour créer un contrôle ActiveX. Le sous-classement d'un contrôle Windows existant est un moyen rapide de développer un contrôle ActiveX. Le nouveau contrôle a les fonctionnalités du contrôle Windows sous-classé, telles que la peinture et la réponse aux clics de souris. Exemple de contrôles ActiveX MFC [bouton](../visual-cpp-samples.md) est un exemple de sous-classement d’un contrôle Windows.  
@@ -53,7 +48,7 @@ Cet article explique le processus de sous-classement d'un contrôle Windows comm
   
  Consultez l'article Q243454 de la Base de connaissances pour plus d'informations sur le sous-classement d'un contrôle.  
   
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Remplacement de IsSubclassedControl et PreCreateWindow  
+##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Remplacement de IsSubclassedControl et PreCreateWindow  
  Pour remplacer `PreCreateWindow` et `IsSubclassedControl`, ajoutez les lignes de code suivantes à la section `protected` de la déclaration de classe de contrôle :  
   
  [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
@@ -70,7 +65,7 @@ Cet article explique le processus de sous-classement d'un contrôle Windows comm
   
  Cette opération ajoute le **BS_CHECKBOX** style d’indicateur, tout en laissant l’indicateur de style par défaut (**WS_CHILD**) de la classe `COleControl` intacts.  
   
-##  <a name="_core_modifying_the_ondraw_member_function"></a>Modification de la fonction membre OnDraw  
+##  <a name="_core_modifying_the_ondraw_member_function"></a> Modification de la fonction membre OnDraw  
  Si vous souhaitez que votre contrôle sous-classé conserve la même apparence que le contrôle Windows correspondant, la fonction membre `OnDraw` du contrôle doit contenir un seul appel à la fonction membre `DoSuperclassPaint`, comme dans l'exemple suivant :  
   
  [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
@@ -80,23 +75,23 @@ Cet article explique le processus de sous-classement d'un contrôle Windows comm
 > [!NOTE]
 >  Le `DoSuperclassPaint` fonction membre fonctionne qu’avec les types de contrôles qui permettent un contexte de périphérique soient transmis comme le **wParam** d’un `WM_PAINT` message. Cela inclut certains contrôles Windows standards, tels que **barre de défilement** et **bouton**et tous les contrôles communs. Pour les contrôles qui ne prennent pas en charge ce comportement, vous devez fournir votre propre code pour afficher un contrôle inactif correctement.  
   
-##  <a name="_core_handling_reflected_window_messages"></a>Gestion des Messages de fenêtre réfléchis  
+##  <a name="_core_handling_reflected_window_messages"></a> Gestion des Messages de fenêtre réfléchis  
  Les contrôles Windows envoient généralement certains messages de fenêtre à leur fenêtre parente. Certains de ces messages, tels que **WM_COMMAND**, fournir une notification d’une action de l’utilisateur. D'autres, telles que `WM_CTLCOLOR`, sont utilisés pour obtenir les informations de la fenêtre parente. Un contrôle ActiveX communique généralement avec la fenêtre parente par d'autres moyens. Les notifications sont communiquées en expédiant des événements (envoi de notifications d'événements) et des informations sur le conteneur de contrôle sont obtenues lors de l'accès aux propriétés ambiantes du conteneur. Comme ces techniques de communication existent, les conteneurs de contrôle ActiveX ne sont pas sensés traiter les messages de fenêtre envoyés par le contrôle.  
   
  Pour empêcher le conteneur de recevoir les messages de fenêtre envoyés par un contrôle Windows sous-classé, `COleControl` crée une fenêtre supplémentaire pour servir de parent du contrôle. Cette fenêtre supplémentaire, appelée "réflecteur", n'est créée que pour un contrôle ActiveX qui sous-classe un contrôle Windows et a la même taille et position que la fenêtre de contrôle. La fenêtre réflecteur intercepte certains messages de fenêtre et les envoie au contrôle. Le contrôle, dans sa procédure de fenêtre, peut ensuite traiter ces messages réfléchis en utilisant les actions appropriées pour un contrôle ActiveX (par exemple, déclencher un événement). Consultez [ID de Message de fenêtre réfléchi](../mfc/reflected-window-message-ids.md) pour une liste des fenêtres interceptés messages et leurs correspondantes messages réfléchis.  
   
- Un conteneur de contrôles ActiveX peut être conçu pour effectuer le renvoi de message lui-même, éliminant le besoin de `COleControl` de créer la fenêtre de réflection et de réduire la charge d'exécution pour un contrôle Windows sous-classé. `COleControl`détecte si le conteneur prend en charge cette fonctionnalité en recherchant une propriété ambiante MessageReflect avec une valeur de **TRUE**.  
+ Un conteneur de contrôles ActiveX peut être conçu pour effectuer le renvoi de message lui-même, éliminant le besoin de `COleControl` de créer la fenêtre de réflection et de réduire la charge d'exécution pour un contrôle Windows sous-classé. `COleControl` détecte si le conteneur prend en charge cette fonctionnalité en recherchant une propriété ambiante MessageReflect avec une valeur de **TRUE**.  
   
  Pour traiter un message de fenêtre réfléchi, ajoutez une entrée à la table des messages de contrôle et implémentez une fonction gestionnaire. Comme les messages réfléchis ne font pas partie de l'ensemble standard de messages définis par Windows, l'Affichage de classes ne prend pas en charge l'ajout de ces gestionnaires de messages. Toutefois, il n'est pas difficile d'ajouter un gestionnaire manuellement.  
   
  Pour ajouter un gestionnaire de messages pour un message de fenêtre réfléchi manuellement, procédez comme suit :  
   
--   Dans le fichier .H de la classe de contrôle, déclarez une fonction gestionnaire. La fonction doit avoir un type de retour de **LRESULT** et deux paramètres, de types **WPARAM** et **LPARAM**, respectivement. Exemple :  
+-   Dans le fichier .H de la classe de contrôle, déclarez une fonction gestionnaire. La fonction doit avoir un type de retour de **LRESULT** et deux paramètres, de types **WPARAM** et **LPARAM**, respectivement. Par exemple :  
   
      [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]  
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]  
   
--   Dans le fichier .cpp de la classe de contrôle , ajoutez une entrée `ON_MESSAGE` à la table des messages. Les paramètres de cette entrée doivent être l'identificateur de message et le nom de la fonction gestionnaire. Exemple :  
+-   Dans le fichier .cpp de la classe de contrôle , ajoutez une entrée `ON_MESSAGE` à la table des messages. Les paramètres de cette entrée doivent être l'identificateur de message et le nom de la fonction gestionnaire. Par exemple :  
   
      [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]  
   

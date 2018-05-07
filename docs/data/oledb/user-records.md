@@ -1,12 +1,9 @@
 ---
 title: Enregistrements utilisateur | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_MAP
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-records"></a>Enregistrements utilisateur
 Pour utiliser un accesseur statique (autrement dit, un accesseur dérivé **CAccessor)**, le consommateur doit disposer d’un enregistrement d’utilisateur. L’enregistrement de l’utilisateur est une classe C++ qui contienne les éléments de données à l’entrée de handle ou de sortie. L’Assistant Consommateur OLE DB ATL génère un enregistrement d’utilisateur pour le consommateur. Vous pouvez ajouter des méthodes à l’enregistrement d’utilisateur pour les tâches facultatives telles que la gestion des commandes.  

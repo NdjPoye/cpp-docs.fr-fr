@@ -1,13 +1,10 @@
 ---
 title: Messages de Notification du Slider | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages, notification
 - notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4fc9e9065017e04b6375d1e5a8e336d4366755
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b003e23a1fef2b44600b9fd15dfe4ca541df5369
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-notification-messages"></a>Messages de notification du Slider
 Un contrôle slider notifie sa fenêtre parente des actions de l’utilisateur en envoyant au parent `WM_HSCROLL` ou `WM_VSCROLL` messages, en fonction de l’orientation du contrôle slider. Pour gérer ces messages, ajouter des gestionnaires pour les `WM_HSCROLL` et `WM_VSCROLL` messages à la fenêtre parente. Le [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) et [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) fonctions membres recevront un code de notification, la position du curseur et un pointeur vers le [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objet. Notez que le pointeur est de type **CScrollBar \***  bien qu’il pointe vers un `CSliderCtrl` objet. Vous devrez peut-être convertir ce pointeur si vous avez besoin manipuler le contrôle slider.  
@@ -38,12 +33,12 @@ Un contrôle slider notifie sa fenêtre parente des actions de l’utilisateur e
 |Message de notification|Événement ayant déclenché la notification à envoyer|  
 |--------------------------|-------------------------------------------|  
 |**TB_BOTTOM**|**VK_END**|  
-|**TB_ENDTRACK**|`WM_KEYUP`(l’utilisateur a une clé qui a envoyé un code de touche virtuelle pertinentes)|  
+|**TB_ENDTRACK**|`WM_KEYUP` (l’utilisateur a une clé qui a envoyé un code de touche virtuelle pertinentes)|  
 |**QUEL**|**VK_RIGHT** ou **VK_DOWN**|  
 |**TB_LINEUP**|**VK_LEFT** ou **VK_UP**|  
 |**TB_PAGEDOWN**|**VK_NEXT** (l’utilisateur a cliqué sur le canal en dessous ou à droite du curseur)|  
 |**TB_PAGEUP**|**VK_PRIOR** (l’utilisateur a cliqué sur le canal au-dessus ou à gauche du curseur)|  
-|**TB_THUMBPOSITION**|`WM_LBUTTONUP`suivant une **TB_THUMBTRACK** message de notification|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` suivant une **TB_THUMBTRACK** message de notification|  
 |**TB_THUMBTRACK**|Déplacement du curseur (l’utilisateur fait glisser le curseur)|  
 |**TB_TOP**|**VK_HOME**|  
   

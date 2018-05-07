@@ -1,12 +1,9 @@
 ---
-title: "Modèle objet OLE DB | Documents Microsoft"
-ms.custom: 
+title: Modèle objet OLE DB | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba9fd9b7ba5503f6ed5e1837147524f5abc7c31b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-object-model"></a>Modèle objet OLE DB
 Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quatre premiers objets ou composants répertoriés (les sources de données, les sessions, les commandes et ensembles de lignes) permettent de se connecter à une source de données et l’afficher. Le reste, à commencer par les accesseurs, se rapportent à l’utilisation avec les données lorsqu’elle est affichée.  
@@ -45,7 +40,7 @@ Le modèle objet OLE DB comprend les objets ou les composants suivants. Les quat
   
  Une commande est simplement un conteneur pour une commande de texte, qui est une chaîne (par exemple, une instruction SQL) passée à partir d’un consommateur à un objet de source de données pour l’exécution par le magasin de données du fournisseur sous-jacent. En règle générale, la commande de texte est une SQL **sélectionnez** instruction (dans ce cas, étant donné que SQL **sélectionnez** spécifie un ensemble de lignes, la commande crée automatiquement un ensemble de lignes).  
   
-## <a name="rowsets"></a>Rowsets  
+## <a name="rowsets"></a>Ensembles de lignes  
  Ensembles de lignes exposent les données sous forme de tableau. Un index est un cas spécial d’un ensemble de lignes. Vous pouvez créer des ensembles de lignes de la session ou de la commande.  
   
 ### <a name="schema-rowsets"></a>Jeux de lignes du schéma  

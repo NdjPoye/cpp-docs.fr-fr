@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Ajout d’événements Stock à un contrôle ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Ajout d’événements Stock à un contrôle ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX
-Événements stock diffèrent des événements personnalisés dans la mesure où ils sont déclenchés automatiquement par la classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions communes. Certaines actions courantes implémentées par `COleControl` inclure unique - et double - clicks sur le contrôle, les événements de clavier et les modifications dans l’état des boutons de souris. Entrées de mappage des événements pour les événements stock sont toujours précédées du **EVENT_STOCK** préfixe.  
+Événements stock diffèrent des événements personnalisés dans la mesure où ils sont déclenchés automatiquement par la classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions communes. Certaines actions courantes implémentées par `COleControl` inclure unique - et double - clicks sur le contrôle, les événements de clavier et les modifications dans l’état des boutons de souris. Entrées de mappage des événements pour les événements stock sont toujours précédées du **EVENT_STOCK** préfixe.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>Stocker les événements pris en charge par l’Assistant Ajout d’événement  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> Stocker les événements pris en charge par l’Assistant Ajout d’événement  
  La `COleControl` classe fournit dix événements stock, répertoriés dans le tableau suivant. Vous pouvez spécifier les événements que vous souhaitez dans votre contrôle à l’aide de la [Assistant Ajout d’événement](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Événements stock  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |MouseUp|**void FireMouseUp (court** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Déclenché si n’importe quel **BUTTONUP** (gauche, centre ou droite) est reçu. La capture de la souris est relâchée avant que cet événement est déclenché.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**void FireReadyStateChange ()**|Déclenché lorsqu’un contrôle passe à l’état prêt suivant en raison de la quantité de données reçues.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_READYSTATECHANGE)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>Ajout d’un événement Stock à l’aide de l’Assistant Ajout d’événement  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Ajout d’un événement Stock à l’aide de l’Assistant Ajout d’événement  
  Ajout d’événements stock nécessite moins de travail que l’ajout d’événements personnalisés, car le déclenchement de l’événement réel est géré automatiquement par la classe de base `COleControl`. La procédure suivante ajoute un événement stock à un contrôle qui a été développé à l’aide de [Assistant contrôle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). L’événement, appelé KeyPress, se déclenche lorsqu’une touche est enfoncée et que le contrôle est actif. Cette procédure peut également être utilisée pour ajouter d’autres événements stocks. Remplacez le nom de l’événement stock sélectionné pour KeyPress.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Pour ajouter l’événement stock KeyPress à l’aide de l’Assistant Ajout d’événement  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  Cliquez sur **Terminer**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>Ajouter l’Assistant Modification des événements pour les événements Stock  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Ajouter l’Assistant Modification des événements pour les événements Stock  
  Événements stock sont gérés par la classe de base du contrôle, l’Assistant Ajout d’événement ne change pas votre déclaration de classe en aucune façon. Il ajoute l’événement à la table d’événements du contrôle et crée une entrée dans son. Fichier IDL. La ligne suivante est ajoutée à la table d’événements du contrôle, située dans le fichier d’implémentation (. Fichier de RPC) :  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

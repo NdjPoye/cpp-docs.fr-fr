@@ -1,12 +1,9 @@
 ---
 title: Classe CWinFormsView | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 Fournit les fonctionnalités génériques pour l'hébergement d'un contrôle Windows Forms en tant que vue MFC.  
@@ -71,10 +66,10 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView ne prend pas en charge la fenêtre fractionnée MFC ( [CSplitterWnd classe](../../mfc/reference/csplitterwnd-class.md)). Actuellement uniquement la Splitter Windows Forms contrôle est pris en charge.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwinforms.h  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
  Construit un objet `CWinFormsView`.  
   
 ```  
@@ -86,13 +81,13 @@ CWinFormsView(System::Type^ pManagedViewType);
  Pointeur vers le type de données du contrôle utilisateur Windows Forms.   
   
 ### <a name="example"></a>Exemple  
- Dans l’exemple suivant, la `CUserView` hérite de la classe `CWinFormsView` et passe le type de `UserControl1` à la `CWinFormsView` constructeur. `UserControl1`est un contrôle personnalisé dans ControlLibrary1.dll.  
+ Dans l’exemple suivant, la `CUserView` hérite de la classe `CWinFormsView` et passe le type de `UserControl1` à la `CWinFormsView` constructeur. `UserControl1` est un contrôle personnalisé dans ControlLibrary1.dll.  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
  [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsView::GetControl  
  Récupère un pointeur vers le contrôle Windows Forms.  
   
 ```  
@@ -105,7 +100,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>Notes  
  Pour obtenir un exemple montrant comment utiliser Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_control"></a>Contrôle de CWinFormsView::operator ^  
+##  <a name="operator_control"></a>  Contrôle de CWinFormsView::operator ^  
  Convertit un type comme un pointeur vers un contrôle Windows Forms.  
   
 ```  

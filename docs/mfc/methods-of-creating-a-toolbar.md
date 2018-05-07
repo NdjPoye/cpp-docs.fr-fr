@@ -1,13 +1,10 @@
 ---
-title: "Méthodes de création d’une barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Méthodes de création d’une barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93f8e43c933e9c8054e798c11754cc48bf54a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Méthodes de création d'une barre d'outils
-MFC fournit deux classes pour créer des barres d’outils : [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (qui encapsule le API de contrôle commun de Windows). `CToolBar`fournit toutes les fonctionnalités du contrôle commun de barre d’outils, et il traite la plupart des paramètres des contrôles communs requis et des structures pour vous. Toutefois, votre fichier exécutable obtenu sera plus grand que celui créé à l’aide de `CToolBarCtrl`.  
+MFC fournit deux classes pour créer des barres d’outils : [CToolBar](../mfc/reference/ctoolbar-class.md) et [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (qui encapsule le API de contrôle commun de Windows). `CToolBar` fournit toutes les fonctionnalités du contrôle commun de barre d’outils, et il traite la plupart des paramètres des contrôles communs requis et des structures pour vous. Toutefois, votre fichier exécutable obtenu sera plus grand que celui créé à l’aide de `CToolBarCtrl`.  
   
- `CToolBarCtrl`généralement les résultats dans un fichier exécutable plus petit et que vous pouvez utiliser `CToolBarCtrl` si vous ne souhaitez pas intégrer la barre d’outils dans l’architecture MFC. Si vous envisagez d’utiliser `CToolBarCtrl` et intégrer la barre d’outils dans l’architecture MFC, vous devez prendre soin de communiquer les manipulations du contrôle de barre d’outils à MFC. Cette communication n’est pas difficile ; Toutefois, il s’agit d’un travail supplémentaire qui n’est pas nécessaire lorsque vous utilisez `CToolBar`.  
+ `CToolBarCtrl` généralement les résultats dans un fichier exécutable plus petit et que vous pouvez utiliser `CToolBarCtrl` si vous ne souhaitez pas intégrer la barre d’outils dans l’architecture MFC. Si vous envisagez d’utiliser `CToolBarCtrl` et intégrer la barre d’outils dans l’architecture MFC, vous devez prendre soin de communiquer les manipulations du contrôle de barre d’outils à MFC. Cette communication n’est pas difficile ; Toutefois, il s’agit d’un travail supplémentaire qui n’est pas nécessaire lorsque vous utilisez `CToolBar`.  
   
  Visual C++ propose deux méthodes pour tirer parti du contrôle commun de barre d’outils.  
   

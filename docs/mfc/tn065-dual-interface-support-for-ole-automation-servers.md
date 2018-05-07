@@ -1,13 +1,10 @@
 ---
-title: "TN065 : Prise en charge de Interface double pour les serveurs Automation OLE | Documents Microsoft"
-ms.custom: 
+title: 'TN065 : Prise en charge de Interface double pour les serveurs Automation OLE | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065 : prise en charge d'une interface double pour les serveurs Automation OLE
 > [!NOTE]
@@ -66,7 +61,7 @@ interface IDualAClick : IDispatch
  };  
 ```  
   
- Une fois que vous avez mis en place l'instruction Interface, commencez à ajouter les entrées des méthodes et des propriétés. Pour les interfaces doubles, vous devez réorganiser les listes de paramètres afin que vos méthodes et fonctions d'accesseur de propriété de l'interface double retournent `HRESULT` et transmettent les valeurs de retour en tant que paramètres avec les attributs `[retval,out]`. N'oubliez pas que pour les propriétés, vous devez ajouter une fonction d'accesseur de lecture (`propget`) et d'écriture (`propput`) avec le même ID. Exemple :  
+ Une fois que vous avez mis en place l'instruction Interface, commencez à ajouter les entrées des méthodes et des propriétés. Pour les interfaces doubles, vous devez réorganiser les listes de paramètres afin que vos méthodes et fonctions d'accesseur de propriété de l'interface double retournent `HRESULT` et transmettent les valeurs de retour en tant que paramètres avec les attributs `[retval,out]`. N'oubliez pas que pour les propriétés, vous devez ajouter une fonction d'accesseur de lecture (`propget`) et d'écriture (`propput`) avec le même ID. Par exemple :  
   
 ```  
 [propput,
@@ -77,7 +72,7 @@ interface IDualAClick : IDispatch
     retval] BSTR* retval);
 ```  
   
- Après avoir défini vos méthodes et propriétés, vous devez ajouter une référence à l'instruction Interface dans l'instruction Coclass. Exemple :  
+ Après avoir défini vos méthodes et propriétés, vous devez ajouter une référence à l'instruction Interface dans l'instruction Coclass. Par exemple :  
   
 ```  
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]  
@@ -90,7 +85,7 @@ coclass Document
   
  Une fois votre fichier ODL mis à jour, utilisez le mécanisme de mappage d'interface de MFC pour définir une classe d'implémentation pour l'interface double dans votre classe d'objets et effectuer les entrées correspondantes dans le mécanisme `QueryInterface` de MFC. Vous avez besoin d'une entrée dans le bloc `INTERFACE_PART` pour chaque entrée dans l'instruction Interface de l'ODL, en plus des entrées valides pour une interface de dispatch. Chaque entrée ODL possédant le **propput** attribut a besoin d’une fonction nommée `put_propertyname`. Chaque entrée avec le **propget** attribut a besoin d’une fonction nommée `get_propertyname`.  
   
- Pour définir une classe d'implémentation pour votre interface double, ajoutez un bloc `DUAL_INTERFACE_PART` à la définition de classe d'objets. Exemple :  
+ Pour définir une classe d'implémentation pour votre interface double, ajoutez un bloc `DUAL_INTERFACE_PART` à la définition de classe d'objets. Par exemple :  
   
 ```  
 BEGIN_DUAL_INTERFACE_PART(DualAClick,
@@ -136,7 +131,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc,
 END_INTERFACE_MAP()  
 ```  
   
- Ensuite, vous devez effectuer l'implémentation de l'interface. Dans la plupart des cas, vous pouvez déléguer à l'implémentation de l'interface `IDispatch` MFC existante. Exemple :  
+ Ensuite, vous devez effectuer l'implémentation de l'interface. Dans la plupart des cas, vous pouvez déléguer à l'implémentation de l'interface `IDispatch` MFC existante. Par exemple :  
   
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()  
@@ -239,7 +234,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }  
 ```  
   
- Pour les méthodes et les fonctions d’accesseur de propriété de vos objets, vous devez effectuer l’implémentation. Les fonctions de méthodes et de propriétés peuvent généralement redéléguer aux méthodes générées par ClassWizard. Toutefois, si vous installez des propriétés pour accéder aux variables directement, vous devez écrire du code pour obtenir/placer la valeur dans la variable. Exemple :  
+ Pour les méthodes et les fonctions d’accesseur de propriété de vos objets, vous devez effectuer l’implémentation. Les fonctions de méthodes et de propriétés peuvent généralement redéléguer aux méthodes générées par ClassWizard. Toutefois, si vous installez des propriétés pour accéder aux variables directement, vous devez écrire du code pour obtenir/placer la valeur dans la variable. Par exemple :  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
@@ -262,7 +257,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>Passage des pointeurs d'interface double  
- Le passage du pointeur d'interface double n'est pas simple, surtout si vous devez appeler `CCmdTarget::FromIDispatch`. `FromIDispatch` fonctionne uniquement sur les pointeurs `IDispatch` de MFC. Une méthode pour contourner ce point consiste à rechercher l'installation du pointeur `IDispatch` d'origine mis en place par MFC et de passer le pointeur aux fonctions qui en ont besoin. Exemple :  
+ Le passage du pointeur d'interface double n'est pas simple, surtout si vous devez appeler `CCmdTarget::FromIDispatch`. `FromIDispatch` fonctionne uniquement sur les pointeurs `IDispatch` de MFC. Une méthode pour contourner ce point consiste à rechercher l'installation du pointeur `IDispatch` d'origine mis en place par MFC et de passer le pointeur aux fonctions qui en ont besoin. Par exemple :  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -280,7 +275,7 @@ return NOERROR;
 }  
 ```  
   
- Avant de retransmettre un pointeur via la méthode d'interface double, vous devrez peut-être le convertir à partir du pointeur `IDispatch` de MFC en pointeur d'interface double. Exemple :  
+ Avant de retransmettre un pointeur via la méthode d'interface double, vous devrez peut-être le convertir à partir du pointeur `IDispatch` de MFC en pointeur d'interface double. Par exemple :  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -309,7 +304,7 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
     m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll() ; * / / DUAL_SUPPORT_START * / / Assurez-vous que la bibliothèque de types est inscrite ou d’interface double ne fonctionne pas.  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")) ; * / / DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -352,10 +347,10 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 {  
     METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC convertit automatiquement des BSTR Unicode à * / / Ansi CString, si nécessaire...  
-    pThis->m_str = newText;  
+    pThis -> m_str = newText ;  
     Retourne NOERROR ;  
  }  
-    CATCH_ALL_DUAL }  
+    CATCH_ALL_DUAL}  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +360,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e->m_wCode + 0x200));
+ (e -> m_wCode + 0 x 200)) ;
 
  ```  
   
@@ -400,10 +395,10 @@ STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::Release()
     retournés pThis -> ExternalRelease() ;
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface( REFIID iid, LPVOID* ppvObj)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID * ppvObj)   
 {   
     METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
-    return pThis->ExternalQueryInterface(&iid, ppvObj);
+    retournés pThis -> ExternalQueryInterface (& iid, ppvObj) ;
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (iid REFIID)   

@@ -1,13 +1,10 @@
 ---
-title: "Comment : migrer vers - clr | Documents Microsoft"
-ms.custom: 
+title: 'Comment : migrer vers - clr | Documents Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Comment : effectuer une migration vers /clr
 Cette rubrique traite des problèmes qui surviennent lors de la compilation de code natif avec **/CLR** (consultez [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) pour plus d’informations). **/ CLR** permet de modules Visual C++ d’appeler et d’être appelés depuis les assemblys .NET tout en conservant la compatibilité avec les modules non managés. Consultez [mixte (natif et managé) assemblys](../dotnet/mixed-native-and-managed-assemblies.md) et [natif et l’interopérabilité .NET](../dotnet/native-and-dotnet-interoperability.md) pour plus d’informations sur les avantages de la compilation avec **/CLR**.  
@@ -37,7 +32,7 @@ Cette rubrique traite des problèmes qui surviennent lors de la compilation de c
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>Connus problèmes de la compilation de projets de bibliothèque avec/CLR  
  Visual Studio contient des problèmes connus lors de la compilation de projets de bibliothèque avec **/CLR**:  
   
--   Votre code peut interroger des types pendant l’exécution avec [CRuntimeClass::FromName](../mfc/reference/cruntimeclass-structure.md#fromname). Toutefois, si un type est dans un fichier .dll MSIL (compilé avec **/CLR**), l’appel à `FromName` risque d’échouer si elle se produit avant l’exécution des constructeurs statiques dans le .dll managé (vous ne verrez pas ce problème si l’appel FromName se produit une fois que le code a exécutée dans le .dll managé). Pour contourner ce problème, vous pouvez forcer la construction du constructeur statique managé en définissant une fonction dans la DLL managée, exportant et appeler à partir d’une application MFC native. Exemple :  
+-   Votre code peut interroger des types pendant l’exécution avec [CRuntimeClass::FromName](../mfc/reference/cruntimeclass-structure.md#fromname). Toutefois, si un type est dans un fichier .dll MSIL (compilé avec **/CLR**), l’appel à `FromName` risque d’échouer si elle se produit avant l’exécution des constructeurs statiques dans le .dll managé (vous ne verrez pas ce problème si l’appel FromName se produit une fois que le code a exécutée dans le .dll managé). Pour contourner ce problème, vous pouvez forcer la construction du constructeur statique managé en définissant une fonction dans la DLL managée, exportant et appeler à partir d’une application MFC native. Par exemple :  
   
     ```  
     // MFC extension DLL Header file:  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  Les types natifs sont privés par défaut. Cela peut entraîner un type natif ne sont pas visibles en dehors de la DLL. Résoudre cette erreur en ajoutant `public` à ces types.  
   
 ### <a name="floating-point-and-alignment-issues"></a>Virgule flottante et problèmes d’alignement  
- `__controlfp`n’est pas pris en charge sur le common language runtime (consultez [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respecte également [aligner](../cpp/align-cpp.md).  
+ `__controlfp` n’est pas pris en charge sur le common language runtime (consultez [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respecte également [aligner](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>Initialisation de COM  
  Le Common Language Runtime initialise automatiquement COM lorsqu’un module est initialisé (lorsque COM est initialisé automatiquement qu’il a effectué cette opération en tant que MTA). Par conséquent, initialiser COM explicitement génère des codes de retour qui indique que COM est déjà initialisé. Tentative d’initialisation explicite de COM avec un modèle de thread lorsque le CLR a déjà initialisé COM vers un autre modèle de thread peut provoquer l’échec de votre application.  

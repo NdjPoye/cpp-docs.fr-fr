@@ -1,13 +1,10 @@
 ---
-title: "Feuilles de propriétés (MFC) | Documents Microsoft"
-ms.custom: 
+title: Feuilles de propriétés (MFC) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08252ed31ddcfc6a5ba7b785dad9787349caee71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-mfc"></a>Feuilles de propriétés (MFC)
 Cette famille d’articles explique comment implémenter la prise en charge des feuilles de propriétés dans les applications MFC. Une feuille de propriétés, également connu sous une onglet boîte de dialogue, fournit un moyen de gérer un grand nombre de contrôles dans une boîte de dialogue. La feuille de propriétés contient des pages de propriétés, chacun basé sur une ressource de modèle de boîte de dialogue distincte. Vous pouvez diviser les contrôles de votre boîte de dialogue en groupes logiques et placer chaque groupe dans sa propre page de propriétés.  

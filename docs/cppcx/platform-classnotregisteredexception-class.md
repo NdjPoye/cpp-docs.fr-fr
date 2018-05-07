@@ -1,11 +1,8 @@
 ---
 title: Platform::classnotregisteredexception, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ClassNotRegisteredException::ClassNotRegisteredException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ClassNotRegisteredException
 ms.assetid: 8f8871d8-51b9-46e8-902e-ae023c9f1de9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e65f801db0cffc6613939a717bc10c713ae841dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 919ee807cea61b3478c12b2d5ec53eab56f3d9f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Platform::ClassNotRegisteredException, classe
 Levée lorsqu'une classe COM n'a pas été inscrite.  
@@ -39,7 +34,7 @@ public ref class ClassNotRegisteredException : COMException,    IException,    I
 ### <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  

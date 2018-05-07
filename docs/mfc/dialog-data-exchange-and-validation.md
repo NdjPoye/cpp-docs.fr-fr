@@ -1,13 +1,10 @@
 ---
-title: "Données de la boîte de dialogue échange et Validation de | Documents Microsoft"
-ms.custom: 
+title: Données de la boîte de dialogue échange et Validation de | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Échange et validation de données de boîtes de dialogue
 Échange de données de boîtes de dialogue (DDX) est un moyen simple pour initialiser les contrôles dans votre boîte de dialogue et pour collecter des données d’entrée par l’utilisateur. Validation de données de boîtes de dialogue (DDV) est un moyen simple de valider l’entrée de données dans une boîte de dialogue. Pour tirer parti de DDX et DDV dans vos boîtes de dialogue, utilisez le [Assistant Ajout de Variable membre](../ide/add-member-variable-wizard.md) pour créer les membres de données et de définir leurs types de données et de spécifier des règles de validation.  

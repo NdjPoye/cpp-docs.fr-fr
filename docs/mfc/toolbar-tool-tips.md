@@ -1,13 +1,10 @@
 ---
-title: "Barre d’outils, info-bulles | Documents Microsoft"
-ms.custom: 
+title: Barre d’outils, info-bulles | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,28 +19,26 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-tool-tips"></a>Info-bulles de barre d'outils
 Info-bulles sont des petites fenêtres contextuelles qui présentent une courte description de l’objectif d’un bouton barre d’outils lorsque vous placez la souris sur un bouton pour une période donnée. Lorsque vous créez une application avec l’Assistant Application qui possède une barre d’outils, outil tip est prise en charge pour vous. Cet article explique l’outil Conseil charge créé par l’Assistant Application et comment ajouter la prise en charge du Conseil outils à votre application.  
   
- Cet article décrit :  
+ Cet article couvre les sujets suivants :  
   
 -   [Activation des info-bulles](#_core_activating_tool_tips)  
   
 -   [Mises à jour de barre d’état flyby](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a>Activation des info-bulles  
+##  <a name="_core_activating_tool_tips"></a> Activation des info-bulles  
  Pour activer les info-bulles dans votre application, vous devez effectuer deux choses :  
   
 -   Ajouter le `CBRS_TOOLTIPS` style pour les autres styles (tel que **WS_CHILD**, **WS_VISIBLE**et d’autres **CBRS_** styles) passé en tant que le `dwStyle` paramètre à la [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) fonction ou dans [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
@@ -65,7 +60,7 @@ Info-bulles sont des petites fenêtres contextuelles qui présentent une courte 
   
 -   L’entrée de table de chaînes avec le même ID que le contrôle enfant dans le fichier de ressources possède une chaîne d’info-bulle outil.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a>Mises à jour de la barre d’état  
+##  <a name="_core_fly_by_status_bar_updates"></a> Mises à jour de la barre d’état  
  Une fonctionnalité associée aux info-bulles est mise à jour de la barre d’état « Survoler ». Par défaut, le message dans la barre d’état décrit uniquement un bouton de barre d’outils spécifique lorsque le bouton est activé. En incluant `CBRS_FLYBY` dans votre liste de styles passée à `CToolBar::Create`, vous pouvez disposer de messages mis à jour lorsque le curseur de souris passe sur la barre d’outils sans devoir activer le bouton.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus  

@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets : Fonctionnement des Sockets avec des Archives | Documents Microsoft"
-ms.custom: 
+title: 'Windows Sockets : Fonctionnement des Sockets avec des Archives | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets : fonctionnement des sockets avec des archives
 Cet article explique comment un [CSocket](../mfc/reference/csocket-class.md) objet, un [CSocketFile](../mfc/reference/csocketfile-class.md) objet et un [CArchive](../mfc/reference/carchive-class.md) objet sont combinées afin de simplifier l’envoi et de recevoir des données via un Windows Socket.  
@@ -37,7 +32,7 @@ Cet article explique comment un [CSocket](../mfc/reference/csocket-class.md) obj
   
  A `CArchive` objet gère une mémoire tampon. Lorsque la mémoire tampon d’une archive (envoi) de stockage est plein, associé à un `CFile` contenu du tampon d’objet écrit. Le vidage de la mémoire tampon d’une archive attachée à un socket est équivalent à l’envoi d’un message. Lorsque la mémoire tampon d’une archive de chargement (réception) est plein, le `CFile` objet s’arrête de lire jusqu'à ce que la mémoire tampon est à nouveau disponible.  
   
- Classe `CSocketFile` dérive `CFile`, mais il ne prend pas en charge [CFile](../mfc/reference/cfile-class.md) fonctions membres telles que les fonctions de positionnement (`Seek`, `GetLength`, `SetLength`, et ainsi de suite), le verrouillage de fonctions () `LockRange`, `UnlockRange`), ou le `GetPosition` (fonction). Tous les le [CSocketFile](../mfc/reference/csocketfile-class.md) objet doit faire est d’écrire ou lire des séquences d’octets à partir d’associé ou `CSocket` objet. Car un fichier n’est pas impliqué, opérations telles que `Seek` et `GetPosition` aucun sens. `CSocketFile`est dérivé de `CFile`, de sorte qu’il serait normalement héritent toutes ces fonctions membres. Pour éviter cela, la non prise en charge `CFile` fonctions membres sont remplacées dans `CSocketFile` pour lever une [exception CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Classe `CSocketFile` dérive `CFile`, mais il ne prend pas en charge [CFile](../mfc/reference/cfile-class.md) fonctions membres telles que les fonctions de positionnement (`Seek`, `GetLength`, `SetLength`, et ainsi de suite), le verrouillage de fonctions () `LockRange`, `UnlockRange`), ou le `GetPosition` (fonction). Tous les le [CSocketFile](../mfc/reference/csocketfile-class.md) objet doit faire est d’écrire ou lire des séquences d’octets à partir d’associé ou `CSocket` objet. Car un fichier n’est pas impliqué, opérations telles que `Seek` et `GetPosition` aucun sens. `CSocketFile` est dérivé de `CFile`, de sorte qu’il serait normalement héritent toutes ces fonctions membres. Pour éviter cela, la non prise en charge `CFile` fonctions membres sont remplacées dans `CSocketFile` pour lever une [exception CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
  Le `CSocketFile` objet appelle les fonctions de membres son `CSocket` objet pour envoyer ou recevoir des données.  
   

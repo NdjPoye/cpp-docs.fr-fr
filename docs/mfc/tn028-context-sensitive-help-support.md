@@ -1,13 +1,10 @@
 ---
-title: "TN028 : Prise en charge de l’aide contextuelle | Documents Microsoft"
-ms.custom: 
+title: 'TN028 : Prise en charge de l’aide contextuelle | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028 : prise en charge de l'aide contextuelle
 Cette note décrit les règles permettant d'affecter des ID d'aide contextuelle et d'autres problèmes liés à l'aide dans MFC. La prise en charge de l'aide contextuelle requiert le compilateur d'aide qui est disponible dans Visual C++.  
@@ -141,7 +136,7 @@ WPARAM, LPARAM lParam)
 ## <a name="mfc-application-wizard-support-and-makehm"></a>Prise en charge de l'Assistant Application MFC et MAKEHM  
  L'Assistant Application MFC crée les fichiers nécessaires pour générer un fichier d'aide (fichiers .cnt et .hpj). Il inclut également plusieurs fichiers .rtf prégénérés qui sont acceptés par le compilateur d'aide Microsoft. Plusieurs rubriques sont complètes, mais certaines doivent être modifiées pour votre application spécifique.  
   
- La création automatique d'un fichier de "mappage d'aide" est prise en charge par l'utilitaire appelé MAKEHM. L'utilitaire MAKEHM peut convertir le fichier RESOURCE.H d'une application en un fichier de mappage d'aide. Exemple :  
+ La création automatique d'un fichier de "mappage d'aide" est prise en charge par l'utilitaire appelé MAKEHM. L'utilitaire MAKEHM peut convertir le fichier RESOURCE.H d'une application en un fichier de mappage d'aide. Par exemple :  
   
 ```  
 #define IDD_MY_DIALOG   2000  

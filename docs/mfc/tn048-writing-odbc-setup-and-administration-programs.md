@@ -1,13 +1,10 @@
 ---
-title: "TN048 : Écriture ODBC programmes d’installation et Administration pour les Applications de base de données MFC | Documents Microsoft"
-ms.custom: 
+title: 'TN048 : Écriture ODBC programmes d’installation et Administration pour les Applications de base de données MFC | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048 : écriture de programmes d'installation et d'administration ODBC pour les applications de base de données MFC
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Applications à l’aide des classes de base de données MFC devez un programme d’installation qui installe les composants ODBC. Ils ont également besoin d’un programme d’Administration ODBC qui Récupère des informations sur les pilotes disponibles, pour spécifier les pilotes par défaut et pour configurer des sources de données. Cette note décrit l’utilisation de l’API du programme d’installation de ODBC pour ces programmes d’écriture.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>Écriture d’un programme d’installation ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Écriture d’un programme d’installation ODBC  
  Une application de base de données MFC requiert le Gestionnaire de pilotes ODBC (ODBC. DLL) et des pilotes ODBC pour pouvoir accéder à des sources de données. Nombre de pilotes ODBC requièrent également des DLL de communication et de réseau supplémentaires. La plupart des pilotes ODBC fournis avec un programme d’installation installera les composants ODBC requis. Les développeurs d’applications à l’aide des classes de base de données MFC peuvent :  
   
 -   S’appuient sur les programmes spécifiques au pilote le programme d’installation pour l’installation des composants ODBC. Cette opération exige aucun autre travail sur le développeur, vous pouvez redistribuer simplement du programme d’installation du pilote.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Pour plus d’informations sur ODBC. INF, ODBCINST. INI et à l’aide du programme d’installation de l’API, consultez ODBC SDK *de référence du programmeur,* chapitre 19, l’installation des logiciels ODBC.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>L’écriture d’un administrateur ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> L’écriture d’un administrateur ODBC  
  Une application de base de données MFC permettre installer et configurer des sources de données ODBC dans un des deux manières, comme suit :  
   
 -   Utilisez l’administrateur ODBC (disponible comme un programme ou un élément du Panneau de configuration).  

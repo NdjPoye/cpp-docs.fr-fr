@@ -1,13 +1,10 @@
 ---
-title: "L’inscription | Documents Microsoft"
-ms.custom: 
+title: L’inscription | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Inscription
 Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OLE, OLE présente une liste des types d'objets dans le but d'en choisir un. OLE obtient la liste de la base de données d'inscription du système, qui contient les informations fournies par les applications serveur. Lorsqu'un serveur s'inscrit lui-même, les entrées qu'il place dans la base de données d'inscription du système (le Registre) décrivent chaque type d'objet qu'il fournit, les extensions de fichier, le chemin d'accès à lui-même, parmi d'autres informations.  
@@ -41,7 +36,7 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
   
  Pour obtenir des informations détaillées sur la base de données de système d’enregistrement et le format des fichiers .reg utilisés pour mettre à jour, consultez le *référence du programmeur OLE*.  
   
-##  <a name="_core_server_installation"></a>Installation du serveur  
+##  <a name="_core_server_installation"></a> Installation du serveur  
  Lors de l'installation initiale de votre application serveur, tous les types d'éléments OLE pris en charge doivent être inscrits. Il est également possible que le serveur actualise la base de données d'inscription du système à chaque fois qu'elle est exécutée comme une application autonome. Cela maintient la base de données d'inscription à jour si le fichier exécutable du serveur est déplacé.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
   
  RegEdit fusionne le contenu du fichier texte .reg dans la base de données d'inscription. Pour vérifier la base de données ou la réparer, utilisez l'Éditeur du Registre. Faites attention à ne pas supprimer des entrées OLE essentielles.  
   
-##  <a name="_core_server_initialization"></a>Initialisation du serveur  
+##  <a name="_core_server_initialization"></a> Initialisation du serveur  
  Lorsque vous créez une application serveur avec l’assistant Application, l’assistant termine toutes les tâches d’initialisation automatiquement. Cette section explique ce que vous devez faire si vous écrivez une application serveur manuellement.  
   
  Lorsqu'une application serveur est lancée par une application conteneur, les DLL système OLE ajoutent l'option "/Embedding" à la ligne de commande du serveur. Le comportement d'une application serveur diffère selon qu'elle a été exécutée par un conteneur, donc la première chose qu'une application doit effectuer lorsqu'elle commence à être exécutée est de contrôler l'option "/Embedding" ou "-Embedding" sur la ligne de commande. Si ce changement existe, chargez un autre ensemble de ressources qui montre le serveur comme étant actif sur place ou entièrement ouvert. Pour plus d’informations, consultez [Menus et ressources : ajouts de serveur](../mfc/menus-and-resources-server-additions.md).  
@@ -69,7 +64,7 @@ Lorsqu'un utilisateur souhaite insérer un élément OLE dans une application OL
   
 ## <a name="see-also"></a>Voir aussi  
  [OLE](../mfc/ole-in-mfc.md)   
- [Servers](../mfc/servers.md)   
+ [Serveurs](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
  [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [COleTemplateServer, classe](../mfc/reference/coletemplateserver-class.md)

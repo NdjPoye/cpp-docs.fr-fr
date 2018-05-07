@@ -1,12 +1,9 @@
 ---
-title: "C3400 des erreurs du compilateur à C3499 | Documents Microsoft"
-ms.custom: 
+title: C3400 des erreurs du compilateur à C3499 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Erreur d’erreurs du compilateur C3400 à C3499
 
@@ -173,8 +168,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |C3441 d’erreur du compilateur|'*déclaration*' : '*mot clé*' ne peut pas être appliquées une fois la classe a été définie.|
 |C3442 d’erreur du compilateur|Initialisation de plusieurs membres d’union : '*member1*'et'*membre2*'|
 |C3443 d’erreur du compilateur|L’initialiseur de membre par défaut pour '*classe*' est récursive|
-|C3444 d’erreur du compilateur|Vide de la classe d’agrégation*classe*' doit être initialisée avec '{'}|
-|C3445 d’erreur du compilateur|initialisation de liste copie de '*type*' ne peut pas utiliser un constructeur explicite|
+|C3444 d’erreur du compilateur|Vide de la classe d’agrégation*classe*'doit être initialisée avec'{}'|
+|[C3445 d’erreur du compilateur](compiler-error-c3445.md)|initialisation de liste copie de '*type*' ne peut pas utiliser un constructeur explicite|
 |[Erreur du compilateur C3446](compiler-error-c3446.md)|'*classe*' : un initialiseur de membre par défaut n’est pas autorisé pour un membre d’une classe value|
 |C3447 d’erreur du compilateur|Obsolète.|
 |C3448 d’erreur du compilateur|Obsolète.|

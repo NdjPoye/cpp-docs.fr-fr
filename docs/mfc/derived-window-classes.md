@@ -1,13 +1,10 @@
 ---
-title: "Classes de fenêtre dérivées | Documents Microsoft"
-ms.custom: 
+title: Classes de fenêtre dérivées | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-window-classes"></a>Classes de fenêtre dérivées
 Vous pouvez créer des fenêtres directement à partir de [CWnd](../mfc/reference/cwnd-class.md), ou dériver de nouvelles classes de fenêtre à partir de `CWnd`. Voici comment vous généralement créez vos propres fenêtres personnalisées. Toutefois, la plupart des fenêtres utilisées dans un programme d’infrastructure sont créées à la place de l’une du `CWnd`-dérivées des classes de fenêtre frame fournies par MFC.  
@@ -54,7 +49,7 @@ Vous pouvez créer des fenêtres directement à partir de [CWnd](../mfc/referenc
  *Boîtes de dialogue*  
  Boîtes de dialogue sont créés à l’aide de la `CWnd`-classe dérivée [CDialog](../mfc/reference/cdialog-class.md).  
   
- *Formulaires*  
+ *formulaires*  
  Les modes formulaire basés sur les ressources de modèle de boîte de dialogue, telles que les boîtes de dialogue, sont créés à l’aide de classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), ou [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
   
  *Contrôles*  

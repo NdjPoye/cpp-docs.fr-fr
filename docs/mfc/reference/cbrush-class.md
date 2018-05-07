@@ -1,12 +1,9 @@
 ---
 title: CBrush (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 Encapsule un pinceau GDI (Graphics Device Interface) Windows.  
@@ -95,10 +90,10 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  Construit un objet `CBrush`.  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  Spécifie le style de hachurage du pinceau. Il peut prendre l’une des valeurs suivantes :  
   
-- `HS_BDIAGONAL`Hachage vers le bas (de gauche à droite) à 45 degrés  
+- `HS_BDIAGONAL` Hachage vers le bas (de gauche à droite) à 45 degrés  
   
-- `HS_CROSS`Hachurage horizontal et vertical  
+- `HS_CROSS` Hachurage horizontal et vertical  
   
-- `HS_DIAGCROSS`Hachage à 45 degrés  
+- `HS_DIAGCROSS` Hachage à 45 degrés  
   
-- `HS_FDIAGONAL`Hachage vers le haut (de gauche à droite) à 45 degrés  
+- `HS_FDIAGONAL` Hachage vers le haut (de gauche à droite) à 45 degrés  
   
-- `HS_HORIZONTAL`Hachurage horizontal  
+- `HS_HORIZONTAL` Hachurage horizontal  
   
-- `HS_VERTICAL`Hachage vertical  
+- `HS_VERTICAL` Hachage vertical  
   
  `pBitmap`  
  Pointe vers un `CBitmap` objet qui spécifie une image bitmap avec laquelle le pinceau peint.  
   
 ### <a name="remarks"></a>Notes  
- `CBrush`possède quatre surchargée constructeurs. Le constructeur sans arguments construit non initialisé `CBrush` objet doit être initialisé avant de pouvoir être utilisé.  
+ `CBrush` possède quatre surchargée constructeurs. Le constructeur sans arguments construit non initialisé `CBrush` objet doit être initialisé avant de pouvoir être utilisé.  
   
  Si vous utilisez le constructeur sans arguments, vous devez initialiser résultant `CBrush` avec l’objet [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), ou [CreateDIBPatternBrush](#createdibpatternbrush). Si vous utilisez un des constructeurs qui prend des arguments, puis plus aucune initialisation est nécessaire. Les constructeurs avec des arguments peuvent lever une exception si des erreurs sont rencontrées, alors que le constructeur sans arguments réussit toujours.  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  Initialise un pinceau avec un style, la couleur et le modèle spécifié dans un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  Initialise un pinceau avec le modèle spécifié par une bitmap indépendante du périphérique (DIB).  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  Initialise un pinceau avec le motif hachuré spécifié et la couleur.  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  Spécifie le style de hachurage du pinceau. Il peut prendre l’une des valeurs suivantes :  
   
-- `HS_BDIAGONAL`Hachage vers le bas (de gauche à droite) à 45 degrés  
+- `HS_BDIAGONAL` Hachage vers le bas (de gauche à droite) à 45 degrés  
   
-- `HS_CROSS`Hachurage horizontal et vertical  
+- `HS_CROSS` Hachurage horizontal et vertical  
   
-- `HS_DIAGCROSS`Hachage à 45 degrés  
+- `HS_DIAGCROSS` Hachage à 45 degrés  
   
-- `HS_FDIAGONAL`Hachage vers le haut (de gauche à droite) à 45 degrés  
+- `HS_FDIAGONAL` Hachage vers le haut (de gauche à droite) à 45 degrés  
   
-- `HS_HORIZONTAL`Hachurage horizontal  
+- `HS_HORIZONTAL` Hachurage horizontal  
   
-- `HS_VERTICAL`Hachage vertical  
+- `HS_VERTICAL` Hachage vertical  
   
  `crColor`  
  Spécifie la couleur de premier plan du pinceau comme une couleur RVB (la couleur des hachures). Consultez [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) dans le SDK Windows pour plus d’informations.  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  Initialise un pinceau avec un modèle spécifié par une image bitmap.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  Initialise un pinceau avec une couleur unie spécifiée.  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  Initialise une couleur.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  Retourne un pointeur vers un `CBrush` en fonction d’un handle Windows de l’objet [HBRUSH](#operator_hbrush) objet.  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>Paramètres  
  `hBrush`  
- `HANDLE`un pinceau GDI de Windows.  
+ `HANDLE` un pinceau GDI de Windows.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CBrush` objet en cas de réussite ; **NULL**.  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  Appelez cette fonction membre pour récupérer le `LOGBRUSH` structure.  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  Utilisez cet opérateur pour obtenir le handle Windows GDI joint de le `CBrush` objet.  
   
 ```  

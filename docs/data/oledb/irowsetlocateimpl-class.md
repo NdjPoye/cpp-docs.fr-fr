@@ -1,12 +1,9 @@
 ---
 title: IRowsetLocateImpl, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27af767c9104159d6c398db226a5a45a36e01e2f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: db8d0b5d81a53a71413998b39947eb71a1bd508a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl, classe
 Implémente le OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interface, qui extrait des lignes arbitraires à partir d’un ensemble de lignes.  
@@ -99,7 +94,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
  Pour plus d’informations sur l’implémentation de prise en charge de signet, consultez [fournisseur prend en charge des signets par](../../data/oledb/provider-support-for-bookmarks.md) dans les *Guide du programmeur Visual C++* et [signets](https://msdn.microsoft.com/en-us/library/ms709728.aspx) dans les *De référence du programmeur OLE DB* dans la Kit de développement logiciel de plateforme.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête**: atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

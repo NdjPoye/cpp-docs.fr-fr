@@ -2,11 +2,8 @@
 title: Cdialogex, classe | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>Cdialogex, classe
 La classe `CDialogEx` spécifie la couleur d'arrière-plan et l'image d'arrière-plan d'une boîte de dialogue.  
@@ -76,10 +71,10 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  Construit un objet `CDialogEx`.  
   
 ```  
@@ -110,7 +105,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  Définit la couleur d'arrière-plan de la boîte de dialogue.  
   
 ```  
@@ -124,11 +119,11 @@ void SetBackgroundColor(
  Une valeur de couleur RVB.  
   
  [in] `bRepaint`  
- `TRUE`mettre à jour immédiatement l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
+ `TRUE` mettre à jour immédiatement l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  Définit l'image d'arrière-plan de la boîte de dialogue.  
   
 ```  
@@ -156,10 +151,10 @@ BOOL SetBackgroundImage(
  Parmi les `CDialogEx::BackgroundLocation` les valeurs qui spécifient l’emplacement de l’image. Les valeurs valides sont BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`Pour détruire automatiquement de l’image d’arrière-plan ; dans le cas contraire, `FALSE`.  
+ `TRUE` Pour détruire automatiquement de l’image d’arrière-plan ; dans le cas contraire, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`pour redessiner immédiatement de la boîte de dialogue dans le cas contraire, `FALSE`.  
+ `TRUE` pour redessiner immédiatement de la boîte de dialogue dans le cas contraire, `FALSE`.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Dans la deuxième méthode de surcharge syntaxe, `TRUE` si la méthode réussit ; sinon, `FALSE`.  

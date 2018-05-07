@@ -1,29 +1,24 @@
 ---
-title: "Noms, Assistant Ajout de propriété | Documents Microsoft"
-ms.custom: 
+title: Noms, Assistant Ajout de propriété | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>Noms, Assistant Ajout de propriété
 Utilisez cet Assistant pour ajouter une propriété à une interface.  
@@ -40,7 +35,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 |Dispinterface MFC, dispinterface du contrôle ActiveX MFC|Fournissez un nom de propriété ou sélectionnez une propriété stock dans la liste. Si vous sélectionnez une propriété dans la liste, la valeur appropriée s’affiche dans le **type de propriété** boîte. Vous pouvez modifier ce type, en fonction de votre sélection sous **type d’implémentation**.|  
   
  **Type de retour**  
- Interfaces ATL uniquement. Définit le type de retour pour la propriété. Pour les interfaces doubles, `HRESULT` est toujours le type de retour, et cette zone n’est pas disponible. Pour les interfaces personnalisées, vous pouvez sélectionner un type de retour dans la liste. `HRESULT`est toujours recommandée, car il offre un moyen standard de retourner des erreurs.  
+ Interfaces ATL uniquement. Définit le type de retour pour la propriété. Pour les interfaces doubles, `HRESULT` est toujours le type de retour, et cette zone n’est pas disponible. Pour les interfaces personnalisées, vous pouvez sélectionner un type de retour dans la liste. `HRESULT` est toujours recommandée, car il offre un moyen standard de retourner des erreurs.  
   
  **Nom de variable**  
  Dispinterfaces MFC uniquement. Disponible uniquement si vous spécifiez **variable membre** sous **type d’implémentation**. Définit le nom de la variable membre à laquelle la propriété est associée. Par défaut, le nom de variable est défini sur m_*PropertyName*. Vous pouvez modifier ce nom.  

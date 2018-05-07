@@ -1,12 +1,9 @@
 ---
 title: CDynamicStringAccessor, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f13eb935cae82b0383e87c90bbe17d35d399fbdb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b8888bdac7d605ce1832ef7074955fab4893b33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor, classe
 Permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).  
@@ -45,7 +40,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |||  
 |-|-|  
 |[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Récupère les données de la colonne spécifiée sous forme de chaîne.|  
-|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Définit les données de la colonne spécifiée sous forme de chaîne.|  
+|[setString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Définit les données de la colonne spécifiée sous forme de chaîne.|  
   
 ## <a name="remarks"></a>Notes  
  Alors que [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) demande des données dans le format natif indiqué par le fournisseur, `CDynamicStringAccessor` demande que le fournisseur récupère toutes les données accessibles à partir du magasin de données en tant que données de type chaîne. Cela est particulièrement utile pour les tâches simples qui ne nécessitent pas de calcul de valeurs dans le magasin de données, telles que l’affichage ou l’impression du contenu du magasin de données.  
@@ -58,7 +53,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
   
  Pour une discussion et des exemples d’utilisation des classes d’accesseurs dynamiques, consultez [à l’aide d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête**: atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -68,6 +63,6 @@ class CDynamicStringAccessorT : public CDynamicAccessor
  [CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [CManualAccessor (classe)](../../data/oledb/cmanualaccessor-class.md)   
  [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessorA Class](../../data/oledb/cdynamicstringaccessora-class.md)   
- [CDynamicStringAccessorW Class](../../data/oledb/cdynamicstringaccessorw-class.md)   
+ [CDynamicStringAccessorA, classe](../../data/oledb/cdynamicstringaccessora-class.md)   
+ [CDynamicStringAccessorW, classe](../../data/oledb/cdynamicstringaccessorw-class.md)   
  [CXMLAccessor, classe](../../data/oledb/cxmlaccessor-class.md)

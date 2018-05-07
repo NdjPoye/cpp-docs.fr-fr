@@ -2,12 +2,9 @@
 title: 'Recordset : Défilement (ODBC) | Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Recordset : défilement (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -44,7 +39,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   [Dans quels cas le défilement est n’est pas prise en charge](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Défilement d’un enregistrement à un autre  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Défilement d’un enregistrement à un autre  
  Classe `CRecordset` fournit le **déplacer** fonctions membres pour faire défiler un jeu d’enregistrements. Ces fonctions déplacent l’enregistrement actif en ensembles de lignes. Si vous avez implémenté l’extraction de lignes en bloc, un **déplacer** opération repositionne le jeu d’enregistrements en fonction de la taille de l’ensemble de lignes. Si vous n’avez pas implémenté l’extraction, un appel à de lignes en bloc un **déplacer** fonction repositionne le jeu d’enregistrements en un seul enregistrement chaque fois. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné au-delà du dernier enregistrement. `IsBOF`Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné avant le premier enregistrement (avant tous les enregistrements). Dans les deux cas, il n’existe aucune ne fonctionne pas sur l’enregistrement en cours. Si vous appelez `MovePrev` lorsque `IsBOF` est déjà **TRUE** ou appelez `MoveNext` lorsque `IsEOF` est déjà **TRUE**, le framework lève un `CDBException`. Vous pouvez également utiliser `IsBOF` et `IsEOF` pour rechercher un jeu d’enregistrements vide.  
+ `IsEOF` Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné au-delà du dernier enregistrement. `IsBOF` Retourne une valeur différente de zéro si le jeu d’enregistrements est positionné avant le premier enregistrement (avant tous les enregistrements). Dans les deux cas, il n’existe aucune ne fonctionne pas sur l’enregistrement en cours. Si vous appelez `MovePrev` lorsque `IsBOF` est déjà **TRUE** ou appelez `MoveNext` lorsque `IsEOF` est déjà **TRUE**, le framework lève un `CDBException`. Vous pouvez également utiliser `IsBOF` et `IsEOF` pour rechercher un jeu d’enregistrements vide.  
   
  Pour plus d’informations sur la navigation de jeu d’enregistrements, consultez [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Lorsque le défilement est pris en charge  
+##  <a name="_core_when_scrolling_is_supported"></a> Lorsque le défilement est pris en charge  
  Conçus à l’origine, SQL fourni le défilement vers l’avant uniquement, mais ODBC étend les fonctionnalités de défilement. Le niveau de prise en charge pour le défilement disponible dépend des pilotes ODBC de votre application fonctionne avec le niveau de conformité de votre pilote ODBC API et indique si la bibliothèque de curseurs ODBC est chargée en mémoire. Pour plus d’informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [ODBC : bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

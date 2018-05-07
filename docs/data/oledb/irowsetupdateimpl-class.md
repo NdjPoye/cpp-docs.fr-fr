@@ -1,12 +1,9 @@
 ---
 title: IRowsetUpdateImpl, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34efd252f67a0e3da9827ef97cff8bcab0a45532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl, classe
 L’implémentation de modèles OLE DB de la [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interface.  
@@ -85,7 +80,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Obtient les données récemment transmis ou obtenu à partir de la source de données, en ignorant les modifications en attente.|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Retourne une liste des lignes avec des modifications en attente.|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Retourne l’état des lignes spécifiées.|  
-|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|Annule toutes les modifications à la ligne depuis la dernière extraction ou de la mise à jour.|  
+|[Annuler](../../data/oledb/irowsetupdateimpl-undo.md)|Annule toutes les modifications à la ligne depuis la dernière extraction ou de la mise à jour.|  
 |[Mettre à jour](../../data/oledb/irowsetupdateimpl-update.md)|Transmet toutes les modifications apportées à la ligne depuis la dernière extraction ou de la mise à jour.|  
   
 ### <a name="implementation-methods-callback"></a>Méthodes d’implémentation (rappel)  
@@ -114,7 +109,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 -   Consultez également la `RUpdateRowset` classe est utilisée dans l’exemple UpdatePV  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

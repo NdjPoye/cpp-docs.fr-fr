@@ -1,13 +1,10 @@
 ---
-title: "Outils de génération personnalisée de spécification | Documents Microsoft"
-ms.custom: 
+title: Outils de génération personnalisée de spécification | Documents Microsoft
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Spécifiez les outils de génération personnalisée
 
@@ -65,7 +61,7 @@ Pour obtenir des informations générales sur les outils de génération personn
 
       Plusieurs fichiers d’entrée et de sortie peuvent être spécifiés symboliquement avec les macros de MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers ou les noms des groupes de fichiers, consultez [Macros commun pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Étant donné que le caractère « % » est réservé à MSBuild, si vous spécifiez une variable d’environnement remplacez chaque  **%**  avec un caractère d’échappement le **% 25** séquence d’échappement hexadécimale. Par exemple, remplacez **%Windir%** avec **25WINDIR % 25**. MSBuild remplace chaque **% 25** séquence avec le  **%**  caractères avant d’accéder à la variable d’environnement.
+      Étant donné que le caractère « % » est réservé à MSBuild, si vous spécifiez une variable d’environnement remplacez chaque **%** avec un caractère d’échappement le **% 25** séquence d’échappement hexadécimale. Par exemple, remplacez **%Windir%** avec **25WINDIR % 25**. MSBuild remplace chaque **% 25** séquence avec le **%** caractères avant d’accéder à la variable d’environnement.
 
    - Dans **Description**, entrez un message descriptif sur cet outil de génération personnalisée. Le message est imprimé sur le **sortie** fenêtre lorsque le système de génération traite cet outil.
 

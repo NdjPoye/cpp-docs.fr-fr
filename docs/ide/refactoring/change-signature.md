@@ -1,53 +1,51 @@
 ---
 title: Modifier la Signature | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5280b4940c2a52fc6e72b397300040ca4c1ac92e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-signature"></a>Changer la signature
 **Ce que :** vous permet de modifier les paramètres d’une fonction.
 
 **Quand :** vous souhaitez réorganiser, ajouter, supprimer ou modifier les paramètres d’une fonction qui est actuellement utilisé dans différents emplacements.  
 
-**Pourquoi :** vous pourriez manuellement ces paramètres vous-même, puis rechercher tous les appels à cette fonction et les modifier une par une, mais qui peut entraîner des erreurs.  Cet outil refactorisation effectuera automatiquement la tâche.
+**Pourquoi :** vous pourriez manuellement ces paramètres vous-même, puis rechercher tous les appels à cette fonction et les modifier une par une, mais qui peut entraîner des erreurs.  Cet outil de refactorisation effectuera automatiquement cette tâche.
 
-**Comment faire :**
+**Comment :**
 
 1. Placez le curseur de texte ou de la souris dans le nom de la méthode permettant de modifier ou de l’un de ses utilisations :
 
-   ![Code en surbrillance](images/changesignature_highlight.png)
+   ![Code mis en surbrillance](images/changesignature_highlight.png)
 
-1. Ensuite, effectuez l’une des opérations suivantes :
+1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
      * Appuyez sur **Ctrl + R**, puis **Ctrl + O**.  (Notez que le raccourci clavier peut varier en fonction du profil que vous avez sélectionné.)
-     * Appuyez sur **Ctrl +.** pour déclencher le **Actions rapides et refactorisations** menu et sélectionnez **changement de Signature** dans le menu contextuel.
+     * Appuyez sur **Ctrl+.** pour déclencher le **Actions rapides et refactorisations** menu et sélectionnez **changement de Signature** dans le menu contextuel.
    * **Souris**
-     * Sélectionnez **Modifier > refactoriser > Réorganiser les paramètres**.
+     * Sélectionnez **Modifier > Refactoriser > Réorganiser les paramètres**.
      * Cliquez sur le code, sélectionnez le **Actions rapides et refactorisations** menu et sélectionnez **changement de Signature** dans le menu contextuel.
 
-1. Dans le **modifier la Signature** boîte de dialogue qui s’affiche, vous pouvez utiliser les boutons sur le côté droit pour modifier la signature de méthode :
+1. Dans la boîte de dialogue **Modifier la signature** qui s’affiche, vous pouvez utiliser les boutons sur le côté droit pour modifier la signature de la méthode :
 
-   ![Modifiez la boîte de dialogue Signature](images/changesignature_dialog.png)
+   ![Boîte de dialogue Modifier la signature](images/changesignature_dialog.png)
 
    | Bouton | Description
    | ------ | ---
-   | **Haut/bas**    | Déplacer le paramètre sélectionné en haut et bas de la liste
+   | **Haut/bas**    | Déplacer le paramètre sélectionné vers le haut ou le bas de la liste
    | **Ajouter**        | Ajouter un nouveau paramètre à la liste
-   | **Supprimer**     | Supprimez le paramètre sélectionné dans la liste
+   | **Supprimer**     | Supprimer le paramètre sélectionné de la liste
    | **Modifier**     | Modifier le paramètre sélectionné en modifiant son type, nom et s’il est facultatif et sa valeur injecté serait
    | **Rétablir**     | Restaurer le paramètre sélectionné de son état d’origine
    | **Rétablissez toutes les** | Restaurer tous les paramètres de l’état d’origine
@@ -71,10 +69,10 @@ ms.lasthandoff: 12/21/2017
 
 1. Utilisez le **étendue de recherche** liste déroulante pour sélectionner si les modifications seront appliquées pour le projet ou la solution entière.
 
-1. Lorsque vous avez terminé, appuyez sur la **OK** bouton apporter les modifications.  Assurez-vous que les modifications que vous avez demandée sont s’effectuées correctement.  Pour activer ou désactiver le changement de nom d’un élément, utilisez les cases à cocher dans la moitié supérieure de la fenêtre.
+1. Lorsque vous avez terminé, appuyez sur le bouton **OK** pour appliquer les modifications.  Assurez-vous que les modifications que vous avez demandée sont s’effectuées correctement.  Pour activer ou désactiver le changement de nom d’un élément, utilisez les cases à cocher dans la moitié supérieure de la fenêtre.
 
    ![Aperçu de la Signature des modifications](images/changesignature_preview.png)
 
 1. Lorsque tout semble correct, cliquez sur le **appliquer** bouton et la fonction seront modifiées dans votre code source.
 
-   ![Modifier le résultat de la Signature](images/changesignature_result.png)
+   ![Résultat Modifier la signature](images/changesignature_result.png)

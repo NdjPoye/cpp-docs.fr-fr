@@ -1,13 +1,10 @@
 ---
 title: Principes de base HTTP | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - return codes [MFC]
 - HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67921e0667267b99b3787d55fa7ff564aa543ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56a2692edd9d41f80023e44f4ca8172cba8f9d00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-basics"></a>Éléments fondamentaux relatifs à HTTP
 Lorsque vous écrivez une application internet, vous examinez et ajoutez aux informations d’en-tête HTTP. Codes de retour indiquent la réussite ou l’échec de l’événement demandé. Plusieurs codes de retour courants sont répertoriés dans le tableau suivant.  
@@ -50,7 +45,7 @@ Lorsque vous écrivez une application internet, vous examinez et ajoutez aux inf
   
  Le protocole HTTP (Hypertext Transfer) est un protocole de niveau application pour les systèmes d’information hypermédias. Pour plus d’informations sur HTTP et la manière dont les serveurs et les navigateurs Web communiquent, consultez la spécification de protocole HTTP (Hypertext Transfer) :  
   
- [http://www.w3.org/pub/www/Protocols/](http://www.w3.org/pub/www/protocols/)  
+ [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)

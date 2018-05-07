@@ -1,13 +1,10 @@
 ---
-title: "--Commentaire d’attributs | Documents Microsoft"
-ms.custom: 
+title: --Commentaire d’attributs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC source files, Attributes comment
 - public attributes comment
 ms.assetid: 96388e11-42df-4994-aedf-decd152961a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a142cc0434e0e09e69d9bffc30826c461cf185
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74398d731c51223ea74fc6b827b0626af89286b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-attributes-comment"></a>// Attributs, commentaire
 La `// Attributes` section d’une déclaration de classe MFC contient les attributs (ou propriétés) publics de l’objet. En général, il s’agit de variables membres ou fonctions Get/Set. Les fonctions « Get » et « Set » peuvent ou ne peuvent pas être virtuelles. Les fonctions « Get » sont généralement **const**, car dans la plupart des cas ils n’ont pas d’effets secondaires. Ces membres sont normalement publiques ; attributs protégés et privés sont généralement détectées dans la section d’implémentation.  

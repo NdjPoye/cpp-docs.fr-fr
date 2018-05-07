@@ -1,12 +1,9 @@
 ---
-title: "Utilisation des modèles du fournisseur OLE DB | Documents Microsoft"
-ms.custom: 
+title: Utilisation des modèles du fournisseur OLE DB | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 967ef0bbc47fdb4427f2f78f6468bd9910126136
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7996d3d3950882dd31e0eb7f52a94329a8fa45df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Utilisation des modèles du fournisseur OLE DB
 Pour savoir comment travailler avec les modèles du fournisseur OLE DB, consultez les rubriques suivantes :  

@@ -1,13 +1,10 @@
 ---
-title: "Exceptions : Exceptions OLE | Documents Microsoft"
-ms.custom: 
+title: 'Exceptions : Exceptions OLE | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67be1947b3fa08c26d659838922ce42a905167a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 991848e9b5b78ad960fb8ed0bdf09dd56db47e2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ole-exceptions"></a>Exceptions : exceptions OLE
 Les techniques et les outils de gestion des exceptions OLE sont les mêmes que celles pour gérer les autres exceptions. Pour plus d’informations sur la gestion des exceptions, consultez l’article [gestion des exceptions C++](../cpp/cpp-exception-handling.md).  
@@ -38,7 +33,7 @@ Les techniques et les outils de gestion des exceptions OLE sont les mêmes que c
   
 -   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) pour générer et gérer OLE distribuer les exceptions (automation).  
   
- La différence entre ces deux classes est la quantité d’informations qu’ils fournissent et où ils sont utilisés. `COleException`a une donnée membre publique qui contient le code d’état OLE pour l’exception. `COleDispatchException`fournit plus d’informations, notamment les suivantes :  
+ La différence entre ces deux classes est la quantité d’informations qu’ils fournissent et où ils sont utilisés. `COleException` a une donnée membre publique qui contient le code d’état OLE pour l’exception. `COleDispatchException` fournit plus d’informations, notamment les suivantes :  
   
 -   Un code d’erreur spécifique à l’application  
   
@@ -50,7 +45,7 @@ Les techniques et les outils de gestion des exceptions OLE sont les mêmes que c
   
 -   Le nom de l’application qui a généré l’exception  
   
- `COleDispatchException`Fournit des informations supplémentaires afin qu’il peut être utilisé avec des produits tels que Microsoft Visual Basic. La description d’erreur peut être utilisée dans une boîte de message ou toute autre notification ; les informations d’aide peuvent être utilisées pour aider l’utilisateur à résoudre les problèmes ayant provoqué l’exception.  
+ `COleDispatchException` Fournit des informations supplémentaires afin qu’il peut être utilisé avec des produits tels que Microsoft Visual Basic. La description d’erreur peut être utilisée dans une boîte de message ou toute autre notification ; les informations d’aide peuvent être utilisées pour aider l’utilisateur à résoudre les problèmes ayant provoqué l’exception.  
   
  Deux fonctions globales correspondent aux deux classes d’exception OLE : [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) et [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Utilisez-les pour lever des exceptions générales OLE et des exceptions de dispatch OLE, respectivement.  
   

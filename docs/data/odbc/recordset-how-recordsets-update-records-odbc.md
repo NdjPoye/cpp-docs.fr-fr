@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Modification des jeux d’enregistrements enregistrements (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Modification des jeux d’enregistrements enregistrements (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset : modification des enregistrements par les recordsets (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -51,7 +46,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  [Recordset : Informations complémentaires sur mises à jour (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) conclut la mise à jour des recordsets en expliquant comment les transactions affectent les mises à jour, comment la fermeture d’un recordset influe sur les mises à jour en cours et comment vos mises à jour interagissent avec les mises à jour des autres utilisateurs.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Votre rôle dans la mise à jour du jeu d’enregistrements  
+##  <a name="_core_your_role_in_recordset_updating"></a> Votre rôle dans la mise à jour du jeu d’enregistrements  
  Le tableau suivant indique le rôle à l’aide de jeux d’enregistrements à ajouter, modifier ou supprimer des enregistrements, ainsi que ce que le framework fait pour vous.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Mise à jour du jeu d’enregistrements : L’infrastructure et vous  
@@ -66,7 +61,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>Le tampon d’édition  
+##  <a name="_core_the_edit_buffer"></a> Le tampon d’édition  
  Pris collectivement, les membres de données de champ d’un recordset font Office de tampon d’édition qui contient un enregistrement, l’enregistrement actif. Les opérations de mise à jour permet de cette mémoire tampon ne fonctionne pas sur l’enregistrement actif.  
   
 -   Lorsque vous ajoutez un enregistrement, le tampon d’édition est utilisé pour générer un nouvel enregistrement. Lorsque vous avez terminé l’ajout de l’enregistrement, l’enregistrement qui était précédemment redevient actif.  
@@ -78,7 +73,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 > [!NOTE]
 >  Le tampon d’édition ne joue aucun rôle dans la suppression de l’enregistrement. Lorsque vous supprimez l’enregistrement en cours, l’enregistrement est marqué comme supprimé, et le jeu d’enregistrements est « pas d’un enregistrement de » jusqu'à ce que vous faites défiler vers un autre enregistrement.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Les instantanés et les feuilles de réponse dynamiques  
+##  <a name="_core_dynasets_and_snapshots"></a> Les instantanés et les feuilles de réponse dynamiques  
  [Feuilles de réponse dynamiques](../../data/odbc/dynaset.md) actualiser le contenu d’un enregistrement que vous accédez à l’enregistrement. [Instantanés](../../data/odbc/snapshot.md) sont des représentations statiques des enregistrements, pour le contenu d’un enregistrement n’est pas actualisés, sauf si vous appelez [Requery](../../mfc/reference/crecordset-class.md#requery). Pour utiliser toutes les fonctionnalités des feuilles de réponse dynamiques, vous devez travailler avec un pilote ODBC conforme au niveau correct de prise en charge de l’API ODBC. Pour plus d’informations, consultez [ODBC](../../data/odbc/odbc-basics.md) et [Dynaset](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Voir aussi  

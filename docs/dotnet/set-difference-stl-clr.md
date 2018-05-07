@@ -1,12 +1,9 @@
 ---
 title: set_difference (STL/CLR) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set_difference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - set_difference function [STL/CLR]
 ms.assetid: 47a34d92-53d7-4065-9302-9e2e70e46c4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d31be8ebb5385348e99f4688b8c5447a70edcb5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 057b56c44df50fdd3c59a689650262e5e952f359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setdifference-stlclr"></a>set_difference (STL/CLR)
 Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.  
@@ -45,7 +40,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 ## <a name="remarks"></a>Notes  
  Cette fonction comporte comme la fonction de la bibliothèque Standard C++ `set_difference`. Pour plus d’informations, consultez [set_difference](../standard-library/algorithm-functions.md#set_difference).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/algorithme >  
   
  **Namespace :** cliext  

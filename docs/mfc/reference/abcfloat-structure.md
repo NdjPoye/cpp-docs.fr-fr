@@ -1,13 +1,10 @@
 ---
 title: Abcfloat, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ABCFLOAT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ABCFLOAT structure [MFC]
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58871df5a526455297dd6d092f98e9facd901ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5be39336f3da839dc9b1c7be6a64db54b59f99bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT, structure
 Le `ABCFLOAT` structure contient les largeurs de A, B et C d’un caractère de la police.  
@@ -53,7 +48,7 @@ typedef struct _ABCFLOAT { /* abcf */
 ## <a name="remarks"></a>Notes  
  Les largeurs de A, B et C sont mesurées le long de la ligne de base de la police. L’incrément de caractère (largeur totale) d’un caractère est la somme des espaces A, B et C. L’un ou l’espace de C peut être négatif pour indiquer underhangs ou dépassements.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,13 +1,10 @@
 ---
-title: "Modèles de document et le processus de création de Document / Vue | Documents Microsoft"
-ms.custom: 
+title: Modèles de document et le processus de création de Document / Vue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd47720009449d51abadd1e5f513149a83702ea3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2d8308e69cf53db4be51f6ce742df41edaa89ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Modèles de document et processus de création de document/vue
 Pour gérer le processus complexe de création de documents avec leurs vues associées et les fenêtres frame, le framework utilise deux classes de modèle de document : [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) pour les applications SDI et [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) pour les applications MDI. Un `CSingleDocTemplate` peut créer et stocker un document d'un type à la fois. Un `CMultiDocTemplate` conserve une liste de plusieurs documents ouverts d'un type.  

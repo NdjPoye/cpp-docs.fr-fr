@@ -1,30 +1,25 @@
 ---
-title: "Paramètres du contrôle de barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Paramètres du contrôle de barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - toolbar controls [MFC], about toolbar controls
 - CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1290e8769bfd072ac66c2e4d981eb6b4d641fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03ff905b76ba4a215f6993c1bb0002dd1f87e06b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="settings-for-the-toolbar-control"></a>Paramètres du contrôle ToolBar
 Les boutons sur une barre d’outils peuvent afficher une image bitmap, une chaîne ou les deux. Par défaut, la taille de l’image est définie aux dimensions de 16 par 15 pixels. Tous les boutons sont la même largeur, par défaut 24 par 22 pixels. Hauteur de la barre d’outils est déterminée par la hauteur des boutons et la largeur de la barre d’outils est identique à la largeur de la zone cliente de la fenêtre parente, également par défaut.  

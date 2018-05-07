@@ -1,12 +1,9 @@
 ---
 title: Compilateur avertissement (niveaux 1 et 3) C4793 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Avertissement du compilateur (niveaux 1 et 3) C4793
 'fonction' : fonction est compilée comme code natif : 'raison'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Message de raison|Notes|  
 |--------------------|-------------|  
 |Types de données alignés ne sont pas pris en charge dans le code managé|Le CLR doit être en mesure d’allouer des données en fonction des besoins, qui ne peut pas être possible si les données sont alignées avec les déclarations telles que [__m128](../../cpp/m128.md) ou [aligner](../../cpp/align-cpp.md).|  
-|Les fonctions qui utilisent '__ImageBase ' ne sont pas pris en charge dans le code managé|`__ImageBase`est un symbole de l’éditeur de liens spécial qui est généralement utilisé uniquement par le code natif de bas niveau pour charger une DLL.|  
+|Les fonctions qui utilisent '__ImageBase ' ne sont pas pris en charge dans le code managé|`__ImageBase` est un symbole de l’éditeur de liens spécial qui est généralement utilisé uniquement par le code natif de bas niveau pour charger une DLL.|  
 |varargs ne sont pas pris en charge par la ' / clr' option du compilateur|Les fonctions natives ne peuvent pas appeler des fonctions managées qui ont [listes d’arguments variables](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs), car les fonctions ont des spécifications de disposition autre pile. Toutefois, si vous spécifiez la `/clr:pure` option du compilateur, les arguments de variable listes sont prises en charge, car l’assembly peut contenir uniquement des fonctions managées. Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |Le CLR 64 bits ne prend pas en charge les données déclarées avec le modificateur __ptr32|Un pointeur doit être la même taille qu’un pointeur natif sur la plateforme actuelle. Pour plus d’informations, consultez [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
 |Le CLR 32 bits ne prend pas en charge les données déclarées avec le modificateur __ptr64|Un pointeur doit être la même taille qu’un pointeur natif sur la plateforme actuelle. Pour plus d’informations, consultez [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  

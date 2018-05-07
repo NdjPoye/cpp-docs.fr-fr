@@ -1,13 +1,10 @@
 ---
-title: "Objets de données et Sources de données : Manipulation | Documents Microsoft"
-ms.custom: 
+title: 'Objets de données et Sources de données : Manipulation | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et sources de données : manipulation
 Après avoir créé un objet de données ou d’une source de données, vous pouvez effectuer un nombre d’opérations courantes sur les données, telles que l’insertion et la suppression des données, énumérer les formats de données et bien plus encore. Cet article décrit les techniques nécessaires pour effectuer les opérations les plus courantes. Les rubriques traitées ici sont les suivantes :  
@@ -42,7 +37,7 @@ Après avoir créé un objet de données ou d’une source de données, vous pou
   
 -   [La récupération des données à partir d’un objet de données](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Insertion de données dans une Source de données  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Insertion de données dans une Source de données  
  Comment les données sont insérées dans une source de données dépend de si les données sont fournies, immédiatement ou à la demande et du support par lequel il est fourni. Les possibilités sont les suivantes.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Fourniture immédiate des données (rendu immédiat)  
@@ -62,7 +57,7 @@ Après avoir créé un objet de données ou d’une source de données, vous pou
   
 -   Si vous utilisez un `CFile` objet pour fournir les données, appelez `COleDataSource::DelayRenderFileData` au lieu de `COleDataSource::DelayRenderData` dans l’option précédente. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderFileData`, que vous devez substituer.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Déterminer les Formats disponibles dans un objet de données  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Déterminer les Formats disponibles dans un objet de données  
  Avant une application permet à l’utilisateur coller des données, il doit savoir s’il existe des formats dans le Presse-papiers pour qu’il peut gérer. Pour ce faire, votre application doit effectuer le des opérations suivantes :  
   
 1.  Créer un `COleDataObject` objet et un **FORMATETC** structure.  
@@ -79,7 +74,7 @@ Après avoir créé un objet de données ou d’une source de données, vous pou
   
  Si vous utilisez `ON_UPDATE_COMMAND_UI`, vous pouvez désormais activer le collage et, éventuellement, des éléments de collage spécial dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur le conteneur d’applications doivent faire avec les éléments de menu et, consultez [Menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>La récupération des données à partir d’un objet de données  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> La récupération des données à partir d’un objet de données  
  Une fois que vous avez choisi un format de données, il reste qu’à extraire les données de l’objet de données. Pour ce faire, l’utilisateur décide où placer les données, et l’application appelle la fonction appropriée. Les données seront disponibles dans un des supports suivants :  
   
 |Moyenne|Fonction à appeler|  

@@ -1,12 +1,9 @@
 ---
 title: Structure de CCreateContext | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Structure de CCreateContext
 L’infrastructure utilise le `CCreateContext` lorsqu’il crée les fenêtres frame et les vues qui sont associés à un document de la structure.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Notes  
- `CCreateContext`est une structure et ne dispose pas d’une classe de base.  
+ `CCreateContext` est une structure et ne dispose pas d’une classe de base.  
   
  Lorsque vous créez une fenêtre, les valeurs dans cette structure fournissent les informations utilisées pour connecter les composants d’un document à l’affichage de ses données. Vous devez uniquement utiliser `CCreateContext` si vous substituez les parties du processus de création.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Membre|Type|Il concerne|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`de la nouvelle vue à créer.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` de la nouvelle vue à créer.|  
 |`m_pCurrentDoc`|`CDocument*`|Le document existant à associer à la nouvelle vue.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|Le modèle de document associé à la création d’une fenêtre frame MDI.|  
 |`m_pLastView`|`CView*`|La vue d’origine sur lequel sont modélisées vues supplémentaires, comme la création d’affichages, la fenêtre fractionnée ou la création d’une seconde vue sur un document.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Tous les pointeurs de `CCreateContext` sont facultatives et peuvent être `NULL` si non spécifié ou inconnu.  
   
- `CCreateContext`est utilisé par les fonctions membres répertoriées sous « Voir aussi ». Pour plus d’informations, consultez les descriptions de ces fonctions si vous envisagez de les remplacer.  
+ `CCreateContext` est utilisé par les fonctions membres répertoriées sous « Voir aussi ». Pour plus d’informations, consultez les descriptions de ces fonctions si vous envisagez de les remplacer.  
   
  Voici quelques directives générales :  
   
@@ -70,7 +65,7 @@ struct CCreateContext
   
  Pour plus d’informations sur `CCreateContext`, consultez l’exemple MFC [VIEWEX](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
 ## <a name="see-also"></a>Voir aussi  

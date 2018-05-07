@@ -1,13 +1,10 @@
 ---
-title: "Création d’une Application conteneur de documents actifs | Documents Microsoft"
-ms.custom: 
+title: Création d’une Application conteneur de documents actifs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077d15837ed857ac983c3c9f9d4e7853b45aeee5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-active-document-container-application"></a>Création d'une application conteneur de documents actifs
 La façon la plus simple et plus recommandée pour créer une application conteneur de document actif consiste à créer une application de conteneur EXE MFC à l’aide de l’Assistant Application MFC, puis modifiez l’application pour prendre en charge de la relation contenant-contenu de document actif.  
@@ -60,7 +55,7 @@ La façon la plus simple et plus recommandée pour créer une application conten
   
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]  
   
-     `OnPreparePrinting`prend en charge l’impression. Ce code remplace `DoPreparePrinting`, qui est la préparation de l’impression par défaut.  
+     `OnPreparePrinting` prend en charge l’impression. Ce code remplace `DoPreparePrinting`, qui est la préparation de l’impression par défaut.  
   
      Relation contenant-contenu de document actif fournit un schéma d’impression amélioré :  
   

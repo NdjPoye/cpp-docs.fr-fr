@@ -1,13 +1,10 @@
 ---
-title: "Boîtes de dialogue dans OLE | Documents Microsoft"
-ms.custom: 
+title: Boîtes de dialogue dans OLE | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes-in-ole"></a>Boîtes de dialogue dans OLE
 Lorsqu’un utilisateur exécute une application OLE, voici les heures lorsque l’application a besoin d’informations à partir de l’utilisateur afin d’effectuer l’opération. Les classes OLE MFC fournissent un nombre de boîtes de dialogue pour recueillir les informations requises. Cette rubrique répertorie les tâches gérées par les boîtes de dialogue OLE et les classes nécessaires pour afficher ces boîtes de dialogue. Pour plus d’informations sur les boîtes de dialogue OLE et les structures utilisées pour personnaliser leur comportement, consultez [référence MFC](../mfc/mfc-desktop-applications.md).  

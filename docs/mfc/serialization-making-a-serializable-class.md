@@ -1,13 +1,10 @@
 ---
-title: "Sérialisation : Définir une classe sérialisable | Documents Microsoft"
-ms.custom: 
+title: 'Sérialisation : Définir une classe sérialisable | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>Sérialisation : définir une classe sérialisable
 Cinq étapes principales sont requises pour rendre une classe sérialisable. Elles sont répertoriées ci-dessous et expliquées dans les sections suivantes :  
@@ -52,10 +47,10 @@ Cinq étapes principales sont requises pour rendre une classe sérialisable. Ell
   
  Si vous appelez `Serialize` directement plutôt que dans le >> et << les opérateurs de [CArchive](../mfc/reference/carchive-class.md), les trois dernières étapes ne sont pas requis pour la sérialisation.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>Dériver votre classe de CObject  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Dériver votre classe de CObject  
  Le protocole et les fonctionnalités de base de sérialisation sont définis dans la classe `CObject`. En faisant dériver votre classe de `CObject` (ou une classe dérivée de `CObject`), comme indiqué dans la déclaration suivante de la classe `CPerson`, vous accédez au protocole de sérialisation et à la fonctionnalité `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>Substitution de la fonction membre Serialize  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Substitution de la fonction membre Serialize  
  La fonction membre `Serialize`, définie dans la classe `CObject`, est chargée de la sérialisation réelle des données nécessaires pour capturer l'état actuel d'un objet. La fonction `Serialize` a un argument `CArchive` qu'elle utilise pour lire et écrire les données de l'objet. Le [CArchive](../mfc/reference/carchive-class.md) objet a une fonction membre, `IsStoring`, ce qui indique si `Serialize` est le stockage des (données écriture) ou le chargement (lecture). L’utilisation des résultats de `IsStoring` comme guide, vous insérez des données de l’objet dans le `CArchive` objet avec l’opérateur d’insertion (**<\<**) ou extraire des données avec l’opérateur d’extraction ( **>>**).  
   
  Considérez une classe qui est dérivée de `CObject` et a deux nouvelles variables membres, des types `CString` et **WORD**. Le fragment de déclaration de classe présente les variables membres et la déclaration de la fonction membre substituée de `Serialize` :  
@@ -74,12 +69,12 @@ Cinq étapes principales sont requises pour rendre une classe sérialisable. Ell
   
  Vous pouvez également utiliser le [CArchive::Read](../mfc/reference/carchive-class.md#read) et [CArchive::Write](../mfc/reference/carchive-class.md#write) des fonctions membres pour lire et écrire des grandes quantités de données non typées.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>À l’aide de la Macro DECLARE_SERIAL  
+##  <a name="_core_using_the_declare_serial_macro"></a> À l’aide de la Macro DECLARE_SERIAL  
  La macro `DECLARE_SERIAL` est requise dans la déclaration des classes qui prennent en charge la sérialisation, comme indiqué ici :  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>Définition d’un constructeur sans arguments  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Définition d’un constructeur sans arguments  
  MFC requiert un constructeur par défaut lorsqu'il recrée les objets tels qu'ils sont désérialisés (chargés du disque). Le processus de désérialisation complète toutes les variables membres avec les valeurs requises pour recréer l'objet.  
   
  Ce constructeur peut être déclaré public, protégé ou privé. Si vous le protégez ou le rendez privé, vous vous assurez qu'il sera utilisé uniquement par les fonctions de sérialisation. Le constructeur doit mettre l'objet dans un état qui l'autorise à être supprimé, si nécessaire.  
@@ -87,7 +82,7 @@ Cinq étapes principales sont requises pour rendre une classe sérialisable. Ell
 > [!NOTE]
 >  Si vous oubliez de définir un constructeur sans arguments dans une classe qui utilise les macros `DECLARE_SERIAL` et `IMPLEMENT_SERIAL`, le message d'avertissement du compilateur "aucun constructeur par défaut" s'affichera sur la ligne où la macro `IMPLEMENT_SERIAL` est utilisée.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>À l’aide de la Macro IMPLEMENT_SERIAL dans le fichier d’implémentation  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> À l’aide de la Macro IMPLEMENT_SERIAL dans le fichier d’implémentation  
  La macro `IMPLEMENT_SERIAL` permet de définir diverses fonctions nécessaires lorsque vous dérivez une classe `CObject`sérialisable. Utilisez la macro du fichier d'implémentation (.CPP) pour la classe. Les deux premiers arguments à la macro sont le nom de la classe et le nom de la classe de base immédiate.  
   
  Le troisième argument de la macro est un numéro de schéma. Le numéro de schéma est essentiellement le numéro de version des objets de la classe. Utilisez un entier supérieur ou égal à 0 pour le numéro de schéma. (Ne confondez pas le numéro de schéma avec la terminologie de base de données.)  

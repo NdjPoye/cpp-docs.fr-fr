@@ -1,31 +1,26 @@
 ---
-title: "Modifications apportées à la sémantique du destructeur | Documents Microsoft"
-ms.custom: 
+title: Modifications apportées à la sémantique du destructeur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finalizers [C++]
 - destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3d078300ca0e51ba8eb035d5428d300b0413a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-destructor-semantics"></a>Modifications de la sémantique du destructeur
 Sémantique des destructeurs de classe ont considérablement évolué depuis les Extensions managées pour C++ vers Visual C++.  
@@ -168,7 +163,7 @@ void f() {
  En effet, dans la nouvelle syntaxe, les destructeurs sont à nouveau appariés aux constructeurs comme une acquisition/la libération automatique mécanisme liée à la durée de vie d’un objet local.  
   
 ## <a name="declaring-an-explicit-finalize"></a>Déclaration d’une méthode Finalize explicite  
- Dans la nouvelle syntaxe, comme nous l’avons vu, le destructeur est synthétisé dans le `Dispose` (méthode). Cela signifie que lorsque le destructeur n’est pas appelé explicitement, le garbage collector, lors de la finalisation, pas comme avant recherchera des associé à un `Finalize` méthode pour l’objet. Pour prendre en charge de destruction et la finalisation, nous avons introduit une syntaxe spéciale pour fournir un finaliseur. Exemple :  
+ Dans la nouvelle syntaxe, comme nous l’avons vu, le destructeur est synthétisé dans le `Dispose` (méthode). Cela signifie que lorsque le destructeur n’est pas appelé explicitement, le garbage collector, lors de la finalisation, pas comme avant recherchera des associé à un `Finalize` méthode pour l’objet. Pour prendre en charge de destruction et la finalisation, nous avons introduit une syntaxe spéciale pour fournir un finaliseur. Par exemple :  
   
 ```  
 public ref class R {  

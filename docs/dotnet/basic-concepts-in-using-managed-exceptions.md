@@ -2,12 +2,9 @@
 title: Concepts de base à l’aide des Exceptions managées | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concepts de base dans l'utilisation des exceptions managées
 Cette rubrique décrit la gestion des exceptions dans les applications managées. Autrement dit, une application qui est compilée avec le **/CLR** option du compilateur.  
@@ -48,7 +43,7 @@ Cette rubrique décrit la gestion des exceptions dans les applications managées
   
  Pour plus d’informations sur les différences dans la gestion des exceptions dans les applications managées et non managées, consultez [les différences dans l’Exception gestion comportement sous les Extensions managées pour C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Lever des Exceptions sous /clr  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Lever des Exceptions sous /clr  
  L’expression throw de C++ est étendue pour lever un handle à un type CLR. L’exemple suivant crée un type d’exception personnalisé et puis lève une instance de ce type :  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Blocs Try/Catch pour les Extensions CLR  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Blocs Try/Catch pour les Extensions CLR  
  Le même **essayez**/**catch** structure de bloc peut être utilisée pour intercepter les exceptions natives et CLR :  
   
 ```  

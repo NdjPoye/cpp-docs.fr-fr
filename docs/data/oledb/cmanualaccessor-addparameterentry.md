@@ -1,12 +1,9 @@
 ---
-title: CManualAccessor::AddParameterEntry | Microsoft Docs
-ms.custom: 
+title: CManualAccessor::AddParameterEntry | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CManualAccessor::AddParameterEntry
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddParameterEntry method
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab686bfed7abd3bece3effbcf9f5e2b98132bb8b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cb97e841cf72abcf49ee2a57ccd78832e7fb95a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
 Ajoute une entrée de paramètre pour les structures d’entrée de paramètre.  
@@ -73,7 +68,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 ## <a name="remarks"></a>Notes  
  Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,12 +1,9 @@
 ---
 title: Compilateur avertissement (niveau 1) C4555 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4555
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4555
 ms.assetid: 50b286c1-f7bf-4292-b1fa-baaac9538611
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205084a7da7601cbd2d3e96bd9b0de45dca92934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 019423685bb92ddb4b9d4bafc58bb4ba4eb2d708
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4555"></a>Avertissement du compilateur (niveau 1) C4555
 l'expression n'a pas d'effet ; attendue expression avec effets secondaires  
@@ -34,7 +29,7 @@ l'expression n'a pas d'effet ; attendue expression avec effets secondaires
   
  Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 // C4555.cpp  

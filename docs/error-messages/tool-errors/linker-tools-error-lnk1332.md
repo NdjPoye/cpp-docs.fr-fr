@@ -1,12 +1,9 @@
 ---
-title: "LNK1332 d’erreur des outils Éditeur de liens | Documents Microsoft"
-ms.custom: 
+title: LNK1332 d’erreur des outils Éditeur de liens | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1332
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea5e817bcaf03f157079e16b544cba343c780f68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1332"></a>Erreur des outils Éditeur de liens LNK1332
 détecté\<count > types Windows Runtime importés dans un module et définis dans un autre module  

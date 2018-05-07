@@ -1,12 +1,9 @@
 ---
 title: CConstantTransition, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConstantTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition, classe
 Encapsule une transition constante.  
@@ -72,10 +67,10 @@ class CConstantTransition : public CBaseTransition;
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
  Construit un objet de transition et initialise sa durée.  
   
 ```  
@@ -86,7 +81,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  La durée de la transition.  
   
-##  <a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>  CConstantTransition::Create  
  Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -102,7 +97,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  La durée de la transition.  
   
 ```  

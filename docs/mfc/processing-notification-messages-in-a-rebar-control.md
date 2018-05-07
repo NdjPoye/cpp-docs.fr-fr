@@ -1,13 +1,10 @@
 ---
-title: "Traitement des Messages de Notification dans un contrôle Rebar | Documents Microsoft"
-ms.custom: 
+title: Traitement des Messages de Notification dans un contrôle Rebar | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22a8b584c309cd6698ddd73449fcbba866111190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Traitement des messages de notification dans un contrôle rebar
 Dans la classe parente du contrôle rebar, créez un `OnChildNotify` fonction de gestionnaire avec une instruction switch pour n’importe quel contrôle rebar (`CReBarCtrl`) vous souhaitez gérer les messages de notification. Notifications sont envoyées à la fenêtre parente lorsque l’utilisateur fait glisser des objets sur le contrôle rebar, modifications de la disposition des bandes, supprime des bandes du contrôle rebar et ainsi de suite.  

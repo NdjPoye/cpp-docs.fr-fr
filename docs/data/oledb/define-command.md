@@ -1,12 +1,9 @@
 ---
 title: DEFINE_COMMAND | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - DEFINE_COMMAND
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3af85ea4c223cac4e770dd9b45ffe785309f9f69
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 51f975b0477d29fbb35880c796f52612456c32c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Spécifie la commande permettant de créer l’ensemble de lignes lors de l’utilisation du [CCommand](../../data/oledb/ccommand-class.md) classe. Accepte uniquement les types de chaîne correspondant au type d’application spécifié (ANSI ou Unicode).  
@@ -56,7 +51,7 @@ DEFINE_COMMAND(x, szCommand)
 ## <a name="example"></a>Exemple  
  Consultez [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

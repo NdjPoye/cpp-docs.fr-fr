@@ -1,12 +1,9 @@
 ---
 title: CCommand (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4c53d7b27c98e0509cd434bf6eac2412b9c1a1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 667e86c173a7001ae22036cb1f0dd8f3fbfcf6a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 Fournit des méthodes pour définir et exécuter une commande.  
@@ -69,13 +64,13 @@ class CCommand :
   
 |||  
 |-|-|  
-|[Create](../../data/oledb/ccommand-create.md)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|  
+|[Créer](../../data/oledb/ccommand-create.md)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de commande.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Crée une nouvelle commande.|  
 |[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Obtient une liste de paramètres de la commande, leurs noms et leurs types.|  
-|[Prepare](../../data/oledb/ccommand-prepare.md)|Valide et optimise la commande actuelle.|  
+|[Préparer](../../data/oledb/ccommand-prepare.md)|Valide et optimise la commande actuelle.|  
 |[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Libère l’accesseur de paramètre, si nécessaire, puis libère de la commande.|  
 |[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Spécifie le type natif de chaque paramètre de commande.|  
-|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Ignore le plan d’exécution de commande en cours.|  
+|[Annulation de préparation](../../data/oledb/ccommand-unprepare.md)|Ignore le plan d’exécution de commande en cours.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez cette classe lorsque vous avez besoin effectuer une opération basée sur un paramètre ou exécuter une commande. Si vous devez simplement ouvrir un ensemble de lignes simple, utilisez [CTable](../../data/oledb/ctable-class.md) à la place.  
@@ -84,7 +79,7 @@ class CCommand :
   
  Notez que vous ne pouvez pas utiliser les procédures stockées avec le fournisseur OLE DB pour Jet car ce fournisseur ne prend pas en charge les procédures (seules des constantes sont autorisées dans les chaînes de requête).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

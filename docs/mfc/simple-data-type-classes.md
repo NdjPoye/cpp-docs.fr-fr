@@ -1,13 +1,10 @@
 ---
-title: "Classes de Type de données simple | Documents Microsoft"
-ms.custom: 
+title: Classes de Type de données simple | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simple-data-type-classes"></a>Classes de type de données simple
-Les classes suivantes encapsulent dessin coordonnées, des chaînes de caractères et heure et les informations de date, ce qui permet de pratique utiliser de syntaxe C++. Ces objets sont utilisés largement en tant que paramètres pour les fonctions membres de classes de fenêtres dans la bibliothèque de classes. Étant donné que `CPoint`, `CSize`, et `CRect` correspondent à la **POINT**, **taille**, et `RECT` structures, respectivement, dans le Kit de développement, vous pouvez utiliser des objets de ces Les classes C++, partout où vous pouvez utiliser ces structures en langage C. Les classes fournissent des interfaces utiles via les fonctions membres. `CStringT`Fournit des chaînes de caractères dynamique très flexible. `CTime`, `COleDateTime`, `CTimeSpan`, et **COleTimeSpan** représentent les valeurs de date et heure. Pour plus d’informations sur ces classes, consultez l’article [Date et heure](../atl-mfc-shared/date-and-time.md).  
+Les classes suivantes encapsulent dessin coordonnées, des chaînes de caractères et heure et les informations de date, ce qui permet de pratique utiliser de syntaxe C++. Ces objets sont utilisés largement en tant que paramètres pour les fonctions membres de classes de fenêtres dans la bibliothèque de classes. Étant donné que `CPoint`, `CSize`, et `CRect` correspondent à la **POINT**, **taille**, et `RECT` structures, respectivement, dans le Kit de développement, vous pouvez utiliser des objets de ces Les classes C++, partout où vous pouvez utiliser ces structures en langage C. Les classes fournissent des interfaces utiles via les fonctions membres. `CStringT` Fournit des chaînes de caractères dynamique très flexible. `CTime`, `COleDateTime`, `CTimeSpan`, et **COleTimeSpan** représentent les valeurs de date et heure. Pour plus d’informations sur ces classes, consultez l’article [Date et heure](../atl-mfc-shared/date-and-time.md).  
   
  Les classes qui commencent par «**COle**» sont encapsulations des types de données fournis par OLE. Ces types de données peuvent être utilisés dans les programmes de Windows, même si les autres fonctionnalités OLE sont utilisées.  
   

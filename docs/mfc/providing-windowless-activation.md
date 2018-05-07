@@ -1,13 +1,10 @@
 ---
-title: "En fournissant l’Activation sans fenêtre | Documents Microsoft"
-ms.custom: 
+title: En fournissant l’Activation sans fenêtre | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>Mise à disposition de l'activation sans fenêtre
 Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vous appelez **CreateWindow**) est coûteux à exécuter. Un contrôle qui gère une fenêtre affichée à l'écran doit gérer les messages de la fenêtre. Les contrôles sans fenêtre sont donc plus rapides que les contrôles avec fenêtre.  
@@ -37,7 +32,7 @@ Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vou
   
  Les contrôles sans fenêtre n'ont pas leurs propres fenêtres, le conteneur (qui lui possède une fenêtre) est chargé de fournir des services qui auraient dans tous les cas été fournis par la propre fenêtre du contrôle. Par exemple, si votre contrôle a besoin d'interroger le focus clavier, d'intercepter la souris ou d'obtenir le contexte de périphérique, ces opérations sont gérées par le conteneur. Le conteneur achemine les messages d'entrée utilisateur envoyés dans la fenêtre au contrôle sans fenêtre approprié, à l'aide de l'interface `IOleInPlaceObjectWindowless`. (Consultez la *ActiveX SDK* pour obtenir une description de cette interface.) `COleControl` fonctions membres appellent ces services à partir du conteneur.  
   
- Pour utiliser l’activation sans fenêtre votre contrôle, vous devez inclure le **windowlessActivate** indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Exemple :  
+ Pour utiliser l’activation sans fenêtre votre contrôle, vous devez inclure le **windowlessActivate** indicateur dans le jeu d’indicateurs retourné par [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Par exemple :  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
@@ -63,7 +58,7 @@ Code de création de fenêtre (autrement dit, tout ce qui se produit lorsque vou
   
  Dans les contrôles sans fenêtre, vous devez toujours utiliser les fonctions membres `COleControl` au lieu des fonctions membres `CWnd` correspondantes ou leurs fonctions API Win32 associées.  
   
- Vous pouvez souhaiter qu’un contrôle sans fenêtre soit la cible d’une opération glisser-déposer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Puisque le contrôle n’a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Exemple :  
+ Vous pouvez souhaiter qu’un contrôle sans fenêtre soit la cible d’une opération glisser-déposer OLE. Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Puisque le contrôle n’a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun. Pour exposer cette interface au conteneur, vous devez substituer [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Par exemple :  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   

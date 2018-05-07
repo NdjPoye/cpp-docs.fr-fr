@@ -1,29 +1,24 @@
 ---
-title: "Outils définis par l’utilisateur | Documents Microsoft"
-ms.custom: 
+title: Outils définis par l’utilisateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0751a2cb3f78730ec948d737dc99b85c2e735
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-tools"></a>Outils définis par l'utilisateur
 MFC prend en charge les outils définis par l'utilisateur. Un outil défini par l'utilisateur est une commande spéciale qui exécute un programme externe spécifié par l'utilisateur. Vous pouvez utiliser le processus de personnalisation pour gérer les outils définis par l'utilisateur. Toutefois, vous ne pouvez pas utiliser ce processus si votre objet d’application n’est pas dérivée de [CWinAppEx classe](../mfc/reference/cwinappex-class.md). Pour plus d’informations sur la personnalisation, consultez [personnalisation pour MFC](../mfc/customization-for-mfc.md).  

@@ -1,11 +1,8 @@
 ---
 title: Platform::Details Interface | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Details::IEquatable
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23071bb2f057ab46db126df4899817bcf0ff12c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a69d9d8a54e62e424193a7d7d06f9022f6a81b6a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (interface)
 Cette interface est destinée à une utilisation interne uniquement, et non à des fins de développement.  
@@ -42,7 +37,7 @@ interface class IEquatable;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Platform`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Métadonnées :** platform.winmd  
   
  **Espace de noms :** Platform::Details  

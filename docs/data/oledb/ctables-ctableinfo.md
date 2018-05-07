@@ -1,12 +1,9 @@
 ---
 title: CTables, CTableInfo | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szCatalog
@@ -37,18 +34,16 @@ helpviewer_keywords:
 - m_guidTable
 - CTableInfo parameter class
 ms.assetid: 57670f1b-ba99-43b0-b406-4c75b44f14f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f9cc0c7140de05be49cb78745bba122dc125727b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 63c190fb32718ce87b611a7c7f5f5e8e1a2c343a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctables-ctableinfo"></a>CTables, CTableInfo
 Appelez la classe typedef **CTables** pour implémenter sa classe de paramètre **CTableInfo**.  
@@ -69,7 +64,7 @@ Appelez la classe typedef **CTables** pour implémenter sa classe de paramètre 
 |m_guidTable|TABLE_GUID|  
 |m_szDescription|DESCRIPTION|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbsch.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,13 +1,10 @@
 ---
-title: "Assistant Ajout de méthode | Documents Microsoft"
-ms.custom: 
+title: Assistant Ajout de méthode | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Assistant Ajout de méthode
 Utilisez cet Assistant pour ajouter une méthode à une interface. Selon le type de projet ou le type d’interface à laquelle vous ajoutez une méthode, l’Assistant affiche les différentes options.  
   
 ## <a name="names"></a>Noms  
  **Type de retour**  
- Le type de données retourné par la méthode. `HRESULT`est recommandé pour tous les types interface, car il offre un moyen standard de retourner des erreurs.  
+ Le type de données retourné par la méthode. `HRESULT` est recommandé pour tous les types interface, car il offre un moyen standard de retourner des erreurs.  
   
 |Type d'interface|Description|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ Utilisez cet Assistant pour ajouter une méthode à une interface. Selon le type
 |-------------------------|-----------------|--------------------------|  
 |**In**|Indique que le paramètre est passé à partir de la procédure appelante à la procédure appelée.|**dans** uniquement<br /><br /> **dans** et **out**|  
 |**Out**|Indique que le paramètre de pointeur est retourné à partir de la procédure appelée à la procédure appelante (du serveur au client).|**out** uniquement<br /><br /> **dans** et **out**<br /><br /> **out** et **retval**|  
-|**Retval**|Indique que le paramètre reçoit la valeur de retour du membre.|**retval** et out|  
+|**retval**|Indique que le paramètre reçoit la valeur de retour du membre.|**retval** et out|  
   
  **Type de paramètre**  
  Définit le type de données du paramètre. Sélectionnez le type dans la liste.  

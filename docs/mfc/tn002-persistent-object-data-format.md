@@ -1,13 +1,10 @@
 ---
-title: "TN002 : Format des données objet persistant | Documents Microsoft"
-ms.custom: 
+title: 'TN002 : Format des données objet persistant | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002 : format des données d'objets persistants
 Cette note décrit les routines MFC qui prennent en charge le format des données d’objet et les objets C++ persistants lorsqu’elle est stockée dans un fichier. Cela s’applique uniquement aux classes avec la [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) et [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macros.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Si l’objet n’a pas été enregistré auparavant, il existe deux moyens de prendre en compte : l’objet et le type exact (autrement dit, la classe) de l’objet sont nouveaux pour ce contexte de l’archive, ou l’objet est d’un type exact déjà rencontré. Pour déterminer si le type a été affiché, les requêtes de code la `m_pStoreMap` pour un [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objet qui correspond à la `CRuntimeClass` objet associé à l’objet en cours d’enregistrement. S’il existe une correspondance, `WriteObject` insère une balise qui est le bit `OR` de `wOldClassTag` et cet index. Si le `CRuntimeClass` est une nouveauté dans ce contexte de l’archive, `WriteObject` attribue un nouveau PID à cette classe et l’insère dans l’archive, précédé par le `wNewClassTag` valeur.  
   
- Le descripteur à cette classe est ensuite inséré dans l’archive à l’aide de la `CRuntimeClass::Store` (méthode). `CRuntimeClass::Store`Insère le numéro de schéma de la classe (voir ci-dessous) et le nom de texte ASCII de la classe. Notez que l’utilisation du nom de texte ASCII ne garantit pas l’unicité de l’archive entre les applications. Par conséquent, vous devez marquer vos fichiers de données pour empêcher la corruption. Après l’insertion des informations de classe, l’archive place l’objet dans le `m_pStoreMap` , puis appelle la `Serialize` méthode pour insérer des données spécifiques à la classe. Placer l’objet dans le `m_pStoreMap` avant d’appeler `Serialize` empêche plusieurs copies de l’objet ne sont pas enregistrées dans le magasin.  
+ Le descripteur à cette classe est ensuite inséré dans l’archive à l’aide de la `CRuntimeClass::Store` (méthode). `CRuntimeClass::Store` Insère le numéro de schéma de la classe (voir ci-dessous) et le nom de texte ASCII de la classe. Notez que l’utilisation du nom de texte ASCII ne garantit pas l’unicité de l’archive entre les applications. Par conséquent, vous devez marquer vos fichiers de données pour empêcher la corruption. Après l’insertion des informations de classe, l’archive place l’objet dans le `m_pStoreMap` , puis appelle la `Serialize` méthode pour insérer des données spécifiques à la classe. Placer l’objet dans le `m_pStoreMap` avant d’appeler `Serialize` empêche plusieurs copies de l’objet ne sont pas enregistrées dans le magasin.  
   
  Lors du retour à l’appelant initial (généralement la racine du réseau d’objets), vous devez appeler [CArchive::Close](../mfc/reference/carchive-class.md#close). Si vous envisagez d’effectuer d’autres [CFile](../mfc/reference/cfile-class.md)opérations, vous devez appeler la `CArchive` méthode [vider](../mfc/reference/carchive-class.md#flush) pour éviter l’endommagement de l’archive.  
   

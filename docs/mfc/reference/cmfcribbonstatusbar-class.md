@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCRibbonStatusBar | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Classe de CMFCRibbonStatusBar
 La `CMFCRibbonStatusBar` classe implémente un contrôle de barre d’état qui peut afficher les éléments de ruban.  
@@ -142,10 +137,10 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxribbonstatusbar.h  
   
-##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement  
  Ajoute un élément dynamique à la barre d’état du ruban.  
   
 ```  
@@ -159,7 +154,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>Notes  
  Contrairement aux éléments régulières, éléments dynamiques ne sont pas personnalisables et le menu de personnaliser la barre d’état n’affiche pas les.  
   
-##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement  
  Ajoute un nouvel élément de ruban à la barre d’état du ruban.  
   
 ```  
@@ -177,9 +172,9 @@ void AddElement(
  Une étiquette de texte de l’élément.  
   
  [in] `bIsVisible`  
- `TRUE`Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
+ `TRUE` Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
   
-##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  Ajoute un élément de ruban à la zone étendue de la barre d’état du ruban.  
   
 ```  
@@ -197,12 +192,12 @@ void AddExtendedElement(
  L’étiquette de texte de l’élément.  
   
  [in] `bIsVisible`  
- `TRUE`Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
+ `TRUE` Si vous souhaitez ajouter l’élément comme visible, `FALSE` si vous souhaitez ajouter l’élément est masqué.  
   
 ### <a name="remarks"></a>Notes  
  La zone étendue se trouve sur le côté droit du contrôle de barre d'état.  
   
-##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator  
  Ajoute un séparateur à la barre d’état du ruban.  
   
 ```  
@@ -212,7 +207,7 @@ void AddSeparator();
 ### <a name="remarks"></a>Notes  
  Le framework ajoute un séparateur d’après la méthode [CMFCRibbonStatusBar::AddElement](#addelement). Insère le dernier élément.  
   
-##  <a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>  CMFCRibbonStatusBar::Create  
  Crée une barre d’état du ruban.  
   
 ```  
@@ -233,9 +228,9 @@ BOOL Create(
  L’ID de contrôle de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la barre d’état est créée avec succès, `FALSE` dans le cas contraire.  
+ `TRUE` Si la barre d’état est créée avec succès, `FALSE` dans le cas contraire.  
   
-##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx  
  Crée une barre d’état de ruban qui a un style étendu.  
   
 ```  
@@ -260,9 +255,9 @@ BOOL CreateEx(
  L’ID de contrôle de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la barre d’état est créée avec succès, `FALSE` dans le cas contraire.  
+ `TRUE` Si la barre d’état est créée avec succès, `FALSE` dans le cas contraire.  
   
-##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -277,7 +272,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement  
  Retourne un pointeur vers l’élément qui possède l’ID de commande spécifiée.  
   
 ```  
@@ -289,9 +284,9 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
  L’ID de l’élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’élément qui possède l’ID de commande spécifiée. `NULL`s’il n’existe aucun élément.  
+ Un pointeur vers l’élément qui possède l’ID de commande spécifiée. `NULL` s’il n’existe aucun élément.  
   
-##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount  
  Retourne le nombre d’éléments qui se trouvent dans la zone principale de la barre d’état du ruban.  
   
 ```  
@@ -301,7 +296,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments qui se trouvent dans la zone principale de la barre d’état du ruban.  
   
-##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement  
  Retourne un pointeur vers l’élément qui se trouve à l’index spécifié.  
   
 ```  
@@ -313,11 +308,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
  Spécifie un index de base zéro d’un élément qui se trouve dans la zone principale du contrôle de barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’élément qui se trouve à l’index spécifié. `NULL`Si l’index est un nombre négatif ou est supérieur au nombre d’éléments dans la barre d’état.  
+ Pointeur vers l’élément qui se trouve à l’index spécifié. `NULL` Si l’index est un nombre négatif ou est supérieur au nombre d’éléments dans la barre d’état.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount  
  Retourne le nombre d’éléments qui se trouvent dans la zone étendue de la barre d’état du ruban.  
   
 ```  
@@ -327,7 +322,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments qui se trouvent dans la zone étendue de la barre d’état du ruban.  
   
-##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement  
  Retourne un pointeur vers l'élément situé à l'index spécifié dans la zone étendue de la barre d'état du ruban. La zone étendue se trouve sur le côté droit du contrôle de barre d'état.  
   
 ```  
@@ -343,7 +338,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -357,7 +352,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -368,7 +363,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -379,7 +374,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -393,7 +388,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode  
  Détermine si le mode d’informations est activé pour la barre d’état du ruban.  
   
 ```  
@@ -401,12 +396,12 @@ BOOL IsInformationMode() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la barre d’état peut fonctionner en mode d’informations ; dans le cas contraire `FALSE`.  
+ `TRUE` Si la barre d’état peut fonctionner en mode d’informations ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  En mode d’informations, la barre d’état masque tous les volets standards et affiche une chaîne de message.  
   
-##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation  
  Affiche la chaîne qui apparaît sur l’état de ruban barre lorsque le mode d’informations est activé.  
   
 ```  
@@ -429,7 +424,7 @@ virtual void OnDrawInformation(
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de la chaîne d’informations sur la barre d’état. Utilisez le [CMFCRibbonStatusBar::SetInformation](#setinformation) méthode permettant de placer la barre d’état dans le mode d’informations. Dans ce mode, la barre d’état masque tous les volets et affiche la chaîne d’informations spécifiée par `strInfo`.  
   
-##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -438,14 +433,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll  
  Supprime tous les éléments de la barre d’état du ruban.  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement  
  Supprime l’élément qui a un ID de commande spécifié à partir de la barre d’état du ruban.  
   
 ```  
@@ -457,9 +452,9 @@ BOOL RemoveElement(UINT uiID);
  L’ID de l’élément à supprimer de la barre d’état.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si un élément avec l’objet `uiID` est supprimé. Sinon, `FALSE`.  
+ `TRUE` Si un élément avec l’objet `uiID` est supprimé. Sinon, `FALSE`.  
   
-##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Active ou désactive le mode d’informations pour la barre d’état du ruban.  
   
 ```  

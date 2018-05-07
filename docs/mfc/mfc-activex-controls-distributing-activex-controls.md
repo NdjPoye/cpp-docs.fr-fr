@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Distribution de contrôles ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Distribution de contrôles ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Contrôles ActiveX MFC : distribution de contrôles ActiveX
 Cet article présente plusieurs problèmes liés à la redistribution de contrôles ActiveX :  
@@ -55,12 +50,12 @@ Cet article présente plusieurs problèmes liés à la redistribution de contrô
   
 -   [Inscrire des contrôles](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI ou Unicode du contrôle des Versions  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI ou Unicode du contrôle des Versions  
  Vous devez décider si vous souhaitez fournir une version ANSI ou Unicode du contrôle, ou les deux. Cette décision est basée sur des facteurs de portabilité inhérents aux jeux de caractères ANSI et Unicode.  
   
  Autorisent les contrôles ANSI, qui fonctionnent sur tous les systèmes d’exploitation de Win32, pour une portabilité maximale entre les différents systèmes d’exploitation Win32. Les contrôles Unicode fonctionnent sous Windows NT (version 3.51 ou version ultérieure) uniquement, mais pas sur Windows 95 ou Windows 98. Si la portabilité est votre souci principal, fournissez des contrôles ANSI. Si vos contrôles seront exécute uniquement sous Windows NT, vous pouvez expédier les contrôles Unicode. Vous pouvez également choisir d’expédier les deux et d’installer la version la plus appropriée pour le système d’exploitation de l’utilisateur de votre application.  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>L’installation des contrôles ActiveX et les DLL redistribuables  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> L’installation des contrôles ActiveX et les DLL redistribuables  
  Le programme d’installation que vous fournissez à vos contrôles ActiveX doit créer un sous-répertoire spécial dans le répertoire Windows et installez les contrôles. OCX du contrôle.  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ Cet article présente plusieurs problèmes liés à la redistribution de contrô
   
  Étant donné que les contrôles ActiveX peuvent être utilisés uniquement dans des applications conteneur OLE, il est inutile de distribuer le jeu complet de DLL OLE avec vos contrôles. Vous pouvez supposer que l’application conteneur (ou le système d’exploitation lui-même) a la DLL OLE standard.  
   
-##  <a name="_core_registering_controls"></a>Inscrire des contrôles  
+##  <a name="_core_registering_controls"></a> Inscrire des contrôles  
  Avant de pouvoir utiliser un contrôle, les entrées appropriées doivent être créées pour elle dans la base de données d’inscription de Windows. Certains conteneurs de contrôles ActiveX fournissent un élément de menu pour les utilisateurs à inscrire de nouveaux contrôles, mais cette fonctionnalité n’est peut-être pas disponible dans tous les conteneurs. Par conséquent, vous devrez votre programme d’installation pour inscrire les contrôles lorsqu’ils sont installés.  
   
  Si vous préférez, vous pouvez écrire votre programme d’installation pour inscrire le contrôle directement à la place.  

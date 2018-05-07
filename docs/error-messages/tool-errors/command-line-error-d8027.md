@@ -1,12 +1,9 @@
 ---
 title: Erreur de ligne de commande D8027 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - D8027
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - D8027
 ms.assetid: f228220f-0c7f-49a6-a6e0-1f7bd4745aa6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd66688dbf582bf38fb9a0a3706663db3cf145d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc93edb939001a1e1bed5d3f7a4113e8483e81dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-error-d8027"></a>Erreur de ligne de commande D8027
 Impossible d’exécuter 'composant'  
@@ -40,7 +35,7 @@ Impossible d’exécuter 'composant'
   
 3.  Le composant a été endommagé. Recopiez le composant à partir de disques de distribution, à l’aide du programme d’installation.  
   
-4.  Une option a été spécifiée correctement. Exemple :  
+4.  Une option a été spécifiée correctement. Par exemple :  
   
     ```  
     cl /B1 file1.c  

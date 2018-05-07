@@ -1,12 +1,9 @@
 ---
 title: AtlTraceErrorRecords | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.AtlTraceErrorRecords
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - AtlTraceErrorRecords function
 ms.assetid: b83970b3-dc2a-445c-9142-f52218719905
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 024a4331b71b3414aa7d83f27ecaca4e5d2f11de
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afea3c3ef1f169e5f1cb5fc675c74b54da1be0d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 Exporte les informations d’enregistrement de l’erreur OLE DB à l’unité de vidage si une erreur est retournée.  
@@ -46,7 +41,7 @@ Exporte les informations d’enregistrement de l’erreur OLE DB à l’unité d
 ## <a name="remarks"></a>Notes  
  Si `hErr` n’est pas `S_OK`, `AtlTraceErrorRecords` exporte les informations de l’enregistrement d’erreur OLE DB à l’unité de vidage (le **déboguer** onglet de la fenêtre de sortie ou un fichier). Les informations de l’enregistrement d’erreur, qui sont obtenues à partir du fournisseur, incluent le numéro de ligne, la source, description, fichier d’aide, contexte et GUID pour chaque entrée enregistrement d’erreur. `AtlTraceErrorRecords` exporte ces informations uniquement dans les versions debug. Dans les versions release, il s’agit d’un stub vide qui est optimisé out.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

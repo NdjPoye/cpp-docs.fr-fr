@@ -1,11 +1,8 @@
 ---
 title: Platform::Agile, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 Représente un objet qui a MashalingBehavior=Standard en tant qu’objet agile, ce qui réduit considérablement les risques d’exception de thread d’exécution. `Agile<T>` permet à l’objet non agile d’appeler ou d’être appelé par le même thread ou un thread différent. Pour plus d’informations, consultez [thread et Marshaling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -80,7 +75,7 @@ class Agile;
   
  `Agile`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -201,7 +196,7 @@ void Release() throw();
 ### <a name="remarks"></a>Notes  
  L'objet et le contexte sous-jacent de l'objet Agile actif sont ignorés, s'ils existent, et la valeur de l'objet Agile est alors définie sur null.  
 
-## <a name="operator-arrow"></a>  Agile::operator-&gt; Operator
+## <a name="operator-arrow"></a>  Agile::operator -&gt; (opérateur)
 Récupère un handle vers l’objet représenté par l’objet Agile actif.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -217,7 +212,7 @@ const throw();
   
  Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à affecter à une variable déclarée avec le **automatique** mot clé de déduction de type.  
 
-## <a name="operator-assign"></a>  Agile::operator= Operator
+## <a name="operator-assign"></a>  Agile::operator =, opérateur
 Assigne l'objet spécifié à l'objet Agile actuel.  
   
 ## <a name="syntax"></a>Syntaxe  

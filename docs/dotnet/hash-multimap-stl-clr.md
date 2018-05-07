@@ -2,11 +2,8 @@
 title: hash_multimap (STL/CLR) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/hash_map> header [STL/CLR]
 - <hash_map> header [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 027ed43936e4335819f95d10050de37570e6a679
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès bidirectionnel. Vous utilisez le conteneur `hash_multimap` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant un bidirectionnel lié à la liste des nœuds et chaque nœud de stocker un élément. Un élément est constitué d’une clé, pour le classement de la séquence et une valeur mappée, qui aborde le long de la conduite.  
@@ -37,11 +32,11 @@ La classe de modèle décrit un objet qui contrôle une séquence de longueur va
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
- où :  
+ où :  
   
- `GKey`est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est`Key^`  
+ `GKey` est le même que `Key` , sauf si ce dernier est un type référence, auquel cas il est `Key^`  
   
- `GMapped`est le même que `Mapped` , sauf si ce dernier est un type référence, auquel cas il est`Mapped^`  
+ `GMapped` est le même que `Mapped` , sauf si ce dernier est un type référence, auquel cas il est `Mapped^`  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +77,7 @@ template<typename Key,
 |[hash_multimap::hasher (STL/CLR)](../dotnet/hash-multimap-hasher-stl-clr.md)|Délégué d’une clé de hachage.|  
 |[hash_multimap::iterator (STL/CLR)](../dotnet/hash-multimap-iterator-stl-clr.md)|Type d'un itérateur pour la séquence contrôlée.|  
 |[hash_multimap::key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)|Délégué de classement pour les deux clés.|  
-|[hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)|Type d’une clé de tri.|  
+|[hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)|Type d'une clé de tri.|  
 |[hash_multimap::mapped_type (STL/CLR)](../dotnet/hash-multimap-mapped-type-stl-clr.md)|Le type de la valeur mappée associée à chaque clé.|  
 |[hash_multimap::reference (STL/CLR)](../dotnet/hash-multimap-reference-stl-clr.md)|Type d'une référence à un élément.|  
 |[hash_multimap::reverse_iterator (STL/CLR)](../dotnet/hash-multimap-reverse-iterator-stl-clr.md)|Type d'un itérateur inverse pour la séquence contrôlée.|  
@@ -96,7 +91,7 @@ template<typename Key,
 |[hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)|Compte le nombre de compartiments.|  
 |[hash_multimap::clear (STL/CLR)](../dotnet/hash-multimap-clear-stl-clr.md)|Supprime tous les éléments.|  
 |[hash_multimap::count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)|Compte des éléments qui correspondent à une clé spécifiée.|  
-|[hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Vérifie l’absence d’éléments.|  
+|[hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)|Vérifie l'absence d'éléments.|  
 |[hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)|Désigne la fin de la séquence contrôlée.|  
 |[hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)|Recherche une plage qui correspond à une clé spécifiée.|  
 |[hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)|Supprime les éléments placés aux positions spécifiées.|  
@@ -108,11 +103,11 @@ template<typename Key,
 |[hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)|Compte le nombre moyen d'éléments par compartiment.|  
 |[hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)|Début de la recherche de plage qui correspond à une clé spécifiée.|  
 |[hash_multimap::make_value (STL/CLR)](../dotnet/hash-multimap-make-value-stl-clr.md)|Construit un objet de valeur.|  
-|[hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md)|Obtient ou définit le nombre maximal d'éléments par compartiment.|  
+|[hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
 |[hash_multimap::rbegin (STL/CLR)](../dotnet/hash-multimap-rbegin-stl-clr.md)|Désigne le début de la séquence contrôlée inverse.|  
 |[hash_multimap::rehash (STL/CLR)](../dotnet/hash-multimap-rehash-stl-clr.md)|Régénère la table de hachage.|  
 |[hash_multimap::rend (STL/CLR)](../dotnet/hash-multimap-rend-stl-clr.md)|Désigne la fin de la séquence contrôlée inverse.|  
-|[hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)|Compte le nombre d’éléments.|  
+|[hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)|Compte le nombre d'éléments.|  
 |[hash_multimap::swap (STL/CLR)](../dotnet/hash-multimap-swap-stl-clr.md)|Échange le contenu de deux conteneurs.|  
 |[hash_multimap::to_array (STL/CLR)](../dotnet/hash-multimap-to-array-stl-clr.md)|Copie de la séquence contrôlée vers un nouveau tableau.|  
 |[hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)|Fin de la recherche de plage qui correspond à une clé spécifiée.|  
@@ -140,7 +135,7 @@ template<typename Key,
   
  Pour accéder à l’objet délégué stockée en appelant la fonction membre [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Cet objet de délégué doit définir un classement équivalent entre les clés de type [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `key_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
+ `key_comp()(X, Y)` Retourne la valeur booléenne même résultat à chaque appel.  
   
  Si `key_comp()(X, Y) && key_comp()(Y, X)` est true, puis `X` et `Y` sont considérés comme ayant un classement équivalent.  
   
@@ -150,7 +145,7 @@ template<typename Key,
   
  L’objet détermine quel compartiment doit contenir une clé de tri spécifique en appelant un objet délégué stocké de type [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Pour accéder à cet objet stocké en appelant la fonction membre [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` pour obtenir une valeur entière qui dépend de la valeur de clé. Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez l’objet hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la fonction `System::Object::hash_value(key_type)`. Cela signifie que, pour toutes les clés `X` et `Y`:  
   
- `hash_delegate()(X)`Retourne le même résultat entier sur chaque appel.  
+ `hash_delegate()(X)` Retourne le même résultat entier sur chaque appel.  
   
  Si `X` et `Y` ont un classement équivalent, puis `hash_delegate()(X)` doit retourner le même résultat entier en tant que `hash_delegate()(Y)`.  
   

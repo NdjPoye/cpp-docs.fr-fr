@@ -1,24 +1,19 @@
 ---
 title: Les classes ou structures (C + c++ / CX) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes et structures de référence (C++/CX)
 C + c++ / prend en charge CX défini par l’utilisateur *les classes ref* et *structs ref*, définies par l’utilisateur *valeur classes* et *valeur structs*. Ces structures de données sont des conteneurs principaux par les C + c++ / CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers des métadonnées selon certaines règles spécifiques, et cela leur permet d’être passées entre les composants Windows Runtime et les applications de plateforme Windows universelle qui sont écrits en C++ ou d’autres langages.  

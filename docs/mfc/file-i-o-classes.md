@@ -1,13 +1,10 @@
 ---
-title: "Classes d’e-S de fichier | Documents Microsoft"
-ms.custom: 
+title: Classes d’e-S de fichier | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
 dev_langs:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454e64d67321282030126d2aab023e9f587c1cca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b11996aadd58b456aa919d4ff888c783b4ba486e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-io-classes"></a>Classes d'E/S de fichier
 Ces classes fournissent une interface pour les fichiers de disque traditionnelles, les fichiers en mémoire, des flux de données Active et Windows sockets. Toutes les classes dérivées de `CFile` peut être utilisé avec un `CArchive` objet pour effectuer la sérialisation.  
@@ -63,7 +58,7 @@ Ces classes fournissent une interface pour les fichiers de disque traditionnelle
  [CArchive](../mfc/reference/carchive-class.md)  
  Collabore avec un `CFile` objet à mettre en œuvre le stockage persistant pour les objets via la sérialisation (consultez [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- [Exception CArchiveException](../mfc/reference/carchiveexception-class.md)  
+ [CArchiveException](../mfc/reference/carchiveexception-class.md)  
  Une exception de l’archive.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  

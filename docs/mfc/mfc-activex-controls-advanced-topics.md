@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Les rubriques avancées | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Les rubriques avancées | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 Cet article traite des rubriques avancées liés au développement de contrôles ActiveX. Elles incluent notamment :  
@@ -46,7 +41,7 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
 -   [L’accès aux contrôles de boîte de dialogue invisibles au moment de l’exécution](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>À l’aide des Classes de base de données dans les contrôles ActiveX  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> À l’aide des Classes de base de données dans les contrôles ActiveX  
  Étant donné que les classes de contrôles ActiveX font partie de la bibliothèque de classes, vous pouvez appliquer les mêmes procédures et les règles d’utilisation des classes de base de données dans une application MFC standard pour développer des contrôles ActiveX qui utilisent les classes de base de données MFC.  
   
  Pour obtenir une vue d’ensemble des classes de base de données MFC, consultez [les Classes de base de données MFC (ODBC et DAO)](../data/mfc-database-classes-odbc-and-dao.md). Cet article présente les deux classes ODBC MFC et DAO MFC, classes et vous dirige vers plus de détails sur le.  
@@ -54,7 +49,7 @@ Cet article traite des rubriques avancées liés au développement de contrôles
 > [!NOTE]
 >  Les Assistants et l’environnement Visual C++ ne prennent pas en charge les DAO (bien que les classes DAO sont incluses et vous pouvez toujours les utiliser). Microsoft recommande d’utiliser [modèles OLE DB](../data/oledb/ole-db-programming.md) ou [ODBC et MFC](../data/odbc/odbc-and-mfc.md) pour les nouveaux projets. Vous devez uniquement utiliser DAO dans la maintenance des applications existantes.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implémentation d’une propriété paramétrable  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implémentation d’une propriété paramétrable  
  Une propriété paramétrée (parfois appelée un tableau de propriétés) est une méthode pour exposer une collection homogène de valeurs en tant qu’une seule propriété du contrôle. Par exemple, vous pouvez utiliser une propriété paramétrée pour exposer un tableau ou un dictionnaire en tant que propriété. En Visual Basic, une telle propriété est accessible à l’aide de la notation de tableau :  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
  Pour cette propriété peut être utile, vous pouvez déclarer une variable de membre de tableau à deux dimensions dans la classe du contrôle, de type **court**, pour stocker les valeurs de la propriété paramétrée. Vous pourriez ensuite modifier la fonction Get pour retourner la valeur stockée à la ligne et colonne correctes, comme indiqué par les paramètres et modifier la fonction pour mettre à jour la valeur référencée par les paramètres de ligne et de colonne.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Gestion des erreurs dans votre contrôle ActiveX  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Gestion des erreurs dans votre contrôle ActiveX  
  En cas de conditions d’erreur dans le contrôle, vous devrez peut-être signaler l’erreur pour le conteneur de contrôle. Il existe deux méthodes pour signaler les erreurs, selon la situation dans laquelle l’erreur se produit. Si l’erreur se produit au sein d’une propriété obtient ou définit la fonction, ou dans l’implémentation d’une méthode OLE Automation, le contrôle doit appeler [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), qui signale à l’utilisateur du contrôle qu’une erreur s’est produit. Si l’erreur se produit à tout moment, le contrôle doit appeler [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), ce qui déclenche un événement d’erreur stock.  
   
  Pour indiquer le type d’erreur qui s’est produite, le contrôle doit passer un code d’erreur à `ThrowError` ou `FireError`. Un code d’erreur est un code d’état OLE, qui a une valeur 32 bits. Lorsque cela est possible, choisissez un code d’erreur dans le jeu de codes définis dans le OLECTL standard. Fichier d’en-tête H. Le tableau suivant récapitule ces codes.  
@@ -156,13 +151,13 @@ Cet article traite des rubriques avancées liés au développement de contrôles
 |**CTL_E_SEARCHTEXTNOTFOUND**|Texte recherché introuvable|  
 |**CTL_E_REPLACEMENTSTOOLONG**|Remplacements trop longs|  
   
- Si nécessaire, utilisez le **CUSTOM_CTL_SCODE** macro pour définir un code d’erreur personnalisés pour une condition qui n’est pas couverte par un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767, inclusif. Exemple :  
+ Si nécessaire, utilisez le **CUSTOM_CTL_SCODE** macro pour définir un code d’erreur personnalisés pour une condition qui n’est pas couverte par un des codes standard. Le paramètre de cette macro doit être un entier compris entre 1000 et 32767, inclusif. Par exemple :  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
  Si vous créez un contrôle ActiveX pour remplacer un contrôle VBX existant, définissez les codes d’erreur de votre contrôle ActiveX avec les mêmes valeurs numériques, que le contrôle VBX utilise pour s’assurer que les codes d’erreur sont compatibles.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>Gestion de touches spéciales dans le contrôle  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Gestion de touches spéciales dans le contrôle  
  Dans certains cas, vous souhaiterez gérer certaines combinaisons de touches d’une façon particulière ; par exemple, insérer une nouvelle ligne lorsque la touche entrée dans un texte multiligne contrôle de zone ou passer à un groupe de modification contrôle lorsqu’un directionnelle enfoncé des ID de clé.  
   
  Si la classe de base de votre contrôle ActiveX est `COleControl`, vous pouvez substituer [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) pour traiter les messages avant que le conteneur. Lorsque vous utilisez cette technique, retournent toujours **TRUE** si vous gérez le message dans la substitution de `PreTranslateMessage`.  
@@ -173,7 +168,7 @@ Cet article traite des rubriques avancées liés au développement de contrôles
   
  Pour plus d’informations sur la gestion des interfaces de clavier pour un contrôle ActiveX, consultez la documentation ActiveX SDK.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>L’accès aux contrôles de boîte de dialogue invisibles au moment de l’exécution  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> L’accès aux contrôles de boîte de dialogue invisibles au moment de l’exécution  
  Vous pouvez créer des contrôles de boîte de dialogue qui n’ont aucune interface utilisateur et sont invisibles au moment de l’exécution. Si vous ajoutez un invisible au moment de l’exécution contrôle ActiveX à une boîte de dialogue et les utiliser [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) pour le contrôle d’accès, le contrôle ne fonctionne pas correctement. Au lieu de cela, vous devez utiliser une des techniques suivantes pour obtenir un objet qui représente le contrôle :  
   
 -   À l’aide de l’Assistant Ajout de membre Variable, sélectionnez **contrôle Variable** , puis sélectionnez les ID du contrôle Entrez un nom de variable membre et sélectionnez la classe du contrôle wrapper en tant que le **Type de contrôle**.  

@@ -1,16 +1,12 @@
 ---
-title: "Erreurs du compilateur C2400 à C2499 | Documents Microsoft"
-ms.custom: 
+title: Erreurs du compilateur C2400 à C2499 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Erreurs du compilateur C2400 à C2499
 
@@ -88,7 +81,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2426](compiler-error-c2426.md)|'*jeton*' : opérateur non conforme dans '*contexte*'|
 |[Erreur du compilateur C2427](compiler-error-c2427.md)|'*classe*' : ne peut pas définir de classe dans cette portée|
 |[Erreur du compilateur C2428](compiler-error-c2428.md)|'*opération*' : non autorisé sur un opérande de type 'bool'|
-|C2429 d’erreur du compilateur|*Contexte* '*contexte*'requiert l’indicateur de compilateur'*option*'|
+|[C2429 d’erreur du compilateur](compiler-error-c2429.md)|'*fonctionnalité de langage*'requiert l’indicateur de compilateur'*option du compilateur*'|
 |[Erreur du compilateur C2430](compiler-error-c2430.md)|plus d’un registre d’index dans '*contexte*'|
 |[Erreur du compilateur C2431](compiler-error-c2431.md)|Registre d’index non conforme dans '*contexte*'|
 |[Erreur du compilateur C2432](compiler-error-c2432.md)|référence non conforme à des données 16 bits dans '*contexte*'|
@@ -149,7 +142,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C2491](compiler-error-c2491.md)|'*identificateur*' : définition de dllimport *fonction* non autorisée|
 |[Erreur du compilateur C2492](compiler-error-c2492.md)|'*variable*' : les données avec une durée de stockage de thread ne peuvent pas avoir d’interface dll|
 |[Erreur du compilateur C2493](compiler-error-c2493.md)|forme non conforme de __based|
-|[Erreur du compilateur C2494](compiler-error-c2494.md)|'*mot clé*' ne peut pas être appelé à partir d’une expression de filtre ou &#95; & &#95; ; bloc finally/finally|
+|[Erreur du compilateur C2494](compiler-error-c2494.md)|'*mot clé*' ne peut pas être appelé à partir d’une expression de filtre ou &#95; &#95;bloc finally/finally|
 |[Erreur du compilateur C2495](compiler-error-c2495.md)|'*identificateur*' : '__declspec(noexcept)' peut uniquement être appliqué aux définitions ou déclarations de fonction|
 |[Erreur du compilateur C2496](compiler-error-c2496.md)|'*identificateur*' : 'selectany' peut uniquement être appliqué aux éléments de données avec liaison externe|
 |C2497 d’erreur du compilateur|'*identificateur*' : 'implementation_key ' ne peut être appliqué uniquement aux déclarations de fonction|

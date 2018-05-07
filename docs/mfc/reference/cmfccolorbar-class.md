@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCColorBar | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorBar
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04dcf7628e45d4c43ffbd5bbcd85132092ca04a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2083c26943768afff4b3b20a2ba95c709648dd50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorbar-class"></a>Classe de CMFCColorBar
 La `CMFCColorBar` classe représente une barre de contrôle d’ancrage que vous pouvez sélectionner des couleurs dans un document ou une application.  
@@ -237,10 +232,10 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcolorbar.h  
   
-##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
+##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations  
  Ajuste les positions des boutons de couleur sur le contrôle de barre de couleur.  
   
 ```  
@@ -250,7 +245,7 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>Notes  
  Cette méthode est appelée par l’infrastructure pendant `WM_SIZE` le traitement des messages.  
   
-##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
  Indique si l’étiquette de texte des boutons de couleur peut modifier.  
   
 ```  
@@ -263,7 +258,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode retourne toujours `FALSE`, ce qui signifie que les étiquettes de texte ne peut pas être modifié. Substituez cette méthode pour permettre la modification des étiquettes de texte.  
   
-##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>  CMFCColorBar::AllowShowOnList  
  Indique si l’objet de contrôle de barre de couleur permettre apparaître dans une liste de la barre d’outils pendant le processus de personnalisation.  
   
 ```  
@@ -276,7 +271,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode retourne toujours `TRUE`, ce qui signifie que l’infrastructure peut afficher le contrôle de barre de couleur au cours du processus de personnalisation. Substituez cette méthode pour implémenter un comportement différent.  
   
-##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
+##  <a name="calcsize"></a>  CMFCColorBar::CalcSize  
  Appelé par l’infrastructure dans le cadre du processus de calcul de disposition.  
   
 ```  
@@ -285,12 +280,12 @@ virtual CSize CalcSize(BOOL bVertDock);
   
 ### <a name="parameters"></a>Paramètres  
  [in] `bVertDock`  
- `TRUE`Pour spécifier que le contrôle de barre de couleur est ancré verticalement ; `FALSE` pour spécifier que le contrôle de barre de couleur est ancré horizontalement.  
+ `TRUE` Pour spécifier que le contrôle de barre de couleur est ancré verticalement ; `FALSE` pour spécifier que le contrôle de barre de couleur est ancré horizontalement.  
   
 ### <a name="return-value"></a>Valeur de retour  
  La taille du tableau de boutons de couleur dans un contrôle de barre de couleur.  
   
-##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
+##  <a name="cmfccolorbar"></a>  CMFCColorBar::CMFCColorBar  
  Construit un objet `CMFCColorBar`.  
   
 ```  
@@ -374,7 +369,7 @@ CMFCColorBar(
  [in] `uiCommandID`  
  ID de la commande.  
   
-##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
+##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
  Calcule les marges horizontales et verticales qui sont nécessaires pour contenir les boutons sur le contrôle de barre de couleur et ajuste l’emplacement de ces boutons.  
   
 ```  
@@ -387,12 +382,12 @@ void ContextToSize(
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `bSquareButtons`|`TRUE`Pour spécifier que la forme des boutons sur un contrôle de barre de couleur sont carrées ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.|  
-|[in] `bCenterButtons`|`TRUE`Pour spécifier que le contenu sur un bouton de contrôle de barre de couleur est centré ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.|  
+|[in] `bSquareButtons`|`TRUE` Pour spécifier que la forme des boutons sur un contrôle de barre de couleur sont carrées ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.|  
+|[in] `bCenterButtons`|`TRUE` Pour spécifier que le contenu sur un bouton de contrôle de barre de couleur est centré ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.|  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="create"></a>CMFCColorBar::Create  
+##  <a name="create"></a>  CMFCColorBar::Create  
  Crée une fenêtre de contrôle de barre de couleur et l’attache à le `CMFCColorBar` objet.  
   
 ```  
@@ -429,12 +424,12 @@ virtual BOOL Create(
  Le nombre de colonnes dans le contrôle de barre de couleur lorsqu’il est ancré verticalement. La valeur par défaut est 0.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Pour construire un `CMFCColorBar` d’objet, appelez le constructeur de classe, cette méthode. Le `Create` méthode crée le contrôle Windows et initialise une liste de couleurs.  
   
-##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
+##  <a name="createcontrol"></a>  CMFCColorBar::CreateControl  
  Crée une fenêtre de contrôle de barre de couleur, attache à le `CMFCColorBar` de l’objet et redimensionne la fenêtre de contrôle pour qu’il contienne la palette de couleurs de spécifié.  
   
 ```  
@@ -463,12 +458,12 @@ virtual BOOL CreateControl(
  Pointeur vers une palette de couleurs, ou `NULL`. Si ce paramètre est `NULL`, cette méthode calcule la taille du contrôle de barre de couleur comme si 20 couleurs ont été spécifiées. La valeur par défaut est `NULL`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode a réussi ; dans le cas contraire `FALSE`.  
+ `TRUE` Si cette méthode a réussi ; dans le cas contraire `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Cette méthode utilise le `rect`, `nColumns`, et `pPalette` paramètres pour calculer le nombre approprié ou de lignes et de colonnes dans le contrôle de barre de couleur, puis appelle la [CMFCColorBar::Create](#create) (méthode).  
   
-##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
+##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
  Initialise une palette de couleurs dans un tableau de couleurs spécifié.  
   
 ```  
@@ -485,9 +480,9 @@ static BOOL CreatePalette(
 |[in] `palette`|Une palette de couleurs.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorBar::EnableAutomaticButton  
  Affiche ou masque le bouton automatique.  
   
 ```  
@@ -507,12 +502,12 @@ void EnableAutomaticButton(
  La couleur par défaut que le framework s’applique lorsque vous cliquez sur le bouton automatique.  
   
  [in] `bEnable`  
- `TRUE`Pour activer le bouton automatique ; `FALSE` pour désactiver le bouton automatique. La valeur par défaut est `TRUE`.  
+ `TRUE` Pour activer le bouton automatique ; `FALSE` pour désactiver le bouton automatique. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Notes  
  L’étiquette de texte du bouton automatique est supprimée si la `lpszLabel` paramètre est `NULL` ou `bEnable` paramètre est `FALSE`.  
   
-##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
  Active ou désactive l’affichage de la boîte de dialogue qui permet à l’utilisateur de sélectionner des couleurs supplémentaires.  
   
 ```  
@@ -529,12 +524,12 @@ void EnableOtherButton(
  L’étiquette standard pour ce bouton est **autres couleurs...** .  
   
  [in] `bAltColorDlg`  
- `TRUE`Pour afficher le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue. `FALSE` pour afficher la norme [CColorDialog](../../mfc/reference/ccolordialog-class.md) boîte de dialogue. La valeur par défaut est `TRUE`.  
+ `TRUE` Pour afficher le [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) boîte de dialogue. `FALSE` pour afficher la norme [CColorDialog](../../mfc/reference/ccolordialog-class.md) boîte de dialogue. La valeur par défaut est `TRUE`.  
   
  [in] `bEnable`  
- `TRUE`Pour activer le bouton ; `FALSE` pour désactiver le bouton. La valeur par défaut est `TRUE`.  
+ `TRUE` Pour activer le bouton ; `FALSE` pour désactiver le bouton. La valeur par défaut est `TRUE`.  
   
-##  <a name="getcolor"></a>CMFCColorBar::GetColor  
+##  <a name="getcolor"></a>  CMFCColorBar::GetColor  
  Récupère la couleur actuellement sélectionnée.  
   
 ```  
@@ -544,7 +539,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>Valeur de retour  
  La couleur actuellement sélectionnée.  
   
-##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
+##  <a name="getcolorgridsize"></a>  CMFCColorBar::GetColorGridSize  
  Calcule le nombre de lignes et colonnes dans la grille d’un contrôle de barre de couleur.  
   
 ```  
@@ -555,12 +550,12 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[in] `bVertDock`|`TRUE`Pour effectuer le calcul pour un contrôle de barre de couleur ancré verticalement ; dans le cas contraire, effectuer le calcul pour un contrôle ancré horizontalement.|  
+|[in] `bVertDock`|`TRUE` Pour effectuer le calcul pour un contrôle de barre de couleur ancré verticalement ; dans le cas contraire, effectuer le calcul pour un contrôle ancré horizontalement.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) dont l’objet `cx` composant contient le nombre de colonnes et dont `cy` composant contient le nombre de lignes.  
   
-##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
+##  <a name="getcommandid"></a>  CMFCColorBar::GetCommandID  
  Récupère l’ID de commande du contrôle de barre de couleur actuelle.  
   
 ```  
@@ -573,7 +568,7 @@ UINT GetCommandID() const;
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur sélectionne une nouvelle couleur, le framework envoie l’ID de commande un `WM_COMMAND` message avertit le parent de la `CMFCColorBar` objet.  
   
-##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
+##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
  Calcule la hauteur supplémentaire nécessitant la barre de couleurs en cours pour afficher les éléments d’interface utilisateur divers, tels que les **autres** couleurs de bouton ou un document.  
   
 ```  
@@ -589,7 +584,7 @@ int GetExtraHeight(int nNumColumns) const;
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur supplémentaire calculée qui est requise.  
   
-##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>  CMFCColorBar::GetHighlightedColor  
  Récupère la couleur qui signifie qu’un bouton de couleur a le focus ; Autrement dit, le bouton est *à chaud*.  
   
 ```  
@@ -601,7 +596,7 @@ COLORREF GetHighlightedColor() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
+##  <a name="gethorzmargin"></a>  CMFCColorBar::GetHorzMargin  
  Récupère la marge horizontale, qui est l’espace entre la gauche ou cellule de la couleur de droite et la limite de la zone cliente.  
   
 ```  
@@ -611,7 +606,7 @@ int GetHorzMargin();
 ### <a name="return-value"></a>Valeur de retour  
  La marge horizontale.  
   
-##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
+##  <a name="getvertmargin"></a>  CMFCColorBar::GetVertMargin  
  Récupère la marge verticale, qui est l’espace entre le haut ou cellule de couleur inférieure et la limite de la zone cliente.  
   
 ```  
@@ -621,7 +616,7 @@ int GetVertMargin() const;
 ### <a name="return-value"></a>Valeur de retour  
  La marge verticale.  
   
-##  <a name="initcolors"></a>CMFCColorBar::InitColors  
+##  <a name="initcolors"></a>  CMFCColorBar::InitColors  
  Initialise un tableau de couleurs avec les couleurs dans une palette spécifiée, ou avec la palette par défaut du système.  
   
 ```  
@@ -640,7 +635,7 @@ static int InitColors(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le tableau de couleurs.  
   
-##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
+##  <a name="istearoff"></a>  CMFCColorBar::IsTearOff  
  Indique si la barre de couleur actuelle est ancrable.  
   
 ```  
@@ -648,12 +643,12 @@ BOOL IsTearOff() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le contrôle de barre de couleur actuelle est ancrable ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si le contrôle de barre de couleur actuelle est ancrable ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Si le contrôle de barre de couleur est ancrable, peut être détaché une barre de contrôle et ancré à un autre emplacement.  
   
-##  <a name="onkey"></a>CMFCColorBar::OnKey  
+##  <a name="onkey"></a>  CMFCColorBar::OnKey  
  Appelé par l’infrastructure quand un utilisateur appuie sur un bouton de clavier.  
   
 ```  
@@ -665,9 +660,9 @@ virtual BOOL OnKey(UINT nChar);
  Le code de touche virtuelle pour un utilisateur a appuyé sur la clé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode traite la clé spécifiée ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si cette méthode traite la clé spécifiée ; dans le cas contraire, `FALSE`.  
   
-##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCColorBar::OnSendCommand  
  Appelé par l’infrastructure pour fermer une hiérarchie de menus contextuels.  
   
 ```  
@@ -681,9 +676,9 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 |[in] `pButton`|Pointeur vers un contrôle qui réside sur une barre d’outils.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+ `TRUE` Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
   
-##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCColorBar::OnUpdateCmdUI  
  Appelé par l’infrastructure pour activer ou désactiver un élément d’interface utilisateur d’un contrôle de barre de couleur avant que l’élément est affiché.  
   
 ```  
@@ -697,12 +692,12 @@ virtual void OnUpdateCmdUI(
  Pointeur vers une fenêtre qui contient un élément d’interface utilisateur pour mettre à jour.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE`Pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; dans le cas contraire, `FALSE`.  
+ `TRUE` Pour désactiver l’élément d’interface utilisateur si aucun gestionnaire n’est défini dans une table des messages ; dans le cas contraire, `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  Lorsqu’un utilisateur de votre application clique sur un élément d’interface utilisateur, l’élément doit savoir si elle doit être affiché comme activé ou désactivé. La cible du message de commande fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` Gestionnaire de commandes. Utilisez cette méthode pour aider à traiter la commande. Pour plus d’informations, consultez [CCmdUI (classe)](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
+##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog  
  Ouvre une boîte de dialogue couleur.  
   
 ```  
@@ -719,18 +714,18 @@ virtual BOOL OpenColorDialog(
  La couleur sélectionné par un utilisateur.  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’utilisateur a sélectionné une couleur ; `FALSE` si l’utilisateur a annulé la boîte de dialogue couleur.  
+ `TRUE` Si l’utilisateur a sélectionné une couleur ; `FALSE` si l’utilisateur a annulé la boîte de dialogue couleur.  
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
+##  <a name="rebuild"></a>  CMFCColorBar::Rebuild  
  Complètement redessine le contrôle de barre de couleur.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
+##  <a name="selectpalette"></a>  CMFCColorBar::SelectPalette  
  Définit la palette logique du contexte de périphérique spécifié à la palette du bouton parent du contrôle de barre de couleur actuelle.  
   
 ```  
@@ -746,7 +741,7 @@ CPalette* SelectPalette(CDC* pDC);
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la palette est remplacée par la palette du bouton parent du contrôle de barre de couleur actuelle.  
   
-##  <a name="setcolor"></a>CMFCColorBar::SetColor  
+##  <a name="setcolor"></a>  CMFCColorBar::SetColor  
  Définit la couleur actuellement sélectionnée.  
   
 ```  
@@ -757,7 +752,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  Une valeur de couleur RVB.  
   
-##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
  Définit un nouveau nom d’une couleur spécifiée.  
   
 ```  
@@ -776,7 +771,7 @@ static void SetColorName(
 ### <a name="remarks"></a>Notes  
  Cette méthode modifie le nom de la couleur spécifiée dans toutes les `CMFCColorBar` objets dans votre application.  
   
-##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
+##  <a name="setcommandid"></a>  CMFCColorBar::SetCommandID  
  Définit un nouvel ID de commande pour un contrôle de barre de couleur.  
   
 ```  
@@ -790,7 +785,7 @@ void SetCommandID(UINT nCommandID);
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour modifier l’ID de commande d’un contrôle de barre de couleur et de notification de la fenêtre parente du contrôle que l’ID a changé.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>  CMFCColorBar::SetDocumentColors  
  Définit la liste des couleurs utilisées dans le document actif.  
   
 ```  
@@ -808,12 +803,12 @@ void SetDocumentColors(
  Une liste de couleurs qui remplace les couleurs du document actif.  
   
  [in] `bShowWhenDocked`  
- `TRUE`Pour afficher les couleurs du document lorsque le contrôle de barre de couleur est ancré ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
+ `TRUE` Pour afficher les couleurs du document lorsque le contrôle de barre de couleur est ancré ; dans le cas contraire, `FALSE`. La valeur par défaut est `FALSE`.  
   
 ### <a name="remarks"></a>Notes  
  *Couleurs de document* sont les couleurs qui sont actuellement utilisés dans un document. Le framework gère automatiquement une liste de couleurs du document, mais vous pouvez utiliser cette méthode pour modifier la liste.  
   
-##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
+##  <a name="sethorzmargin"></a>  CMFCColorBar::SetHorzMargin  
  Définit la marge horizontale, qui est l’espace entre la gauche ou cellule de la couleur de droite et la limite de la zone cliente.  
   
 ```  
@@ -827,7 +822,7 @@ void SetHorzMargin(int nHorzMargin);
 ### <a name="remarks"></a>Notes  
  Par défaut, le [CMFCColorBar::CMFCColorBar](#cmfccolorbar) constructeur définit la marge horizontale de 4 pixels.  
   
-##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
+##  <a name="setproplist"></a>  CMFCColorBar::SetPropList  
  Définit le `m_pWndPropList` protégé par membre de données du pointeur spécifié vers un contrôle de grille de propriétés.  
   
 ```  
@@ -840,7 +835,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 |---------------|-----------------|  
 |[in] `pWndList`|Pointeur vers l’objet de contrôle de grille de propriété.|  
   
-##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
+##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  Définit la marge verticale, qui est l’espace entre la cellule de couleur en haut ou en bas et de la limite de la zone cliente.  
   
 ```  
@@ -854,7 +849,7 @@ void SetVertMargin(int nVertMargin);
 ### <a name="remarks"></a>Notes  
  Par défaut, le [CMFCColorBar::CMFCColorBar](#cmfccolorbar) constructeur définit la marge verticale de 4 pixels.  
   
-##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCColorBar::ShowCommandMessageString  
  La fenêtre frame qui possède le contrôle de barre de couleur pour mettre à jour la ligne du message dans la barre d’état des demandes.  
   
 ```  

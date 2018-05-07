@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets : Notifications de Socket | Documents Microsoft"
-ms.custom: 
+title: 'Windows Sockets : Notifications de Socket | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets : notifications de socket
 Cet article décrit les fonctions de notification dans les classes de Sockets. Ces fonctions membres sont des fonctions de rappel que l’infrastructure appelle pour notifier à votre objet socket d’événements importants. Les fonctions de notification sont :  
@@ -45,7 +40,7 @@ Cet article décrit les fonctions de notification dans les classes de Sockets. C
   
  Si vous dérivez de la classe `CAsyncSocket`, vous devez substituer les fonctions de notification pour les événements d’intérêt pour votre application du réseau. Si vous dérivez une classe à partir de la classe `CSocket`, il est vous qui choisissez s’il faut remplacer les fonctions de notification. Vous pouvez également utiliser `CSocket` lui-même, auquel cas la notification fonctionne par défaut aucune action.  
   
- Ces fonctions sont des fonctions de rappel substituable. `CAsyncSocket`et `CSocket` convertir des messages à des notifications, mais vous devez implémenter la notification de fonctionne de répondre si vous souhaitez les utiliser. Les fonctions de notification sont appelées au moment où que votre socket reçoit une notification d’un événement d’intérêt, telles que la présence de données à lire.  
+ Ces fonctions sont des fonctions de rappel substituable. `CAsyncSocket` et `CSocket` convertir des messages à des notifications, mais vous devez implémenter la notification de fonctionne de répondre si vous souhaitez les utiliser. Les fonctions de notification sont appelées au moment où que votre socket reçoit une notification d’un événement d’intérêt, telles que la présence de données à lire.  
   
  MFC appelle les fonctions de notification pour vous permettre de personnaliser le comportement de votre socket au moment où qu'il est notifié. Par exemple, vous pouvez appeler **réception** à partir de votre `OnReceive` fonction de notification, autrement dit, elle est averti qu’il existe des données à lire, que vous appelez **réception** à le lire. Cette approche n’est pas nécessaire, mais il s’agit d’un scénario valide. En guise d’alternative, vous pouvez utiliser votre fonction de notification pour suivre la progression, d’impression **TRACE** messages et ainsi de suite.  
   

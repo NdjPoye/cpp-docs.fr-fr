@@ -1,13 +1,10 @@
 ---
-title: "Presse-papiers : Ajout d’autres Formats | Documents Microsoft"
-ms.custom: 
+title: 'Presse-papiers : Ajout d’autres Formats | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>Presse-papiers : ajout d'autres formats
 Cette rubrique explique comment développer la liste des formats pris en charge, en particulier pour la prise en charge OLE. La rubrique [Presse-papiers : copies et collage de données](../mfc/clipboard-copying-and-pasting-data.md) décrit l’implémentation minimale nécessaire pour prendre en charge le copier- coller à partir du Presse-papiers. Si c’est vous vous, les seuls formats placés dans le Presse-papiers sont `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**et éventuellement `CF_LINKSOURCE`. La plupart des applications nécessitent d’autres formats dans le Presse-papiers à ces trois.  
   
-##  <a name="_core_registering_custom_formats"></a>Enregistrement de Formats personnalisés  
+##  <a name="_core_registering_custom_formats"></a> Enregistrement de Formats personnalisés  
  Pour créer vos propres formats personnalisés, suivez la même procédure que vous utiliserez lors de l’inscription de n’importe quel format de Presse-papiers : passez le nom du format à la **RegisterClipboardFormat** la fonction et utiliser sa valeur de retour comme ID de format.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>Ajout de Formats du Presse-papiers  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Ajout de Formats du Presse-papiers  
  Pour ajouter d’autres formats à ceux placés dans le Presse-papiers, vous devez substituer la `OnGetClipboardData` fonction dans la classe dérivée à partir de le `COleClientItem` ou `COleServerItem` (selon que les données à copier sont natives). Dans cette fonction, vous devez utiliser la procédure suivante.  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>Pour placer des formats dans le Presse-papiers  

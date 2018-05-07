@@ -1,13 +1,10 @@
 ---
 title: LOGBRUSH (Structure) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH, structure
 Le `LOGBRUSH` structure définit le style, la couleur et le modèle d’un pinceau physique. Il est utilisé par Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) et [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) fonctions.  
@@ -68,24 +63,24 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  Spécifie un style de hachurage. La signification varie selon le style de pinceau défini par `lbStyle`. Si `lbStyle` est **BS_DIBPATTERN**, le **lbHatch** membre contient un handle vers un fichier DIB compressé. Si `lbStyle` est **BS_DIBPATTERNPT**, le **lbHatch** membre contient un pointeur vers un fichier DIB compressé. Si `lbStyle` est **BS_HATCHED**, le **lbHatch** membre spécifie l’orientation des lignes utilisées pour créer le hachurage. Il peut prendre l’une des valeurs suivantes :  
   
-- `HS_BDIAGONAL`Un hachurage de 45 degrés vers le haut, de gauche à droite  
+- `HS_BDIAGONAL` Un hachurage de 45 degrés vers le haut, de gauche à droite  
   
-- `HS_CROSS`Hachurage horizontal et vertical  
+- `HS_CROSS` Hachurage horizontal et vertical  
   
-- `HS_DIAGCROSS`hachurage de 45 degrés  
+- `HS_DIAGCROSS` hachurage de 45 degrés  
   
-- `HS_FDIAGONAL`Un hachurage de 45 degrés vers le bas, de gauche à droite  
+- `HS_FDIAGONAL` Un hachurage de 45 degrés vers le bas, de gauche à droite  
   
-- `HS_HORIZONTAL`Hachurage horizontal  
+- `HS_HORIZONTAL` Hachurage horizontal  
   
-- `HS_VERTICAL`Hachage vertical  
+- `HS_VERTICAL` Hachage vertical  
   
  Si `lbStyle` est **BS_PATTERN**, **lbHatch** est un handle de la bitmap qui définit le modèle. Si `lbStyle` est **BS_SOLID** ou **BS_HOLLOW**, **lbHatch** est ignoré.  
   
 ## <a name="remarks"></a>Notes  
  Bien que **lbColor** contrôle la couleur de premier plan d’un pinceau de hachurage, le [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) et [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) fonctions contrôlent la couleur d’arrière-plan.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  
