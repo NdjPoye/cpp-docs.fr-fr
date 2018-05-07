@@ -1,13 +1,10 @@
 ---
-title: "Accès aux données en utilisant ADO.NET (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: Accès aux données en utilisant ADO.NET (C + c++ / CLI) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data access [C++], ADO.NET
 - data [C++], ADO.NET
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21d19955e19931a573836baa6e0e0fee841e3548
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-using-adonet-ccli"></a>Accès aux données à l'aide d'ADO.NET (C++/CLI)
 ADO.NET est l’API .NET Framework pour accéder aux données et fournit la puissance et la simplicité d’utilisation sans correspondance par les solutions d’accès aux données précédente. Cette section décrit certains des problèmes impliquant ADO.NET qui sont propres aux utilisateurs de Visual C++, telles que le marshaling des types natifs.  

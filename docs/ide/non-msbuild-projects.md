@@ -1,13 +1,10 @@
 ---
 title: Ouvrir les projets de dossier dans Visual C++ | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Ouvrir les projets de dossier dans Visual C++
 Visual Studio 2017 introduit la fonctionnalité « Ouvrir le dossier », ce qui vous permet d’ouvrir un dossier de fichiers sources et immédiatement commencer à coder avec prise en charge IntelliSense, la navigation, la refactorisation, le débogage et ainsi de suite. Aucun fichier .sln ou .vcxproj n’est chargées ; Si nécessaire, vous pouvez spécifier des tâches personnalisées ainsi que générer et lancer des paramètres dans les fichiers .json simple. Géré par ouvrir le dossier, Visual C++ peut prennent désormais en charge non seulement des collections pertes de connexion de fichiers, mais également pratiquement n’importe quel système de génération, y compris CMake, Ninja, QMake (pour les projets de Qt), gyp, SCons, Gradle, Buck, vérifiez et bien plus encore. 
 
-Pour utiliser un dossier ouvert, dans le menu principal, sélectionnez *fichier | Ouvrez | Dossier* ou appuyez sur *Ctrl + Maj + Alt + O*. L’Explorateur de solutions affiche immédiatement tous les fichiers dans le dossier. Vous pouvez cliquer sur n’importe quel fichier pour le modifier. En arrière-plan, Visual Studio démarre l’indexation des fichiers pour activer les fonctionnalités de refactorisation, IntelliSense et navigation. Comme vous modifiez, créez, déplacez ou supprimez des fichiers, Visual Studio effectue le suivi des modifications automatiquement et en permanence des mises à jour son index IntelliSense. 
+Pour utiliser un dossier ouvert, dans le menu principal, sélectionnez *fichier | Ouvrez | Dossier* ou appuyez sur *Ctrl + Maj + Alt + O*. L’Explorateur de solutions affiche immédiatement tous les fichiers dans le dossier. Vous pouvez cliquer sur n’importe quel fichier pour le modifier. En arrière-plan, Visual Studio démarre l’indexation des fichiers pour activer les fonctionnalités IntelliSense, de navigation et de refactorisation. Au fil des modifications, créations, déplacements et suppressions de fichiers, Visual Studio effectue automatiquement le suivi des modifications et met à jour en permanence son index IntelliSense. 
   
 ## <a name="cmake-projects"></a>Projets de CMake
 CMake est intégré dans l’IDE Visual Studio en tant qu’outils de CMake pour Visual C++, un composant de la charge de travail de bureau C++. Pour plus d’informations, consultez [Visual C++ Tools pour CMake](cmake-tools-for-visual-cpp.md).
@@ -43,8 +39,8 @@ Vous pouvez personnaliser un projet d’ouvrir le dossier via trois fichiers JSO
 |||
 |-|-|
 |CppProperties.json|Spécifiez les informations de configuration personnalisée pour la navigation. Créer ce fichier, si nécessaire, dans votre dossier racine du projet.|
-|launch.vs.json|Spécifiez les arguments de ligne de commande. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **Debug et les paramètres de lancement**.|
-|tasks.vs.json|Spécifiez les commandes de génération personnalisées et des commutateurs de compilation. Accessible via la **l’Explorateur de solutions** élément de menu contextuel **configurer les tâches**.|
+|Launch.VS.JSON|Spécifiez les arguments de ligne de commande. Accessible via l’option **Paramètres de débogage et de lancement** du menu contextuel de l’**Explorateur de solutions**.|
+|tasks.vs.json|Spécifiez les commandes de génération personnalisées et des commutateurs de compilation. Accessible via l’option **Configurer les tâches** du menu contextuel de l’**Explorateur de solutions**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurer IntelliSense avec CppProperties.json
 IntelliSense et navigation comportement partiellement dépend de la configuration de build active, qui définit #include chemins d’accès, les commutateurs du compilateur et les autres paramètres. Par défaut, Visual Studio fournit des configurations Debug et Release. Pour certains projets, vous devrez créer une configuration personnalisée pour IntelliSense et les fonctionnalités de navigation entièrement comprendre votre code. Pour définir une nouvelle configuration, créez un fichier appelé CppProperties.json dans le dossier racine. Voici un exemple :
@@ -75,11 +71,11 @@ Une configuration peut avoir une des propriétés suivantes :
 |`forcedInclude`|en-tête d’être inclus automatiquement dans chaque unité de compilation (mappe à /FI pour MSVC ou - inclure pour clang)|
 |`undefines`|la liste des macros pour être non définie (qui correspond à /U de MSVC.)|
 |`intelliSenseMode`|le moteur IntelliSense à utiliser. Vous pouvez spécifier les variantes spécifiques d’architecture pour MSVC, gcc et Clang :
-- msvc-x86 (default)
+- MSVC x x86 (valeur par défaut)
 - msvc-x64
 - MSVC-arm
-- windows-clang-x86
-- windows-clang-x64
+- Windows-clang-x86
+- Windows-clang-x64
 - Windows-clang-arm
 - Linux-x64
 - Linux-x86
@@ -248,12 +244,12 @@ Vous pouvez créer n’importe quel nombre de configurations dans CppProperties.
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Définir des tâches avec tasks.vs.json
-Vous pouvez automatiser les scripts de compilation ou d’autres opérations externes sur les fichiers que vous avez dans votre espace de travail actuel en les exécutant en tant que tâches directement dans l’IDE. Vous pouvez configurer une nouvelle tâche en cliquant sur un fichier ou dossier et en sélectionnant **configurer les tâches**. 
+### <a name="define-tasks-with-tasksvsjson"></a>Définir de tâches avec tasks.vs.json
+Vous pouvez automatiser les scripts de génération ou d’autres opérations externes sur les fichiers de votre espace de travail actuel en les exécutant comme des tâches directement dans l’IDE. Vous pouvez configurer une nouvelle tâche en cliquant sur un fichier ou dossier puis en sélectionnant **Configurer les tâches**. 
 
 ![Ouvrir le dossier configurer des tâches](media/open-folder-config-tasks.png)
 
-Cela crée (ou en ouvre) le `tasks.vs.json` fichier dans le dossier .vs Visual Studio crée dans votre dossier racine du projet. Vous pouvez définir n’importe quelle tâche arbitraire dans ce fichier et appelez-la à partir de la **l’Explorateur de solutions** menu contextuel. L’exemple suivant montre un fichier tasks.vs.json qui définit une seule tâche. `taskName`définit le nom qui apparaît dans le menu contextuel. `appliesTo`définit les fichiers de la commande peut être effectuée sur. Le `command` propriété fait référence à la variable d’environnement COMSPEC, qui identifie le chemin d’accès de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement qui sont déclarées dans CppProperties.json ou CMakeSettings.json. Le `args` propriété spécifie la ligne de commande à appeler. Le `${file}` macro extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom de fichier du fichier .cpp actuellement sélectionné.
+Cela crée (ou en ouvre) le `tasks.vs.json` fichier dans le dossier .vs Visual Studio crée dans votre dossier racine du projet. Vous pouvez définir n’importe quelle tâche arbitraire dans ce fichier et appelez-la à partir de la **l’Explorateur de solutions** menu contextuel. L’exemple suivant montre un fichier tasks.vs.json qui définit une seule tâche. `taskName` définit le nom qui apparaît dans le menu contextuel. `appliesTo` définit les fichiers de la commande peut être effectuée sur. Le `command` propriété fait référence à la variable d’environnement COMSPEC, qui identifie le chemin d’accès de la console (cmd.exe sur Windows). Vous pouvez également référencer des variables d’environnement qui sont déclarées dans CppProperties.json ou CMakeSettings.json. Le `args` propriété spécifie la ligne de commande à appeler. La macro `${file}` extrait le fichier sélectionné dans **l’Explorateur de solutions**. L’exemple suivant affiche le nom de fichier du fichier .cpp actuellement sélectionné.
 
 ```json
 {
@@ -274,19 +270,19 @@ Après avoir enregistré tasks.vs.json, vous pouvez avec le bouton droit n’imp
 
 
 #### <a name="appliesto"></a>appliesTo
-Vous pouvez créer des tâches de tout fichier ou dossier en spécifiant son nom dans la `appliesTo` champ, par exemple `"appliesTo" : "hello.cpp"`. Les masques de fichiers suivants peuvent être utilisés comme valeurs :
+Vous pouvez créer des tâches pour tout fichier ou dossier en spécifiant son nom dans le champ `appliesTo`, par exemple `"appliesTo" : "hello.cpp"`. Les masques de fichier suivants peuvent être utilisés comme valeurs :
 |||
 |-|-|
-|`"*"`| tâche n’est disponible pour tous les fichiers et dossiers dans l’espace de travail|
-|`"*/"`| tâche n’est disponible pour tous les dossiers dans l’espace de travail|
+|`"*"`| la tâche est disponible pour tous les fichiers et dossiers dans l’espace de travail|
+|`"*/"`| la tâche est disponible pour tous les dossiers dans l’espace de travail|
 |`"*.cpp"`| tâche n’est disponible pour tous les fichiers portant l’extension .cpp dans l’espace de travail|
 |`"/*.cpp"`| tâche n’est disponible pour tous les fichiers portant l’extension .cpp dans la racine de l’espace de travail|
-|`"src/*/"`| tâche n’est disponible pour tous les sous-dossiers du dossier « src »|
-|`"makefile"`| tâche n’est disponible à tous les fichiers makefile dans l’espace de travail|
-|`"/makefile"`| tâche est disponible uniquement pour le fichier Make à la racine de l’espace de travail|
+|`"src/*/"`| la tâche est disponible pour tous les sous-dossiers du dossier « src »|
+|`"makefile"`| la tâche est disponible pour tous les fichiers makefile dans l’espace de travail|
+|`"/makefile"`| la tâche est disponible uniquement dans le fichier makefile à la racine de l’espace de travail|
 
 #### <a name="output"></a>sortie
-Utilisez le `output` propriété pour spécifier le fichier exécutable qui sera lancée lorsque vous appuyez sur **F5**. Exemple :
+Utilisez le `output` propriété pour spécifier le fichier exécutable qui sera lancée lorsque vous appuyez sur **F5**. Par exemple :
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
@@ -296,7 +292,7 @@ Utilisez le `output` propriété pour spécifier le fichier exécutable qui sera
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Spécifie toute variable d’environnement (par exemple, ${env. Chemin d’accès}, ${env.COMSPEC}, etc.) qui est défini pour l’invite de commandes développeur. Pour plus d’informations, consultez [invite de commandes développeur pour Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Spécifie toute variable d’environnement (par exemple, ${env. Chemin d’accès}, ${env.COMSPEC}, etc.) qui est défini pour l’invite de commandes développeur. Pour plus d’informations, consultez [Invite de commandes développeur pour Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| le chemin complet vers le dossier de l’espace de travail (par exemple, « C:\sources\hello »)|
 |`${file}`| le chemin d’accès complet du fichier ou du dossier sélectionné pour exécuter cette tâche sur (par exemple, « C:\sources\hello\src\hello.cpp »)|
 |`${relativeFile}`| le chemin d’accès relatif au fichier ou dossier (par exemple, « src\hello.cpp »)|

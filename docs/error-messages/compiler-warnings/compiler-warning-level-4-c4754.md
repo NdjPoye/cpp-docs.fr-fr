@@ -1,12 +1,9 @@
 ---
 title: Compilateur avertissement (niveau 4) C4754 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4754
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6bad6452e1d119659c8588531c82671d031863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7f4e42d2e44a55c98abdcd5c3e723e2a9269a1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 Les règles de conversion pour les opérations arithmétiques dans une comparaison signifient qu’une branche ne peut pas être exécutée.  
@@ -108,7 +103,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **Remarque** le numéro de ligne dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Exemple :  
+ **Remarque** le numéro de ligne dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Par exemple :  
   
 ```cpp  
 unsigned long a;  

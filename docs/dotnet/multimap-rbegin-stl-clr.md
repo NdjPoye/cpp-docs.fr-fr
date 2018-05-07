@@ -1,12 +1,9 @@
 ---
 title: multimap::rbegin (STL/CLR) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::rbegin
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rbegin member [STL/CLR]
 ms.assetid: fd5a2a04-b03d-4920-b8f2-e01985cb91e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 40ee5ecaf9b502a920ee0cdf94e6450a8e32c313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b0eafa5acea1418f5d233b519b0872af4f43dc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimaprbegin-stlclr"></a>multimap::rbegin (STL/CLR)
 Désigne le début de la séquence contrôlée inverse.  
@@ -78,7 +73,7 @@ int main()
 *++rbegin() = [b 2]  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/map >  
   
  **Namespace :** cliext  

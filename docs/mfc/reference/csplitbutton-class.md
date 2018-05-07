@@ -1,12 +1,9 @@
 ---
 title: Classe de CSplitButton | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac4241bb19c6abc0fbbf489bf4efb43f56ede72e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitbutton-class"></a>Classe de CSplitButton
 La `CSplitButton` classe représente un contrôle bouton partagé. Le contrôle bouton partagé exécute un comportement par défaut lorsqu’un utilisateur clique sur la partie principale du bouton et affiche un menu déroulant lorsqu’un utilisateur clique sur la flèche déroulante du bouton.  
@@ -83,14 +78,14 @@ class CSplitButton : public CButton
   
  `CSplitButton`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
  Cette classe est pris en charge dans [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] et versions ultérieures.  
   
  Exigences supplémentaires pour cette classe sont décrites dans [Build Configuration requise pour les contrôles communs Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>  CSplitButton::Create  
  Crée un contrôle bouton partagé avec des styles spécifiés et l’attache à actuel `CSplitButton` objet.  
   
 ```  
@@ -111,9 +106,9 @@ virtual BOOL Create(
 |[in] `nID`|L’ID du contrôle.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+ `true` Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
  Construit un objet `CSplitButton`. Les paramètres du constructeur spécifient un sous-menu qui s’affiche quand un utilisateur clique sur la flèche déroulante du contrôle bouton partagé.  
   
 ```  
@@ -137,7 +132,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Notes  
  Utilisez le [CSplitButton::Create](#create) méthode pour créer un contrôle bouton partagé et l’attacher à la `CSplitButton` objet.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
  Gère la `BCN_DROPDOWN` notification envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -167,7 +162,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
  Définit le menu déroulant qui s’affiche quand un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  

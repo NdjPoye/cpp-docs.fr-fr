@@ -1,12 +1,9 @@
 ---
-title: "Erreur LNK2005 des outils Éditeur de liens | Documents Microsoft"
-ms.custom: 
+title: Erreur LNK2005 des outils Éditeur de liens | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2005
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erreur des outils Éditeur de liens LNK2005
 *symbole* déjà définie dans l’objet  
@@ -115,7 +110,7 @@ Voici certaines des causes courantes de cette erreur.
   
 -   Cette erreur peut se produire si une `extern const` variable est définie à deux reprises et a une valeur différente dans chaque définition. Pour résoudre ce problème, définir la constante qu’une seule fois, ou utiliser des espaces de noms ou `enum class` définitions pour distinguer l’une des constantes.  
   
--   Cette erreur peut se produire si vous utilisez uuid.lib en association avec d’autres fichiers .lib qui définissent des identificateurs GUID (par exemple, oledb.lib et adsiid.lib). Exemple :  
+-   Cette erreur peut se produire si vous utilisez uuid.lib en association avec d’autres fichiers .lib qui définissent des identificateurs GUID (par exemple, oledb.lib et adsiid.lib). Par exemple :  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  

@@ -1,13 +1,10 @@
 ---
 title: Utilisation de CTreeCtrl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CTreeCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ceea56fb3cdc412efe1db3f51f5dc33f2c5f893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6864cdee84b9ebd86a97a093e3db847f439e51b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctreectrl"></a>Utilisation de CTreeCtrl
 Un contrôle d’arborescence, représenté par la classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), est une fenêtre qui affiche une liste hiérarchique des éléments, tels que les en-têtes dans un document, les entrées dans un index, ou les fichiers et les répertoires sur un disque. Chaque élément se compose d’une étiquette et une image bitmap facultative, et chaque élément peut avoir une liste de sous-éléments associée. En cliquant sur un élément, l’utilisateur peut développer et réduire la liste de sous-éléments associée. L’arborescence de répertoires dans le volet gauche de l’Explorateur de fichiers est un exemple d’un contrôle d’arborescence.  

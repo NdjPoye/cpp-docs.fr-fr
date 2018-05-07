@@ -1,12 +1,9 @@
 ---
 title: Classe de COleDropSource | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>Classe de COleDropSource
 Permet de faire glisser vers une cible de déplacement des données.  
@@ -76,17 +71,17 @@ class COleDropSource : public CCmdTarget
   
  `COleDropSource`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Construit un objet `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Appelé par l’infrastructure après l’appel [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  L’effet que vous souhaitez afficher à l’utilisateur, ce qui indique généralement ce qui se produit si la suppression s’est produite au niveau de ce point avec les données sélectionnées. Il s’agit généralement de la valeur retournée par l’appel le plus récent à [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut être un ou plusieurs des opérations suivantes :  
   
-- `DROPEFFECT_NONE`La suppression ne serait pas autorisée.  
+- `DROPEFFECT_NONE` La suppression ne serait pas autorisée.  
   
-- `DROPEFFECT_COPY`Une opération de copie doit être effectuée.  
+- `DROPEFFECT_COPY` Une opération de copie doit être effectuée.  
   
-- `DROPEFFECT_MOVE`Une opération de déplacement doit être effectuée.  
+- `DROPEFFECT_MOVE` Une opération de déplacement doit être effectuée.  
   
-- `DROPEFFECT_LINK`Un lien entre les données déplacées et les données d’origine est établi.  
+- `DROPEFFECT_LINK` Un lien entre les données déplacées et les données d’origine est établi.  
   
-- `DROPEFFECT_SCROLL`Une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
+- `DROPEFFECT_SCROLL` Une opération de glissement de défilement est sur le point de se produire ou se produit dans la cible.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **DRAGDROP_S_USEDEFAULTCURSORS** si le déplacement est en cours d’exécution, **NOERROR** si elle n’est pas.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Pour plus d’informations, consultez [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), et [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) dans le Kit de développement logiciel Windows.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Appelé par le framework lorsqu’un événement qui produit pourrait commencer une opération de glissement, par exemple en appuyant sur le bouton gauche de la souris.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction si vous souhaitez modifier la manière dont le processus de déplacement est démarré. L’implémentation par défaut capture la souris et reste en mode glisser jusqu'à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, le moment où il relâche la souris.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Lorsque vous commencez, cette fonction est appelée plusieurs fois par l’infrastructure jusqu'à ce que l’opération glisser soit annulée ou terminée.  
   
 ```  

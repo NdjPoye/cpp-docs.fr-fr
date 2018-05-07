@@ -1,12 +1,9 @@
 ---
 title: Classe de CInternetConnection | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>Classe de CInternetConnection
 Gère votre connexion à un serveur Internet.  
@@ -78,10 +73,10 @@ class CInternetConnection : public CObject
   
  `CInternetConnection`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  Cette fonction membre est appelée quand un `CInternetConnection` objet est créé.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CInternetConnection`-objet dérivé le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le **InternetConnection**-objet dérivé. La valeur par défaut est définie sur 1 ; Toutefois, vous pouvez affecter explicitement un identificateur de contexte spécifique dans le [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) constructeur pour la connexion. L’objet et tout travail qu’elle fournit à associer à cet ID de contexte. L’identificateur de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Appelez cette fonction membre pour obtenir l’ID de contexte pour cette session.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  Pour plus d’informations sur la façon **GetContext** fonctionne avec d’autres classes WinInet pour donner les informations d’état utilisateur, consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur le contexte identificateur.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Appelez cette fonction membre pour obtenir le nom du serveur associé à cette connexion Internet.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du serveur que cet objet de connexion fonctionne.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  Appelez cette fonction membre pour obtenir un pointeur vers le `CInternetSession` objet qui est associé à cette connexion.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet associé à cet objet de connexion Internet.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  Cet opérateur permet d’obtenir le handle au niveau de l’API pour la session Internet.  
   
 ```  

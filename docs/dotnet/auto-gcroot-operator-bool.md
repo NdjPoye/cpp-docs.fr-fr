@@ -2,11 +2,8 @@
 title: auto_gcroot::operator bool | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_gcroot.operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - bool operator
 ms.assetid: 87d38498-4221-4de8-8d02-c2dd2e6274ec
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c327f0ff6e1be74831bb3e0f319ebaf429e7ca70
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dbb38ecfa7f1a60af44a59ccd1953b6d6e787fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
 Opérateur pour l’utilisation de `auto_gcroot` dans une expression conditionnelle.  
@@ -42,7 +37,7 @@ operator bool() const;
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si l’objet encapsulé est valide ; `false` dans le cas contraire.  
+ `true` Si l’objet encapsulé est valide ; `false` dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  
  Cet opérateur convertit effectivement en `_detail_class::_safe_bool` qui est plus sûr que `bool` car il ne peut pas être converti en un type intégral.  
@@ -76,7 +71,7 @@ now s is valid
 now s is invalid  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Fichier d’en-tête** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  

@@ -1,13 +1,10 @@
 ---
-title: "Exceptions : Utilisation des Macros MFC et des Exceptions C++ | Documents Microsoft"
-ms.custom: 
+title: 'Exceptions : Utilisation des Macros MFC et des Exceptions C++ | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6597f43deee73addff8e8f2045a38d7b1109fc0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceptions : utilisation de macros MFC et d'exceptions C++
 Cet article décrit des considérations sur l’écriture de code qui utilise les macros de gestion des exceptions MFC et les mots clés de gestion des exceptions C++.  
@@ -46,7 +41,7 @@ Cet article décrit des considérations sur l’écriture de code qui utilise le
   
 -   [Try (blocs) à l’intérieur des blocs catch](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a>Macros et les mots clés d’Exception  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> Macros et les mots clés d’Exception  
  Vous pouvez combiner des macros d’exception MFC et mots clés des exceptions C++ dans le même programme. Mais vous ne pouvez pas mélanger les macros MFC avec les mots clés des exceptions C++ dans le même bloc étant donné que les macros de suppriment les objets exception automatiquement lorsqu’ils sont hors de portée, n’est pas le cas du code à l’aide de mots clés des gestion des exceptions. Pour plus d’informations, consultez l’article [Exceptions : interception et suppression des Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
  La principale différence entre les macros et les mots clés est que les macros suppriment « automatiquement » une exception interceptée lorsque l’exception passe hors de portée. Code utilisant les mots clés n’est pas ; les exceptions interceptées dans un bloc catch doivent être supprimées explicitement. Macros et les mots clés des exceptions C++ peut provoquer des fuites de mémoire lorsqu’un objet d’exception n’est pas supprimé ou endommagement du tas lorsqu’une exception est supprimée deux fois.  
@@ -59,7 +54,7 @@ Cet article décrit des considérations sur l’écriture de code qui utilise le
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a>Try (blocs) à l’intérieur des blocs Catch  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try (blocs) à l’intérieur des blocs Catch  
  Vous ne pouvez pas lever à nouveau l’exception actuelle à partir d’un **essayez** bloc qui est à l’intérieur d’un **CATCH** bloc. L’exemple suivant n’est pas valide :  
   
  [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  

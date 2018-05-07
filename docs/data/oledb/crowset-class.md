@@ -1,12 +1,9 @@
 ---
 title: CRowset (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0774c82715ab2fd85098147ebe1697daf7d2d2fa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c9a23c2e879f0d2fe1add1a970c64f6fbcc27b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowset-class"></a>CRowset, classe
 Encapsule un objet d’ensemble de lignes OLE DB et plusieurs liés interfaces et fournit des méthodes de manipulation des données de l’ensemble de lignes.  
@@ -73,7 +68,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Extrait les lignes à partir d’une position décimale dans l’ensemble de lignes.|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Appels [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) pour libérer le handle de ligne actuelle.|  
 |[SetData](../../data/oledb/crowset-setdata.md)|Définit les valeurs de données dans une ou plusieurs colonnes d’une ligne à l’aide de [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
-|[Undo](../../data/oledb/crowset-undo.md)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|  
+|[Annuler](../../data/oledb/crowset-undo.md)|Annule toutes les modifications apportées à une ligne depuis la dernière extraction ou [mise à jour](../../data/oledb/crowset-update.md).|  
 |[Mettre à jour](../../data/oledb/crowset-update.md)|Transmet les modifications apportées à la ligne en cours depuis la dernière extraction ou de la mise à jour en attente.|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|Transmet les modifications apportées à toutes les lignes depuis la dernière extraction ou de la mise à jour en attente.|  
   
@@ -82,7 +77,7 @@ class CRowset
   
  Cette classe n’est pas destinée à être instanciée mais plutôt passée comme un paramètre de modèle `CTable` ou `CCommand` (`CRowset` est la valeur par défaut).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

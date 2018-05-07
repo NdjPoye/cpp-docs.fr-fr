@@ -1,12 +1,9 @@
 ---
 title: Classe de la classe COleInsertDialog | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4638471ed199d08bb21bcf16465fe933af3a584c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleinsertdialog-class"></a>Classe de la classe COleInsertDialog
 Utilisée pour la boîte de dialogue OLE Insérer un objet.  
@@ -105,10 +100,10 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
  Cette fonction crée uniquement une `COleInsertDialog` objet.  
   
 ```  
@@ -141,7 +136,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>Notes  
  Pour afficher la boîte de dialogue, appelez le [DoModal](#domodal) (fonction).  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
  Appelez cette fonction pour créer un objet de type [COleClientItem](../../mfc/reference/coleclientitem-class.md) uniquement si [DoModal](#domodal) retourne **IDOK**.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>Notes  
  Vous devez allouer le `COleClientItem` de l’objet avant d’appeler cette fonction.  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue Insérer un objet OLE.  
   
 ```  
@@ -174,9 +169,9 @@ INT_PTR
  `dwFlags`  
  Une des valeurs suivantes :  
   
- `COleInsertDialog::DocObjectsOnly`insère uniquement DocObjects.  
+ `COleInsertDialog::DocObjectsOnly` insère uniquement DocObjects.  
   
- `COleInsertDialog::ControlsOnly`insère uniquement des contrôles ActiveX.  
+ `COleInsertDialog::ControlsOnly` insère uniquement des contrôles ActiveX.  
   
  Zéro insère DocObject, ni un contrôle ActiveX. Résultats de cette valeur dans la même implémentation que le premier prototype répertoriés ci-dessus.  
   
@@ -194,7 +189,7 @@ INT_PTR
   
  Si `DoModal` retourne IDOK, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations saisies dans la boîte de dialogue par l’utilisateur autres membres.  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
  Appelez cette fonction pour obtenir le **CLSID** associé à l’élément sélectionné uniquement si [DoModal](#domodal) retourne **IDOK** et le type de sélection est **classe COleInsertDialog :: createNewItem**.  
   
 ```  
@@ -207,7 +202,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans le Kit de développement logiciel Windows.  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  Appelez cette fonction pour déterminer si l’utilisateur a choisi d’afficher l’élément sélectionné sous forme d’icône.  
   
 ```  
@@ -217,16 +212,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Valeur de retour  
  La méthode nécessaire pour restituer l’objet.  
   
-- `DVASPECT_CONTENT`Retourné si la case à cocher Afficher comme icône n’a pas été activée.  
+- `DVASPECT_CONTENT` Retourné si la case à cocher Afficher comme icône n’a pas été activée.  
   
-- `DVASPECT_ICON`Retourné si la case à cocher Afficher comme icône a été vérifiée.  
+- `DVASPECT_ICON` Retourné si la case à cocher Afficher comme icône a été vérifiée.  
   
 ### <a name="remarks"></a>Notes  
  Appelez cette ne fonctionnent que si [DoModal](#domodal) retourne **IDOK**.  
   
  Pour plus d’informations sur l’aspect de dessin, consultez [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure de données dans le SDK Windows.  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  Appelez cette fonction pour obtenir un handle de métafichier qui contient l’aspect sous forme d’icône de l’élément sélectionné.  
   
 ```  
@@ -236,7 +231,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du métafichier contenant l’aspect sous forme d’icône de l’élément sélectionné, si la case à cocher Afficher comme icône a été vérifiée lors du rejet de la boîte de dialogue en choisissant **OK**; sinon **NULL**.  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
  Appelez cette fonction pour obtenir le chemin complet de l’uniquement si de fichier sélectionné [DoModal](#domodal) retourne **IDOK** et le type de sélection n’est pas **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -246,7 +241,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le chemin d’accès complet au fichier sélectionné dans la boîte de dialogue. Si le type de sélection est `createNewItem`, cette fonction retourne un sans signification `CString` en mode version finale ou provoque une assertion en mode débogage.  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
  Appelez cette fonction pour obtenir le type de sélection choisi lors du rejet de la boîte de dialogue Insérer un objet en choisissant **OK**.  
   
 ```  
@@ -275,7 +270,7 @@ enum Selection {
   
 - **COleInsertDialog::linkToFile** bouton radio du créer à partir du fichier a été sélectionné et la case à cocher lien a été vérifiée.  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
  Structure de type **OLEUIINSERTOBJECT** utilisé pour contrôler le comportement de la boîte de dialogue Insérer un objet.  
   
 ```  

@@ -1,26 +1,21 @@
 ---
-title: "par défaut d’espace de noms | Documents Microsoft"
-ms.custom: 
+title: par défaut d’espace de noms | Documents Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b4fc906048d8f8e02d5359526e095c0f12118d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3f4386d3636744a673a10dd9530fd3836fdb78e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-namespace"></a>espace de noms par défaut
 Le `default` les types intégrés qui sont pris en charge par C + définit la portée espace de noms c++ / CX.  
@@ -57,7 +52,7 @@ namespace default;
 |`uint64`|Entier non signé 64 bits.|  
 |`uint8`|Valeur numérique non signée 8 bits.|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** vccorlib.h  
   
 ## <a name="see-also"></a>Voir aussi  

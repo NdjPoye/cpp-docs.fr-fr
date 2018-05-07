@@ -1,12 +1,9 @@
 ---
 title: CAccelerateDecelerateTransition Class1 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAccelerateDecelerateTransition
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6251451607a31caad44e8507466c555d39847a1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition (classe)
 Implémente une transition accélérer-ralentir.  
@@ -70,10 +65,10 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
  `CAccelerateDecelerateTransition`   
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
+##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
  Construit un objet de transition.  
   
 ```  
@@ -97,7 +92,7 @@ CAccelerateDecelerateTransition(
  `decelerationRatio`  
  Le rapport entre le temps de décélération à la durée.  
   
-##  <a name="create"></a>CAccelerateDecelerateTransition::Create  
+##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
  Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -113,28 +108,28 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="m_accelerationratio"></a>CAccelerateDecelerateTransition::m_accelerationRatio  
+##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
  Le rapport entre le temps consacré à l’accélération de la durée.  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
-##  <a name="m_decelerationratio"></a>CAccelerateDecelerateTransition::m_decelerationRatio  
+##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
  Le rapport entre le temps de décélération à la durée.  
   
 ```  
 DOUBLE m_decelerationRatio;  
 ```  
   
-##  <a name="m_duration"></a>CAccelerateDecelerateTransition::m_duration  
+##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration  
  La durée de la transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_finalvalue"></a>CAccelerateDecelerateTransition::m_finalValue  
+##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue  
  La valeur de la variable à la fin de la transition de l’animation.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Séquence de création de fenêtre générale | Documents Microsoft"
-ms.custom: 
+title: Séquence de création de fenêtre générale | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bed4387a6b8e6edeb504e29d221e76a0b39d18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-window-creation-sequence"></a>Séquence de création d'une fenêtre générale
 Lorsque vous créez une fenêtre de la fenêtre de votre choix, comme un enfant, l’infrastructure utilise beaucoup le même processus que celui décrit dans [création de Document/vue](../mfc/document-view-creation.md).  
@@ -35,7 +30,7 @@ Lorsque vous créez une fenêtre de la fenêtre de votre choix, comme un enfant,
   
  Le **créer** fonction membre crée la fenêtre Windows et stocke son `HWND` dans le membre de données publiques de l’objet C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Créer** donne davantage de flexibilité sur les paramètres de création. Avant d’appeler **créer**, vous pouvez souhaiter enregistrer une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) afin de définir les styles d’icône et de la classe pour le frame.  
   
- Pour les fenêtres frames, vous pouvez utiliser la [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) fonction membre au lieu de **créer**. `LoadFrame`crée la fenêtre de Windows à l’aide de moins de paramètres. Il obtient le nombre de valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu.  
+ Pour les fenêtres frames, vous pouvez utiliser la [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) fonction membre au lieu de **créer**. `LoadFrame` crée la fenêtre de Windows à l’aide de moins de paramètres. Il obtient le nombre de valeurs par défaut à partir des ressources, y compris la légende du frame, icône, table d’accélérateurs et menu.  
   
 > [!NOTE]
 >  Icône, table d’accélérateurs, les ressources de menu doivent avoir un ID de ressource commun, tel que **IDR_MAINFRAME**, pour pouvoir être chargé par LoadFrame.  

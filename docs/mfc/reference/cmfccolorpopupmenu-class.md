@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCColorPopupMenu | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorPopupMenu
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91c8a6929ada133b3c2ab9f6fc26e9477a88d6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Classe de CMFCColorPopupMenu
 Représente un menu contextuel qui utilisent des utilisateurs à sélectionner des couleurs dans un document ou une application.  
@@ -92,10 +87,10 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
  [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcolorpopupmenu.h  
   
-##  <a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
+##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu  
  Construit un objet `CMFCColorPopupMenu`.  
   
 ```  
@@ -191,7 +186,7 @@ CMFCColorPopupMenu(
   
  [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
-##  <a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
  Crée une barre de couleur ancrable détachable.  
   
 ```  
@@ -216,7 +211,7 @@ virtual CPane* CreateTearOffBar(
 ### <a name="remarks"></a>Notes  
  Cette méthode crée un [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) de l’objet et le caste vers une [classe CPane](../../mfc/reference/cpane-class.md) pointeur. Vous pouvez convertir cette valeur à un [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) pointeur en utilisant l’une des macros de conversion décrites dans [effectuer un cast de MFC classe d’objets de Type](../../mfc/reference/type-casting-of-mfc-class-objects.md).  
   
-##  <a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
  Retourne le [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) qui est incorporé dans le menu contextuel.  
   
 ```  
@@ -229,7 +224,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>Notes  
  Le menu contextuel couleur a incorporé [cmfcpopupmenubar, classe](../../mfc/reference/cmfcpopupmenubar-class.md) objet. Substituez cette méthode dans une classe dérivée si votre application utilise un autre type incorporé.  
   
-##  <a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
+##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
  Définit l’objet de contrôle de grille de propriété de l’élément incorporé `CMFCColorBar` objet.  
   
 ```  

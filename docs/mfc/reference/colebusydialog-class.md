@@ -1,12 +1,9 @@
 ---
 title: Classe de la classe COleBusyDialog | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>Classe de la classe COleBusyDialog
 Utilisé pour les boîtes de dialogue OLE Le serveur ne répond pas ou Le serveur est occupé.  
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  Cette fonction crée uniquement une `COleBusyDialog` objet.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  Pour plus d’informations, consultez la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure dans le SDK Windows.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue OLE le serveur est occupé ou serveur ne répond pas.  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` retourne **IDOK**, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations qu’il a été entrées par l’utilisateur dans la boîte de dialogue autres membres.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Appelez cette fonction pour obtenir le type de sélection choisi par l’utilisateur dans la boîte de dialogue serveur occupé.  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked** appel pour activer le serveur est maintenant débloqué.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  Structure de type **OLEUIBUSY** utilisé pour contrôler le comportement de la boîte de dialogue serveur occupé.  
   
 ```  

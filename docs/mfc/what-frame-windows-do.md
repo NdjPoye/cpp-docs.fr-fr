@@ -1,13 +1,10 @@
 ---
-title: "Que faire les fenêtres Frame | Documents Microsoft"
-ms.custom: 
+title: Que faire les fenêtres Frame | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - frame windows [MFC], tasks
 - MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5143bab1ea84392efe1bd5783889c45375365ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ed903238a812188d73093211265c9c8c028b0ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-frame-windows-do"></a>Fonctionnement des fenêtres frame
 Outre l’encadrement simplement d’une vue, fenêtres frame sont responsables de plusieurs tâches de coordination entre le frame avec sa vue et l’application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) hériter [CFrameWnd](../mfc/reference/cframewnd-class.md), afin qu’ils puissent `CFrameWnd` fonctionnalités ainsi que des nouvelles fonctionnalités qu’ils ajouter. Exemples de fenêtres enfants incluent les vues, les contrôles tels que des boutons et des zones de liste et des barres de contrôles, y compris les barres d’outils, barres d’état et des barres de boîte de dialogue.  

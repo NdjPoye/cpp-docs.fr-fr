@@ -1,12 +1,9 @@
 ---
 title: __debugbreak | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __debugbreak_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9aa50ee6cf450276dce70bfa38162a2f6392ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Section spécifique à Microsoft**  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 void __debugbreak();  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|Header|  
 |---------------|------------------|------------|  
@@ -52,7 +47,7 @@ void __debugbreak();
 > [!NOTE]
 >  Lors de la compilation avec **/CLR**, une fonction contenant `__debugbreak` sera compilé en langage MSIL. `asm int 3` entraîne la compilation d'une fonction en code natif. Pour plus d’informations, consultez [__asm](../assembler/inline/asm.md).  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 main() {  

@@ -2,12 +2,9 @@
 title: Utilisation de CReBarCtrl | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CReBarCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e2fd6d436120b6bae0cf02600a6d8866e11b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-crebarctrl"></a>Utilisation de CReBarCtrl
 Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont assignées à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande disposant de n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.  

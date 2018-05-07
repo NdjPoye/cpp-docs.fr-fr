@@ -1,13 +1,10 @@
 ---
-title: "Écran de vues (MFC) | Documents Microsoft"
-ms.custom: 
+title: Écran de vues (MFC) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>Mode Formulaire (MFC)
 Vous pouvez ajouter des formulaires à n’importe quelle application Visual C++ qui prend en charge les bibliothèques MFC, y compris un [application basée sur des formulaires](../mfc/reference/creating-a-forms-based-mfc-application.md) (une classe d’affichage est dérivée de `CFormView`). Si vous n’avez pas initialement votre application pour prendre en charge les formulaires, Visual C++ ajoute cette prise en charge pour vous lorsque vous insérez un nouveau formulaire. Dans une application SDI ou MDI, qui implémente la valeur par défaut [architecture document/vue](../mfc/document-view-architecture.md), lorsque l’utilisateur choisit le `New` commande (par défaut, sur le **fichier** menu), Visual C++ invite l’utilisateur à Choisissez parmi les formulaires disponibles.  
@@ -35,7 +30,7 @@ Vous pouvez ajouter des formulaires à n’importe quelle application Visual C++
  Dans une application SDI, quand l’utilisateur choisit le `New` de commande, l’instance actuelle du formulaire continue de s’exécuter, mais une nouvelle instance de l’application avec le formulaire sélectionné est créée si aucune n’est trouvée. Dans une application MDI, l’instance actuelle du formulaire continue à s’exécuter quand l’utilisateur choisit le `New` commande.  
   
 > [!NOTE]
->  Vous pouvez insérer un formulaire dans une application basée sur une boîte de dialogue (celui dont la classe de boîte de dialogue est basée sur `CDialog` et l’autre dans la vue aucune classe est implémentée). Toutefois, sans l’architecture document/vue, Visual C++ n’implémente pas automatiquement le **fichier**&#124; **Nouvelle** fonctionnalité. Vous devez créer un moyen de l’utilisateur d’afficher des formulaires supplémentaires, comme en implémentant une boîte de dialogue à onglets avec différentes pages de propriétés.  
+>  Vous pouvez insérer un formulaire dans une application basée sur une boîte de dialogue (celui dont la classe de boîte de dialogue est basée sur `CDialog` et l’autre dans la vue aucune classe est implémentée). Toutefois, sans l’architecture document/vue, Visual C++ n’implémente pas automatiquement le **fichier**&#124;**nouveau** fonctionnalité. Vous devez créer un moyen de l’utilisateur d’afficher des formulaires supplémentaires, comme en implémentant une boîte de dialogue à onglets avec différentes pages de propriétés.  
   
  Lorsque vous insérez un nouveau formulaire dans votre application, Visual C++ effectue les opérations suivantes :  
   
@@ -51,7 +46,7 @@ Vous pouvez ajouter des formulaires à n’importe quelle application Visual C++
   
      **WS_VISIBLE**= désactivé  
   
-     **WS_CAPTION =**désactivé  
+     **WS_CAPTION =** désactivé  
   
  Pour les applications basées sur l’architecture document/vue, le **nouveau formulaire** commande (avec le bouton droit dans l’affichage de classes) également :  
   

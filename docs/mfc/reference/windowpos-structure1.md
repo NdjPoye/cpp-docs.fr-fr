@@ -1,13 +1,10 @@
 ---
 title: WINDOWPOS Structure1 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
 Le `WINDOWPOS` structure contient des informations sur la taille et la position d’une fenêtre.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** masque la fenêtre.  
   
-- `SWP_NOACTIVATE`N’active pas la fenêtre.  
+- `SWP_NOACTIVATE` N’active pas la fenêtre.  
   
 - **SWP_NOCOPYBITS** ignore tout le contenu de la zone cliente. Si cet indicateur n’est pas spécifié, le contenu valid de la zone cliente est enregistré et copié dans la zone cliente une fois que la fenêtre est dimensionnée ou repositionnée.  
   
-- `SWP_NOMOVE`Conserve la position actuelle (ignore le **x** et **y** membres).  
+- `SWP_NOMOVE` Conserve la position actuelle (ignore le **x** et **y** membres).  
   
 - **SWP_NOOWNERZORDER** ne modifie pas la position de la fenêtre propriétaire dans l’ordre de plan.  
   
-- `SWP_NOSIZE`Conserve la taille actuelle (ignore le **cx** et **cy** membres).  
+- `SWP_NOSIZE` Conserve la taille actuelle (ignore le **cx** et **cy** membres).  
   
 - **SWP_NOREDRAW** ne redessine pas les modifications.  
   
@@ -88,11 +83,11 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** empêche la fenêtre de réception le `WM_WINDOWPOSCHANGING` message.  
   
-- `SWP_NOZORDER`Conserve le classement actuel (ignore le **hwndInsertAfter** membre).  
+- `SWP_NOZORDER` Conserve le classement actuel (ignore le **hwndInsertAfter** membre).  
   
 - **SWP_SHOWWINDOW** affiche la fenêtre.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

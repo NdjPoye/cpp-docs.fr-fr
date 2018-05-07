@@ -1,12 +1,9 @@
 ---
 title: Regroupement des ressources dans votre Application OLE DB | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84b8814974850238ccf0be7411821d6e2cce8880
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ece7ce128251f66360566c9b1965466352c4e493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Regroupement des ressources dans votre application OLE DB
 Pour tirer parti du regroupement dans votre application, vous devez vous assurer que les services OLE DB sont appelés en obtenant la source de données via **IDataInitialize** ou **IDBPromptInitialize**. Si vous utilisez directement `CoCreateInstance` pour appeler le fournisseur selon le CLSID du fournisseur, aucun service OLE DB n’est appelées.  

@@ -1,11 +1,8 @@
 ---
 title: Classe Platform::type | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 Contient des informations d'exécution sur un type, en particulier un nom de chaîne et un code de type. Obtenu en appelant [Object::GetType](../cppcx/platform-object-class.md#gettype) sur n’importe quel objet ou ou à l’aide de la [typeid](../windows/typeid-cpp-component-extensions.md) opérateur sur un nom de classe ou un struct.  
@@ -62,7 +57,7 @@ public ref class Platform::Type :
 |[Type^, opérateur](../cppcx/operator-subtracttype-hat.md)|Permet de convertir `Windows::UI::Xaml::Interop::TypeName` en `Platform::Type`.|  
 |[Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|Permet de convertir `Platform::Type` en `Windows::UI::Xaml::Interop::TypeName`.|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Notes  
  L’équivalent de la méthode membre GetTypeCode() est la `typeid` propriété.
 
-## <a name="tostring">Type::ToString (méthode)</a>
+## <a name="tostring"></a> Type::ToString (méthode)
 Récupère un le nom du type.  
   
 ### <a name="syntax"></a>Syntaxe  

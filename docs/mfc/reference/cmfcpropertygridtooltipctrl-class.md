@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCPropertyGridToolTipCtrl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0b4a43da8943bc196a799ca4419dea7f34ed76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe de CMFCPropertyGridToolTipCtrl
 Implémente une info-bulle de contrôle qui le [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) utilise pour afficher des info-bulles.  
@@ -92,17 +87,17 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
  Construit un objet `CMFCPropertyGridToolTipCtrl`.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
  Crée une fenêtre pour le contrôle d’info-bulle.  
   
 ```  
@@ -116,7 +111,7 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
  Désactive et masque le contrôle d’info-bulle.  
   
 ```  
@@ -126,7 +121,7 @@ void Deactivate();
 ### <a name="remarks"></a>Notes  
  Cette méthode définit la dernière position et le texte des valeurs vides, afin que les appels à venir [CMFCPropertyGridToolTipCtrl::Track](#track) afficher l’info-bulle.  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  Retourne les coordonnées de la dernière position du contrôle d’info-bulle.  
   
 ```  
@@ -137,14 +132,14 @@ void GetLastRect(CRect& rect) const;
  [out] `rect`  
  Contient la dernière position du contrôle d’info-bulle.  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Masque le contrôle d’info-bulle.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
  Définit l’espacement entre le texte d’info-bulle et la bordure de la fenêtre d’info-bulle.  
   
 ```  
@@ -155,7 +150,7 @@ void SetTextMargin(int nTextMargin);
  [in] `nTextMargin`  
  Spécifie l’espacement entre le texte info-bulle du contrôle et la bordure de la fenêtre d’info-bulle. La valeur par défaut est 10 pixels.  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Affiche le contrôle d’info-bulle.  
   
 ```  

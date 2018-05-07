@@ -1,27 +1,22 @@
 ---
 title: Disposition dynamique | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Disposition dynamique
 Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que l’utilisateur peut redimensionner, et vous pouvez contrôler la façon que la disposition s’ajuste à la modification de taille. Par exemple, vous pouvez ancrer des boutons au bas d'une boîte de dialogue sur le bord inférieur afin qu'ils restent toujours affichés à cet endroit. Vous pouvez également créer des contrôles, tels que des zones de liste, des zones d'édition et des champs de texte, qui s'agrandissent quand l'utilisateur agrandit la boîte de dialogue.  
@@ -46,7 +41,7 @@ Avec MFC dans Visual Studio 2015, vous pouvez créer des boîtes de dialogue que
   
      ![Ouvrez la boîte de dialogue dans l’éditeur de ressources. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Sélectionnez un contrôle et, dans la fenêtre Propriétés, définissez ses propriétés de disposition dynamique. Le **disposition dynamique** section dans la fenêtre Propriétés contient les propriétés **Type de déplacement**, **Type de redimensionnement**et, en fonction des valeurs sélectionnées pour ces propriétés, les propriétés spécifiques qui définissent la quantité de contrôles déplacement ou modifier la taille. **Type de déplacement** détermine la façon dont un contrôle est déplacé que la taille de la boîte de dialogue est modifiée ; **Type de redimensionnement** détermine comment un contrôle est redimensionné que la taille de la boîte de dialogue est modifiée. **Type de déplacement** et **Type de redimensionnement** peut être **Horizontal**, **Vertical**, **les deux**, ou **aucun** selon les dimensions que vous souhaitez changer de façon dynamique. Le type Horizontal correspond à la dimension X et le type Vertical, à la dimension Y.  
+2.  Sélectionnez un contrôle et, dans la fenêtre Propriétés, définissez ses propriétés de disposition dynamique. Le **disposition dynamique** section dans la fenêtre Propriétés contient les propriétés **Type de déplacement**, **Type de redimensionnement**et, en fonction des valeurs sélectionnées pour ces propriétés, les propriétés spécifiques qui définissent la quantité de contrôles déplacement ou modifier la taille. **Type de déplacement** détermine la façon dont un contrôle est déplacé que la taille de la boîte de dialogue est modifiée ; **Type de redimensionnement** détermine comment un contrôle est redimensionné que la taille de la boîte de dialogue est modifiée. **Type de déplacement** et **Type de redimensionnement** peut être **Horizontal**, **Vertical**, **les deux**, ou **aucun**selon les dimensions que vous souhaitez changer de façon dynamique. Le type Horizontal correspond à la dimension X et le type Vertical, à la dimension Y.  
   
 3.  Si vous voulez un contrôle tel qu’un bouton à une taille fixe et restent en place en bas à droite, comme cela est courant pour les **OK** ou **Annuler** boutons, définissez la **Type de redimensionnement** à  **Aucun**et définissez la **Type de déplacement** à **les deux**. Pour le **déplacement X** et **déplacement Y** valeurs sous **Type de déplacement**, valeur de 100 % pour que le contrôle reste une distance fixe à partir de la partie inférieure droite.  
   

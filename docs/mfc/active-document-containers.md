@@ -1,13 +1,10 @@
 ---
 title: Conteneurs de documents actifs | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containers"></a>Conteneurs de documents actifs
 Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Internet Explorer, vous permet de travailler avec plusieurs documents de différents types d’applications au sein d’un frame unique (au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document).  
@@ -49,7 +44,7 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
   
 -   [Cibles de la commande](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a>Configuration requise du conteneur  
+##  <a name="container_requirements"></a> Configuration requise du conteneur  
  Prise en charge du document actif dans un conteneur de documents actifs implique plusieurs implémentations d’interfaces : elle nécessite également la connaissance de l’aide des interfaces d’un objet contenu. Il en va de même pour les extensions de document actif, où le conteneur doit également savoir utiliser ces interfaces d’extension sur les documents actifs eux-mêmes.  
   
  Un conteneur de documents actifs qui intègre des documents actifs doit :  
@@ -70,7 +65,7 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
   
  Un document qui prend en charge qu’une seule vue peut implémenter les composants de la vue et le document (autrement dit, leurs interfaces correspondantes) sur une seule classe concrète. En outre, un site conteneur qui prend uniquement en charge une seule vue à la fois peut combiner les sites document et la vue dans une classe de site concrète unique. Objet de frame du conteneur, cependant, doit rester distincte et composant de document du conteneur est simplement inclus ici pour donner un aperçu complet de l’architecture ; Il n’est pas affecté par l’architecture de relation contenant-contenu de document actif.  
   
-##  <a name="document_site_objects"></a>Objets document Site  
+##  <a name="document_site_objects"></a> Objets document Site  
  Dans l’architecture de relation contenant-contenu de document actif, un site de document est identique à un objet de site client dans les Documents OLE avec l’ajout de la `IOleDocument` interface :  
   
  `interface IOleDocumentSite : IUnknown`  
@@ -83,12 +78,12 @@ Un conteneur de documents actifs, tels que le classeur Microsoft Office ou Inter
   
  Le site de document est théoriquement le conteneur pour un ou plusieurs objets « afficher le site ». Chaque objet view site est associé à des objets view individuels du document géré par le site de document. Si le conteneur prend uniquement en charge une seule vue par site de document, elle peut implémenter le site de document et le site de vue avec une seule classe concrète.  
   
-##  <a name="view_site_objects"></a>Objets de vue de Site  
+##  <a name="view_site_objects"></a> Objets de vue de Site  
  Objet de site de vue d’un conteneur gère l’espace d’affichage pour une vue particulière d’un document. Prise en charge de la norme `IOleInPlaceSite` interface, un site de vue implémente également généralement `IContinueCallback` pour le contrôle d’impression par programmation. (Notez que l’objet de vue interroge jamais pour `IContinueCallback` afin qu’il peut être implémenté sur tout objet les conteneur de souhaits.)  
   
  Un conteneur qui prend en charge plusieurs vues doit être en mesure de créer d’affichage de plusieurs objets du site dans le site de document. Cela fournit à chaque vue avec les services d’activation et désactivation distincts tel que fourni par le biais `IOleInPlaceSite`.  
   
-##  <a name="frame_object"></a>Objet frame  
+##  <a name="frame_object"></a> Objet frame  
  Objet de frame du conteneur est, par la plupart des cas, la même image que celle qui est utilisée pour l’activation sur place dans les Documents OLE, c'est-à-dire, celui qui gère la négociation de menu et barre d’outils. Un objet de vue a accès à cet objet frame via **IOleInPlaceSite::GetWindowContext**, ce qui permet également d’accéder à l’objet conteneur qui représente le document conteneur (qui peut gérer la négociation de la barre d’outils du volet de niveau et énumération d’objets contenus).  
   
  Un conteneur de documents actifs peut augmenter le frame en ajoutant `IOleCommandTarget`. Cela lui permet de recevoir des commandes lancées dans l’interface utilisateur du document actif de la même manière que cette interface peut permettre à un conteneur d’envoyer les mêmes commandes (telles que **le nouveau fichier**, **ouvrir**,  **Enregistrer en tant que**, **impression**; **Modifier une copie**, **coller**, **Annuler**, etc.) dans un document actif. Pour plus d’informations, consultez [cibles de la commande](../mfc/message-handling-and-command-targets.md).  

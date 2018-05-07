@@ -1,24 +1,19 @@
 ---
-title: "Référence rapide (C + c++ / CX) | Documents Microsoft"
-ms.custom: 
+title: Référence rapide (C + c++ / CX) | Documents Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quick-reference-ccx"></a>Aide-mémoire (C++/CX)
 Le Windows Runtime prend en charge les applications de plateforme Windows universelle (UWP) qui s’exécutent uniquement dans un environnement de système d’exploitation fiable, utilisent les fonctions autorisées, les types de données et les appareils et sont distribuées via Microsoft Store. C + c++ / CX simplifient l’écriture d’applications pour Windows Runtime. Cet article est une référence rapide ; Pour obtenir une documentation plus complète, consultez [système de Type](../cppcx/type-system-c-cx.md) et [Extensions du composant pour les plateformes Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
@@ -54,7 +49,7 @@ Le Windows Runtime prend en charge les applications de plateforme Windows univer
 |événement|(Non applicable)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> - ou -<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> - ou -<br /><br /> `auto` *identificateur de jeton* = *obj*. *identificateur d’événement*`::add(`*identificateur de délégué*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> - ou -<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Déclare un objet d'événement, qui stocke une collection de gestionnaires d'événements (délégués) qui sont appelés lorsqu'un événement se produit.<br /><br /> Crée un gestionnaire d'événements.<br /><br /> Ajoute un gestionnaire d'événements.<br /><br /> L’ajout d’un gestionnaire d’événements retourne un jeton d’événement (*token-identifier*). Si vous prévoyez de supprimer explicitement le gestionnaire d'événements, vous devez enregistrer le jeton d'événement pour l'utiliser ultérieurement.<br /><br /> Supprime un gestionnaire d'événements.<br /><br /> Pour supprimer un gestionnaire d'événements, vous devez spécifier le jeton d'événement que vous avez enregistré lorsque le gestionnaire d'événements a été ajouté.|  
 |propriété|(Non applicable)|`property` *T* *identifier*;<br /><br /> `property` *T* *identifier* `[` *index* `];`<br /><br /> `property` *T* `default[` *index* `];`|Déclare qu'une fonction membre de classe ou d'objet est accessible en utilisant la même syntaxe qui est utilisée pour accéder à des données membres ou à un élément de tableau indexé.<br /><br /> Déclare une propriété sur une fonction membre de classe ou d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre de classe.|  
 |Types paramétrables|modèles|`generic <typename` *T* `> interface class` *identifier* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Déclare une classe d'interface paramétrée.<br /><br /> Déclare un délégué paramétré.|  
-|Types valeur Nullable|`boost::optional<T>`|[Platform::IBox \<T>](../cppcx/platform-ibox-interface.md)|Permet aux variables des types scalaires et des structs value d'avoir la valeur `nullptr`.|  
+|Types valeur Nullable|`boost::optional<T>`|[Platform::IBox \<T >](../cppcx/platform-ibox-interface.md)|Permet aux variables des types scalaires et des structs value d'avoir la valeur `nullptr`.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

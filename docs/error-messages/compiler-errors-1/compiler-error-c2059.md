@@ -1,12 +1,9 @@
 ---
 title: Erreur du compilateur C2059 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87f9c3dbb1405463804b7abd5c94abe04a42845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69182e4b27b474cafe60b71b02594a244f65a09b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2059"></a>Erreur du compilateur C2059
 Erreur de syntaxe : 'token'  
@@ -46,7 +41,7 @@ Erreur de syntaxe : 'token'
   
  Si le message d’erreur se produit sur un symbole qui suit immédiatement un `typedef` variable, assurez-vous que la variable est définie dans le code source.  
   
- Vous pouvez obtenir l’erreur C2059 si un symbole a la valeur nothing, comme peut se produire lorsque **/D** `symbol`  **=**  est utilisée pour compiler.  
+ Vous pouvez obtenir l’erreur C2059 si un symbole a la valeur nothing, comme peut se produire lorsque **/D** `symbol` **=** est utilisée pour compiler.  
   
 ```  
 // C2059a.cpp  

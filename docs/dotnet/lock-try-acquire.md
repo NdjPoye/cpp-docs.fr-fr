@@ -2,11 +2,8 @@
 title: Lock::try_acquire | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Acquiert un verrou sur un objet, en attente pour un laps de temps et en retournant un `bool` pour signaler la réussite de l’acquisition au lieu de lever une exception.  
@@ -51,7 +46,7 @@ bool try_acquire(
  Valeur de délai d’attente en millisecondes, ou comme un <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si le verrou a été acquis, `false` dans le cas contraire.  
+ `true` Si le verrou a été acquis, `false` dans le cas contraire.  
   
 ## <a name="remarks"></a>Notes  
  Si un verrou a déjà été acquis, cette fonction ne fait rien.  
@@ -145,7 +140,7 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Fichier d’en-tête** \<msclr\lock.h >  
   
  **Namespace** msclr  

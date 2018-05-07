@@ -2,7 +2,7 @@
 title: Avertissements du compilateur C4600 via C4799 | Documents Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Avertissements du compilateur C4600 via C4799
 
@@ -103,7 +102,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4616](../../error-messages/compiler-warnings/compiler-warning-level-1-c4616.md)|#pragma warning : numéro d’avertissement 'number' pas un avertissement de compilateur valide|
 |[Avertissement du compilateur (niveau 1) C4618](../../error-messages/compiler-warnings/compiler-warning-level-1-c4618.md)|les paramètres pragma comportaient une chaîne vide. pragma ignoré|
 |[Avertissement du compilateur (niveau 3) C4619](../../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md)|#pragma warning : numéro d'avertissement inexistant 'numéro'|
-|Avertissement du compilateur (niveau 1) C4620|aucune forme suffixée de l’opérateur 'operator ++' trouvée pour le type 'type' ; utilisez la forme préfixée|
+|Avertissement du compilateur (niveau 1) C4620|aucune forme suffixée de l’opérateur 'operator ++' trouvée pour le type 'type' ; utilisez la forme préfixée|
 |[Avertissement du compilateur (niveau 1) C4621](../../error-messages/compiler-warnings/compiler-warning-level-1-c4621.md)|aucune forme suffixée de l’opérateur 'operator--' trouvée pour le type 'type', utilisez la forme préfixée|
 |Avertissement du compilateur (niveau 3) C4622|remplacement des informations de débogage formées lors de la création de l’en-tête précompilé du fichier objet : 'fichier'|
 |[Avertissement du compilateur (niveau 4) C4623](../../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md)|'classe dérivée' : constructeur par défaut a été défini de manière implicite comme supprimé car un constructeur par défaut de la classe de base est inaccessible ou supprimé|
@@ -118,7 +117,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4632](../../error-messages/compiler-warnings/compiler-warning-level-1-c4632.md)|Commentaire de document XML : fichier - accès refusé : raison|
 |[Avertissement du compilateur (niveau 3) C4633](../../error-messages/compiler-warnings/compiler-warning-level-3-c4633.md)|Cible de commentaire de document XML : erreur : raison|
 |Avertissement du compilateur (niveau 4) l’avertissement C4634|Cible de commentaire de document XML : ne peut pas être appliqué : raison|
-|Avertissement du compilateur (niveau 3) C4635|Cible de commentaire de document XML : code XML incorrect : raison|
+|Avertissement du compilateur (niveau 3) C4635|Cible de commentaire de document XML : code XML incorrect : raison|
 |Avertissement du compilateur (niveau 3) C4636|Commentaire de document XML appliqué à construct : la balise requiert non vide ' attribut '.|
 |Avertissement du compilateur (niveaux 3 et 4) C4637|Cible de commentaire de document XML : \<inclure > balise ignorée. Raison|
 |Avertissement du compilateur (niveau 3) C4638|Cible de commentaire de document XML : référence à un symbole inconnu 'symbol'.|
@@ -141,7 +140,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4658|'fonction' : prototype de fonction est une nouveauté depuis la dernière génération, ou est déclaré différemment à un autre emplacement|
 |[Avertissement du compilateur (niveau 1) C4659](../../error-messages/compiler-warnings/compiler-warning-level-1-c4659.md)|#pragma 'pragma' : utilisation du segment réservé 'segment' a un comportement indéfini, utilisez #pragma comment (linker,...)|
 |[Avertissement du compilateur (niveau 1) C4661](../../error-messages/compiler-warnings/compiler-warning-level-1-c4661.md)|'identificateur' : aucune définition appropriée pour la demande d’instanciation explicite du modèle|
-|Avertissement du compilateur (niveau 1) C4662|instanciation explicite ; la classe de modèle 'identificateur1' n’a aucune définition pour spécialiser 'identificateur2'|
+|Avertissement du compilateur (niveau 1) C4662|instanciation explicite ; la classe de modèle 'identificateur1' n’a aucune définition pour spécialiser 'identificateur2'|
 |[Avertissement du compilateur (niveau 1) C4667](../../error-messages/compiler-warnings/compiler-warning-level-1-c4667.md)|'fonction' : aucun modèle de fonction défini correspondant de l’instanciation n’imposée|
 |[Avertissement du compilateur (niveau 4) C4668](../../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md)|'symbole' n’est pas défini comme préprocesseur ou macro, remplacement par '0' pour la directive 'directive'|
 |[Avertissement du compilateur (niveau 1) C4669](../../error-messages/compiler-warnings/compiler-warning-level-1-c4669.md)|'cast' : conversion risquée : 'classe' est un objet de type managé|
@@ -162,7 +161,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4685|'> >' attendu, '>>' trouvé lors de l'analyse des paramètres du modèle|
 |[Avertissement du compilateur (niveau 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|’type défini par l’utilisateur’ : changement de comportement possible, changement de la convention d’appel de retour UDT|
 |[Avertissement (erreur) du compilateur C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'classe' : une classe abstraite sealed ne peut pas implémenter une interface 'interface'|
-|Avertissement du compilateur (niveau 1) C4688|'constraint' : la liste des contraintes contient un type privé d’assembly 'type'|
+|Avertissement du compilateur (niveau 1) C4688|'constraint' : la liste des contraintes contient un type privé d’assembly 'type'|
 |Avertissement du compilateur (niveau 1) C4689|« %c » : non pris en charge des caractères dans #pragma detect_mismatch ; #pragma ignoré|
 |Avertissement du compilateur (niveau 4) C4690|[emitidl (pop)] : plus de POP que de push|
 |[Avertissement du compilateur (niveau 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type' : type référencé était attendu dans l’assembly non référencé 'fichier', type défini dans l’unité de traduction actuelle utilisée à la place|
@@ -204,10 +203,10 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Avertissement du compilateur (niveau 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' a un alignement différent dans 'fichier1' et 'fichier2' : nombre et nombre|
 |[Avertissement du compilateur (niveau 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' a une taille différente dans 'fichier1' et 'fichier2' : nombre et le nombre d’octets|
 |[Avertissement du compilateur (niveau 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' a un type différent dans 'fichier1' et 'fichier2' : 'type1' et 'type2'|
-|[Avertissement du compilateur C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accès volatile de '*expression*' dépend :\<iso &#124; ms > configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store|
+|[Avertissement du compilateur C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accès volatile de '*expression*' dépend :\<iso&#124;ms > configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store|
 |[Avertissement du compilateur (niveau 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Appel managé 'point d’entrée' : Impossible d’exécuter du code managé le verrouillage du chargeur, y compris le point d’entrée de DLL et les appels accessibles à partir du point d’entrée DLL|
 |Avertissement du compilateur (niveau 4) C4749|conditionnellement pris en charge : offsetof appliqué au type de disposition-non standard '*type*'|
-|Avertissement du compilateur (niveau 1) C4750|'identifier' : fonction with _alloca() inline dans une boucle|
+|Avertissement du compilateur (niveau 1) C4750|'identifier' : fonction with _alloca() inline dans une boucle|
 |Avertissement du compilateur (niveau 4) C4751|/ arch : AVX ne s’applique pas à Intel (r) Extensions Streaming SIMD qui se trouvent dans inline ASM|
 |Avertissement du compilateur (niveau 4) C4752|Il est trouvé Intel (r) Advanced Vector Extensions ; envisagez d’utiliser/arch : AVX|
 |Avertissement du compilateur (niveau 4) C4754|Les règles de conversion pour les opérations arithmétiques dans la comparaison à %s(%d) signifient qu’une branche ne peut pas être exécutée. Effectuer un cast de « %s » à « %s » (ou un type similaire de %d octets).|

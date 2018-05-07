@@ -1,12 +1,9 @@
 ---
 title: Classe de CMiniFrameWnd | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Classe de CMiniFrameWnd
 Représente une fenêtre frame de demi-hauteur généralement visible autour de barres d'outils flottantes.  
@@ -75,10 +70,10 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Construit un `CMiniFrameWnd` de l’objet, mais ne crée pas de la fenêtre.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Notes  
  Pour créer la fenêtre, appelez [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Crée la fenêtre mini-frame Windows et l’attache à le `CMiniFrameWnd` objet.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** désactive l’accès au menu système et le menu de contrôle et les convertit en une partie de la légende (barre de titre).  
   
- Consultez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs de style de fenêtre possible. La combinaison classique utilisée pour les fenêtres mini-frame est **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ Consultez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pour obtenir une description des valeurs de style de fenêtre possible. La combinaison classique utilisée pour les fenêtres mini-frame est **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  A `RECT` structure qui spécifie les dimensions souhaitées de la fenêtre.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  **Créer** initialise le nom de classe et le nom de la fenêtre de la fenêtre et enregistre les valeurs par défaut pour le style et le parent.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Crée un objet `CMiniFrameWnd`.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
 ### <a name="remarks"></a>Notes  
- Le `CreateEx` les paramètres spécifient le **WNDCLASS**, style de fenêtre et position initiale (facultatif) et la taille de la fenêtre. `CreateEx`Spécifie également la fenêtre parente (le cas échéant) et ID.  
+ Le `CreateEx` les paramètres spécifient le **WNDCLASS**, style de fenêtre et position initiale (facultatif) et la taille de la fenêtre. `CreateEx` Spécifie également la fenêtre parente (le cas échéant) et ID.  
   
  Lorsque `CreateEx` s’exécute, Windows envoie les [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), et [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messages dans la fenêtre.  
   
  Pour étendre le traitement du message par défaut, dérivez une classe de `CMiniFrameWnd`, ajouter une table des messages à la nouvelle classe et de fournir des fonctions membres pour les messages ci-dessus. Substituer `OnCreate`, par exemple, pour effectuer l’initialisation nécessaire pour une nouvelle classe.  
   
- Substituer davantage **sur***Message* gestionnaires pour ajouter d’autres fonctionnalités à votre classe dérivée de messages.  
+ Substituer davantage **sur *** Message* gestionnaires pour ajouter d’autres fonctionnalités à votre classe dérivée de messages.  
   
  Si le **WS_VISIBLE** style est fourni, Windows envoie à la fenêtre de tous les messages qui sont requises pour activer et afficher la fenêtre. Si le style de fenêtre spécifie une barre de titre, le titre de la fenêtre vers laquelle pointe le `lpszWindowName` paramètre est affiché dans la barre de titre.  
   
