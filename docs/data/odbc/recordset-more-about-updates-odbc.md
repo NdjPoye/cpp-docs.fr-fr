@@ -1,13 +1,10 @@
 ---
-title: "Recordset : en savoir plus sur les mises à jour (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : en savoir plus sur les mises à jour (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea46e0462f3763e04ec18ad9bff2b0d3ded1deee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Recordset : informations complémentaires sur les mises à jour (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -46,26 +41,26 @@ Cette rubrique s’applique aux classes ODBC MFC.
 > [!NOTE]
 >  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler la `AddNew`, **modifier**, **supprimer**, et **mise à jour** les fonctions membres ; Toutefois, vous pouvez effectuer des transactions. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_how_other_operations_affect_updates"></a>Répercussions des autres opérations sur les mises à jour  
+##  <a name="_core_how_other_operations_affect_updates"></a> Répercussions des autres opérations sur les mises à jour  
  Les mises à jour sont affectées par les transactions au moment de la mise à jour, en fermant le jeu d’enregistrements avant d’effectuer une transaction et en faisant défiler avant la fin d’une transaction.  
   
-###  <a name="_core_how_transactions_affect_updates"></a>Répercussions des Transactions sur les mises à jour  
+###  <a name="_core_how_transactions_affect_updates"></a> Répercussions des Transactions sur les mises à jour  
  Au-delà de comprendre comment `AddNew`, **modifier**, et **supprimer** travail, il est important de comprendre comment les **BeginTrans**, **CommitTrans**, et **restauration** les fonctions membres de [CDatabase](../../mfc/reference/cdatabase-class.md) fonctionnent avec les fonctions de mise à jour de [CRecordset](../../mfc/reference/crecordset-class.md).  
   
  Par défaut, les appels à `AddNew` et **modifier** affectent la source de données immédiatement lorsque vous appelez **mise à jour**. **Supprimer** appels prennent effet immédiatement. Mais vous pouvez établir une transaction et exécuter un traitement de ces appels. Les mises à jour ne sont pas permanentes jusqu'à ce que vous les validez. Si vous changez d’avis, vous pouvez restaurer la transaction au lieu de sa validation.  
   
  Pour plus d’informations sur les transactions, consultez [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a>Impact de la fermeture de l’ensemble d’enregistrements sur les mises à jour  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Impact de la fermeture de l’ensemble d’enregistrements sur les mises à jour  
  Si vous fermez un jeu d’enregistrements, ou qui lui est associée `CDatabase` objet, avec une transaction en cours (vous n’avez pas appelé [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) ou [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), la transaction est restaurée. sauvegarder automatiquement (à moins que votre base de données principale est le moteur de base de données Microsoft Jet).  
   
 > [!CAUTION]
 >  Si vous utilisez le moteur de base de données Microsoft Jet, la fermeture d’un jeu d’enregistrements à l’intérieur d’une transaction explicite n’entraîne pas la libération des lignes qui ont été modifiées ou des verrous qui ont été placés jusqu'à ce que la transaction explicite est validée ou restaurée. Il est recommandé que vous ouvrez et fermez les jeux d’enregistrements à l’intérieur ou en dehors d’une transaction Jet explicite.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a>Influence du défilement mises à jour  
+###  <a name="_core_how_scrolling_affects_updates"></a> Influence du défilement mises à jour  
  Lorsque vous [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) dans un jeu d’enregistrements, le tampon d’édition est rempli avec chaque nouvel enregistrement courant (l’enregistrement précédent n’est pas stocké d’abord). Défilement ignore les enregistrements supprimés précédemment. Si vous faites défiler après une `AddNew` ou **modifier** appel sans appeler **mise à jour**, **CommitTrans**, ou **restauration** première, toutes les modifications sont perdues (aucun avertissement vous) lorsqu’un nouvel enregistrement est placé dans le tampon d’édition. Le tampon d’édition est rempli avec l’enregistrement de défilement à l’enregistrement stocké est libéré et aucune modification se produit sur la source de données. Cela s’applique aux deux `AddNew` et **modifier**.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>Les mises à jour et les mises à jour d’autres utilisateurs  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Les mises à jour et les mises à jour d’autres utilisateurs  
  Lorsque vous utilisez un jeu d’enregistrements à mettre à jour des données, vos mises à jour affectent les autres utilisateurs. De même, les mises à jour des autres utilisateurs pendant la durée de vie de votre recordset vous affectent.  
   
  Dans un environnement multi-utilisateur, les autres utilisateurs peuvent ouvrir des jeux d’enregistrements qui contiennent certains enregistrements identiques à ceux que vous avez sélectionné dans le jeu d’enregistrements. Modifications apportées à un enregistrement avant que vous récupériez sont répercutées dans le jeu d’enregistrements. Étant donné que les feuilles de réponse dynamiques récupèrent un enregistrement chaque fois que vous accédez par défilement, répercutent les modifications chaque fois que vous accédez à un enregistrement. Instantanés de récupérer un enregistrement de la première fois que vous accédez par défilement, instantanés reflètent uniquement les modifications qui se produisent avant que vous accédiez à l’enregistrement.  
@@ -73,11 +68,11 @@ Cette rubrique s’applique aux classes ODBC MFC.
  Les enregistrements ajoutés par d’autres utilisateurs après avoir ouvert le jeu d’enregistrements ne s’affichent pas dans le jeu d’enregistrements, sauf si vous actualisez. Si le recordset est une feuille de réponse dynamique, modifications d’enregistrements existants par d’autres utilisateurs s’affichent dans votre feuille de réponse dynamique lorsque vous faites défiler à l’enregistrement concerné. Si votre jeu d’enregistrements est un instantané, les modifications n’apparaissent pas jusqu'à ce que vous actualisez l’instantané. Si vous souhaitez voir les enregistrements ajoutés ou supprimés par d’autres utilisateurs dans l’instantané, ou les enregistrements ajoutés par d’autres utilisateurs dans votre feuille de réponse dynamique, appelez [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) pour reconstruire le recordset. (Notez que les suppressions des autres utilisateurs apparaissent dans votre feuille de réponse dynamique). Vous pouvez aussi appeler **Requery** pour afficher les enregistrements vous ajoutez, mais ne pas pour voir vos propres suppressions.  
   
 > [!TIP]
->  Pour forcer la mise en cache de l’intégralité d’un instantané, appelez `MoveLast` immédiatement après l’ouverture de l’instantané. Appelez ensuite **MoveFirst** pour commencer à travailler avec les enregistrements. `MoveLast`est équivalent au défilement sur tous les enregistrements, mais ceux-ci sont tous en même temps. Toutefois, notez que cela peut réduire les performances et ne peut pas être nécessaire pour certains pilotes.  
+>  Pour forcer la mise en cache de l’intégralité d’un instantané, appelez `MoveLast` immédiatement après l’ouverture de l’instantané. Appelez ensuite **MoveFirst** pour commencer à travailler avec les enregistrements. `MoveLast` est équivalent au défilement sur tous les enregistrements, mais ceux-ci sont tous en même temps. Toutefois, notez que cela peut réduire les performances et ne peut pas être nécessaire pour certains pilotes.  
   
  Les effets de vos mises à jour sur les autres utilisateurs sont semblables aux effets sur vous.  
   
-##  <a name="_core_more_about_update_and_delete"></a>Plus d’informations sur la mise à jour et de suppression  
+##  <a name="_core_more_about_update_and_delete"></a> Plus d’informations sur la mise à jour et de suppression  
  Cette section fournit des informations supplémentaires pour vous aider à utiliser avec **mise à jour** et **supprimer**.  
   
 ### <a name="update-success-and-failure"></a>Réussite de la mise à jour et d’échec  

@@ -1,13 +1,10 @@
 ---
-title: "Exceptions : Exceptions de base de données | Documents Microsoft"
-ms.custom: 
+title: 'Exceptions : Exceptions de base de données | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 Cet article explique comment gérer les exceptions de base de données. La plupart des éléments de cet article s’applique si vous travaillez avec les classes MFC pour la connectivité ODBC (Open Database) ou les classes MFC pour les objets DAO (Data Access). Matériel spécifique à un ou l’autre modèle est marquée explicitement. Les rubriques traitées ici sont les suivantes :  
@@ -39,7 +34,7 @@ Cet article explique comment gérer les exceptions de base de données. La plupa
   
 -   [Un exemple de gestion des exceptions de base de données](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Approches de la gestion des exceptions  
+##  <a name="_core_approaches_to_exception_handling"></a> Approches de la gestion des exceptions  
  L’approche est la même si vous travaillez avec DAO ou ODBC.  
   
  Vous devez toujours écrire des gestionnaires d’exceptions pour gérer des conditions exceptionnelles.  
@@ -62,7 +57,7 @@ Cet article explique comment gérer les exceptions de base de données. La plupa
   
  Des informations supplémentaires sur les erreurs DAO, le type d’objet DAO Error et la collection d’erreurs de DAO sont disponibles sous la classe [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Un exemple de gestion des exceptions de base de données  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Un exemple de gestion des exceptions de base de données  
  L’exemple suivant tente de construire un [CRecordset](../mfc/reference/crecordset-class.md)-dérivée de l’objet sur le segment de mémoire avec la **nouveau** (opérateur), puis ouvrez le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « Exemple d’Exception DAO » ci-dessous.  
   
 ### <a name="odbc-exception-example"></a>Exemple d’Exception ODBC  

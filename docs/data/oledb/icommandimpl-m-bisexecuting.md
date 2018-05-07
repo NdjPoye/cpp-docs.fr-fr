@@ -1,12 +1,9 @@
 ---
 title: ICommandImpl::m_bIsExecuting | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl.m_bIsExecuting
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - m_bIsExecuting
 ms.assetid: 1e152164-514c-4116-88a3-16984af99991
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fccd78da21233a8b5b033d5b2b6d0e568a1aefb4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d4e445ccee027aa980c2c651d04d9473321a6b56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimplmbisexecuting"></a>ICommandImpl::m_bIsExecuting
 Indique si la commande est en cours d’exécution.  
@@ -45,7 +40,7 @@ unsigned m_bIsExecuting:1;
 ## <a name="remarks"></a>Notes  
  Le **Execute** méthode de votre classe de commande peut définir cette variable sur **true**.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

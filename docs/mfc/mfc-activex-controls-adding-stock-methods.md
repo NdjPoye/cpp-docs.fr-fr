@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Ajout de méthodes Stock | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Ajout de méthodes Stock | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,29 +12,27 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2531f84974626fcdb364df67b12f27d61e75a62a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 Une méthode stock diffère d’une méthode personnalisée dans la mesure où il est déjà implémenté par la classe [COleControl](../mfc/reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction membre prédéfinie qui prend en charge la méthode d’actualisation de votre contrôle. L’entrée de table de dispatch pour cette méthode stock **DISP_STOCKFUNC_REFRESH**.  
   
- `COleControl`prend en charge deux méthodes stock : DoClick et Refresh. Refresh est appelée par l’utilisateur du contrôle pour mettre immédiatement à jour l’apparence du contrôle ; DoClick est appelée pour déclencher Click du contrôle l’événement.  
+ `COleControl` prend en charge deux méthodes stock : DoClick et Refresh. Refresh est appelée par l’utilisateur du contrôle pour mettre immédiatement à jour l’apparence du contrôle ; DoClick est appelée pour déclencher Click du contrôle l’événement.  
   
 |Méthode|Entrée de table de dispatch|Commentaire|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DE DISP_STOCKPROP_DOCLICK)**|Déclenche un événement Click.|  
 |**Actualiser**|**(DE DISP_STOCKPROP_REFRESH)**|Mise à jour immédiate de l’apparence du contrôle.|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a>Ajout d’une méthode Stock à l’aide de l’Assistant Ajout de méthode  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Ajout d’une méthode Stock à l’aide de l’Assistant Ajout de méthode  
  Ajout d’une méthode stock est simple à l’aide de la [Assistant Ajout de méthode](../ide/add-method-wizard.md). La procédure suivante illustre l’ajout de la méthode d’actualisation pour un contrôle créé à l’aide de l’Assistant de contrôle ActiveX MFC.  
   
 #### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Pour ajouter la méthode stock Refresh à l’aide de l’Assistant Ajout de méthode  
@@ -56,7 +51,7 @@ Une méthode stock diffère d’une méthode personnalisée dans la mesure où i
   
 6.  Cliquez sur **Terminer**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a>Méthode modifications effectuées Assistant Ajout de méthodes Stock  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Méthode modifications effectuées Assistant Ajout de méthodes Stock  
  Étant donné que la méthode stock Refresh est prise en charge par la classe de base du contrôle, la **Assistant Ajout de méthode** ne modifie pas la déclaration de classe du contrôle en aucune façon. Il ajoute une entrée pour la méthode à la table de dispatch du contrôle et à ses. Fichier IDL. La ligne suivante est ajoutée à la table de dispatch du contrôle, située dans son implémentation (. Fichier de RPC) :  
   
  [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  

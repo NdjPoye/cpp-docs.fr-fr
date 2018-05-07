@@ -1,12 +1,9 @@
 ---
 title: Cmfcdynamiclayout, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDynamicLayout
@@ -24,17 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 Spécifie comment les contrôles dans une fenêtre sont déplacés et redimensionnés à mesure que l'utilisateur redimensionne la fenêtre.  
@@ -91,10 +86,10 @@ class CMFCDynamicLayout : public CObject
   
  [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxlayout.h  
   
-##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem  
  Ajoute une fenêtre enfant, généralement un contrôle, à la liste des fenêtres contrôlées par le gestionnaire de disposition dynamique.  
   
 ```  
@@ -127,7 +122,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>Notes  
  La position et la taille d'un contrôle enfant change de façon dynamique quand une fenêtre hôte est redimensionnée.  
   
-##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
+##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust  
  Ajoute une fenêtre enfant, généralement un contrôle, à la liste des fenêtres contrôlées par le gestionnaire de disposition dynamique.  
   
 ```  
@@ -137,7 +132,7 @@ void Adjust();
 ### <a name="remarks"></a>Notes  
  La position et la taille d'un contrôle enfant change de façon dynamique quand une fenêtre hôte est redimensionnée.  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
  Stocke et valide la fenêtre hôte.  
   
 ```  
@@ -153,7 +148,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
  Retourne un pointeur vers une fenêtre hôte.  
   
 ```  
@@ -166,7 +161,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>Notes  
  Par défaut, la position de tous les contrôles enfants est recalculée par rapport à cette fenêtre.  
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
  Retourne la taille de fenêtre en dessous de laquelle la disposition n'est pas ajustée.  
   
 ```  
@@ -179,7 +174,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>Notes  
  La position et la taille d'un contrôle enfant sont modifiées de façon dynamique du moment où une fenêtre hôte est redimensionnée, mais il y a une taille minimale en dessous de laquelle la disposition n'est pas ajustée. L'utilisateur peut réduire la taille de la fenêtre, mais certaines parties de la fenêtre sont alors masquées.  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
  Récupère le rectangle pour la zone cliente active de la fenêtre.  
   
 ```  
@@ -192,7 +187,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem  
  Vérifie si un contrôle enfant a été ajouté à la disposition dynamique.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty  
  Vérifie qu'aucune fenêtre enfant n'a été ajoutée à une disposition dynamique.  
   
 ```  
@@ -220,7 +215,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
  Lit la disposition dynamique de la ressource AFX_DIALOG_LAYOUT, puis applique la disposition à la fenêtre hôte.  
   
 ```  
@@ -244,7 +239,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
+##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal  
  Obtient un [MoveSettings](#movesettings_structure) valeur qui définit la quantité un contrôle enfant est déplacé horizontalement quand l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  
@@ -260,7 +255,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
+##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical  
  Obtient un [MoveSettings](#movesettings_structure) valeur qui définit la quantité un contrôle enfant est déplacé horizontalement quand l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  
@@ -279,7 +274,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
+##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone  
  Obtient un [MoveSettings](#movesettings_structure) valeur qui ne représente aucune animation, verticale ou horizontale, pour un contrôle enfant.  
   
 ```  
@@ -291,7 +286,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="movesettings_structure"></a>Cmfcdynamiclayout::movesettings, Structure  
+##  <a name="movesettings_structure"></a>  Cmfcdynamiclayout::movesettings, Structure  
  Encapsule les données de déplacement des contrôles dans une disposition dynamique.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Valeur de retour  
  TRUE si l'objet `MoveSettings` spécifie un déplacement vertical différent de zéro.  
 
-##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
+##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical  
  Obtient un [MoveSettings](#movesettings_structure) valeur qui définit la quantité un contrôle enfant est déplacé verticalement quand l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  
@@ -348,7 +343,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
  Définit la taille de fenêtre en dessous de laquelle la disposition n'est pas ajustée.  
   
 ```  
@@ -362,7 +357,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>Notes  
  La position et la taille d'un contrôle enfant sont modifiées de façon dynamique du moment où une fenêtre hôte est redimensionnée, mais il y a une taille minimale en dessous de laquelle la disposition n'est pas ajustée. L'utilisateur peut réduire la taille de la fenêtre, mais certaines parties de la fenêtre sont alors masquées.  
   
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
+##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal  
  Obtient un [SizeSettings](#sizesettings_structure) valeur qui définit la quantité un contrôle enfant est redimensionné horizontalement lorsque l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  
@@ -378,7 +373,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
+##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical  
  Obtient un [SizeSettings](#sizesettings_structure) valeur qui définit la quantité un contrôle enfant est redimensionné horizontalement lorsque l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  
@@ -397,7 +392,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
+##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone  
  Obtient un [SizeSettings](#sizesettings_structure) valeur représentant aucun changement de taille pour un contrôle enfant.  
   
 ```  
@@ -409,7 +404,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="sizesettings_structure"></a>Cmfcdynamiclayout::sizesettings, Structure  
+##  <a name="sizesettings_structure"></a>  Cmfcdynamiclayout::sizesettings, Structure  
  Encapsule les données de changement de taille des contrôles dans une disposition dynamique.  
   
 ```  
@@ -449,7 +444,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Valeur de retour  
  TRUE si l'objet `SizeSettings` spécifie un redimensionnement vertical différent de zéro.  
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
+##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical  
  Obtient un [SizeSettings](#sizesettings_structure) valeur qui définit la quantité un contrôle enfant est redimensionné verticalement quand l’utilisateur redimensionne sa fenêtre hôte.  
   
 ```  

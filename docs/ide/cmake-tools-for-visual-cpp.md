@@ -1,13 +1,10 @@
 ---
 title: Les projets dans Visual C++ CMake | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake des projets dans Visual C++
 
@@ -197,7 +193,7 @@ L’exemple suivant montre un exemple de configuration, que vous pouvez utiliser
 1. **Générateur**: correspond à la **- G** basculer et spécifie le Générateur à utiliser. Cette propriété peut également être utilisée comme une macro, `${generator}`, pour aider à spécifier d’autres valeurs de propriété. Visual Studio prend actuellement en charge les générateurs de CMake suivantes :
 
 
-    - "Ninja"
+    - « Ninja »
     - « Visual Studio 2015 de 14 »
     - « ARM 14/2015 de visual Studio »
     - « Win64 visual Studio 2015 de 14 »
@@ -240,16 +236,16 @@ usage: ninja [options] [targets...]
 |Option|Description|
 |--------------|------------|
 | --version  | Imprimer ninja version (« 1.7.1 »)|
-|   -C DIR   | modifier DIR avant d’exécuter toute autre opération|
+|   C - DIR   | modifier DIR avant d’exécuter toute autre opération|
 |   f - fichier  | Spécifiez le fichier d’entrée de génération (default=build.ninja)|
-|   -j N     | exécuter des tâches N en parallèle (valeur par défaut = 14, dérivée de processeurs disponibles)|
-|   -k N     | Poursuivez la lecture jusqu'à ce que N tâches échouent (valeur par défaut = 1)|
-|   -l N     | ne démarrez pas de nouvelles tâches si la moyenne de la charge est supérieure à N|
+|   j - N     | exécuter des tâches N en parallèle (valeur par défaut = 14, dérivée de processeurs disponibles)|
+|   k - N     | Poursuivez la lecture jusqu'à ce que N tâches échouent (valeur par défaut = 1)|
+|   l - N     | ne démarrez pas de nouvelles tâches si la moyenne de la charge est supérieure à N|
 |   -n      | sec exécuter (ne pas exécuter des commandes mais agir comme si l’opération a réussi)|
 |   -v       | afficher toutes les lignes de commande lors de la génération|
 |   d - MODE  | Activer le débogage (utilisation des modes de liste à -d)|
 |   t - outil  | Exécutez un subtool (utilisation de t - outils auxiliaires de liste à la liste). met fin à des options de niveau supérieur ; plus les indicateurs sont transmis à l’outil| 
-|   -w FLAG  | ajuster les avertissements (utilisation des avertissements de liste à la liste -w)|
+|   w - indicateur  | ajuster les avertissements (utilisation des avertissements de liste à la liste -w)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Environnements héritées (Visual Studio 2017 version 15.5)
 CMakeSettings.json prend désormais en charge les environnements hérités. Cette fonctionnalité vous permet héritent des environnements de valeur par défaut (1) et (2) de créer des variables d’environnement personnalisées qui sont passées à CMake.exe lorsqu’il s’exécute.

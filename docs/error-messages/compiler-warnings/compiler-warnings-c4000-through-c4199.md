@@ -2,11 +2,8 @@
 title: C4000 des avertissements du compilateur via C4199 | Documents Microsoft
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +95,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 62f99b7be82ccd786bf2b2a5d18ed24a3e3211ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 des avertissements du compilateur via C4199
 
@@ -159,7 +154,7 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 1) C4051|conversion de type ; perte possible de données|
 |Avertissement du compilateur (niveau 4) C4052|déclarations de fonction différentes, une seule contient des arguments de variables|
 |Avertissement du compilateur (niveau 4) C4053|un opérande void pour '?:'|
-|[Avertissement du compilateur (niveau 1) C4055](compiler-warning-level-1-c4055.md)|'conversion' : du pointeur donnée '*type1*'vers le pointeur de fonction'*type2*'|
+|[Avertissement du compilateur (niveau 1) C4055](compiler-warning-level-1-c4055.md)|'conversion' : du pointeur donnée '*type1*'vers le pointeur de fonction'*type2*'|
 |[Avertissement du compilateur (niveau 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|dans l’opération arithmétique de constante à virgule flottante de dépassement de capacité|
 |Avertissement du compilateur (niveau 4) C4057|'opérateur' : 'identificateur1' diffère dans l’indirection vers des types de base légèrement différents de 'identificateur2'|
 |Avertissement C4060 du compilateur|l’instruction switch ne contient aucune étiquette 'case' ou 'default'|

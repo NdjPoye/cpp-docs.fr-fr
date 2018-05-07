@@ -1,30 +1,25 @@
 ---
-title: "Éléments de l’interface | Documents Microsoft"
-ms.custom: 
+title: Éléments de l’interface | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Éléments de l'interface
 Ce document décrit les éléments d'interface qui ont été introduits dans [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, ainsi que les différences avec la version antérieure de la bibliothèque.  
@@ -49,7 +44,7 @@ Ce document décrit les éléments d'interface qui ont été introduits dans [!I
  Le site d'ancrage (ou fenêtre frame principale) possède tous les volets et fenêtres mini-frame dans une application. Le site d’ancrage contient un [CDockingManager](../mfc/reference/cdockingmanager-class.md) membre. Ce membre gère la liste de tous les volets qui appartiennent au site d'ancrage. La liste est triée de sorte que les volets créés aux bords externes du site d'ancrage soient placés au début de la liste. Lorsque le framework redessine le site d'ancrage, elle effectue une boucle sur cette liste et ajuste la disposition de chaque volet pour inclure le rectangle englobant actuel du site d'ancrage. Vous pouvez appeler `AdjustDockingLayout` ou `RecalcLayout` lorsque vous devez ajuster la disposition d'ancrage, et le framework redirige cet appel vers le gestionnaire d'ancrage.  
   
 ## <a name="dock-bars"></a>Barres d'ancrage  
- Chaque fenêtre frame principale peut placer *barres d’ancrage* le long de ses bordures. Une barre d’ancrage est un volet qui appartienne à un [cdocksite, classe](../mfc/reference/cdocksite-class.md). Barres d’ancrage peuvent accepter des objets dérivés de [CPane](../mfc/reference/cpane-class.md), tels que les barres d’outils. Pour créer des barres d'ancrage lorsque la fenêtre frame principale est initialisée, appelez `EnableDocking`. Pour activer les barres de masquage automatique, appelez `EnableAutoHideBars`. `EnableAutoHideBars`crée [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objets et les positionne en regard de chaque barre d’ancrage.  
+ Chaque fenêtre frame principale peut placer *barres d’ancrage* le long de ses bordures. Une barre d’ancrage est un volet qui appartienne à un [cdocksite, classe](../mfc/reference/cdocksite-class.md). Barres d’ancrage peuvent accepter des objets dérivés de [CPane](../mfc/reference/cpane-class.md), tels que les barres d’outils. Pour créer des barres d'ancrage lorsque la fenêtre frame principale est initialisée, appelez `EnableDocking`. Pour activer les barres de masquage automatique, appelez `EnableAutoHideBars`. `EnableAutoHideBars` crée [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objets et les positionne en regard de chaque barre d’ancrage.  
   
  Chaque barre d'ancrage est divisée en lignes d'ancrage. Lignes d’ancrage sont représentées par le [CDockingPanesRow classe](../mfc/reference/cdockingpanesrow-class.md). Chaque ligne d'ancrage contient une liste de barres d'outils. Si un utilisateur ancre une barre d'outils ou déplace la barre d'outils d'une ligne à une autre de la même barre d'ancrage, le framework crée une ligne et redimensionne la barre d'ancrage en conséquence, ou elle positionne la barre d'outils sur une ligne existante.  
   

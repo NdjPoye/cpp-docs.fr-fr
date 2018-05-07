@@ -1,11 +1,8 @@
 ---
 title: Platform::exception (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Représente les erreurs qui se produisent lors de l'exécution de l'application. Les classes d'exception personnalisées ne peuvent pas être dérivées d' `Platform::Exception`. Si vous avez besoin d'une exception personnalisée, vous pouvez utiliser `Platform::COMException` et spécifier un HRESULT propre à l'application.  
@@ -47,7 +42,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Membre|Description|  
 |------------|-----------------|  
-|[Exception::Exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|  
+|[Exception::exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|  
   
 ### <a name="methods"></a>Méthodes  
  La classe `Exception` hérite des méthodes `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`et `ToString()` de la [Platform::Object Class](../cppcx/platform-object-class.md). La classe `Exception` comporte aussi la méthode ci-dessous.  
@@ -61,10 +56,10 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Membre|Description|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|  
+|[Exception::HRESULT](#hresult)|HRESULT qui correspond à l'exception.|  
 |[Exception::Message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **Minimum pris en charge le client :** Windows 8  
   
  **Minimum de serveur pris en charge :** Windows Server 2012  
@@ -100,7 +95,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>  Exception::Exception Constructor
+## <a name="ctor"></a>  Constructeur de exception::exception
 Initialise une nouvelle instance de la classe Exception.  
   
 ### <a name="syntax"></a>Syntaxe  

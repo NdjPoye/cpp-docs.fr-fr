@@ -1,12 +1,9 @@
 ---
 title: CSession, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CSession
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a5f2a764aaa7e10b957955dc11ee35ee44f9472
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 03c0bfec758bb663803b05b1f690816394f61239
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csession-class"></a>CSession, classe
 Représente une session d’accès de base de données unique.  
@@ -45,9 +40,9 @@ class CSession
   
 |||  
 |-|-|  
-|[Abort](../../data/oledb/csession-abort.md)|Annule (met fin à) la transaction.|  
+|[Abandon](../../data/oledb/csession-abort.md)|Annule (met fin à) la transaction.|  
 |[Fermer](../../data/oledb/csession-close.md)|Ferme la session.|  
-|[Commit](../../data/oledb/csession-commit.md)|Valide la transaction.|  
+|[Validation](../../data/oledb/csession-commit.md)|Valide la transaction.|  
 |[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Retourne des informations relatives à une transaction.|  
 |[Ouvrir](../../data/oledb/csession-open.md)|Ouvre une nouvelle session de l’objet de source de données.|  
 |[StartTransaction](../../data/oledb/csession-starttransaction.md)|Commence une nouvelle transaction pour cette session.|  
@@ -55,7 +50,7 @@ class CSession
 ## <a name="remarks"></a>Notes  
  Une ou plusieurs sessions peuvent être associée à chaque connexion du fournisseur (source de données), qui est représentée par un [CDataSource](../../data/oledb/cdatasource-class.md) objet. Pour créer un nouveau `CSession` pour un `CDataSource`, appelez [CSession::Open](../../data/oledb/csession-open.md). Pour commencer une transaction de base de données, `CSession` fournit le `StartTransaction` (méthode). Une fois qu’une transaction est démarrée, vous pouvez valider à l’aide de la **validation** (méthode), ou sur Annuler à l’aide de la **abandonner** (méthode).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

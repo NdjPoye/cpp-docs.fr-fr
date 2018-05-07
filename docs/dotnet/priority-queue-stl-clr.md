@@ -1,12 +1,9 @@
 ---
 title: priority_queue (STL/CLR) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une longueur variable ordonné séquence d’éléments qui a un accès limité. Utilisation de l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent comme une file d’attente de priorité.  
@@ -102,7 +97,7 @@ template<typename Value,
   
  Cet objet de délégué doit imposer un classement faible strict sur les valeurs de type [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:  
   
- `value_comp()(X, Y)`Retourne la valeur booléenne même résultat à chaque appel.  
+ `value_comp()(X, Y)` Retourne la valeur booléenne même résultat à chaque appel.  
   
  Si `value_comp()(X, Y)` est true, puis `value_comp()(Y, X)` doit avoir la valeur false.  
   
@@ -122,7 +117,7 @@ template<typename Value,
   
  Par conséquent, incluent des candidats pour le conteneur sous-jacent [deque (STL/CLR)](../dotnet/deque-stl-clr.md) et [vecteur (STL/CLR)](../dotnet/vector-stl-clr.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

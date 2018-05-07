@@ -1,13 +1,10 @@
 ---
-title: "TN001 : Inscription de classe | Documents Microsoft"
-ms.custom: 
+title: 'TN001 : Inscription de classe | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.registration
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn001-window-class-registration"></a>TN001 : inscription de classe Windows
 Cette note décrit les routines MFC qui inscrivent spéciale [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es requis par Microsoft Windows. Spécifique `WNDCLASS` attributs utilisés par MFC et Windows sont décrites.  
@@ -50,7 +45,7 @@ Cette note décrit les routines MFC qui inscrivent spéciale [WNDCLASS](http://m
   
 |Champ|Description|  
 |-----------|-----------------|  
-|`lpfnWndProc`|procédure de fenêtre doit être un`AfxWndProc`|  
+|`lpfnWndProc`|procédure de fenêtre doit être un `AfxWndProc`|  
 |`cbClsExtra`|non utilisé (doit être le zéro)|  
 |`cbWndExtra`|non utilisé (doit être le zéro)|  
 |`hInstance`|automatiquement renseigné avec [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
@@ -67,7 +62,7 @@ Cette note décrit les routines MFC qui inscrivent spéciale [WNDCLASS](http://m
   
  Deux icônes prennent en charge les applications MDI avec des types de document unique : une icône de l’application principale, l’autre icône de document/MDIChild sous forme d’icône windows. Pour plusieurs types de document avec des icônes différentes, vous devez inscrire d’autres `WNDCLASS`es ou utilisez le [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) (fonction).  
   
- `CFrameWnd::LoadFrame`enregistre un `WNDCLASS` à l’aide de l’ID d’icône que vous spécifiez en tant que premier paramètre et les attributs standards suivants :  
+ `CFrameWnd::LoadFrame` enregistre un `WNDCLASS` à l’aide de l’ID d’icône que vous spécifiez en tant que premier paramètre et les attributs standards suivants :  
   
 -   style de classe : CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW ;  
   
@@ -106,12 +101,12 @@ pWnd->Create(strWndClass, ...);
 ...  
 ```  
   
- `AfxRegisterWndClass`lève un [CResourceException](../mfc/reference/cresourceexception-class.md) si la classe de fenêtre Impossible d’enregistrer (en raison d’un paramètre incorrect, ou la mémoire de Windows).  
+ `AfxRegisterWndClass` lève un [CResourceException](../mfc/reference/cresourceexception-class.md) si la classe de fenêtre Impossible d’enregistrer (en raison d’un paramètre incorrect, ou la mémoire de Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>Les RegisterClass et les fonctions de AfxRegisterClass  
  Si vous voulez faire quoi que ce soit plus sophistiquée que ce que `AfxRegisterWndClass` fournit, vous pouvez appeler l’API Windows `RegisterClass` ou la fonction MFC `AfxRegisterClass`. Le `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` fonctions acceptent un `lpszClassName` nom de chaîne pour la classe de fenêtre comme premier paramètre. Vous pouvez utiliser tout nom de classe de fenêtre inscrit, quelle que soit la méthode utilisée pour l’inscrire.  
   
- Il est important d’utiliser `AfxRegisterClass` (ou `AfxRegisterWndClass`) dans une DLL sur Win32. Win32 n’automatiquement annuler l’inscription de classes enregistrés par une DLL, vous devez le désinscrire explicitement classes lorsque la DLL est terminée. À l’aide de `AfxRegisterClass` au lieu de `RegisterClass` Ceci est géré automatiquement pour vous. `AfxRegisterClass`gère une liste de classes uniques enregistrés par votre DLL ainsi automatiquement annulera les lorsque la DLL se termine. Lorsque vous utilisez `RegisterClass` dans une DLL, vous devez vous assurer que toutes les classes sont annulées lorsque la DLL est arrêtée (dans votre [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) fonction). Cela peut provoquer des `RegisterClass` Échec inattendu lorsqu’une autre application cliente essaie d’utiliser votre DLL.  
+ Il est important d’utiliser `AfxRegisterClass` (ou `AfxRegisterWndClass`) dans une DLL sur Win32. Win32 n’automatiquement annuler l’inscription de classes enregistrés par une DLL, vous devez le désinscrire explicitement classes lorsque la DLL est terminée. À l’aide de `AfxRegisterClass` au lieu de `RegisterClass` Ceci est géré automatiquement pour vous. `AfxRegisterClass` gère une liste de classes uniques enregistrés par votre DLL ainsi automatiquement annulera les lorsque la DLL se termine. Lorsque vous utilisez `RegisterClass` dans une DLL, vous devez vous assurer que toutes les classes sont annulées lorsque la DLL est arrêtée (dans votre [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) fonction). Cela peut provoquer des `RegisterClass` Échec inattendu lorsqu’une autre application cliente essaie d’utiliser votre DLL.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   

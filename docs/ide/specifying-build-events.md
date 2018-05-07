@@ -2,12 +2,9 @@
 title: Spécification d’événements de Build | Documents Microsoft
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
 
@@ -60,7 +55,7 @@ Pour obtenir des informations générales sur les événements de build, consult
 
       Plusieurs fichiers d’entrée et de sortie peuvent être spécifiés symboliquement avec les macros de MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers ou les noms des groupes de fichiers, consultez [Macros commun pour les propriétés et les commandes de génération](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Étant donné que le caractère « % » est réservé à MSBuild, si vous spécifiez une variable d’environnement remplacez chaque  **%**  avec un caractère d’échappement le **% 25** séquence d’échappement hexadécimale. Par exemple, remplacez **%Windir%** avec **25WINDIR % 25**. MSBuild remplace chaque **% 25** séquence avec le  **%**  caractères avant d’accéder à la variable d’environnement.
+      Étant donné que le caractère « % » est réservé à MSBuild, si vous spécifiez une variable d’environnement remplacez chaque **%** avec un caractère d’échappement le **% 25** séquence d’échappement hexadécimale. Par exemple, remplacez **%Windir%** avec **25WINDIR % 25**. MSBuild remplace chaque **% 25** séquence avec le **%** caractères avant d’accéder à la variable d’environnement.
 
    - Dans **Description**, tapez une description pour cet événement. La description est imprimée sur le **sortie** fenêtre lorsque cet événement se produit.
 

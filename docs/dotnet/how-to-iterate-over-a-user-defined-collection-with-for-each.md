@@ -1,30 +1,25 @@
 ---
-title: "Comment : itérer une Collection définie par l’utilisateur avec for each | Documents Microsoft"
-ms.custom: 
+title: 'Comment : itérer une Collection définie par l’utilisateur avec for each | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - collections, iterating over
 ms.assetid: 0efd9e3c-d7bb-4f6c-9938-e0e65d191433
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2d0c4c714cb9cf605de5cf42cf922a74d09146c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae8ce4c4b8090046baaa8306ea359471694b8bf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Comment : itérer au sein d’une collection définie par l’utilisateur en utilisant for each
 Pour une classe doit être une collection de managé, il doit une fonction GetEnumerator non privés qui retourne un handle vers une classe d’énumérateur ou d’une interface.  Une classe d’énumérateur doit contenir la déclaration de fonction de non statique MoveNext et une propriété Current.  

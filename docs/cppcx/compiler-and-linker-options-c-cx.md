@@ -1,24 +1,19 @@
 ---
-title: "Options du compilateur et l’éditeur de liens (C + c++ / CX) | Documents Microsoft"
-ms.custom: 
+title: Options du compilateur et l’éditeur de liens (C + c++ / CX) | Documents Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Options du compilateur et de l'éditeur de liens (C++/CX)
 Une variable d’environnement + C, c++ / CX les options de compilateur et les options de l’éditeur de liens prennent en charge la création d’applications pour Windows Runtime.  
@@ -40,7 +35,7 @@ Une variable d’environnement + C, c++ / CX les options de compilateur et les o
 |Option|Description|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Marque le fichier exécutable comme exécutable dans l’appcontainer (uniquement).|  
-|/WINMD[:{NO&#124;ONLY}]|Émet un fichier .winmd et un fichier binaire associé. Cette option doit être passée à l’éditeur de liens pour qu’un .winmd soit émis.<br /><br /> **NO**: ne produit pas de fichier .winmd, mais produit un fichier binaire.<br /><br /> **ONLY**: produit un fichier .winmd, mais ne produit pas de fichier binaire.|  
+|/ WINMD [ : {NON&AMP;#124;UNIQUEMENT}]|Émet un fichier .winmd et un fichier binaire associé. Cette option doit être passée à l’éditeur de liens pour qu’un .winmd soit émis.<br /><br /> **NO**: ne produit pas de fichier .winmd, mais produit un fichier binaire.<br /><br /> **ONLY**: produit un fichier .winmd, mais ne produit pas de fichier binaire.|  
 |/WINMDFILE:*nom_fichier*|Nom du fichier .winmd à émettre, au lieu du nom du fichier .winmd par défaut. Si plusieurs noms de fichier sont spécifiés sur la ligne de commande, le dernier nom est utilisé.|  
 |/WINMDDELAYSIGN[:NO]|Signe partiellement le fichier .winmd et place la clé publique dans le fichier binaire.<br /><br /> **NO**: (par défaut) ne signe pas le fichier .winmd.<br /><br /> /WINMDDELAYSIGN n’a aucun effet à moins de spécifier également /WINMDKEYFILE ou /WINMDKEYCONTAINER.|  
 |/WINMDKEYCONTAINER:*nom*|Spécifie un conteneur de clé pour signer un assembly. Le paramètre *nom* correspond au conteneur de clé qui est utilisé pour signer le fichier de métadonnées.|  

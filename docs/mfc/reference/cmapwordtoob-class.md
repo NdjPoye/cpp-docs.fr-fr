@@ -1,12 +1,9 @@
 ---
 title: Classe de CMapWordToOb | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapWordToOb
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7166fd1b0ce0f8e9152c617979d0ec80bfb2b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapwordtoob-class"></a>Classe de CMapWordToOb
 Prend en charge les mappages de pointeurs `CObject` indexés par des mots 16 bits.  
@@ -103,10 +98,10 @@ class CMapWordToOb : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
   
 ## <a name="remarks"></a>Notes  
- `CMapWordToOb` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit à l’insertion surchargée (  **<<** ) (opérateur) ou avec la `Serialize` fonction membre.  
+ `CMapWordToOb` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit à l’insertion surchargée ( **<<**) (opérateur) ou avec la `Serialize` fonction membre.  
   
  Si vous avez besoin d’un vidage de personne **WORD** -  `CObject` éléments, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
@@ -119,7 +114,7 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

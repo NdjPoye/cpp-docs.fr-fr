@@ -1,12 +1,9 @@
 ---
 title: Classe de CPrintDialog | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>Classe de CPrintDialog
 Encapsule les services fournis par la boîte de dialogue courante d'impression Windows.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Si vous ne fournissez pas votre propre handles dans `m_pd` pour le **hDevMode** et **hDevNames** membres, veillez à appeler la fonction Windows **GlobalFree** pour ces poignées Lorsque vous avez terminé avec la boîte de dialogue. Lorsque vous utilisez la mise en œuvre de la configuration de l’impression de l’infrastructure fournie par `CWinApp::OnFilePrintSetup`, vous n’êtes pas obligé de libérer ces handles. Les poignées sont conservées par `CWinApp` et sont libérés `CWinApp`du destructeur. Il est uniquement nécessaire de libérer ces handles lors de l’utilisation `CPrintDialog` autonome.  
   
- Après avoir initialisé les contrôles de boîte de dialogue, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et autoriser l’utilisateur à sélectionner les options d’impression. `DoModal`Retourne si l’utilisateur a sélectionné le OK ( **IDOK**) ou sur Annuler ( **IDCANCEL**) bouton.  
+ Après avoir initialisé les contrôles de boîte de dialogue, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et autoriser l’utilisateur à sélectionner les options d’impression. `DoModal` Retourne si l’utilisateur a sélectionné le OK ( **IDOK**) ou sur Annuler ( **IDCANCEL**) bouton.  
   
  Si `DoModal` retourne **IDOK**, vous pouvez utiliser une des `CPrintDialog`de fonctions membres pour récupérer les informations entrées par l’utilisateur.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Vous pouvez utiliser les fenêtres **CommDlgExtendedError** fonction pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et en savoir plus sur l’erreur. Pour plus d’informations sur cette fonction, consultez le Kit de développement logiciel Windows.  
   
- `CPrintDialog`s’appuie sur le COMMDLG. Fichier DLL qui est fourni avec Windows 3.1 et versions ultérieures.  
+ `CPrintDialog` s’appuie sur le COMMDLG. Fichier DLL qui est fourni avec Windows 3.1 et versions ultérieures.  
   
  Pour personnaliser la boîte de dialogue, dérivez une classe de `CPrintDialog`, fournissez un modèle de boîte de dialogue personnalisée et ajouter une table des messages pour traiter les messages de notification à partir de contrôles étendus. Tous les messages non traités doivent être transmises à la classe de base. Personnalisation de la fonction de raccordement n’est pas nécessaire.  
   
@@ -149,7 +144,7 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  

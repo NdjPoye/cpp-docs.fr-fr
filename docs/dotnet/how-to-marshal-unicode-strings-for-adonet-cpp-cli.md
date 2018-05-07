@@ -1,13 +1,10 @@
 ---
-title: "Comment : marshaler des chaînes Unicode pour ADO.NET (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: 'Comment : marshaler des chaînes Unicode pour ADO.NET (C + c++ / CLI) | Documents Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Unicode [C++], strings
 - strings [C++], Unicode
 ms.assetid: 1da090ff-6b53-40be-841f-dc79dfe8ba10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf6078217218a85289602e30c1002ba861db76d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15cf9e9806c0820ea5a410a93419016c2f678c65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>Comment : marshaler des chaînes Unicode pour ADO.NET (C++/CLI)
 Montre comment ajouter une chaîne Unicode native (`wchar_t *`) pour une base de données et comment marshaler un <xref:System.String?displayProperty=fullName> à partir d’une base de données vers une chaîne Unicode native.  

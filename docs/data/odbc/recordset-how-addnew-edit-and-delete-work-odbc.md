@@ -2,12 +2,9 @@
 title: 'Recordset : AddNew, Edit et Delete fonctionnement (ODBC) | Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset : fonctionnement d'AddNew, Edit et Delete (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -57,7 +52,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  En tant que complément d’information, vous pouvez souhaiter lire [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), qui décrit le rôle correspondant de RFX dans les opérations de mise à jour.  
   
-##  <a name="_core_adding_a_record"></a>Ajout d’un enregistrement  
+##  <a name="_core_adding_a_record"></a> Ajout d’un enregistrement  
 
  Ajout d’un nouvel enregistrement à un jeu d’enregistrements implique l’appel de l’ensemble d’enregistrements [AddNew](../../mfc/reference/crecordset-class.md#addnew) , définition des valeurs des membres de données de champ du nouvel enregistrement et appel de fonction membre la [mise à jour](../../mfc/reference/crecordset-class.md#update) fonction membre à écrire l’enregistrement de la source de données.  
   
@@ -95,7 +90,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
     > [!TIP]
     >  Pour détecter si les membres de données de jeu d’enregistrements changent de valeur, MFC utilise un **PSEUDO_NULL** valeur appropriée à chaque type de données que vous pouvez stocker dans un recordset. Si vous devez explicitement définir un champ la **PSEUDO_NULL** valeur et le champ a déjà été marqué Null, vous devez également appeler `SetFieldNull`, en passant l’adresse du champ dans le premier paramètre et **FALSE**dans le second paramètre.  
   
-##  <a name="_core_visibility_of_added_records"></a>Visibilité des enregistrements ajoutés  
+##  <a name="_core_visibility_of_added_records"></a> Visibilité des enregistrements ajoutés  
  Un enregistrement ajouté est visible pour le jeu d’enregistrements ? Les enregistrements ajoutés apparaissent parfois et parfois, ne sont pas visibles, en fonction de deux choses :  
   
 -   Définition de votre pilote est capable de.  
@@ -104,7 +99,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Si votre pilote ODBC prend en charge la **:: SQLSetPos** fonction d’API ODBC, MFC utilise la fonction pour ajouter des enregistrements. Avec **:: SQLSetPos**, enregistrements ajoutés sont visibles par tout recordset MFC modifiable. Sans la prise en charge pour la fonction, ajouté des enregistrements ne sont pas visibles et vous devez appeler **Requery** pour les afficher. À l’aide de **:: SQLSetPos** est également plus efficace.  
   
-##  <a name="_core_editing_an_existing_record"></a>Modifier un enregistrement existant  
+##  <a name="_core_editing_an_existing_record"></a> Modifier un enregistrement existant  
  Modifier un enregistrement existant dans un jeu d’enregistrements nécessite de faire défiler à l’enregistrement, l’appel de l’ensemble d’enregistrements [modifier](../../mfc/reference/crecordset-class.md#edit) , définition des valeurs des membres de données de champ du nouvel enregistrement et appel de fonction membre la [mettre à jour](../../mfc/reference/crecordset-class.md#update)fonction membre pour écrire l’enregistrement modifié dans la source de données.  
   
  Comme condition préalable de l’appel **modifier**, le jeu d’enregistrements doit être modifiable et d’un enregistrement. Le `CanUpdate` et `IsDeleted` fonctions membres vous permettent de définir ces conditions. L’enregistrement actif ne doit pas avoir été déjà supprimé et des enregistrements doivent être présents dans le jeu d’enregistrements (les deux `IsBOF` et `IsEOF` retournent 0).  
@@ -140,7 +135,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
     > [!TIP]
     >  Si vous appelez `AddNew` ou **modifier** après avoir appelé une fonction précédemment, mais avant d’appeler **mise à jour**, le tampon d’édition est actualisé avec l’enregistrement stocké, en remplaçant l’enregistrement de nouveaux ou modifié dans état d’avancement. Ce comportement vous permet d’annuler un `AddNew` ou **modifier** et commencer une nouvelle : Si vous déterminez que l’enregistrement en cours est erroné, appelez simplement **modifier** ou `AddNew` à nouveau.  
   
-##  <a name="_core_deleting_a_record"></a>Suppression d’un enregistrement  
+##  <a name="_core_deleting_a_record"></a> Suppression d’un enregistrement  
  Suppression d’un enregistrement à partir d’un jeu d’enregistrements nécessite le défilement à l’enregistrement et l’appel de l’ensemble d’enregistrements [supprimer](../../mfc/reference/crecordset-class.md#delete) fonction membre. Contrairement aux `AddNew` et **modifier**, **supprimer** ne nécessite pas un appel correspondant à **mise à jour**.  
   
  Comme condition préalable de l’appel **supprimer**, le jeu d’enregistrements doive être mis à jour et il doit s’agir d’un enregistrement. Le `CanUpdate`, `IsBOF`, `IsEOF`, et `IsDeleted` fonctions membres vous permettent de définir ces conditions.  

@@ -1,13 +1,10 @@
 ---
 title: Coloradjustment, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - COLORADJUSTMENT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - COLORADJUSTMENT structure [MFC]
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4e86010cda3545a6216767c1519bc5b2bccdf43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT, structure
 Le `COLORADJUSTMENT` structure définit les valeurs d’ajustement de couleur utilisés par Windows `StretchBlt` et **StretchDIBits** fonctions lors de la `StretchBlt` mode est **demi-teintes**.  
@@ -116,7 +111,7 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  *caRedGreenTint*  
  Spécifie la quantité d’ajustement rouges ou verts teinte à appliquer à l’objet source. La valeur doit être comprise entre -100 à 100. Les nombres positifs seraient ajustez vers le rouge, et celle de nombres négatifs vers le vert. 0 ne signifie aucun ajustement de la teinte.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** wingdi.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,31 +1,26 @@
 ---
-title: "Types (C++-CL) managés | Documents Microsoft"
-ms.custom: 
+title: Types (C++-CL) managés | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - __gc types
 - types [C++], CLR
 ms.assetid: 1ddd114e-be02-4de7-a4dd-a2d72ad8ff81
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42426c45f4b8caf3cd4cb61ee867470dc9ea639f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-types-ccl"></a>Types managés (C++/CL)
 La syntaxe de la déclaration des types managés et à créer et utiliser des objets de ces types a été sensiblement modifiée entre les Extensions managées pour C++ vers Visual C++. Cela a été fait pour favoriser leur intégration dans le système de type ISO-C++. Ces modifications sont présentées en détail dans les sous-sections suivantes.  

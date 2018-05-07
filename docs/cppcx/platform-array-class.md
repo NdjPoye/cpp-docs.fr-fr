@@ -1,11 +1,8 @@
 ---
 title: Platform::Array (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array (classe)
 Représente un tableau unidimensionnel et modifiable qui peut être reçu et passé via l'interface binaire d'application (ABI).  
@@ -56,7 +51,7 @@ private ref class Array<TArg, 1> :
   
 |||  
 |-|-|  
-|[Array::Value](#value)|Récupère un handle vers le tableau actuel.|  
+|[Array::value](#value)|Récupère un handle vers le tableau actuel.|  
   
 ### <a name="remarks"></a>Notes  
  La classe Array est sealed et ne peut pas être héritée.  
@@ -69,7 +64,7 @@ private ref class Array<TArg, 1> :
   
  Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Elle est visible dans Intellisense mais pas dans l'Explorateur d'objets, car elle n'est pas de type public défini dans platform.winmd.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
 
  
@@ -112,7 +107,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>Valeur de retour  
  Élément de tableau spécifié par le paramètre `index`.  
   
-## <a name="value"></a>  Array::Value Property
+## <a name="value"></a>  Array::value (propriété)
 Récupère un handle vers le tableau actuel.  
   
 ## <a name="syntax"></a>Syntaxe  

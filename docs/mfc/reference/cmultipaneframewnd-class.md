@@ -1,12 +1,9 @@
 ---
 title: Classe de CMultiPaneFrameWnd | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiPaneFrameWnd
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8ccb584b9bf750e1f17da9ce3e0bf71058abbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe de CMultiPaneFrameWnd
 Le `CMultiPaneFrameWnd` classe étend [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Elle peut prendre en charge plusieurs volets. Au lieu d’un seul handle incorporé à une barre de contrôle, `CMultiPaneFrameWnd` contient un [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objet qui permet à l’utilisateur d’ancrer un `CMultiPaneFrameWnd` à un autre et dynamiquement créer flottante plusieurs, onglets Windows.  
@@ -181,10 +176,10 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
  [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxMultiPaneFrameWnd.h  
   
-##  <a name="addpane"></a>CMultiPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>  CMultiPaneFrameWnd::AddPane  
 
   
 ```  
@@ -196,7 +191,7 @@ virtual void AddPane(CBasePane* pWnd);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="addrecentpane"></a>CMultiPaneFrameWnd::AddRecentPane  
+##  <a name="addrecentpane"></a>  CMultiPaneFrameWnd::AddRecentPane  
 
   
 ```  
@@ -210,7 +205,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="adjustlayout"></a>CMultiPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMultiPaneFrameWnd::AdjustLayout  
 
   
 ```  
@@ -219,7 +214,7 @@ virtual void AdjustLayout();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="adjustpaneframes"></a>CMultiPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>  CMultiPaneFrameWnd::AdjustPaneFrames  
 
   
 ```  
@@ -228,7 +223,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="calcexpecteddockedrect"></a>CMultiPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CMultiPaneFrameWnd::CalcExpectedDockedRect  
 
   
 ```  
@@ -249,7 +244,7 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="canbeattached"></a>CMultiPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>  CMultiPaneFrameWnd::CanBeAttached  
 
   
 ```  
@@ -260,7 +255,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="canbedockedtopane"></a>CMultiPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>  CMultiPaneFrameWnd::CanBeDockedToPane  
 
   
 ```  
@@ -274,7 +269,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="checkgrippervisibility"></a>CMultiPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>  CMultiPaneFrameWnd::CheckGripperVisibility  
 
   
 ```  
@@ -283,7 +278,7 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="closeminiframe"></a>CMultiPaneFrameWnd::CloseMiniFrame  
+##  <a name="closeminiframe"></a>  CMultiPaneFrameWnd::CloseMiniFrame  
 
   
 ```  
@@ -292,7 +287,7 @@ virtual void CloseMiniFrame();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="converttotabbeddocument"></a>CMultiPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CMultiPaneFrameWnd::ConvertToTabbedDocument  
 
   
 ```  
@@ -301,7 +296,7 @@ virtual void ConvertToTabbedDocument();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="dockframe"></a>CMultiPaneFrameWnd::DockFrame  
+##  <a name="dockframe"></a>  CMultiPaneFrameWnd::DockFrame  
 
   
 ```  
@@ -318,7 +313,7 @@ virtual BOOL DockFrame(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="dockpane"></a>CMultiPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>  CMultiPaneFrameWnd::DockPane  
 
   
 ```  
@@ -332,7 +327,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="dockrecentpanetomainframe"></a>CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
+##  <a name="dockrecentpanetomainframe"></a>  CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
 
   
 ```  
@@ -344,7 +339,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getcaptiontext"></a>CMultiPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>  CMultiPaneFrameWnd::GetCaptionText  
 
   
 ```  
@@ -355,7 +350,7 @@ virtual CString GetCaptionText();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getfirstvisiblepane"></a>CMultiPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>  CMultiPaneFrameWnd::GetFirstVisiblePane  
 
   
 ```  
@@ -366,7 +361,7 @@ virtual CWnd* GetFirstVisiblePane() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getpane"></a>CMultiPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>  CMultiPaneFrameWnd::GetPane  
 
   
 ```  
@@ -377,7 +372,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getpanecontainermanager"></a>CMultiPaneFrameWnd::GetPaneContainerManager  
+##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager  
  Retourne une référence à l’objet de gestionnaire de conteneur interne.  
   
 ```  
@@ -390,7 +385,7 @@ CPaneContainerManager& GetPaneContainerManager();
 ### <a name="remarks"></a>Notes  
  Cette méthode peut être utilisée pour accéder aux interne [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) objet.  
   
-##  <a name="getpanecount"></a>CMultiPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 
   
 ```  
@@ -401,7 +396,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="getvisiblepanecount"></a>CMultiPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>  CMultiPaneFrameWnd::GetVisiblePaneCount  
 
   
 ```  
@@ -412,7 +407,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="insertpane"></a>CMultiPaneFrameWnd::InsertPane  
+##  <a name="insertpane"></a>  CMultiPaneFrameWnd::InsertPane  
 
   
 ```  
@@ -431,7 +426,7 @@ virtual BOOL InsertPane(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="loadstate"></a>CMultiPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>  CMultiPaneFrameWnd::LoadState  
 
   
 ```  
@@ -448,7 +443,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="ondocktorecentpos"></a>CMultiPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>  CMultiPaneFrameWnd::OnDockToRecentPos  
 
   
 ```  
@@ -457,7 +452,7 @@ virtual void OnDockToRecentPos();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onkillrolluptimer"></a>CMultiPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>  CMultiPaneFrameWnd::OnKillRollUpTimer  
 
   
 ```  
@@ -466,7 +461,7 @@ virtual void OnKillRollUpTimer();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onpanerecalclayout"></a>CMultiPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>  CMultiPaneFrameWnd::OnPaneRecalcLayout  
 
   
 ```  
@@ -475,7 +470,7 @@ virtual void OnPaneRecalcLayout();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onsetrolluptimer"></a>CMultiPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>  CMultiPaneFrameWnd::OnSetRollUpTimer  
 
   
 ```  
@@ -484,7 +479,7 @@ virtual void OnSetRollUpTimer();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="onshowpane"></a>CMultiPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>  CMultiPaneFrameWnd::OnShowPane  
 
   
 ```  
@@ -499,7 +494,7 @@ virtual void OnShowPane(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="panefrompoint"></a>CMultiPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CMultiPaneFrameWnd::PaneFromPoint  
 
   
 ```  
@@ -518,7 +513,7 @@ virtual CBasePane* PaneFromPoint(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="removenonvalidpanes"></a>CMultiPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>  CMultiPaneFrameWnd::RemoveNonValidPanes  
 
   
 ```  
@@ -527,7 +522,7 @@ virtual void RemoveNonValidPanes();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="removepane"></a>CMultiPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>  CMultiPaneFrameWnd::RemovePane  
 
   
 ```  
@@ -544,7 +539,7 @@ virtual void RemovePane(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="replacepane"></a>CMultiPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>  CMultiPaneFrameWnd::ReplacePane  
 
   
 ```  
@@ -559,7 +554,7 @@ virtual void ReplacePane(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="savestate"></a>CMultiPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>  CMultiPaneFrameWnd::SaveState  
 
   
 ```  
@@ -576,7 +571,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="serialize"></a>CMultiPaneFrameWnd::Serialize  
+##  <a name="serialize"></a>  CMultiPaneFrameWnd::Serialize  
 
   
 ```  
@@ -588,7 +583,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setdockstate"></a>CMultiPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>  CMultiPaneFrameWnd::SetDockState  
 
   
 ```  
@@ -600,7 +595,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setlastfocusedpane"></a>CMultiPaneFrameWnd::SetLastFocusedPane  
+##  <a name="setlastfocusedpane"></a>  CMultiPaneFrameWnd::SetLastFocusedPane  
 
   
 ```  
@@ -612,7 +607,7 @@ void SetLastFocusedPane(HWND hwnd);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="setpredockstate"></a>CMultiPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>  CMultiPaneFrameWnd::SetPreDockState  
 
   
 ```  
@@ -631,7 +626,7 @@ virtual BOOL SetPreDockState(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="storerecentdocksiteinfo"></a>CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>  CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
 
   
 ```  
@@ -643,7 +638,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="storerecenttabrelatedinfo"></a>CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>  CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
 
   
 ```  

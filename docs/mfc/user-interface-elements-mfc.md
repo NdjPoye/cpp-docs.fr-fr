@@ -1,13 +1,10 @@
 ---
-title: "Éléments d’Interface utilisateur (MFC) | Documents Microsoft"
-ms.custom: 
+title: Éléments d’Interface utilisateur (MFC) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - user interfaces, creating
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f32f1b1906dbcd0a653f6dfe0b3f573dd0836a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba237173c3bca8f2b8246044257d1eb2022541c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-elements-mfc"></a>Éléments de l'interface utilisateur (MFC)
 Pour plus d’informations sur la création de l’interface utilisateur pour votre application à l’aide de la bibliothèque Microsoft Foundation classes (MFC), consultez les rubriques suivantes.  

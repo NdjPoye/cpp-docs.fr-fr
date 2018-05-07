@@ -1,13 +1,10 @@
 ---
-title: "À l’aide de vos anciennes barres d’outils | Documents Microsoft"
-ms.custom: 
+title: À l’aide de vos anciennes barres d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - COldToolBar
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbars [MFC], backward compatibility
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64c1b9c5cf38337cd286a86275331f4f5f65daf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbf3b276aa7a229f7d0611ee2a289edc77ebf485
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-your-old-toolbars"></a>Utilisation de vos anciennes barres d'outils
 Si vous avez utilisé les versions précédentes de Visual C++ pour créer des barres d’outils personnalisées, la nouvelle implémentation de la classe [CToolBar](../mfc/reference/ctoolbar-class.md) peut entraîner des problèmes. Afin que vous n’êtes pas obligé d’abandonner vos anciennes barres d’outils à utiliser les nouvelles fonctionnalités, l’ancienne implémentation est toujours prise en charge.  

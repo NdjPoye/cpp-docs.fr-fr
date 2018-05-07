@@ -1,24 +1,19 @@
 ---
-title: "Système de type (C + c++ / CX) | Documents Microsoft"
-ms.custom: 
+title: Système de type (C + c++ / CX) | Documents Microsoft
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>Système de type (C++/CX)
 À l’aide de l’architecture de Windows Runtime, vous pouvez utiliser C + c++ / CX, Visual Basic, Visual c# et JavaScript pour écrire des applications et composants qui directement accéder à l’API Windows et interagissent avec d’autres applications Windows Runtime et les composants. Les applications de plateforme Windows universelles qui sont écrites en C++ Compiler en code natif qui s’exécute directement dans l’UC. Les applications de plateforme Windows universelles qui sont écrits en c# ou Visual Basic compilent en langage intermédiaire Microsoft (MSIL) et s’exécutent dans le common language runtime (CLR). Les applications de plateforme Windows universelles qui sont écrites en JavaScript s’exécutent dans un environnement d’exécution. Les composants du système d’exploitation Windows Runtime eux-mêmes sont écrits en C++ et exécutés en code natif. Tous ces composants et les applications de plateforme Windows universelle communiquent directement via l’interface binaire d’application Windows Runtime (ABI).  
@@ -27,15 +22,15 @@ ms.lasthandoff: 02/14/2018
   
  Pour une discussion détaillée de la projection du langage C++/CX et de son fonctionnement réel, voir les billets de blog suivants :  
   
-1.  [C + c++ / CX partie 0 sur \[ n \]: Introduction](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + c++ / CX partie 0 sur \[n\]: Introduction](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + c++ / CX partie 1 sur \[ n \]: une classe Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + c++ / CX partie 1 sur \[n\]: une classe Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + c++ / CX partie 2 sur \[ n \]: Types avec chapeaux](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + c++ / CX partie 2 sur \[n\]: Types avec chapeaux](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + c++ / CX partie 3 sur \[ n \]: en cours d’élaboration](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + c++ / CX partie 3 sur \[n\]: en cours d’élaboration](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + c++ / CX partie 4 sur \[ n \]: les fonctions membres Static](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + c++ / CX partie 4 sur \[n\]: les fonctions membres Static](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Fichiers de métadonnées Windows (.winmd)  
  Lorsque vous compilez une application de plateforme Windows universelle qui est écrit en C++, le compilateur génère le fichier exécutable en code machine natif et qu’il génère également un fichier de métadonnées (.winmd) Windows qui contient des descriptions des types Windows Runtime publics, qui incluent des classes, structures, énumérations, interfaces, interfaces paramétrables et délégués. Le format des métadonnées est semblable au format utilisé dans les assemblys .NET Framework.  Dans un composant C++, le fichier .winmd contient uniquement des métadonnées. Le code exécutable se trouve dans un fichier distinct. C’est le cas pour les composants Windows Runtime qui sont inclus avec Windows. Le nom du fichier WinMD doit correspondre à l'espace de noms racine ou en être le préfixe dans le code source. (Pour les langages .NET Framework, le fichier .winmd contient le code et les métadonnées, tout comme un assembly. NET Framework.)  

@@ -1,13 +1,10 @@
 ---
-title: "Personnalisation de l’apparence d’un contrôle de barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Personnalisation de l’apparence d’un contrôle de barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personnalisation de l'apparence d'un contrôle ToolBar
 Classe `CToolBarCtrl` propose de nombreux styles qui affectent l’apparence (et, parfois, le comportement) de l’objet de barre d’outils. Modifier l’objet de barre d’outils en définissant le `dwCtrlStyle` paramètre de la `CToolBarCtrl::Create` (ou `CToolBar::CreateEx`) fonction membre, lorsque vous créez le contrôle de barre d’outils.  
@@ -57,11 +52,11 @@ Classe `CToolBarCtrl` propose de nombreux styles qui affectent l’apparence (et
   
  Les autres styles affectent les aspects visuels et de l’objet de barre d’outils :  
   
--   `TBSTYLE_WRAPABLE`Crée une barre d’outils qui peut avoir plusieurs lignes de boutons. Boutons de barre d’outils peut « encapsuler » à la ligne suivante lorsque la barre d’outils devienne trop étroite pour inclure tous les boutons sur la même ligne. Retour à la ligne se produit sur des séparateurs et.  
+-   `TBSTYLE_WRAPABLE` Crée une barre d’outils qui peut avoir plusieurs lignes de boutons. Boutons de barre d’outils peut « encapsuler » à la ligne suivante lorsque la barre d’outils devienne trop étroite pour inclure tous les boutons sur la même ligne. Retour à la ligne se produit sur des séparateurs et.  
   
 -   **TBSTYLE_CUSTOMERASE** génère **NM_CUSTOMDRAW** lorsqu’il traite les messages de notification `WM_ERASEBKGND` messages.  
   
--   `TBSTYLE_TOOLTIPS`Crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher un texte descriptif pour les boutons dans la barre d’outils.  
+-   `TBSTYLE_TOOLTIPS` Crée un contrôle d’info-bulle qu’une application peut utiliser pour afficher un texte descriptif pour les boutons dans la barre d’outils.  
   
  Pour obtenir une liste complète des styles de barre d’outils et des styles étendus, consultez [contrôle de barre d’outils et les Styles de bouton](http://msdn.microsoft.com/library/windows/desktop/bb760439) et [Styles étendus de barre d’outils](http://msdn.microsoft.com/library/windows/desktop/bb760430) dans le Kit de développement logiciel Windows.  
   

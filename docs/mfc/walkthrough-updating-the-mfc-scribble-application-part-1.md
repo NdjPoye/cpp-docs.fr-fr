@@ -1,13 +1,10 @@
 ---
-title: "Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1) | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 1)
 Cette procédure pas à pas montre comment modifier une application MFC existante à utiliser l’interface utilisateur du ruban. Visual Studio prend en charge le ruban Office 2007 et le ruban paysages de Windows 7. Pour plus d’informations sur l’interface utilisateur du ruban, consultez [rubans](http://go.microsoft.com/fwlink/p/?linkid=129233) sur le site Web MSDN.  
@@ -55,7 +50,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
 - [Définir l’apparence de l’Application](#setlook)  
   
-##  <a name="replaceclass"></a>En remplaçant les Classes de Base  
+##  <a name="replaceclass"></a> En remplaçant les Classes de Base  
  Pour convertir une application qui prend en charge un menu à une application qui prend en charge d’un ruban, vous devez dériver l’application, fenêtre frame et classes de barre d’outils à partir de classes de base de mise à jour. (Nous vous suggérons de que vous ne faire pas modifier l’exemple Scribble d’origine ; au lieu de cela, nettoyer le projet Scribble, copiez-le dans un autre répertoire et ensuite modifier la copie.)  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Pour remplacer les classes de base dans l’application Scribble  
@@ -101,11 +96,11 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
 8.  Dans le fichier mainfrm.cpp :  
   
-    1.  Remplacez `m_wndToolBar.SetBarStyle` avec`m_wndToolBar.SetPaneStyle`  
+    1.  Remplacez `m_wndToolBar.SetBarStyle` avec `m_wndToolBar.SetPaneStyle`  
   
-    2.  Remplacez `m_wndToolBar.GetBarStyle` avec`m_wndToolBar.GetPaneStyle`  
+    2.  Remplacez `m_wndToolBar.GetBarStyle` avec `m_wndToolBar.GetPaneStyle`  
   
-    3.  Remplacez `DockControlBar(&m_wndToolBar)` avec`DockPane(&m_wndToolBar)`  
+    3.  Remplacez `DockControlBar(&m_wndToolBar)` avec `DockPane(&m_wndToolBar)`  
   
 9. Dans le fichier ipframe.cpp, commentez les trois lignes de code suivantes.  
   
@@ -130,7 +125,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
  [[Sections](#top)]  
   
-##  <a name="addbitmap"></a>Ajout d’images bitmap au projet  
+##  <a name="addbitmap"></a> Ajout d’images bitmap au projet  
  Les quatre étapes de cette procédure pas à pas nécessitent des ressources de l’image bitmap. Vous pouvez obtenir des bitmaps appropriés de différentes manières :  
   
 -   Utilisez le [éditeurs de ressources](../windows/resource-editors.md) inventer votre propre bitmaps. Ou permet d’assembler des bitmaps à partir des images portable network graphics (.png) qui sont inclus dans les éditeurs de ressources [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Ces images sont dans le `VS2008ImageLibrary` active.  
@@ -175,7 +170,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
  [[Sections](#top)]  
   
-##  <a name="addribbon"></a>Ajout d’une ressource de ruban au projet  
+##  <a name="addribbon"></a> Ajout d’une ressource de ruban au projet  
  Lorsque vous convertissez une application qui utilise des menus pour une application qui utilise un ruban, il est inutile supprimer ou désactiver les menus existants. Au lieu de cela, vous créez une ressource de ruban, ajoutez des boutons de ruban et l’associez les nouveaux boutons les éléments de menu existant. Bien que les menus ne sont plus visibles, les messages à partir de la barre du ruban sont routées via les menus. En outre, les raccourcis du menu continuent à travailler.  
   
  Un ruban comprend le bouton d’Application, qui est le grand bouton dans le coin supérieur gauche du ruban, et un ou plusieurs onglets de catégorie. Chaque onglet de catégorie contient un ou plusieurs panneaux qui agissent comme conteneurs pour les contrôles et les boutons du ruban. La procédure suivante montre comment créer une ressource de ruban, puis personnalisez le bouton d’Application.  
@@ -226,7 +221,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
  [[Sections](#top)]  
   
-##  <a name="createinstance"></a>Création d’une Instance de la barre du ruban  
+##  <a name="createinstance"></a> Création d’une Instance de la barre du ruban  
  Les étapes suivantes montrent comment créer une instance de la barre du ruban au démarrage de votre application. Pour ajouter une barre de ruban à une application, déclarez la barre du ruban dans le fichier mainfrm.h. Puis, dans le fichier mainfrm.cpp, écrire du code pour charger la ressource de ruban.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Pour créer une instance de la barre du ruban  
@@ -250,7 +245,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
  [[Sections](#top)]  
   
-##  <a name="addcategory"></a>Personnalisation de la ressource de ruban  
+##  <a name="addcategory"></a> Personnalisation de la ressource de ruban  
  Maintenant que vous avez créé le bouton d’Application, vous pouvez ajouter des éléments au ruban.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ Cette procédure pas à pas montre comment modifier une application MFC existant
   
  [[Sections](#top)]  
   
-##  <a name="setlook"></a>Définir l’apparence de l’Application  
+##  <a name="setlook"></a> Définir l’apparence de l’Application  
  A *Gestionnaire visuel* est un objet global qui contrôle tout le dessin d’une application. Étant donné que l’application Scribble d’origine utilise le style d’interface utilisateur d’utilisateur Office 2000, l’application peut ressembler traditionnelle. Vous pouvez réinitialiser l’application pour utiliser le Gestionnaire visuel Office 2007 afin qu’il ressemble à une application Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Pour définir l’apparence de l’application  

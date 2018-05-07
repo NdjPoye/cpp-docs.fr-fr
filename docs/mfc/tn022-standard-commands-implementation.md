@@ -1,13 +1,10 @@
 ---
-title: "TN022 : Implémentation de commandes Standard | Documents Microsoft"
-ms.custom: 
+title: 'TN022 : Implémentation de commandes Standard | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022 : implémentation de commandes standard
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnFileNew`implémente cette commande différemment selon le nombre de modèles de document dans l’application. S’il en existe qu’un seul `CDocTemplate`, `CWinApp::OnFileNew` créera un nouveau document de ce type, ainsi que la classe de frame et vue appropriée.  
+     `CWinApp::OnFileNew` implémente cette commande différemment selon le nombre de modèles de document dans l’application. S’il en existe qu’un seul `CDocTemplate`, `CWinApp::OnFileNew` créera un nouveau document de ce type, ainsi que la classe de frame et vue appropriée.  
   
      S’il existe plusieurs `CDocTemplate`, `CWinApp::OnFileNew` invitera l’utilisateur avec une boîte de dialogue (**AFX_IDD_NEWTYPEDLG**) leur permettant de sélectionner le type de document à utiliser. Le `CDocTemplate` est utilisé pour créer le document.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnFileOpen`a une implémentation simple de l’appel de **CWinApp::DoPromptFileName** suivie `CWinApp::OpenDocumentFile` avec le nom de fichier ou chemin d’accès du fichier à ouvrir. Le `CWinApp` routine d’implémentation **DoPromptFileName** affiche la boîte de dialogue FileOpen standard et la remplit avec les extensions de fichier obtenues à partir des modèles de document en cours.  
+     `CWinApp::OnFileOpen` a une implémentation simple de l’appel de **CWinApp::DoPromptFileName** suivie `CWinApp::OpenDocumentFile` avec le nom de fichier ou chemin d’accès du fichier à ouvrir. Le `CWinApp` routine d’implémentation **DoPromptFileName** affiche la boîte de dialogue FileOpen standard et la remplit avec les extensions de fichier obtenues à partir des modèles de document en cours.  
   
      Une personnalisation courantes de `ID_FILE_OPEN` consiste à personnaliser la boîte de dialogue FileOpen ou ajouter des filtres de fichiers supplémentaires. La méthode recommandée pour personnaliser cette consiste à remplacer l’implémentation par défaut avec votre propre boîte de dialogue FileOpen, puis appelez `CWinApp::OpenDocumentFile` avec le nom de fichier ou chemin d’accès du document. Il n’est pas nécessaire d’appeler la classe de base.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      Cette commande appelle la boîte de dialogue Configuration de l’impression standard qui permet à l’utilisateur de personnaliser l’imprimante et les paramètres d’impression pour au moins ce document ou au plus tous les documents dans cette application. Vous devez utiliser le panneau de configuration pour modifier les paramètres d’imprimante par défaut pour l’ensemble du système.  
   
-     `CWinApp::OnFilePrintSetup`a une implémentation très simple de la création un `CPrintDialog` objet et en appelant le **CWinApp::DoPrintDialog** fonction de l’implémentation. Cela définit la configuration de l’application l’imprimante par défaut.  
+     `CWinApp::OnFilePrintSetup` a une implémentation très simple de la création un `CPrintDialog` objet et en appelant le **CWinApp::DoPrintDialog** fonction de l’implémentation. Cela définit la configuration de l’application l’imprimante par défaut.  
   
      Le besoin commun pour la personnalisation de cette commande est d’autoriser pour les paramètres d’impression par document qui doivent être stockés avec le document lors de l’enregistrement. Pour ce faire, vous devez ajouter un gestionnaire de la table des messages dans votre **CDocument** classe crée un `CPrintDialog` de l’objet, l’initialise avec les attributs de l’imprimante appropriée (généralement **hDevMode** et **hDevNames**), appelez le **CPrintDialog::DoModal,** et enregistrer les paramètres d’imprimante modifié. Pour une implémentation robuste, vous devez examiner l’implémentation de **CWinApp::DoPrintDialog** pour la détection des erreurs et **CWinApp::UpdatePrinterSelection** pour traiter les valeurs par défaut sensibles et le suivi des modifications de l’imprimante de l’échelle du système.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande à l’aide de `CEdit::Clear`. La commande est désactivée si aucune sélection n’est en cours.  
+     `CEditView` Fournit une implémentation de cette commande à l’aide de `CEdit::Clear`. La commande est désactivée si aucune sélection n’est en cours.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui copie le texte actuellement sélectionné dans le Presse-papiers comme à l’aide de CF_TEXT `CEdit::Copy`. La commande est désactivée si aucune sélection n’est en cours.  
+     `CEditView` Fournit une implémentation de cette commande, qui copie le texte actuellement sélectionné dans le Presse-papiers comme à l’aide de CF_TEXT `CEdit::Copy`. La commande est désactivée si aucune sélection n’est en cours.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui coupe le texte actuellement sélectionné dans le Presse-papiers comme à l’aide de CF_TEXT `CEdit::Cut`. La commande est désactivée si aucune sélection n’est en cours.  
+     `CEditView` Fournit une implémentation de cette commande, qui coupe le texte actuellement sélectionné dans le Presse-papiers comme à l’aide de CF_TEXT `CEdit::Cut`. La commande est désactivée si aucune sélection n’est en cours.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui appelle la fonction d’assistance de mise en œuvre **OnEditFindReplace** à utiliser pour stocker les paramètres de recherche/remplacement précédents dans des variables de l’implémentation privée. La `CFindReplaceDialog` classe est utilisée pour gérer la boîte de dialogue non modale pour solliciter l’utilisateur.  
+     `CEditView` Fournit une implémentation de cette commande, qui appelle la fonction d’assistance de mise en œuvre **OnEditFindReplace** à utiliser pour stocker les paramètres de recherche/remplacement précédents dans des variables de l’implémentation privée. La `CFindReplaceDialog` classe est utilisée pour gérer la boîte de dialogue non modale pour solliciter l’utilisateur.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui copie les données du Presse-papiers en cours, en remplaçant le texte sélectionné à l’aide de `CEdit::Paste`. La commande est désactivée s’il existe aucune **CF_TEXT** dans le Presse-papiers.  
+     `CEditView` Fournit une implémentation de cette commande, qui copie les données du Presse-papiers en cours, en remplaçant le texte sélectionné à l’aide de `CEdit::Paste`. La commande est désactivée s’il existe aucune **CF_TEXT** dans le Presse-papiers.  
   
      **COleClientDoc** simplement fournit un gestionnaire de l’interface utilisateur de commande de mise à jour pour cette commande. Si le Presse-papiers ne contient pas un élément OLE incorporables/objet, la commande sera désactivée. Vous êtes chargé d’écrire le gestionnaire pour la commande effectuer le collage. Si votre application OLE peut également coller les autres formats, vous devez fournir votre propre gestionnaire d’interface utilisateur de commande mise à jour dans l’affichage ou du document (autrement dit, quelque part avant **COleClientDoc** le routage de cible de commande).  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `COleDocument`fournit simplement un gestionnaire de l’interface utilisateur de commandes de mise à jour pour cette commande. Si le Presse-papiers ne contient pas d’élément/objet OLE identifié, la commande sera désactivée. Vous êtes chargé d’écrire le gestionnaire pour la commande effectuer le collage. Si votre application OLE peut également coller les autres formats, vous devez fournir votre propre gestionnaire d’interface utilisateur de commande mise à jour dans l’affichage ou du document (autrement dit, quelque part avant `COleDocument` dans le routage des commandes cible).  
+     `COleDocument` fournit simplement un gestionnaire de l’interface utilisateur de commandes de mise à jour pour cette commande. Si le Presse-papiers ne contient pas d’élément/objet OLE identifié, la commande sera désactivée. Vous êtes chargé d’écrire le gestionnaire pour la commande effectuer le collage. Si votre application OLE peut également coller les autres formats, vous devez fournir votre propre gestionnaire d’interface utilisateur de commande mise à jour dans l’affichage ou du document (autrement dit, quelque part avant `COleDocument` dans le routage des commandes cible).  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande pour répéter la dernière opération de recherche. Les variables de l’implémentation privée de la dernière recherche sont utilisés. La commande est désactivée si une recherche ne peut pas être tentée.  
+     `CEditView` Fournit une implémentation de cette commande pour répéter la dernière opération de recherche. Les variables de l’implémentation privée de la dernière recherche sont utilisés. La commande est désactivée si une recherche ne peut pas être tentée.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui appelle la fonction d’assistance de mise en œuvre **OnEditFindReplace** à utiliser pour stocker les paramètres de recherche/remplacement précédents dans des variables de l’implémentation privée. La `CFindReplaceDialog` classe est utilisée pour gérer la boîte de dialogue non modale qui invite l’utilisateur.  
+     `CEditView` Fournit une implémentation de cette commande, qui appelle la fonction d’assistance de mise en œuvre **OnEditFindReplace** à utiliser pour stocker les paramètres de recherche/remplacement précédents dans des variables de l’implémentation privée. La `CFindReplaceDialog` classe est utilisée pour gérer la boîte de dialogue non modale qui invite l’utilisateur.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, qui sélectionne tout le texte dans le document. La commande est désactivée si aucun texte pour la sélectionner.  
+     `CEditView` Fournit une implémentation de cette commande, qui sélectionne tout le texte dans le document. La commande est désactivée si aucun texte pour la sélectionner.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      Actuellement, il n’existe aucune implémentation standard pour cette commande. Vous devez implémenter cette pour chaque `CView`-classe dérivée.  
   
-     `CEditView`Fournit une implémentation de cette commande, à l’aide `CEdit::Undo`. La commande est désactivée si `CEdit::CanUndo` retourne FALSE.  
+     `CEditView` Fournit une implémentation de cette commande, à l’aide `CEdit::Undo`. La commande est désactivée si `CEdit::CanUndo` retourne FALSE.  
   
      Si vous choisissez d’implémenter cette commande, nous vous recommandons de qu'utiliser cet ID de commande.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_ARRANGE réorganise les icônes au bas d’une fenêtre MDI.  
   
-     `CMDIFrameWnd`implémente cette commande MDI standard dans une fonction d’assistance de mise en œuvre **OnMDIWindowCmd**. Ce programme d’assistance mappe les ID de commande pour les messages de fenêtres MDI et peut par conséquent partagent une grande quantité de code.  
+     `CMDIFrameWnd` implémente cette commande MDI standard dans une fonction d’assistance de mise en œuvre **OnMDIWindowCmd**. Ce programme d’assistance mappe les ID de commande pour les messages de fenêtres MDI et peut par conséquent partagent une grande quantité de code.  
   
      Comme la plupart des commandes de menu Fenêtre MDI, la commande est désactivée s’il n’existe aucune fenêtre MDI enfant active.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Fenêtres ID_WINDOW_CASCADE Cascades afin qu’elles se chevauchent.  
   
-     `CMDIFrameWnd`implémente cette commande MDI standard dans une fonction d’assistance de mise en œuvre **OnMDIWindowCmd**. Ce programme d’assistance mappe les ID de commande pour les messages de fenêtres MDI et peut par conséquent partagent une grande quantité de code.  
+     `CMDIFrameWnd` implémente cette commande MDI standard dans une fonction d’assistance de mise en œuvre **OnMDIWindowCmd**. Ce programme d’assistance mappe les ID de commande pour les messages de fenêtres MDI et peut par conséquent partagent une grande quantité de code.  
   
      Comme la plupart des commandes de menu Fenêtre MDI, la commande est désactivée s’il n’existe aucune fenêtre MDI enfant active.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Interface ID_WINDOW_SPLIT clavier au séparateur.  
   
-     `CView`gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre `CSplitterWnd::DoKeyboardSplit`. Cela place le séparateur dans un mode qui permet aux utilisateurs de clavier fractionner ou annuler le fractionnement une fenêtre fractionnée.  
+     `CView` gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre `CSplitterWnd::DoKeyboardSplit`. Cela place le séparateur dans un mode qui permet aux utilisateurs de clavier fractionner ou annuler le fractionnement une fenêtre fractionnée.  
   
      Cette commande est désactivée si la vue n’est pas un séparateur.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnHelpIndex`gère cette commande en appelant des `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpIndex` gère cette commande en appelant des `CWinApp::WinHelp`.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnHelpUsing`gère cette commande en appelant des `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpUsing` gère cette commande en appelant des `CWinApp::WinHelp`.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnContextHelp`gère cette commande en définissant le curseur de mode d’aide, en entrant une boucle modale d’et en attente de l’utilisateur de sélectionner une fenêtre pour obtenir de l’aide. Reportez-vous à [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) pour plus d’informations sur l’implémentation de l’aide de MFC.  
+     `CWinApp::OnContextHelp` gère cette commande en définissant le curseur de mode d’aide, en entrant une boucle modale d’et en attente de l’utilisateur de sélectionner une fenêtre pour obtenir de l’aide. Reportez-vous à [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) pour plus d’informations sur l’implémentation de l’aide de MFC.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Vous devez vous connecter pour votre `CWinApp`-dérivée de table des messages de la classe pour activer cette fonctionnalité.  
   
-     `CWinApp::OnHelp`gère cette commande en obtenant le contexte d’aide à droite pour le contexte d’application actuel. Cela permet de gérer la touche F1 simple, aide sur les boîtes de message, et ainsi de suite. Reportez-vous à [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) pour plus d’informations sur la bibliothèque MFC mise en œuvre de l’aide.  
+     `CWinApp::OnHelp` gère cette commande en obtenant le contexte d’aide à droite pour le contexte d’application actuel. Cela permet de gérer la touche F1 simple, aide sur les boîtes de message, et ainsi de suite. Reportez-vous à [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) pour plus d’informations sur la bibliothèque MFC mise en œuvre de l’aide.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE passe au volet suivant  
   
-     `CView`gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre **CSplitterWnd::OnNextPaneCmd**. Cette opération déplace la vue active vers le volet suivant dans le séparateur.  
+     `CView` gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre **CSplitterWnd::OnNextPaneCmd**. Cette opération déplace la vue active vers le volet suivant dans le séparateur.  
   
      Cette commande est désactivée si la vue n’est pas un séparateur ou il n’existe aucun volet suivant pour accéder à.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE passe au volet précédent  
   
-     `CView`gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre **CSplitterWnd::OnNextPaneCmd**. Cette opération déplace la vue active vers le volet précédent dans le séparateur.  
+     `CView` gère cette commande pour le `CSplitterWnd` implémentation. Si la vue fait partie d’une fenêtre fractionnée, cette commande délègue à la fonction de mise en œuvre **CSplitterWnd::OnNextPaneCmd**. Cette opération déplace la vue active vers le volet précédent dans le séparateur.  
   
      Cette commande est désactivée si la vue n’est pas un séparateur ou il n’existe aucun volet précédent pour accéder à.  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS modifie les liaisons OLE  
   
-     `COleDocument`gère cette commande à l’aide de l’implémentation MFC de la boîte de dialogue liens OLE standard. L’implémentation de cette boîte de dialogue est accessible via la `COleLinksDialog` classe. Si le document actif ne contient pas de liens, la commande est désactivée.  
+     `COleDocument` gère cette commande à l’aide de l’implémentation MFC de la boîte de dialogue liens OLE standard. L’implémentation de cette boîte de dialogue est accessible via la `COleLinksDialog` classe. Si le document actif ne contient pas de liens, la commande est désactivée.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée.  
   
 -   ID_OLE_VERB_FIRST... DERNIÈRE plage un ID pour les verbes OLE  
   
-     `COleDocument`utilise cette plage d’ID de commande pour les verbes pris en charge par l’élément/objet OLE actuellement sélectionné. Ce doit être une plage dans la mesure où un type d’élément/objet OLE donné peut prendre en charge de zéro ou plusieurs verbes personnalisés. Dans le menu de votre application, vous devez disposer d’un élément de menu avec l’ID de **ID_OLE_VERB_FIRST**. Lorsque le programme est exécuté, le menu sera mis à jour avec la description du verbe menu approprié (ou le menu contextuel avec le nombre de verbes). La gestion du menu OLE est gérée par `AfxOleSetEditMenu`, effectués dans le Gestionnaire de l’interface utilisateur de commande de mise à jour pour cette commande.  
+     `COleDocument` utilise cette plage d’ID de commande pour les verbes pris en charge par l’élément/objet OLE actuellement sélectionné. Ce doit être une plage dans la mesure où un type d’élément/objet OLE donné peut prendre en charge de zéro ou plusieurs verbes personnalisés. Dans le menu de votre application, vous devez disposer d’un élément de menu avec l’ID de **ID_OLE_VERB_FIRST**. Lorsque le programme est exécuté, le menu sera mis à jour avec la description du verbe menu approprié (ou le menu contextuel avec le nombre de verbes). La gestion du menu OLE est gérée par `AfxOleSetEditMenu`, effectués dans le Gestionnaire de l’interface utilisateur de commande de mise à jour pour cette commande.  
   
      Aucun gestionnaire n’est une commande explicite pour gérer chacun de l’ID de commande dans cette plage. **COleDocument::OnCmdMsg** est remplacée pour intercepter tous les ID de commande dans cette plage, les transformer en nombres de verbe de base zéro et lancer le serveur pour ce verbe (à l’aide de `COleClientItem::DoVerb`).  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR Active/désactive la barre d’outils et désactiver  
   
-     `CFrameWnd`gère cette commande et le Gestionnaire d’interface utilisateur de commande de mise à jour pour basculer l’état visible de la barre d’outils. La barre d’outils doit être une fenêtre enfant de l’image avec l’ID de fenêtre enfant de `AFX_IDW_TOOLBAR`. Le Gestionnaire de commandes bascule réellement la visibilité de la fenêtre de la barre d’outils. `CFrameWnd::RecalcLayout`permet de redessiner la fenêtre frame avec la barre d’outils dans son nouvel état. Le Gestionnaire de l’interface utilisateur de commande de mise à jour vérifie l’élément de menu lorsque la barre d’outils est visible.  
+     `CFrameWnd` gère cette commande et le Gestionnaire d’interface utilisateur de commande de mise à jour pour basculer l’état visible de la barre d’outils. La barre d’outils doit être une fenêtre enfant de l’image avec l’ID de fenêtre enfant de `AFX_IDW_TOOLBAR`. Le Gestionnaire de commandes bascule réellement la visibilité de la fenêtre de la barre d’outils. `CFrameWnd::RecalcLayout` permet de redessiner la fenêtre frame avec la barre d’outils dans son nouvel état. Le Gestionnaire de l’interface utilisateur de commande de mise à jour vérifie l’élément de menu lorsque la barre d’outils est visible.  
   
      Personnalisation de ce gestionnaire de commandes n’est pas recommandée. Si vous souhaitez ajouter des barres d’outils supplémentaires, vous devez cloner et modifier le Gestionnaire de commandes et le Gestionnaire de l’interface utilisateur de commande de mise à jour pour cette commande.  
   

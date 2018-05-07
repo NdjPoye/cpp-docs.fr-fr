@@ -1,12 +1,9 @@
 ---
 title: ICommandPropertiesImpl::SetProperties | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandPropertiesImpl.SetProperties
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - SetProperties method
 ms.assetid: c42132bb-16a9-4e00-aba6-dee785a98488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03f8c15b9319b4ef64dfd9d45e589b7e8c1fd1d9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3cb329b4b13490f5291e26d2cc7435fd867bda7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandpropertiesimplsetproperties"></a>ICommandPropertiesImpl::SetProperties
 Définit les propriétés de l’objet de commande.  
@@ -43,7 +38,7 @@ Définit les propriétés de l’objet de commande.
 #### <a name="parameters"></a>Paramètres  
  Consultez [ICommandProperties::SetProperties](https://msdn.microsoft.com/en-us/library/ms711497.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

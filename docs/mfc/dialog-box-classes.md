@@ -1,13 +1,10 @@
 ---
-title: "Classes de boîte de dialogue | Documents Microsoft"
-ms.custom: 
+title: Classes de boîte de dialogue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Classes de boîte de dialogue
 Classe `CDialog` et ses classes dérivées encapsulent les fonctionnalités de la boîte de dialogue. Dans la mesure où une boîte de dialogue est un type spécial de fenêtre, `CDialog` est dérivée de `CWnd`. Dériver vos classes de boîte de dialogue à partir de `CDialog` ou utilisez une des classes de boîte de dialogue courantes pour les boîtes de dialogue standard, telles que l’ouverture ou de l’enregistrement d’un fichier, l’impression, en sélectionnant une police ou une couleur, lancer une opération de recherche et remplacement, ou effectuer diverses liées à OLE opérations.  
@@ -71,7 +66,7 @@ Classe `CDialog` et ses classes dérivées encapsulent les fonctionnalités de l
  OLE ajoute plusieurs boîtes de dialogue communes Windows. Ces classes encapsulent les boîtes de dialogue communes OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Utilisé par l’infrastructure pour contenir les implémentations courantes pour toutes les boîtes de dialogue OLE. Toutes les classes de boîte de dialogue dans la catégorie de l’interface utilisateur sont dérivées de cette classe de base. `COleDialog`ne peut pas être utilisée directement.  
+ Utilisé par l’infrastructure pour contenir les implémentations courantes pour toutes les boîtes de dialogue OLE. Toutes les classes de boîte de dialogue dans la catégorie de l’interface utilisateur sont dérivées de cette classe de base. `COleDialog` ne peut pas être utilisée directement.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Affiche la boîte de dialogue Insérer un objet, l’interface utilisateur standard pour l’insertion de nouvelles OLE éléments liés ou incorporés.  

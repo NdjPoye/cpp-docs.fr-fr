@@ -1,13 +1,10 @@
 ---
 title: Impression par programmation | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Impression par programmation
 OLE a fourni les moyens permettant d’identifier de manière unique les documents persistants (**GetClassFile**) et les charger dans leur code associé (`CoCreateInstance`, **QueryInterface**, **Iid_ipersiststorage**, **IPersistFile::Load**, et **IPersistStorage::Load**). Pour activer davantage l'impression de documents, la relation contenant-contenu de document actif (en utilisant une conception OLE existante non fournie avec OLE 2.0 à l'origine) présente une interface standard de base d'impression, `IPrint`, généralement disponible via un objet qui peut charger l'état permanent du type de document. Chaque vue d’un document actif peut éventuellement prend en charge les le **IPrint** interface afin de fournir ces fonctionnalités.  

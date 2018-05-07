@@ -1,12 +1,9 @@
 ---
 title: IAccessorImpl, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IAccessorImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe9f4905b1c98641d184ab6e67c25405754f8872
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d62deeb487fded5895bbd47332a0f8a6ad7bbce6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 Fournit une implémentation de la [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interface.  
@@ -70,7 +65,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ## <a name="remarks"></a>Notes  
  Ce champ est obligatoire sur les commandes et les ensembles de lignes. OLE DB requiert que les fournisseurs implémenter un **HACCESSOR**, qui est une balise à un tableau de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) structures. **HACCESSOR**s fournie par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un **ATLBINDINGS** dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son **DBBINDING** ainsi qu’un indicateur de nombre et d’accesseur de référence de tableau.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

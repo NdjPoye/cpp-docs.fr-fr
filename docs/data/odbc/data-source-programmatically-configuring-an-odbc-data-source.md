@@ -1,13 +1,10 @@
 ---
-title: "Source de données : Configuration d’une Source de données ODBC par programmation | Documents Microsoft"
-ms.custom: 
+title: 'Source de données : Configuration d’une Source de données ODBC par programmation | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
 Cette rubrique explique comment configurer les noms de sources de données de base de données ODBC (Open Connectivity) par programmation. Cela vous donne une grande souplesse pour accéder aux données sans forcer l’utilisateur d’utiliser explicitement l’administrateur ODBC ou autres programmes pour spécifier les noms de sources de données.  
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   Pour 32 bits, recherchez la clé **HKEY_CURRENT_USER\Software\ODBC\ODBC. Sources de données INI\ODBC** dans le volet gauche.  
   
-         Le volet droit répertorie les entrées sous la forme : « pub : REG_SZ :*<data source name>*», où  *<data source name>*  est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous avez l’intention de à utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre `lpszAttributes` paramètre.  
+         Le volet droit répertorie les entrées sous la forme : « pub : REG_SZ :*<data source name>*», où *<data source name>* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous avez l’intention de à utiliser. Sélectionnez la source de données, par exemple, SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre `lpszAttributes` paramètre.  
   
     -   Pour 16 bits, recherchez la section dans le fichier Odbc.ini marqué par [*\<nom de source de données >*].  
   

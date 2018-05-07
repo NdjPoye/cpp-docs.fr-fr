@@ -1,13 +1,10 @@
 ---
-title: "Macros communs pour les propriétés et les commandes de génération | Documents Microsoft"
-ms.custom: 
+title: Macros communs pour les propriétés et les commandes de génération | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,24 +98,22 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Macros communs pour les propriétés et les commandes de génération
 En fonction de vos options d’installation, Visual Studio peut mettre des centaines de macros à votre disposition. Ceux-ci correspondent aux propriétés qui sont définies dans vos paramètres de projet par défaut ou dans les fichiers .props ou .targets MSBuild. Vous pouvez utiliser ces macros partout dans la boîte de dialogue **Pages de propriétés** d’un projet où les chaînes sont acceptées. Ces macros ne respectent pas la casse.  
   
  Pour afficher les macros actuellement disponibles, dans la colonne située à droite d’un nom de propriété, cliquez sur la flèche déroulante vers le bas. Si **Modifier** est disponible, cliquez sur cet élément puis, dans la boîte de dialogue Modifier, cliquez sur **Macros**. Pour plus d’informations, consultez la section **Specifying User-Defined Values** de [Pages de propriétés](../ide/property-pages-visual-cpp.md).  
   
- Les macros marquées « Déconseillée » ne sont plus utilisées ou ont été remplacées par une [macro de métadonnées d’élément](/visualstudio/msbuild/itemmetadata-element-msbuild) équivalente (**%(***nom***)**). Les macros marquées « Déconseillée ; migrées » sont également déconseillées. En outre, si le projet contenant la macro est migré depuis Visual Studio 2008, Visual Studio convertit la macro en la macro actuelle équivalente.  
+ Les macros marquées « Déconseillée » ne sont plus utilisées ou ont été remplacés par un équivalent [macro de métadonnées d’élément](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***nom***)**). Les macros marquées « Déconseillée ; migrées » sont également déconseillées. En outre, si le projet contenant la macro est migré depuis Visual Studio 2008, Visual Studio convertit la macro en la macro actuelle équivalente.  
   
  Le tableau suivant décrit un sous-ensemble couramment utilisé des macros disponibles. Cette liste n’est pas exhaustive. Pour plus d’informations sur les définitions de propriété MSBuild sont créées et utilisées en tant que macros dans les fichiers .vcxproj .props et .targets, consultez [propriétés MSBuild](/visualstudio/msbuild/msbuild-properties).  
   

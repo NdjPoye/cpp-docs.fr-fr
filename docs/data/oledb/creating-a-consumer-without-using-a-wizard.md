@@ -1,30 +1,25 @@
 ---
-title: "Création d’un consommateur sans utiliser d’Assistant | Documents Microsoft"
-ms.custom: 
+title: Création d’un consommateur sans utiliser d’Assistant | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Création d'un consommateur sans utiliser l'Assistant
 L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur OLE DB à un projet ATL existant. Si vous souhaitez ajouter la prise en charge du consommateur OLE DB à une application MFC, vous devez exécuter l’Assistant Application MFC, qui crée la prise en charge nécessaire et appelle les routines MFC nécessaires pour l’exécution de l’application.  
@@ -54,7 +49,7 @@ L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur 
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   Appelez **CoInitialize** initialiser COM. Cela est généralement appelé dans le code principal. Exemple :  
+-   Appelez **CoInitialize** initialiser COM. Cela est généralement appelé dans le code principal. Par exemple :  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  

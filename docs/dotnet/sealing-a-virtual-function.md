@@ -1,13 +1,10 @@
 ---
 title: Sceller une fonction virtuelle | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - virtual functions, sealing
 - __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c85f4775025d3661fdfbf8967b310fb733f452b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealing-a-virtual-function"></a>Sceller une fonction virtuelle
 La syntaxe pour sceller une fonction virtuelle a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- Le `__sealed` mot clé est utilisé dans les Extensions managées pour modifier un type référence, interdire les dérivations suivantes (voir [déclaration d’un Type de classe gérée](../dotnet/declaration-of-a-managed-class-type.md)), ou pour modifier une fonction virtuelle, en interdisant substitution suivante de la méthode dans une classe dérivée. Exemple :  
+ Le `__sealed` mot clé est utilisé dans les Extensions managées pour modifier un type référence, interdire les dérivations suivantes (voir [déclaration d’un Type de classe gérée](../dotnet/declaration-of-a-managed-class-type.md)), ou pour modifier une fonction virtuelle, en interdisant substitution suivante de la méthode dans une classe dérivée. Par exemple :  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -53,7 +48,7 @@ public:
 };  
 ```  
   
- L’absence de le `virtual` mot clé dans cette instance entraîne une erreur. Dans la nouvelle syntaxe, le mot clé contextuel `abstract` peut être utilisé à la place de la `=0` pour indiquer une fonction virtuelle pure. Cela n’était pas pris en charge dans les Extensions managées. Exemple :  
+ L’absence de le `virtual` mot clé dans cette instance entraîne une erreur. Dans la nouvelle syntaxe, le mot clé contextuel `abstract` peut être utilisé à la place de la `=0` pour indiquer une fonction virtuelle pure. Cela n’était pas pris en charge dans les Extensions managées. Par exemple :  
   
 ```  
 __gc class base { public: virtual void f()=0; };  

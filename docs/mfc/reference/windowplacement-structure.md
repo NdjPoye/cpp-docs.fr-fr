@@ -1,13 +1,10 @@
 ---
 title: WINDOWPLACEMENT, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPLACEMENT
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e73065cdf20d68b1da4ba77d1ad555e2bf95e937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT, structure
-Le `WINDOWPLACEMENT` structure contient des informations relatives à l’emplacement d’une fenêtre à l’écran**.**  
+Le `WINDOWPLACEMENT` structure contient des informations relatives à l’emplacement d’une fenêtre à l’écran **.**  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,12 +40,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>Paramètres  
  *length*  
- Spécifie la longueur, en octets, de la structure**.**  
+ Spécifie la longueur, en octets, de la structure **.**  
   
  `flags`  
  Spécifie des indicateurs qui contrôlent la position de la fenêtre réduite et la méthode par laquelle la fenêtre est restaurée. Ce membre peut être une ou les deux des indicateurs suivants :  
   
-- **WPF_SETMINPOSITION** Spécifie que les positions x et y de la fenêtre réduite peut être spécifiée**.** Cet indicateur doit être spécifié si les coordonnées sont définies dans le **ptMinPosition** membre.  
+- **WPF_SETMINPOSITION** Spécifie que les positions x et y de la fenêtre réduite peut être spécifiée **.** Cet indicateur doit être spécifié si les coordonnées sont définies dans le **ptMinPosition** membre.  
   
 - **WPF_RESTORETOMAXIMIZED** Spécifie que la fenêtre restaurée sera agrandie, indépendamment de si elle a été agrandie avant qu’il a été réduit. Ce paramètre est valid uniquement la prochaine fois que la fenêtre est restaurée. Il ne modifie pas le comportement de restauration par défaut. Cet indicateur est valide uniquement lorsque le **SW_SHOWMINIMIZED** valeur est spécifiée pour le **showCmd** membre.  
   
@@ -86,7 +81,7 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
  *rcNormalPosition*  
  Spécifie les coordonnées de la fenêtre lorsque la fenêtre est en position normale (restaurée).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** winuser.h  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,13 +1,10 @@
 ---
 title: Indicateur de fichiers | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Fichiers hint
 A *fichier hint* aident le Visual Studio à l’environnement de développement intégré (IDE) d’interpréter des identificateurs de Visual C++, tels que les noms de fonctions et des macros. Lorsque vous ouvrez un projet Visual C++, l’IDE *système analyse* analyse le code dans chaque fichier source dans le projet et recueille des informations sur chaque identificateur. L’IDE utilise ensuite ces informations pour prendre en charge des fonctionnalités telles que la **affichage de classes** navigateur et le **barre de Navigation**.  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Syntaxe|Signification|  
 |------------|-------------|  
-|`#define`*nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define`*nom de l’indicateur* `(` *paramètre*,... `)` *chaîne de remplacement*|Directive de préprocesseur qui définit un nouvel indicateur ou redéfinit une indication existante. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source avec *chaîne de remplacement*.<br /><br /> La deuxième forme de syntaxe définit une indication de type fonction. Si un indicateur de type fonction se produit dans le code source, le préprocesseur remplace tout d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* avec l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* avec *chaîne de remplacement*.|  
+|`#define` *nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define` *nom de l’indicateur* `(` *paramètre*,... `)` *chaîne de remplacement*|Directive de préprocesseur qui définit un nouvel indicateur ou redéfinit une indication existante. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source avec *chaîne de remplacement*.<br /><br /> La deuxième forme de syntaxe définit une indication de type fonction. Si un indicateur de type fonction se produit dans le code source, le préprocesseur remplace tout d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* avec l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* avec *chaîne de remplacement*.|  
 |`@<`|Fichier hint spécifique *chaîne de remplacement* qui indique le début d’un jeu d’éléments de mappage.|  
 |`@=`|Fichier hint spécifique *chaîne de remplacement* qui indique un élément de mappage intermédiaire. Une carte peut avoir plusieurs éléments de mappage.|  
 |`@>`|Fichier hint spécifique *chaîne de remplacement* qui indique la fin d’un jeu d’éléments de mappage.|  
-|`#undef`*-nom de l’indicateur*|La directive de préprocesseur qui supprime une indication existante. Le nom de l’indicateur est fourni par le *nom de l’indicateur* identificateur.|  
-|`//`*commentaire*|Un commentaire sur une ligne unique.|  
+|`#undef` *nom de l’indicateur*|La directive de préprocesseur qui supprime une indication existante. Le nom de l’indicateur est fourni par le *nom de l’indicateur* identificateur.|  
+|`//` *Commentaire*|Un commentaire sur une ligne unique.|  
 |`/*` *commentaire* `*/`|Un commentaire multiligne.|  
   
 ## <a name="what-macros-require-a-hint"></a>Les Macros nécessitent une indication ?  
@@ -162,7 +157,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
-### <a name="maps"></a>Mappages  
+### <a name="maps"></a>Maps  
  Un mappage est constitué de macros qui désignent un élément de début, élément de fin et zéro ou plusieurs éléments intermédiaires. Le système d’analyse interprète les mappages, car chaque macro de mappage masque les éléments de langage C/C++ et la syntaxe d’une instruction C/C++ complète est distribuée sur plusieurs macros différentes.  
   
  Le code source suivant définit les `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY`, et `END_CATEGORY_MAP` macros.  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  L’illustration suivante décrit certains des répertoires physiques dans un projet Visual C++. Fichiers hint se trouvent dans le `vcpackages`, `Debug`, `A1`, et `A2` répertoires.  
   
 ### <a name="hint-file-directories"></a>Répertoires de fichiers hint  
- ![Communes et projet &#45; répertoires de fichiers hint spécifique. ] (../ide/media/hintfile.png "HintFile")  
+ ![Communes et projet&#45;répertoires de fichiers hint spécifique. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Répertoires et le contenu des fichiers Hint  
  La liste suivante montre les répertoires dans ce projet qui contiennent des fichiers hint et le contenu de ces fichiers hint. Seules certaines des différentes indications contenues dans le `vcpackages` fichier hint du répertoire sont répertoriés.  

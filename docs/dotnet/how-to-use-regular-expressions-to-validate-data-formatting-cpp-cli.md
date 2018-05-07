@@ -1,13 +1,10 @@
 ---
-title: "Utiliser des Expressions régulières pour valider la mise en forme (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: Utiliser des Expressions régulières pour valider la mise en forme (C + c++ / CLI) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59a553ac2d58f9304fce3961aa8212c33b26643a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Comment : valider la mise en forme de données à l'aide d'expressions régulières (C++/CLI)
-L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d{3}-\d{3}-\d{4} » pour indiquer que chaque champ représente un numéro de téléphone valide. « D » dans la chaîne indique un chiffre, et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre est nécessaire pour être séparés par des tirets.  
+L’exemple de code suivant illustre l’utilisation d’expressions régulières pour vérifier la mise en forme d’une chaîne. Dans l’exemple de code suivant, la chaîne doit contenir un numéro de téléphone valide. L’exemple de code suivant utilise la chaîne « \d{3}-\d{3}-\d{4}» pour indiquer que chaque champ représente un numéro de téléphone valide. « D » dans la chaîne indique un chiffre, et l’argument après chaque « d » indique le nombre de chiffres qui doivent être présents. Dans ce cas, le nombre est nécessaire pour être séparés par des tirets.  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,12 +1,9 @@
 ---
-title: "Erreur irrécupérable NMAKE U1059 | Documents Microsoft"
-ms.custom: 
+title: Erreur irrécupérable NMAKE U1059 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - U1059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - U1059
 ms.assetid: b21d9198-9c63-40d0-b589-80e17294ce24
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9ba98b0f82c158e4e11859e85af72efdbbc244
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6eb038befdb7c587c6fe2a734003abba585c3e2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nmake-fatal-error-u1059"></a>Erreur irrécupérable NMAKE U1059
 Erreur de syntaxe : '}' manquant dans le fichier dépendant  

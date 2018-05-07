@@ -1,13 +1,10 @@
 ---
-title: "Conteneurs de contrôles ActiveX : Programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Conteneurs de contrôles ActiveX : Programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Conteneurs de contrôles ActiveX : programmation de contrôles ActiveX dans un conteneur de contrôles ActiveX
 Cet article décrit le processus permettant d’accéder à l’exposé [méthodes](../mfc/mfc-activex-controls-methods.md) et [propriétés](../mfc/mfc-activex-controls-properties.md) de contrôles ActiveX intégrés. En fait, vous suivez ces étapes :  
@@ -69,7 +64,7 @@ Cet article décrit le processus permettant d’accéder à l’exposé [méthod
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>L’en-tête de la classe Wrapper (. (H) fichier  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> L’en-tête de la classe Wrapper (. (H) fichier  
  Pour obtenir et définir les propriétés (et appeler les méthodes) du contrôle Circ, la `CCirc` classe wrapper fournit une déclaration de toutes les méthodes et propriétés. Dans l’exemple, ces déclarations sont trouvent dans CIRC. H. L’exemple suivant est la partie de la classe `CCirc` qui définit les interfaces exposées du contrôle ActiveX :  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ Cet article décrit le processus permettant d’accéder à l’exposé [méthod
   
  Ces fonctions peuvent ensuite être appelées à partir d’autres procédures de l’application à l’aide de la syntaxe C++ normale. Pour plus d’informations sur l’utilisation de cette fonction membre définie pour accéder aux méthodes et les propriétés du contrôle, consultez la section [programmation du contrôle ActiveX](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>Modifications des variables membres pour le projet  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Modifications des variables membres pour le projet  
  Une fois le contrôle ActiveX a été ajouté au projet et incorporé dans un conteneur de boîte de dialogue, il est accessible par d’autres parties du projet. Pour le contrôle d’accès le plus simple consiste à [créer une variable membre](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) de la classe de boîte de dialogue, `CContainerDlg` (étape 2), qui est du même type que la classe wrapper ajoutée au projet par Visual C++. Vous pouvez ensuite utiliser la variable membre pour accéder au contrôle incorporé à tout moment.  
   
  Lorsque le **ajouter une Variable membre** boîte de dialogue ajoute le `m_circctl` membre variable au projet, il ajoute également les lignes suivantes au fichier d’en-tête (. (H) de la `CContainerDlg` classe :  
@@ -89,7 +84,7 @@ Cet article décrit le processus permettant d’accéder à l’exposé [méthod
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>Programmation du contrôle ActiveX  
+##  <a name="_core_programming_the_activex_control"></a> Programmation du contrôle ActiveX  
  À ce stade, vous avez inséré le contrôle ActiveX dans votre modèle de boîte de dialogue et créé une variable membre pour lui. Vous pouvez maintenant utiliser la syntaxe C++ courante pour accéder aux propriétés et méthodes du contrôle incorporé.  
   
  Comme indiqué (dans [le fichier d’en-tête (. Fichier H)](#_core_the_wrapper_class_header_28h29_file)), le fichier d’en-tête (. H) pour la `CCirc` classe wrapper, en l’occurrence CIRC. H, contient une liste des fonctions membres que vous pouvez utiliser pour obtenir et définir une valeur de propriété exposée. Fonctions membres des méthodes exposées sont également disponibles.  

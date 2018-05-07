@@ -1,12 +1,9 @@
 ---
 title: Irowsetinfoimpl, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetInfoImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a451302920fa94d8bc1224df4c9ad432ed9dc896
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9b784dbb13ff39be21ccd353d514dd244d5ae41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 Fournit une implémentation pour la [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interface.  
@@ -62,7 +57,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ## <a name="remarks"></a>Notes  
  Une interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide de la [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) définies dans votre classe de commande. Bien que la classe de l’ensemble de lignes s’affiche pour être à l’aide de la propriété de la classe de commande définit l’ensemble de lignes est fourni avec sa propre copie des propriétés d’exécution, lorsqu’il est créé par un objet de commande ou de la session.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** altdb.h  
   
 ## <a name="see-also"></a>Voir aussi  

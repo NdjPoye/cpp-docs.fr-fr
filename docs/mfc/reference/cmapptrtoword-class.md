@@ -1,12 +1,9 @@
 ---
 title: Classe de CMapPtrToWord | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapPtrToWord
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634f22ae50247a8d4f3a0d3e19e6e6bdef7041d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapptrtoword-class"></a>Classe de CMapPtrToWord
 Prend en charge les mappages de mots 16 bits indexés par des pointeurs void.  
@@ -103,10 +98,10 @@ class CMapPtrToWord : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
   
 ## <a name="remarks"></a>Notes  
- `CMapWordToPtr`incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage des éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ `CMapWordToPtr` incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage des éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
  Mappages de pointeur à word ne peuvent pas être sérialisés.  
   
@@ -119,7 +114,7 @@ class CMapPtrToWord : public CObject
   
  `CMapPtrToWord`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcoll.h  
   
 ## <a name="see-also"></a>Voir aussi  

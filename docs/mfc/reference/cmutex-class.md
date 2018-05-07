@@ -1,12 +1,9 @@
 ---
 title: Classe CMutex | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMutex
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d87d613356589ee192ef141a3e222fdc4d8f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 Représente un « mutex », un objet de synchronisation qui permet à un thread l’accès mutuellement exclusif à une ressource.  
@@ -64,10 +59,10 @@ class CMutex : public CSyncObject
   
  `CMutex`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmt.h  
   
-##  <a name="cmutex"></a>CMutex::CMutex  
+##  <a name="cmutex"></a>  CMutex::CMutex  
  Construit un nommé ou sans nom `CMutex` objet.  
   
 ```  

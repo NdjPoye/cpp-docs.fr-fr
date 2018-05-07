@@ -1,31 +1,26 @@
 ---
 title: Collections (C + c++ / CX) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>Collections (C++/CX)
 Dans C + c++ / programme CX, vous pouvez rendre utiliser librement les conteneurs de bibliothèque STL (Standard Template Library), ou tout autre type de collection défini par l’utilisateur. Toutefois, lorsque vous passez des collections dans les deux sens entre l’interface binaire d’application Windows Runtime (ABI), par exemple, pour un contrôle XAML ou à un client JavaScript, vous devez utiliser des types de collection Windows Runtime.  
   
  Le Windows Runtime définit les interfaces pour les collections et les types associés et C + c++ / CX fournit les implémentations C++ concrètes dans le fichier d’en-tête collection.h. Cette illustration montre les relations entre les types de collection :  
   
- ![C &#43; &#43; &#47; Arborescence d’héritage CX pour les types de collection](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;arborescence d’héritage CX pour les types de collection](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   La [classe Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) ressemble à la [classe std::vector](../standard-library/vector-class.md).  
   
@@ -71,7 +66,7 @@ Dans C + c++ / programme CX, vous pouvez rendre utiliser librement les conteneur
   
  L'illustration suivante montre une boucle `range for` sur un `IVector<Person^>`. Notez que l'exécution est interrompue sur le point d'arrêt à la ligne 64. La fenêtre **Espion express** indique que la variable d'itérateur `p` est en fait un `VectorProxy<Person^>` qui a les variables membres `m_v` et `m_i` . Toutefois, lorsque vous appelez la méthode `GetType` sur cette variable, elle retourne le type identique à l'instance `Person` `p2`. Le principal avantage est que, bien que `VectorProxy` et `ArrowProxy` puissent apparaître dans **Espion express**, le débogueur de certaines erreurs de compilateur, il n'est pas nécessaire en général de coder explicitement pour eux.  
   
- ![VectorProxy dans la plage &#45; en fonction de la boucle](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![VectorProxy dans une plage&#45;en fonction de la boucle](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  Un scénario dans lequel vous devez coder autour de l'objet proxy est lorsque vous devez effectuer un `dynamic_cast` sur les éléments, par exemple lorsque vous recherchez des objets XAML d'un type particulier dans une collection d'éléments `UIElement` . Dans ce cas, vous devez commencer par caster l'élément en [Platform::Object](../cppcx/platform-object-class.md)puis effectuer le cast dynamique :  
   
@@ -136,9 +131,9 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|Fonctions|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) et int.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en interne [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md)([Windows::Foundation :: Collections :: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections :: vectorviewiterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en interne [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ et int.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections :: inputiterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
 |[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[commencer](../cppcx/begin-function.md)/ [fin](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
 |[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Stocke en interne [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ et T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   

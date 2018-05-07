@@ -1,35 +1,30 @@
 ---
-title: "Déployer une Application Visual C++ à l’aide d’un projet d’installation | Documents Microsoft"
-ms.custom: 
+title: Déployer une Application Visual C++ à l’aide d’un projet d’installation | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Procédure pas à pas : déploiement d'une application Visual C++ à l'aide d'un projet d'installation
 Décrit comment utiliser un projet d’installation pour déployer une application Visual C++.  
   
 ## <a name="prerequisites"></a>Prérequis  
- Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
+ Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
 -   Un ordinateur avec [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] installé.  
   

@@ -2,29 +2,24 @@
 title: Assemblys friend (C++) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc39fa66a73f16f800f0c7f0e4bbc49730d4b9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 Pour connaître les runtimes applicables, le *assemblys friend* fonctionnalité de langage rend les types qui sont à la portée espace de noms ou une étendue globale dans un composant d’assembly accessible à un ou plusieurs assemblys clients ou .netmodule.  
@@ -39,7 +34,7 @@ Pour connaître les runtimes applicables, le *assemblys friend* fonctionnalité 
   
  (Cette fonctionnalité de langage n'est pas pris en charge dans le Windows Runtime.)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -61,7 +56,7 @@ Pour connaître les runtimes applicables, le *assemblys friend* fonctionnalité 
   
  Comme alternative à l’utilisation de la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès à différents types.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

@@ -1,12 +1,9 @@
 ---
 title: CRowset::GetDataHere | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowset<TAccessor>::GetDataHere
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - GetDataHere method
 ms.assetid: 2fe2a987-1c4c-4299-876e-0591caf63af4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bcd5a70702a2b38fcdc97b431bfdd29a01c60ddf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b77fa67c419ae63547d0e2e90a75333b09984b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
 Récupère les données à partir de la ligne actuelle et le place dans la mémoire tampon spécifiée.  
@@ -59,7 +54,7 @@ HRESULT GetDataHere(int nAccessor,
 ## <a name="remarks"></a>Notes  
  Pour obtenir un exemple montrant comment utiliser cette fonction, consultez le [exemple MultiRead](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldbcli.h  
   
 ## <a name="see-also"></a>Voir aussi  

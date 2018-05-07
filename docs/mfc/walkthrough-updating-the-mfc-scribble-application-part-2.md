@@ -1,29 +1,24 @@
 ---
-title: "Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 2) | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Mise à jour de l’Application de Scribble MFC (partie 2) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procédure pas à pas : mise à jour de l'application Scribble MFC (partie 2)
 [Partie 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de cette procédure pas à pas vous a montré comment ajouter un ruban Office Fluent classique Scribble application. Cette partie présente comment ajouter des panneaux de ruban et des contrôles qui permettent aux utilisateurs au lieu des menus et des commandes.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Initialisation des stylets et l’enregistrement des préférences](#initpensave)  
   
-##  <a name="addnewpanel"></a>Ajout de nouveaux panneaux au ruban  
+##  <a name="addnewpanel"></a> Ajout de nouveaux panneaux au ruban  
  Ces étapes indiquent comment ajouter un **vue** Panneau de configuration qui contient les deux cases à cocher qui contrôlent la visibilité de la barre d’outils et la barre d’état, et également un **fenêtre** panneau qui contient un fractionnement vertical bouton qui contrôle la création et la disposition des fenêtres de l’interface multidocument (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Pour ajouter un panneau d’affichage et le volet de fenêtre à la barre du ruban  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sections](#top)]  
   
-##  <a name="addhelppanel"></a>Ajout d’un volet d’aide au ruban  
+##  <a name="addhelppanel"></a> Ajout d’un volet d’aide au ruban  
  Maintenant, vous pouvez attribuer deux éléments de menu qui sont définis dans l’application Scribble aux boutons de ruban qui sont nommées **rubriques d’aide** et **sur Scribble**. Les boutons sont ajoutés à un nouveau volet nommé **aide**.  
   
 #### <a name="to-add-a-help-panel"></a>Pour ajouter un volet d’aide  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sections](#top)]  
   
-##  <a name="addpenpanel"></a>Ajout d’un panneau de stylet au ruban  
+##  <a name="addpenpanel"></a> Ajout d’un panneau de stylet au ruban  
  Maintenant, ajoutez un panneau de configuration pour afficher des boutons qui contrôlent l’épaisseur et la couleur du stylet. Ce volet contient une case à cocher qui bascule entre les stylets épais et dynamiques. Ses fonctionnalités semblable à celle de la **trait épais** élément de menu dans l’application Scribble.  
   
  L’application Scribble d’origine permet à l’utilisateur de sélectionner les largeurs de stylet à partir d’une boîte de dialogue qui s’affiche lorsque l’utilisateur clique sur **largeurs de stylet** dans le menu. Étant donné que la barre du ruban a suffisamment d’espace libre pour les nouveaux contrôles, vous pouvez remplacer la boîte de dialogue à l’aide de deux zones de liste déroulante du ruban. Une zone de liste déroulante ajuste la largeur du stylet dynamique et l’autre zone de liste déroulante ajuste la largeur du stylet épais.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Sections](#top)]  
   
-##  <a name="addcolorbutton"></a>Ajout d’un bouton de couleur dans le panneau du stylet  
+##  <a name="addcolorbutton"></a> Ajout d’un bouton de couleur dans le panneau du stylet  
  Ensuite, ajoutez un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) objet qui permet à l’utilisateur de scribble en couleur.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Pour ajouter un bouton de couleur dans le panneau du stylet  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Sections](#top)]  
   
-##  <a name="addcolormember"></a>Ajout d’un membre de couleur à la classe de Document  
- Car l’application Scribble d’origine ne dispose pas des stylets de couleur, vous devez écrire une implémentation pour eux. Pour stocker la couleur du stylet du document, ajoutez un nouveau membre à la classe de document,`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Ajout d’un membre de couleur à la classe de Document  
+ Car l’application Scribble d’origine ne dispose pas des stylets de couleur, vous devez écrire une implémentation pour eux. Pour stocker la couleur du stylet du document, ajoutez un nouveau membre à la classe de document, `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Pour ajouter un membre de la couleur à la classe de document  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Sections](#top)]  
   
-##  <a name="initpensave"></a>Initialisation des stylets et l’enregistrement des préférences  
+##  <a name="initpensave"></a> Initialisation des stylets et l’enregistrement des préférences  
  Ensuite, initialisez la couleur et la largeur du stylet. Enfin, enregistrer et charger une couleur de dessin à partir d’un fichier.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Pour initialiser les contrôles sur la barre du ruban  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Ajoutez le code suivant à scribdoc.cpp, dans le `CScribbleDoc::InitDocument` (méthode), après la `m_sizeDoc = CSize(200,200)` instruction.  
   
- ```*/ / Réinitialisation de l’interface utilisateur du ruban sur ses valeurs initiales CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar() ; ASSERT_VALID(pRibbon) ;
+ ``` *Réinitialiser l’interface utilisateur du ruban sur ses valeurs initiales CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar() ; ASSERT_VALID(pRibbon) ;
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)) ; * / / Définir ColorButton noir  
     pColorBtn -> SetColor (RVB (0, 0, 0)) ;

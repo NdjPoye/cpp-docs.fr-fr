@@ -1,12 +1,9 @@
 ---
-title: IRowsetImpl::m_bCanFetchBack | Microsoft Docs
-ms.custom: 
+title: IRowsetImpl::m_bCanFetchBack | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.m_bCanFetchBack
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - m_bCanFetchBack
 ms.assetid: cfa007b0-7ba5-48a3-9d05-9f1916305fb7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1b01ea2c44475e6924aac8e58cc9671cdf81ec7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bf194fc7d7547cf03194f4dd5bedf014c9101b0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimplmbcanfetchback"></a>IRowsetImpl::m_bCanFetchBack
 Indique si un fournisseur prend en charge l’extraction vers l’arrière.  
@@ -45,7 +40,7 @@ unsigned m_bCanFetchBack:1;
 ## <a name="remarks"></a>Notes  
  Lié à la **DBPROP_CANFETCHBACKWARDS** propriété dans le **DBPROPSET_ROWSET** groupe. Le fournisseur doit prendre en charge **DBPROP_CANFETCHBACKWARDS** pour **m_bCanFetchBackwards** avoir la valeur true.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

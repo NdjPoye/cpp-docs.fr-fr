@@ -1,12 +1,9 @@
 ---
-title: "_InterlockedXor, fonctions intrinsèques | Documents Microsoft"
-ms.custom: 
+title: _InterlockedXor, fonctions intrinsèques | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedXor_nf
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b648a0130a72a27b965906bd72aa17c54b8ef2ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7dea8e222660825824c8dc02405832da4395b69f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor, fonctions intrinsèques
 **Section spécifique à Microsoft**  
@@ -171,7 +166,7 @@ __int64 _InterlockedXor64_rel(
 ## <a name="return-value"></a>Valeur de retour  
  Valeur d’origine du premier opérande.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Intrinsèque|Architecture|En-tête|  
 |---------------|------------------|------------|  

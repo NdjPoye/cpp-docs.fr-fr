@@ -1,12 +1,9 @@
 ---
 title: PTR::Detach | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 Abandonne la propriété de l’objet COM, qui retourne un pointeur vers l’objet.  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  En interne, `QueryInterface` est appelée sur l’objet COM détenu et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Notes  
- `Detach`Ajoute une référence à l’objet COM pour le compte de l’appelant d’abord, puis libère toutes les références sont détenus par le `com::ptr`.  L’appelant doit libérer finalement l’objet retourné pour détruire.  
+ `Detach` Ajoute une référence à l’objet COM pour le compte de l’appelant d’abord, puis libère toutes les références sont détenus par le `com::ptr`.  L’appelant doit libérer finalement l’objet retourné pour détruire.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  Le `DetachDocument` les appels de fonction membre `Detach` à renoncer à la propriété de l’objet COM et retournent un pointeur vers l’appelant.  
@@ -133,7 +128,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Fichier d’en-tête** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  

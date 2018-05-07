@@ -1,13 +1,10 @@
 ---
-title: "Déclaration de propriété d’Index | Documents Microsoft"
-ms.custom: 
+title: Déclaration de propriété d’Index | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - defaults, indexers
 - indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76473ce04cdf5860476b7612ddcbf00b40a0fae1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-index-declaration"></a>Déclaration de l'index de la propriété
 La syntaxe de déclaration d’une propriété indexée a changé entre les Extensions managées pour C++ vers Visual C++.  
   
- L’inconvénient principal de deux de la prise en charge du langage des Extensions managées des propriétés indexées est l’incapacité pour fournir la mise en indice de niveau de classe ; Autrement dit, toutes les propriétés indexées sont nécessaires à donner un nom, et par conséquent, il n’existe aucun moyen, par exemple, pour fournir un opérateur d’indice managé qui peut être appliqué directement à un `Vector` ou `Matrix` objet de classe. Une seconde moins problématique est qu’il est visuellement difficile de distinguer une propriété d’une propriété indexée, le nombre de paramètres est la seule indication. Enfin, les propriétés indexées souffrent des mêmes problèmes que ceux de propriétés non indexées - les accesseurs ne sont pas traités comme une unité atomique, mais séparés dans des méthodes individuelles.  Exemple :  
+ L’inconvénient principal de deux de la prise en charge du langage des Extensions managées des propriétés indexées est l’incapacité pour fournir la mise en indice de niveau de classe ; Autrement dit, toutes les propriétés indexées sont nécessaires à donner un nom, et par conséquent, il n’existe aucun moyen, par exemple, pour fournir un opérateur d’indice managé qui peut être appliqué directement à un `Vector` ou `Matrix` objet de classe. Une seconde moins problématique est qu’il est visuellement difficile de distinguer une propriété d’une propriété indexée, le nombre de paramètres est la seule indication. Enfin, les propriétés indexées souffrent des mêmes problèmes que ceux de propriétés non indexées - les accesseurs ne sont pas traités comme une unité atomique, mais séparés dans des méthodes individuelles.  Par exemple :  
   
 ```  
 public __gc class Vector;  
@@ -69,7 +64,7 @@ public:
 };  
 ```  
   
- Pour indiquer un indexeur de niveau de classe qui peut être appliqué directement aux objets de la classe dans la nouvelle syntaxe, le `default` (mot clé) est réutilisé pour se substituer à un nom explicite. Exemple :  
+ Pour indiquer un indexeur de niveau de classe qui peut être appliqué directement aux objets de la classe dans la nouvelle syntaxe, le `default` (mot clé) est réutilisé pour se substituer à un nom explicite. Par exemple :  
   
 ```  
 public ref class Matrix {  

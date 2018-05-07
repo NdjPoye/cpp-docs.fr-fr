@@ -1,12 +1,9 @@
 ---
 title: COleControl (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 Classe de base puissante pour développer des contrôles OLE.  
@@ -854,7 +849,7 @@ virtual void DisplayError(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *scode*  
+ *SCODE*  
  La valeur de code d’état doit être signalée. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1062,7 +1057,7 @@ void FireError(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *scode*  
+ *SCODE*  
  La valeur de code d’état doit être signalée. Pour obtenir une liste complète des codes possibles, consultez l’article [contrôles ActiveX : rubriques avancées](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1412,8 +1407,8 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**short\***|  
-|`VT_I4`|**long\***|  
+|`VT_I2`|**courte\***|  
+|`VT_I4`|**Long\***|  
 |`VT_R4`|**float\***|  
 |`VT_R8`|**double\***|  
 |`VT_CY`|**CY\***|  
@@ -1834,7 +1829,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
  Pointeur vers l’objet `IDropTarget` interface. Dans la mesure où il n’est pas une fenêtre, un objet sans fenêtre ne peut pas inscrire un `IDropTarget` interface. Toutefois, pour faire partie d’un glisser- déposer, un objet sans fenêtre peut toujours implémenter l’interface et retourner dans `GetWindowlessDropTarget`.  
   
 ### <a name="remarks"></a>Notes  
- Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Mais puisque le contrôle n’a pas de fenêtre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle doit simplement fournir une implémentation de la `IDropTarget` interface à laquelle le conteneur peut déléguer des appels au moment opportun. Exemple :  
+ Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que cible de dépôt. Mais puisque le contrôle n’a pas de fenêtre, le conteneur utilise sa propre fenêtre comme cible de dépôt. Le contrôle doit simplement fournir une implémentation de la `IDropTarget` interface à laquelle le conteneur peut déléguer des appels au moment opportun. Par exemple :  
   
  [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
@@ -2030,7 +2025,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *strNewPath*  
  Un pointeur vers une chaîne contenant le chemin d’accès qui fait référence à l’emplacement absolu de la propriété de contrôle asynchrone.  
   
- *prop*  
+ *propriétés de l’abonnement*  
  A [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) objet qui implémente une propriété de contrôle asynchrone.  
   
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
@@ -2235,7 +2230,7 @@ virtual BOOL OnEdit(
 ### <a name="remarks"></a>Notes  
  Cela a le même effet que l’appel du contrôle `OLEIVERB_UIACTIVATE` verbe.  
   
- Cette fonction est généralement utilisée en tant que la fonction de gestionnaire pour un `ON_OLEVERB` message d’entrée de mappage. Cela rend un verbe « Edit » disponible sur le menu du contrôle « Objet ». Exemple :  
+ Cette fonction est généralement utilisée en tant que la fonction de gestionnaire pour un `ON_OLEVERB` message d’entrée de mappage. Cela rend un verbe « Edit » disponible sur le menu du contrôle « Objet ». Par exemple :  
   
  [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   

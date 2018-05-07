@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX sur Internet | Documents Microsoft"
-ms.custom: 
+title: Contrôles ActiveX sur Internet | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Contrôles ActiveX sur Internet
 Les contrôles ActiveX sont la version mise à jour de la spécification de contrôle OLE. Les contrôles sont une architecture primaire pour le développement de composants logiciels programmables qui peuvent être utilisés dans plusieurs conteneurs, y compris les navigateurs Web compatibles COM sur Internet. Un contrôle ActiveX peut être un contrôle Internet et peut ajouter ses fonctionnalités dans un document actif ou faire partie d'une page Web. Les contrôles sur une page web peuvent communiquer entre eux à l’aide de scripts.  
@@ -113,7 +108,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
      Notez que vous devez inclure AFXCMN.H pour utiliser la classe `CListCtrl`.  
   
-4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si le contrôle a une propriété de chemin d’accès de données qu’une seule, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Exemple :  
+4.  Lorsque votre contrôle change d'état général (par exemple, de "en chargement" à "initialisé" ou "en interaction utilisateur"), appelez `COleControl::InternalSetReadyState`. Si le contrôle a une propriété de chemin d’accès de données qu’une seule, vous pouvez ajouter du code sur **BSCF_LASTDATANOTIFICATION** pour notifier au conteneur que le téléchargement est terminé. Par exemple :  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -165,7 +160,7 @@ Les contrôles ActiveX sont la version mise à jour de la spécification de cont
   
  Vous implémentez [monikers asynchrones](../mfc/asynchronous-monikers-on-the-internet.md) à l’aide de la `CAsyncMonikerFile` classe. Toutefois, les contrôles ActiveX peuvent utiliser la classe `CDataPathProperty`, dérivée de `CAsyncMonikerFile`, pour implémenter des propriétés de contrôle asynchrones.  
   
- L'exemple ASYNDOWN montre comment configurer une boucle asynchrone en utilisant des minuteries pour lire les données. ASYNDOWN est décrit en détail dans l'article de la Base de connaissances relatif à la "procédure : AsyncDown illustre le téléchargement asynchrone de données" (Q177244) et peut être téléchargé à partir du Centre de téléchargement Microsoft. (Pour plus d'informations sur le téléchargement de fichiers à partir du Centre de téléchargement Microsoft, consultez l'article relatif à la "procédure d'obtention des fichiers de support technique Microsoft depuis les services en ligne" (Q119591) dans la Base de connaissances Microsoft.) Vous pouvez trouver des articles de la Base de connaissances à [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ L'exemple ASYNDOWN montre comment configurer une boucle asynchrone en utilisant des minuteries pour lire les données. ASYNDOWN est décrit en détail dans l'article de la Base de connaissances relatif à la "procédure : AsyncDown illustre le téléchargement asynchrone de données" (Q177244) et peut être téléchargé à partir du Centre de téléchargement Microsoft. (Pour plus d'informations sur le téléchargement de fichiers à partir du Centre de téléchargement Microsoft, consultez l'article relatif à la "procédure d'obtention des fichiers de support technique Microsoft depuis les services en ligne" (Q119591) dans la Base de connaissances Microsoft.) Vous pouvez trouver des articles de la Base de connaissances à [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
  La technique de base utilisée dans ASYNDOWN consiste à définir une minuterie dans **CDataPathProperty::OnDataAvailable** pour indiquer lorsque les données sont disponibles. Si le message de la minuterie est accepté, l'application lit des blocs de 128 octets de données et remplit un contrôle d'édition. Si les données ne sont pas disponibles lorsque le message de la minuterie est traité, la minuterie est désactivée. `OnDataAvailable` démarre la minuterie si davantage de données arrivent ultérieurement.  
   

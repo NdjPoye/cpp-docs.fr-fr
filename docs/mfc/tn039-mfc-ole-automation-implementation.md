@@ -1,13 +1,10 @@
 ---
-title: "TN039 : Implémentation d’Automation MFC OLE | Documents Microsoft"
-ms.custom: 
+title: 'TN039 : Implémentation d’Automation MFC OLE | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039 : implémentation d'Automation MFC/OLE
 > [!NOTE]
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   La distance de la table de dispatch de la classe la plus dérivée (0 relatif)  
   
- Le **DISPID** est divisé en deux parties. Le **LOWORD** de la **DISPID** contient le premier composant, la distance entre le haut de la table de dispatch. Le **HIWORD** contient la distance à partir de la classe la plus dérivée. Exemple :  
+ Le **DISPID** est divisé en deux parties. Le **LOWORD** de la **DISPID** contient le premier composant, la distance entre le haut de la table de dispatch. Le **HIWORD** contient la distance à partir de la classe la plus dérivée. Par exemple :  
   
 ```  
 class CDispPoint : public CCmdTarget  
@@ -188,7 +183,7 @@ property Y    (DISPID)0x00010002
  Une chaîne d’espace séparés VTS_ pour chaque paramètre.  
   
 ## <a name="remarks"></a>Notes  
- Tout comme le `DISP_PROPERTY_EX` macro, cette macro définit une propriété accédée avec les fonctions de membre Get et Set distinctes. Cette macro, toutefois, vous permet de spécifier une liste de paramètres pour la propriété. Cela est utile pour l’implémentation des propriétés qui sont indexées ou paramétrable d’une autre manière. Les paramètres sont toujours placés en premier, suivie de la nouvelle valeur pour la propriété. Exemple :  
+ Tout comme le `DISP_PROPERTY_EX` macro, cette macro définit une propriété accédée avec les fonctions de membre Get et Set distinctes. Cette macro, toutefois, vous permet de spécifier une liste de paramètres pour la propriété. Cela est utile pour l’implémentation des propriétés qui sont indexées ou paramétrable d’une autre manière. Les paramètres sont toujours placés en premier, suivie de la nouvelle valeur pour la propriété. Par exemple :  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  Une chaîne d’espace séparés VTS_ pour chaque paramètre.  
   
 ## <a name="remarks"></a>Notes  
- Ces macros permettent de spécifier un **DISPID** au lieu de laisser MFC automatiquement attribuer un. Ces macros d’avancées ont le même nom mais cet ID est ajouté au nom de la macro (par exemple, **DISP_PROPERTY_ID**) et l’ID est déterminée par le paramètre spécifié juste après le `pszName` paramètre. Consultez AFXDISP. H pour plus d’informations sur ces macros. Le **_ID** entrées doivent être placées à la fin de la table de dispatch. Ils affectent l’automatique **DISPID** génération de la même façon que non -**_ID** serait de version de la macro (le **DISPID**s sont déterminées par la position). Exemple :  
+ Ces macros permettent de spécifier un **DISPID** au lieu de laisser MFC automatiquement attribuer un. Ces macros d’avancées ont le même nom mais cet ID est ajouté au nom de la macro (par exemple, **DISP_PROPERTY_ID**) et l’ID est déterminée par le paramètre spécifié juste après le `pszName` paramètre. Consultez AFXDISP. H pour plus d’informations sur ces macros. Le **_ID** entrées doivent être placées à la fin de la table de dispatch. Ils affectent l’automatique **DISPID** génération de la même façon que non -**_ID** serait de version de la macro (le **DISPID**s sont déterminées par la position). Par exemple :  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

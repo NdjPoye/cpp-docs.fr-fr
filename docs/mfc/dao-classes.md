@@ -1,13 +1,10 @@
 ---
 title: Classes DAO | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>Classes DAO
 Ces classes fonctionnent avec les autres classes application framework afin de donner un accès facile aux bases de données objet DAO (Data Access), qui utilisent le même moteur de base de données en tant que Microsoft Visual Basic et Microsoft Access. Les classes DAO peuvent également accéder à un large éventail de bases de données pour laquelle les pilotes de connectivité ODBC (Open Database) sont disponibles.  
@@ -62,7 +57,7 @@ Ces classes fonctionnent avec les autres classes application framework afin de d
   
 ## <a name="related-classes"></a>Classes associées  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Encapsule un handle vers le stockage pour un objet volumineux binaire (BLOB), par exemple une image bitmap. `CLongBinary`objets sont utilisés pour gérer les objets de grande quantité de données stockées dans des tables de base de données.  
+ Encapsule un handle vers le stockage pour un objet volumineux binaire (BLOB), par exemple une image bitmap. `CLongBinary` objets sont utilisés pour gérer les objets de grande quantité de données stockées dans des tables de base de données.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  Wrapper pour le type d’automatisation OLE **devise**, un type arithmétique à virgule fixe avec 15 chiffres avant la virgule décimale et 4 chiffres après.  

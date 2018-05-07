@@ -1,13 +1,10 @@
 ---
-title: "TN038 : Implémentation IUnknown MFC-OLE | Documents Microsoft"
-ms.custom: 
+title: 'TN038 : Implémentation IUnknown MFC-OLE | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038 : implémentation IUnknown MFC/OLE
 > [!NOTE]
@@ -106,7 +101,7 @@ pPrint->Release();
 }  
 ```  
   
- Cela paraît assez simple, mais comment implémenteriez-vous un objet prenant en charge à la fois la mesure où IPrintInterface et [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface dans ce cas il est simple dans la mesure où IPrintInterface est directement dérivée de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — en implémentant IPrintInterface, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) est automatiquement prise en charge. Exemple :  
+ Cela paraît assez simple, mais comment implémenteriez-vous un objet prenant en charge à la fois la mesure où IPrintInterface et [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface dans ce cas il est simple dans la mesure où IPrintInterface est directement dérivée de [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) — en implémentant IPrintInterface, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) est automatiquement prise en charge. Par exemple :  
   
 ```  
 class CPrintObj : public CPrintInterface  
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Pour plus d’informations sur l’agrégation, consultez le [agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) rubrique.  
   
- La prise en charge des tables d'interface de MFC est ancrée dans la classe `CCmdTarget`. `CCmdTarget`«*a un*» référencer nombre ainsi que toutes les fonctions membres associées le [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implémentation (le nombre de références est par exemple dans `CCmdTarget`). Pour créer une classe qui prenne en charge OLE COM, vous devez faire dériver une classe de `CCmdTarget` et utiliser diverses macros, ainsi que des fonctions membres de `CCmdTarget` pour implémenter les interfaces souhaitées. L'implémentation de MFC utilise des classes imbriquées pour définir chaque implémentation d'interface de façon très similaire à l'exemple ci-dessus. Cela est facilité par une implémentation standard de l'interface IUnknown et par un certain nombre de macros qui permettent d'éliminer une partie du code répétitif.  
+ La prise en charge des tables d'interface de MFC est ancrée dans la classe `CCmdTarget`. `CCmdTarget` «*a un*» référencer nombre ainsi que toutes les fonctions membres associées le [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implémentation (le nombre de références est par exemple dans `CCmdTarget`). Pour créer une classe qui prenne en charge OLE COM, vous devez faire dériver une classe de `CCmdTarget` et utiliser diverses macros, ainsi que des fonctions membres de `CCmdTarget` pour implémenter les interfaces souhaitées. L'implémentation de MFC utilise des classes imbriquées pour définir chaque implémentation d'interface de façon très similaire à l'exemple ci-dessus. Cela est facilité par une implémentation standard de l'interface IUnknown et par un certain nombre de macros qui permettent d'éliminer une partie du code répétitif.  
   
 ## <a name="interface-map-basics"></a>Principes fondamentaux des tables d'interface  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Utilisez la macro `METHOD_PROLOGUE` pour accéder au parent, objet dérivé de `CCmdTarget`.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [version](http://msdn.microsoft.com/library/windows/desktop/ms682317), et [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) peuvent déléguer à la `CCmdTarget` implémentation de ces fonctions (`ExternalAddRef`, `ExternalRelease`, et `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [version](http://msdn.microsoft.com/library/windows/desktop/ms682317), et [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) peuvent déléguer à la `CCmdTarget` implémentation de ces fonctions (`ExternalAddRef`, `ExternalRelease`, et `ExternalQueryInterface`).  
   
  L'exemple CPrintEditObj ci-dessus aurait pu être implémenté comme suit :  
   
@@ -432,7 +427,7 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 3.  À un moment donné (généralement dans le cadre de `CCmdTarget::OnCreateAggregates`), initialisez la variable membre avec une valeur différente de NULL.  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 class CAggrExample : public CCmdTarget  
@@ -584,7 +579,7 @@ END_INTERFACE_PART(
   
  L'argument `localClass` est le nom de la classe locale qui sera définie. Un « X » est automatiquement ajouté au nom. L'emploi de cette convention d'affectation de noms vise à éviter les conflits avec les classes globales de même nom. De plus, le nom du membre incorporé est le même que celui de `localClass`, sauf qu'il est précédé du préfixe « m_x ».  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 BEGIN_INTERFACE_PART(MyAdviseSink,

@@ -1,13 +1,10 @@
 ---
-title: "Manifeste d’outil Propriétés d’entrée et sortie (Visual C++) | Documents Microsoft"
-ms.custom: 
+title: Manifeste d’outil Propriétés d’entrée et sortie (Visual C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrée et sortie, outil, les propriétés de Configuration, manifeste &lt;nom_projet&gt; boîte de dialogue Pages de propriétés
 Utilisez cette boîte de dialogue pour spécifier les options d’entrée et de sortie pour [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -41,7 +36,7 @@ Utilisez cette boîte de dialogue pour spécifier les options d’entrée et de 
  Utilise le **de manifeste** permettant de spécifier les chemins complets des fichiers manifeste supplémentaires que l’outil manifeste traitera ou de fusion. Chemins d’accès complets sont délimités par un point-virgule.  
   
  **Manifestes de ressource d’entrée**  
- Utilise le **/inputresource** permettant de spécifier le chemin d’accès complet d’une ressource de type RT_MANIFEST, à entrer dans l’outil manifeste. Le chemin d’accès peut être suivi par l’ID de ressource spécifiée. Exemple :  
+ Utilise le **/inputresource** permettant de spécifier le chemin d’accès complet d’une ressource de type RT_MANIFEST, à entrer dans l’outil manifeste. Le chemin d’accès peut être suivi par l’ID de ressource spécifiée. Par exemple :  
   
  `dll_with_manifest.dll;#1`  
   
@@ -62,7 +57,7 @@ Utilisez cette boîte de dialogue pour spécifier les options d’entrée et de 
  Utilise le **/makecdfs** option pour spécifier que l’outil manifeste générera des fichiers de définition de catalogue (fichiers .cdf), qui sont utilisés pour faire des catalogues.  
   
  **Générer un manifeste à partir d’un assembly managé**  
- Génère un manifeste à partir d’un assembly managé. (**- managedassemblyname :***fichier*).  
+ Génère un manifeste à partir d’un assembly managé. (**- managedassemblyname : *** fichier*).  
   
  **Supprimer l’élément de dépendance**  
  Utilisé avec le **- managedassembly** option. Cette balise supprime la génération des éléments de dépendance dans le manifeste final.  

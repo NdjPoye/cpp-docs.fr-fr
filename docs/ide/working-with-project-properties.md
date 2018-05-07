@@ -1,13 +1,10 @@
 ---
-title: "Utilisation des propriétés de projet | Documents Microsoft"
-ms.custom: 
+title: Utilisation des propriétés de projet | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>Utilisation des propriétés de projet
-Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées en tant que *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, les DLL, LIB, EXE), options du compilateur, options de l’éditeur de liens, paramètres du débogueur, les étapes de génération personnalisée et beaucoup d’autres choses. En général, vous utilisez *pages de propriétés* ( **projet &#124; Propriétés**) pour afficher et modifier ces propriétés. 
+Dans l’IDE, toutes les informations nécessaires pour générer un projet sont exposées en tant que *propriétés*. Ces informations comprennent le nom de l’application, l’extension (par exemple, les DLL, LIB, EXE), options du compilateur, options de l’éditeur de liens, paramètres du débogueur, les étapes de génération personnalisée et beaucoup d’autres choses. En général, vous utilisez *pages de propriétés* ( **projet &#124; propriétés**) pour afficher et modifier ces propriétés. 
   
  Lorsque vous créez un projet, le système assigne des valeurs pour les différentes propriétés. Les valeurs par défaut varient légèrement en fonction du type de projet et les options que vous choisissez dans l’Assistant Application. Par exemple, un projet ATL a les propriétés relatives aux fichiers MIDL, mais ils sont absents dans une application console Visual basic. Les propriétés par défaut sont affichées dans le volet Général dans les Pages de propriétés :  
   
- ![Visual C &#43; &#43; Valeurs par défaut du projet](../ide/media/visual-c---project-defaults.png "par défaut des projets Visual C++")  
+ ![Visual C&#43; &#43; valeurs par défaut du projet](../ide/media/visual-c---project-defaults.png "par défaut des projets Visual C++")  
   
  Certaines propriétés, telles que le nom de l’application s’appliquent à toutes les variations de build, quelle que soit la plateforme cible ou s’il s’agit d’une build debug ou release. Mais la plupart des propriétés qui sont dépendantes de la configuration. Il s’agit, car le compilateur doit savoir quelle plate-forme spécifique, le programme s’exécutera sur ainsi que le compilateur spécifique d’options à utiliser pour générer le code correct. Par conséquent, lorsque vous définissez une propriété, il est important de faire attention à la configuration et la plateforme de la nouvelle valeur doit s’appliquer à qui. Doit s’appliquer uniquement à des builds de débogage Win32 ou devez également appliquer à déboguer une branche et de débogage x64 ? Par exemple, le **optimisation** , par défaut, est définie sur **augmenter la vitesse (/ O2)** dans une configuration Release, mais est désactivé dans la configuration Debug.  
   
  Les pages de propriétés sont conçus afin que vous pouvez toujours voir, et si nécessaire modifier, configuration et la plateforme qui une valeur de propriété doit s’appliquer à. L’illustration suivante montre les pages de propriétés à la configuration et les informations de plate-forme dans les zones de liste en haut. Lorsque le **optimisation** est définie ici, il s’applique uniquement aux versions de débogage Win32, ce qui se produit à la configuration active, comme indiqué par les flèches rouges.  
   
- ![Visual C &#43; &#43; Pages de propriétés affichant la configuration active](../ide/media/visual-c---property-pages-showing-active-configuration.png "configuration active affichant de Pages de propriétés Visual C++")  
+ ![Visual C&#43; &#43; configuration active de Pages de propriétés affichant](../ide/media/visual-c---property-pages-showing-active-configuration.png "configuration active affichant de Pages de propriétés Visual C++")  
   
  L’illustration suivante montre la même page de propriétés de projet, mais la configuration a été modifiée pour la mise en production. Notez la valeur différente pour la propriété de l’optimisation. Notez également que la configuration active est toujours de débogage. Vous pouvez définir des propriétés pour n’importe quelle configuration ici ; Il ne doit être actif.  
   
- ![Visual C &#43; &#43; Affichage des Pages de propriétés de version config](../ide/media/visual-c---property-pages-showing-release-config.png "Pages de propriétés Visual C++ montrant version config")  
+ ![Visual C&#43; &#43; Pages de propriétés affichant version config](../ide/media/visual-c---property-pages-showing-release-config.png "Pages de propriétés Visual C++ montrant version config")  
   
  Le système de projet lui-même est basé sur MSBuild, qui définit les formats de fichier et les règles pour générer les projets de tout type. MSBuild gère la complexité de construction pour plusieurs plateformes et configurations, mais vous devez comprendre un peu sur son fonctionnement. Cela est particulièrement important si vous souhaitez définir des configurations personnalisées ou créer des ensembles de propriétés que vous pouvez partager et l’importer dans plusieurs projets réutilisables.  
   
  Propriétés de projet sont stockées directement dans le fichier de projet (*.vcxproj) ou dans d’autres fichiers .xml ou .props que les importations du fichier projet, ainsi que fournir des valeurs par défaut. Comme indiqué précédemment, la même propriété pour la même configuration peut avoir une valeur différente dans différents fichiers. Lorsque vous générez un projet, le moteur MSBuild évalue le fichier projet et tous les fichiers importés dans un ordre bien défini (décrites ci-dessous). Comme chaque fichier est évaluée, des valeurs de propriété définis dans ce fichier remplacent les valeurs existantes. Toutes les valeurs qui ne sont pas spécifiés sont hérités des fichiers qui ont été évaluées précédemment. Par conséquent, lorsque vous définissez une propriété avec des pages de propriétés, il est également important de veiller à où vous la définissez. Si vous définissez une propriété à « X » dans un fichier .props, mais la propriété est définie à « Y » dans le fichier projet, le projet est généré avec la propriété définie sur « Y ». Si la même propriété est définie à « Z » sur un élément de projet, tel qu’un fichier .cpp, le moteur MSBuild utilisera la valeur de « Z ». Pour plus d’informations, consultez [l’héritage de propriété](#bkmkPropertyInheritance) plus loin dans cet article.  
   
 ## <a name="build-configurations"></a>Configurations de build  
- Une configuration est simplement un groupe arbitraire de propriétés qui portent un nom. Visual Studio fournit des configurations Debug et Release, et chacune définit différentes propriétés de manière appropriée pour une version debug ou une version Release. Vous pouvez utiliser la **Configuration Manager** pour définir des configurations personnalisées comme un moyen pratique de propriétés du groupe pour une version spécifique de build. Le Gestionnaire de propriétés est utilisé pour le travail avancé avec des propriétés, mais nous elle introduit ici car elle permet de visualiser les configurations de propriétés. Vous y accédez depuis **View &#124;  Gestionnaire de propriétés** ou **View &#124; Autres fenêtres &#124; Gestionnaire de propriétés** en fonction de vos paramètres. Il a des nœuds pour chaque paire de plateforme/configuration dans le projet. Dans chacun de ces nœuds sont des nœuds pour les feuilles de propriétés (fichiers .props) que définir des propriétés spécifiques pour cette configuration.  
+ Une configuration est simplement un groupe arbitraire de propriétés qui portent un nom. Visual Studio fournit des configurations Debug et Release, et chacune définit différentes propriétés de manière appropriée pour une version debug ou une version Release. Vous pouvez utiliser la **Configuration Manager** pour définir des configurations personnalisées comme un moyen pratique de propriétés du groupe pour une version spécifique de build. Le Gestionnaire de propriétés est utilisé pour le travail avancé avec des propriétés, mais nous elle introduit ici car elle permet de visualiser les configurations de propriétés. Vous y accédez depuis **vue &#124; Gestionnaire de propriétés** ou **vue &#124; autres fenêtres &#124; Gestionnaire de propriétés** en fonction de vos paramètres. Il a des nœuds pour chaque paire de plateforme/configuration dans le projet. Dans chacun de ces nœuds sont des nœuds pour les feuilles de propriétés (fichiers .props) que définir des propriétés spécifiques pour cette configuration.  
   
  ![Gestionnaire de propriétés](../ide/media/property-manager.png "Gestionnaire de propriétés")  
   
@@ -69,7 +64,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
 ## <a name="property-pages"></a>pages de propriétés  
  Comme indiqué précédemment, le système de projet Visual C++ est basé sur [MSBuild](/visualstudio/msbuild/msbuild-properties) et les valeurs sont stockées dans le fichier de projet XML, par défaut les fichiers .props et .targets. Pour Visual Studio 2015, ces fichiers se trouvent dans **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Pour Visual Studio 2017, ces fichiers se trouvent dans  **\\Program Files (x86)\\Microsoft Visual Studio\\2017\\_édition_\\Common7\\ IDE\\VC\\VCTargets**, où _édition_ est l’édition de Visual Studio installée. Propriétés sont également stockées dans les fichiers .props personnalisé que vous pouvez ajouter à votre projet. Nous recommandons vivement que vous pas modifiez ces fichiers manuellement et utilisez à la place les pages de propriétés dans l’IDE pour modifier toutes les propriétés, en particulier ceux qui participent à l’héritage, à moins d’avoir une très bonne compréhension de MSBuild.  
   
- L’illustration suivante montre les pages de propriétés d’un projet Visual C++. Dans le volet gauche, le **répertoires VC ++***règle* est sélectionnée, et le volet droit répertorie les propriétés qui sont associées à cette règle. Le `$(...)` les valeurs sont appelées malheureusement *macros*. Il s’agit *pas* les macros C/C++, mais les constantes de compilation simplement. Les macros sont décrits dans le [macros de page de propriété](#bkmkPropertiesVersusMacros) section plus loin dans cet article.)  
+ L’illustration suivante montre les pages de propriétés d’un projet Visual C++. Dans le volet gauche, le **répertoires VC ++ *** règle* est sélectionnée, et le volet droit répertorie les propriétés qui sont associées à cette règle. Le `$(...)` les valeurs sont appelées malheureusement *macros*. Il s’agit *pas* les macros C/C++, mais les constantes de compilation simplement. Les macros sont décrits dans le [macros de page de propriété](#bkmkPropertiesVersusMacros) section plus loin dans cet article.)  
   
  ![Pages de propriétés de projet](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -78,7 +73,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
   
 #### <a name="to-set-a-property-for-a-project"></a>Pour définir une propriété pour un projet  
   
-1.  La plupart des scénarios, vous pouvez définir des propriétés au niveau du projet sans créer une feuille de propriétés personnalisées. Dans le menu principal, choisissez **projet &#124; Propriétés**, ou avec le bouton droit sur le nœud de projet dans **l’Explorateur de solutions** et choisissez **propriétés**.  
+1.  La plupart des scénarios, vous pouvez définir des propriétés au niveau du projet sans créer une feuille de propriétés personnalisées. Dans le menu principal, choisissez **projet &#124; propriétés**, ou avec le bouton droit sur le nœud de projet dans **l’Explorateur de solutions** et choisissez **propriétés**.  
   
 2.  Utilisez le **Configuration** et **plateforme** zones en haut de la boîte de dialogue pour spécifier les groupes de propriétés doivent appliquer vos modifications de liste. Dans de nombreux cas **toutes les plateformes** et **toutes les Configurations** sont le bon choix. Pour définir les propriétés pour certaines configurations, la sélection multiple dans **Gestionnaire de propriétés**, puis ouvrez le menu contextuel et choisissez **propriétés**.  
   
@@ -109,7 +104,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
 -   [XML Data Generator Tool, page de propriétés](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>Pour parcourir rapidement et de toutes les propriétés de recherche  
- Le **toutes les Options** page de propriétés (sous la **propriétés de Configuration &#124; C/C++** nœud dans le **Pages de propriétés** boîte de dialogue) fournit un moyen rapide pour parcourir et rechercher les propriétés qui sont disponibles dans le contexte actuel. Elle comporte une zone de recherche spéciale et possède une syntaxe simple pour aider à filtrer les résultats :  
+ Le **toutes les Options** page de propriétés (sous la **propriétés de Configuration &#124; C/C++** nœud dans le **Pages de propriétés** boîte de dialogue) fournit un moyen rapide de rechercher et de recherche les propriétés qui sont disponibles dans le contexte actuel. Elle comporte une zone de recherche spéciale et possède une syntaxe simple pour aider à filtrer les résultats :  
   
  Aucun préfixe :  
  Effectuer une recherche dans les noms de propriétés uniquement (la sous-chaîne ne respecte pas la casse).  
@@ -120,7 +115,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
  v :  
  Effectuer une recherche uniquement dans les valeurs (la sous-chaîne ne respecte pas la casse).  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>Macros de page de propriété  
+##  <a name="bkmkPropertiesVersusMacros"></a> Macros de page de propriété  
  A *macro* est une constante de compilation peut faire référence à une valeur qui est définie par Visual Studio ou le système MSBuild ou à une valeur définie par l’utilisateur. L'utilisation de macros au lieu de valeurs codées en dur telles que les chemins d'accès aux répertoires permet de partager facilement des paramètres de propriétés entre les ordinateurs et entre les versions de Visual Studio et de mieux s'assurer que les paramètres de projet participent correctement à l'héritage de propriété. Vous pouvez utiliser l’éditeur de propriétés pour afficher les valeurs de toutes les macros disponibles.  
   
 ### <a name="predefined-macros"></a>Macros prédéfinies  
@@ -146,13 +141,13 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
 ## <a name="property-editor"></a>Éditeur de propriétés  
  Vous pouvez utiliser l'Éditeur de propriétés pour modifier certaines propriétés de type chaîne et sélectionner des macros comme valeurs. Pour accéder à l'Éditeur de propriétés, sélectionnez une propriété dans une page de propriétés, puis cliquez sur la flèche vers le bas située à droite. Si la liste déroulante contient  **\<Modifier >**, vous pouvez la choisir pour afficher l’éditeur de propriétés pour cette propriété.  
   
- ![Propriété &#95; Éditeur de &#95; la liste déroulante](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![Propriété&#95;éditeur&#95;déroulante](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  Dans l’éditeur de propriétés, vous pouvez choisir le **Macros** bouton pour afficher les macros disponibles et leurs valeurs actuelles. L’illustration suivante montre l’éditeur de propriétés pour le **autres répertoires Include** propriété après la **Macros** bouton a été choisi. Lorsque le **hériter des paramètres par défaut parent ou du projet** case à cocher est activée et vous ajoutez une nouvelle valeur, il est ajouté à toutes les valeurs actuellement héritées. Si vous désactivez la case à cocher, votre nouvelle valeur remplace les valeurs héritées. Dans la plupart des cas, laissez la case à cocher activée.  
   
- ![Éditeur de propriétés, Visual C &#43; &#43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![Éditeur de propriétés, Visual C#&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>Création de configurations de propriétés réutilisables  
+##  <a name="bkmkPropertySheets"></a> Création de configurations de propriétés réutilisables  
  Nous ne recommandons plus de définir les propriétés « globales » sur la base de chaque utilisateur et de chaque ordinateur. Au lieu de cela, nous vous recommandons d’utiliser **Gestionnaire de propriétés** pour créer un *feuille de propriétés* pour stocker les paramètres de chaque genre de projet que vous souhaitez pouvoir réutiliser ou partager avec d’autres utilisateurs. Avec les feuilles de propriétés, il est également moins probable que les paramètres de propriétés pour d’autres types de projets soient modifiés par inadvertance. Feuilles de propriétés sont présentées plus en détail [création de configurations de propriétés réutilisables](#bkmkPropertySheets).  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ Dans l’IDE, toutes les informations nécessaires pour générer un projet sont
   
 3.  Dans **Gestionnaire de propriétés**, ouvrez la nouvelle feuille de propriétés, puis définissez les propriétés que vous souhaitez inclure.  
   
-##  <a name="bkmkPropertyInheritance"></a>Héritage de propriété  
+##  <a name="bkmkPropertyInheritance"></a> Héritage de propriété  
  Les propriétés de projet sont superposées. Chaque couche hérite des valeurs de la couche précédente, mais une valeur héritée peut être substituée en définissant la propriété explicitement. Voici l’arborescence d’héritage de base :  
   
 1.  Paramètres par défaut de l’ensemble d’outils MSBuild CPP (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, qui est importé par le fichier .vcxproj.)  

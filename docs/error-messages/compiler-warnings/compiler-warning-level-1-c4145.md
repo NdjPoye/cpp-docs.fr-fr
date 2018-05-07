@@ -1,13 +1,10 @@
 ---
 title: Compilateur avertissement (niveau 1) C4145 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4145
 dev_langs:
@@ -15,25 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56f447fb58f8c8b89afd66d9e9cb906ea261e31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5803c8fee49c294823da4ecdb2b04638b763c00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="compiler-warning-level-1-c4145"></a>Avertissement du compilateur (niveau 1) C4145
+# <a name="compiler-warning-level-1-c4145"></a>Avertissement du compilateur (niveau 1) C4145
 'expression1' : expression relationnelle comme expression de switch ; risque de confusion avec 'expression2'  
   
  Une instruction `switch` utilise une expression relationnelle comme son expression de contrôle, ce qui produit une valeur booléenne pour les instructions **case** . Voulez-vous utiliser *expression2*?  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant génère l’avertissement C4145 :  
+ L’exemple suivant génère l’avertissement C4145 :  
   
 ```  
 // C4145.cpp  

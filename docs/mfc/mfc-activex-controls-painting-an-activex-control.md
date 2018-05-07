@@ -1,30 +1,25 @@
 ---
-title: "Contrôles ActiveX MFC : Peinture d’un contrôle ActiveX | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Peinture d’un contrôle ActiveX | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Contrôles ActiveX MFC : peinture d'un contrôle ActiveX
 Cet article décrit le processus de peinture du contrôle ActiveX et le mode de modification du code de peinture pour optimiser le processus. (Consultez [optimisation du dessin de contrôle](../mfc/optimizing-control-drawing.md) pour restaurent les objets GDI précédemment sélectionnés des techniques permettant d’optimiser le dessin sans que les contrôles individuellement. Une fois que tous les contrôles sont dessinés, le conteneur peut automatiquement restaurer les objets d'origine).  
@@ -39,7 +34,7 @@ Cet article décrit le processus de peinture du contrôle ActiveX et le mode de 
   
 -   [Comment peindre votre contrôle à l’aide de métafichiers](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>Le processus de peinture d’un contrôle ActiveX  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> Le processus de peinture d’un contrôle ActiveX  
  Lorsque les contrôles ActiveX sont initialement affichés ou redessinés, ils suivent un processus de peinture semblable à d'autres applications développées à l'aide de MFC, avec une distinction importante : les contrôles ActiveX peuvent être dans un état actif ou inactif.  
   
  Un contrôle actif est représenté dans un conteneur de contrôles ActiveX par une fenêtre enfant. Comme d'autres fenêtres, il est chargé de se peindre lorsqu'un message `WM_PAINT` est reçu. Classe de base du contrôle, [COleControl](../mfc/reference/colecontrol-class.md), gère ce message dans son `OnPaint` (fonction). Cette implémentation par défaut appelle la fonction `OnDraw` de votre contrôle.  
@@ -62,14 +57,14 @@ Cet article décrit le processus de peinture du contrôle ActiveX et le mode de 
 > [!NOTE]
 >  Lorsque vous dessinez un contrôle, vous ne devez pas vous hypothèses concernant l’état du contexte de périphérique qui est passé en tant que le *pdc* paramètre à la `OnDraw` (fonction). Occasionnellement le contexte de périphérique est fourni par l'application conteneur et n'est pas nécessairement initialisé à l'état par défaut. En particulier, sélectionnez explicitement les stylets, pinceaux, couleurs, polices et autres ressources dont votre code de dessin dépend.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Optimisation de votre Code de peinture  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimisation de votre Code de peinture  
  Lorsque le contrôle se peint avec succès, l'étape suivante consiste à optimiser la fonction `OnDraw`.  
   
  L'implémentation par défaut du contrôle de peinture ActiveX peint la zone de contrôle entière. Ceci suffit pour les contrôles simples, mais dans de nombreux cas, redessiner le contrôle serait plus rapide si seulement la partie qui nécessitait une mise à jour était repeinte, au lieu du contrôle entier.  
   
  La fonction `OnDraw` fournit une méthode d'optimisation simple en passant `rcInvalid`, le champ rectangulaire de contrôle qui requiert d'être redessiné. Utilisez cette zone, généralement inférieure à la zone de contrôle entière, pour accélérer le processus de peinture.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Peinture de votre contrôle à l’aide de métafichiers  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Peinture de votre contrôle à l’aide de métafichiers  
  Dans la plupart des cas le paramètre `pdc` de la fonction `OnDraw` pointe sur un contexte d'écran de périphérique (DC). Toutefois, lors de l'impression d'images du contrôle ou lors d'une session d'aperçu avant impression, le contrôleur de domaine reçu pour affichage est un type spécial appelé "contexte de périphérique de métafichier". Contrairement à un écran contrôleur de domaine, qui gère à la fois les demandes qui lui sont envoyées, les métafichiers DC stocke les demandes qui doivent être traitées ultérieurement. Certaines applications conteneur peuvent également choisir d'afficher l'image de contrôle lorsqu'il se trouve en mode création à l'aide d'un métafichier DC.  
   
  Demandes de dessin de métafichier est possible par le conteneur via deux fonctions d’interface : **IViewObject::Draw** (cette fonction peut également être appelée pour un dessin non métafichier) et **IDataObject::GetData**. Lorsqu’un métafichier est passé en tant qu’un des paramètres, le framework MFC passe un appel à [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Puisqu'il s'agit d'une fonction membre virtuelle, remplacez cette fonction dans la classe de contrôle pour effectuer tout traitement spécial. Le comportement par défaut appelle `COleControl::OnDraw`.  
@@ -80,11 +75,11 @@ Cet article décrit le processus de peinture du contrôle ActiveX et le mode de 
   
 |Arc|BibBlt|Chord|  
 |---------|------------|-----------|  
-|**Ellipse**|**Séquence d’échappement**|`ExcludeClipRect`|  
+|**ellipse**|**Échap**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**Polygone**|`Polyline`|  
+|`Pie`|**polygone**|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  

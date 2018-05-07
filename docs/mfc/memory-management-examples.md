@@ -1,13 +1,10 @@
 ---
-title: "Gestion de la mémoire : Exemples | Documents Microsoft"
-ms.custom: 
+title: 'Gestion de la mémoire : Exemples | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>Gestion de la mémoire : exemples
 Cet article décrit la façon dont MFC effectue les allocations de frame et les allocations de tas pour chacun des trois types d’allocations de mémoire :  
@@ -49,7 +44,7 @@ Cet article décrit la façon dont MFC effectue les allocations de frame et les 
   
 -   [Un objet](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>Allocation d’un tableau d’octets  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocation d’un tableau d’octets  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Pour allouer un tableau d’octets sur le frame  
   
@@ -69,7 +64,7 @@ Cet article décrit la façon dont MFC effectue les allocations de frame et les 
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>Allocation d’une Structure de données  
+##  <a name="_core_allocation_of_a_data_structure"></a> Allocation d’une Structure de données  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>Pour allouer une structure de données sur le frame  
   
@@ -85,7 +80,7 @@ Cet article décrit la façon dont MFC effectue les allocations de frame et les 
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>Allocation d’un objet  
+##  <a name="_core_allocation_of_an_object"></a> Allocation d’un objet  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>Pour allouer un objet sur le frame  
   

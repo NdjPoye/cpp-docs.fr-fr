@@ -1,13 +1,10 @@
 ---
-title: "Fonctions d’échange de données de la boîte de dialogue pour contrôles OLE | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’échange de données de la boîte de dialogue pour contrôles OLE | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Fonctions d'échange de données de boîtes de dialogue pour contrôles OLE
 Cette rubrique répertorie les fonctions DDX_OC utilisées pour échanger des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, mode formulaire ou un objet de vue de contrôle et un membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
@@ -59,7 +54,7 @@ Cette rubrique répertorie les fonctions DDX_OC utilisées pour échanger des do
 |[DDX_OCText](#ddx_octext)|Gère le transfert de **CString** des données entre une propriété d’un contrôle OLE et un **CString** membre de données.|  
 |[DDX_OCTextRO](#ddx_octextro)|Gère le transfert de **CString** des données entre une propriété en lecture seule d’un contrôle OLE et un **CString** membre de données.|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
  Le `DDX_OCBool` fonction gère le transfert de **BOOL** des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **BOOL** membre de données de la boîte de dialogue, vue de formulaire, ou objet de vue de contrôle.  
   
 ```   
@@ -86,10 +81,10 @@ void AFXAPI DDX_OCBool(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête :** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
  Le `DDX_OCBoolRO` fonction gère le transfert de **BOOL** des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **BOOL** membre de données de la boîte de dialogue mode formulaire, ou un objet de vue de contrôle.  
   
 ```   
@@ -116,10 +111,10 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
  Le `DDX_OCColor` fonction gère le transfert de **OLE_COLOR** des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **OLE_COLOR** membre de données de la boîte de dialogue mode formulaire, ou un objet de vue de contrôle.  
   
 ```   
@@ -146,10 +141,10 @@ void AFXAPI DDX_OCColor(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
  Le `DDX_OCColorRO` fonction gère le transfert de **OLE_COLOR** des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **OLE_COLOR** membre de données de la boîte de dialogue, vue de formulaire ou objet de vue de contrôle.  
   
 ```   
@@ -176,10 +171,10 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
  Le `DDX_OCFloat` fonction gère le transfert de **float** (ou **double**) des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **float** (ou **double**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
@@ -212,10 +207,10 @@ void AFXAPI DDX_OCFloat(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
  Le `DDX_OCFloatRO` fonction gère le transfert de **float** (ou **double**) des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un  **float** (ou **double**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
@@ -248,10 +243,10 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
  Le `DDX_OCInt` fonction gère le transfert de `int` (ou **long**) des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un `int` (ou **long**) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
@@ -284,10 +279,10 @@ void AFXAPI DDX_OCInt(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
  Le `DDX_OCIntRO` fonction gère le transfert de `int` (ou **long**) des données entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un `int` (ou **long** ) membre de données de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
@@ -320,10 +315,10 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
  Le `DDX_OCShort` fonction gère le transfert de données de type short entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire, ou objet de vue de contrôle et un membre de données de type short de la boîte de dialogue mode formulaire, ou objet de vue de contrôle.  
   
 ```   
@@ -350,10 +345,10 @@ void AFXAPI DDX_OCShort(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
  Le `DDX_OCShortRO` fonction gère le transfert de données de type short entre une propriété en lecture seule d’un contrôle OLE dans une boîte de dialogue, vue de formulaire, ou objet de vue de contrôle et un membre de données de type short de la boîte de dialogue mode formulaire, ou objet de vue de contrôle.  
   
 ```   
@@ -380,10 +375,10 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>  DDX_OCText  
  Le **DDX_OCText** fonction gère le transfert de **CString** des données entre une propriété d’un contrôle OLE dans une boîte de dialogue, vue de formulaire ou objet de vue de contrôle et un **CString** données membre de la boîte de dialogue, un mode formulaire ou un objet de vue de contrôle.  
   
 ```   
@@ -410,10 +405,10 @@ void AFXAPI DDX_OCText(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
  La fonction `DDX_OCTextRO` gère le transfert de données `CString` entre une propriété en lecture seule d’un contrôle OLE d’objet boîte de dialogue, vue de formulaire ou vue de contrôle et un membre de données `CString` de l’objet boîte de dialogue, vue de formulaire ou vue de contrôle.  
   
 ```  
@@ -440,7 +435,7 @@ void AFXAPI DDX_OCTextRO(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h
     
 ## <a name="see-also"></a>Voir aussi  

@@ -1,12 +1,9 @@
 ---
 title: Erreur du compilateur C3832 | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3832
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 399d6030ec9f27139b72955759917e9b615ba96a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bc751880826731c3943028a935e26936b73240f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3832"></a>Erreur du compilateur C3832
 'bibliothèque de types' : bibliothèque de types semble comme si elle a été créée pour des pointeurs 32 bits ; Veuillez modifier le qualificateur 'ptrsize'  

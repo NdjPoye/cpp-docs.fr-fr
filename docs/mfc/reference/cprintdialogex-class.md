@@ -1,12 +1,9 @@
 ---
 title: Classe de CPrintDialogEx | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>Classe de CPrintDialogEx
 Encapsule les services fournis par la feuille de propriétés d’impression Windows.  
@@ -137,7 +132,7 @@ class CPrintDialogEx : public CCommonDialog
   
  `CPrintDialogEx`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Notes  
  Crée un contexte de périphérique (DC) à partir de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
   
- `GetDefaults`n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le **hDevNames** et **hDevMode** membres de [m_pdex](#m_pdex) aux handles le [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES ](../../mfc/reference/devnames-structure.md) des structures qui sont initialisés pour l’imprimante par défaut. Les deux **hDevNames** et **hDevMode** doit être NULL, ou `GetDefaults` échoue.  
+ `GetDefaults` n’affiche pas la feuille de propriétés d’impression. Au lieu de cela, il définit le **hDevNames** et **hDevMode** membres de [m_pdex](#m_pdex) aux handles le [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) et [DEVNAMES ](../../mfc/reference/devnames-structure.md) des structures qui sont initialisés pour l’imprimante par défaut. Les deux **hDevNames** et **hDevMode** doit être NULL, ou `GetDefaults` échoue.  
   
  Si le **PD_RETURNDC** indicateur est défini, cette fonction seulement retourneront **hDevNames** et **hDevMode** (situé dans **m_pdex.hDevNames** et **m_pdex.hDevMode**) à l’appelant, mais retourne également un périphérique d’impression dans **m_pdex.hDC**. Il incombe à l’appelant de supprimer le contrôleur de domaine de l’imprimante et appeler les fenêtres [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) fonction sur les poignées lorsque vous avez terminé avec le `CPrintDialogEx` objet.  
   

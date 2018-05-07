@@ -1,13 +1,10 @@
 ---
-title: "Utilisation du contrôle de barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Utilisation du contrôle de barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>Utilisation du contrôle ToolBar
 Cet article explique comment vous pouvez accéder à la [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet sous-jacent un [CToolBar](../mfc/reference/ctoolbar-class.md) pour mieux contrôler vos barres d’outils. Il s’agit d’une rubrique avancée.  
@@ -37,7 +32,7 @@ Cet article explique comment vous pouvez accéder à la [CToolBarCtrl](../mfc/re
   
 1.  Appelez [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl`Retourne une référence à un [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet. Vous pouvez utiliser la référence pour appeler des fonctions membres de la classe de contrôle de barre d’outils.  
+ `GetToolBarCtrl` Retourne une référence à un [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objet. Vous pouvez utiliser la référence pour appeler des fonctions membres de la classe de contrôle de barre d’outils.  
   
 > [!CAUTION]
 >  Lors de l’appel `CToolBarCtrl` **obtenir** fonctions est sécurisé, soyez prudent si vous appelez le **définir** fonctions. Il s’agit d’une rubrique avancée. Vous ne devez pas normalement besoin accéder au contrôle sous-jacent de la barre d’outils.  

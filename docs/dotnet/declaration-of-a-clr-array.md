@@ -2,29 +2,24 @@
 title: Déclaration d’un tableau CLR | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d8b2a5d348887d56a1221a5a9125449e5356b9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-array"></a>Déclaration d'un tableau CLR
 La syntaxe de déclaration, instancier et initialiser un tableau managé a changé entre les Extensions managées pour C++ vers Visual C++.  
@@ -43,7 +38,7 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
- Comme un type référence est un handle de suivi plutôt qu’un objet, il est possible de spécifier un tableau CLR comme type de retour d’une fonction. (En revanche, il n’est pas possible de spécifier le tableau natif comme type de retour d’une fonction.) La syntaxe de cette opération dans les Extensions managées était quelque peu non intuitive. Exemple :  
+ Comme un type référence est un handle de suivi plutôt qu’un objet, il est possible de spécifier un tableau CLR comme type de retour d’une fonction. (En revanche, il n’est pas possible de spécifier le tableau natif comme type de retour d’une fonction.) La syntaxe de cette opération dans les Extensions managées était quelque peu non intuitive. Par exemple :  
   
 ```  
 Int32 f() [];  
@@ -57,7 +52,7 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
- L’initialisation de la forme abrégée d’un tableau managé local est pris en charge dans les deux versions du langage. Exemple :  
+ L’initialisation de la forme abrégée d’un tableau managé local est pris en charge dans les deux versions du langage. Par exemple :  
   
 ```  
 int GetArray() __gc[] {  
@@ -93,7 +88,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- Dans la nouvelle syntaxe, une liste d’initialisation explicite peut suivre le `gcnew` expression ; cela n’était pas prise en charge dans les Extensions managées. Exemple :  
+ Dans la nouvelle syntaxe, une liste d’initialisation explicite peut suivre le `gcnew` expression ; cela n’était pas prise en charge dans les Extensions managées. Par exemple :  
   
 ```  
 // explicit initialization list following gcnew   

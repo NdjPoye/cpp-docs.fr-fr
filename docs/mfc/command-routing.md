@@ -1,13 +1,10 @@
 ---
 title: Routage des commandes | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>routage des commandes
 Votre responsabilité quant à l’utilisation des commandes se limite à l’établissement de connexions de table des messages entre les commandes et leurs fonctions gestionnaires, une tâche pour laquelle vous utilisez la fenêtre Propriétés. Vous devez également écrire la plupart des gestionnaires de commandes.  
@@ -48,7 +43,7 @@ Votre responsabilité quant à l’utilisation des commandes se limite à l’é
   
 |Quand un objet de ce type reçoit une commande. . .|Il se donne à lui-même et à d’autres objets cibles de commande une occasion de gérer la commande dans cet ordre :|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Fenêtre frame MDI  (`CMDIFrameWnd`)|1.  Active`CMDIChildWnd`<br />2.  Cette fenêtre frame<br />3.  Application (`CWinApp` objet)|  
+|Fenêtre frame MDI  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  Cette fenêtre frame<br />3.  Application (`CWinApp` objet)|  
 |Fenêtre frame de document  (`CFrameWnd`, `CMDIChildWnd`)|1.  Vue active<br />2.  Cette fenêtre frame<br />3.  Application (`CWinApp` objet)|  
 |Vue|1.  Cette vue<br />2.  Document associé à la vue|  
 |Document|1.  Ce document<br />2.  Modèle de document associé au document|  

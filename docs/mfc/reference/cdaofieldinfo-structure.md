@@ -2,12 +2,9 @@
 title: Cdaofieldinfo, Structure | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo, structure
 Le `CDaoFieldInfo` structure contient des informations sur un objet de champ défini pour les objets d’accès aux données (DAO).  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary** binaire longue (objet OLE) ; vous souhaiterez peut-être utiliser la classe MFC [CByteArray](../../mfc/reference/cbytearray-class.md) au lieu de la classe `CLongBinary` comme `CByteArray` plus riche et plus facile à utiliser.  
   
-- **dbMemo** avoir ; voir MFC, classe`CString`  
+- **dbMemo** avoir ; voir MFC, classe `CString`  
   
 - **dbGUID** un identificateur global Unique identificateur/universellement Unique utilisée avec les appels de procédure distante. Pour plus d’informations, consultez la rubrique « Propriété de Type » dans l’aide de DAO.  
   
@@ -106,7 +101,7 @@ struct CDaoFieldInfo
 |**dbGUID**|16|Un identificateur global Unique identificateur/universellement Unique utilisée avec les appels de procédure distante.|  
   
  `m_lAttributes`  
- Spécifie les caractéristiques d’un objet de champ contenus par un tabledef, le jeu d’enregistrements, querydef ou objet index. La valeur retournée peut être une somme de ces constantes, créé avec C++ au niveau du bit OR (**&#124;**) opérateur :  
+ Spécifie les caractéristiques d’un objet de champ contenus par un tabledef, le jeu d’enregistrements, querydef ou objet index. La valeur retournée peut être une somme de ces constantes, créé avec C++ au niveau du bit OR (**&#124;**) (opérateur) :  
   
 - **dbFixedField** la taille du champ est fixe (valeur par défaut pour les champs numériques).  
   
@@ -159,9 +154,9 @@ struct CDaoFieldInfo
   
  Outre son utilisation pour l’examen des propriétés de l’objet, vous pouvez également utiliser `CDaoFieldInfo` pour construire un paramètre d’entrée pour la création de nouveaux champs dans un objet tabledef. Options plus simples sont disponibles pour cette tâche, mais si vous souhaitez un contrôle plus précis, vous pouvez utiliser la version de [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) qui accepte un `CDaoFieldInfo` paramètre.  
   
- Les informations extraites par le `GetFieldInfo` fonction membre (de la classe qui contient le champ) est stockée dans un `CDaoFieldInfo` structure. Appelez le `GetFieldInfo` fonction membre de l’objet conteneur dans dont la collection de champs est stocké l’objet de champ. `CDaoFieldInfo`définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoFieldInfo` objet.  
+ Les informations extraites par le `GetFieldInfo` fonction membre (de la classe qui contient le champ) est stockée dans un `CDaoFieldInfo` structure. Appelez le `GetFieldInfo` fonction membre de l’objet conteneur dans dont la collection de champs est stocké l’objet de champ. `CDaoFieldInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoFieldInfo` objet.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  

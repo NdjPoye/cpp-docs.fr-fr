@@ -1,13 +1,10 @@
 ---
-title: "Dériver des contrôles d’un contrôle Standard | Documents Microsoft"
-ms.custom: 
+title: Dériver des contrôles d’un contrôle Standard | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Dériver des contrôles d'un contrôle standard
 Comme avec n’importe quelle [CWnd](../mfc/reference/cwnd-class.md)-classe dérivée, vous pouvez modifier le comportement d’un contrôle en dérivant une classe nouvelle à partir d’une classe de contrôle existante.  
@@ -49,7 +44,7 @@ Comme avec n’importe quelle [CWnd](../mfc/reference/cwnd-class.md)-classe dér
   
 2.  Remplacer la `OnInitDialog` fonction membre dans votre classe de boîte de dialogue pour appeler le `SubclassDlgItem` fonction membre pour le contrôle dérivé.  
   
- `SubclassDlgItem`« sous-classe dynamiquement » un contrôle créé à partir d’un modèle de boîte de dialogue. Lorsqu’un contrôle sous-classé de façon dynamique, vous raccordez à Windows, traiter des messages au sein de votre propre application, puis passez les messages restants à Windows. Pour plus d’informations, consultez la [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) fonction membre de classe `CWnd` dans les *référence MFC*. L’exemple suivant montre comment vous pouvez écrire une substitution de `OnInitDialog` pour appeler `SubclassDlgItem`:  
+ `SubclassDlgItem` « sous-classe dynamiquement » un contrôle créé à partir d’un modèle de boîte de dialogue. Lorsqu’un contrôle sous-classé de façon dynamique, vous raccordez à Windows, traiter des messages au sein de votre propre application, puis passez les messages restants à Windows. Pour plus d’informations, consultez la [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) fonction membre de classe `CWnd` dans les *référence MFC*. L’exemple suivant montre comment vous pouvez écrire une substitution de `OnInitDialog` pour appeler `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

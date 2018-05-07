@@ -1,12 +1,9 @@
 ---
 title: Cmfcmenubutton, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton, classe
 Bouton qui affiche un menu contextuel et signale les sélections de l'utilisateur dans les menus.  
@@ -80,7 +75,7 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="remarks"></a>Notes  
  Le `CMFCMenuButton` classe est dérivée de la [CMFCButton classe](../../mfc/reference/cmfcbutton-class.md) qui est, à son tour, dérivée de la [CButton classe](../../mfc/reference/cbutton-class.md). Par conséquent, vous pouvez utiliser `CMFCMenuButton` dans votre code de la même façon que vous utiliseriez `CButton`.  
   
- Lorsque vous créez un `CMFCMenuButton`, vous devez passer un handle pour le menu contextuel associé. Ensuite, appelez la fonction `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent`vérifie que la taille du bouton est suffisante pour inclure une flèche qui pointe vers l’emplacement où la fenêtre contextuelle s’affiche - à savoir, en dessous ou à droite du bouton.  
+ Lorsque vous créez un `CMFCMenuButton`, vous devez passer un handle pour le menu contextuel associé. Ensuite, appelez la fonction `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` vérifie que la taille du bouton est suffisante pour inclure une flèche qui pointe vers l’emplacement où la fenêtre contextuelle s’affiche - à savoir, en dessous ou à droite du bouton.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment définir le handle du menu associé au bouton, redimensionner le bouton en fonction de sa taille de texte et image et le menu contextuel qui s’affiche par l’infrastructure. Cet extrait de code fait partie de la [exemple nouveaux contrôles](../../visual-cpp-samples.md).  
@@ -101,17 +96,17 @@ class CMFCMenuButton : public CMFCButton
   
  [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmenubutton.h  
   
-##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
  Construit un nouveau [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) objet.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
  Une variable membre de type Boolean qui indique le menu contextuel de l’infrastructure affiche.  
   
 ```  
@@ -121,7 +116,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Notes  
  Si `m_bOSMenu` est `TRUE`, le framework appelle hérité `TrackPopupMenu` méthode pour cet objet. Sinon, le framework appelle [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
  Une variable de membre de type Boolean qui indique l’emplacement du menu contextuel.  
   
 ```  
@@ -131,7 +126,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur appuie sur le bouton de menu, l’application affiche un menu contextuel. L’infrastructure affiche le menu contextuel en cliquant sur le bouton ou à droite du bouton. Il comporte également une petite flèche qui indique où le menu contextuel s’affiche. Si `m_bRightArrow` est `TRUE`, l’infrastructure affiche le menu contextuel à droite du bouton. Sinon, elle affiche le menu contextuel sous le bouton.  
   
-##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
  Une variable membre de type Boolean qui indique si le bouton de menu s’affiche enfoncée pendant que l’utilisateur effectue une sélection dans le menu contextuel.  
   
 ```  
@@ -143,7 +138,7 @@ BOOL m_bStayPressed;
   
  Si le `m_bStayPressed` membre est `TRUE`, le bouton de menu est activé lorsque l’utilisateur clique sur le bouton. Il reste enfoncé jusqu'à une fois que l’utilisateur ferme le menu contextuel, en effectuant une sélection ou d’annulation.  
   
-##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
  Le handle du menu attaché.  
   
 ```  
@@ -153,7 +148,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Notes  
  L’infrastructure affiche le menu indiqué par cette variable membre lorsque l’utilisateur clique sur le bouton de menu.  
   
-##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
  Entier qui indique quel élément de l’utilisateur sélectionne dans le menu contextuel.  
   
 ```  
@@ -163,7 +158,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Notes  
  La valeur de cette variable de membre est zéro si l’utilisateur annule le menu sans effectuer de sélection, ou si une erreur se produit.  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
  Appelé par l’infrastructure pour traduire les messages de fenêtre avant qu’ils soient distribués.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
  Modifie la taille du bouton en fonction de sa taille du texte et la taille de l’image.  
   
 ```  

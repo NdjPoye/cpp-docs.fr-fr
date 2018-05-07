@@ -1,12 +1,9 @@
 ---
 title: CDatabase (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDatabase
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb71b31fa3133b4e1b93564ef0b530cb20bb3dfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
 Représente une connexion à une source de données, par l'intermédiaire de laquelle vous pouvez utiliser la source de données.  
@@ -134,10 +129,10 @@ class CDatabase : public CObject
   
  `CDatabase`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
-##  <a name="begintrans"></a>CDatabase::BeginTrans  
+##  <a name="begintrans"></a>  CDatabase::BeginTrans  
  Appelez cette fonction membre pour commencer une transaction avec la source de données connectée.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL BeginTrans();
 ### <a name="example"></a>Exemple  
   Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="bindparameters"></a>CDatabase::BindParameters  
+##  <a name="bindparameters"></a>  CDatabase::BindParameters  
  Substituer `BindParameters` lorsque vous devez lier les paramètres avant d’appeler [CDatabase::ExecuteSQL](#executesql).  
   
 ```  
@@ -185,7 +180,7 @@ virtual void BindParameters(HSTMT hstmt);
   
  Dans la substitution, appelez **SQLBindParameters** et des fonctions ODBC pour lier les paramètres associées. MFC appelle la substitution avant votre appel à `ExecuteSQL`. Vous n’avez pas besoin d’appeler **SQLPrepare**; `ExecuteSQL` appelle **SQLExecDirect** et détruit la **hstmt**, qui est utilisé qu’une seule fois.  
   
-##  <a name="cancel"></a>CDatabase::Cancel  
+##  <a name="cancel"></a>  CDatabase::Cancel  
  Appelez cette fonction membre pour demander que la source de données annule une opération asynchrone en cours d’exécution ou un processus à partir d’un deuxième thread.  
   
 ```  
@@ -195,7 +190,7 @@ void Cancel();
 ### <a name="remarks"></a>Notes  
  Notez que les classes ODBC MFC ne plus utilisent le traitement asynchrone ; Pour effectuer une opération asynchrone, vous devez appeler directement la fonction d’API ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Pour plus d’informations, consultez [exécution asynchrone](https://msdn.microsoft.com/library/ms713563.aspx) dans le Kit de développement logiciel Windows.  
   
-##  <a name="cantransact"></a>CDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDatabase::CanTransact  
  Appelez cette fonction membre pour déterminer si la base de données permet aux transactions.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les transactions, consultez l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDatabase::CanUpdate  
  Appelez cette fonction membre pour déterminer si le `CDatabase` objet autorise les mises à jour.  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Notes  
  Pas de tous les pilotes prennent en charge les mises à jour.  
   
-##  <a name="cdatabase"></a>CDatabase::CDatabase  
+##  <a name="cdatabase"></a>  CDatabase::CDatabase  
  Construit un objet `CDatabase`.  
   
 ```  
@@ -240,7 +235,7 @@ CDatabase();
   
  [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="close"></a>CDatabase::Close  
+##  <a name="close"></a>  CDatabase::Close  
  Appelez cette fonction membre si vous souhaitez déconnecter d’une source de données.  
   
 ```  
@@ -255,7 +250,7 @@ virtual void Close();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="committrans"></a>CDatabase::CommitTrans  
+##  <a name="committrans"></a>  CDatabase::CommitTrans  
  Appelez cette fonction membre à la fin des transactions.  
   
 ```  
@@ -275,7 +270,7 @@ BOOL CommitTrans();
 ### <a name="example"></a>Exemple  
   Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="executesql"></a>CDatabase::ExecuteSQL  
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL  
  Appelez cette fonction membre lorsque vous avez besoin exécuter une commande SQL directement.  
   
 ```  
@@ -287,14 +282,14 @@ void ExecuteSQL(LPCTSTR lpszSQL);
  Pointeur vers une chaîne terminée par le caractère null qui contient une commande SQL valide à exécuter. Vous pouvez passer un [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Notes  
- Créer la commande sous forme de chaîne se terminant par null. `ExecuteSQL`ne retourne pas d’enregistrements de données. Si vous souhaitez opérer sur les enregistrements, utilisez à la place un objet recordset.  
+ Créer la commande sous forme de chaîne se terminant par null. `ExecuteSQL` ne retourne pas d’enregistrements de données. Si vous souhaitez opérer sur les enregistrements, utilisez à la place un objet recordset.  
   
  La plupart de vos commandes pour une source de données est émise par le biais des objets de jeu d’enregistrements, qui prennent en charge des commandes pour sélectionner des données, insérer de nouveaux enregistrements, supprimer des enregistrements et modifier les enregistrements. Toutefois, toutes les fonctionnalités ODBC sont directement pris en charge par les classes de base de données, vous devrez parfois effectuer un appel SQL direct avec `ExecuteSQL`.  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence  
  Appelez cette fonction membre pour déterminer la persistance des signets sur un objet recordset après certaines opérations.  
   
 ```  
@@ -321,7 +316,7 @@ DWORD GetBookmarkPersistence() const;
   
  Pour plus d’informations sur cette valeur de retour, reportez-vous à la fonction d’API ODBC **SQLGetInfo** dans le Kit de développement logiciel Windows. Pour plus d’informations sur les signets, consultez l’article [Recordset : signets et Positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="getconnect"></a>CDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDatabase::GetConnect  
  Appelez cette fonction membre pour récupérer la chaîne de connexion utilisée lors de l’appel à `OpenEx` ou `Open` connecté le `CDatabase` objet à une source de données.  
   
 ```  
@@ -334,7 +329,7 @@ const CString GetConnect() const;
 ### <a name="remarks"></a>Notes  
  Consultez [CDatabase::Open](#open) pour obtenir une description du mode de création de la chaîne de connexion.  
   
-##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior  
  Appelez cette fonction membre pour déterminer comment un [CommitTrans](#committrans) opération affecte les curseurs sur les objets de l’objet recordset ouvert.  
   
 ```  
@@ -355,7 +350,7 @@ int GetCursorCommitBehavior() const;
   
  Pour plus d’informations sur cette valeur de retour, reportez-vous à la fonction d’API ODBC **SQLGetInfo** dans le Kit de développement logiciel Windows. Pour plus d’informations sur les transactions, consultez l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior  
  Appelez cette fonction membre pour déterminer comment un [restauration](#rollback) opération affecte les curseurs sur les objets de l’objet recordset ouvert.  
   
 ```  
@@ -376,7 +371,7 @@ int GetCursorRollbackBehavior() const;
   
  Pour plus d’informations sur cette valeur de retour, reportez-vous à la fonction d’API ODBC **SQLGetInfo** dans le Kit de développement logiciel Windows. Pour plus d’informations sur les transactions, consultez l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+##  <a name="getdatabasename"></a>  CDatabase::GetDatabaseName  
  Appelez cette fonction membre pour récupérer le nom de la base de données actuellement connectée (à condition que la source de données définit un objet nommé appelé « database »).  
   
 ```  
@@ -391,7 +386,7 @@ CString GetDatabaseName() const;
   
  Par exemple, vous pourriez afficher ce nom dans un en-tête. Si une erreur se produit lors de la récupération du nom à partir d’ODBC, `GetDatabaseName` retourne vide **Cstring**.  
   
-##  <a name="isopen"></a>CDatabase::IsOpen  
+##  <a name="isopen"></a>  CDatabase::IsOpen  
  Appelez cette fonction membre pour déterminer si le `CDatabase` objet est actuellement connecté à une source de données.  
   
 ```  
@@ -401,7 +396,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la `CDatabase` objet est actuellement connecté ; sinon, 0.  
   
-##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
+##  <a name="m_hdbc"></a>  CDatabase::m_hdbc  
  Contient un handle publique à une connexion de source de données ODBC, un « handle de connexion ».  
   
 ### <a name="remarks"></a>Notes  
@@ -412,7 +407,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
+##  <a name="onsetoptions"></a>  CDatabase::OnSetOptions  
  L’infrastructure appelle cette fonction membre lors directement une instruction SQL avec la `ExecuteSQL` fonction membre.  
   
 ```  
@@ -424,9 +419,9 @@ virtual void OnSetOptions(HSTMT hstmt);
  Le handle d’instruction ODBC pour laquelle des options sont définies.  
   
 ### <a name="remarks"></a>Notes  
- `CRecordset::OnSetOptions`appelle également cette fonction membre.  
+ `CRecordset::OnSetOptions` appelle également cette fonction membre.  
   
- `OnSetOptions`définit la valeur de délai d’attente de connexion. Si des modifications ont été appels précédents à la `SetQueryTimeout` et une fonction membre `OnSetOptions` reflète les valeurs en cours ; sinon, il définit les valeurs par défaut.  
+ `OnSetOptions` définit la valeur de délai d’attente de connexion. Si des modifications ont été appels précédents à la `SetQueryTimeout` et une fonction membre `OnSetOptions` reflète les valeurs en cours ; sinon, il définit les valeurs par défaut.  
   
 > [!NOTE]
 >  Avant de 4.2 de MFC, `OnSetOptions` également définir le mode de traitement soit snychronous ou asynchrone. Depuis la version 4.2 de MFC, toutes les opérations sont synchrones. Pour effectuer une opération asynchrone, vous devez vous un appel direct à la fonction d’API ODBC **SQLSetPos**.  
@@ -435,7 +430,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  Substituer `OnSetOptions` si vous souhaitez définir des options supplémentaires. La substitution doit appeler la classe de base `OnSetOptions` avant ou après avoir appelé la fonction d’API ODBC **SQLSetStmtOption**. Suivez la méthode illustrée dans l’implémentation par défaut de `OnSetOptions`.  
   
-##  <a name="open"></a>CDatabase::Open  
+##  <a name="open"></a>  CDatabase::Open  
  Appelez cette fonction membre pour initialiser un nouvellement construit `CDatabase` objet.  
   
 ```  
@@ -483,7 +478,7 @@ virtual BOOL Open(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="openex"></a>CDatabase::OpenEx  
+##  <a name="openex"></a>  CDatabase::OpenEx  
  Appelez cette fonction membre pour initialiser un nouvellement construit `CDatabase` objet.  
   
 ```  
@@ -526,7 +521,7 @@ virtual BOOL OpenEx(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="rollback"></a>CDatabase::Rollback  
+##  <a name="rollback"></a>  CDatabase::Rollback  
  Appelez cette fonction membre pour annuler les modifications apportées lors d’une transaction.  
   
 ```  
@@ -546,7 +541,7 @@ BOOL Rollback();
 ### <a name="example"></a>Exemple  
   Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout  
  Appelez cette fonction membre — avant d’appeler `OpenEx` ou **ouvrir** — pour remplacer le nombre par défaut de secondes avant une tentatives données connexion à la source arrive à expiration.  
   
 ```  
@@ -562,7 +557,7 @@ void SetLoginTimeout(DWORD dwSeconds);
   
  La valeur par défaut pour les délais d’attente de connexion est de 15 secondes. Toutes les données sources ne prend en charge la possibilité de spécifier une valeur de délai d’attente de connexion. Si la source de données ne prend pas en charge le délai d’attente, vous obtenez la sortie de trace, mais pas une exception. La valeur 0 signifie « illimitée ».  
   
-##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDatabase::SetQueryTimeout  
  Appelez cette fonction membre pour le nombre de secondes avant les opérations suivantes sur le délai de source de données connectée.  
   
 ```  

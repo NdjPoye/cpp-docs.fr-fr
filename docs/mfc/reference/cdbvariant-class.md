@@ -1,12 +1,9 @@
 ---
 title: CDBVariant (classe) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBVariant
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c100dc1a101d1c880dd5bd44e0986690728b4e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (classe)
 Représente un type de données variant pour les classes ODBC MFC.  
@@ -101,19 +96,19 @@ class CDBVariant
 |[CDBVariant::m_pstringW](#m_pstringw)|Stocke un pointeur vers une large [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet.|  
   
 ## <a name="remarks"></a>Notes  
- `CDBVariant`ne dispose pas d’une classe de base.  
+ `CDBVariant` ne dispose pas d’une classe de base.  
   
- `CDBVariant`est semblable à [COleVariant](../../mfc/reference/colevariant-class.md); Cependant, `CDBVariant` n’utilise pas d’OLE. `CDBVariant`vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant`effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
+ `CDBVariant` est semblable à [COleVariant](../../mfc/reference/colevariant-class.md); Cependant, `CDBVariant` n’utilise pas d’OLE. `CDBVariant` Vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant` effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
   
  Classe [CRecordset](../../mfc/reference/crecordset-class.md) utilise `CDBVariant` objets dans les trois fonctions de membre : `GetFieldValue`, `GetBookmark`, et `SetBookmark`. Par exemple, `GetFieldValue` vous permet de récupérer dynamiquement des données dans une colonne. Étant donné que le type de données de la colonne ne peut pas être connu au moment de l’exécution `GetFieldValue` utilise un `CDBVariant` objet pour stocker les données de la colonne.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CDBVariant`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
-##  <a name="cdbvariant"></a>CDBVariant::CDBVariant  
+##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
  Crée une valeur NULL `CDBVariant` objet.  
   
 ```  
@@ -123,7 +118,7 @@ CDBVariant();
 ### <a name="remarks"></a>Notes  
  Définit le [m_dwType](#m_dwtype) membre de données **DBVT_NULL**.  
   
-##  <a name="clear"></a>CDBVariant::Clear  
+##  <a name="clear"></a>  CDBVariant::Clear  
  Appelez cette fonction membre pour effacer le `CDBVariant` objet.  
   
 ```  
@@ -135,25 +130,25 @@ void Clear();
   
  Le `CDBVariant` appels de destructeur **clair**.  
   
-##  <a name="m_boolval"></a>CDBVariant::m_boolVal  
+##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Stocke une valeur de type **BOOL**.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_boolVal** membre de données appartient à une union. Avant d’accéder à **m_boolVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_BOOL**, puis **m_boolVal** contient une valeur valide ; sinon, l’accès à **m_boolVal** produira des résultats non fiables.  
   
-##  <a name="m_chval"></a>CDBVariant::m_chVal  
+##  <a name="m_chval"></a>  CDBVariant::m_chVal  
  Stocke une valeur de type `unsigned char`.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_chVal** membre de données appartient à une union. Avant d’accéder à **m_chVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_UCHAR**, puis **m_chVal** contient une valeur valide ; sinon, l’accès à **m_chVal** produira des résultats non fiables.  
   
-##  <a name="m_dblval"></a>CDBVariant::m_dblVal  
+##  <a name="m_dblval"></a>  CDBVariant::m_dblVal  
  Stocke une valeur de type **double**.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_dblVal** membre de données appartient à une union. Avant d’accéder à **m_dblVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_DOUBLE**, puis **m_dblVal** contient une valeur valide ; sinon, l’accès à **m_dblVal** produira des résultats non fiables.  
   
-##  <a name="m_dwtype"></a>CDBVariant::m_dwType  
+##  <a name="m_dwtype"></a>  CDBVariant::m_dwType  
  Ce membre de données contient le type de données pour la valeur actuellement stockée dans le `CDBVariant` membre de données d’union de l’objet.  
   
 ### <a name="remarks"></a>Notes  
@@ -174,31 +169,31 @@ void Clear();
 |**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
 |**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
   
-##  <a name="m_fltval"></a>CDBVariant::m_fltVal  
+##  <a name="m_fltval"></a>  CDBVariant::m_fltVal  
  Stocke une valeur de type **float**.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_fltVal** membre de données appartient à une union. Avant d’accéder à **m_fltVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_SINGLE**, puis **m_fltVal** contient une valeur valide ; sinon, l’accès à **m_fltVal** produira des résultats non fiables.  
   
-##  <a name="m_ival"></a>CDBVariant::m_iVal  
+##  <a name="m_ival"></a>  CDBVariant::m_iVal  
  Stocke une valeur de type **court**.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_iVal** membre de données appartient à une union. Avant d’accéder à **m_iVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_SHORT**, puis **m_iVal** contient une valeur valide ; sinon, l’accès à **m_iVal** produira des résultats non fiables.  
   
-##  <a name="m_lval"></a>CDBVariant::m_lVal  
+##  <a name="m_lval"></a>  CDBVariant::m_lVal  
  Stocke une valeur de type **long**.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_lVal** membre de données appartient à une union. Avant d’accéder à **m_lVal**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_LONG**, puis **m_lVal** contient une valeur valide ; sinon, l’accès à **m_lVal** produira des résultats non fiables.  
   
-##  <a name="m_pbinary"></a>CDBVariant::m_pbinary  
+##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary  
  Stocke un pointeur vers un objet de type [CLongBinary](../../mfc/reference/clongbinary-class.md).  
   
 ### <a name="remarks"></a>Notes  
  Le **m_pbinary** membre de données appartient à une union. Avant d’accéder à **m_pbinary**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_BINARY**, puis **m_pbinary** contient un pointeur valide ; sinon, l’accès à **m_pbinary** produira des résultats non fiables.  
   
-##  <a name="m_pdate"></a>CDBVariant::m_pdate  
+##  <a name="m_pdate"></a>  CDBVariant::m_pdate  
  Stocke un pointeur vers un objet de type **TIMESTAMP_STRUCT**.  
   
 ### <a name="remarks"></a>Notes  
@@ -206,19 +201,19 @@ void Clear();
   
  Pour plus d’informations sur la **TIMESTAMP_STRUCT** de type de données, consultez la rubrique [les Types de données C](https://msdn.microsoft.com/library/ms714556.aspx) dans l’annexe D de la *de référence du programmeur ODBC* dans le Kit de développement logiciel Windows.  
   
-##  <a name="m_pstring"></a>CDBVariant::m_pstring  
+##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  Stocke un pointeur vers un objet de type [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Notes  
  Le **m_pstring** membre de données appartient à une union. Avant d’accéder à **m_pstring**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_STRING**, puis **m_pstring** contient un pointeur valide ; sinon, l’accès à **m_pstring** produira des résultats non fiables.  
   
-##  <a name="m_pstringa"></a>CDBVariant::m_pstringA  
+##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA  
  Stocke un pointeur vers ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet.  
   
 ### <a name="remarks"></a>Notes  
  Le **m_pstringA** membre de données appartient à une union. Avant d’accéder à **m_pstringA**, vérifiez tout d’abord la valeur de [CDBVariant::m_dwType](#m_dwtype). Si `m_dwType` a la valeur **DBVT_ASTRING**, puis **m_pstringA** contient un pointeur valide ; sinon, l’accès à **m_pstringA** produira des résultats non fiables.  
   
-##  <a name="m_pstringw"></a>CDBVariant::m_pstringW  
+##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW  
  Stocke un pointeur vers une large [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet.  
   
 ### <a name="remarks"></a>Notes  

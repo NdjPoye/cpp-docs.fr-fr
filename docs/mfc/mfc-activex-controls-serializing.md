@@ -1,13 +1,10 @@
 ---
-title: "Contrôles ActiveX MFC : Sérialisation | Documents Microsoft"
-ms.custom: 
+title: 'Contrôles ActiveX MFC : Sérialisation | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - _wVerMinor
 - DoPropExchange
@@ -24,20 +21,18 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b8f0520d1f071bb408f782b0f2370ef29f528e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-serializing"></a>Contrôles ActiveX MFC : sérialisation
-Cet article décrit comment sérialiser un contrôle ActiveX. La sérialisation est le processus de lire ou d’écrire sur un support de stockage permanent, tel qu’un fichier de disque. La bibliothèque Microsoft Foundation classes (MFC) fournit la prise en charge intégrée pour la sérialisation dans la classe `CObject`. `COleControl`étend cette prise en charge pour les contrôles ActiveX via l’utilisation d’un mécanisme d’échange de propriété.  
+Cet article décrit comment sérialiser un contrôle ActiveX. La sérialisation est le processus de lire ou d’écrire sur un support de stockage permanent, tel qu’un fichier de disque. La bibliothèque Microsoft Foundation classes (MFC) fournit la prise en charge intégrée pour la sérialisation dans la classe `CObject`. `COleControl` étend cette prise en charge pour les contrôles ActiveX via l’utilisation d’un mécanisme d’échange de propriété.  
   
  Sérialisation pour les contrôles ActiveX est implémentée en substituant [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Cette fonction, appelée pendant le chargement et l’enregistrement de l’objet contrôle, stocke toutes les propriétés implémentées avec une variable membre ou une variable membre avec notification de modification.  
   
@@ -49,7 +44,7 @@ Cet article décrit comment sérialiser un contrôle ActiveX. La sérialisation 
   
 -   [Mise en œuvre de la prise en charge de la Version](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a>Implémentation de la fonction DoPropExchange  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Implémentation de la fonction DoPropExchange  
  Lorsque vous utilisez l’Assistant contrôle ActiveX pour générer le projet de contrôle, plusieurs fonctions de gestionnaire par défaut sont automatiquement ajoutées à la classe de contrôle, y compris l’implémentation par défaut de [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). L’exemple suivant montre le code ajouté aux classes créées par l’Assistant contrôle ActiveX :  
   
  [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
@@ -80,10 +75,10 @@ Cet article décrit comment sérialiser un contrôle ActiveX. La sérialisation 
   
  Pour plus d’informations sur ces fonctions d’échange de propriété, consultez [persistance des contrôles OLE](../mfc/reference/persistence-of-ole-controls.md) dans les *référence MFC*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Personnalisation du comportement par défaut de DoPropExchange  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personnalisation du comportement par défaut de DoPropExchange  
  L’implémentation par défaut de **DoPropertyExchange** (comme indiqué dans la rubrique précédente), effectue un appel à la classe de base `COleControl`. Il sérialise le jeu de propriétés automatiquement pris en charge par `COleControl`, qui utilise l’espace de stockage à sérialiser uniquement les propriétés personnalisées du contrôle. Suppression de cet appel permet à votre objet à sérialiser uniquement les propriétés que vous considérez importantes. Les États de propriétés stock que le contrôle a implémenté ne sera pas sérialisées lors de l’enregistrement ou du chargement de l’objet contrôle sauf si vous ajoutez explicitement **PX_** appelle pour eux.  
   
-##  <a name="_core_implementing_version_support"></a>Mise en œuvre de la prise en charge de la Version  
+##  <a name="_core_implementing_version_support"></a> Mise en œuvre de la prise en charge de la Version  
  Prise en charge de la version permet un contrôle ActiveX révisé ajouter de nouvelles propriétés persistantes et toujours être en mesure de détecter et charger l’état persistant créé par une version antérieure du contrôle. Pour rendre une version du contrôle disponible dans le cadre de ses données persistantes, appelez [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) dans du contrôle `DoPropExchange` (fonction). Cet appel est automatiquement inséré si le contrôle ActiveX a été créé à l’aide de l’Assistant contrôle ActiveX. Il peut être supprimé si la prise en charge de la version n’est pas nécessaire. Toutefois, le coût de la taille du contrôle est très petite (4 octets) pour une flexibilité supplémentaire qui fournit des versions prises en charge.  
   
  Si le contrôle n’a pas créé avec l’Assistant contrôle ActiveX, ajoutez un appel à `COleControl::ExchangeVersion` en insérant la ligne suivante au début de votre `DoPropExchange` (fonction) (avant l’appel à `COleControl::DoPropExchange`) :  

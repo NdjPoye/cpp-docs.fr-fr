@@ -1,12 +1,9 @@
 ---
 title: auto_handle::operator! | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr.auto_handle.operator!
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!
 ms.assetid: 3f6c7729-3260-4842-87f9-c491c140b299
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d6b37b4f5eaaec603ee457558fb6a68161e6e1e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0e4ea5e5bc074795c48eaf63605e623c455dc69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autohandleoperator"></a>auto_handle::operator!
 Opérateur pour l’utilisation de `auto_handle` dans une expression conditionnelle.  
@@ -41,7 +36,7 @@ bool operator!();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si l’objet encapsulé n’est pas valide ; `false` dans le cas contraire.  
+ `true` Si l’objet encapsulé n’est pas valide ; `false` dans le cas contraire.  
   
 ## <a name="example"></a>Exemple  
   
@@ -72,7 +67,7 @@ s2 is valid
 s2 is now invalid  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Fichier d’en-tête** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  

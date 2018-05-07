@@ -1,11 +1,8 @@
 ---
-title: "Classe Platform::Collections :: vectorviewiterator | Documents Microsoft"
-ms.custom: 
+title: 'Classe Platform::Collections :: vectorviewiterator | Documents Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator, classe
 Fournit un itérateur Standard Template Library pour les objets dérivés de l’exécution de Windows`IVectorView` interface.  
@@ -73,7 +68,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator++, opérateur](#operator-increment)|Incrémente l'objet VectorViewIterator actuel.|  
 |[VectorViewIterator::operator+=, opérateur](#operator-plus-assign)|Incrémente le VectorViewIterator actuel par le décalage spécifié.|  
 |[VectorViewIterator::operator<, opérateur](#operator-less-than)|Indique si le VectorViewIterator actif est inférieur à un VectorViewIterator spécifié.|  
-|[VectorViewIterator::operator\<= Operator](#operator-less-than-or-equals)|Indique si le VectorViewIterator actif est inférieur ou égal à un VectorViewIterator spécifié.|  
+|[VectorViewIterator::operator\<= (opérateur)](#operator-less-than-or-equals)|Indique si le VectorViewIterator actif est inférieur ou égal à un VectorViewIterator spécifié.|  
 |[VectorViewIterator::operator-=, opérateur](#operator-minus-assign)|Décrémente le VectorViewIterator actif du décalage spécifié.|  
 |[VectorViewIterator::operator==, opérateur](#operator-equality)|Indique si le VectorViewIterator actif est égal à un VectorViewIterator spécifié.|  
 |[VectorViewIterator::operator>, opérateur](#operator-greater-than)|Indique si le VectorViewIterator actif est supérieur à un VectorViewIterator spécifié.|  
@@ -83,12 +78,12 @@ class VectorViewIterator;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `VectorViewIterator`  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  **En-tête :** collection.h  
   
  **Espace de noms :** Platform::Collections  
 
-## <a name="operator-arrow"></a>  VectorViewIterator::operator-&gt; Operator
+## <a name="operator-arrow"></a>  VectorViewIterator::operator -&gt; (opérateur)
 Récupère l'adresse de l'élément référencé par le VectorViewIterator actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -104,7 +99,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>  VectorViewIterator::operator-- Operator
+## <a name="operator-decrement"></a>  VectorViewIterator::operator--(opérateur)
 Décrémente le VectorViewIterator actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -124,7 +119,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>  VectorViewIterator::operator* Operator
+## <a name="operator-dereference"></a>  Opérateur de VectorViewIterator::operator
 Récupère une référence à l'élément spécifié par le VectorViewIterator actif.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -138,7 +133,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  VectorViewIterator::operator== Operator
+## <a name="operator-equality"></a>  VectorViewIterator::operator == (opérateur)
 Indique si le VectorViewIterator actif est égal à un VectorViewIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -156,7 +151,7 @@ bool operator==(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; Operator
+## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; (opérateur)
 Indique si le VectorViewIterator actif est supérieur à un VectorViewIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -175,7 +170,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= Operator
+## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= (opérateur)
 Indique si l'objet VectorViewIterator actuel est supérieur ou égal au VectorViewIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -194,7 +189,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  VectorViewIterator::operator++ Operator
+## <a name="operator-increment"></a>  VectorViewIterator::operator ++ (opérateur)
 Incrémente l'objet VectorViewIterator actuel.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -215,7 +210,7 @@ VectorViewIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>  VectorViewIterator::operator!= Operator
+## <a name="operator-inequality"></a>  VectorViewIterator::operator ! =, opérateur
 Indique si le VectorViewIterator actuel n'est pas égal à un VectorViewIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -233,7 +228,7 @@ bool operator!=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; Operator
+## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; (opérateur)
 Indique si le VectorIterator actuel est inférieur au VectorIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -251,7 +246,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= Operator
+## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= (opérateur)
 Indique si l'objet VectorIterator actuel est inférieur ou égal à un objet VectorIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -270,7 +265,7 @@ bool operator<=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-minus"></a>  VectorViewIterator::operator- Operator
+## <a name="operator-minus"></a>  VectorViewIterator::operator-(opérateur)
 Soustrait un nombre spécifié d'éléments de l'itérateur actuel en cédant un nouvel itérateur, ou un itérateur spécifié de l'itérateur actuel en cédant le nombre d'éléments entre les itérateurs.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -294,7 +289,7 @@ difference_type operator-(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-plus-equals"></a>  VectorViewIterator::operator+= Operator
+## <a name="operator-plus-equals"></a>  VectorViewIterator::operator += (opérateur)
 Incrémente le VectorViewIterator actuel par le décalage spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -312,7 +307,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>  VectorViewIterator::operator+ Operator
+## <a name="operator-plus"></a>  VectorViewIterator::operator + (opérateur)
 Retourne un VectorIterator qui référence l'élément au décalage spécifié à partir du VectorViewIterator spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -345,7 +340,7 @@ inline VectorViewIterator<T> operator+
   
 
 
-## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= Operator
+## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= (opérateur)
 Décrémente l'objet VectorIterator actuel du décalage spécifié.  
   
 ### <a name="syntax"></a>Syntaxe  

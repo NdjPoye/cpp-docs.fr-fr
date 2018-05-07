@@ -1,13 +1,10 @@
 ---
-title: "Comment : lire les compteurs de performances Windows (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: 'Comment : lire les compteurs de performances Windows (C + c++ / CLI) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - performance
 - performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a69f8c07572416a4f26c915a9bd81a434a45eb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Comment : lire les compteurs de performance Windows (C++/CLI)
 Certaines applications et certains sous-systèmes Windows exposent les données de performances via le système de performances Windows. Ces compteurs sont accessibles à l’aide de la <xref:System.Diagnostics.PerformanceCounterCategory> et <xref:System.Diagnostics.PerformanceCounter> classes, qui se trouvent dans le <xref:System.Diagnostics?displayProperty=fullName> espace de noms.  

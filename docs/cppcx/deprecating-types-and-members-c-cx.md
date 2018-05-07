@@ -1,24 +1,19 @@
 ---
-title: "Déconseiller des types et membres (C + c++ / CX) | Documents Microsoft"
-ms.custom: 
+title: Déconseiller des types et membres (C + c++ / CX) | Documents Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc0ef30006afb9fcad65bc64e3f12fe9586d920
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 5b82f22f996b0f52889bd76227647ab367118898
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Déconseiller des types et des membres (C++/CX)
 Dans C + c++ / CX, le fait de types Windows Runtime et de membres pour les producteurs et consommateurs à l’aide de la [déconseillées](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) attribut est pris en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.  

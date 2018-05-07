@@ -1,12 +1,9 @@
 ---
 title: Classe de CHtmlEditCtrlBase | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrlBase
@@ -229,17 +226,15 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545cf67ff790edeb2303f95365c34ca71e4dc7f6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditctrlbase-class"></a>Classe de CHtmlEditCtrlBase
 Représente un composant d'édition HTML.  
@@ -376,10 +371,10 @@ template <class T> class CHtmlEditCtrlBase
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxhtml.h  
   
-##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
+##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
  Ajoute une entrée dans la table de glyphe, qui spécifie les images à afficher des balises spécifiques en mode Création.  
   
 ```  
@@ -427,7 +422,7 @@ HRESULT AddToGlyphTable(
   
  Cette méthode envoie le [ID de commande IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
+##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
  Active ou désactive le gras au texte sélectionné.  
   
 ```  
@@ -440,7 +435,7 @@ HRESULT Bold() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="button"></a>CHtmlEditCtrlBase::Button  
+##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
  Remplace un contrôle de bouton sur la sélection actuelle.  
   
 ```  
@@ -457,7 +452,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
+##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
  Remplace un contrôle de case à cocher sur la sélection actuelle.  
   
 ```  
@@ -474,7 +469,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
+##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
  Efface la sélection actuelle.  
   
 ```  
@@ -487,7 +482,7 @@ HRESULT ClearSelection() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
+##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
  Copie la sélection actuelle dans le Presse-papiers.  
   
 ```  
@@ -500,7 +495,7 @@ HRESULT Copy() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
+##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
  Copie la sélection actuelle dans le Presse-papiers et supprime ensuite.  
   
 ```  
@@ -513,7 +508,7 @@ HRESULT Cut() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
+##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
  Supprime la sélection actuelle.  
   
 ```  
@@ -526,7 +521,7 @@ HRESULT Delete() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
+##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
  Remplace un contrôle de liste déroulante sur la sélection actuelle.  
   
 ```  
@@ -543,7 +538,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
+##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
  Supprime toutes les entrées de la table de glyphe qui masque toutes les images affichées pour les balises en mode Création.  
   
 ```  
@@ -556,7 +551,7 @@ HRESULT EmptyGlyphTable() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
+##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand  
  Exécute une commande.  
   
 ```  
@@ -596,7 +591,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Notes  
  Cette méthode fournit les fonctionnalités de [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
-##  <a name="font"></a>CHtmlEditCtrlBase::Font  
+##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  Ouvre une boîte de dialogue Police permettant à l’utilisateur de modifier la couleur du texte, la police et la taille de police de la sélection actuelle.  
   
 ```  
@@ -609,7 +604,7 @@ HRESULT Font() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
  Indique si la propriété de position d’un élément est « absolute ».  
   
 ```  
@@ -626,7 +621,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).  
   
-##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
+##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
  Récupère la couleur d’arrière-plan de la sélection actuelle.  
   
 ```  
@@ -643,7 +638,7 @@ HRESULT GetBackColor(int& nColor) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
+##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
  Récupère la balise de format de bloc actuel.  
   
 ```  
@@ -660,7 +655,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
+##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
  Récupère les chaînes correspondant aux balises de format de bloc disponible.  
   
 ```  
@@ -668,7 +663,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- *association de sécurité*  
+ *sa*  
  Les balises de format bloc disponible, comme un tableau de chaînes.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -677,7 +672,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM_GETBLOCKFMTS ID de commande](https://msdn.microsoft.com/library/aa769884.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
+##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
  Récupère le nom d’une ancre de signet.  
   
 ```  
@@ -694,7 +689,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).  
   
-##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
+##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument  
  Récupère l’objet de document.  
   
 ```  
@@ -708,7 +703,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
+##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
  Récupère le code HTML du document actif.  
   
 ```  
@@ -722,7 +717,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
+##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
  Récupère le titre du document.  
   
 ```  
@@ -736,7 +731,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
+##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
  Récupère un pointeur d’interface vers l’objet d’événement qui contient des informations relatives à l’événement le plus récent.  
   
 ```  
@@ -750,7 +745,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
+##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
  Récupère l’objet qui a déclenché l’événement.  
   
 ```  
@@ -764,7 +759,7 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
+##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
  Récupère le nom de la police pour la sélection actuelle.  
   
 ```  
@@ -783,7 +778,7 @@ HRESULT GetFontFace(CString& strFace) const;
   
  Cette méthode envoie le [ID de commande IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
+##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
  Récupère la taille de police pour la sélection actuelle.  
   
 ```  
@@ -800,7 +795,7 @@ HRESULT GetFontSize(short& nSize) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
+##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
  Récupère la couleur de premier plan (texte) de la sélection actuelle.  
   
 ```  
@@ -817,7 +812,7 @@ HRESULT GetForeColor(int& nColor);
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
+##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
  Retourne la zone de sécurité de la page actuelle dans le navigateur web.  
   
 ```  
@@ -834,7 +829,7 @@ HRESULT GetFrameZone(short& nZone) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
+##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
  Indique si le document HTML a été modifiée.  
   
 ```  
@@ -842,9 +837,9 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Indique si le document a été modifiée. `GetIsDirty`Retourne un `HRESULT` de [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Indique si le document a été modifiée. `GetIsDirty` Retourne un `HRESULT` de [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
-##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  Retourne si un glyphe est affiché pour tous les éléments qui ont un **styleFloat** propriété.  
   
 ```  
@@ -861,7 +856,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).  
   
-##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
+##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
  Retourne si le contrôle WebBrowser affiche des glyphes pour afficher l’emplacement de toutes les balises dans un document.  
   
 ```  
@@ -878,7 +873,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).  
   
-##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
+##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour les étiquettes de zone.  
   
 ```  
@@ -895,7 +890,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).  
   
-##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
+##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour balises br.  
   
 ```  
@@ -912,7 +907,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).  
   
-##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
+##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour les balises de commentaire.  
   
 ```  
@@ -929,7 +924,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).  
   
-##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
+##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
  Récupère si le contrôle WebBrowser affiche toutes les balises affichées dans Microsoft Internet Explorer 4.0.  
   
 ```  
@@ -946,7 +941,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).  
   
-##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
+##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour toutes les balises de script.  
   
 ```  
@@ -963,7 +958,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).  
   
-##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
+##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour toutes les balises de style.  
   
 ```  
@@ -980,7 +975,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).  
   
-##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
+##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
  Récupère si le contrôle WebBrowser affiche un glyphe pour toutes les balises inconnus.  
   
 ```  
@@ -997,7 +992,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [ID de commande IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).  
   
-##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
+##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
  Remplace une ligne horizontale sur la sélection actuelle.  
   
 ```  
@@ -1014,7 +1009,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
+##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
  Insère un lien hypertexte sur la sélection actuelle.  
   
 ```  
@@ -1031,7 +1026,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
+##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
  Effectue une opération de collage est compatible avec Internet Explorer 5.  
   
 ```  
@@ -1048,7 +1043,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
+##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
  Remplace un inline frame sur la sélection actuelle.  
   
 ```  
@@ -1065,7 +1060,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="image"></a>CHtmlEditCtrlBase::Image  
+##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
  Remplace une image sur la sélection actuelle.  
   
 ```  
@@ -1082,7 +1077,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
+##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
  Augmente le retrait du texte sélectionné par incrément de la mise en un retrait.  
   
 ```  
@@ -1095,7 +1090,7 @@ HRESULT Indent() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
+##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
  Remplace une zone sur la sélection actuelle.  
   
 ```  
@@ -1112,7 +1107,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
+##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
  Remplace un contrôle de bouton sur la sélection actuelle.  
   
 ```  
@@ -1129,7 +1124,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
+##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
  Insère un contrôle masqué sur la sélection actuelle.  
   
 ```  
@@ -1146,7 +1141,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
+##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
  Remplace un contrôle image sur la sélection actuelle.  
   
 ```  
@@ -1163,7 +1158,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
+##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
  Remplace un contrôle de mot de passe sur la sélection actuelle.  
   
 ```  
@@ -1180,7 +1175,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
+##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
  Remplace un réinitialise le contrôle sur la sélection actuelle.  
   
 ```  
@@ -1197,7 +1192,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
+##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
  Remplace un contrôle envoyer sur la sélection actuelle.  
   
 ```  
@@ -1214,7 +1209,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
+##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
  Remplace un contrôle de téléchargement de fichier sur la sélection actuelle.  
   
 ```  
@@ -1231,7 +1226,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
+##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
  Détermine si un élément est positionné de façon statique.  
   
 ```  
@@ -1248,7 +1243,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
+##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
  Détermine si un élément est positionné.  
   
 ```  
@@ -1265,7 +1260,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
+##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
  Active/désactive la sélection actuelle en italique.  
   
 ```  
@@ -1278,7 +1273,7 @@ HRESULT Italic() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
+##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
  Centre du bloc de format dans lequel se trouve la sélection actuelle.  
   
 ```  
@@ -1291,7 +1286,7 @@ HRESULT JustifyCenter() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
+##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
  Aligne à gauche le bloc du format dans lequel se trouve la sélection actuelle.  
   
 ```  
@@ -1304,7 +1299,7 @@ HRESULT JustifyLeft() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
+##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
  Aligne à droite le bloc du format dans lequel se trouve la sélection actuelle.  
   
 ```  
@@ -1317,7 +1312,7 @@ HRESULT JustifyRight() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
+##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
  Remplace le contrôle de zone de sélection de liste sur la sélection actuelle.  
   
 ```  
@@ -1334,7 +1329,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
+##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
  Remplace un texte défilant utilisé comme vide sur la sélection actuelle.  
   
 ```  
@@ -1351,7 +1346,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
+##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument  
  Crée un nouveau document.  
   
 ```  
@@ -1361,7 +1356,7 @@ HRESULT NewDocument() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
+##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
  Active/désactive la sélection actuelle entre une liste triée et un bloc de format normal.  
   
 ```  
@@ -1378,7 +1373,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
+##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
  Diminue d’un incrément de la mise en retrait du bloc de format dans lequel se trouve la sélection actuelle.  
   
 ```  
@@ -1391,7 +1386,7 @@ HRESULT Outdent() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
+##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
  Remplace un saut de ligne sur la sélection actuelle.  
   
 ```  
@@ -1408,7 +1403,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
+##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
  Remplace le contenu du Presse-papiers dans la sélection actuelle.  
   
 ```  
@@ -1421,7 +1416,7 @@ HRESULT Paste() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
+##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
  Imprime le document actif.  
   
 ```  
@@ -1443,7 +1438,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
+##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
  Ouvre la fenêtre Aperçu avant impression du document actif à l’aide du modèle d’aperçu avant impression par défaut ou un modèle personnalisé.  
   
 ```  
@@ -1461,7 +1456,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
+##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
  Appelez cette méthode pour demander l’état des commandes.  
   
 ```  
@@ -1475,7 +1470,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) indiquant l’état de `cmdID`, ou 0 en cas d’échec.  
   
-##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
+##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Remplace un contrôle de case d’option sur la sélection actuelle.  
   
 ```  
@@ -1492,7 +1487,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
+##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
  Actualise le document actif.  
   
 ```  
@@ -1505,7 +1500,7 @@ HRESULT RefreshDocument() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
+##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
  Supprime les balises de mise en forme de la sélection actuelle.  
   
 ```  
@@ -1518,7 +1513,7 @@ HRESULT RemoveFormat() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
+##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
  Enregistre la page Web actuelle dans un fichier.  
   
 ```  
@@ -1535,7 +1530,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM_SAVEAS ID de commande](https://msdn.microsoft.com/library/aa770024.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
+##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll  
  Sélectionne tout le document.  
   
 ```  
@@ -1548,7 +1543,7 @@ HRESULT SelectAll() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
+##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
  Permet de positionnement absolu d’éléments à déplacer en faisant glisser.  
   
 ```  
@@ -1565,7 +1560,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
  Définit la propriété de position d’un élément « absolute » ou « statique ».  
   
 ```  
@@ -1582,7 +1577,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
+##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
  Définir le mode de sélection atomique.  
   
 ```  
@@ -1599,7 +1594,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
+##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode  
  Active la détection automatique des URL et désactive.  
   
 ```  
@@ -1616,7 +1611,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
+##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
  Définit la couleur d’arrière-plan de la sélection actuelle.  
   
 ```  
@@ -1637,7 +1632,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
+##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
  Définit la balise de format de bloc actuel.  
   
 ```  
@@ -1654,7 +1649,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
+##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
  Crée une ancre de signet pour le point d’insertion ou de la sélection actuelle.  
   
 ```  
@@ -1671,7 +1666,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
+##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
  Sélectionne le niveau CSS (CSS1 ou CSS2) l’éditeur prendront en charge le cas échéant.  
   
 ```  
@@ -1688,7 +1683,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
+##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
  Appel de cette méthode pour définir la valeur par défaut des paramètres de composition.  
   
 ```  
@@ -1730,7 +1725,7 @@ HRESULT SetDefaultComposeSettings(
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM_COMPOSESETTINGS ID de commande](https://msdn.microsoft.com/library/aa769901.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
+##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode  
  Définir le mode de conception.  
   
 ```  
@@ -1744,7 +1739,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
-##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
+##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
  Désactive la bordure hachurée et gère autour d’un élément qui a le focus de la modifier.  
   
 ```  
@@ -1761,7 +1756,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
+##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
  Définit le code HTML du document actif.  
   
 ```  
@@ -1775,7 +1770,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
+##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
  Définit la police pour la sélection actuelle.  
   
 ```  
@@ -1792,7 +1787,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
+##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
  Définit la taille de police pour la sélection actuelle.  
   
 ```  
@@ -1809,7 +1804,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
+##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
  Définit la couleur de premier plan (texte) de la sélection actuelle.  
   
 ```  
@@ -1830,7 +1825,7 @@ HRESULT SetForeColor(int nColor) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
+##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
  Définit l’opération de collage pour être compatible avec Microsoft Internet Explorer 5.  
   
 ```  
@@ -1847,7 +1842,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
+##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
  Provoque le contrôle WebBrowser à mettre à jour d’apparence d’un élément en permanence pendant une opération de redimensionnement ou de déplacement, au lieu de la mise à jour uniquement à la fin du déplacement ou redimensionnement.  
   
 ```  
@@ -1864,7 +1859,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
+##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
  Permet la sélection multiple.  
   
 ```  
@@ -1881,7 +1876,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
+##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
  Commandes WebBrowser jamais à modifier le pointeur de la souris.  
   
 ```  
@@ -1898,7 +1893,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
+##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
  Active/désactive le mode de saisie de texte entre insérer et remplacer.  
   
 ```  
@@ -1915,7 +1910,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM remplacer les ID de commande](https://msdn.microsoft.com/library/aa770016.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
+##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
  Masque les éléments invisibles en mode Création.  
   
 ```  
@@ -1932,7 +1927,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
  Affiche un glyphe pour tous les éléments qui ont un **styleFloat** propriété.  
   
 ```  
@@ -1949,7 +1944,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
+##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
  Afficher des glyphes pour afficher l’emplacement de toutes les balises dans un document.  
   
 ```  
@@ -1966,7 +1961,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
+##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
  Affiche un glyphe pour toutes les balises de zone.  
   
 ```  
@@ -1983,7 +1978,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
+##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
  Affiche un glyphe pour toutes les balises br.  
   
 ```  
@@ -2000,7 +1995,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
+##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
  Affiche un glyphe pour toutes les balises de commentaire.  
   
 ```  
@@ -2017,7 +2012,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
+##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
  Affiche toutes les balises affichées dans Microsoft Internet Explorer 4.0.  
   
 ```  
@@ -2034,7 +2029,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
+##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
  Affiche un glyphe pour toutes les balises de script.  
   
 ```  
@@ -2051,7 +2046,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
+##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
  Affiche un glyphe pour toutes les balises de style.  
   
 ```  
@@ -2068,7 +2063,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
+##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
  Affiche un glyphe pour toutes les balises inconnus.  
   
 ```  
@@ -2085,7 +2080,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
+##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
  Remplace un contrôle d’entrée de texte multiligne sur la sélection actuelle.  
   
 ```  
@@ -2102,7 +2097,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
+##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
  Remplace un contrôle de texte sur la sélection actuelle.  
   
 ```  
@@ -2119,7 +2114,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
+##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
  Supprime les signets dans la sélection actuelle.  
   
 ```  
@@ -2132,7 +2127,7 @@ HRESULT UnBookmark() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [ID de commande IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
+##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
  Active/désactive la sélection actuelle entre souligné et ne pas souligné.  
   
 ```  
@@ -2145,7 +2140,7 @@ HRESULT Underline() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM SOULIGNER les ID de commande](https://msdn.microsoft.com/library/aa770035.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
+##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
  Supprime un lien hypertexte à partir de la sélection actuelle.  
   
 ```  
@@ -2158,7 +2153,7 @@ HRESULT Unlink() const;
 ### <a name="remarks"></a>Notes  
  Cette méthode envoie le [IDM dissocier les ID de commande](https://msdn.microsoft.com/library/aa770037.aspx) pour le contrôle WebBrowser.  
   
-##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
+##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
  Active/désactive la sélection actuelle entre une liste triée et un bloc de format normal.  
   
 ```  

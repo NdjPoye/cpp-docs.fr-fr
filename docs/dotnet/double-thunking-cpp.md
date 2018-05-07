@@ -1,13 +1,10 @@
 ---
 title: Double Thunking (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 Double médiateur fait référence à la perte de performances que peuvent se produire lorsqu’un appel de fonction dans un contexte managé appelle une Visual C++ fonction managée et où l’exécution du programme appelle le point d’entrée natif de la fonction afin d’appeler la fonction managée. Cette rubrique traite des cas de double médiateur et comment vous pouvez l’éviter pour améliorer les performances.  
@@ -40,7 +35,7 @@ Double médiateur fait référence à la perte de performances que peuvent se pr
   
  De même, si vous exportez ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) une fonction managée, un point d’entrée natif est généré et toute fonction qui importe et appelle cette fonction appellera via le point d’entrée natif. Pour éviter un double médiateur dans cette situation, n’utilisez pas de sémantique d’exportation/importation native ; référencez simplement les métadonnées via `#using` (consultez [#using, Directive](../preprocessor/hash-using-directive-cpp.md)).  
   
- Le compilateur a été mis à jour afin de réduire thunking double inutiles. Par exemple, toute fonction ayant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`. Pour plus d’informations sur l’élimination de double conversion de code, consultez [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Le compilateur a été mis à jour afin de réduire thunking double inutiles. Par exemple, toute fonction ayant un type managé dans la signature (y compris le type de retour) sera marquée implicitement comme `__clrcall`. Pour plus d’informations sur l’élimination de double conversion de code, consultez [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Exemple  
   

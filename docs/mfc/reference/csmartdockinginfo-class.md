@@ -1,12 +1,9 @@
 ---
 title: Classe de CSmartDockingInfo | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmartdockinginfo-class"></a>Classe de CSmartDockingInfo
 Définit l'apparence des marqueurs d'ancrage intelligents.  
@@ -112,10 +107,10 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
  Copie les paramètres de station d’accueil actives en cours dans fourni [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objet.  
   
 ```  
@@ -126,7 +121,7 @@ void CopyTo(CSmartDockingInfo& params);
  [out] `params`  
  Un objet de type `CSmartDockingInfo` qui est remplie avec les paramètres d’ancrage intelligents.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Spécifie s’il faut utiliser la couleur de thème actuel lorsque l’infrastructure affiche des marqueurs d’ancrage intelligents.  
   
 ```  
@@ -138,14 +133,14 @@ BOOL m_bUseThemeColorInShading;
   
  La valeur par défaut est `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  Spécifie la couleur d’arrière-plan de base des marqueurs d’ancrage intelligents.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
  Spécifie la couleur qui remplace `m_clrToneSrc` dans les bitmaps de marqueur d’ancrage intelligents.  
   
 ```  
@@ -157,7 +152,7 @@ COLORREF m_clrToneDest;
   
  Pour modifier la couleur des marqueurs personnalisés, vous devez spécifier les deux `m_clrToneDest` et `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  Spécifie la couleur des bitmaps de marqueur d’ancrage intelligents.  
   
 ```  
@@ -169,7 +164,7 @@ COLORREF m_clrToneSrc;
   
  Utilisez `(COLORREF)-1` pour renseigner un membre du groupe d’ancrage intelligent.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  Spécifie la couleur des bitmaps de marqueur d’ancrage intelligents lorsqu’ils sont transparents.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>Notes  
  Vous devez définir cette valeur lorsque vous affichez des marqueurs personnalisés et des bitmaps personnalisées dans le groupe d’ancrage.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
  Spécifie le décalage entre le groupe central des marqueurs d’ancrage intelligents et les limites du rectangle du groupe central.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>Notes  
  Spécifiez cette valeur si vous souhaitez modifier le décalage par défaut entre les marqueurs personnalisés et les limites du groupe central des marqueurs d’ancrage intelligents. Le décalage par défaut est de 5 pixels.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  Spécifie la taille totale d’un rectangle qui englobe tous les marqueurs d’ancrage actives dans le groupe central.  
   
 ```  
@@ -199,7 +194,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>Notes  
  Définissez `m_sizeTotal` à la taille du rectangle englobant de l’indicateur de groupe central. Vous devez spécifier cette valeur si vous utilisez des images personnalisées pour les marqueurs.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  Définit l’ID des bitmaps qui sont utilisés pour les marqueurs d’ancrage intelligents personnalisés non mis en surbrillance de la ressource.  
   
 ```  
@@ -207,7 +202,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Notes  
- Remplissez avec les ID des bitmaps représentant les marqueurs d’ancrage intelligents de ressources. `AFX_SD_MARKERS_NUM`est actuellement définie en tant que 5. Vous remplissez le tableau comme suit :  
+ Remplissez avec les ID des bitmaps représentant les marqueurs d’ancrage intelligents de ressources. `AFX_SD_MARKERS_NUM` est actuellement définie en tant que 5. Vous remplissez le tableau comme suit :  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -219,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Définit l’ID des bitmaps qui sont utilisés pour les marqueurs d’ancrage intelligents personnalisées en surbrillance de la ressource.  
   
 ```  
@@ -227,7 +222,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Notes  
- Remplissez avec les ID des bitmaps représentant les marqueurs d’ancrage intelligents en surbrillance de ressources. `AFX_SD_MARKERS_NUM`est actuellement définie en tant que 5. Vous remplissez le tableau comme suit :  
+ Remplissez avec les ID des bitmaps représentant les marqueurs d’ancrage intelligents en surbrillance de ressources. `AFX_SD_MARKERS_NUM` est actuellement définie en tant que 5. Vous remplissez le tableau comme suit :  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   

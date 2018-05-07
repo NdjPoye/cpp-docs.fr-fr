@@ -1,13 +1,10 @@
 ---
-title: "TN017 : Destruction d’objets fenêtres | Documents Microsoft"
-ms.custom: 
+title: 'TN017 : Destruction d’objets fenêtres | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.objects
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bba255403d31e7a1fa03febb0c760d20cdc81c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017 : destruction d’objets fenêtres
 Cette note décrit l’utilisation de la [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) (méthode). Utilisez cette méthode si vous voulez faire personnalisé d’allocation de `CWnd`-objets dérivés. Cette note explique également pourquoi vous devez utiliser [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) pour détruire un objet Windows C++ au lieu du `delete` opérateur.  
@@ -49,7 +44,7 @@ Cette note décrit l’utilisation de la [CWnd::PostNcDestroy](../mfc/reference/
  Le deuxième cas, l’utilisation de la `delete` opérateur sur des objets de Windows, doit être rare. Voici quelques cas où l’utilisation `delete` est le bon choix.  
   
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Nettoyage automatique avec CWnd::PostNcDestroy  
- Lorsque le système supprime une fenêtre de Windows, le dernier message Windows envoyé à la fenêtre est `WM_NCDESTROY`. La valeur par défaut `CWnd` gestionnaire pour ce message est [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`se détache le `HWND` à partir de C++ et appelez la fonction virtuelle `PostNcDestroy`. Certaines classes substituer cette fonction pour supprimer l’objet C++.  
+ Lorsque le système supprime une fenêtre de Windows, le dernier message Windows envoyé à la fenêtre est `WM_NCDESTROY`. La valeur par défaut `CWnd` gestionnaire pour ce message est [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` se détache le `HWND` à partir de C++ et appelez la fonction virtuelle `PostNcDestroy`. Certaines classes substituer cette fonction pour supprimer l’objet C++.  
   
  L’implémentation par défaut de `CWnd::PostNcDestroy` ne fait rien, ce qui convient pour les objets de fenêtre qui sont alloués sur le frame de pile ou incorporés dans d’autres objets. Cela n’est pas appropriée pour les objets de fenêtre qui sont conçues pour être alloués sur le tas sans d’autres objets. En d’autres termes, il n’est pas approprié pour les objets de fenêtre qui ne sont pas incorporés dans d’autres objets C++.  
   

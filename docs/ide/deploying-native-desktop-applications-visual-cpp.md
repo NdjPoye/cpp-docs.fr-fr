@@ -1,13 +1,10 @@
 ---
-title: "Déploiement d’Applications de bureau natives (Visual C++) | Documents Microsoft"
-ms.custom: 
+title: Déploiement d’Applications de bureau natives (Visual C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe88a322314ac24fa5799735e84ff100efa2e79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 833b3eb674dc2f6efc99b852cd366f699d46e716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Déploiement des applications de bureau natives (Visual C++)
 Un déploiement est le processus par lequel vous distribuez une application ou un composant terminé pour l’installer sur d’autres ordinateurs. La planification du déploiement commence quand l’application est créée sur l’ordinateur d’un développeur. Un déploiement se termine quand l’application est installée et prête à être exécutée sur l’ordinateur d’un utilisateur.  

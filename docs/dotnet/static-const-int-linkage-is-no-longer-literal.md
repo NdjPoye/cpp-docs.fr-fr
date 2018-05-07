@@ -1,13 +1,10 @@
 ---
-title: "Liaison static Const Int n’est plus littérale | Documents Microsoft"
-ms.custom: 
+title: Liaison static Const Int n’est plus littérale | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - constants, declaring
 - integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f34682fa780ef430d27104d3df9658f9e32ad39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc3f72080c08807026c6458979ac0ba561e298df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>La liaison Static Const Int n'est plus littérale
 Déclaration d’un membre constant d’une classe a été modifiée à partir des Extensions managées pour C++ vers Visual C++.  
@@ -73,4 +68,4 @@ public:
   
 ## <a name="see-also"></a>Voir aussi  
  [Déclarations de membre dans une classe ou Interface (C + c++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [littéral](../windows/literal-cpp-component-extensions.md)
+ [Littéral](../windows/literal-cpp-component-extensions.md)

@@ -1,37 +1,32 @@
 ---
-title: "Presse-papiers : Copier et coller des données | Documents Microsoft"
-ms.custom: 
+title: 'Presse-papiers : Copier et coller des données | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 Cette rubrique décrit les étapes nécessaires à l’implémentation de copie et de collage à partir du Presse-papiers dans votre application OLE. Il est recommandé de lire le [des objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) rubriques avant de continuer.  
   
  Avant de pouvoir implémenter collage ou copie, vous devez tout d’abord fournir des fonctions pour gérer les options Copier, couper et coller dans le menu Edition.  
   
-##  <a name="_core_copying_or_cutting_data"></a>La copie ou le collage de données  
+##  <a name="_core_copying_or_cutting_data"></a> La copie ou le collage de données  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Pour copier des données dans le Presse-papiers  
   
@@ -47,7 +42,7 @@ Cette rubrique décrit les étapes nécessaires à l’implémentation de copie 
   
  Pour voir un exemple de cette séquence, consultez le **fonctions OnEditCut** et **OnEditCopy** des exemples de fonctions dans les MFC OLE programmes [OCLIENT](../visual-cpp-samples.md) et [HIERSVR](../visual-cpp-samples.md). Notez que ces exemples gèrent un pointeur vers les données sélectionnées, afin de l’étape 1 est déjà terminée.  
   
-##  <a name="_core_pasting_data"></a>Le collage de données  
+##  <a name="_core_pasting_data"></a> Le collage de données  
  Le collage de données est plus compliqué que la copie, car vous devez choisir le format à utiliser pour coller les données dans votre application.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Pour coller des données à partir du Presse-papiers  

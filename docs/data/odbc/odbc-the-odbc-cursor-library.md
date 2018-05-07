@@ -1,13 +1,10 @@
 ---
-title: "ODBC : Bibliothèque de curseurs ODBC | Documents Microsoft"
-ms.custom: 
+title: 'ODBC : Bibliothèque de curseurs ODBC | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC : bibliothèque de curseurs ODBC
 Cette rubrique décrit la bibliothèque de curseurs ODBC et explique comment l’utiliser. Pour plus d'informations, voir :  
@@ -49,7 +44,7 @@ Cette rubrique décrit la bibliothèque de curseurs ODBC et explique comment l�
   
  La bibliothèque de curseurs ODBC est une bibliothèque de liens dynamiques (DLL) qui réside entre le Gestionnaire de pilotes ODBC et le pilote. Dans la terminologie ODBC, un pilote conserve un curseur pour suivre sa position dans le jeu d’enregistrements. Le curseur marque la position dans le jeu d’enregistrements que vous avez atteint, l’enregistrement actif.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Pilotes ODBC niveau 1 et de la bibliothèque de curseurs  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Pilotes ODBC niveau 1 et de la bibliothèque de curseurs  
  La bibliothèque de curseurs ODBC donne des pilotes de niveau 1 les nouvelles fonctionnalités suivantes :  
   
 -   Le défilement vers l’avant et vers l’arrière. Les pilotes de niveau 2 n’avez pas besoin de la bibliothèque de curseurs, car ils sont déjà permettant le défilement.  
@@ -58,7 +53,7 @@ Cette rubrique décrit la bibliothèque de curseurs ODBC et explique comment l�
   
  La bibliothèque de curseurs vous donne les instantanés (curseurs statiques) même si elles ne sont normalement pas prises en charge par le pilote. Si votre pilote prend déjà en charge les curseurs statiques, il est inutile de le charger la bibliothèque de curseurs pour obtenir un support technique de capture instantanée. Si vous n’utilisez pas la bibliothèque de curseurs, vous pouvez utiliser uniquement les instantanés et recordsets avant uniquement. Si votre pilote prend en charge les feuilles de réponse dynamiques (curseurs KEYSET_DRIVEN) et que vous souhaitez les utiliser, vous ne devez pas utiliser la bibliothèque de curseurs. Si vous souhaitez utiliser les instantanés et les feuilles de réponse dynamiques, vous devez les baser sur deux `CDatabase` objets (deux connexions différentes), sauf si votre pilote prend en charge les deux.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>Mises à jour positionnées et colonnes Timestamp  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> Mises à jour positionnées et colonnes Timestamp  
   
 > [!NOTE]
 >  Sources de données ODBC sont accessibles via les classes ODBC MFC, comme décrit dans cette rubrique, ou via les classes MFC DAO Data Access Object ().  
@@ -75,7 +70,7 @@ Cette rubrique décrit la bibliothèque de curseurs ODBC et explique comment l�
  Le second problème concerne les limites de la classe [CTime](../../atl-mfc-shared/reference/ctime-class.md) lorsqu’il est utilisé avec le `RFX_Date` fonction pour transférer des informations de date et heure vers ou à partir d’une table. Le traitement du `CTime` objet nécessite une certaine charge, sous la forme d’un traitement supplémentaire intermédiaire pendant le transfert de données. La plage de dates `CTime` objets peuvent également être trop limitée pour certaines applications. Une nouvelle version de la `RFX_Date` fonction prend une application ODBC **TIMESTAMP_STRUCT** au lieu du paramètre un `CTime` objet. Pour plus d’informations, consultez `RFX_Date` dans [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md) dans les *référence MFC*.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>À l’aide de la bibliothèque de curseurs  
+##  <a name="_core_using_the_cursor_library"></a> À l’aide de la bibliothèque de curseurs  
  Lorsque vous vous connectez à une source de données, en appelant [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) — vous pouvez spécifier s’il faut utiliser la bibliothèque de curseurs pour la source de données. Si vous allez créer des captures instantanées sur cette source de données, spécifiez la **CDatabase::useCursorLib** option dans le `dwOptions` paramètre `OpenEx` ou spécifiez **TRUE** pour la  **bUseCursorLib** paramètre **ouvrir** (la valeur par défaut est **TRUE**). Si votre pilote ODBC prend en charge les feuilles de réponse dynamiques et que vous souhaitez ouvrir des feuilles de réponse dynamiques sur la source de données, n’utilisez pas la bibliothèque de curseurs (elle masque certaines fonctionnalités du pilote nécessaire pour les dynasets). Dans ce cas, ne spécifiez pas **CDatabase::useCursorLib** dans `OpenEx` ou spécifiez **FALSE** pour le **bUseCursorLib** paramètre **ouvrir**.  
   
 ## <a name="see-also"></a>Voir aussi  

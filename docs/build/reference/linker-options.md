@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Options de l'éditeur de liens
 
@@ -116,6 +116,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Utilise un autre emplacement pour enregistrer un fichier PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Crée un fichier de base de données de programme (PDB) dépourvu de symboles privés.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Spécifie un fichier .pgd pour les optimisations guidées par profil.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsolète** crée une build instrumentée PGO de thread-safe.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête du fichier .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Spécifie que l’image contiendra une table de gestionnaires d’exceptions sécurisés.|
@@ -127,6 +128,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Spécifie l’ID de ressource de la bibliothèque de types générée par l’éditeur de liens.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Spécifie le nom du fichier .tlb et d’autres fichiers de sortie MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Crée une application conçue spécifiquement pour s’exécuter sous Terminal Server.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Données d’apprentissage optimisation utilise guidée par profil pour créer une image optimisée.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime les messages de progression de l’éditeur de liens.|
 |[/VERSION](../../build/reference/version-version-information.md)|Affecte un numéro de version.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Inclut tous les fichiers objet à partir de bibliothèques statiques spécifiés.|

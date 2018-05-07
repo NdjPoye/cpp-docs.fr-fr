@@ -1,13 +1,10 @@
 ---
-title: "Glisser -déplacer (OLE) | Documents Microsoft"
-ms.custom: 
+title: Glisser -déplacer (OLE) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc23c7695bf5afa22734c382ddc72e8418ff74c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-ole"></a>Glisser-déposer (OLE)
 La fonctionnalité glisser-déplacer de l’OLE est essentiellement un raccourci pour copier et coller des données. Lorsque vous utilisez le Presse-papiers pour copier et coller des données, un certain nombre d'étapes sont nécessaires. Vous sélectionnez les données, cliquez sur **couper** ou **copie** à partir de la **modifier** menu, déplacer vers le fichier de destination, la fenêtre ou l’application, placez le curseur dans l’emplacement souhaité, puis cliquez sur **Coller** à partir de la **modifier** menu.  

@@ -1,13 +1,10 @@
 ---
-title: "Création de Collections de la file d’attente et de la pile | Documents Microsoft"
-ms.custom: 
+title: Création de Collections de la file d’attente et de la pile | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 Cet article explique comment créer d’autres structures de données, tel que [piles](#_core_stacks) et [les files d’attente](#_core_queues), des classes de liste à partir de MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.  
   
-##  <a name="_core_stacks"></a>Piles  
+##  <a name="_core_stacks"></a> Piles  
  Étant donné que la collection de listes standard a un début et une fin, il est facile de créer une collection de listes dérivée qui reproduit le comportement d’une pile de type "dernière entrée - première sortie". Une pile est similaire à un empilement de plateaux dans une cafétéria. Lorsque les plateaux sont ajoutés à la pile, ils sont sur le dessus de la pile. Le dernier plateau ajouté est le premier à être enlevé. Les fonctions membres de la collection de listes `AddHead` et `RemoveHead` peuvent être utilisées pour ajouter et supprimer des éléments en particulier en tête de liste. Ainsi, le dernier élément ajouté est le premier à être supprimé.  
   
 #### <a name="to-create-a-stack-collection"></a>Pour créer une collection de piles  
@@ -48,7 +43,7 @@ Cet article explique comment créer d’autres structures de données, tel que [
   
  Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisateur peut appeler n'importe quelle fonction membre `CObList`, qu'elle soit logique pour une pile ou non.  
   
-##  <a name="_core_queues"></a>Files d’attente  
+##  <a name="_core_queues"></a> Files d’attente  
  Étant donné que la collection de listes standard a un début et une fin, il est facile de créer une collection de listes dérivée qui reproduit le comportement d’une file de type "première entrée-première sortie". Une file d'attente est similaire à une ligne de personnes dans une cafétéria. La première personne de la file est la première à être servie. Lorsque plusieurs personnes viennent, elles arrivent à la fin de la file pour attendre leur tour. Les fonctions membres de la collection de listes `AddTail` et `RemoveHead` peuvent être utilisées pour ajouter et supprimer des éléments en particulier en tête ou queue de liste. Ainsi, le dernier élément ajouté est toujours le dernier à être supprimé.  
   
 #### <a name="to-create-a-queue-collection"></a>Pour créer une collection en file d'attente  

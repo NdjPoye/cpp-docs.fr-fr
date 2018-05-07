@@ -1,12 +1,9 @@
 ---
 title: Lock::is_locked | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - is_locked
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4f7a3c92ccace542a4588b0278fd4f799459c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockislocked"></a>lock::is_locked
 Indique si l’utilisateur est actuellement un verrou.  
@@ -42,7 +37,7 @@ bool is_locked();
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si un verrou est maintenu, `false` dans le cas contraire.  
+ `true` Si un verrou est maintenu, `false` dans le cas contraire.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour vous assurer que l’accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principale utilise un verrou sur la même instance de la classe à vérifier régulièrement si les threads de travail existent toujours, et attend de quitter jusqu'à ce que tous les threads de travail ont terminé leurs tâches.  

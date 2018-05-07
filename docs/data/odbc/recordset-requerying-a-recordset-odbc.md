@@ -2,12 +2,9 @@
 title: 'Recordset : Actualisant un Recordset (ODBC) | Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -41,16 +36,16 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   Actualiser le jeu d’enregistrements basé sur la modification des valeurs de paramètre.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Mise à jour le jeu d’enregistrements  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Mise à jour le jeu d’enregistrements  
  Souvent, vous devez actualiser votre objet recordset pour le mettre à jour. Dans un environnement de base de données multi-utilisateur, d’autres utilisateurs peuvent apporter des modifications aux données pendant la durée de vie de votre recordset. Pour plus d’informations sur quand votre recordset reflète les modifications apportées par d’autres utilisateurs et quand les recordsets des autres utilisateurs reflètent vos modifications, consultez [Recordset : modification des enregistrements de jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Réexécutez la requête basée sur les nouveaux paramètres  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Réexécutez la requête basée sur les nouveaux paramètres  
  Une autre utilisation fréquente et il est tout aussi important : utilisation de [Requery](../../mfc/reference/crecordset-class.md#requery) consiste à sélectionner un nouvel ensemble d’enregistrements en fonction des modifications de valeurs de paramètre.  
   
 > [!TIP]
 >  Vitesse des requêtes est probablement beaucoup plus rapide si vous appelez **Requery** avec la modification de valeurs de paramètre que si vous appelez **ouvrir** à nouveau.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Réexécutez la requête et de feuilles de réponse dynamiques. Snapshots  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Réexécutez la requête et de feuilles de réponse dynamiques. Snapshots  
  Étant donné que les feuilles de réponse dynamiques sont censées présenter un ensemble d’enregistrements avec des données à jour dynamiques, vous souhaitez vous lanciez souvent si vous souhaitez refléter les ajouts d’autres utilisateurs. Captures instantanées, quant à eux, sont utiles, car vous pouvez en toute sécurité s’appuient sur leur contenu statique pendant que vous préparez des rapports, calculez des totaux et ainsi de suite. Néanmoins, vous souhaiterez parfois actualiser un instantané. Dans un environnement multi-utilisateur, les données de capture instantanée peuvent perdre la synchronisation avec la source de données lorsque les autres utilisateurs modifient la base de données.  
   
 #### <a name="to-requery-a-recordset-object"></a>Pour actualiser un objet recordset  

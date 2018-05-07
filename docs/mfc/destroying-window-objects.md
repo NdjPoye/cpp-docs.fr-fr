@@ -1,13 +1,10 @@
 ---
-title: "Destruction d’objets fenêtres | Documents Microsoft"
-ms.custom: 
+title: Destruction d’objets fenêtres | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e7b8b2cf605e0f53418755b65151fd9eb2cff5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3aacb01d945429bc36543f78e3635c39ef58223d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="destroying-window-objects"></a>Destruction d’objets fenêtres
 Être vigilant avec vos propres fenêtres enfants pour détruire l’objet fenêtre C++ quand l’utilisateur a terminé avec la fenêtre. Si ces objets ne sont pas détruits, votre application ne récupère pas leur mémoire. Heureusement, le framework gère la destruction des fenêtres, ainsi que la création de boîtes de dialogue, des vues et fenêtres frame. Si vous créez des fenêtres supplémentaires, vous êtes responsable de leur destruction.  

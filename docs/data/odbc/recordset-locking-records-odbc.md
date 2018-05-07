@@ -2,12 +2,9 @@
 title: 'Recordset : Verrouillage d’enregistrements (ODBC) | Documents Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-locking-records-odbc"></a>Recordset : verrouillage d'enregistrements (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -46,7 +41,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 > [!NOTE]
 >  Cette rubrique s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous avez implémenté l’extraction de lignes en bloc, certaines informations ne s’applique pas. Par exemple, vous ne pouvez pas appeler la **modifier** et **mise à jour** fonctions membres. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_record.2d.locking_modes"></a>Modes de verrouillage des enregistrements  
+##  <a name="_core_record.2d.locking_modes"></a> Modes de verrouillage des enregistrements  
  Les classes de base de données fournissent deux [modes de verrouillage d’enregistrements](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
 -   OPTIMISTIC verrouillage (la valeur par défaut)  
@@ -63,7 +58,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Verrouillage optimiste verrouille l’enregistrement de la source de données uniquement pendant la **mise à jour** appeler. Si vous utilisez le verrouillage optimiste dans un environnement multi-utilisateur, l’application doit gérer une **mise à jour** condition d’échec. Le verrouillage pessimiste verrouille l’enregistrement dès que vous appelez **modifier** et ne le libère pas tant que vous appel **mise à jour** (les échecs sont signalés par le biais du `CDBException` mécanisme, pas par une valeur de **FALSE** retourné par **mise à jour**). Verrouillage pessimiste a une altération potentielle des performances pour d’autres utilisateurs, car les accès simultanés au même enregistrement doivent attendre jusqu'à la fin de votre application **mise à jour** processus.  
   
-##  <a name="_core_locking_records_in_your_recordset"></a>Verrouillage d’enregistrements dans le jeu d’enregistrements  
+##  <a name="_core_locking_records_in_your_recordset"></a> Verrouillage d’enregistrements dans le jeu d’enregistrements  
  Si vous souhaitez modifier l’objet recordset [le mode de verrouillage](#_core_record.2d.locking_modes) à partir de la valeur par défaut, vous devez modifier le mode avant d’appeler **modifier**.  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Pour modifier le mode de verrouillage en cours pour le jeu d’enregistrements  

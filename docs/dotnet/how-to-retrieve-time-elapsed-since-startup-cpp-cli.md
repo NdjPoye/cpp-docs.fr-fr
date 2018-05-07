@@ -1,13 +1,10 @@
 ---
-title: "Comment : récupérer le temps écoulé depuis le démarrage (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: 'Comment : récupérer le temps écoulé depuis le démarrage (C + c++ / CLI) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - tick counts
 - startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bebd086d24c741f0c5287e8a7fd0de6b535dfc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Comment : récupérer le temps écoulé depuis le démarrage (C++/CLI)
 L’exemple de code suivant montre comment déterminer le nombre de cycles, ou nombre de millisecondes qui se sont écoulées depuis Windows a été démarré. Cette valeur est stockée dans le <xref:System.Environment.TickCount%2A?displayProperty=fullName> membre et, s’agissant d’une valeur 32 bits, remet à zéro tous les 24,9 jours environ.  

@@ -1,13 +1,10 @@
 ---
-title: "Remplissage d’une zone de liste à partir d’un Second jeu d’enregistrements (MFC Data Access) | Documents Microsoft"
-ms.custom: 
+title: Remplissage d’une zone de liste à partir d’un Second jeu d’enregistrements (MFC Data Access) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e411ebcf40099a2236048dd8f151b438fe5b947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
 Par défaut, une vue d'enregistrement est associée à un seul objet recordset dont les champs sont mappés aux contrôles de la vue d'enregistrement. Parfois, vous souhaiterez peut-être placer un contrôle de zone de liste ou de zone de liste déroulante dans votre vue d'enregistrement et le remplir avec des valeurs issues d'un second objet recordset. L'utilisateur peut utiliser la zone de liste pour sélectionner une nouvelle catégorie d'informations à afficher dans la vue d'enregistrement. Cette rubrique explique quand et comment procéder ainsi.  

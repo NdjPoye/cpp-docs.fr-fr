@@ -2,11 +2,8 @@
 title: file d’attente (STL/CLR) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - queue class [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e65d5a364f5886df2bad976e3c34dc57266b70f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 La classe de modèle décrit un objet qui contrôle une séquence à longueur variable d’éléments qui dispose d’un accès premier sorti. Utilisation de l’adaptateur de conteneur `queue` pour gérer un conteneur sous-jacent comme une file d’attente.  
@@ -105,7 +100,7 @@ template<typename Value,
 ## <a name="remarks"></a>Notes  
  L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke `Value` éléments et à la demande. L’objet restreint l’accès au fait d’appuyer uniquement le premier élément et dépilé le dernier élément, en implémentant un premier sorti file d’attente (également appelé une file d’attente FIFO, ou simplement une file d’attente).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** \<cliext/file d’attente >  
   
  **Namespace :** cliext  

@@ -2,11 +2,8 @@
 title: CWnd (classe) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 Fournit les fonctionnalités de base de toutes les classes de fenêtres de la bibliothèque MFC (Microsoft Foundation Class).  
@@ -1124,7 +1119,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Envoyé quand le contenu du Presse-papiers a changé.|  
 |[CWnd::OnClose](#onclose)|Appelé pour signaler que `CWnd` doit être fermé.|  
 |[CWnd::OnColorizationColorChanged](#oncolorizationcolorchanged)|Appelé quand la stratégie de rendu de la zone non cliente a changé.|  
-|[CWnd::OnCommand](#oncommand)|Appelé quand l'utilisateur sélectionne une commande.|  
+|[Fonction membre CWnd::OnCommand](#oncommand)|Appelé quand l'utilisateur sélectionne une commande.|  
 |[CWnd::OnCompacting](#oncompacting)|Appelé quand Windows détecte que la mémoire système est insuffisante.|  
 |[CWnd::OnCompareItem](#oncompareitem)|Appelé pour déterminer la position relative d'un nouvel élément dans une zone de liste modifiable ou une zone de liste enfant triée en mode owner-draw.|  
 |[CWnd::OnCompositionChanged](#oncompositionchanged)|Appelé pour toutes les fenêtres de niveau supérieur quand la composition du Gestionnaire de fenêtrage est activée ou désactivée.|  
@@ -1215,7 +1210,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Appelé quand la zone cliente de la visionneuse de Presse-papiers doit être repeinte.|  
 |[CWnd::OnPaletteChanged](#onpalettechanged)|Appelé pour permettre aux fenêtres qui utilisent une palette de couleurs de réaliser leurs palettes logiques et de mettre à jour leurs zones clientes.|  
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informe les autres applications qu'une application va réaliser sa palette logique.|  
-|[CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l’utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|  
+|[Fonction membre CWnd::OnParentNotify](#onparentnotify)|Appelé quand une fenêtre enfant est créée ou détruite ou quand l’utilisateur clique avec un bouton de la souris pendant que le curseur se trouve dans la fenêtre enfant.|  
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Appelé quand un événement de gestion de l'alimentation se produit.|  
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|Appelé quand un `CWnd` réduit (sous forme d'icône) est sur le point d'être déplacé par l'utilisateur.|  
 |[CWnd::OnQueryEndSession](#onqueryendsession)|Appelé quand l'utilisateur choisit de mettre fin à la session Windows.|  
@@ -1306,7 +1301,7 @@ class CWnd : public CCmdTarget
   
  `CWnd`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
 ##  <a name="accdodefaultaction"></a>  CWnd::accDoDefaultAction  
@@ -1756,7 +1751,7 @@ CWnd* ChildWindowFromPoint(
  `point`  
  Spécifie les coordonnées du client du point à tester.  
   
- *nflags*  
+ *nIndicateurs*  
  Spécifie les fenêtres enfants à ignorer. Ce paramètre peut être une combinaison des valeurs suivantes :  
   
 |Value|Signification|  
@@ -2318,7 +2313,7 @@ int DlgDirList(
   
 - **DDL_POSTMSGS LB_DIR** indicateur. Si le **LB_DIR** indicateur est défini, Windows place les messages générés par `DlgDirList` dans la file d’attente de l’application ; sinon, ils sont envoyés directement à la procédure de boîte de dialogue.  
   
-- **DDL_DRIVES** Drives. Si le **DDL_DRIVES** indicateur est défini, le **DDL_EXCLUSIVE** est défini automatiquement. Par conséquent, pour créer une liste de répertoires qui inclut des disques et des fichiers, vous devez appeler `DlgDirList` à deux reprises : une fois avec le **DDL_DRIVES** indicateur ensemble et une autre fois avec les indicateurs pour le reste de la liste.  
+- **DDL_DRIVES** les lecteurs. Si le **DDL_DRIVES** indicateur est défini, le **DDL_EXCLUSIVE** est défini automatiquement. Par conséquent, pour créer une liste de répertoires qui inclut des disques et des fichiers, vous devez appeler `DlgDirList` à deux reprises : une fois avec le **DDL_DRIVES** indicateur ensemble et une autre fois avec les indicateurs pour le reste de la liste.  
   
 - **DDL_EXCLUSIVE** bits exclusif. Si le bit exclusif est défini, seuls les fichiers du type spécifié sont répertoriés ; Sinon, les fichiers normaux et les fichiers du type spécifié sont répertoriées.  
   
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- Dans cet exemple, `drive` est une lettre de lecteur, `directory` est un nom de répertoire valide, et *nom de fichier* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (*), ce qui signifie que correspond à n’importe quel caractère et un astérisque (  **\*** ), ce qui signifie que n’importe quel nombre de caractères.  
+ Dans cet exemple, `drive` est une lettre de lecteur, `directory` est un nom de répertoire valide, et *nom de fichier* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (*), ce qui signifie que correspond à n’importe quel caractère et un astérisque ( **\***), ce qui signifie que n’importe quel nombre de caractères.  
   
  Si vous spécifiez une chaîne de longueur 0 pour `lpPathSpec`, ou si vous spécifiez uniquement un nom de répertoire mais que vous n’incluez pas de spécification de fichier, la chaîne sera modifiée en « *.\*».  
   
@@ -2381,7 +2376,7 @@ int DlgDirListComboBox(
   
 - **DDL_POSTMSGS CB_DIR** indicateur. Si le **CB_DIR** indicateur est défini, Windows place les messages générés par `DlgDirListComboBox` dans la file d’attente de l’application ; sinon, ils sont envoyés directement à la procédure de boîte de dialogue.  
   
-- **DDL_DRIVES** Drives. Si le **DDL_DRIVES** indicateur est défini, le **DDL_EXCLUSIVE** est défini automatiquement. Par conséquent, pour créer une liste de répertoires qui inclut des disques et des fichiers, vous devez appeler `DlgDirListComboBox` à deux reprises : une fois avec le **DDL_DRIVES** indicateur ensemble et une autre fois avec les indicateurs pour le reste de la liste.  
+- **DDL_DRIVES** les lecteurs. Si le **DDL_DRIVES** indicateur est défini, le **DDL_EXCLUSIVE** est défini automatiquement. Par conséquent, pour créer une liste de répertoires qui inclut des disques et des fichiers, vous devez appeler `DlgDirListComboBox` à deux reprises : une fois avec le **DDL_DRIVES** indicateur ensemble et une autre fois avec les indicateurs pour le reste de la liste.  
   
 - **DDL_EXCLUSIVE** bits exclusif. Si le bit exclusif est défini, seuls les fichiers du type spécifié sont répertoriés ; Sinon, les fichiers normaux et les fichiers du type spécifié sont répertoriées.  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- Dans cet exemple, `drive` est une lettre de lecteur, `directory` est un nom de répertoire valide, et *nom de fichier* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (*), ce qui signifie que correspond à n’importe quel caractère et un astérisque (  **\*** ), ce qui signifie que n’importe quel nombre de caractères.  
+ Dans cet exemple, `drive` est une lettre de lecteur, `directory` est un nom de répertoire valide, et *nom de fichier* est un nom de fichier valide doit contenir au moins un caractère générique. Les caractères génériques sont un point d’interrogation (*), ce qui signifie que correspond à n’importe quel caractère et un astérisque ( **\***), ce qui signifie que n’importe quel nombre de caractères.  
   
  Si vous spécifiez une chaîne de longueur nulle pour `lpPathSpec`, le répertoire actif sera utilisé et `lpPathSpec` ne seront pas modifiées. Si vous spécifiez uniquement un nom de répertoire mais que vous n’incluez pas de spécification de fichier, la chaîne sera modifiée en « * ».  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![Arrêt &#40; x &#41; icône](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, et **MB_ICONERROR**|  
+|![Arrêter &#40;x&#41; icône](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, et **MB_ICONERROR**|  
 |![Aide &#40; &#41; icône](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
 |![Important &#40; &#33; &#41; icône](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** et **MB_ICONWARNING**|  
-|![Informations &#40; i &#41; icône](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** et **MB_ICONINFORMATION**|  
+|![Informations &#40;i&#41; icône](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** et **MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  Différent de zéro si le style a été modifié avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Styles d’être ajoutés ou supprimés peuvent être combinées à l’aide de l’OR au niveau du bit (&#124;) (opérateur). Consultez les rubriques [Styles de fenêtre](http://msdn.microsoft.com/library/windows/desktop/ms632600) et [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour plus d’informations sur les styles de fenêtres disponibles.  
+ Styles d’être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération de bits OR (&#124;) (opérateur). Consultez les rubriques [Styles de fenêtre](http://msdn.microsoft.com/library/windows/desktop/ms632600) et [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) dans le SDK Windows pour plus d’informations sur les styles de fenêtres disponibles.  
   
  Si `nFlags` est différent de zéro, `ModifyStyle` appelle la fonction API Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) et redessine la fenêtre en combinant `nFlags` avec les indicateurs de quatre prédéfinis suivants :  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  Différent de zéro si le style a été modifié avec succès ; Sinon, 0.  
   
 ### <a name="remarks"></a>Notes  
- Styles d’être ajoutés ou supprimés peuvent être combinées à l’aide de l’OR au niveau du bit (&#124;) (opérateur). Consultez les rubriques [les Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) dans cet ouvrage et [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows pour plus d’informations sur les styles étendus  
+ Styles d’être ajoutés ou supprimés peuvent être combinées à l’aide de l’opération de bits OR (&#124;) (opérateur). Consultez les rubriques [les Styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) dans cet ouvrage et [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le SDK Windows pour plus d’informations sur les styles étendus  
   
  Si `nFlags` est différent de zéro, `ModifyStyleEx` appelle la fonction API Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) et redessine la fenêtre en combinant `nFlags` avec les indicateurs de quatre prédéfinis suivants :  
   
@@ -5630,7 +5625,7 @@ afx_msg void OnColorizationColorChanged(
 > [!NOTE]
 >  Cette fonction membre est appelée par l’infrastructure pour permettre à votre application de traiter un message Windows. Les paramètres passés à votre fonction reflètent les paramètres reçus par l’infrastructure au moment où le message a été reçu. Si vous appelez l’implémentation de classe de base de cette fonction, cette implémentation utilise les paramètres passés initialement avec le message et non les paramètres que vous fournissez à la fonction.  
   
-##  <a name="oncommand"></a>  CWnd::OnCommand  
+##  <a name="oncommand"></a>  Fonction membre CWnd::OnCommand  
  L’infrastructure appelle cette fonction membre quand l’utilisateur sélectionne un élément dans un menu, lorsqu’un contrôle enfant envoie un message de notification, ou lors de la traduction d’une séquence de touches accélérateur.  
   
 ```  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **(UINT) hWndChild** descripteur désignant une fenêtre enfant  
   
-- `uFlags` &#124; = **TTF_IDISHWND** descripteur de l’outil  
+- `uFlags` &#124;= **TTF_IDISHWND** descripteur de l’outil  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** pointeur vers la chaîne doit être affichée dans la fenêtre spécifiée  
   
@@ -9390,7 +9385,7 @@ BOOL OpenClipboard();
 operator HWND() const;  
 ```  
   
-##  <a name="operator_neq"></a>  CWnd::operator !=  
+##  <a name="operator_neq"></a>  CWnd::operator ! =  
  Compare deux `CWnd` objets afin de déterminer si elles n’ont pas le même [m_hWnd](#m_hwnd).  
   
 ```  

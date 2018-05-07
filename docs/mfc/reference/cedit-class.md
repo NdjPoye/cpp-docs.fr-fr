@@ -1,12 +1,9 @@
 ---
 title: Classe CEdit | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -193,13 +188,13 @@ class CEdit : public CWnd
   
  Chaque entrée de table des messages prend la forme suivante :  
   
- **ON_**Notification **(** *id, memberFxn ***)**  
+ **ON_** Notification **(** *id, memberFxn ***)**  
   
  où `id` Spécifie l’ID de fenêtre enfant du contrôle d’édition envoie la notification, et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer la notification.  
   
  Prototype de fonction du parent est la suivante :  
   
- **afx_msg** void memberFxn **( );**  
+ **afx_msg** memberFxn void **() ;**  
   
  Voici une liste d’éventuelles entrées de table des messages et une description des cas dans lequel ils sont envoyés au parent :  
   
@@ -242,7 +237,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
@@ -364,7 +359,7 @@ virtual BOOL Create(
   
  Appliquez ce qui suit [styles de fenêtre](styles-used-by-mfc.md#window-styles) à un contrôle d’édition.  
   
-- **WS_CHILD** Always  
+- **WS_CHILD** toujours  
   
 - **WS_VISIBLE** généralement  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Lorsque le `SetPasswordChar` fonction membre est appelée, `CEdit` redessine tous les caractères visibles à l’aide du caractère spécifié par *ch*.  
   
- Si le contrôle d’édition est créé avec le [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) style, le caractère de mot de passe par défaut est défini à un astérisque (  **\*** ). Ce style est supprimé si `SetPasswordChar` est appelée avec *ch* définie sur 0.  
+ Si le contrôle d’édition est créé avec le [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) style, le caractère de mot de passe par défaut est défini à un astérisque ( **\***). Ce style est supprimé si `SetPasswordChar` est appelée avec *ch* définie sur 0.  
   
  Pour plus d’informations, consultez [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) dans le Kit de développement logiciel Windows.  
   

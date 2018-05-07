@@ -1,13 +1,10 @@
 ---
-title: "Valeur de la sémantique de Type | Documents Microsoft"
-ms.custom: 
+title: Valeur de la sémantique de Type | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Sémantique de type valeur
 Sémantique des types valeur ont été modifiés à partir des Extensions managées pour C++ vers Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Appel de méthodes virtuelles héritées  
- `Form (1)`est l’objet de valeur canonique, et il est assez bien compris, sauf lorsque quelqu'un tente d’appeler une méthode virtuelle héritée comme `ToString()`. Exemple :  
+ `Form (1)` est l’objet de valeur canonique, et il est assez bien compris, sauf lorsque quelqu'un tente d’appeler une méthode virtuelle héritée comme `ToString()`. Par exemple :  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Nous souhaitons encapsuler une petite classe native dans un type valeur plutôt qu’un type référence afin d’éviter une double allocation de tas : le tas natif pour contenir le type natif et le tas CLR pour stocker le wrapper managé. Encapsule une classe native dans un type valeur vous permet d’éviter le tas managé, mais n’offre aucun moyen d’automatiser la récupération de la mémoire de tas natif. Les types référence sont le type managé uniquement possible dans lequel habiller des classes natives non trivial.  
   
 ## <a name="interior-pointers"></a>Pointeurs intérieurs  
- `Form (2)`et `Form (3)` ci-dessus peuvent presque tout adresser dans ce monde ou dans l’autre (autrement dit, toute valeur managé ou natif). Ainsi, par exemple, les conditions suivantes sont autorisées dans les Extensions managées :  
+ `Form (2)` et `Form (3)` ci-dessus peuvent presque tout adresser dans ce monde ou dans l’autre (autrement dit, toute valeur managé ou natif). Ainsi, par exemple, les conditions suivantes sont autorisées dans les Extensions managées :  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`et `Form (3)` des Extensions managées mappent dans `interior_ptr<V>`. `Form (4)`est un handle de suivi. Il traite l’objet entier a été convertie (boxed) dans le tas managé. Il est traduit dans la nouvelle syntaxe dans une `V^`,  
+ `Form (2)` et `Form (3)` des Extensions managées mappent dans `interior_ptr<V>`. `Form (4)` est un handle de suivi. Il traite l’objet entier a été convertie (boxed) dans le tas managé. Il est traduit dans la nouvelle syntaxe dans une `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

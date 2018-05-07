@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Paramétrage d’un Recordset (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Paramétrage d’un Recordset (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset : paramétrage d'un recordset (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -44,7 +39,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   [Comment transmettre des informations sur les paramètres à un objet recordset en cours d’exécution](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Jeux d’enregistrements paramétrés  
+##  <a name="_core_parameterized_recordsets"></a> Jeux d’enregistrements paramétrés  
  Un jeu d’enregistrements paramétré permet de transmettre des informations de paramètre au moment de l’exécution. Cela a deux conséquences appréciables :  
   
 -   Cela peut entraîner une meilleure vitesse d’exécution.  
@@ -53,7 +48,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Lorsque vous appelez **ouvrir** pour exécuter la requête, le jeu d’enregistrements utilise les informations de paramètre pour terminer son **SQL SELECT** instruction. Vous pouvez paramétrer un jeu d’enregistrements.  
   
-##  <a name="_core_when_to_use_parameters"></a>Quand utiliser les paramètres  
+##  <a name="_core_when_to_use_parameters"></a> Quand utiliser les paramètres  
  Utilisations courantes des paramètres sont les suivantes :  
   
 -   Passage des arguments d’exécution pour une requête prédéfinie.  
@@ -97,7 +92,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
  Pour plus d’informations sur les filtres, consultez [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Paramétrage de la classe de votre jeu d’enregistrements  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Paramétrage de la classe de votre jeu d’enregistrements  
   
 > [!NOTE]
 >  Cette section s’applique aux objets dérivés de `CRecordset` dans les lignes en bloc l’extraction n’a pas été implémentée. Si vous utilisez l’extraction, l’implémentation des paramètres de lignes en bloc est un processus similaire. Pour plus d’informations, consultez [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 
 >  La chaîne la plus probable pour travailler avec est la chaîne que vous spécifiez (le cas échéant) pour la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membre de données, mais certains pilotes ODBC autorisent des paramètres dans d’autres clauses SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Passage de valeurs de paramètre au moment de l’exécution  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Passage de valeurs de paramètre au moment de l’exécution  
  Vous devez spécifier des valeurs de paramètre avant d’appeler **ouvrir** (pour un nouvel objet recordset) ou **Requery** (pour un type existant).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Pour passer des valeurs de paramètre à un objet recordset en cours d’exécution  

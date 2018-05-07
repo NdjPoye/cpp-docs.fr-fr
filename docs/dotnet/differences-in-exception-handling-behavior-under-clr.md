@@ -2,35 +2,30 @@
 title: Les différences de comportement sous - CLR de la gestion des exceptions | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Différences du comportement de gestion des exceptions dans /CLR
 [Concepts de base dans l’utilisation des Exceptions](../dotnet/basic-concepts-in-using-managed-exceptions.md) présente la gestion des exceptions dans les applications managées. Dans cette rubrique, les différences du comportement standard de la gestion des exceptions et des restrictions sont décrites en détail. Pour plus d’informations, consultez [la fonction _set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>Saut hors d’un bloc Finally  
+##  <a name="vcconjumpingoutofafinallyblock"></a> Saut hors d’un bloc Finally  
  Dans le code C/C++ natif, le saut hors d’un __**enfin** bloc à l’aide de la gestion structurée des exceptions (SEH) est autorisée bien qu’il génère un avertissement.  Sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md), saut hors d’un **enfin** bloc provoque une erreur :  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Le déclenchement d’Exceptions dans un filtre d’Exception  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Le déclenchement d’Exceptions dans un filtre d’Exception  
  Lorsqu’une exception est levée pendant le traitement d’une [filtre d’exception](../cpp/writing-an-exception-filter.md) dans du code géré, l’exception est interceptée et traitée comme si le filtre retourne 0.  
   
  Ce comportement diffère du comportement dans le code natif où une exception imbriquée est déclenchée, le **ExceptionRecord** champ dans le **EXCEPTION_RECORD** structure (tel que retourné par [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) est définie et la **ExceptionFlags** champ définit le bit 0 x 10. L’exemple suivant illustre cette différence de comportement :  
@@ -107,7 +102,7 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>Levées dissociées  
+##  <a name="vccondisassociatedrethrows"></a> Levées dissociées  
  **/ CLR** ne prend pas en charge la nouvelle levée d’une exception en dehors d’un gestionnaire catch (appelée dissociée). Exceptions de ce type sont traitées comme une rethrow C++ standard. Si dissociée est rencontrée lors d’une exception managée active, l’exception est encapsulée comme une exception C++ et puis de nouveau levée. Exceptions de ce type ne peuvent être interceptées en tant qu’exception de type [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
   
  L’exemple suivant montre une exception managée levée de nouveau en tant qu’une exception C++ :  
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtres d’exception et EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtres d’exception et EXCEPTION_CONTINUE_EXECUTION  
  Si un filtre retourne `EXCEPTION_CONTINUE_EXECUTION` dans une application managée, il est traité comme si le filtre a renvoyé `EXCEPTION_CONTINUE_SEARCH`. Pour plus d’informations sur ces constantes, consultez [essayez-EXCEPT, instruction](../cpp/try-except-statement.md).  
   
  L’exemple suivant illustre cette différence :  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>La fonction _set_se_translator  
+##  <a name="vcconthe_set_se_translatorfunction"></a> La fonction _set_se_translator  
  La fonction de traduction, définie par un appel à `_set_se_translator`, affecte uniquement les captures en code non managé. L’exemple suivant illustre cette limitation :  
   
 ```  

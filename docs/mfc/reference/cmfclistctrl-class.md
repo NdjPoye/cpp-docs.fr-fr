@@ -1,12 +1,9 @@
 ---
 title: Classe de CMFCListCtrl | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclistctrl-class"></a>Classe de CMFCListCtrl
 Le `CMFCListCtrl` classe étend les fonctionnalités de [CListCtrl (classe)](../../mfc/reference/clistctrl-class.md) classe en prenant en charge la fonctionnalité de contrôle d’en-tête avancées de la [classe CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -77,7 +72,7 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl::Sort](#sort)|Trie le contrôle de liste.|  
   
 ## <a name="remarks"></a>Notes  
- `CMFCListCtrl`offre deux améliorations apportées aux [CListCtrl (classe)](../../mfc/reference/clistctrl-class.md) classe. Tout d’abord, il indique que le tri de colonne est une option disponible en dessin automatique d’une flèche de tri de l’en-tête. En second lieu, il prend en charge le tri sur plusieurs colonnes en même temps des données.  
+ `CMFCListCtrl` offre deux améliorations apportées aux [CListCtrl (classe)](../../mfc/reference/clistctrl-class.md) classe. Tout d’abord, il indique que le tri de colonne est une option disponible en dessin automatique d’une flèche de tri de l’en-tête. En second lieu, il prend en charge le tri sur plusieurs colonnes en même temps des données.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser différentes méthodes de la `CMFCListCtrl` classe. L’exemple montre comment créer un contrôle de liste, insérer des colonnes, insérer des éléments, définir le texte d’un élément et définir la police du contrôle de liste. Cet extrait de code fait partie de la [exemple de démonstration Visual Studio](../../visual-cpp-samples.md).  
@@ -96,10 +91,10 @@ class CMFCListCtrl : public CListCtrl
   
  [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
  Marque les colonnes triées avec une couleur d’arrière-plan.  
   
 ```  
@@ -116,9 +111,9 @@ void EnableMarkSortedColumn(
  Un paramètre booléen qui détermine s’il faut redessiner le contrôle immédiatement.  
   
 ### <a name="remarks"></a>Notes  
- `EnableMarkSortedColumn`utilise la méthode `CDrawingManager::PixelAlpha` pour calculer quelle couleur à utiliser pour trier colonnes. La couleur sélectionnée est basée sur la couleur d’arrière-plan normale.  
+ `EnableMarkSortedColumn` utilise la méthode `CDrawingManager::PixelAlpha` pour calculer quelle couleur à utiliser pour trier colonnes. La couleur sélectionnée est basée sur la couleur d’arrière-plan normale.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
  Permet de trier les lignes de données dans le contrôle de liste par plusieurs colonnes.  
   
 ```  
@@ -132,7 +127,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Notes  
  Lorsque vous activez le tri en fonction de plusieurs colonnes, les colonnes ont une hiérarchie. Les lignes de données sont tout d’abord triés par la colonne primaire. Toutes les valeurs équivalentes sont triés en fonction de chaque colonne suivante selon la priorité.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
  Retourne une référence au contrôle header.  
   
 ```  
@@ -145,7 +140,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>Notes  
  Le contrôle header pour un contrôle de liste est la fenêtre qui contient les titres des colonnes. Il est généralement placé directement au-dessus des colonnes.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
  Vérifie si le contrôle de liste prend actuellement en charge le tri sur plusieurs colonnes.  
   
 ```  
@@ -153,12 +148,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le contrôle de liste prend en charge le tri sur plusieurs ; `FALSE` dans le cas contraire.  
+ `TRUE` Si le contrôle de liste prend en charge le tri sur plusieurs ; `FALSE` dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
  Lorsqu’un [CMFCListCtrl classe](../../mfc/reference/cmfclistctrl-class.md) prend en charge plusieurs tri, l’utilisateur peut trier les données dans le contrôle de liste par plusieurs colonnes. Pour activer le tri de plusieurs, appelez [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
  L’infrastructure appelle cette méthode lorsqu’il compare deux éléments.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>Notes  
  La valeur par défaut implémentation retourne toujours 0. Vous devez substituer cette fonction pour fournir un algorithme de tri.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
  L’infrastructure appelle cette méthode lorsqu’il doit déterminer la couleur d’arrière-plan d’une cellule.  
   
 ```  
@@ -206,7 +201,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de `OnGetCellBkColor` n’utilise pas les paramètres d’entrée fournis et à la place appelle simplement `GetBkColor`. Par conséquent, par défaut, le contrôle de l’intégralité de la liste aura la même couleur d’arrière-plan. Vous pouvez remplacer `OnGetCellBkColor` dans une classe dérivée pour marquer des cellules individuelles avec une couleur d’arrière-plan.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
  L’infrastructure appelle cette méthode lorsqu’il obtient la police pour une cellule individuelle.  
   
 ```  
@@ -232,7 +227,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode retourne `NULL`. Toutes les cellules dans un contrôle de liste ont la même police. Substituez cette méthode afin de fournir des polices différentes pour différentes cellules.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
  L’infrastructure appelle cette méthode lorsqu’il doit déterminer la couleur du texte d’une cellule.  
   
 ```  
@@ -254,7 +249,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode appelle `GetTextColor` indépendamment des paramètres d’entrée. Le contrôle de l’intégralité de la liste ont la même couleur de texte. Vous pouvez remplacer `OnGetCellTextColor` dans une classe dérivée pour marquer des cellules individuelles avec une couleur de texte séparé.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
  Supprime une colonne de tri de la liste des colonnes triées.  
   
 ```  
@@ -268,7 +263,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>Notes  
  Cette méthode supprime une colonne de tri à partir du contrôle de l’en-tête. Il appelle [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
  Définit la colonne triée actuelle et l’ordre de tri.  
   
 ```  
@@ -291,7 +286,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>Notes  
  Cette méthode passe les paramètres d’entrée au contrôle d’en-tête à l’aide de la méthode [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
  Trie le contrôle de liste.  
   
 ```  

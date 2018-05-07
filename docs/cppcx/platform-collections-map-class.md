@@ -1,11 +1,8 @@
 ---
-title: "Classe Platform::Collections :: Map | Documents Microsoft"
-ms.custom: 
+title: 'Classe Platform::Collections :: Map | Documents Microsoft'
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -112,7 +107,7 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 `Map`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
@@ -161,7 +156,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Objet `MapView`.
 
-## <a name="haskey"></a>  Map::HasKey Method
+## <a name="haskey"></a>  Map::HasKey (méthode)
 
 Détermine si le Map actuel contient la clé spécifiée.
 
@@ -225,7 +220,7 @@ La valeur associée à la *clé*. Le type de la valeur de retour est typename *V
 
 Si la clé n’existe pas, un [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) est levée.
 
-## <a name="ctor"></a>  Map::Map Constructor
+## <a name="ctor"></a>  Map::Map (constructeur)
 
 Initialise une nouvelle instance de la classe Map.
 
@@ -259,7 +254,7 @@ Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pou
 *last*  
 Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le Map actuel.
 
-## <a name="mapchanged"></a>  Map::MapChanged Event
+## <a name="mapchanged"></a>  Map::mapchanged, événement
 
 Se déclenche lorsqu'un élément est inséré ou supprimé dans le mappage.
 

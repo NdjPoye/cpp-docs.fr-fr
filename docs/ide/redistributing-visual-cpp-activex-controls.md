@@ -1,30 +1,25 @@
 ---
-title: "Redistribution de contrôles ActiveX Visual C++ | Documents Microsoft"
-ms.custom: 
+title: Redistribution de contrôles ActiveX Visual C++ | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribution de contrôles ActiveX Visual C++
 Visual C++ 6.0 fournit des contrôles ActiveX que vous pouvez utiliser dans les applications que vous redistribuez ensuite. Ces contrôles ne sont plus inclus dans Visual C++. Par les contrats de licence de Visual C++ 6.0, vous pouvez redistribuer ces contrôles avec les applications développées dans Visual C++.  
@@ -46,7 +41,7 @@ Visual C++ 6.0 fournit des contrôles ActiveX que vous pouvez utiliser dans les 
   
 -   Stdole2.tlb  
   
- Si ces DLL n’est pas disponibles sur le système cible, vous devez obtenir les mises à jour avec le mécanisme recommandé pour la mise à jour du système d’exploitation correspondant. Vous pouvez télécharger les derniers service packs pour les systèmes d’exploitation Windows à partir de [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
+ Si ces DLL n’est pas disponibles sur le système cible, vous devez obtenir les mises à jour avec le mécanisme recommandé pour la mise à jour du système d’exploitation correspondant. Vous pouvez télécharger les derniers service packs pour les systèmes d’exploitation Windows à partir de [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
  Si votre application utilise un des contrôles ActiveX qui se connecte à une base de données, vous devez disposer du Microsoft Data Access composants (MDAC) installée sur le système cible. Pour plus d’informations, consultez [redistribution de fichiers de prise en charge de base de données](../ide/redistributing-database-support-files.md).  
   

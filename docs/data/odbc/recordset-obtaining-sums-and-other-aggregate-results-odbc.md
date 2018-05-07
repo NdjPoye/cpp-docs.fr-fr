@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Calculs de totaux et autres résultats de regroupement (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Calculs de totaux et autres résultats de regroupement (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calculs de totaux et autres résultats de regroupement (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -50,7 +45,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
  Vous utilisez ces fonctions SQL pour obtenir des informations statistiques sur les enregistrements dans une source de données et non pour extraire des enregistrements à partir de la source de données. Le jeu d’enregistrements est créé habituellement se compose d’un seul enregistrement (si toutes les colonnes sont des regroupements) qui contient une valeur. (Il peut y avoir plusieurs enregistrements si vous avez utilisé un **GROUP BY** clause.) Cette valeur est le résultat du calcul ou d’extraction effectuée par la fonction SQL.  
   
 > [!TIP]
->  Pour ajouter une SQL **GROUP BY** clause (et éventuellement un **HAVING** clause) à votre instruction SQL, ajoutez-la à la fin de **m_strFilter**. Exemple :  
+>  Pour ajouter une SQL **GROUP BY** clause (et éventuellement un **HAVING** clause) à votre instruction SQL, ajoutez-la à la fin de **m_strFilter**. Par exemple :  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  

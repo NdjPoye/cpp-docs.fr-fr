@@ -1,13 +1,10 @@
 ---
-title: "Serveurs : Implémentation des Documents serveur | Documents Microsoft"
-ms.custom: 
+title: 'Serveurs : Implémentation des Documents serveur | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>Serveurs : implémentation de documents de serveur
 Cet article explique les étapes à suivre pour implémenter correctement un document serveur si vous n’avez pas spécifié l’option serveur OLE dans l’Assistant application.  
@@ -39,7 +34,7 @@ Cet article explique les étapes à suivre pour implémenter correctement un doc
   
 3.  Implémentez la `OnGetEmbeddedItem` fonction membre de votre classe de document serveur.  
   
-     `OnGetEmbeddedItem`est appelée lorsque l’utilisateur d’une application conteneur crée ou modifie un élément incorporé. Elle doit retourner un élément qui représente l’ensemble du document. Cela doit être un objet de votre `COleServerItem`-classe dérivée.  
+     `OnGetEmbeddedItem` est appelée lorsque l’utilisateur d’une application conteneur crée ou modifie un élément incorporé. Elle doit retourner un élément qui représente l’ensemble du document. Cela doit être un objet de votre `COleServerItem`-classe dérivée.  
   
 4.  Remplacer la `Serialize` fonction membre à sérialiser le contenu du document. Vous n’avez pas besoin de sérialiser la liste des éléments de serveur, sauf si vous les utilisez pour représenter les données natives dans votre document. Pour plus d’informations, consultez *implémentation des éléments serveur* dans l’article [serveurs : éléments du serveur](../mfc/servers-server-items.md).  
   

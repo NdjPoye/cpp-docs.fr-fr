@@ -1,13 +1,10 @@
 ---
-title: "TN024 : Messages définis par MFC et ressources | Documents Microsoft"
-ms.custom: 
+title: 'TN024 : Messages définis par MFC et ressources | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024 : messages et ressources définis par MFC
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Ce message est envoyé par `COleResizeBar` à sa fenêtre propriétaire (via `GetOwner`) lorsque l’utilisateur redimensionne la barre de redimensionnement avec les poignées de redimensionnement. `COleIPFrameWnd`répond à ce message en tentant de repositionner la fenêtre frame que l’utilisateur a demandé.  
+ Ce message est envoyé par `COleResizeBar` à sa fenêtre propriétaire (via `GetOwner`) lorsque l’utilisateur redimensionne la barre de redimensionnement avec les poignées de redimensionnement. `COleIPFrameWnd` répond à ce message en tentant de repositionner la fenêtre frame que l’utilisateur a demandé.  
   
  Le nouveau rectangle, donné en coordonnées clientes par rapport à la fenêtre frame qui contient la barre de redimensionnement est pointé par lParam.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|Est une des valeurs suivantes :<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|Non utilisé (0)|  
   
- La valeur de retour doit être différente de zéro si **FS_SYNCACTIVE** n’est définie et la fenêtre synchronise son activation avec le frame parent. `CMiniFrameWnd`retourne zéro lorsque le style est défini sur **MFS_SYNCACTIVE.**  
+ La valeur de retour doit être différente de zéro si **FS_SYNCACTIVE** n’est définie et la fenêtre synchronise son activation avec le frame parent. `CMiniFrameWnd` retourne zéro lorsque le style est défini sur **MFS_SYNCACTIVE.**  
   
  Pour plus d’informations, consultez l’implémentation de `CMiniFrameWnd`.  
   

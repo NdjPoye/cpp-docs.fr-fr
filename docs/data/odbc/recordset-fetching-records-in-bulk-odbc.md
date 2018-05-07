@@ -1,13 +1,10 @@
 ---
-title: "Recordset : Extraction globale d’enregistrements (ODBC) | Documents Microsoft"
-ms.custom: 
+title: 'Recordset : Extraction globale d’enregistrements (ODBC) | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset : récupération globale d’enregistrements (ODBC)
 Cette rubrique s’applique aux classes ODBC MFC.  
@@ -49,7 +44,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   [L’implémentation de RFX en bloc](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Comment CRecordset prend en charge l’extraction de lignes en bloc  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Comment CRecordset prend en charge l’extraction de lignes en bloc  
  Avant d’ouvrir l’objet recordset, vous pouvez définir une taille d’ensemble de lignes avec le `SetRowsetSize` fonction membre. La taille de l’ensemble de lignes spécifie le nombre d’enregistrements qui doit être récupéré au cours d’une seule extraction. Lors de l’extraction de lignes en bloc est implémentée, la taille d’ensemble de lignes par défaut est 25. Si l’extraction de lignes en bloc n’est pas implémentée, la taille de l’ensemble de lignes reste fixe à 1.  
   
  Une fois que vous avez initialisé la taille de l’ensemble de lignes, appelez le [ouvrir](../../mfc/reference/crecordset-class.md#open) fonction membre. Ici, vous devez spécifier le `CRecordset::useMultiRowFetch` option de le **dwOptions** paramètre pour implémenter l’extraction de lignes en bloc. Vous pouvez en outre définir le **CRecordset::userAllocMultiRowBuffers** option. Le mécanisme d’échange de champs d’enregistrements en bloc utilise des tableaux pour stocker les lignes de données extraites pendant une extraction. Ces mémoires tampons de stockage peuvent être alloués automatiquement par l’infrastructure, ou vous pouvez allouer manuellement. En spécifiant le **CRecordset::userAllocMultiRowBuffers** option signifie que vous ferez l’allocation.  
@@ -67,7 +62,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Déplace le curseur d’une ligne particulière dans un ensemble de lignes.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Fonction virtuelle qui modifie la valeur de la taille de l’ensemble de lignes à la valeur spécifiée.|  
   
-##  <a name="_core_special_considerations"></a>Considérations spéciales  
+##  <a name="_core_special_considerations"></a> Considérations spéciales  
  Bien que l’extraction de lignes en bloc est un gain de performances, certaines caractéristiques fonctionnent différemment. Avant de décider d’implémenter l’extraction de lignes en bloc, considérez les points suivants :  
   
 -   L’infrastructure appelle automatiquement la `DoBulkFieldExchange` fonction membre pour transférer des données à partir de la source de données à l’objet recordset. Toutefois, les données ne sont pas transférées à partir de l’ensemble d’enregistrements dans la source de données. Appel de la `AddNew`, **modifier**, **supprimer**, ou **mise à jour** résultats de fonctions membres dans un échec d’assertion. Bien que `CRecordset` actuellement ne fournit pas un mécanisme de mise à jour en bloc des lignes de données, vous pouvez écrire vos propres fonctions à l’aide de la fonction d’API ODBC **SQLSetPos**. Pour plus d’informations sur **SQLSetPos**, consultez la *de référence du programmeur ODBC SDK* dans la documentation MSDN.  
@@ -78,7 +73,7 @@ Cette rubrique s’applique aux classes ODBC MFC.
   
 -   Contrairement à l’échange de champs d’enregistrements, les Assistants ne prennent pas charge RFX en bloc. Cela signifie que vous devez déclarer manuellement les membres de données de champ et remplacer manuellement `DoBulkFieldExchange` en écrivant les appels aux fonctions RFX en bloc. Pour plus d’informations, consultez [fonctions Record Field Exchange](../../mfc/reference/record-field-exchange-functions.md) dans les *Class Library Reference*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>L’implémentation de RFX en bloc  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> L’implémentation de RFX en bloc  
  RFX en bloc transfère un ensemble de lignes de données à partir de la source de données à l’objet recordset. Les fonctions RFX en bloc utilisent des tableaux pour stocker ces données, ainsi que des tableaux pour stocker la longueur de chaque élément de données dans l’ensemble de lignes. Dans votre définition de classe, vous devez définir les membres de données de champ en tant que pointeurs pour accéder aux tableaux de données. En outre, vous devez définir un ensemble de pointeurs pour accéder aux tableaux des longueurs. Tous les membres de données de paramètre ne doivent pas être déclarés en tant que pointeurs ; déclarer des membres de données de paramètre lors de l’utilisation de RFX en bloc sont identique à la déclaration les lors de l’utilisation de RFX. Le code suivant montre un exemple simple :  
   
 ```  

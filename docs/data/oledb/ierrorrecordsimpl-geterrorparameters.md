@@ -1,12 +1,9 @@
 ---
-title: IErrorRecordsImpl::GetErrorParameters | Microsoft Docs
-ms.custom: 
+title: IErrorRecordsImpl::GetErrorParameters | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IErrorRecordsImpl::GetErrorParameters
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetErrorParameters method
 ms.assetid: 9bafac52-399e-4e0e-8365-b9f83074cdd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c803af7afc3f520e36c821506b49a61a2d1742a4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97182e2a1b16ce2b253d0f6fc994bfcf33693486
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ierrorrecordsimplgeterrorparameters"></a>IErrorRecordsImpl::GetErrorParameters
 Retourne les paramètres de l’erreur.  
@@ -45,7 +40,7 @@ Retourne les paramètres de l’erreur.
 #### <a name="parameters"></a>Paramètres  
  Consultez [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/en-us/library/ms715793.aspx) dans les *de référence du programmeur OLE DB*.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** atldb.h  
   
 ## <a name="see-also"></a>Voir aussi  

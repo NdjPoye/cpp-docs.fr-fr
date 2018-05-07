@@ -1,13 +1,10 @@
 ---
 title: Affichage de Classes (Windows) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Classes d'affichage (Windows)
-`CView`et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Vues affichent les données et acceptent l’entrée d’un document.  
+`CView` et ses classes dérivées sont des fenêtres enfants qui représentent la zone cliente d’une fenêtre frame. Vues affichent les données et acceptent l’entrée d’un document.  
   
  Une classe d’affichage est associée à une classe de document et une classe de fenêtre frame à l’aide d’un objet de modèle de document.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Une vue qui contient un contrôle d’arborescence Windows (consultez [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Un contrôle d’arborescence affiche une liste hiérarchique des icônes et des étiquettes organisées de façon similaire dans le volet de gauche de l’Explorateur de fichiers.  
   
 ## <a name="related-classes"></a>Classes associées  
- `CSplitterWnd`vous permet d’avoir plusieurs vues dans une même fenêtre frame. `CPrintDialog`et `CPrintInfo` prennent en charge l’impression et Aperçu avant impression des vues. `CRichEditDoc`et `CRichEditCntrItem` sont utilisés avec `CRichEditView` pour implémenter les fonctionnalités de conteneur OLE.  
+ `CSplitterWnd` vous permet d’avoir plusieurs vues dans une même fenêtre frame. `CPrintDialog` et `CPrintInfo` prennent en charge l’impression et Aperçu avant impression des vues. `CRichEditDoc` et `CRichEditCntrItem` sont utilisés avec `CRichEditView` pour implémenter les fonctionnalités de conteneur OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Une fenêtre de l’utilisateur peut être scindée en plusieurs volets. Ces volets peuvent être redimensionnables par l’utilisateur ou d’une taille fixe.  

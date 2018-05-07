@@ -1,12 +1,9 @@
 ---
-title: "C3200 d’erreurs du compilateur via C3299 | Documents Microsoft"
-ms.custom: 
+title: C3200 d’erreurs du compilateur via C3299 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 d’erreurs du compilateur via C3299
 
@@ -139,9 +134,9 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |[Erreur du compilateur C3271](compiler-error-c3271.md)|'*champ*' : valeur non valide '*nombre*' pour l’attribut FieldOffset|
 |[Erreur du compilateur C3272](compiler-error-c3272.md)|'*symbole*' : symbole requiert FieldOffset, car il s’agit d’un membre de struct/classe *type_name* défini avec StructLayout (LayoutKind::Explicit)|
 |[Erreur du compilateur C3273](compiler-error-c3273.md)|'*mot clé*' : non autorisé sur un bloc try C++|
-|[Erreur du compilateur C3274](compiler-error-c3274.md)|finally / &#95; &#95; finally sans correspondance avec un bloc try|
+|[Erreur du compilateur C3274](compiler-error-c3274.md)|finally /&#95;&#95;finally sans correspondance avec un bloc try|
 |[Erreur du compilateur C3275](compiler-error-c3275.md)|'*identificateur*' : Impossible d’utiliser ce symbole sans qualificateur|
-|[Erreur du compilateur C3276](compiler-error-c3276.md)|'*mot clé*' : saut hors enfin / &#95; &#95; enfin bloc a un comportement indéfini lors de la gestion de l’arrêt|
+|[Erreur du compilateur C3276](compiler-error-c3276.md)|'*mot clé*' : saut hors enfin /&#95;&#95;enfin bloc a un comportement indéfini lors de la gestion de l’arrêt|
 |[Erreur du compilateur C3277](compiler-error-c3277.md)|Impossible de définir un enum non managé '*énumération*'managé à l’intérieur'*type*'|
 |[Erreur du compilateur C3278](compiler-error-c3278.md)|appel de l’interface ou la méthode pure direct '*fonction*' échoue lors de l’exécution|
 |[Erreur du compilateur C3279](compiler-error-c3279.md)|les spécialisations partielles et explicites, ainsi que les instanciations explicites des modèles de classe déclarés dans l'espace de noms cli sont interdites|

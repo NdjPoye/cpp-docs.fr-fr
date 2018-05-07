@@ -1,13 +1,10 @@
 ---
 title: Classes ODBC | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>Classes ODBC
 Ces classes fonctionnent avec les autres classes application framework afin de donner un accès facile à une grande variété de bases de données pour laquelle les pilotes de connectivité ODBC (Open Database) sont disponibles.  
@@ -50,10 +45,10 @@ Ces classes fonctionnent avec les autres classes application framework afin de d
   
 ## <a name="related-classes"></a>Classes associées  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Encapsule un handle vers le stockage pour un objet volumineux binaire (BLOB), par exemple une image bitmap. `CLongBinary`objets sont utilisés pour gérer les objets de grande quantité de données stockées dans des tables de base de données.  
+ Encapsule un handle vers le stockage pour un objet volumineux binaire (BLOB), par exemple une image bitmap. `CLongBinary` objets sont utilisés pour gérer les objets de grande quantité de données stockées dans des tables de base de données.  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant`effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
+ Vous permet de stocker une valeur sans se préoccuper du type de données. `CDBVariant` effectue le suivi du type de données de la valeur actuelle, qui est stocké dans une union.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../mfc/class-library-overview.md)

@@ -1,30 +1,25 @@
 ---
-title: "Contrôles rebar et bandes | Documents Microsoft"
-ms.custom: 
+title: Contrôles rebar et bandes | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - rebar controls [MFC], working with bands in
 - bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6426a25746858ed5bd7c0d8ef70575e029453bae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rebar-controls-and-bands"></a>Contrôles rebar et bandes
 L’objectif principal d’un contrôle rebar est d’agir comme un conteneur pour les fenêtres enfants, contrôles de boîte de dialogue, les menus, barres d’outils et ainsi de suite. Cette relation contenant-contenu est pris en charge par le concept de « bande ». Chaque bande rebar peut contenir n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant.  

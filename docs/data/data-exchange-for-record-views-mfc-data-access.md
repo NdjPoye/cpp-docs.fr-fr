@@ -2,12 +2,9 @@
 title: Échange de données pour les vues des enregistrements (MFC Data Access) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58bda2d9a712e38951b8201c08e5bbbe369537eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Échange de données pour les affichages des enregistrements (Accès aux données MFC)
 Lorsque vous utilisez [ajouter une classe](../mfc/reference/adding-an-mfc-odbc-consumer.md) pour mapper les contrôles dans une ressource de modèle de boîte de dialogue d’une vue d’enregistrement aux champs d’un jeu d’enregistrements, l’infrastructure gère l’échange de données dans les deux sens : du recordset vers les contrôles et des contrôles vers le recordset. L'utilisation du mécanisme DDX signifie que vous n'êtes pas obligé d'écrire le code pour transférer les données d'une extrémité à une autre.  
@@ -37,7 +32,7 @@ Lorsque vous utilisez [ajouter une classe](../mfc/reference/adding-an-mfc-odbc-c
   
  L’illustration suivante montre la relation entre DDX et RFX vues des enregistrements.  
   
- ![Boîte de dialogue &#45;échange de données et enregistrement &#45; échange de champs](../data/media/vc37xt1.gif "vc37xt1")  
+ ![Boîte de dialogue&#45;échange de données et enregistrement&#45;champ exchange](../data/media/vc37xt1.gif "vc37xt1")  
 Échange de données de boîtes de dialogue et de champs d'enregistrements  
   
  Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).  

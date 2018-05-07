@@ -1,13 +1,10 @@
 ---
-title: "Classes basées sur un modèle | Documents Microsoft"
-ms.custom: 
+title: Classes basées sur un modèle | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2beb417bdedab6196ff6d27a387c4b61f083c4ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68d44a66f328465f2c59fb361f9bb6b2a76efa82
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-based-classes"></a>Classes basées sur un modèle
 Cet article explique les classes de collection basées sur un modèle de type sécurisé dans MFC 3.0 et les versions ultérieures. L’utilisation de ces modèles pour créer des collections de type sécurisé est une solution plus pratique qui offre une plus grande cohérence des types que les classes de collection qui ne sont pas basées sur des modèles.  
@@ -60,10 +55,10 @@ Cet article explique les classes de collection basées sur un modèle de type s�
   
  Pour plus d’informations sur les modèles C++, consultez [modèles](../cpp/templates-cpp.md) dans les *référence du langage C++*.  
   
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>À l’aide de tableaux simples, la liste et des modèles de carte  
+##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> À l’aide de tableaux simples, la liste et des modèles de carte  
  Pour utiliser les modèles de collection simples, vous devez connaître le type de données pouvant être stockées dans ces collections et les paramètres à utiliser dans les déclarations de collection.  
   
-###  <a name="_core_simple_array_and_list_usage"></a>Tableau simple et l’utilisation de la liste  
+###  <a name="_core_simple_array_and_list_usage"></a> Tableau simple et l’utilisation de la liste  
  Les classes de la liste et un tableau simple [CArray](../mfc/reference/carray-class.md) et [CList](../mfc/reference/clist-class.md), acceptent deux paramètres : *TYPE* et `ARG_TYPE`. Ces classes peuvent stocker n’importe quel type de données que vous spécifiez dans le *TYPE* paramètre :  
   
 -   Types de données C++ fondamentaux, tels que `int`, `char`, et **float**  
@@ -72,7 +67,7 @@ Cet article explique les classes de collection basées sur un modèle de type s�
   
 -   Autres types que vous définissez  
   
- Par souci de commodité et d'efficacité, vous pouvez utiliser le paramètre `ARG_TYPE` pour spécifier le type des arguments de fonction. En règle générale, vous spécifiez `ARG_TYPE` comme une référence au type nommé dans le *TYPE* paramètre. Exemple :  
+ Par souci de commodité et d'efficacité, vous pouvez utiliser le paramètre `ARG_TYPE` pour spécifier le type des arguments de fonction. En règle générale, vous spécifiez `ARG_TYPE` comme une référence au type nommé dans le *TYPE* paramètre. Par exemple :  
   
  [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]  
   
@@ -80,24 +75,24 @@ Cet article explique les classes de collection basées sur un modèle de type s�
   
  [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
-###  <a name="_core_simple_map_usage"></a>Utilisation de tables simples  
- La classe de table simple, [CMap](../mfc/reference/cmap-class.md), accepte quatre paramètres : *clé*, `ARG_KEY`, *valeur*, et `ARG_VALUE`. À l'instar des classes de tableau et de liste, les classes de table peuvent stocker n'importe quel type de données. Contrairement aux tableaux et listes, qui indexent et classent les données qu'ils contiennent, les tables associent des clés et des valeurs. Vous accédez à une valeur stockée dans une table en spécifiant la clé qui lui est associée. Le *clé* paramètre spécifie le type de données des clés utilisées pour accéder aux données stockées dans la table. Si le type de *clé* est une structure ou une classe, le `ARG_KEY` paramètre est généralement une référence au type spécifié dans *clé*. Le *valeur* paramètre spécifie le type des éléments stockés dans le mappage. Si le type de `ARG_VALUE` est une structure ou une classe, le `ARG_VALUE` paramètre est généralement une référence au type spécifié dans *valeur*. Exemple :  
+###  <a name="_core_simple_map_usage"></a> Utilisation de tables simples  
+ La classe de table simple, [CMap](../mfc/reference/cmap-class.md), accepte quatre paramètres : *clé*, `ARG_KEY`, *valeur*, et `ARG_VALUE`. À l'instar des classes de tableau et de liste, les classes de table peuvent stocker n'importe quel type de données. Contrairement aux tableaux et listes, qui indexent et classent les données qu'ils contiennent, les tables associent des clés et des valeurs. Vous accédez à une valeur stockée dans une table en spécifiant la clé qui lui est associée. Le *clé* paramètre spécifie le type de données des clés utilisées pour accéder aux données stockées dans la table. Si le type de *clé* est une structure ou une classe, le `ARG_KEY` paramètre est généralement une référence au type spécifié dans *clé*. Le *valeur* paramètre spécifie le type des éléments stockés dans le mappage. Si le type de `ARG_VALUE` est une structure ou une classe, le `ARG_VALUE` paramètre est généralement une référence au type spécifié dans *valeur*. Par exemple :  
   
  [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
   
  Le premier exemple stocke des valeurs `MY_STRUCT`, y accède par des clés `int` et retourne les éléments `MY_STRUCT` accédés par référence. Le deuxième exemple stocke des valeurs `CPerson`, y accède par des clés `CString` et retourne les références aux éléments accédés. Cet exemple peut représenter un carnet d'adresses simple où vous recherchez des personnes par leur nom de famille.  
   
- Étant donné que la *clé* paramètre est de type `CString` et *KEY_TYPE* paramètre est de type `LPCSTR`, les clés sont stockées dans la carte en tant qu’éléments de type `CString` mais sont référencées dans les fonctions telles que `SetAt` via des pointeurs de type `LPCSTR`. Exemple :  
+ Étant donné que la *clé* paramètre est de type `CString` et *KEY_TYPE* paramètre est de type `LPCSTR`, les clés sont stockées dans la carte en tant qu’éléments de type `CString` mais sont référencées dans les fonctions telles que `SetAt` via des pointeurs de type `LPCSTR`. Par exemple :  
   
  [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]  
   
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a>À l’aide de modèles de Collection de pointeurs typés  
+##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> À l’aide de modèles de Collection de pointeurs typés  
  Pour utiliser les modèles de collection de pointeurs typés, vous devez connaître le type de données pouvant être stockées dans ces collections et les paramètres à utiliser dans les déclarations de collection.  
   
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a>Tableau de pointeurs typés et utilisation de la liste  
+###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Tableau de pointeurs typés et utilisation de la liste  
  Les classes de la liste et un tableau de pointeurs typés [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) et [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), acceptent deux paramètres : `BASE_CLASS` et *TYPE*. Ces classes peuvent stocker n’importe quel type de données que vous spécifiez dans le *TYPE* paramètre. Elles sont dérivées de l'une des classes de collection non basées sur des modèles qui stockent des pointeurs. Vous spécifiez cette classe de base dans `BASE_CLASS`. Pour les tableaux, utilisez `CObArray` ou `CPtrArray`. Pour les listes, utilisez `CObList` ou `CPtrList`.  
   
- En effet, lorsque vous déclarez une collection basée sur `CObList`, non seulement la nouvelle classe hérite des membres de sa classe de base, mais elle déclare également plusieurs opérateurs et fonctions membres de type sécurisé qui aident à assurer la cohérence des types en encapsulant des appels aux membres de la classe de base. Ces encapsulations gèrent toutes les conversions de type nécessaires. Exemple :  
+ En effet, lorsque vous déclarez une collection basée sur `CObList`, non seulement la nouvelle classe hérite des membres de sa classe de base, mais elle déclare également plusieurs opérateurs et fonctions membres de type sécurisé qui aident à assurer la cohérence des types en encapsulant des appels aux membres de la classe de base. Ces encapsulations gèrent toutes les conversions de type nécessaires. Par exemple :  
   
  [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]  
   
@@ -105,8 +100,8 @@ Cet article explique les classes de collection basées sur un modèle de type s�
   
  Le deuxième exemple déclare une liste de pointeurs typés, `myList`, dérivée de `CPtrList`. La liste stocke et retourne des pointeurs vers des objets `MY_STRUCT`. Une classe basée sur `CPtrList` est utilisée pour stocker des pointeurs vers des objets non dérivés de `CObject`. `CTypedPtrList` a plusieurs fonctions membres de type sécurisé : `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev` et `GetAt`.  
   
-###  <a name="_core_typed.2d.pointer_map_usage"></a>Utilisation de tables de pointeurs typés  
- La classe de la table de pointeurs typés, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), prend trois paramètres : `BASE_CLASS`, *clé*, et *valeur*. Le paramètre `BASE_CLASS` spécifie la classe dont dérive la nouvelle classe : `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, etc. *CLÉ* est analogue à *clé* dans `CMap`: elle spécifie le type de la clé utilisée pour les recherches. *VALEUR* est analogue à *valeur* dans `CMap`: elle spécifie le type d’objet stocké dans le mappage. Exemple :  
+###  <a name="_core_typed.2d.pointer_map_usage"></a> Utilisation de tables de pointeurs typés  
+ La classe de la table de pointeurs typés, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), prend trois paramètres : `BASE_CLASS`, *clé*, et *valeur*. Le paramètre `BASE_CLASS` spécifie la classe dont dérive la nouvelle classe : `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, etc. *CLÉ* est analogue à *clé* dans `CMap`: elle spécifie le type de la clé utilisée pour les recherches. *VALEUR* est analogue à *valeur* dans `CMap`: elle spécifie le type d’objet stocké dans le mappage. Par exemple :  
   
  [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  
   

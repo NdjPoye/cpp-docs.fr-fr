@@ -1,13 +1,10 @@
 ---
 title: CDaoQueryDefInfo, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo, structure
 Le `CDaoQueryDefInfo` structure contient des informations sur un objet querydef défini pour les objets d’accès aux données (DAO).  
@@ -106,13 +101,13 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Notes  
  L’objet querydef est un objet de classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Les références au principal, secondaire et tous les ci-dessus indiquent comment les informations sont retournées par la [fonction membre GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) fonction membre dans la classe `CDaoDatabase`.  
   
- Les informations extraites par le [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) fonction membre est stockée dans un `CDaoQueryDefInfo` structure. Appelez `GetQueryDefInfo` pour l’objet de base de données dans dont QueryDefs (collection) est stocké l’objet querydef. `CDaoQueryDefInfo`définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoQueryDefInfo` objet. Classe `CDaoDatabase` fournit également des fonctions de membre pour accéder directement à toutes les propriétés retournées dans un `CDaoQueryDefInfo` objet, vous devrez probablement rarement appeler `GetQueryDefInfo`.  
+ Les informations extraites par le [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) fonction membre est stockée dans un `CDaoQueryDefInfo` structure. Appelez `GetQueryDefInfo` pour l’objet de base de données dans dont QueryDefs (collection) est stocké l’objet querydef. `CDaoQueryDefInfo` définit également un `Dump` builds de la fonction membre en mode débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoQueryDefInfo` objet. Classe `CDaoDatabase` fournit également des fonctions de membre pour accéder directement à toutes les propriétés retournées dans un `CDaoQueryDefInfo` objet, vous devrez probablement rarement appeler `GetQueryDefInfo`.  
   
  Lorsque vous ajoutez un champ ou un objet de paramètre à la collection de champs ou des paramètres d’un objet querydef, une exception est levée si la base de données sous-jacente ne prend pas en charge le type de données spécifié pour le nouvel objet.  
   
  Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la querydef a été créée ou mises à jour. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichier en utilisant le **net temps** commande afin d’éviter des incohérences dans les paramètres de propriété DateCreated et LastUpdated.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
 ## <a name="see-also"></a>Voir aussi  
