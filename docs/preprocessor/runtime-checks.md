@@ -1,12 +1,9 @@
 ---
 title: runtime_checks | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.runtime_checks
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c91d04c145435b2570963cac38463061598e805
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 817afaff738b2528bd165e814517c8399cd8a151
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="runtimechecks"></a>runtime_checks
 Désactive ou restaure les paramètres [/RTC](../build/reference/rtc-run-time-error-checks.md) .  
@@ -54,7 +49,7 @@ Désactive ou restaure les paramètres [/RTC](../build/reference/rtc-run-time-er
 |**c**|Signale quand une valeur est assignée à un type de données plus petit qui se traduit par une perte de données.|  
 |**u**|Signale quand une variable est utilisée avant d'être définie.|  
   
- Ce sont les mêmes lettres que celles utilisées avec l'option du compilateur /RTC. Exemple :  
+ Ce sont les mêmes lettres que celles utilisées avec l'option du compilateur /RTC. Par exemple :  
   
 ```  
 #pragma runtime_checks( "sc", restore )  

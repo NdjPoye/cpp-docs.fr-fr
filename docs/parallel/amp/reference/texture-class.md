@@ -1,12 +1,9 @@
 ---
 title: texture, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture
@@ -26,17 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="texture-class"></a>texture, classe
 Une texture est un agrégat de données un `accelerator_view` dans le domaine de l’étendue. Il est une collection de variables, un pour chaque élément dans un domaine de l’étendue. Chaque variable contient une valeur correspondant à un type primitif C++ ( `unsigned int`, `int`, `float`, `double`), un type scalaire ( `norm`, ou `unorm`), ou un type de vecteur court.  
@@ -110,7 +105,7 @@ class texture;
   
  `texture`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics  
@@ -263,7 +258,7 @@ const value_type operator() (
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément spécifié par les paramètres.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  Retourne l’élément qui est à l’index spécifié.  
   
@@ -284,7 +279,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui est à l’index spécifié.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le texte spécifié [texture](texture-class.md) objet à celui-ci.  
   

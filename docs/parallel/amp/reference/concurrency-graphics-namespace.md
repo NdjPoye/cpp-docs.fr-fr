@@ -1,29 +1,24 @@
 ---
 title: Concurrency::Graphics Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2da450ca30ee780f0e493f0b120de33a939a4cd7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
 L’espace de noms du graphique fournit des types et des fonctions conçues pour la programmation graphique.  
@@ -91,7 +86,7 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Surchargé. Copie le contenu de la texture source dans la mémoire tampon hôte de destination.|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Surchargé. Copie le contenu de la texture de la source de façon asynchrone dans la mémoire tampon hôte de destination.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
   
  **Espace de noms :** Concurrency  

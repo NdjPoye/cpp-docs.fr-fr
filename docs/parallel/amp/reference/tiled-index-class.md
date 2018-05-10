@@ -1,12 +1,9 @@
 ---
 title: tiled_index, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
 Fournit un index dans une [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine global. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de mosaïques](../../../parallel/amp/using-tiles.md).  
@@ -81,7 +76,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[tiled_index Constructor](#ctor)|Initialise une nouvelle instance de la classe `tile_index`.|  
+|[tiled_index, constructeur](#ctor)|Initialise une nouvelle instance de la classe `tile_index`.|  
 
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -102,10 +97,10 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[Constante locale](#tiled_index__local)|Stocke un `index` objet d’index de rang 1, 2 ou 3 qui représente le rapport dans la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.|  
 |[RANK (constante)](#tiled_index__rank)|Stocke le rang de le `tiled_index` objet.|  
 |[Tile (constante)](#tiled_index__tile)|Stocke un `index` objet de rang 1, 2 ou 3 qui représente les coordonnées de la mosaïque actuelle d’un `tiled_extent` objet.|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
-|[tile_origin Constant](#tiled_index__tile_origin)|Stocke un `index` objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque actuelle en un `tiled_extent` objet.|  
+|[tile_dim0 (constante)](#tiled_index__tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
+|[tile_dim1 (constante)](#tiled_index__tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
+|[tile_dim2 (constante)](#tiled_index__tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
+|[tile_origin (constante)](#tiled_index__tile_origin)|Stocke un `index` objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque actuelle en un `tiled_extent` objet.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -120,13 +115,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
  `tiled_index`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
 
 
-## <a name="tiled_index__ctor"></a>  tiled_index Constructor  
+## <a name="tiled_index__ctor"></a>  tiled_index, constructeur  
 Initialise une nouvelle instance de la classe `tiled_index`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -183,7 +178,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Valeur de retour  
  Un `extent` objet qui a les valeurs de la `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>  barrier   
+## <a name="tiled_index__barrier"></a>  cloisonnement   
 Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un objet barrier dans la vignette actuel de threads.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -192,7 +187,7 @@ Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un objet b
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>  global   
+## <a name="tiled_index__global"></a>  Global   
 Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’index global d’un objet.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -201,7 +196,7 @@ Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’in
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>  local   
+## <a name="tiled_index__local"></a>  Local   
 Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représente le rapport dans la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -210,7 +205,7 @@ Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représe
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>  rank   
+## <a name="tiled_index__rank"></a>  Rang   
 Stocke le rang de le `tiled_index` objet.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -219,7 +214,7 @@ Stocke le rang de le `tiled_index` objet.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>  tile   
+## <a name="tiled_index__tile"></a>  Mosaïque   
 Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente les coordonnées de la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  

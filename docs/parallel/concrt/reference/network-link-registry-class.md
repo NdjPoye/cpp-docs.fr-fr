@@ -1,12 +1,9 @@
 ---
 title: network_link_registry, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
 La classe de base abstraite `network_link_registry` gère les liens entre les blocs sources et cibles.  
@@ -64,7 +59,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
 |[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[contains](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
+|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche la `network_link_registry` objet pour un bloc spécifié.|  
 |[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
 |[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié à partir de la `network_link_registry` objet.|  
   
@@ -74,7 +69,7 @@ class network_link_registry;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `network_link_registry`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -148,5 +143,5 @@ virtual bool remove(_EType _Link) = 0;
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [single_link_registry Class](single-link-registry-class.md)   
+ [single_link_registry, classe](single-link-registry-class.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)

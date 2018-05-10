@@ -1,12 +1,9 @@
 ---
-title: "Syntaxe du préprocesseur | Documents Microsoft"
-ms.custom: 
+title: Syntaxe du préprocesseur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>Syntaxe du préprocesseur
-**#define**  *identifier* *token-string*opt  
+**#define***identificateur* *chaîne de jeton*opt    
   
- *#* **définir***identificateur*[**(** *identificateur*opt**,** *...*  **,** *identificateur*opt **)**] *chaîne de jeton*opt    
+ *#* **définir***identificateur*[**(** *identificateur*opt **,** *...*  **,** *identificateur*opt **)**] *chaîne de jeton*opt  
   
- **defined(**  *identifier* **)**  
+ **défini (***identificateur* **)**   
   
- **defined**  *identifier*  
+ **défini***identificateur*   
   
- `#include` **"***path-spec***"**  
+ `#include` **«***spécification de chemin d’accès***»**  
   
  `#include` **\<***spécification de chemin d’accès***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef***identificateur*   
+ *#* **undef***identificateur*  
   
- **#error**  *token-string*  
+ **#error***chaîne de jeton*   
   
- **#pragma**  *token-string*  
+ **#pragma***chaîne de jeton*   
   
  *conditionnel* :  
  *If-partie elif-parties*opt*partie « else »*opt*endif en ligne*  
@@ -57,9 +52,9 @@ ms.lasthandoff: 02/23/2018
  *If-ligne* :  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***identificateur*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***identificateur*   
   
  *parties d’elif* :  
  *texte de la ligne d’elif*  
@@ -72,13 +67,13 @@ ms.lasthandoff: 02/23/2018
  *partie « else »* :  
  *else-linetext*  
   
- *else-line* :  
+ *ligne Else* :  
  `#else`  
   
  *ligne endif* :  
  `#endif`  
   
- *digit-sequence* :  
+ *séquence de chiffres* :  
  *digit*  
   
  *digit-sequence digit*  

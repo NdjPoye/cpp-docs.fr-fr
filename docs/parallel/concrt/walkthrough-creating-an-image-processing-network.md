@@ -1,30 +1,25 @@
 ---
-title: "Procédure pas à pas : Création d’un réseau de traitement d’Image | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Création d’un réseau de traitement d’Image | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procédure pas à pas : création d'un réseau de traitement d'image
 Ce document montre comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement d’image.  
@@ -53,7 +48,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
   
 -   [Exemple complet](#complete)  
   
-##  <a name="functionality"></a>Définition des fonctionnalités de traitement d’Image  
+##  <a name="functionality"></a> Définition des fonctionnalités de traitement d’Image  
  Cette section présente les fonctions de prise en charge par le réseau de traitement d’image pour travailler avec des images qui sont lus à partir du disque.  
   
  Les fonctions suivantes, `GetRGB` et `MakeColor`, extraire et combiner les différents composants de la couleur donnée, respectivement.  
@@ -80,7 +75,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
   
  [[Haut](#top)]  
   
-##  <a name="network"></a>Création du réseau de traitement d’Image  
+##  <a name="network"></a> Création du réseau de traitement d’Image  
  Cette section décrit comment créer un réseau de blocs de messages asynchrones qui effectuent le traitement de l’image sur chaque [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] image (.jpg) dans un répertoire donné. Le réseau effectue les opérations de traitement d’image suivantes :  
   
 1.  Pour toute image qui est créée par Tom, convertir en nuances de gris.  
@@ -135,7 +130,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
 |`colormask`|A `transformer` objet qui supprime les composants de couleur vert et bleu à partir d’images qui sont le rouge comme couleur dominante.|  
 |`darken`|A `transformer` objet diminuer la luminosité images qui ont le rouge comme couleur dominante.|  
 |`sepiatone`|A `transformer` objet qui applique le ton sépia aux images qui ne sont pas créées par Tom et ne sont pas principalement en rouge.|  
-|`save_bitmap`|A `transformer` objet qui enregistre le traité `image` sur le disque sous forme de bitmap. `save_bitmap`Récupère le nom de fichier d’origine à partir de la `map` de l’objet et modifie son extension de nom de fichier pour les fichiers .bmp.|  
+|`save_bitmap`|A `transformer` objet qui enregistre le traité `image` sur le disque sous forme de bitmap. `save_bitmap` Récupère le nom de fichier d’origine à partir de la `map` de l’objet et modifie son extension de nom de fichier pour les fichiers .bmp.|  
 |`delete_bitmap`|A `transformer` objet qui libère la mémoire pour les images.|  
 |`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) objet qui agit comme le nœud terminal dans le réseau. Il décrémente le `countdown_event` objet afin de signaler à l’application principale qu’une image a été traitée.|  
   
@@ -155,7 +150,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
   
  [[Haut](#top)]  
   
-##  <a name="complete"></a>L’exemple complet  
+##  <a name="complete"></a> L’exemple complet  
  L'exemple de code suivant illustre l'exemple complet. Le `wmain` fonction gère le [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] bibliothèque et appelle le `ProcessImages` fonctionner au processus le [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] les fichiers dans le `Sample Pictures` active.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Ce document montre comment créer un réseau de blocs de messages asynchrones qu
   
  ![Exemple de sortie pour l’exemple](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`est créée par Tom Alphin et par conséquent, est converti en nuances de gris. `Chrysanthemum`, `Desert`, `Koala`, et `Tulips` ont rouge comme couleur dominante et par conséquent, les composants de la couleur bleue et verte supprimés et sont foncées. `Hydrangeas`, `Jellyfish`, et `Penguins` correspondent aux critères par défaut et sont donc sépia tons.  
+ `Lighthouse` est créée par Tom Alphin et par conséquent, est converti en nuances de gris. `Chrysanthemum`, `Desert`, `Koala`, et `Tulips` ont rouge comme couleur dominante et par conséquent, les composants de la couleur bleue et verte supprimés et sont foncées. `Hydrangeas`, `Jellyfish`, et `Penguins` correspondent aux critères par défaut et sont donc sépia tons.  
   
  [[Haut](#top)]  
   

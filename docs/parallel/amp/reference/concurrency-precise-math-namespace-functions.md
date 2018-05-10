@@ -1,10 +1,7 @@
 ---
-title: "Fonctions d’espace de noms Concurrency::precise_math | Documents Microsoft"
-ms.custom: 
+title: Fonctions d’espace de noms Concurrency::precise_math | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::precise_math
 ||||  
@@ -189,7 +184,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc cosinus de l’argument  
   
-##  <a name="acosh"></a>  acosh  
+##  <a name="acosh"></a>  ACOSH  
  Calcule le cosinus hyperbolique inverse de l’argument  
   
 ```  
@@ -251,7 +246,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’arc sinus de l’argument  
   
-##  <a name="asinh"></a>  asinh  
+##  <a name="asinh"></a>  ASINH  
  Calcule le sinus hyperbolique inverse de l’argument  
   
 ```  
@@ -356,7 +351,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de l’arc tangente de l’argument  
   
-##  <a name="atanh"></a>  atanh  
+##  <a name="atanh"></a>  ATANH  
  Calcule la tangente hyperbolique inverse de l’argument  
   
 ```  
@@ -585,7 +580,7 @@ inline float cospif(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du cosinus de pi * _X  
   
-##  <a name="erf"></a>  erf  
+##  <a name="erf"></a>  ERF  
  Calcule la fonction d’erreur de _X  
   
 ```  
@@ -602,7 +597,7 @@ inline double erf(double _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la fonction d’erreur de _X  
   
-##  <a name="erfc"></a>  erfc  
+##  <a name="erfc"></a>  ERFC  
  Calcule la fonction d’erreur complémentaire de _X  
   
 ```  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Paramètres  
  `exponent`  
- Le terme exponentiels  *n*  de l’expression mathématique `e` <sup> n </sup>, où `e` est la base du logarithme népérien.  
+ Le terme exponentiels *n* de l’expression mathématique `e` <sup>n</sup>, où `e` est la base du logarithme népérien.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’exponentielle de base e de l’argument, moins 1  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Paramètres  
  `exponent`  
- Le terme exponentiels  *n*  de l’expression mathématique `e` <sup> n </sup>, où `e` est la base du logarithme népérien.  
+ Le terme exponentiels *n* de l’expression mathématique `e` <sup>n</sup>, où `e` est la base du logarithme népérien.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’exponentielle de base e de l’argument, moins 1  
@@ -897,7 +892,7 @@ inline float fdimf(
 ### <a name="return-value"></a>Valeur de retour
 La différence entre _X et _Y si _X est supérieure à _Y ; Sinon, + 0. 
   
-##  <a name="floor"></a>  floor  
+##  <a name="floor"></a>  Floor  
  Calcule la valeur plancher de l’argument  
   
 ```  
@@ -928,7 +923,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le plancher de l’argument  
 
-## <a name="a-namefma-fma"></a><a name="fma"> fma  
+## <a name="a-namefma-fma"></a><a name="fma"> FMA  
 Calcule le produit des première et deuxième arguments spécifiés, puis ajoute le troisième argument spécifié au résultat ; le calcul entière est effectué en une seule opération.
 ```
 inline float fma(
@@ -1076,7 +1071,7 @@ inline double fmod(
  Le deuxième argument à virgule flottante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le reste de `_X` divisé par `_Y`; autrement dit, la valeur de `_X`  -  `_Y`  *n* , où  *n*  est un entier tels que la grandeur de `_X`  -  `_Y`  *n*  est inférieure à la grandeur de `_Y`.  
+ Le reste de `_X` divisé par `_Y`; autrement dit, la valeur de `_X`  -  `_Y` *n*, où *n* est un nombre entier tels que la grandeur du `_X`  -  `_Y` *n* est inférieure à la grandeur de `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf  
  Calcule le reste du premier argument spécifié divisé par le deuxième argument spécifié.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Le deuxième argument à virgule flottante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le reste de `_X` divisé par `_Y`; autrement dit, la valeur de `_X`  -  `_Y`  *n* , où  *n*  est un entier tels que la grandeur de `_X`  -  `_Y`  *n*  est inférieure à la grandeur de `_Y`.  
+ Le reste de `_X` divisé par `_Y`; autrement dit, la valeur de `_X`  -  `_Y` *n*, où *n* est un nombre entier tels que la grandeur du `_X`  -  `_Y` *n* est inférieure à la grandeur de `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  Classe de la valeur d’argument comme une valeur NaN, infinie, normal subnormal, zéro  
@@ -1265,7 +1260,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si l’argument a une valeur infinie  
   
-##  <a name="isnan"></a>  isnan  
+##  <a name="isnan"></a>  isNaN  
  Détermine si l’argument est une valeur NaN  
   
 ```  
@@ -1583,7 +1578,7 @@ inline float modff(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la partie fractionnaire signée du `_X`.  
   
-##  <a name="nan"></a>  nan  
+##  <a name="nan"></a>  NaN  
  Retourne une valeur NaN silencieuse  
   
 ```  
@@ -1819,7 +1814,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’inverse de la racine cubique de l’argument  
   
-##  <a name="remainder"></a>  remainder  
+##  <a name="remainder"></a>  reste  
  Calcule le reste : _X REM _Y  
   
 ```  

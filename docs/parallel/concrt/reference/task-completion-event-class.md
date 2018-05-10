@@ -1,12 +1,9 @@
 ---
 title: task_completion_event, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_completion_event
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event, classe
 La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.  
@@ -75,7 +70,7 @@ class task_completion_event<void>;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task_completion_event`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppltasks.h  
   
  **Espace de noms :** concurrency  

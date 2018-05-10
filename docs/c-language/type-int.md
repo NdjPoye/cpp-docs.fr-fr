@@ -1,13 +1,10 @@
 ---
 title: Type int | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a796626d604417a15d39f90823fc7fc8fca580dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ed3fcd9b11a76f8ff211bf8be5cf50ee6664cda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-int"></a>Type int
 La taille d'un élément `int` signé ou non signé est la taille standard d'un entier sur un ordinateur particulier. Par exemple, dans les systèmes d'exploitation 16 bits, le type `int` inclut habituellement 16 bits, ou 2 octets. Dans les systèmes d'exploitation 32 bits, le type `int` inclut habituellement 32 bits, ou 4 octets. Ainsi, le type `int` équivaut au type `short int` ou **long int**, et le type `unsigned int` équivaut au type **unsigned short** ou `unsigned long`, selon l'environnement cible. Les types `int` représentent tous des valeurs signées, sauf indication contraire.  

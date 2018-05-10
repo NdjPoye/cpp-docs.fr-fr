@@ -1,12 +1,9 @@
 ---
 title: Scheduler, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler, classe
 Représente une abstraction pour un planificateur de runtime d'accès concurrentiel.  
@@ -57,7 +52,7 @@ class Scheduler;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Scheduler](#ctor)|Un objet de la `Scheduler` classe peut uniquement être créé à l’aide des méthodes de fabrique, ou implicitement.|  
+|[Planificateur](#ctor)|Un objet de la `Scheduler` classe peut uniquement être créé à l’aide des méthodes de fabrique, ou implicitement.|  
 |[~ Scheduler, destructeur](#dtor)|Un objet de la `Scheduler` classe est détruit implicitement lorsque toutes les références externes cessent d’exister.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -65,7 +60,7 @@ class Scheduler;
 |Nom|Description|  
 |----------|-----------------|  
 |[Attacher](#attach)|Attache le planificateur au contexte d’appel. Une fois que cette méthode retourne le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.|  
-|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` , place une référence initiale sur le planificateur et retourne un pointeur vers elle.|  
+|[Créer](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` , place une référence initiale sur le planificateur et retourne un pointeur vers elle.|  
 |[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être en faveur de l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retourne le nombre actuel de processeurs virtuels pour le planificateur.|  
 |[GetPolicy](#getpolicy)|Retourne une copie de la stratégie que le planificateur a été créé.|  
@@ -86,12 +81,12 @@ class Scheduler;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Scheduler`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="attach"></a> Attach 
+##  <a name="attach"></a> Joindre 
 
  Attache le planificateur au contexte d’appel. Une fois que cette méthode retourne le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.  
   
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de la stratégie que le planificateur a été créé.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Retourne un identificateur unique pour le planificateur.  
   
@@ -269,7 +264,7 @@ Scheduler();
   
  Vous pouvez également créer un planificateur explicitement par le biais du `CurrentScheduler::Create` méthode ou la `Scheduler::Create` (méthode).  
   
-##  <a name="dtor"></a> ~Scheduler 
+##  <a name="dtor"></a> ~ Scheduler 
 
  Un objet de la `Scheduler` classe est détruit implicitement lorsque toutes les références externes cessent d’exister.  
   

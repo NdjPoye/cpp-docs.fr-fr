@@ -1,12 +1,9 @@
 ---
 title: Classe Timer | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - timer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8372e32b408b97a6ac652b0ff2ff5cc19de69b54
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="timer-class"></a>Classe timer
 Un bloc de messagerie `timer` est un `source_block` à cible unique, capable d'envoyer un message à sa cible après un délai spécifié ou à intervalles spécifiques.  
@@ -92,7 +87,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  `timer`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -142,7 +137,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Pointeur vers la cible qui vient d’être lié.  
   
-##  <a name="pause"></a> pause 
+##  <a name="pause"></a> Pause 
 
  Arrête le `timer` bloc de messagerie. S’il s’agit d’une répétition `timer` bloc de messagerie, il peut être redémarré avec une ultérieure `start()` appeler. Non extensible pour les minuteries, cela a le même effet qu’un `stop` appeler.  
   
@@ -260,7 +255,7 @@ timer(
 ### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_Scheduler` ou `_ScheduleGroup` paramètres.  
   
-##  <a name="dtor"></a> ~timer 
+##  <a name="dtor"></a> ~ timer 
 
  Détruit un `timer` bloc de messagerie.  
   

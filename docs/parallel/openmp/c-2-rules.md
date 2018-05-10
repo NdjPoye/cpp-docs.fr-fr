@@ -1,32 +1,27 @@
 ---
-title: "C.2 règles | Documents Microsoft"
-ms.custom: 
+title: C.2 règles | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Règles
 La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammaire montre les extensions à la grammaire du langage de base pour les directives OpenMP C et C++.  
   
- **/\*en C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* en C++ (ISO/IEC 14882:1998) \*/**  
   
  *instruction-seq*:  
   
@@ -38,7 +33,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *instruction-seq directive openmp*  
   
- **/\*dans C90 (9899 : 1990 de la norme ISO/IEC)\*/**  
+ **/\* dans C90 (9899 : 1990 de la norme ISO/IEC) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *liste d’instructions de la directive openmp*  
   
- **/\*dans C99 (ISO/IEC la 9899 : 1999)\*/**  
+ **/\* dans C99 (ISO/IEC la 9899 : 1999) \*/**  
   
  *élément de bloc*:  
   
@@ -62,7 +57,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *instruction* :  
   
- **/\*instructions standards\*/**  
+ **/\* instructions standards \*/**  
   
  *construction d’OpenMP*  
   
@@ -274,7 +269,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *déclaration*:  
   
- **/\*déclarations standards\*/**  
+ **/\* déclarations standards \*/**  
   
  *directive threadprivate*  
   
@@ -304,9 +299,9 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *opérateur de réduction*:  
   
- *Un des*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Un des*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*en C\*/**  
+ **/\* en C \*/**  
   
  *liste de la variable*:  
   
@@ -314,7 +309,7 @@ La notation est décrite dans la section 6.1 de la norme C. Cette annexe grammai
   
  *liste de la variable* **,** *identificateur*  
   
- **/\*en C++\*/**  
+ **/\* en C++ \*/**  
   
  *liste de la variable*:  
   

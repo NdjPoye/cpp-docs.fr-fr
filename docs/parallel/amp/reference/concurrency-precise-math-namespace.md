@@ -1,12 +1,9 @@
 ---
 title: Concurrency::precise_math Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
@@ -142,17 +139,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 181b80f97dd7ae3e44d3c7c51139d492da967ba3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math, espace de noms
 Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, nécessitent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
@@ -304,7 +299,7 @@ namespace precise_math;
 |[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Surchargé. Tronque l’argument de la partie entière|  
 |[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronque l’argument de la partie entière|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_math.h  
   
  **Espace de noms :** Concurrency  

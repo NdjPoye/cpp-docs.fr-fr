@@ -1,12 +1,9 @@
 ---
 title: concurrent_unordered_map, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map, classe
 La classe `concurrent_unordered_map` est un conteneur d'accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d'éléments de type `std::pair<const K, _Element_type>`. La séquence est représentée d'une manière à permettre les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -132,7 +127,7 @@ template <typename K,
   
  `concurrent_unordered_map`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concurrent_unordered_map.h  
   
  **Espace de noms :** concurrency  
@@ -489,7 +484,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Notes  
  Cette valeur limite supérieure peut être supérieure à ce que le conteneur peut recevoir réellement.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.  
   
@@ -515,7 +510,7 @@ mapped_type& operator[](key_type&& kval);
   
  Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Les fonctions membres `find` et [insérer](#insert) peut être utilisé pour déterminer si un élément avec une clé spécifiée est déjà présent avant l’insertion.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   

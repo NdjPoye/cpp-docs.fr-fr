@@ -1,12 +1,9 @@
 ---
 title: IScheduler, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler, structure
 Interface avec une abstraction d'un planificateur de tâches. Le gestionnaire des ressources du runtime d'accès concurrentiel utilise cette interface pour communiquer avec les planificateurs de tâches.  
@@ -64,12 +59,12 @@ struct IScheduler;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IScheduler`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="addvirtualprocessors"></a>  IScheduler::AddVirtualProcessors Method  
+##  <a name="addvirtualprocessors"></a>  IScheduler::AddVirtualProcessors, méthode  
  Fournit un planificateur avec un ensemble de racines de processeur virtuel pour son utilisation. Chaque `IVirtualProcessorRoot` interface représente le droit d’exécuter un thread unique qui peut effectuer un travail pour le compte du planificateur.  
   
 ```
@@ -163,7 +158,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Un planificateur qualifié pour les notifications Obtient un jeu de notifications initiales lorsqu’il est créé, informant si les ressources qu’il vient d’assigner sont en externe occupé ou inactif.  
   
-##  <a name="removevirtualprocessors"></a>  IScheduler::RemoveVirtualProcessors Method  
+##  <a name="removevirtualprocessors"></a>  IScheduler::RemoveVirtualProcessors, méthode  
  Lance la suppression des racines de processeur virtuel qui ont été précédemment alloué à ce planificateur.  
   
 ```

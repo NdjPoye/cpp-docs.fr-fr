@@ -1,27 +1,22 @@
 ---
 title: 2.6.5 Directive flush | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 Directive flush
 Le **vider** directive, explicite ou implicite, spécifie un point de séquence de « inter-threads » à laquelle l’implémentation est requise pour garantir que tous les threads dans une équipe ont une vue cohérente de certains objets (indiqué ci-dessous) dans mémoire. Cela signifie que des évaluations précédentes des expressions qui font référence à ces objets sont terminées et que les évaluations suivantes n’ont pas encore commencé. Par exemple, compilateurs doivent restaurer les valeurs des objets à partir de registres à la mémoire et matériel devrez peut-être vider les mémoires tampons d’écriture dans la mémoire et de recharger les valeurs des objets de la mémoire.  
@@ -40,7 +35,7 @@ Le **vider** directive, explicite ou implicite, spécifie un point de séquence 
   
 -   À l’entrée et la sortie à partir de **critiques**  
   
--   À l’entrée et la sortie à partir de`ordered`  
+-   À l’entrée et la sortie à partir de `ordered`  
   
 -   À l’entrée et la sortie à partir de **parallèle**  
   

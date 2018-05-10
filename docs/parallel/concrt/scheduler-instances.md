@@ -1,29 +1,24 @@
 ---
 title: Instances de planificateur | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Instances de planificateur
 Ce document décrit le rôle des instances de planificateur dans le Runtime d’accès concurrentiel et comment utiliser le [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) et [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classes pour créer et gérer instances de planificateur. Instances de planificateur sont utiles lorsque vous souhaitez associer des stratégies de planification explicites à des types spécifiques de charges de travail. Par exemple, vous pouvez créer une instance du planificateur pour effectuer certaines tâches avec une priorité de thread élevée et utiliser le planificateur par défaut pour effectuer d’autres tâches avec une priorité de thread normale.  
@@ -43,7 +38,7 @@ Ce document décrit le rôle des instances de planificateur dans le Runtime d’
   
 -   [Exemple](#example)  
   
-##  <a name="classes"></a>Le planificateur et les Classes de CurrentScheduler  
+##  <a name="classes"></a> Le planificateur et les Classes de CurrentScheduler  
  Le Planificateur de tâches permet aux applications d’utiliser une ou plusieurs *instances de planificateur* pour planifier le travail. Le [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe représente une instance du planificateur et encapsule la fonctionnalité qui est liée à la planification des tâches.  
   
  Un thread qui est attaché à un planificateur est appelé un *contexte d’exécution*, ou simplement *contexte*. Un planificateur peut être actif sur le contexte actuel à tout moment. Le planificateur actif est également appelé le *planificateur actuel*. Le Runtime d’accès concurrentiel utilise le [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe pour fournir l’accès au planificateur actuel. Le planificateur actuel pour un contexte peut différer du planificateur actuel d’un autre contexte. Le runtime ne fournit pas une représentation sous forme de niveau processus du planificateur actuel.  
@@ -54,7 +49,7 @@ Ce document décrit le rôle des instances de planificateur dans le Runtime d’
   
  [[Haut](#top)]  
   
-##  <a name="creating"></a>Création d’une Instance de planificateur  
+##  <a name="creating"></a> Création d’une Instance de planificateur  
  Il existe trois manières de créer un `Scheduler` objet :  
   
 -   Si aucun planificateur n’existe, le runtime crée un planificateur par défaut lorsque vous utilisez la fonctionnalité d’exécution, par exemple, un algorithme parallèle, pour effectuer le travail. Le planificateur par défaut devient le planificateur actuel pour le contexte qui initie le travail parallèle.  
@@ -69,7 +64,7 @@ Ce document décrit le rôle des instances de planificateur dans le Runtime d’
   
  [[Haut](#top)]  
   
-##  <a name="managing"></a>La gestion de la durée de vie d’une Instance du planificateur  
+##  <a name="managing"></a> La gestion de la durée de vie d’une Instance du planificateur  
  Le runtime utilise un mécanisme de comptage de références pour contrôler la durée de vie de `Scheduler` objets.  
   
 
@@ -98,7 +93,7 @@ Ce document décrit le rôle des instances de planificateur dans le Runtime d’
   
  [[Haut](#top)]  
   
-##  <a name="features"></a>Méthodes et fonctionnalités  
+##  <a name="features"></a> Méthodes et fonctionnalités  
  Cette section résume les méthodes importantes de la `CurrentScheduler` et `Scheduler` classes.  
   
  Pensez au `CurrentScheduler` classe comme un programme d’assistance pour la création d’un planificateur à utiliser sur le contexte actuel. La `Scheduler` classe vous permet de contrôler un planificateur qui appartient à un autre contexte.  

@@ -1,12 +1,9 @@
 ---
 title: int_3, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::get_x
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66a71701fb0806dbd93490587a9e0d8b3af46fe
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 26add4a57fac2cb2dfed2a5bd32f2fe0a477e938
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int3-class"></a>int_3, classe
 Représente un vecteur court de trois entiers.  
@@ -114,7 +109,7 @@ class int_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[int_3 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[int_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -164,14 +159,14 @@ class int_3;
 |int_3::operator-||  
 |int_3::operator--||  
 |int_3::operator%=||  
-|int_3::operator&=||  
-|int_3::operator*=||  
-|int_3::operator/=||  
-|int_3::operator^=||  
+|int_3::operator & =||  
+|int_3::operator * =||  
+|/ = int_3::operator||  
+|int_3::operator ^ =||  
 |int_3::operator&#124;=||  
-|int_3::operator~||  
-|int_3::operator++||  
-|int_3::operator+=||  
+|int_3::operator ~||  
+|int_3::operator ++||  
+|int_3::operator +=||  
 |int_3::operator<\<=||  
 |int_3::operator=||  
 |int_3::operator-=||  
@@ -188,13 +183,13 @@ class int_3;
 |Nom|Description|  
 |----------|-----------------|  
 |int_3::b||  
-|int_3::bg||  
-|int_3::bgr||  
+|int_3::BG||  
+|int_3::BGR||  
 |int_3::br||  
 |int_3::brg||  
 |int_3::g||  
-|int_3::gb||  
-|int_3::gbr||  
+|int_3::GB||  
+|int_3::GBR||  
 |int_3::gr||  
 |int_3::grb||  
 |int_3::r||  
@@ -203,7 +198,7 @@ class int_3;
 |int_3::rg||  
 |int_3::rgb||  
 |int_3::x||  
-|int_3::xy||  
+|int_3::XY||  
 |int_3::xyz||  
 |int_3::xz||  
 |int_3::xzy||  
@@ -215,13 +210,13 @@ class int_3;
 |int_3::z||  
 |int_3::zx||  
 |int_3::zxy||  
-|int_3::zy||  
+|int_3::ZY||  
 |int_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `int_3`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

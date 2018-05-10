@@ -1,29 +1,24 @@
 ---
-title: "Bibliothèque de modèles (parallèles PPL) en parallèle | Documents Microsoft"
-ms.custom: 
+title: Bibliothèque de modèles (parallèles PPL) en parallèle | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7263d764014fa3532c3234bd4c7a0d4f1ff8d3c3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-patterns-library-ppl"></a>Bibliothèque de modèles parallèles
 La Bibliothèque de modèles parallèles (PPL) fournit un modèle de programmation essentiel qui favorise l’évolutivité et la facilité d’utilisation dans le cadre du développement d’applications simultanées. La bibliothèque PPL repose sur les composants de planification et de gestion des ressources du runtime d'accès concurrentiel. Elle élève le niveau d'abstraction entre le code de votre application et le mécanisme de threading sous-jacent en fournissant des algorithmes génériques de type sécurisé et des conteneurs qui agissent sur les données en parallèle. La bibliothèque PPL vous permet également de développer des applications qui évoluent en fournissant des alternatives à l'état partagé.  

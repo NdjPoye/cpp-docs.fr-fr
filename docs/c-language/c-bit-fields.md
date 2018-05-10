@@ -1,30 +1,25 @@
 ---
 title: Champs de bits C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Champs de bits C
 En plus des déclarateurs pour les membres d’une structure ou une union, un déclarateur de structure peut également être un nombre de bits spécifié, appelé « champ de bits ». Sa longueur est définie à partir du déclarateur pour le nom de champ par un signe deux-points. Un champ de bits est interprété comme un type intégral.  
@@ -33,7 +28,7 @@ En plus des déclarateurs pour les membres d’une structure ou une union, un d�
  *struct-declarator* :  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  *expression constante* spécifie la largeur du champ en bits. *type-specifier* pour le `declarator` doit être `unsigned int`, **signed int**, ou `int`, et *constant-expression* doit être une valeur d’entier non négatif. Si la valeur est zéro, la déclaration n’a aucun `declarator`. Les tableaux de champs de bits, pointeurs vers des champs de bits et fonctions qui retournent des champs de bits ne sont pas autorisés. Le `declarator` facultatif désigne le champ de bits. Les champs de bits peuvent uniquement être déclarés comme faisant partie d’une structure. L’opérateur address-of (**&**) ne peut pas être appliqué aux composants de champ de bits.  
   

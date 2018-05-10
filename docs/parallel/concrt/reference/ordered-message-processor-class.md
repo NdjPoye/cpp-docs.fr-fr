@@ -1,12 +1,9 @@
 ---
 title: ordered_message_processor, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ordered_message_processor
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83f3181d797b0146cc7e57950da6b5e9569b2ab1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27dfb6c1a64d3a4e9df24f3966ec89db1dfbe10c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor, classe
 Un `ordered_message_processor` est un `message_processor` qui permet aux blocs de messages de traiter les messages dans l'ordre de leur réception.  
@@ -62,17 +57,17 @@ class ordered_message_processor : public message_processor<T>;
 |Nom|Description|  
 |----------|-----------------|  
 |[ordered_message_processor](#ctor)|Construit un objet `ordered_message_processor`.|  
-|[~ordered_message_processor Destructor](#dtor)|Détruit le `ordered_message_processor` objet.|  
+|[~ ordered_message_processor, destructeur](#dtor)|Détruit le `ordered_message_processor` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[async_send](#async_send)|Files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone. (Overrides [message_processor::async_send](message-processor-class.md#async_send).)|  
-|[initialize](#initialize)|Initialise le `ordered_message_processor` objet avec le groupe de fonction, le planificateur et planification de rappel appropriées.|  
+|[async_send](#async_send)|Files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait de façon asynchrone. (Substitue [message_processor::async_send](message-processor-class.md#async_send).)|  
+|[initialiser](#initialize)|Initialise le `ordered_message_processor` objet avec le groupe de fonction, le planificateur et planification de rappel appropriées.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Initialiser le traitement des messages par lot|  
-|[sync_send](#sync_send)|Mode synchrone des files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait. (Overrides [message_processor::sync_send](message-processor-class.md#sync_send).)|  
-|[wait](#wait)|Une attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone disposent de temps à se terminer avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|  
+|[sync_send](#sync_send)|Mode synchrone des files d’attente des messages et démarre une tâche de traitement, si cela n’a pas déjà été fait. (Substitue [message_processor::sync_send](message-processor-class.md#sync_send).)|  
+|[attente](#wait)|Une attente de rotation spécifique au processeur utilisée dans les destructeurs de blocs de messages pour vous assurer que toutes les tâches de traitement asynchrone disposent de temps à se terminer avant de détruire le bloc. (Substitue [message_processor::wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
@@ -85,7 +80,7 @@ class ordered_message_processor : public message_processor<T>;
   
  `ordered_message_processor`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  

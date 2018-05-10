@@ -1,12 +1,9 @@
 ---
 title: concurrent_priority_queue, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue, classe
 La classe `concurrent_priority_queue` est un conteneur qui permet à plusieurs threads d'appeler simultanément des méthodes Push et Pop sur des éléments. Les éléments sont dépilés dans l’ordre de priorité dans lequel la priorité est déterminée par un functor fourni comme argument de modèle.  
@@ -101,7 +96,7 @@ template <typename T,
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `concurrent_priority_queue`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concurrent_priority_queue.h  
   
  **Espace de noms :** concurrency  
@@ -203,7 +198,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de l’allocateur utilisé pour construire le `concurrent_priority_queue` objet.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   

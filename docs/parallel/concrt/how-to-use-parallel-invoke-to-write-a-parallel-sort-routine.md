@@ -1,13 +1,10 @@
 ---
-title: "Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle | Documents Microsoft"
-ms.custom: 
+title: 'Comment : utiliser parallel_invoke pour écrire une Routine de tri parallèle | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle
 Ce document décrit comment utiliser le [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algorithme pour améliorer les performances de l’algorithme de tri bitonique. L’algorithme de tri bitonique manière récursive divise la séquence d’entrée en plus petites partitions triées. L’algorithme de tri bitonique peut s’exécuter en parallèle car chaque opération de partition est indépendante de toutes les autres opérations.  
@@ -44,14 +39,14 @@ Ce document décrit comment utiliser le [parallel_invoke](../../parallel/concrt/
   
 - [À l’aide de parallel_invoke pour exécuter un tri bitonique en parallèle](#parallel)  
   
-##  <a name="serial"></a>Exécution de tri bitonique en série  
+##  <a name="serial"></a> Exécution de tri bitonique en série  
  L’exemple suivant montre la version sérialisée de l’algorithme de tri bitonique. Le `bitonic_sort` fonction divise la séquence en deux partitions, trie ces partitions dans des directions opposées, puis fusionne les résultats. Cette fonction appelle de manière récursive les deux fois pour trier chaque partition.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Haut](#top)]  
   
-##  <a name="parallel"></a>À l’aide de parallel_invoke pour exécuter un tri bitonique en parallèle  
+##  <a name="parallel"></a> À l’aide de parallel_invoke pour exécuter un tri bitonique en parallèle  
  Cette section décrit comment utiliser le `parallel_invoke` algorithme pour l’algorithme de tri bitonique en parallèle.  
   
 ### <a name="procedures"></a>Procédures  

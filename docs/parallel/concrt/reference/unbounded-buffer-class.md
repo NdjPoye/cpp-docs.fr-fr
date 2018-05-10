@@ -1,12 +1,9 @@
 ---
 title: Classe unbounded_buffer | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 Un bloc de messagerie `unbounded_buffer` est un `propagator_block` à cibles multiples, à sources multiples et ordonné, capable de stocker un nombre illimité de messages.  
   
@@ -69,7 +64,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |Nom|Description|  
 |----------|-----------------|  
 |[dequeue](#dequeue)|Supprime un élément de la `unbounded_buffer` bloc de messagerie.|  
-|[enqueue](#enqueue)|Ajoute un élément à la `unbounded_buffer` bloc de messagerie.|  
+|[File d’attente](#enqueue)|Ajoute un élément à la `unbounded_buffer` bloc de messagerie.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
@@ -100,7 +95,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
  `unbounded_buffer`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -142,7 +137,7 @@ virtual message<_Type> * consume_message(
 ### <a name="remarks"></a>Notes  
  Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.  
   
-##  <a name="dequeue"></a> dequeue 
+##  <a name="dequeue"></a> Enlever 
 
  Supprime un élément de la `unbounded_buffer` bloc de messagerie.  
   
@@ -153,7 +148,7 @@ _Type dequeue();
 ### <a name="return-value"></a>Valeur de retour  
  La charge utile du message supprimé de la `unbounded_buffer`.  
   
-##  <a name="enqueue"></a> enqueue 
+##  <a name="enqueue"></a> File d’attente 
 
  Ajoute un élément à la `unbounded_buffer` bloc de messagerie.  
   
@@ -348,7 +343,7 @@ unbounded_buffer(
   
  Le type `filter_method` est un functor avec la signature `bool (_Type const &)` qui est appelé par ce `unbounded_buffer` bloc de messagerie pour déterminer si elle doit accepter un message proposé.  
   
-##  <a name="dtor"></a> ~unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  Détruit le `unbounded_buffer` bloc de messagerie.  
   

@@ -1,29 +1,24 @@
 ---
 title: Concurrency::fast_math Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math
 dev_langs:
 - C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 04a9cd3d604b18e42202bccb287cce7c7416b51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math, espace de noms
 Les fonctions dans le `fast_math` espace de noms a une précision inférieure, prennent en charge uniquement simple précision (`float`) et appeler les fonctions intrinsèques de DirectX. Il existe deux versions de chaque fonction, par exemple `cos` et `cosf`. Les deux versions acceptent et retournent un `float`, mais chacun appels DirectX même intrinsèque.  
@@ -106,7 +101,7 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Tronque l’argument de la partie entière|  
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Tronque l’argument de la partie entière|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_math.h  
   
  **Namespace :** Concurrency::fast_math  

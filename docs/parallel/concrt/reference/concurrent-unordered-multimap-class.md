@@ -1,12 +1,9 @@
 ---
 title: concurrent_unordered_multimap, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multimap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb958123ddae320b9cc3803a7b453d2ce10e433
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7bfbbc3b9127d8d6c8b66e7a0c1ceb10d1dffa14
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap, classe
 La classe `concurrent_unordered_multimap` est un conteneur d'accès concurrentiel sécurisé qui contrôle une séquence à longueur variable d'éléments de type `std::pair<const K, _Element_type>`. La séquence est représentée d'une manière à permettre les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur.  
@@ -129,7 +124,7 @@ template <typename K,
   
  `concurrent_unordered_multimap`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concurrent_unordered_map.h  
   
  **Espace de noms :** concurrency  
@@ -464,7 +459,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Notes  
  Cette valeur limite supérieure peut être supérieure à ce que le conteneur peut recevoir réellement.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne le contenu d’un autre `concurrent_unordered_multimap` objet à celui-ci. Cette méthode n’est pas d’accès concurrentiel sécurisé.  
   

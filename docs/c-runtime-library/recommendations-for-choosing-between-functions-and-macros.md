@@ -1,13 +1,10 @@
 ---
 title: Recommandations relatives au choix entre une fonction et une macro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.functions
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recommandations relatives au choix entre une fonction et une macro
 La plupart des routines de bibliothèque du Runtime Microsoft sont des fonctions compilées ou assemblées, mais certaines routines sont implémentées sous forme de macros. Lorsqu’un fichier d’en-tête déclare une fonction et une version macro d’une routine, la définition de macro est prioritaire, car elle apparaît toujours après la déclaration de fonction. Lorsque vous appelez une routine qui est implémentée à la fois comme une fonction et comme une macro, vous pouvez forcer le compilateur à utiliser la version de la fonction de deux manières :  

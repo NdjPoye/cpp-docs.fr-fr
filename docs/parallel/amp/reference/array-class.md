@@ -1,12 +1,9 @@
 ---
 title: Array, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0a7d063d5e57d77735a33eac8ec944d41032fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="array-class"></a>array, classe
 Représente un conteneur de données utilisé pour déplacer des données vers un accélérateur.  
@@ -86,7 +81,7 @@ friend class array;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[operator std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` pour convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|  
+|[opérateur std::vector&lt;value_type&gt;](#operator_vec)|Utilise `copy(*this, vector)` pour convertir implicitement le tableau std ::[vecteur](../../../standard-library/vector-class.md) objet.|  
 |[operator()](#operator_call)|Retourne la valeur de l’élément spécifié par les paramètres.|  
 |[operator[]](#operator_at)|Retourne l’élément qui est à l’index spécifié.|  
 |[operator=](#operator_eq)|Copie le contenu de l’objet `array` objet dans celui-ci.|  
@@ -126,12 +121,12 @@ friend class array;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `array`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
   
-##  <a name="dtor"></a> ~array 
+##  <a name="dtor"></a> ~ tableau 
 
  Détruit le `array` objet.  
   
@@ -546,7 +541,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Le `extent` objet de la `array`.  
   
-##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a> opérateur std::vector&lt;value_type&gt; 
 
  Utilise `copy(*this, vector)` convertir implicitement le tableau à un objet std::vector.  
   
@@ -602,7 +597,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’élément spécifiée par les paramètres.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  Retourne l’élément qui est à l’index spécifié.  
   
@@ -627,7 +622,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valeur de retour  
  L’élément qui est à l’index spécifié.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le contenu de l’objet `array` objet.  
   

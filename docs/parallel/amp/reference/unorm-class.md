@@ -1,12 +1,9 @@
 ---
 title: unorm, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - unorm
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfd4ed2b4aad398e1206d0e3b786742841aa189b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm-class"></a>unorm, classe
 Représente un nombre unorm. Chaque élément est flottante point nombre dans la plage [0.0f, 1.0f].  
@@ -50,17 +45,17 @@ class unorm;
 |----------|-----------------|  
 |unorm::operator--||  
 |unorm::operator float|Opérateur de conversion. Convertir le nombre d’unorm flottante valeur du point.|  
-|unorm::operator*=||  
-|unorm::operator/=||  
-|unorm::operator++||  
-|unorm::operator+=||  
-|unorm::operator=||  
-|unorm::operator-=||  
+|unorm::operator * =||  
+|/ = unorm::operator||  
+|unorm::operator ++||  
+|unorm::operator +=||  
+|unorm::operator =||  
+|unorm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `unorm`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

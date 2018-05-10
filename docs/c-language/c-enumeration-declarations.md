@@ -1,13 +1,10 @@
 ---
-title: "Déclarations d’énumération C | Microsoft Docs"
-ms.custom: 
+title: Déclarations d’énumération C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>Déclarations d'énumération C
 Une énumération se compose d'un ensemble de constantes entières nommées. Une déclaration de type énumération indique le nom de la balise d'énumération (facultative) et définit l'ensemble des identificateurs d'entiers nommés (appelés « ensemble d'énumération », « constantes d'énumérateur », « énumérateurs » ou « membres »). Une variable avec type énumération stocke une des valeurs de l'ensemble d'énumération défini par ce type.  
@@ -39,7 +34,7 @@ Une énumération se compose d'un ensemble de constantes entières nommées. Une
   
 ## <a name="syntax"></a>Syntaxe  
  *enum-specifier* :  
- **enum**  *identifier* opt**{** *enumerator-list* **}**  
+ **enum**  *identifier* opt **{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   

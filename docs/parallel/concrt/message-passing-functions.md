@@ -1,29 +1,24 @@
 ---
 title: Fonctions de passage de messages | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>Fonctions de passage de messages
 La bibliothèque d’Agents asynchrones fournit plusieurs fonctions qui vous permettent de transmettre des messages entre composants.  
@@ -39,7 +34,7 @@ La bibliothèque d’Agents asynchrones fournit plusieurs fonctions qui vous per
   
 -   [Exemples](#examples)  
   
-##  <a name="send"></a>asend et envoi  
+##  <a name="send"></a> asend et envoi  
 
  Le [concurrency::send](reference/concurrency-namespace-functions.md#send) fonction envoie de façon synchrone un message à la cible spécifiée et la [concurrency::asend](reference/concurrency-namespace-functions.md#asend) fonction envoie un message à la cible spécifiée de façon asynchrone. À la fois le `send` et `asend` fonctions patienter jusqu'à ce que la cible indique qu’il accepte ou refuse le message.  
   
@@ -49,7 +44,7 @@ La bibliothèque d’Agents asynchrones fournit plusieurs fonctions qui vous per
   
  [[Haut](#top)]  
   
-##  <a name="receive"></a>réception et try_receive  
+##  <a name="receive"></a> réception et try_receive  
 
  Le [concurrency::receive](reference/concurrency-namespace-functions.md#receive) et [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) fonctions lisent des données à partir d’une source donnée. Le `receive` fonction attend des données deviennent disponibles, tandis que le `try_receive` fonction retourne immédiatement.  
   

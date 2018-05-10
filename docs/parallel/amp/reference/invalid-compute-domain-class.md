@@ -1,12 +1,9 @@
 ---
 title: invalid_compute_domain, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - invalid_compute_domain
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf8393e3af29c09376d4213bcdcec7642a593081
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain (classe)
 Exception levée lorsque le runtime ne peut pas démarrer un noyau à l’aide du domaine de calcul spécifié à la [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site d’appel.  
@@ -45,7 +40,7 @@ class invalid_compute_domain : public runtime_exception;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[invalid_compute_domain Constructor](#ctor)|Initialise une nouvelle instance de la classe `invalid_compute_domain`.|  
+|[invalid_compute_domain, constructeur](#ctor)|Initialise une nouvelle instance de la classe `invalid_compute_domain`.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -55,7 +50,7 @@ class invalid_compute_domain : public runtime_exception;
   
  `invalid_compute_domain`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amprt.h  
   
  **Espace de noms :** Concurrency  

@@ -1,12 +1,9 @@
 ---
 title: array_view, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view, classe
 Représente une vue à N dimensions sur les données contenues dans un autre conteneur.  
@@ -157,12 +152,12 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  `array_view`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
   
-##  <a name="dtor"></a> ~array_view 
+##  <a name="dtor"></a> ~ array_view 
 
  Détruit le `array_view` objet.  
   
@@ -528,7 +523,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément spécifié par l’ou les paramètres.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  Retourne l’élément qui est spécifié par les paramètres.  
   
@@ -551,7 +546,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de l’élément à l’index, ou un `array_view` projetée sur la dimension plus significatif.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le contenu de l’objet `array_view` objet à celui-ci.  
   
@@ -789,7 +784,7 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>Valeur de retour  
  Ultérieures sur lequel vous souhaitez attendre que l’opération se termine.  
   
-##  <a name="value_type"></a> value_type 
+##  <a name="value_type"></a> Value_type 
 
  Le type de valeur de l’array_view et le tableau lié.  
   

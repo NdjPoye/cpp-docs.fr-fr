@@ -1,27 +1,22 @@
 ---
-title: "À l’aide des objets accelerator et accelerator_view | Documents Microsoft"
-ms.custom: 
+title: À l’aide des objets accelerator et accelerator_view | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilisation des objets accelerator et accelerator_view
 Vous pouvez utiliser la [accelerator](../../parallel/amp/reference/accelerator-class.md) et [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) des classes pour spécifier le périphérique ou l’émulateur pour exécuter votre code C++ AMP sur. Un système peut avoir plusieurs périphériques ou les émulateurs qui varient selon la quantité de mémoire, la prise en charge de la mémoire partagée, support de débogage ou prise en charge de la double précision. C++ Accelerated les Massive Parallelism (C++ AMP) fournit des API que vous pouvez utiliser pour examiner les accélérateurs disponibles, définissez un en tant que la valeur par défaut, indiquez plusieurs accelerator_views différents pour les appels multiples à parallel_for_each et effectuer des tâches de débogage spéciales.  

@@ -1,12 +1,9 @@
 ---
 title: critical_section, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section, classe
 Mutex non réentrant qui a explicitement connaissance du runtime d'accès concurrentiel.  
@@ -63,7 +58,7 @@ class critical_section;
 |Nom|Description|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Construit une nouvelle section critique.|  
-|[~critical_section Destructor](#dtor)|Détruit une section critique.|  
+|[~ critical_section, destructeur](#dtor)|Détruit une section critique.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -81,7 +76,7 @@ class critical_section;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `critical_section`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -94,7 +89,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="dtor"></a> ~critical_section 
+##  <a name="dtor"></a> ~ critical_section 
 
  Détruit une section critique.  
   
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>Notes  
  A `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.  
   
-##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock Class  
+##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock, classe  
  Un wrapper RAII sécurisé pour un `critical_section` objet.  
   
 ```

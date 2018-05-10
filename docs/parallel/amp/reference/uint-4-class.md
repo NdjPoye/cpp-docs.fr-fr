@@ -1,12 +1,9 @@
 ---
 title: uint_4, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d70672b5d862164607afefde3de758fdd269d60
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint4-class"></a>uint_4, classe
 Représente un vecteur court de quatre entiers non signés.  
@@ -310,7 +305,7 @@ class uint_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[uint_4 Constructor](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
 
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -479,58 +474,58 @@ class uint_4;
 |Nom|Description|  
 |----------|-----------------|  
 |uint_4::a||  
-|uint_4::ab||  
+|uint_4::AB||  
 |uint_4::abg||  
 |uint_4::abgr||  
-|uint_4::abr||  
+|uint_4::ABR||  
 |uint_4::abrg||  
 |uint_4::ag||  
 |uint_4::agb||  
 |uint_4::agbr||  
-|uint_4::agr||  
+|uint_4::AGR||  
 |uint_4::agrb||  
 |uint_4::ar||  
 |uint_4::arb||  
 |uint_4::arbg||  
 |uint_4::arg||  
-|uint_4::argb||  
+|uint_4::ARGB||  
 |uint_4::b||  
-|uint_4::ba||  
+|uint_4::BA||  
 |uint_4::bag||  
 |uint_4::bagr||  
 |uint_4::bar||  
 |uint_4::barg||  
-|uint_4::bg||  
-|uint_4::bga||  
+|uint_4::BG||  
+|uint_4::BGA||  
 |uint_4::bgar||  
-|uint_4::bgr||  
+|uint_4::BGR||  
 |uint_4::bgra||  
 |uint_4::br||  
-|uint_4::bra||  
+|uint_4::BRA||  
 |uint_4::brag||  
 |uint_4::brg||  
 |uint_4::brga||  
 |uint_4::g||  
 |uint_4::ga||  
-|uint_4::gab||  
+|uint_4::GAB||  
 |uint_4::gabr||  
 |uint_4::gar||  
 |uint_4::garb||  
-|uint_4::gb||  
+|uint_4::GB||  
 |uint_4::gba||  
 |uint_4::gbar||  
-|uint_4::gbr||  
-|uint_4::gbra||  
-|uint_4::gr||  
+|uint_4::GBR||  
+|uint_4::GBRA||  
+|uint_4::GR||  
 |uint_4::gra||  
-|uint_4::grab||  
+|uint_4::Grab||  
 |uint_4::grb||  
 |uint_4::grba||  
 |uint_4::r||  
 |uint_4::ra||  
 |uint_4::rab||  
 |uint_4::rabg||  
-|uint_4::rag||  
+|uint_4::RAG||  
 |uint_4::ragb||  
 |uint_4::rb||  
 |uint_4::rba||  
@@ -540,15 +535,15 @@ class uint_4;
 |uint_4::rg||  
 |uint_4::rga||  
 |uint_4::rgab||  
-|uint_4::rgb||  
+|uint_4::RGB||  
 |uint_4::rgba||  
 |uint_4::w||  
 |uint_4::wx||  
-|uint_4::wxy||  
+|uint_4::WXY||  
 |uint_4::wxyz||  
 |uint_4::wxz||  
 |uint_4::wxzy||  
-|uint_4::wy||  
+|uint_4::wY||  
 |uint_4::wyx||  
 |uint_4::wyxz||  
 |uint_4::wyz||  
@@ -559,15 +554,15 @@ class uint_4;
 |uint_4::wzy||  
 |uint_4::wzyx||  
 |uint_4::x||  
-|uint_4::xw||  
+|uint_4::XW||  
 |uint_4::xwy||  
 |uint_4::xwyz||  
 |uint_4::xwz||  
 |uint_4::xwzy||  
-|uint_4::xy||  
+|uint_4::XY||  
 |uint_4::xyw||  
 |uint_4::xywz||  
-|uint_4::xyz||  
+|uint_4::XYZ||  
 |uint_4::xyzw||  
 |uint_4::xz||  
 |uint_4::xzw||  
@@ -596,21 +591,21 @@ class uint_4;
 |uint_4::zwxy||  
 |uint_4::zwy||  
 |uint_4::zwyx||  
-|uint_4::zx||  
+|uint_4::ZX||  
 |uint_4::zxw||  
 |uint_4::zxwy||  
 |uint_4::zxy||  
 |uint_4::zxyw||  
-|uint_4::zy||  
+|uint_4::ZY||  
 |uint_4::zyw||  
 |uint_4::zywx||  
-|uint_4::zyx||  
+|uint_4::ZYX||  
 |uint_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `uint_4`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

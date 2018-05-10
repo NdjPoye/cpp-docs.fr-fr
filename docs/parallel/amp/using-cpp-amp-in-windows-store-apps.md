@@ -1,27 +1,22 @@
 ---
-title: "À l’aide de C++ AMP dans les applications UWP | Documents Microsoft"
-ms.custom: 
+title: À l’aide de C++ AMP dans les applications UWP | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>À l’aide de C++ AMP dans les applications UWP
 Vous pouvez utiliser C++ AMP (C++ Accelerated Massive Parallelism) dans votre application de plateforme Windows universelle (UWP) pour effectuer des calculs sur le processeur graphique (GPU) ou d’autres accélérateurs de calculs. Toutefois, C++ AMP ne fournissent des API pour travailler directement avec les types Windows Runtime, et le Windows Runtime ne fournit pas un wrapper pour C++ AMP. Lorsque vous utilisez des types Windows Runtime dans votre code, y compris celles que vous avez créé vous-même, vous devez convertir les types qui sont compatibles avec C++ AMP.  

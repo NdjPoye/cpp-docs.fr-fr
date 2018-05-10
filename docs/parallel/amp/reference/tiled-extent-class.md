@@ -2,11 +2,8 @@
 title: tiled_extent, classe | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
 A `tiled_extent` objet est un `extent` objet d’un à trois dimensions qui divise l’espace d’étendue en une, deux ou les vignettes en trois dimensions.  
@@ -153,7 +148,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` objet qui capture les dimensions de ce `tiled_extent` instance.  
   
 
-## <a name="pad"> </a>  pad   
+## <a name="pad"> </a>  remplissage   
 Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -164,7 +159,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valeur de retour  
  La nouvelle `tiled_extent` objet par valeur. 
-## <a name="truncate"> </a>  truncate   
+## <a name="truncate"> </a>  Tronquer   
 Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -176,7 +171,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
 
-## <a name="operator_eq"> </a>  operator=   
+## <a name="operator_eq"> </a>  opérateur =   
 Copie le contenu de l’objet `tiled_index` objet dans celui-ci.  
   
 ### <a name="syntax"></a>Syntaxe  

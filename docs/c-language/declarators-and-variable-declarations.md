@@ -1,13 +1,10 @@
 ---
-title: "Déclarateurs et déclarations de variable | Microsoft Docs"
-ms.custom: 
+title: Déclarateurs et déclarations de variable | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 Le reste de cette section décrit la forme et la signification des déclarations pour les types de variable répertoriés dans cette liste. Plus particulièrement, les sections restantes expliquent comment déclarer les éléments suivants :  
@@ -77,7 +72,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Consultez la syntaxe des *déclarations* dans la section [Vue d’ensemble des déclarations](../c-language/overview-of-declarations.md) ou [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour la syntaxe qui référence un *déclarateur*.  
   
- Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque (**\***) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]***), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).  
+ Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque (**\***) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]**), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).  
   
  Chaque déclarateur déclare au moins un identificateur. Un déclarateur doit contenir un spécificateur de type afin que la déclaration soit complète. Le spécificateur de type indique le type des éléments d’un type tableau, le type d’objet adressé par un type pointeur ou le type de retour d’une fonction.  
   

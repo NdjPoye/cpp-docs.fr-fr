@@ -1,12 +1,9 @@
 ---
 title: Extent, classe (C++ AMP) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent, classe (C++ AMP)
 Représente un vecteur de *N* valeurs entières qui spécifient les limites d’un *N*-dimensionnel espace qui a une origine égale à 0. Les valeurs dans le vecteur sont triés du plus significatif au moins significatif.  
@@ -47,7 +42,7 @@ class extent;
  `_Rank`  
  Le classement de la `extent` objet.  
 
- ## <a name="requirements"></a>Configuration requise  
+ ## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  
@@ -64,9 +59,9 @@ class extent;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[contains](#contains)|Vérifie que le texte spécifié `extent` objet a le rang spécifié.|  
+|[contient](#contains)|Vérifie que le texte spécifié `extent` objet a le rang spécifié.|  
 |[size](#size)|Retourne la taille totale linéaire de l’étendue (dans les unités d’éléments).|  
-|[tile](#tile)|Génère un `tiled_extent` objet avec les étendues de mosaïque donné par spécifié de dimensions.|  
+|[Mosaïque](#tile)|Génère un `tiled_extent` objet avec les étendues de mosaïque donné par spécifié de dimensions.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -151,7 +146,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  Si un tableau est utilisé pour construire un `extent` de l’objet, la longueur du tableau doit correspondre au rang de le `extent` objet.  
   
-##  <a name="operator_mod_eq"></a> operator%= 
+##  <a name="operator_mod_eq"></a> % de l’opérateur = 
 
 Calcule le modulo (reste) de chaque élément dans la mesure' ' lorsque cet élément est divisé par un nombre.  
   
@@ -168,7 +163,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `extent`.  
   
-##  <a name="operator_star_eq"></a> operator*= 
+##  <a name="operator_star_eq"></a> opérateur * = 
 
 Multiplie chaque élément dans l’objet 'extension' par le nombre spécifié.  
   
@@ -216,7 +211,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Pour l’opérateur de préfixe, la `extent` objet (`*this`). Pour l’opérateur de suffixe, un nouveau `extent` objet.  
   
-##  <a name="operator_add_eq"></a> operator+= 
+##  <a name="operator_add_eq"></a> opérateur += 
 
 Ajoute le nombre spécifié pour chaque élément de l’objet « étendue ».  
   
@@ -283,7 +278,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `extent`.  
   
-##  <a name="operator_min_eq"></a> operator-= 
+##  <a name="operator_min_eq"></a> opérateur = 
 
 Soustrait le nombre spécifié de chaque élément de l’objet « étendue ».  
   
@@ -302,7 +297,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `extent` obtenu.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
 Copie le contenu de l’objet d’un autre 'extension' dans celui-ci.  
   

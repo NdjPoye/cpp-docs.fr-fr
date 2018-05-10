@@ -1,13 +1,10 @@
 ---
-title: "Multithreading à l’aide de C++ et MFC | Documents Microsoft"
-ms.custom: 
+title: Multithreading à l’aide de C++ et MFC | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading à l'aide de C++ et de MFC
 La bibliothèque Microsoft Foundation classes (MFC) prend en charge pour les applications multithread. Cette rubrique décrit les processus et threads et l’approche MFC au multithreading.  
@@ -43,7 +38,7 @@ La bibliothèque Microsoft Foundation classes (MFC) prend en charge pour les app
   
  Si vous le souhaitez, vous pouvez créer des threads supplémentaires dans votre application. Vous pouvez souhaiter procéder ainsi pour gérer les tâches de maintenance ou en arrière-plan lorsque vous ne souhaitez pas que l’utilisateur d’attendre de leur exécution. Tous les threads dans les applications MFC sont représentés par [CWinThread](../mfc/reference/cwinthread-class.md) objets. Dans la plupart des cas, il est même inutile de créer explicitement ces objets ; à la place appeler la fonction d’assistance de framework [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), ce qui crée le `CWinThread` objet pour vous.  
   
- MFC distingue deux types de threads : les threads de travail et les threads d’interface utilisateur. Threads d’interface utilisateur sont généralement utilisés pour gérer l’entrée d’utilisateur et répondre aux événements et messages générés par l’utilisateur. Threads de travail sont couramment utilisés pour effectuer des tâches, telles que le recalcul, qui ne nécessitent pas d’entrée d’utilisateur. L’API Win32 ne fait pas la distinction entre les types de threads ; Il suffit de connaître l’adresse de départ du thread afin de pouvoir commencer à exécuter le thread. MFC gère les threads d’interface utilisateur en fournissant notamment une pompe de messages pour les événements dans l’interface utilisateur. `CWinApp`est un exemple d’un objet de thread d’interface utilisateur, car il dérive `CWinThread` et gère les événements et messages générés par l’utilisateur.  
+ MFC distingue deux types de threads : les threads de travail et les threads d’interface utilisateur. Threads d’interface utilisateur sont généralement utilisés pour gérer l’entrée d’utilisateur et répondre aux événements et messages générés par l’utilisateur. Threads de travail sont couramment utilisés pour effectuer des tâches, telles que le recalcul, qui ne nécessitent pas d’entrée d’utilisateur. L’API Win32 ne fait pas la distinction entre les types de threads ; Il suffit de connaître l’adresse de départ du thread afin de pouvoir commencer à exécuter le thread. MFC gère les threads d’interface utilisateur en fournissant notamment une pompe de messages pour les événements dans l’interface utilisateur. `CWinApp` est un exemple d’un objet de thread d’interface utilisateur, car il dérive `CWinThread` et gère les événements et messages générés par l’utilisateur.  
   
  Une attention particulière convient aux situations où plusieurs threads peuvent nécessiter un accès au même objet. [Multithreading : Conseils de programmation](../parallel/multithreading-programming-tips.md) décrit les techniques que vous pouvez utiliser pour résoudre les problèmes susceptibles de survenir dans ces situations. [Multithreading : Comment utiliser les Classes de synchronisation](../parallel/multithreading-how-to-use-the-synchronization-classes.md) explique comment utiliser les classes qui sont disponibles pour synchroniser l’accès à partir de plusieurs threads à un objet unique.  
   

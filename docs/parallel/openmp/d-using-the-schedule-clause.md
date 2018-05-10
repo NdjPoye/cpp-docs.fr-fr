@@ -1,27 +1,22 @@
 ---
-title: "D. À l’aide de la Clause de planification | Documents Microsoft"
-ms.custom: 
+title: D. À l’aide de la Clause de planification | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. À l’aide de la Clause de planification
 Une région parallèle a au moins un cloisonnement, de son côté et peut avoir des obstacles supplémentaires qu’il contient. À chaque barrière, les autres membres de l’équipe doivent attendre pour le dernier thread arrivée. Pour réduire ce délai d’attente, le travail doit être distribué afin que tous les threads arrivent à la barrière en même temps. Si certains des partageant le travail est contenu dans **pour** construit, le `schedule` clause peut être utilisée à cet effet.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Comme **dynamique**, le **guidée** planifier la garantie qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread pour exécuter sa dernière itération ou final *k* itérations si une taille de segment de *k* est spécifié. Parmi ces planifications, les **guidée** planification est caractérisée par la propriété qu’elle requiert les synchronisations moins élevé. Pour la taille de segment *k*, une implémentation classique attribuera *q = ceiling(n/p)* définir des itérations pour le premier thread disponible,  *n*  à la plus grande de *n-q* et *p\*k*, jusqu'à ce que toutes les itérations sont affectées.  
+ Comme **dynamique**, le **guidée** planifier la garantie qu’aucun thread n’attend au cloisonnement plus longtemps que nécessaire à un autre thread pour exécuter sa dernière itération ou final *k* itérations si une taille de segment de *k* est spécifié. Parmi ces planifications, les **guidée** planification est caractérisée par la propriété qu’elle requiert les synchronisations moins élevé. Pour la taille de segment *k*, une implémentation classique attribuera *q = ceiling(n/p)* définir des itérations pour le premier thread disponible, *n* à la plus grande de *n-q* et *p\*k*, jusqu'à ce que toutes les itérations sont affectées.  
   
  Lorsque le choix de la planification n’est pas aussi clairement que c’est pour ces exemples, le **runtime** planification est pratique pour tester différentes planifications et les tailles de segment sans avoir à modifier et recompilez le programme. Il peut également être utile lors de la planification dépend (d’une certaine façon prévisible) des données d’entrée à laquelle le programme est appliqué.  
   

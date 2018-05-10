@@ -1,12 +1,9 @@
 ---
 title: double_3, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13862855b0377efe481cde68c349f1ba3d11e45
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double3-class"></a>double_3, classe
 Représente un vecteur court de trois valeurs de type double.  
@@ -114,7 +109,7 @@ class double_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[double_3 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[double_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -181,14 +176,14 @@ class double_3;
 |Nom|Description|  
 |----------|-----------------|  
 |double_3::b||  
-|double_3::bg||  
-|double_3::bgr||  
+|double_3::BG||  
+|double_3::BGR||  
 |double_3::br||  
 |double_3::brg||  
 |double_3::g||  
 |double_3::gb||  
-|double_3::gbr||  
-|double_3::gr||  
+|double_3::GBR||  
+|double_3::GR||  
 |double_3::grb||  
 |double_3::r||  
 |double_3::rb||  
@@ -196,8 +191,8 @@ class double_3;
 |double_3::rg||  
 |double_3::rgb||  
 |double_3::x||  
-|double_3::xy||  
-|double_3::xyz||  
+|double_3::XY||  
+|double_3::XYZ||  
 |double_3::xz||  
 |double_3::xzy||  
 |double_3::y||  
@@ -208,13 +203,13 @@ class double_3;
 |double_3::z||  
 |double_3::zx||  
 |double_3::zxy||  
-|double_3::zy||  
+|double_3::ZY||  
 |double_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `double_3`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

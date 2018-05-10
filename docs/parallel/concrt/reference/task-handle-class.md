@@ -1,12 +1,9 @@
 ---
 title: task_handle, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>task_handle, classe
 La classe `task_handle` représente un élément de travail parallèle individuel. Elle encapsule les instructions et les données requises pour exécuter un élément de travail.  
@@ -52,7 +47,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 |Nom|Description|  
 |----------|-----------------|  
 |[task_handle](#ctor)|Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|  
-|[~task_handle Destructor](#dtor)|Détruit le `task_handle` objet.|  
+|[~ task_handle, destructeur](#dtor)|Détruit le `task_handle` objet.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -72,7 +67,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task_handle`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppl.h  
   
  **Espace de noms :** concurrency  

@@ -1,12 +1,9 @@
 ---
-title: init_seg | Microsoft Docs
-ms.custom: 
+title: init_seg | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f3be66fc2639253d1bbcfec21f544d5537e084e8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="initseg"></a>init_seg
 **Spécifique à C++**  
@@ -55,17 +50,17 @@ ms.lasthandoff: 02/23/2018
  **lib**  
  Disponible pour les initialisations des fournisseurs de bibliothèques de classes tierces. Objets de ce groupe sont construits après ceux marqués **compilateur** mais avant les autres.  
   
- **user**  
+ **Utilisateur**  
  Disponible pour tout utilisateur. Les objets de ce groupe sont construits en dernier.  
   
- *section-name*  
+ *nom de la section*  
  Autorise la spécification explicite de la section d'initialisation. Objets dans spécifié par l’utilisateur *-nom de la section* ne sont pas implicitement construits ; Toutefois, leurs adresses sont placées dans la section nommée par *-nom de la section*.  
   
  Le nom de section que vous donnez contiendra les pointeurs vers des fonctions d'assistance qui construiront les objets globaux déclarés dans ce module après le pragma.  
   
  Pour obtenir la liste des noms que vous ne devez pas utiliser lors de la création d’une section, consultez [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- *func-name*  
+ *nom de la fonction*  
  Spécifie une fonction à appeler au lieu de `atexit` lorsque le programme se ferme. Cette fonction d’assistance appelle également [atexit](../c-runtime-library/reference/atexit.md) avec un pointeur vers le destructeur de l’objet global. Si vous spécifiez un identificateur de fonction dans le pragma du formulaire,  
   
 ```  

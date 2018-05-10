@@ -1,12 +1,9 @@
 ---
 title: Concurrency::Direct3D Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d, espace de noms
 Le `direct3d` espace de noms fournit des fonctions qui prennent en charge l’interopérabilité de D3D. Il permet d’utiliser les ressources D3D transparente pour le calcul dans le code AMP ainsi autoriser l’utilisation de ressources créées dans le code D3D, de gestion du matériel sans créer des copies redondantes intermédiaires. Vous pouvez accélérer les sections intensif du calcul de vos applications DirectX à l’aide de C++ AMP et utilisent l’API de D3D dans les données générées à partir des calculs de l’AMP progressivement.  
@@ -73,7 +68,7 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Retourne un indicateur booléen qui indique si l’option délai d’attente est désactivée pour l’accelerator_view spécifié.|  
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Surchargé. Effectue une opération de multiplication/ajouter arithmétique sur trois arguments : _X * _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Créer un tableau à partir d’un pointeur d’interface de mémoire tampon D3D.|  
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit Perlin|  
+|[bruit](concurrency-direct3d-namespace-functions-amp.md#noise)|Génère une valeur aléatoire à l’aide de l’algorithme de bruit Perlin|  
 |[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convertit les _X de degrés en radians|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcule un réciproque rapide et approximative de l’argument|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Inverse l’ordre des octets dans _X|  
@@ -84,7 +79,7 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Compare deux valeurs non signées, retournant la valeur supérieure.|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Compare deux valeurs non signées, retournant la valeur qui est plus petite.|  
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp.h  
   
  **Espace de noms :** Concurrency  

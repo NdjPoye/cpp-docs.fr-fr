@@ -1,27 +1,22 @@
 ---
-title: "1.3 modèle d’exécution | Documents Microsoft"
-ms.custom: 
+title: 1.3 modèle d’exécution | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 Modèle d'exécution
 OpenMP utilise le modèle de bifurcation-jointure de l’exécution en parallèle. Bien que ce modèle de bifurcation-jointure puisse être utile pour résoudre de nombreux problèmes, il est quelque peu conçu pour les grandes applications basées sur tableau. OpenMP est conçue pour la prise en charge des programmes qui seront exécute correctement à la fois comme parallèle programmes (plusieurs threads d’exécution et une bibliothèque de prise en charge OpenMP complète) et en tant que programmes séquentiels (directives ignorées et une bibliothèque de stubs OpenMP simple). Toutefois, il est possible et autorisé à développer un programme qui ne se comporte pas correctement lors de l’exécution de manière séquentielle. En outre, différents degrés de parallélisme peuvent entraîner des résultats numériques différents en raison de modifications dans l’association d’opérations numériques. Par exemple, une réduction de la série d’addition peut avoir un modèle différent des associations d’ajout à une réduction en parallèle. Ces différentes associations peuvent modifier les résultats de l’addition à virgule flottante.  

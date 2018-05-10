@@ -1,13 +1,10 @@
 ---
-title: "Littéraux de chaîne C | Microsoft Docs"
-ms.custom: 
+title: Littéraux de chaîne C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,26 +12,24 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0be3ee70ef708441d20fdbbc14f25f5102d734a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 303ad83c5e366f32a99a501a58b168ef25adbb42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-string-literals"></a>Littéraux de chaîne C
 Un littéral de chaîne est une séquence de caractères du jeu de caractères source placée entre guillemets (**" "**). Les littéraux de chaîne servent à représenter une séquence de caractères qui, une fois combinés, forment une chaîne terminée par le caractère Null. Vous devez toujours faire précéder les littéraux de chaîne étendue de la lettre **L**.  
   
 ## <a name="syntax"></a>Syntaxe  
  *string-literal*:  
- **"** *s-char-sequence* opt**"**  
+ **"** *s-char-sequence* opt **"**  
   
- **L"** *s-char-sequence* opt**"**  
+ **L"** *s-char-sequence* opt **"**  
   
  *s-char-sequence*:  
  *s-char*  

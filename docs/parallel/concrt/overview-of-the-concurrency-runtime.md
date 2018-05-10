@@ -1,13 +1,10 @@
 ---
-title: "Vue d’ensemble du Runtime d’accès concurrentiel | Documents Microsoft"
-ms.custom: 
+title: Vue d’ensemble du Runtime d’accès concurrentiel | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il décrit les avantages du runtime d'accès concurrentiel, quand l'utiliser et la façon dont ses composants interagissent entre eux et avec le système d'exploitation et les applications.  
@@ -45,7 +40,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime">Pourquoi un Runtime d’accès concurrentiel est-il important ?</a>  
+##  <a name="runtime"></a> Pourquoi un Runtime d’accès concurrentiel est-il important ?  
  Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Voici deux exemples des avantages du Runtime d’accès concurrentiel : *planification de tâches coopérative* et *le blocage coopératif*.  
   
  Le runtime d’accès concurrentiel utilise un planificateur de tâches coopératif qui implémente un algorithme de vol de travail pour distribuer efficacement le travail entre les ressources informatiques. Par exemple, considérez une application qui a deux threads gérés par le même runtime. Si un thread termine sa tâche planifiée, il peut décharger du travail de l’autre thread. Ce mécanisme équilibre la charge de travail globale de l'application.  
@@ -98,7 +93,7 @@ Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il dé
   
  [[Haut](#top)]  
   
-##  <a name="lambda">Expressions Lambda C++</a>  
+##  <a name="lambda"></a> Expressions Lambda C++  
  La plupart des types et algorithmes définis par le runtime d'accès concurrentiel sont implémentés en tant que modèles C++. Certains de ces types et algorithmes prennent comme paramètre une routine qui effectue le travail. Ce paramètre peut être une fonction lambda, un objet de fonction ou un pointeur de fonction. Ces entités sont également appelées *des fonctions de travail* ou *routines de travail*.  
   
  Les expressions lambda sont une nouvelle fonctionnalité importante du langage Visual C++, car elles offrent un moyen concis de définir des fonctions de travail pour un traitement parallèle. Les objets de fonction et les pointeurs de fonction vous permettent d'utiliser le runtime d'accès concurrentiel avec votre code existant. Toutefois, nous vous recommandons d’utiliser des expressions lambda quand vous écrivez un nouveau code en raison des avantages en matière de sécurité et de productivité qu’elles apportent.  

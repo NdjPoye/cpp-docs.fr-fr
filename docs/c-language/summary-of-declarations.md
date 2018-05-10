@@ -1,33 +1,28 @@
 ---
-title: "Résumé des déclarations | Microsoft Docs"
-ms.custom: 
+title: Résumé des déclarations | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: a9e5fe380d41b5d1e58a63b1aa0b99a239dee515
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-declarations"></a>Résumé des déclarations
 `declaration`:  
  *declaration-specifiers attribute-seq* <sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**  
   
- /\* *attribute-seq* est spécifique de Microsoft \*/  
+ /\* *attribute-seq* est spécifique de Microsoft */  
   
  *declaration-specifiers* :  
  *storage-class-specifier declaration-specifiers*<sub>opt</sub>  
@@ -173,7 +168,7 @@ ms.lasthandoff: 03/16/2018
  *struct-declaration-list struct-declaration*  
   
  *struct-declaration* :  
- *specifier-qualifier-list struct-declarator-list* **;**  
+ *specifier-qualifier-list struct-declarator-list*  **;**  
   
  *specifier-qualifier-list* :  
  *type-specifier specifier-qualifier-list*<sub>opt</sub>  

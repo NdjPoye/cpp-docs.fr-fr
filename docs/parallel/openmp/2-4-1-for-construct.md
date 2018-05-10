@@ -1,27 +1,22 @@
 ---
 title: 2.4.1 construction for | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 Construction for
 Le **pour** directive identifie une construction de partage de travail itérative qui spécifie que les itérations de la boucle associée seront exécutées en parallèle. Les itérations de la **pour** boucle sont réparties entre les threads qui existent déjà dans l’équipe de l’exécution de la construction parallèle auquel elle est liée. La syntaxe de la **pour** construction est comme suit :  
@@ -34,11 +29,11 @@ Le **pour** directive identifie une construction de partage de travail itérativ
   
  **privé (** *variable-list* **)**  
   
- **firstprivate (** *variable-list* **)**  
+ **firstprivate(** *variable-list* **)**  
   
  **lastprivate (** *variable-list* **)**  
   
- **la réduction (** *opérateur* **:** *variable-list***)**  
+ **la réduction (** *opérateur* **:** *variable-liste ***)**  
   
  **commandée**  
   
@@ -48,7 +43,7 @@ Le **pour** directive identifie une construction de partage de travail itérativ
   
  Le **pour** directive impose des restrictions sur la structure correspondantes **pour** boucle. Plus précisément, correspondants **pour** boucle doit avoir la forme canonique :  
   
- **pour (** *init-expr* **;** *var du maître d’opérations logiques b*; *incr-expr***)**  
+ **pour (** *init-expr* **;** *var du maître d’opérations logiques b*; *incr-expr ***)**  
   
  *Init-expr*  
  Une des valeurs suivantes :  
@@ -60,11 +55,11 @@ Le **pour** directive identifie une construction de partage de travail itérativ
  *incr-expr*  
  Une des valeurs suivantes :  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,9 +98,9 @@ Le **pour** directive identifie une construction de partage de travail itérativ
   
 |||  
 |-|-|  
-|statique|Lorsque **planification (statique,** *chunk_size***)** est spécifié, les itérations sont divisées en segments d’une taille spécifiée par *chunk_size*. Les segments sont affectées de manière statique aux threads de l’équipe de manière alternée dans l’ordre le numéro de thread. Lorsqu’aucun *chunk_size* est spécifié, l’espace d’itération est divisé en blocs qui sont approximativement égales en taille, avec un seul bloc attribué à chaque thread.|  
-|dynamic|Lorsque **planification (dynamique,** *chunk_size***)** est spécifié, les itérations sont divisées en une série de segments, chacun contenant *chunk_size* itérations. Chaque segment est affecté à un thread est en attente d’une assignation. Le thread s’exécute le bloc d’itérations, puis attend pour l’attribution de son suivante, jusqu'à ce qu’aucun bloc ne reste affecté à le. Notez que le dernier segment à affecter peut avoir un plus petit nombre d’itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
-|Interactive|Lorsque **planification (guidée,** *chunk_size***)** est spécifié, les itérations sont associées aux threads en prévoyant diminution de tailles. Lorsqu’un thread termine son bloc attribué d’itérations, il est attribué dynamiquement un autre segment, jusqu'à ce que ne reste aucun. Pour un *chunk_size* 1, la taille de chaque bloc est approximativement le nombre d’itérations non attribués divisé par le nombre de threads. Ces tailles diminuent environ exponentielle à 1. Pour un *chunk_size* avec la valeur *k* supérieur à 1, les tailles de diminuer environ exponentielle à *k*, sauf que le dernier segment peut avoir moins de  *k* itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
+|statique|Lorsque **planification (statique,** *chunk_size ***)** est spécifié, les itérations sont divisées en segments d’une taille spécifiée par *chunk_size*. Les segments sont affectées de manière statique aux threads de l’équipe de manière alternée dans l’ordre le numéro de thread. Lorsqu’aucun *chunk_size* est spécifié, l’espace d’itération est divisé en blocs qui sont approximativement égales en taille, avec un seul bloc attribué à chaque thread.|  
+|dynamic|Lorsque **planification (dynamique,** *chunk_size ***)** est spécifié, les itérations sont divisées en une série de segments, chacun contenant *chunk_size* itérations. Chaque segment est affecté à un thread est en attente d’une assignation. Le thread s’exécute le bloc d’itérations, puis attend pour l’attribution de son suivante, jusqu'à ce qu’aucun bloc ne reste affecté à le. Notez que le dernier segment à affecter peut avoir un plus petit nombre d’itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
+|Interactive|Lorsque **planification (guidée,** *chunk_size ***)** est spécifié, les itérations sont associées aux threads en prévoyant diminution de tailles. Lorsqu’un thread termine son bloc attribué d’itérations, il est attribué dynamiquement un autre segment, jusqu'à ce que ne reste aucun. Pour un *chunk_size* 1, la taille de chaque bloc est approximativement le nombre d’itérations non attribués divisé par le nombre de threads. Ces tailles diminuent environ exponentielle à 1. Pour un *chunk_size* avec la valeur *k* supérieur à 1, les tailles de diminuer environ exponentielle à *k*, sauf que le dernier segment peut avoir moins de  *k* itérations. Lorsqu’aucun *chunk_size* est spécifié, la valeur par défaut est 1.|  
 |runtime|Lorsque **Schedule (Runtime)** est spécifié, la décision en matière de planification est différée jusqu'à l’exécution. La planification *type* et la taille des blocs peut être choisie au moment de l’exécution en définissant la variable d’environnement **OMP_SCHEDULE**. Si cette variable d’environnement n’est pas définie, la planification qui en résulte est défini par l’implémentation. Lorsque **Schedule (Runtime)** est spécifié, *chunk_size* ne doit pas être spécifié.|  
   
  En l’absence de définies explicitement **planification** clause, la valeur par défaut **planification** est défini par l’implémentation.  

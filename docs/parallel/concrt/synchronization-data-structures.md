@@ -1,29 +1,24 @@
 ---
-title: "Structures de données de synchronisation | Documents Microsoft"
-ms.custom: 
+title: Structures de données de synchronisation | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f64acda5fe11cae3a40e4affc403ebb61d876de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronization-data-structures"></a>Structures de données de synchronisation
 Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui vous permettent de synchroniser l’accès aux données partagées à partir de plusieurs threads. Ces structures de données sont utiles lorsque vous avez partagé des données que vous modifiez rarement. Un objet de synchronisation, par exemple, une section critique, entraîne des autres threads d’attendre que la ressource partagée est disponible. Par conséquent, si vous utilisez un tel objet pour synchroniser l’accès aux données qui sont fréquemment utilisés, vous pouvez perdre l’extensibilité dans votre application. Le [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) fournit le [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) (classe), ce qui vous permet de partager une ressource entre plusieurs threads ou tâches sans avoir besoin pour la synchronisation. Pour plus d’informations sur la `combinable` de classe, consultez [conteneurs et objets parallèles](../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -39,7 +34,7 @@ Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui
   
 -   [event](#event)  
   
-##  <a name="critical_section"></a>critical_section  
+##  <a name="critical_section"></a> critical_section  
  Le [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) classe représente un objet d’exclusion mutuelle coopératif qui cède à d’autres tâches au lieu d’anticiper les. Les sections critiques sont utiles lorsque plusieurs threads requièrent exclusif accès en lecture et écriture aux données partagées.  
 
  La `critical_section` classe est non réentrante. Le [Concurrency::critical_section :: lock](reference/critical-section-class.md#lock) méthode lève une exception de type [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md) si elle est appelée par le thread qui détient déjà le verrou.  
@@ -57,7 +52,7 @@ Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui
   
  [[Haut](#top)]  
   
-##  <a name="reader_writer_lock"></a>reader_writer_lock  
+##  <a name="reader_writer_lock"></a> reader_writer_lock  
  Le [concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) classe fournit des opérations thread-safe en lecture/écriture aux données partagées. Utiliser des verrous de lecteur/writer lorsque plusieurs threads requièrent un accès en lecture simultané à une ressource partagée mais écrivent rarement dans cette ressource partagée. Cette classe fournit un accès en écriture qu’un seul thread à un objet à tout moment.  
   
  Le `reader_writer_lock` classe peut effectuer plus performants que les `critical_section` classe car un `critical_section` objet acquiert un accès exclusif à une ressource partagée, ce qui empêche l’accès en lecture simultané.  
@@ -86,7 +81,7 @@ Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui
   
  [[Haut](#top)]  
   
-##  <a name="scoped_lock"></a>scoped_lock et scoped_lock_read  
+##  <a name="scoped_lock"></a> scoped_lock et scoped_lock_read  
  Le `critical_section` et `reader_writer_lock` classes fournissent des classes d’assistance imbriquées qui simplifient la façon dont vous travaillez avec des objets d’exclusion mutuelle. Ces classes d’assistance sont appelés *verrous à portée limitée*.  
   
  Le `critical_section` classe contient le [Concurrency::critical_section :: scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) classe. Le constructeur acquiert l’accès à la collection `critical_section` objet ; l’accès de versions de destructeur à cet objet. Le `reader_writer_lock` classe contient le [Concurrency::reader_writer_lock :: scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) (classe), qui ressemble à `critical_section::scoped_lock`, sauf qu’il gère l’accès en écriture à la collection `reader_writer_lock` objet. Le `reader_writer_lock` classe contient également le [Concurrency::reader_writer_lock :: scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class) classe. Cette classe gère l’accès en lecture à la collection `reader_writer_lock` objet.  
@@ -97,7 +92,7 @@ Le Runtime d’accès concurrentiel fournit plusieurs structures de données qui
 > [!NOTE]
 >  Lorsque vous utilisez la `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock`, et `reader_writer_lock::scoped_lock_read` classes, ne libérez pas manuellement l’accès à l’objet d’exclusion mutuelle sous-jacent. Cela peut mettre le runtime dans un état non valide.  
   
-##  <a name="event"></a>événement  
+##  <a name="event"></a> Événement  
  Le [concurrency::event](../../parallel/concrt/reference/event-class.md) classe représente un objet de synchronisation dont l’état peut être signalé ou non signalé. Contrairement aux objets de synchronisation, tels que les sections critiques, dont le but est de protéger l’accès aux données partagées, les événements synchronisent le flux d’exécution.  
   
  La `event` classe est utile lorsqu’une tâche a terminé le travail d’une autre tâche. Par exemple, une tâche peut signaler une autre tâche qu’il a lu les données à partir d’une connexion réseau ou d’un fichier.  

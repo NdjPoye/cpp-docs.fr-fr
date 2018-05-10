@@ -1,12 +1,9 @@
 ---
 title: location, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>location, classe
 Abstraction d'un emplacement physique sur du matériel.  
@@ -46,7 +41,7 @@ class location;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[location](#ctor)|Surchargé. Construit un objet `location`.|  
+|[Emplacement](#ctor)|Surchargé. Construit un objet `location`.|  
 |[~ location, destructeur](#dtor)|Détruit un objet `location`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -67,12 +62,12 @@ class location;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `location`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="dtor"></a> ~location 
+##  <a name="dtor"></a> ~ emplacement 
 
  Détruit un objet `location`.  
   
@@ -133,7 +128,7 @@ location(
 ### <a name="remarks"></a>Notes  
  Un emplacement par défaut construit représente le système dans son ensemble.  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
  Détermine si deux `location` objets représentent l’autre emplacement.  
   
@@ -147,7 +142,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valeur de retour  
  `true` Si les deux emplacements sont différents, `false` dans le cas contraire.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne le contenu d’un autre `location` objet à celui-ci.  
   
@@ -161,7 +156,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
  Détermine si deux `location` objets représentent le même emplacement.  
   

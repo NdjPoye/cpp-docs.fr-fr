@@ -1,12 +1,9 @@
 ---
 title: source_block, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>source_block, classe
 La classe `source_block` est une classe de base abstraite pour les blocs sources uniquement. La classe fournit une fonctionnalité de gestion des liens de base ainsi que des vérifications d'erreurs courantes.  
@@ -84,7 +79,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |Nom|Description|  
 |----------|-----------------|  
 |[source_block](#ctor)|Construit un objet `source_block`.|  
-|[~source_block Destructor](#dtor)|Détruit le `source_block` objet.|  
+|[~ source_block, destructeur](#dtor)|Détruit le `source_block` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -92,7 +87,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |----------|-----------------|  
 |[accept](#accept)|Accepte un message qui a été offert par ce `source_block` objet, en transférant la propriété à l’appelant.|  
 |[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `source_block` objet, pour empêcher la suppression.|  
-|[consume](#consume)|Consomme un message précédemment offert par ce `source_block` de l’objet et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
+|[Consommer](#consume)|Consomme un message précédemment offert par ce `source_block` de l’objet et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
 |[link_target](#link_target)|Lie un bloc cible à ce `source_block` objet.|  
 |[release](#release)|Libère une réservation de message réussie précédente.|  
 |[release_ref](#release_ref)|Libère un décompte de références sur ce `source_block` objet.|  
@@ -129,7 +124,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
  `source_block`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -440,7 +435,7 @@ virtual void resume_propagation() = 0;
 source_block();
 ```  
   
-##  <a name="dtor"></a> ~source_block 
+##  <a name="dtor"></a> ~ source_block 
 
  Détruit le `source_block` objet.  
   

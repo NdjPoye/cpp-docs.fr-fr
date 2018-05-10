@@ -1,12 +1,9 @@
 ---
 title: cancellation_token, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token, classe
 La classe `cancellation_token` représente la capacité à déterminer si l'annulation d'une opération a été demandée. Un jeton donné peut être associé à un objet `task_group`, `structured_task_group` ou `task` pour entraîner une annulation implicite. Il peut également être sondé à la recherche d'une annulation ou comporter un rappel enregistré en cas d'annulation de la classe `cancellation_token_source` associée.  
@@ -50,7 +45,7 @@ class cancellation_token;
 |Nom|Description|  
 |----------|-----------------|  
 |[cancellation_token](#ctor)||  
-|[~cancellation_token Destructor](#dtor)||  
+|[~ cancellation_token, destructeur](#dtor)||  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -73,12 +68,12 @@ class cancellation_token;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** pplcancellation_token.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="dtor"></a> ~cancellation_token 
+##  <a name="dtor"></a> ~ cancellation_token 
 
 ```
 ~cancellation_token();
@@ -140,7 +135,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Valeur de retour  
  Jeton d'annulation qui ne peut pas être annulé.  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -151,7 +146,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -164,7 +159,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
 ```
 bool operator== (const cancellation_token& _Src) const;

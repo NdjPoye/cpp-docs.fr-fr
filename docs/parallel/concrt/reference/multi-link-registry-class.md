@@ -1,12 +1,9 @@
 ---
 title: multi_link_registry, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry, classe
 L'objet `multi_link_registry` est un `network_link_registry` qui gère plusieurs blocs sources ou plusieurs blocs cibles.  
@@ -56,17 +51,17 @@ class multi_link_registry : public network_link_registry<_Block>;
 |Nom|Description|  
 |----------|-----------------|  
 |[multi_link_registry](#ctor)|Construit un objet `multi_link_registry`.|  
-|[~multi_link_registry Destructor](#dtor)|Détruit le `multi_link_registry` objet.|  
+|[~ multi_link_registry, destructeur](#dtor)|Détruit le `multi_link_registry` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[add](#add)|Ajoute un lien vers le `multi_link_registry` objet. (Overrides [network_link_registry::add](network-link-registry-class.md#add).)|  
-|[begin](#begin)|Retourne un itérateur au premier élément dans le `multi_link_registry` objet. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|  
-|[contains](#contains)|Recherche le `multi_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
-|[count](#count)|Compte le nombre d’éléments dans le `multi_link_registry` objet. (Overrides [network_link_registry::count](network-link-registry-class.md#count).)|  
-|[remove](#remove)|Supprime un lien à partir de la `multi_link_registry` objet. (Overrides [network_link_registry::remove](network-link-registry-class.md#remove).)|  
+|[add](#add)|Ajoute un lien vers le `multi_link_registry` objet. (Substitue [network_link_registry::add](network-link-registry-class.md#add).)|  
+|[begin](#begin)|Retourne un itérateur au premier élément dans le `multi_link_registry` objet. (Substitue [network_link_registry::begin](network-link-registry-class.md#begin).)|  
+|[contient](#contains)|Recherche le `multi_link_registry` objet pour un bloc spécifié. (Substitue [network_link_registry::contains](network-link-registry-class.md#contains).)|  
+|[count](#count)|Compte le nombre d’éléments dans le `multi_link_registry` objet. (Substitue [network_link_registry::count](network-link-registry-class.md#count).)|  
+|[remove](#remove)|Supprime un lien à partir de la `multi_link_registry` objet. (Substitue [network_link_registry::remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Définit une limite supérieure sur le nombre de liens qui les `multi_link_registry` objet peut contenir.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
@@ -74,7 +69,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  `multi_link_registry`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  

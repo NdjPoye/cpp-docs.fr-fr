@@ -2,11 +2,8 @@
 title: Task, classe (Runtime d’accès concurrentiel) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task (Concurrency Runtime), classe
 Classe `task` de la bibliothèque de modèles parallèles (PPL, Parallel Patterns Library). Un objet `task` représente le travail qui peut être exécuté de manière asynchrone et simultanément avec d'autres tâches et le travail parallèle produit par des algorithmes parallèles dans le runtime d'accès concurrentiel. Il génère un résultat de type `_ResultType` quand il s'exécute correctement. Les tâches de type `task<void>` ne génèrent aucun résultat. Une tâche peut être mise en attente et annulée indépendamment des autres tâches. Elle peut également être composée avec d’autres tâches à l’aide de continuations ( `then`) et de jointure ( `when_all`) et un choix ( `when_any`) des modèles.  
@@ -78,9 +73,9 @@ class task;
 |[get](#get)|Surchargé. Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu'elle est appelée sur une tâche dont le `result_type` a la valeur `void`.|  
 |[is_apartment_aware](#is_apartment_aware)|Détermine si la tâche désencapsule une interface `IAsyncInfo` Windows Runtime ou descend de cette tâche.|  
 |[is_done](#is_done)|Détermine si la tâche est terminée.|  
-|[scheduler](#scheduler)|Retourne le planificateur pour cette tâche.|  
-|[then](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|  
-|[wait](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|  
+|[Planificateur](#scheduler)|Retourne le planificateur pour cette tâche.|  
+|[puis](#then)|Surchargé. Ajoute une tâche de continuation à cette tâche.|  
+|[attente](#wait)|Attend que cette tâche atteigne un état terminal. Il est possible que `wait` exécute la tâche inline si toutes les dépendances de tâches sont remplies et si elle n'a pas déjà été sélectionnée pour être exécutée par un processus de travail d'arrière-plan.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -101,7 +96,7 @@ class task;
   
  **Espace de noms :** concurrency  
   
-##  <a name="get"></a> get 
+##  <a name="get"></a> Télécharger 
 
  Retourne le résultat produit par cette tâche. Si la tâche n'est pas dans un état terminal, un appel à `get` attendra que la tâche se termine. Cette méthode ne retourne pas de valeur lorsqu'elle est appelée sur une tâche dont le `result_type` a la valeur `void`.  
   

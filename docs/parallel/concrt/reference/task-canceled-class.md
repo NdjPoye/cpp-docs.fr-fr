@@ -1,12 +1,9 @@
 ---
 title: task_canceled, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_canceled
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b349bdd1a4bc646e513d69c9c9297e313eacd94d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1f535a4cce75d388437025967b9c0c9b1ae0fd7a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskcanceled-class"></a>task_canceled, classe
 Cette classe décrit une exception levée par la couche de tâches PPL pour forcer l’annulation de la tâche actuelle. Il est également levée par le `get()` méthode sur [tâche](/visualstudio/extensibility/debugger/task-class-internal-members), pour une tâche annulée.  
@@ -51,7 +46,7 @@ class task_canceled : public std::exception;
   
  `task_canceled`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  

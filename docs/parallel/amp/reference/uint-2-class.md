@@ -1,12 +1,9 @@
 ---
 title: uint_2, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::set_xy
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b3b494460e0f254f46ed197e09d6d8d485b5e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint2-class"></a>uint_2, classe
 Représente un vecteur court des deux entiers non signés.  
@@ -70,7 +65,7 @@ class uint_2;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[uint_2 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[uint_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -94,19 +89,19 @@ class uint_2;
 |Nom|Description|  
 |----------|-----------------|  
 |uint_2::operator--||  
-|uint_2::operator%=||  
-|uint_2::operator&=||  
-|uint_2::operator*=||  
-|uint_2::operator/=||  
-|uint_2::operator^=||  
+|uint_2::operator % =||  
+|uint_2::operator & =||  
+|uint_2::operator * =||  
+|/ = uint_2::operator||  
+|uint_2::operator ^ =||  
 |uint_2::operator&#124;=||  
-|uint_2::operator~||  
-|uint_2::operator++||  
-|uint_2::operator+=||  
-|uint_2::operator<\<=||  
-|uint_2::operator=||  
-|uint_2::operator-=||  
-|uint_2::operator>>=||  
+|uint_2::operator ~||  
+|uint_2::operator ++||  
+|uint_2::operator +=||  
+|uint_2::operator <\<=||  
+|uint_2::operator =||  
+|uint_2::operator =||  
+|uint_2::operator >> =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -119,18 +114,18 @@ class uint_2;
 |Nom|Description|  
 |----------|-----------------|  
 |uint_2::g||  
-|uint_2::gr||  
+|uint_2::GR||  
 |uint_2::r||  
-|uint_2::rg||  
+|uint_2::RG||  
 |uint_2::x||  
-|uint_2::xy||  
+|uint_2::XY||  
 |uint_2::y||  
-|uint_2::yx||  
+|uint_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `uint_2`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

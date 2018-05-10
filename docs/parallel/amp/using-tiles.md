@@ -1,32 +1,27 @@
 ---
-title: "Utilisation des mosaïques | Documents Microsoft"
-ms.custom: 
+title: Utilisation des mosaïques | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 Vous pouvez utiliser la disposition en mosaïque pour optimiser l’accélération de votre application. Mosaïque divise les threads en sous-ensembles rectangulaires égales ou *vignettes*. Si vous utilisez une taille de la vignette appropriée et un algorithme en mosaïque, vous pouvez obtenir davantage d’accélération à partir de votre code C++ AMP. Les composants de la mosaïque de base sont :  
   
-- `tile_static`variables. Le principal avantage de mosaïque est le gain de performances à partir de `tile_static` accès. Accès aux données dans `tile_static` mémoire peut être considérablement plus rapide que l’accès aux données dans l’espace global (`array` ou `array_view` objets). Une instance d’un `tile_static` variable est créée pour chaque mosaïque, et tous les threads dans la vignette ont accès à la variable. Dans un algorithme en mosaïque par défaut, les données sont copiées dans `tile_static` mémoire qu’une seule fois à partir de la mémoire globale et ensuite accessibles autant de fois depuis le `tile_static` mémoire.  
+- `tile_static` Variables. Le principal avantage de mosaïque est le gain de performances à partir de `tile_static` accès. Accès aux données dans `tile_static` mémoire peut être considérablement plus rapide que l’accès aux données dans l’espace global (`array` ou `array_view` objets). Une instance d’un `tile_static` variable est créée pour chaque mosaïque, et tous les threads dans la vignette ont accès à la variable. Dans un algorithme en mosaïque par défaut, les données sont copiées dans `tile_static` mémoire qu’une seule fois à partir de la mémoire globale et ensuite accessibles autant de fois depuis le `tile_static` mémoire.  
   
 - [tile_barrier::wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` suspend l’exécution du thread actuel jusqu'à ce que tous les threads dans la vignette même atteint l’appel de `tile_barrier::wait`. Vous ne pouvez pas garantir l’ordre que les threads s’exécuteront, seulement qu’aucun thread de la vignette ne s’exécute après l’appel à `tile_barrier::wait` jusqu'à ce que tous les threads ont atteint l’appel. Cela signifie qu’à l’aide de la `tile_barrier::wait` (méthode), vous pouvez effectuer des tâches sur une base par vignette de vignette plutôt que sur une base par thread de threads. Un algorithme de disposition en mosaïque classique comporte du code pour initialiser le `tile_static` mémoire de la vignette entier suivi par un appel à `tile_barrer::wait`. Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à tous les `tile_static` valeurs.  
 
@@ -40,7 +35,7 @@ Vous pouvez utiliser la disposition en mosaïque pour optimiser l’accélérati
 ## <a name="example-of-global-tile-and-local-indices"></a>Exemple de Global, mosaïque et Indices Local  
  Le diagramme suivant représente une matrice 8 x 9 de données qui sont organisées en mosaïques 2 x 3.  
   
- ![8 &#45; par &#45; matrice 9 divisée en 2 &#45; par &#45; 3 vignettes](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;par&#45;matrice 9 divisée en 2&#45;par&#45;3 vignettes](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  L’exemple suivant affiche la vignette globale, et des indices locales de cet affichage en mosaïque des matrice. Un `array_view` objet est créé à l’aide des éléments de type `Description`. Le `Description` contient global, vignette, local et des index et l’élément dans la matrice. Le code dans l’appel à `parallel_for_each` définit les valeurs des globale, une vignette et un index local de chaque élément. La sortie affiche les valeurs dans le `Description` structures.  
   

@@ -1,12 +1,9 @@
 ---
 title: CurrentScheduler, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler, classe
 Représente une abstraction pour le planificateur actuel associé au contexte d'appel.  
@@ -53,7 +48,7 @@ class CurrentScheduler;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|  
+|[Créer](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre et l’attache au contexte d’appel. Le planificateur créé récemment deviendra le planificateur actuel pour le contexte d’appel.|  
 |[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur associé au contexte d’appel. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être en faveur de l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[Détacher](#detach)|Détache le planificateur actuel dans le contexte d’appel et restaure le planificateur précédemment associé comme planificateur actuel, s’il en existe. Une fois que cette méthode retourne le contexte d’appel est ensuite géré par le planificateur a été précédemment attaché au contexte à l’aide de la `CurrentScheduler::Create` ou `Scheduler::Attach` (méthode).|  
 |[Get](#get)|Retourne un pointeur vers le planificateur associé au contexte d’appel, également appelé le planificateur actuel.|  
@@ -70,7 +65,7 @@ class CurrentScheduler;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `CurrentScheduler`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -120,7 +115,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Notez que si vous avez créé ce planificateur explicitement, vous devez libérer toutes les références pour planifier des groupes, avant de libérer votre référence sur le planificateur, en détachant le contexte actuel à partir de celui-ci.  
   
-##  <a name="detach"></a> Detach 
+##  <a name="detach"></a> Détacher 
 
  Détache le planificateur actuel dans le contexte d’appel et restaure le planificateur précédemment associé comme planificateur actuel, s’il en existe. Une fois que cette méthode retourne le contexte d’appel est ensuite géré par le planificateur a été précédemment attaché au contexte à l’aide de la `CurrentScheduler::Create` ou `Scheduler::Attach` (méthode).  
   
@@ -135,7 +130,7 @@ static void __cdecl Detach();
   
  Appel de cette méthode à partir d’un contexte qui est interne à et géré par un planificateur ou un contexte qui a été attaché à l’aide d’une méthode autre que le [Scheduler::Attach](scheduler-class.md#attach) ou [CurrentScheduler::Create](#create) méthodes, entraîne un [improper_scheduler_detach](improper-scheduler-detach-class.md) levée d’exception.  
   
-##  <a name="get"></a> Get 
+##  <a name="get"></a> Télécharger 
 
  Retourne un pointeur vers le planificateur associé au contexte d’appel, également appelé le planificateur actuel.  
   
@@ -179,7 +174,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Notes  
  Cette méthode entraîne la création du planificateur par défaut du processus et/ou son attachement au contexte d'appel s'il n'existe aucun planificateur actuellement associé au contexte d'appel.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> ID 
 
  Retourne un identificateur unique pour le planificateur actuel.  
   

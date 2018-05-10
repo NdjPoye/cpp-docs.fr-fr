@@ -1,12 +1,9 @@
 ---
 title: texture_view, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view, classe
 Fournit l’accès en lecture et écriture à une texture. `texture_view` peut uniquement être utilisé pour lire les textures dont le type valeur est `int`, `unsigned int`, ou `float` qui ont bpse de 32 bits par défaut. Pour lire d’autres formats de texture, utilisez `texture_view<const value_type, _Rank>`.  
@@ -86,7 +81,7 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants vert (y) de quatre texels échantillonnées.|  
 |[gather_red](#gather_red)|Surchargé. Exemples de la texture aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié et retourne les composants rouge (x) de quatre texels échantillonnées.|  
 |[get](#get)|Surchargé. Obtient la valeur de l’élément par index.|  
-|[sample](#sample)|Surchargé. Exemples de la texture au niveau de détail et aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié.|  
+|[Exemple](#sample)|Surchargé. Exemples de la texture au niveau de détail et aux coordonnées spécifiées à l’aide de la configuration d’échantillonnage spécifié.|  
 |[set](#set)|Définit la valeur d’un élément par index.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
@@ -108,12 +103,12 @@ class texture_view<const value_type, _Rank>
   
  `texture_view`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** concurrency::graphics  
   
-##  <a name="dtor"></a> ~texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  Détruit le `texture_view` instance.  
   
@@ -164,7 +159,7 @@ texture_view(// [7] copy constructor
  [1, 2] Constructeur  
  Le `texture` sur lequel l’accessible en écriture `texture_view` est créé.  
   
- [3, 4] Constructor  
+ [3, 4] Constructeur  
  Le `texture` sur lequel la non inscriptibles `texture_view` est créé.  
   
  `_Other`  
@@ -327,7 +322,7 @@ value_type get(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur de l'élément.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne une vue de la même texture comme spécifié `texture_view` à ce `texture_view` instance.  
   
@@ -355,7 +350,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `texture_view` instance.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  Retourne la valeur de l’élément par index.  
   
@@ -496,7 +491,7 @@ void set(
  `value`  
  Valeur à l’élément.  
   
-##  <a name="value_type"></a> value_type 
+##  <a name="value_type"></a> Value_type 
 
  Le type de valeur des éléments de la texture_view.  
   

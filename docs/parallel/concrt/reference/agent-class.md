@@ -1,12 +1,9 @@
 ---
 title: agent, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent, classe
 Classe destinée à être utilisée comme classe de base pour tous les agents indépendants. Elle est utilisée pour masquer l'état des autres agents et interagir par transmission de messages.  
@@ -64,7 +59,7 @@ class agent;
 |[start](#start)|Déplace un agent à partir de la `agent_created` l’état le `agent_runnable` d’état et le planifie pour l’exécution.|  
 |[status](#status)|Source synchrone d’informations d’état de l’agent.|  
 |[status_port](#status_port)|Source asynchrone d’informations d’état de l’agent.|  
-|[wait](#wait)|Attend qu’un agent ait terminé sa tâche.|  
+|[attente](#wait)|Attend qu’un agent ait terminé sa tâche.|  
 |[wait_for_all](#wait_for_all)|Attend que tous les agents pour effectuer leurs tâches spécifiés.|  
 |[wait_for_one](#wait_for_one)|Attend que l’un des agents spécifiés ait terminé sa tâche.|  
   
@@ -72,7 +67,7 @@ class agent;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[done](#done)|Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.|  
+|[Terminé](#done)|Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.|  
 |[run](#run)|Représente la tâche principale d’un agent. `run` doit être substituée dans une classe dérivée et spécifie ce que l’agent doit faire après son démarrage.|  
   
 ## <a name="remarks"></a>Notes  
@@ -81,7 +76,7 @@ class agent;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `agent`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -108,7 +103,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>Notes  
  Le runtime utilise le planificateur par défaut si vous ne spécifiez pas le `_PScheduler` ou `_PGroup` paramètres.  
   
-##  <a name="dtor"></a> ~agent 
+##  <a name="dtor"></a> ~ agent 
 
  Détruit l’agent.  
   

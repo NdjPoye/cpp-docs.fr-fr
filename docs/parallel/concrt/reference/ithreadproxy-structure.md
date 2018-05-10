@@ -1,12 +1,9 @@
 ---
 title: IThreadProxy, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 Abstraction d'un thread d'exécution. Selon la clé de stratégie `SchedulerType` du planificateur que vous créez, le gestionnaire des ressources vous accorde un proxy de thread assorti d'un thread Win32 standard ou d'un thread UMS (User-Mode Scheduling). Les threads UMS sont pris en charge sur les systèmes d'exploitation 64 bits avec Windows 7 et ses versions ultérieures.  
@@ -58,12 +53,12 @@ struct IThreadProxy;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IThreadProxy`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="getid"></a>  IThreadProxy::GetId Method  
+##  <a name="getid"></a>  IThreadProxy::GetId, méthode  
  Retourne un identificateur unique pour le proxy de thread.  
   
 ```
@@ -73,7 +68,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Un identificateur entier unique.  
   
-##  <a name="switchout"></a>  IThreadProxy::SwitchOut Method  
+##  <a name="switchout"></a>  IThreadProxy::SwitchOut, méthode  
  Dissocie le contexte de la racine sous-jacente du processeur virtuel.  
   
 ```
@@ -97,7 +92,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Dans les bibliothèques et les en-têtes fournis avec Visual Studio 2010, cette méthode ne prenait pas de paramètre et ne réinitialisait pas la racine du processeur virtuel. Pour conserver l'ancien comportement, la valeur de paramètre par défaut de `Blocking` est fournie.  
   
-##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
+##  <a name="switchto"></a>  IThreadProxy::SwitchTo, méthode  
  Effectue un basculement de contexte coopératif à partir du contexte en cours d’exécution à un autre.  
   
 ```
@@ -124,7 +119,7 @@ virtual void SwitchTo(
   
  `SwitchTo` doit être appelée sur le `IThreadProxy` interface qui représente le thread en cours d’exécution ou les résultats ne sont pas définis. La fonction lève `invalid_argument` si le paramètre `pContext` a la valeur `NULL`.  
   
-##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem, méthode  
  Oblige le thread appelant à céder l'exécution à un autre thread prêt à s'exécuter sur le processeur actuel. Le système d’exploitation sélectionne le thread suivant à exécuter.  
   
 ```

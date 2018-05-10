@@ -1,30 +1,25 @@
 ---
-title: "Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel | Documents Microsoft"
-ms.custom: 
+title: 'Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le Runtime d’accès concurrentiel | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel
 Des boucles parallèles ne requièrent pas que toutes les itérations être exécutée. Par exemple, un algorithme qui recherche une valeur peut se terminer dès que la valeur est trouvée. OpenMP ne fournit pas un mécanisme pour sortir d’une boucle parallèle. Toutefois, vous pouvez utiliser une valeur booléenne, ou indicateur, pour permettre à une itération de la boucle pour indiquer que la solution a été trouvée. Le Runtime d’accès concurrentiel fournit des fonctionnalités qui activent une tâche pour annuler d’autres tâches qui n’ont pas encore démarré.  

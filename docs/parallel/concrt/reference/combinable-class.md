@@ -1,12 +1,9 @@
 ---
 title: combinable, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - combinable
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="combinable-class"></a>combinable, classe
 L'objet `combinable<T>` est destiné à fournir des copies privées de thread des données pour exécuter des sous-calculs locaux de thread sans verrou pendant des algorithmes parallèles. À la fin de l'opération parallèle, les sous-calculs privés de thread peuvent être fusionnées dans un résultat final. Cette classe peut être utilisée à la place d'une variable partagée et peut entraîner une amélioration des performances au cas où il y aurait beaucoup de conflit sur cette variable partagée.  
@@ -63,7 +58,7 @@ class combinable;
 |[clear](#clear)|Efface les résultats de calcul intermédiaires d’une utilisation précédente.|  
 |[combine](#combine)|Calcule une valeur finale de l’ensemble des sous-calculs locaux de thread en appelant la fonction d’association fournie.|  
 |[combine_each](#combine_each)|Calcule une valeur finale de l’ensemble des sous-calculs locaux de thread en appelant la fonction d’association fournie une fois par calcul sous-chemin de thread local. Le résultat final est accumulé par l’objet de fonction.|  
-|[local](#local)|Surchargé. Retourne une référence au calcul sous-chemin privés de thread.|  
+|[Local](#local)|Surchargé. Retourne une référence au calcul sous-chemin privés de thread.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -77,7 +72,7 @@ class combinable;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `combinable`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppl.h  
   
  **Espace de noms :** concurrency  
@@ -120,7 +115,7 @@ combinable(const combinable& _Copy);
   
  Le troisième constructeur est le constructeur de copie.  
   
-##  <a name="dtor"></a> ~combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  Détruit un objet `combinable`.  
   
@@ -180,7 +175,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence au calcul sous-chemin privés de thread.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne à une `combinable` objet à partir d’un autre `combinable` objet.  
   

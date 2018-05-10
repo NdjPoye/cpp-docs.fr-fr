@@ -1,12 +1,9 @@
 ---
 title: ITarget, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITarget
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9780e4b9ff8950511601b03e8423764c3def77a1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itarget-class"></a>ITarget, classe
 La classe `ITarget` est l'interface de tous les blocs cibles. Les blocs cibles consomment les messages qui leur sont offerts par les blocs `ISource`.  
@@ -67,7 +62,7 @@ class ITarget;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[propagate](#propagate)|En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|  
+|[propager](#propagate)|En cas de substitution dans une classe dérivée, passe de façon asynchrone un message à partir d’un bloc source à ce bloc cible.|  
 |[send](#send)|En cas de substitution dans une classe dérivée, passe de façon synchrone un message vers le bloc cible.|  
 |[supports_anonymous_source](#supports_anonymous_source)|En cas de substitution dans une classe dérivée, retourne true ou false selon si le bloc de message accepte les messages offertes par une source qui n’est pas liée à celui-ci. Si la méthode substituée retourne `true`, la cible ne peut pas différer un message envoyé, comme la consommation d’un message différé ultérieurement, la source à être identifiée dans son Registre de lien sourse.|  
   
@@ -85,12 +80,12 @@ class ITarget;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ITarget`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="dtor"></a> ~ITarget 
+##  <a name="dtor"></a> ~ ITarget 
 
  Détruit le `ITarget` objet.  
   

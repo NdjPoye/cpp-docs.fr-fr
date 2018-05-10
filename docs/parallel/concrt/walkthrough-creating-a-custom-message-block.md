@@ -1,30 +1,25 @@
 ---
-title: "Procédure pas à pas : Création d’un bloc de Message personnalisé | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Création d’un bloc de Message personnalisé | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Procédure pas à pas : création d'un bloc de message personnalisé
 Ce document décrit comment créer un type de bloc de message personnalisé qui classe les messages entrants par priorité.  
@@ -47,7 +42,7 @@ Ce document décrit comment créer un type de bloc de message personnalisé qui 
   
 - [Exemple complet](#complete)  
   
-##  <a name="design"></a>Conception d’un bloc de Message personnalisé  
+##  <a name="design"></a> Conception d’un bloc de Message personnalisé  
  Blocs de messages participent consistant à envoyer et recevoir des messages. Un bloc de message qui envoie des messages est appelé un *bloc source*. Un bloc de message qui reçoit des messages est appelé un *bloc cible*. Un bloc de message qui envoie et reçoit des messages est appelé un *bloc propagateur*. La bibliothèque d’Agents utilise la classe abstraite [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) pour représenter des blocs sources et la classe abstraite [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) pour représenter les blocs cibles. Les types de blocs de message qui agissent comme sources dérivent `ISource`; les types de blocs de message qui agissent comme cibles dérivent `ITarget`.  
   
  Bien que vous pouvez dériver votre type de bloc de message directement à partir de `ISource` et `ITarget`, la bibliothèque d’Agents définit trois classes de base qui effectuent la plupart des fonctionnalités qui sont communes à tous les types de bloc de message, par exemple, la gestion des erreurs et connexion des blocs de messages entre eux de manière concurrentiel. Le [concurrency::source_block](../../parallel/concrt/reference/source-block-class.md) dérive de la classe `ISource` et envoie des messages à d’autres blocs. Le [concurrency::target_block](../../parallel/concrt/reference/target-block-class.md) dérive de la classe `ITarget` et reçoit des messages à partir d’autres blocs. Le [concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) dérive de la classe `ISource` et `ITarget` et envoie des messages à d’autres blocs et il reçoit les messages à partir d’autres blocs. Nous vous recommandons d’utiliser ces trois classes de base pour gérer les détails de l’infrastructure afin que vous pouvez vous concentrer sur le comportement de votre bloc de message.  
@@ -73,10 +68,10 @@ Ce document décrit comment créer un type de bloc de message personnalisé qui 
   
  [[Haut](#top)]  
   
-##  <a name="class"></a>Définition de la classe priority_buffer  
+##  <a name="class"></a> Définition de la classe priority_buffer  
  La `priority_buffer` classe est un type de bloc de message personnalisé qui classe les messages entrants par priorité, puis par l’ordre dans lequel les messages sont reçus. Le `priority_buffer` ressemble à la [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) classe car il contient une file d’attente de messages et également parce qu’il agit comme une source et un bloc de message cible et peut avoir plusieurs sources et plusieurs cibles. Toutefois, `unbounded_buffer` bases propagation uniquement sur l’ordre dans lequel il reçoit des messages à partir de ses sources de message.  
   
- Le `priority_buffer` classe reçoit des messages de type std ::[tuple](../../standard-library/tuple-class.md) qui contiennent `PriorityType` et `Type` éléments. `PriorityType`fait référence au type qui contient la priorité de chaque message. `Type` fait référence à la partie données du message. Le `priority_buffer` classe envoie des messages de type `Type`. Le `priority_buffer` classe gère également deux files d’attente : un [std::priority_queue](../../standard-library/priority-queue-class.md) objet pour les messages entrants et std ::[file d’attente](../../standard-library/queue-class.md) objet pour les messages sortants. Classer par priorité les messages est utile quand un `priority_buffer` objet reçoit plusieurs messages simultanément ou lorsqu’il reçoit des messages avant que les messages sont lus par les consommateurs.  
+ Le `priority_buffer` classe reçoit des messages de type std ::[tuple](../../standard-library/tuple-class.md) qui contiennent `PriorityType` et `Type` éléments. `PriorityType` fait référence au type qui contient la priorité de chaque message. `Type` fait référence à la partie données du message. Le `priority_buffer` classe envoie des messages de type `Type`. Le `priority_buffer` classe gère également deux files d’attente : un [std::priority_queue](../../standard-library/priority-queue-class.md) objet pour les messages entrants et std ::[file d’attente](../../standard-library/queue-class.md) objet pour les messages sortants. Classer par priorité les messages est utile quand un `priority_buffer` objet reçoit plusieurs messages simultanément ou lorsqu’il reçoit des messages avant que les messages sont lus par les consommateurs.  
   
  Outre les sept méthodes qu’une classe qui dérive de `propagator_block` doit implémenter, le `priority_buffer` classe également remplacements le `link_target_notification` et `send_message` méthodes. Le `priority_buffer` classe définit également deux méthodes d’assistance publiques, `enqueue` et `dequeue`et une méthode d’assistance privée, `propagate_priority_order`.  
   
@@ -193,7 +188,7 @@ Ce document décrit comment créer un type de bloc de message personnalisé qui 
   
  [[Haut](#top)]  
   
-##  <a name="complete"></a>L’exemple complet  
+##  <a name="complete"></a> L’exemple complet  
  L’exemple suivant montre la définition complète de la `priority_buffer` classe.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

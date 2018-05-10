@@ -1,12 +1,9 @@
 ---
 title: multitype_join, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join, classe
 Un bloc de messagerie `multitype_join` est un bloc de messagerie à sources multiples et à cible unique qui combine des messages de types différents en provenance de chacune de ses sources et qui offre un tuple des messages combinés à ses cibles.  
@@ -71,7 +66,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |Nom|Description|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|Surchargé. Construit un bloc de messagerie `multitype_join` .|  
-|[~multitype_join Destructor](#dtor)|Détruit le `multitype_join` bloc de messagerie.|  
+|[~ multitype_join, destructeur](#dtor)|Détruit le `multitype_join` bloc de messagerie.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -79,7 +74,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |----------|-----------------|  
 |[accept](#accept)|Accepte un message qui a été offert par ce `multitype_join` bloc, en transférant la propriété à l’appelant.|  
 |[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `multitype_join` bloc de messagerie, pour empêcher la suppression.|  
-|[consume](#consume)|Consomme un message précédemment offert par le `multitype_join` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
+|[Consommer](#consume)|Consomme un message précédemment offert par le `multitype_join` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
 |[link_target](#link_target)|Lie un bloc cible à ce `multitype_join` bloc de messagerie.|  
 |[release](#release)|Libère une réservation de message réussie précédente.|  
 |[release_ref](#release_ref)|Libère un décompte de références sur ce `multiple_join` bloc de messagerie.|  
@@ -95,7 +90,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  `multitype_join`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  

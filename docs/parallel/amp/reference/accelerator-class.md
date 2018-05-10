@@ -1,12 +1,9 @@
 ---
 title: Accelerator, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 Un raccourci est une fonctionnalité de matériel qui est optimisée pour le calcul des données en parallèle. Un accélérateur peut être un périphérique connecté à un bus PCIe (par exemple, une carte GPU), ou il peut être une instruction étendue définie sur l’unité centrale principale.  
@@ -138,12 +133,12 @@ class accelerator;
   
  Vous pouvez construire une `accelerator` objet par l’énumération des périphériques disponibles, ou par mise en route de l’appareil par défaut, l’appareil de référence ou le périphérique WARP.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amprt.h  
   
  **Espace de noms :** Concurrency  
   
-##  <a name="dtor"></a> </a> ~accelerator 
+##  <a name="dtor"></a> </a> ~ accelerator 
 
  Détruit le `accelerator` objet.  
   
@@ -229,7 +224,7 @@ __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_a
 __declspec(property(get= get_default_view)) accelerator_view default_view;  
 ```  
   
-##  <a name="description"></a> description 
+##  <a name="description"></a> Description 
 
  Obtient une brève description de la `accelerator` appareil.  
   
@@ -463,7 +458,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 __declspec(property(get= get_is_emulated)) bool is_emulated;  
 ```  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
  Compare cette `accelerator` objet avec un autre et retourne `false` s’ils sont identiques ; sinon, retourne `true`.  
   
@@ -480,7 +475,7 @@ bool operator!= (const accelerator& _Other) const;
 ### <a name="return-value"></a>Valeur de retour  
  `false` Si les deux `accelerator` objets sont identiques ; sinon, `true`.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le contenu de l’objet `accelerator` objet à celui-ci.  
   
@@ -495,7 +490,7 @@ accelerator& operator= (const accelerator& _Other);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `accelerator` objet.  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
  Compare cette `accelerator` objet avec un autre et retourne `true` s’ils sont identiques ; sinon, retourne `false`.  
   
@@ -574,7 +569,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-##  <a name="dtor"></a> </a> ~accelerator_view 
+##  <a name="dtor"></a> </a> ~ accelerator_view 
 
  Détruit le [accelerator_view](accelerator-view-class.md) objet.  
   
@@ -615,7 +610,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>Valeur de retour  
  Ultérieures pour effectuer le suivi de l’achèvement de toutes les commandes envoyées jusqu'à présent à ce `accelerator_view` objet.  
   
-##  <a name="flush"></a> flush 
+##  <a name="flush"></a> Vidage 
 
  Envoie toutes les commandes en attente en attente pour le [accelerator_view](accelerator-view-class.md) objet pour l’accélérateur pour l’exécution.  
   
@@ -707,7 +702,7 @@ __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
  Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne `false` s’ils sont identiques ; sinon, retourne `true`.  
   
@@ -724,7 +719,7 @@ bool operator!= (const accelerator_view& _Other) const;
 ### <a name="return-value"></a>Valeur de retour  
  `false` si les deux objets sont identiques ; sinon, `true`.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le contenu de l’objet [accelerator_view](accelerator-view-class.md) objet dans celui-ci.  
   
@@ -739,7 +734,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à la modification `accelerator_view` objet.  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
  Compare cette [accelerator_view](accelerator-view-class.md) objet avec un autre et retourne `true` s’ils sont identiques ; sinon, retourne `false`.  
   

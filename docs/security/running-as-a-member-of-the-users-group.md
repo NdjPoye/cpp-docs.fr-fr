@@ -1,13 +1,10 @@
 ---
-title: "En cours d’exécution en tant que membre du groupe utilisateurs | Documents Microsoft"
-ms.custom: 
+title: En cours d’exécution en tant que membre du groupe utilisateurs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PRJ0050
 - VCD0047
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2a33cd113b631ab6c17cdb02fb29e27d663c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Exécution en tant que membre du groupe Utilisateurs
 Cette rubrique explique comment la configuration de comptes d’utilisateurs Windows en tant que membres du Groupe Utilisateurs (par opposition au Groupe Administrateurs) améliore la sécurité et réduit le risque d’être infecté par un code malveillant.  
@@ -56,7 +51,7 @@ Cette rubrique explique comment la configuration de comptes d’utilisateurs Win
   
  En général, ces actions sont réservées aux programmes d'installation des applications. Elles permettent aux utilisateurs d'utiliser le statut d'administrateur seulement de façon temporaire.  
   
-## <a name="debugging"></a>Debugging  
+## <a name="debugging"></a>Débogage  
  Vous pouvez déboguer n'importe quelle application lancée dans Visual Studio (natif et non managé) en tant que non administrateur en devenant membre du Groupe Débogage. Cela permet notamment d'attacher au processus d'une application en cours d'exécution, à l'aide de la commande Attacher au processus. Toutefois, il est nécessaire de faire partie du Groupe Administrateurs pour déboguer des applications natives ou managées lancées par un utilisateur différent.  
   
 ## <a name="see-also"></a>Voir aussi  

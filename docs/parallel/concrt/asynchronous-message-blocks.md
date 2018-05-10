@@ -1,13 +1,10 @@
 ---
 title: Blocs de messages asynchrones | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>Blocs de messages asynchrones
 
@@ -60,14 +55,14 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
 - [Réservation de messages](#reservation)  
   
-##  <a name="sources_and_targets"></a>Sources et cibles  
+##  <a name="sources_and_targets"></a> Sources et cibles  
  Sources et cibles sont deux participants importants au passage de message. A *source* fait référence à un point de terminaison de communication qui envoie des messages. A *cible* fait référence à un point de terminaison de communication qui reçoit des messages. Vous pouvez considérer une source comme un point de terminaison que vous lisez à partir d’et une cible en tant qu’un point de terminaison que vous écrivez pour. Connectent des applications sources et cibles ensemble pour former *réseaux de messagerie*.  
   
  La bibliothèque d’Agents utilise deux classes abstraites pour représenter les sources et cibles : [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) et [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md). Les types de blocs de message qui agissent comme sources dérivent `ISource`; les types de blocs de message qui agissent comme cibles dérivent `ITarget`. Types de bloc de message qui agissent en tant que sources et cibles dérivent `ISource` et `ITarget`.  
   
  [[Haut](#top)]  
   
-##  <a name="propagation"></a>Propagation de messages  
+##  <a name="propagation"></a> Propagation de messages  
  *La propagation des messages* consiste à envoyer un message à partir d’un composant vers un autre. Lorsqu’un bloc de message reçoit un message, il peut accepter, refuser ou reporter. Chaque type de bloc de message stocke et transmet des messages de différentes façons. Par exemple, le `unbounded_buffer` classe stocke un nombre illimité de messages, la `overwrite_buffer` classe stocke un seul message à la fois, et la classe transformer stocke une version modifiée de chaque message. Ces types de blocs de messages sont décrits plus en détail plus loin dans ce document.  
   
  Lorsqu’un bloc de message accepte un message, il peut éventuellement effectuer le travail et, si le bloc de message est une source, passer le message résultant à un autre membre du réseau. Un bloc de message peut utiliser une fonction de filtre pour refuser les messages qu’il ne souhaite pas recevoir. Les filtres sont décrits plus en détail plus loin dans cette rubrique, dans la section [le filtrage des messages](#filtering). Un bloc de message qui diffère un message peut réserver ce message et l’utiliser ultérieurement. La réservation de messages est décrite plus en détail plus loin dans cette rubrique, dans la section [la réservation de messages](#reservation).  
@@ -79,7 +74,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="overview"></a>Vue d’ensemble des Types de blocs de Message  
+##  <a name="overview"></a> Vue d’ensemble des Types de blocs de Message  
  Le tableau suivant décrit brièvement le rôle des types de blocs de messages important.  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -91,19 +86,19 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
  [single_assignment](#single_assignment)  
  Stocke un message qui peut être écrit dans une seule fois et lire à partir de plusieurs fois.  
   
- [appel](#call)  
+ [call](#call)  
  Effectue un travail lorsqu’il reçoit un message.  
   
  [classe transformer](#transformer)  
  Effectue un travail lorsqu’il reçoit des données et envoie le résultat de ce travail à un autre bloc cible. La `transformer` classe peut agir sur différents types d’entrées et sortie.  
   
- [choix](#choice)  
+ [Choix](#choice)  
  Sélectionne le premier message disponible à partir d’un ensemble de sources.  
   
  [jointure et jointure multitype](#join)  
  Attendez que tous les messages reçus à partir d’un ensemble de sources et les combiner ensuite les messages dans un message pour un autre bloc de message.  
   
- [minuterie](#timer)  
+ [timer](#timer)  
  Envoie un message à un bloc cible à intervalles réguliers.  
   
  Ces types de blocs de messages ont des caractéristiques différentes qui les rendent utiles pour différentes situations. Voici quelques-unes des caractéristiques :  
@@ -134,7 +129,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="unbounded_buffer"></a>Classe unbounded_buffer  
+##  <a name="unbounded_buffer"></a> Classe unbounded_buffer  
  Le [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) classe représente une structure de messagerie asynchrone à usage général. Cette classe stocke une file d'attente de messages de type premier entré, premier sorti (FIFO). Plusieurs cibles peuvent lire ces messages et plusieurs sources peuvent y écrire. Quand une cible reçoit un message à partir d’un `unbounded_buffer` de l’objet, ce message est supprimé de la file d’attente. Par conséquent, bien qu’un `unbounded_buffer` objet peut avoir plusieurs cibles, seule une cible reçoit chaque message. La classe `unbounded_buffer` est utile quand vous voulez transmettre plusieurs messages à un autre composant et que ce composant doit recevoir chaque message.  
   
 ### <a name="example"></a>Exemple  
@@ -152,7 +147,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="overwrite_buffer"></a>Classe overwrite_buffer  
+##  <a name="overwrite_buffer"></a> Classe overwrite_buffer  
  Le [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) ressemble à la `unbounded_buffer` classe, à ceci près qu’un `overwrite_buffer` objet stocke seulement un message. En outre, quand une cible reçoit un message à partir d’un `overwrite_buffer` de l’objet, ce message n’est pas supprimé de la mémoire tampon. Par conséquent, plusieurs cibles reçoivent une copie du message.  
   
  La `overwrite_buffer` classe est utile lorsque vous souhaitez transmettre plusieurs messages à un autre composant, mais que ce composant nécessite uniquement la valeur la plus récente. Cette classe est également utile quand vous voulez diffuser un message vers plusieurs composants.  
@@ -172,7 +167,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="single_assignment"></a>Classe single_assignment  
+##  <a name="single_assignment"></a> Classe single_assignment  
  Le [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md) ressemble à la `overwrite_buffer` classe, à ceci près qu’un `single_assignment` objet peut être écrites dans une seule fois. Comme pour la classe `overwrite_buffer`, quand une cible reçoit un message d'un objet `single_assignment`, le message n'est pas supprimé de l'objet. Par conséquent, plusieurs cibles reçoivent une copie du message. La `single_assignment` classe est utile lorsque vous souhaitez diffuser un message à plusieurs composants.  
   
 ### <a name="example"></a>Exemple  
@@ -190,7 +185,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="call"></a>Call, classe  
+##  <a name="call"></a> Call, classe  
  Le [concurrency::call](../../parallel/concrt/reference/call-class.md) sert de classe de récepteur de message qui exécute une fonction de travail lorsqu’il reçoit des données. Cette fonction de travail peut être une expression lambda, un objet de fonction ou un pointeur de fonction. A `call` objet se comporte différemment d’un appel de fonction ordinaire, car il agit en parallèle à d’autres composants qui envoient des messages. Si un `call` objet exécute un travail lorsqu’il reçoit un message, il ajoute ce message à une file d’attente. Chaque `call` processus de l’objet en file d’attente de messages dans l’ordre dans lequel ils sont reçus.  
   
 ### <a name="example"></a>Exemple  
@@ -208,7 +203,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="transformer"></a>Classe transformer  
+##  <a name="transformer"></a> Classe transformer  
  Le [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) classe agit comme un récepteur du message et un expéditeur de message. Le `transformer` ressemble à la `call` classe, car elle effectue une fonction de travail définis par l’utilisateur lorsqu’il reçoit des données. Toutefois, la `transformer` classe envoie également le résultat de la fonction de travail pour les objets de récepteur. Comme un `call` objet, un `transformer` objet agit en parallèle à d’autres composants qui envoient des messages. Si un `transformer` objet exécute un travail lorsqu’il reçoit un message, il ajoute ce message à une file d’attente. Chaque `transformer` objet traite ses messages en file d’attente dans l’ordre dans lequel ils sont reçus.  
   
  La `transformer` classe envoie son message à une cible. Si vous définissez la `_PTarget` dans le constructeur pour `NULL`, vous pouvez spécifier ultérieurement la cible en appelant le [concurrency::link_target](reference/source-block-class.md#link_target) (méthode).  
@@ -230,7 +225,7 @@ La bibliothèque d’Agents fournit plusieurs types de blocs de messages qui vou
   
  [[Haut](#top)]  
   
-##  <a name="choice"></a>Classe Choice  
+##  <a name="choice"></a> Classe Choice  
  Le [classes concurrency::choice](../../parallel/concrt/reference/choice-class.md) classe sélectionne le premier message disponible dans un jeu de sources. Le `choice` classe représente un mécanisme de flux de contrôle au lieu d’un mécanisme de flux de données (la rubrique [bibliothèque d’Agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md) décrit les différences entre les flux de données et de flux de contrôle).  
   
  La lecture à partir d’un objet choice s’apparente à l’appel de la fonction API Windows `WaitForMultipleObjects` lorsqu’il a la `bWaitAll` paramètre la valeur `FALSE`. Toutefois, la `choice` classe lie des données à l’événement lui-même plutôt qu’à un objet de synchronisation externe.  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[Haut](#top)]  
   
-##  <a name="join"></a>Classes de jointure et multitype_join  
+##  <a name="join"></a> Classes de jointure et multitype_join  
  Le [concurrency::join](../../parallel/concrt/reference/join-class.md) et [concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md) classes vous permettent d’attendre que chaque membre d’un ensemble de sources de recevoir un message. La `join` classe agit sur les objets sources qui ont un type de message commun. La `multitype_join` classe agit sur les objets sources qui peuvent avoir différents types de message.  
   
  Lecture à partir d’un `join` ou `multitype_join` objet ressemble à l’appel de la fonction API Windows `WaitForMultipleObjects` lorsqu’il a la `bWaitAll` paramètre la valeur `TRUE`. Toutefois, tout comme un `choice` objet, `join` et `multitype_join` objets utilisent un mécanisme d’événement qui lie les données à l’événement lui-même plutôt qu’à un objet de synchronisation externe.  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[Haut](#top)]  
   
-##  <a name="timer"></a>Classe Timer  
+##  <a name="timer"></a> Classe Timer  
  La concurrence ::[classe timer](../../parallel/concrt/reference/timer-class.md) agit comme une source de message. A `timer` objet envoie un message à une cible après une période de temps écoulé. La `timer` classe est utile lorsque vous devez différer l’envoi d’un message ou que vous souhaitez envoyer un message à intervalles réguliers.  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[Haut](#top)]  
   
-##  <a name="filtering"></a>Le filtrage des messages  
+##  <a name="filtering"></a> Le filtrage des messages  
  Lorsque vous créez un objet de bloc de message, vous pouvez fournir un *fonction filter* qui détermine si le bloc de message accepte ou rejette un message. Une fonction de filtre est un moyen utile pour garantir qu’un bloc de message reçoit uniquement certaines valeurs.  
   
  L’exemple suivant montre comment créer un `unbounded_buffer` objet qui utilise une fonction de filtre pour accepter uniquement les nombres pairs. Le `unbounded_buffer` objet rejette les nombres impairs et par conséquent ne se propage pas les nombres impairs jusqu'à ses blocs cibles.  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[Haut](#top)]  
   
-##  <a name="reservation"></a>Réservation de messages  
+##  <a name="reservation"></a> Réservation de messages  
  *Réservation de message* permet à un bloc de message de réserver un message pour une utilisation ultérieure. En règle générale, la réservation de messages n’est pas utilisée directement. Toutefois, message de présentation des réservation peut vous aider à mieux comprendre le comportement de certains types de bloc de message prédéfinis.  
   
  Envisagez de jointures non gourmandes et gourmands. Ces deux utilisent la réservation de messages pour réserver des messages pour une utilisation ultérieure. Un décrit précédemment, une jointure non gourmande reçoit des messages en deux phases. Pendant la première phase, non gourmand `join` objet attend que chacune de ses sources de recevoir un message. Une jointure non gourmande tente alors de réserver chacun de ces messages. Si chaque message peut être réservé, elle consomme tous les messages et les propage à sa cible. Dans le cas contraire, il libère, ou annule, les réservations de message et attend une nouvelle fois pour chaque source de recevoir un message.  

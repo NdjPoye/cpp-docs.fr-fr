@@ -1,12 +1,9 @@
 ---
 title: IExecutionContext, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionContext
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c194dc7ecd4af0092dd304b17a8230cda6a8598
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext, structure
 Interface avec un contexte d'exécution qui peut s'exécuter sur un processeur virtuel donné et dont le contexte peut être commuté de manière coopérative.  
@@ -60,7 +55,7 @@ struct IExecutionContext;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IExecutionContext`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrtrm.h  
   
  **Espace de noms :** concurrency  
@@ -76,7 +71,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Pointeur vers l’état sous lequel ce contexte d’exécution est distribué. Pour plus d’informations sur l’état de dispatch, consultez [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>  IExecutionContext::GetId Method  
+##  <a name="getid"></a>  IExecutionContext::GetId, méthode  
  Retourne un identificateur unique pour le contexte d’exécution.  
   
 ```
@@ -91,7 +86,7 @@ virtual unsigned int GetId() const = 0;
   
  Un identificateur obtenu à partir d’une autre source peut entraîner un comportement non défini.  
   
-##  <a name="getproxy"></a>  IExecutionContext::GetProxy Method  
+##  <a name="getproxy"></a>  IExecutionContext::GetProxy, méthode  
  Retourne une interface au proxy de thread qui exécute ce contexte.  
   
 ```
@@ -104,7 +99,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Notes  
  Appelle le Gestionnaire de ressources la `SetProxy` méthode sur un contexte d’exécution, avec une `IThreadProxy` interface comme paramètre, avant d’entrer le `Dispatch` méthode sur le sur le contexte. Vous devez stocker cet argument et le retourner lors des appels à `GetProxy()`.  
   
-##  <a name="getscheduler"></a>  IExecutionContext::GetScheduler Method  
+##  <a name="getscheduler"></a>  IExecutionContext::GetScheduler, méthode  
  Retourne une interface au planificateur auquel appartient ce contexte d’exécution.  
   
 ```
@@ -117,7 +112,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Notes  
  Vous devez initialiser le contexte d’exécution avec un nom `IScheduler` interface avant de l’utiliser en tant que paramètre aux méthodes fournies par le Gestionnaire de ressources.  
   
-##  <a name="setproxy"></a>  IExecutionContext::SetProxy Method  
+##  <a name="setproxy"></a>  IExecutionContext::SetProxy, méthode  
  Associe un proxy de thread à ce contexte d’exécution. Le proxy de thread associé appelle cette méthode juste avant l’exécution du contexte de `Dispatch` (méthode).  
   
 ```

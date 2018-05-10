@@ -1,12 +1,9 @@
 ---
 title: writeonly_texture_view, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - writeonly_texture_view
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3ab115301a6d7063ba443cf528b382ae955360f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view, classe
 Fournit l’accès writeonly une texture.  
@@ -69,7 +64,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |Nom|Description|  
 |----------|-----------------|  
 |[writeonly_texture_view, constructeur](#ctor)|Initialise une nouvelle instance de la classe `writeonly_texture_view`.|  
-|[~writeonly_texture_view Destructor](#ctor)|Détruit le `writeonly_texture_view` objet.|  
+|[~ writeonly_texture_view, destructeur](#ctor)|Détruit le `writeonly_texture_view` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -94,7 +89,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  `writeonly_texture_view`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics  
@@ -107,7 +102,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Copie le texte spécifié `writeonly_texture_view` objet à celui-ci.  
   

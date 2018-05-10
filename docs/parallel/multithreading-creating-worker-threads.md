@@ -1,13 +1,10 @@
 ---
-title: "Multithreading : Création de Threads de travail | Documents Microsoft"
-ms.custom: 
+title: 'Multithreading : Création de Threads de travail | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading : création de threads de travail
 Un thread de travail est généralement utilisé pour gérer les tâches en arrière-plan qui l’utilisateur ne doit pas avoir à attendre pour continuer à utiliser votre application. Tâches telles que le recalcul et l’impression en arrière-plan sont de bons exemples de threads de travail. Cette rubrique détaille les étapes nécessaires à la création d’un thread de travail. Les rubriques traitées ici sont les suivantes :  
@@ -42,7 +37,7 @@ Un thread de travail est généralement utilisé pour gérer les tâches en arri
   
  Création d’un thread de travail est une tâche relativement simple. Seuls deux étapes sont nécessaires pour obtenir de l’exécution du thread : implémentation de la fonction de contrôle et le démarrage du thread. Il n’est pas nécessaire de dériver une classe de [CWinThread](../mfc/reference/cwinthread-class.md). Vous pouvez dériver une classe si vous avez besoin d’une version spéciale de `CWinThread`, mais il n’est pas requis pour la plupart des threads de travail simples. Vous pouvez utiliser `CWinThread` sans modification.  
   
-##  <a name="_core_starting_the_thread"></a>Démarrage du Thread  
+##  <a name="_core_starting_the_thread"></a> Démarrage du Thread  
  Il existe deux versions surchargées de `AfxBeginThread`: un qui peut uniquement créer des threads de travail et un qui peut créer des threads d’interface utilisateur et de threads de travail. Pour commencer l’exécution de votre thread de travail à l’aide de la première surcharge, appelez [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), fournissant les informations suivantes :  
   
 -   L’adresse de la fonction de contrôle.  
@@ -57,9 +52,9 @@ Un thread de travail est généralement utilisé pour gérer les tâches en arri
   
 -   (Facultatif) Les attributs de sécurité souhaité. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`Crée et initialise un `CWinThread` objet pour vous, il démarre et retourne son adresse afin de vous y référer ultérieurement. Vérifications sont effectuées dans l’ensemble de la procédure pour vous assurer que tous les objets sont libérés correctement n’importe quelle partie de la création échoue.  
+ `AfxBeginThread` Crée et initialise un `CWinThread` objet pour vous, il démarre et retourne son adresse afin de vous y référer ultérieurement. Vérifications sont effectuées dans l’ensemble de la procédure pour vous assurer que tous les objets sont libérés correctement n’importe quelle partie de la création échoue.  
   
-##  <a name="_core_implementing_the_controlling_function"></a>Implémentation de la fonction de contrôle  
+##  <a name="_core_implementing_the_controlling_function"></a> Implémentation de la fonction de contrôle  
  La fonction de contrôle définit le thread. Lorsque cette fonction est entrée, le thread démarre, et quand elle s’arrête, le thread s’arrête. Cette fonction doit avoir le prototype suivant :  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  Il existe certaines restrictions sur ce que vous pouvez faire dans un programme multithread écrit avec la bibliothèque MFC. Pour obtenir une description de ces restrictions et d’autres conseils sur l’utilisation de threads, consultez [Multithreading : conseils de programmation](../parallel/multithreading-programming-tips.md).  
   
-##  <a name="_core_controlling_function_example"></a>Contrôle de l’exemple de fonction  
+##  <a name="_core_controlling_function_example"></a> Contrôle de l’exemple de fonction  
  L’exemple suivant montre comment définir une fonction de contrôle et l’utiliser à partir d’une autre partie du programme.  
   
 ```  

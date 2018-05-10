@@ -1,27 +1,22 @@
 ---
-title: "2.7.2 attribut de partage de données Clauses | Documents Microsoft"
-ms.custom: 
+title: 2.7.2 attribut de partage de données Clauses | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecc6efac6e3d7356e51dc0ec57009ca9e5a71890
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Clauses d'attributs de partage de données
 Plusieurs directives acceptent les clauses qui lui permet de contrôler les attributs de partage des variables pendant la durée de la région. Les clauses d’attributs de partage s’appliquent uniquement aux variables dans l’étendue lexicale de la directive de sur lequel la clause apparaît. Toutes les clauses suivantes sont autorisées sur toutes les directives. La liste des clauses qui sont valides sur une directive particulière sont décrites dans la directive.  

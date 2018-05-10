@@ -1,29 +1,24 @@
 ---
-title: "Stratégies de planificateur | Documents Microsoft"
-ms.custom: 
+title: Stratégies de planificateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Stratégies de planificateur
 Ce document décrit le rôle des stratégies de planificateur dans le Runtime d’accès concurrentiel. A *stratégie du planificateur* contrôle la stratégie utilisée par le planificateur lorsqu’il gère des tâches. Par exemple, considérez une application qui requiert certaines tâches à exécuter au niveau `THREAD_PRIORITY_NORMAL` et d’autres tâches à exécuter au niveau `THREAD_PRIORITY_HIGHEST`.  Vous pouvez créer deux instances de planificateur : un qui spécifie le `ContextPriority` la stratégie `THREAD_PRIORITY_NORMAL` et l’autre qui spécifie la même stratégie pour être `THREAD_PRIORITY_HIGHEST`.  
@@ -43,12 +38,12 @@ Ce document décrit le rôle des stratégies de planificateur dans le Runtime d�
   
 |Clé de stratégie|Description|Valeur par défaut|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valeur qui spécifie le type de threads à utiliser pour planifier des tâches.|`ThreadScheduler`(utilisez des threads normaux). Il s’agit de la seule valeur valide pour cette clé.|  
+|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valeur qui spécifie le type de threads à utiliser pour planifier des tâches.|`ThreadScheduler` (utilisez des threads normaux). Il s’agit de la seule valeur valide pour cette clé.|  
 |`MaxConcurrency`|Un `unsigned int` valeur qui spécifie le nombre maximal de ressources d’accès concurrentiel utilisée par le planificateur.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|Un `unsigned int` valeur qui spécifie le nombre minimal de ressources d’accès concurrentiel utilisée par le planificateur.|`1`|  
 |`TargetOversubscriptionFactor`|Un `unsigned int` valeur qui spécifie le nombre de threads à allouer à chaque ressource de traitement.|`1`|  
 |`LocalContextCacheSize`|Un `unsigned int` valeur qui spécifie le nombre maximal de contextes qui peuvent être mis en cache dans la file d’attente locale de chaque processeur virtuel.|`8`|  
-|`ContextStackSize`|Un `unsigned int` valeur qui spécifie la taille de la pile, en kilo-octets, à réserver pour chaque contexte.|`0`(utiliser la taille de pile par défaut)|  
+|`ContextStackSize`|Un `unsigned int` valeur qui spécifie la taille de la pile, en kilo-octets, à réserver pour chaque contexte.|`0` (utiliser la taille de pile par défaut)|  
 |`ContextPriority`|Un `int` valeur qui spécifie la priorité de thread de chaque contexte. Cela peut être toute valeur que vous pouvez passer à [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) ou `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valeur qui spécifie l’algorithme de planification à utiliser. |`EnhanceScheduleGroupLocality`|  

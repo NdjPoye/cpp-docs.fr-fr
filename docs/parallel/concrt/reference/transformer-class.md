@@ -1,12 +1,9 @@
 ---
 title: Classe transformer | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - transformer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac9ea43e1d3f6f369b93e92e91fa3606cf7d6af5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transformer-class"></a>Classe transformer
 Un bloc de messagerie `transformer` est un `propagator_block` à cible unique, à sources multiples et classé qui peut accepter des messages d'un type et est capable de stocker un nombre illimité de messages d'un type différent.  
@@ -63,7 +58,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Nom|Description|  
 |----------|-----------------|  
-|[transformer](#ctor)|Surchargé. Construit un `transformer` bloc de messagerie.|  
+|[classe transformer](#ctor)|Surchargé. Construit un `transformer` bloc de messagerie.|  
 |[~ transformer, destructeur](#dtor)|Détruit le `transformer` bloc de messagerie.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
@@ -95,7 +90,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  `transformer`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -298,7 +293,7 @@ transformer(
   
  Le type `filter_method` est un functor avec la signature `bool (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour déterminer si elle doit accepter un message proposé.  
   
-##  <a name="dtor"></a> ~transformer 
+##  <a name="dtor"></a> ~ transformer 
 
  Détruit le `transformer` bloc de messagerie.  
   

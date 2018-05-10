@@ -1,13 +1,10 @@
 ---
-title: "Procédure pas à pas : Utilisation join pour empêcher l’interblocage | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Utilisation join pour empêcher l’interblocage | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procédure pas à pas : utilisation de la classe join pour empêcher l’interblocage
-Cette rubrique utilise le problème du dîner des philosophes pour illustrer comment utiliser la [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application. Dans une application, *blocage* se produit lorsque deux ou plusieurs processus détiennent chacun une ressource et attendent mutuellement qu’un autre processus libère une autre ressource.  
+Cette rubrique utilise le problème du dîner des philosophes pour illustrer comment utiliser la [concurrency::join](../../parallel/concrt/reference/join-class.md) classe pour empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre.  
   
  Problème dîner des philosophes est un exemple spécifique de l’ensemble général de problèmes qui peuvent se produire lorsqu’un ensemble de ressources est partagé par plusieurs processus simultanés.  
   
@@ -55,7 +50,7 @@ Cette rubrique utilise le problème du dîner des philosophes pour illustrer com
   
 - [À l’aide de la classe join pour empêcher l’interblocage](#solution)  
   
-##  <a name="problem"></a>Problème dîner des philosophes  
+##  <a name="problem"></a> Problème dîner des philosophes  
  Problème dîner des philosophes illustre la façon dont le blocage se produit dans une application. Dans ce problème, cinq philosophes sont assis à une table ronde. Chaque philosophe alterne entre pense et mange. Chaque philosophe doit partager une baguette avec son voisin de gauche et une autre baguette avec son voisin de droite. L’illustration suivante montre cette mise en page.  
   
  ![Le problème du dîner des philosophes repas](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ Cette rubrique utilise le problème du dîner des philosophes pour illustrer com
   
  [[Haut](#top)]  
   
-##  <a name="deadlock"></a>Une implémentation Naïve  
+##  <a name="deadlock"></a> Une implémentation Naïve  
  L’exemple suivant montre une implémentation naïve de problème dîner des philosophes. Le `philosopher` (classe), qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md), permet à chaque philosophe d’agir indépendamment. L’exemple utilise un tableau partagé de [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) objets pour permettre à chaque `philosopher` un accès exclusif à une paire de baguettes de l’objet.  
   
  Pour l’implémentation à l’illustration, le `philosopher` classe représente un philosophe. Une `int` variable représente chaque baguette. Le `critical_section` objets servent de supports sur lesquels reposent les baguettes. Le `run` méthode simule la vie du philosophe. Le `think` méthode simule l’acte de penser et `eat` méthode simule l’acte de manger.  
@@ -87,7 +82,7 @@ Cette rubrique utilise le problème du dîner des philosophes pour illustrer com
   
  [[Haut](#top)]  
   
-##  <a name="solution"></a>À l’aide de la classe join pour empêcher l’interblocage  
+##  <a name="solution"></a> À l’aide de la classe join pour empêcher l’interblocage  
  Cette section montre comment utiliser des mémoires tampons des messages et des fonctions de passage de messages pour éliminer le risque d’interblocage.  
   
  Pour lier cet exemple au précédent, la `philosopher` classe remplace chaque `critical_section` objet à l’aide un [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objet et un `join` objet. Le `join` objet fait Office d’arbitre qui fournit les baguettes au philosophe.  

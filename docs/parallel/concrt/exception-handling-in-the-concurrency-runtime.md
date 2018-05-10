@@ -1,13 +1,10 @@
 ---
-title: "Gestion des exceptions dans le Runtime d’accès concurrentiel | Documents Microsoft"
-ms.custom: 
+title: Gestion des exceptions dans le Runtime d’accès concurrentiel | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Gestion des exceptions dans le runtime d’accès concurrentiel
 Le Runtime d’accès concurrentiel utilise des exceptions C++ pour communiquer de nombreux types d’erreurs. Ces erreurs incluent l’utilisation non valide du runtime, les erreurs d’exécution tel que l’échec d’acquisition d’une ressource et les erreurs qui se produisent dans les fonctions de travail que vous fournissez à des tâches et des groupes de tâches. Lorsqu’une tâche ou un groupe de tâches lève une exception, le runtime conserve cette exception et la marshale au contexte qui attend que la tâche ou le groupe de tâches se termine. Pour les composants tels que les tâches légères et des agents, le runtime ne gère pas les exceptions pour vous. Dans ce cas, vous devez implémenter votre propre mécanisme de gestion des exceptions. Cette rubrique décrit comment le runtime gère les exceptions levées par des tâches, des groupes de tâches, des tâches légères et des agents asynchrones et comment répondre aux exceptions dans vos applications.  
@@ -47,7 +42,7 @@ Le Runtime d’accès concurrentiel utilise des exceptions C++ pour communiquer 
   
 -   Le runtime ne gère pas les exceptions pour les tâches légères et les agents.  
   
-##  <a name="top"></a>Dans ce Document  
+##  <a name="top"></a> Dans ce Document  
   
 - [Tâches et Continuations](#tasks)  
   
@@ -63,7 +58,7 @@ Le Runtime d’accès concurrentiel utilise des exceptions C++ pour communiquer 
   
 - [Agents asynchrones](#agents)  
   
-##  <a name="tasks"></a>Tâches et Continuations  
+##  <a name="tasks"></a> Tâches et Continuations  
  Cette section décrit comment le runtime gère les exceptions levées par [concurrency::task](../../parallel/concrt/reference/task-class.md) objets et leurs continuations. Pour plus d’informations sur le modèle de tâche et de continuation, consultez [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Lorsque vous levez une exception dans le corps d’une fonction de travail que vous passez à un `task` de l’objet, le runtime stocke cette exception et la marshale au contexte qui appelle [Concurrency::Task :: Get](reference/task-class.md#get) ou [concurrency :: Task::wait](reference/task-class.md#wait). Le document [parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md) décrit des tâches et les continuations valeur, mais au résumé, une continuation basée sur la valeur prend un paramètre de type `T` et une continuation basée sur une tâche prend un paramètre de type `task<T>`. Si une tâche qui lève une ou plusieurs continuations basée sur une valeur, les continuations ne sont pas planifiées pour s’exécuter. L'exemple suivant illustre ce comportement :  
@@ -97,7 +92,7 @@ Le Runtime d’accès concurrentiel utilise des exceptions C++ pour communiquer 
   
  [[Haut](#top)]  
   
-##  <a name="task_groups"></a>Groupes de tâches et des algorithmes parallèles  
+##  <a name="task_groups"></a> Groupes de tâches et des algorithmes parallèles  
 
  Cette section décrit comment le runtime gère les exceptions levées par des groupes de tâches. Cette section s’applique également aux algorithmes parallèles tels que [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), car ces algorithmes reposent sur les groupes de tâches.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[Haut](#top)]  
   
-##  <a name="runtime"></a>Exceptions levées par le Runtime  
+##  <a name="runtime"></a> Exceptions levées par le Runtime  
  Une exception peut être dû à un appel à l’exécution. La plupart des types d’exceptions, à l’exception de [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md) et [concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indiquer une erreur de programmation. Ces erreurs sont généralement irrécupérables et par conséquent ne doivent pas être interceptées ou gérées par le code d’application. Nous vous conseillons uniquement interceptez ou gérez les erreurs irrécupérables dans votre code d’application lorsque vous avez besoin diagnostiquer les erreurs de programmation. Toutefois, comprendre les types d’exceptions qui sont définis par le runtime peut vous aider à diagnostiquer les erreurs de programmation.  
   
  Le mécanisme de gestion des exceptions sont identique pour les exceptions levées par le runtime en tant qu’exceptions levées par des fonctions de travail. Par exemple, le [concurrency::receive](reference/concurrency-namespace-functions.md#receive) fonction lève une exception `operation_timed_out` lorsqu’il ne reçoit pas un message dans la période spécifiée. Si `receive` lève une exception dans une fonction de travail que vous passez à un groupe de tâches, le runtime stocke cette exception et la marshale au contexte qui appelle `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait`, ou `structured_task_group::run_and_wait`.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[Haut](#top)]  
   
-##  <a name="multiple"></a>Plusieurs Exceptions  
+##  <a name="multiple"></a> Plusieurs Exceptions  
  Si un tâche ou un algorithme parallèle reçoit plusieurs exceptions, le runtime marshale une seule de ces exceptions au contexte d’appel. Le runtime ne garantit pas quelle exception il marshale.  
   
  L’exemple suivant utilise le `parallel_for` algorithme pour imprimer des nombres sur la console. Elle lève une exception si la valeur d’entrée est inférieure à une valeur minimale ou supérieur à une valeur maximale. Dans cet exemple, plusieurs fonctions de travail peut lever une exception.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[Haut](#top)]  
   
-##  <a name="cancellation"></a>Annulation  
+##  <a name="cancellation"></a> Annulation  
  Pas toutes les exceptions indiquent une erreur. Par exemple, un algorithme de recherche peut utiliser la gestion des exceptions pour arrêter sa tâche associée quand il trouve le résultat. Pour plus d’informations sur l’utilisation des mécanismes d’annulation dans votre code, consultez [l’annulation dans la bibliothèque PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
  [[Haut](#top)]  
   
-##  <a name="lwts"></a>Tâches légères  
+##  <a name="lwts"></a> Tâches légères  
  Une tâche légère est une tâche que vous planifiez directement à partir d’un [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) objet. Tâches légères présentent moins de traitement que les tâches ordinaires. Toutefois, le runtime n’intercepte pas les exceptions levées par des tâches légères. Au lieu de cela, l’exception est interceptée par le Gestionnaire d’exception non gérée, qui par défaut met fin au processus. Par conséquent, utilisez un mécanisme de gestion des erreurs approprié dans votre application. Pour plus d’informations sur les tâches légères, consultez [du Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
  [[Haut](#top)]  
   
-##  <a name="agents"></a>Agents asynchrones  
+##  <a name="agents"></a> Agents asynchrones  
  Comme les tâches légères, le runtime ne gère pas les exceptions levées par les agents asynchrones.  
   
  L’exemple suivant montre une façon de gérer les exceptions dans une classe qui dérive de [concurrency::agent](../../parallel/concrt/reference/agent-class.md). Cet exemple définit la `points_agent` classe. Le `points_agent::run` méthode lit `point` des objets de la mémoire tampon des messages et les imprime sur la console. Le `run` méthode lève une exception si elle reçoit un `NULL` pointeur.  

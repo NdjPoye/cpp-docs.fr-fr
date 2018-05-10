@@ -1,27 +1,22 @@
 ---
-title: "À l’aide de verrous A.16 | Documents Microsoft"
-ms.custom: 
+title: À l’aide de verrous A.16 | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db55a8e562e0b1ae72038128a035d2cdabcd3e86
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a16---using-locks"></a>A.16   Utilisation des verrous
 Dans l’exemple suivant, (pour [Section 3.2](../../parallel/openmp/3-2-lock-functions.md) page 41) Notez que l’argument pour les fonctions de verrouillage doit avoir type `omp_lock_t`, et qu’il n’est pas nécessaire de le videz.  Les fonctions de verrouillage entraînent les threads est inactive pendant l’attente de l’entrée à la première section critique, mais pour effectuer d’autres tâches pendant l’attente de l’entrée à la seconde.  Le `omp_set_lock` blocs de fonction, mais la `omp_test_lock` (fonction) ne pas autoriser le travail dans skip() à faire.  

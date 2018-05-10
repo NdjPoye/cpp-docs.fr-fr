@@ -1,29 +1,24 @@
 ---
 title: Groupes de planification | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedule-groups"></a>Groupes de planification
 Ce document décrit le rôle des groupes de planification dans le Runtime d’accès concurrentiel. A *groupe de planification* l’affinité entre l’ou les regroupe, tâches associées. Chaque planificateur possède un ou plusieurs groupes de planification. Utilisez des groupes de planification quand vous avez besoin d’un degré élevé de localité entre les tâches, par exemple, quand un groupe de tâches connexes tire parti d’une exécution sur le même nœud de processeur. À l’inverse, utilisez des instances de planificateur lorsque votre application a des exigences de qualité spécifiques, par exemple, lorsque vous souhaitez limiter la quantité de ressources de traitement qui sont allouées à un ensemble de tâches. Pour plus d’informations sur les instances de planificateur, consultez [Instances de planificateur](../../parallel/concrt/scheduler-instances.md).  

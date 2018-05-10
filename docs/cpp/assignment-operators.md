@@ -43,11 +43,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89363e49b2f8a1691ee897c6acae6b4f67f5b9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assignment-operators"></a>Opérateurs d'assignation
 ## <a name="syntax"></a>Syntaxe  
@@ -73,15 +73,15 @@ Tous les opérateurs d’assignation dans le tableau suivant à l’exception de
 |--------------|-------------|  
 |**=**|Enregistre la valeur du deuxième opérande dans l’objet spécifié par le premier opérande (assignation simple).|  
 |**\*=**|Multiplie la valeur du premier opérande par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`/=`|Divise la valeur du premier opérande par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`%=`|Accepte le module du premier opérande spécifié par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`+=`|Ajoute la valeur du deuxième opérande à la valeur du premier opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
+|**/=**|Divise la valeur du premier opérande par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
+|**%=**|Accepte le module du premier opérande spécifié par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
+|**+=**|Ajoute la valeur du deuxième opérande à la valeur du premier opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**-=**|Soustrait la valeur du deuxième opérande de la valeur du premier opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**<\<=**|Déplace la valeur du premier opérande à gauche du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**>>=**|Déplace la valeur du premier opérande à droite du nombre de bits spécifiés par la valeur du deuxième opérande ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
 |**&=**|Obtient l’opérateur de bits AND du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`^=`|Obtient l’opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
-|`&#124;=`|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
+|**^=**|Obtient l’opérateur de bits OR exclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|  
+|**\|=**|Obtient l’opérateur de bits OR inclusif du premier et du deuxième opérandes ; enregistre le résultat dans l’objet spécifié par le premier opérande.|
 |**&&=**| Opérateur d’assignation de déplacement (pour les types de classe). Si le second opérande est une rvalue, déplacer ses ressources vers le premier opérande (sans les copier). Consultez [des constructeurs de déplacement et opérateurs d’assignation](move-constructors-and-move-assignment-operators-cpp.md) pour plus d’informations.|
   
  **Mots clés des opérateurs**  
@@ -91,8 +91,8 @@ Tous les opérateurs d’assignation dans le tableau suivant à l’exception de
 |Opérateur|Équivalent|  
 |--------------|----------------|  
 |**&=**|`and_eq`|  
-|`&#124;=`|`or_eq`|  
-|`^=`|`xor_eq`|  
+|**\|=**|`or_eq`|  
+|**^=**|`xor_eq`|  
   
  Il existe deux façons d’accéder à ces mots clés des opérateurs dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   

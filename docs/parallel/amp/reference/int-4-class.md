@@ -1,12 +1,9 @@
 ---
 title: int_4, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::get_ywxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947ed0a89e4b940a9c35e2b87eeeb860f71a7ab9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int4-class"></a>int_4, classe
 Représente un vecteur court de quatre entiers.  
@@ -310,7 +305,7 @@ class int_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[int_4 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[int_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -487,7 +482,7 @@ class int_4;
 |int_4::ab||  
 |int_4::abg||  
 |int_4::abgr||  
-|int_4::abr||  
+|int_4::ABR||  
 |int_4::abrg||  
 |int_4::ag||  
 |int_4::agb||  
@@ -505,10 +500,10 @@ class int_4;
 |int_4::bagr||  
 |int_4::bar||  
 |int_4::barg||  
-|int_4::bg||  
-|int_4::bga||  
+|int_4::BG||  
+|int_4::BGA||  
 |int_4::bgar||  
-|int_4::bgr||  
+|int_4::BGR||  
 |int_4::bgra||  
 |int_4::br||  
 |int_4::bra||  
@@ -524,9 +519,9 @@ class int_4;
 |int_4::gb||  
 |int_4::gba||  
 |int_4::gbar||  
-|int_4::gbr||  
+|int_4::GBR||  
 |int_4::gbra||  
-|int_4::gr||  
+|int_4::GR||  
 |int_4::gra||  
 |int_4::grab||  
 |int_4::grb||  
@@ -564,12 +559,12 @@ class int_4;
 |int_4::wzy||  
 |int_4::wzyx||  
 |int_4::x||  
-|int_4::xw||  
+|int_4::XW||  
 |int_4::xwy||  
 |int_4::xwyz||  
 |int_4::xwz||  
 |int_4::xwzy||  
-|int_4::xy||  
+|int_4::XY||  
 |int_4::xyw||  
 |int_4::xywz||  
 |int_4::xyz||  
@@ -601,12 +596,12 @@ class int_4;
 |int_4::zwxy||  
 |int_4::zwy||  
 |int_4::zwyx||  
-|int_4::zx||  
+|int_4::ZX||  
 |int_4::zxw||  
 |int_4::zxwy||  
 |int_4::zxy||  
 |int_4::zxyw||  
-|int_4::zy||  
+|int_4::ZY||  
 |int_4::zyw||  
 |int_4::zywx||  
 |int_4::zyx||  
@@ -615,7 +610,7 @@ class int_4;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `int_4`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

@@ -1,29 +1,24 @@
 ---
-title: "Comparaison du Runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel | Documents Microsoft"
-ms.custom: 
+title: Comparaison du Runtime d’accès concurrentiel aux autres modèles d’accès concurrentiel | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 Ce document décrit les différences entre les fonctionnalités et les modèles de programmation du runtime d’accès concurrentiel et d’autres technologies. Il est important de connaître les avantages du runtime d’accès concurrentiel par rapport à ceux des autres modèles de programmation pour choisir la technologie la mieux adaptée aux exigences de vos applications.  
@@ -44,7 +39,7 @@ Ce document décrit les différences entre les fonctionnalités et les modèles 
  Le modèle préemptif et les modèles de planification coopérative sont deux méthodes courantes pour permettre à plusieurs tâches de partager des ressources de calcul, par exemple, des processeurs ou des threads matériels.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planifications préemptive et coopérative  
- La*planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. La planification préemptive est le modèle généralement utilisé dans les systèmes d’exploitation multitâches, comme Windows*. La planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu’à ce que la tâche se termine ou qu’elle cède son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.  
+ La*planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. La planification préemptive est le modèle généralement utilisé dans les systèmes d’exploitation multitâches, comme Windows *. La planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu’à ce que la tâche se termine ou qu’elle cède son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Différences entre les planificateurs préemptifs et coopératifs  
  Les planificateurs préemptifs cherchent à accorder aux différents threads le même niveau d’accès aux ressources de calcul pour permettre à chaque thread de s’exécuter progressivement. Sur les ordinateurs qui disposent de nombreuses ressources de calcul, l’enjeu n’est pas la distribution équitable des accès, mais l’utilisation efficace des ressources.  

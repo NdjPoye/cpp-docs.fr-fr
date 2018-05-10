@@ -1,13 +1,10 @@
 ---
-title: "Chaînes de pays et de région | Microsoft Docs"
-ms.custom: 
+title: Chaînes de pays et de région | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countryregion-strings"></a>Chaînes de pays et de région
 Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir la liste des noms de pays/région qui sont pris en charge par les différentes versions du système d’exploitation Windows, consultez les [Informations de référence de l’API NLS (National Language Support)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Dans les listes, la chaîne de pays/région peut être une des valeurs de la colonne **Locale - Language Country/Region** ou une des abréviations de la colonne **Country or Region name abbreviation**. Pour plus d’informations sur la prise en charge linguistique dans les systèmes d’exploitation Windows par version, consultez [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier).  

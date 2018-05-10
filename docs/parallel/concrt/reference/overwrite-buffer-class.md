@@ -1,12 +1,9 @@
 ---
 title: Classe overwrite_buffer | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - overwrite_buffer
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overwritebuffer-class"></a>Classe overwrite_buffer
 Un bloc de messagerie `overwrite_buffer` est un `propagator_block` à cibles multiples, à sources multiples et ordonné, capable de stocker un seul message à la fois. Les nouveaux messages remplacent ceux précédemment conservés.  
@@ -62,7 +57,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Nom|Description|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Surchargé. Construit un `overwrite_buffer` bloc de messagerie.|  
-|[~overwrite_buffer Destructor](#dtor)|Détruit le `overwrite_buffer` bloc de messagerie.|  
+|[~ overwrite_buffer, destructeur](#dtor)|Détruit le `overwrite_buffer` bloc de messagerie.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -102,7 +97,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  `overwrite_buffer`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  

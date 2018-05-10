@@ -1,12 +1,9 @@
 ---
 title: scheduler_interface, Structure | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - scheduler_interface
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042457c83486cbefe863ec35a539d53c95b316a2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b06b270c4971239b91fa81b9ad35d8fef52b7e76
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerinterface-structure"></a>scheduler_interface, structure
 Interface du planificateur  
@@ -47,7 +42,7 @@ struct __declspec(novtable) scheduler_interface;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `scheduler_interface`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** pplinterface.h  
   
  **Espace de noms :** concurrency  

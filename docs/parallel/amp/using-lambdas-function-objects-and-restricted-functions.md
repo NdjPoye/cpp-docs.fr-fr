@@ -1,27 +1,22 @@
 ---
-title: "À l’aide d’expressions lambda, objets de fonction et de fonctions restreintes | Documents Microsoft"
-ms.custom: 
+title: À l’aide d’expressions lambda, objets de fonction et de fonctions restreintes | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Utilisation de fonctions lambda, d'objets de fonctions et de fonctions restreintes
 Le code C++ AMP que vous souhaitez exécuter sur l’accélérateur est spécifié en tant qu’argument dans un appel à la [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) (méthode). Vous pouvez fournir une expression lambda ou un objet de fonction (functor) en tant qu’argument. En outre, l’objet de fonction ou expression lambda peut appeler une fonction C++ AMP restreinte. Cette rubrique utilise un algorithme d’ajout de tableau pour illustrer les expressions lambda, objets de fonction et de fonctions restreintes. L’exemple suivant montre l’algorithme sans code C++ AMP. Deux tableaux 1D de longueur égale sont créés. Les éléments d’entier correspondants sont ajoutées et stockées dans un troisième tableau 1D. C++ AMP n’est pas utilisé.  

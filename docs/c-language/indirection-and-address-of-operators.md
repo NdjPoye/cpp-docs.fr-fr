@@ -1,13 +1,10 @@
 ---
-title: "Opérateurs d’indirection et Address-of | Microsoft Docs"
-ms.custom: 
+title: Indirection et opérateurs d'adresse | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,23 +21,21 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="indirection-and-address-of-operators"></a>Opérateurs d’indirection et Address-of 
+# <a name="indirection-and-address-of-operators"></a>Indirection et opérateurs d'adresse
 
-L’opérateur d’indirection unaire (__&#42;__) accède à une valeur indirectement via un pointeur. L’opérande doit être un type de pointeur. Le résultat de l’opération est la valeur adressée par l’opérande ; autrement dit, la valeur à l’adresse vers laquelle son opérande pointe. Le type du résultat est le type adressé par l’opérande.
+L’opérateur d’indirection unaire (__&#42;__) accède à une valeur indirectement via un pointeur. L’opérande doit être un type de pointeur. Le résultat de l'opération est la valeur adressée par l'opérande ; autrement dit, la valeur à l'adresse vers laquelle son opérande pointe. Le type du résultat est le type traité par l'opérande.
 
-Le résultat de l’opérateur d’indirection est *type* si l’opérande est de type *pointeur-à-type*. Si l’opérande pointe vers une fonction, le résultat est un désignateur de fonction. S’il pointe vers un objet, le résultat est une lvalue qui désigne l’objet.
+Le résultat de l’opérateur d’indirection est *type* si l’opérande est de type *pointeur-à-type*. Si l'opérande pointe vers une fonction, le résultat est un désignateur de fonction. S’il pointe vers un objet, le résultat est une lvalue qui désigne l’objet.
 
 Si la valeur de pointeur n’est pas valide, le résultat de l’opérateur d’indirection est non défini. Voici certaines des conditions les plus courantes qui invalident une valeur de pointeur :
 
@@ -48,7 +43,7 @@ Si la valeur de pointeur n’est pas valide, le résultat de l’opérateur d’
 
 - Le pointeur spécifie l’adresse d’un objet après la fin de sa durée de vie (par exemple, un objet qui est devenu hors de portée ou qui est été désalloué) au moment de la référence.
 
-- Le pointeur spécifie une adresse alignée de façon inappropriée pour le type de l’objet pointé.
+- Le pointeur spécifie une adresse alignée de façon inappropriée pour le type de l'objet désigné.
 
 - Le pointeur spécifie une adresse non utilisée par le programme en cours d'exécution.
 
@@ -95,7 +90,7 @@ int  *pround  = &roundup;
 assert( pround == proundup );
 ```  
 
-Une fois que la fonction `roundup` est déclarée, deux pointeurs désignant `roundup` sont déclarés et initialisés. Le premier pointeur, `proundup`, est initialisé en utilisant uniquement le nom de la fonction, tandis que le second, `pround`, utilise l’opérateur address-of dans l’initialisation. Les initialisations sont équivalentes.
+Une fois que la fonction `roundup` est déclarée, deux pointeurs désignant `roundup` sont déclarés et initialisés. Le premier pointeur, `proundup`, est initialisé en utilisant uniquement le nom de la fonction, tandis que le second, `pround`, utilise l'opérateur d'adresse dans l'initialisation. Les initialisations sont équivalentes.
 
 ## <a name="see-also"></a>Voir aussi
 

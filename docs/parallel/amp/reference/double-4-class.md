@@ -1,12 +1,9 @@
 ---
 title: double_4, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::get_xw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1762d985bacb5dc35f7b8e61633bd53c6e08c03a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4d5c776784f78f79fb6d90bde96b199631d08d22
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double4-class"></a>double_4, classe
 Représente un vecteur court de quatre doubles.  
@@ -310,7 +305,7 @@ class double_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[double_4 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[double_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -501,7 +496,7 @@ class double_4;
 |double_4::bg||  
 |double_4::bga||  
 |double_4::bgar||  
-|double_4::bgr||  
+|double_4::BGR||  
 |double_4::bgra||  
 |double_4::br||  
 |double_4::bra||  
@@ -517,7 +512,7 @@ class double_4;
 |double_4::gb||  
 |double_4::gba||  
 |double_4::gbar||  
-|double_4::gbr||  
+|double_4::GBR||  
 |double_4::gbra||  
 |double_4::gr||  
 |double_4::gra||  
@@ -562,7 +557,7 @@ class double_4;
 |double_4::xwyz||  
 |double_4::xwz||  
 |double_4::xwzy||  
-|double_4::xy||  
+|double_4::XY||  
 |double_4::xyw||  
 |double_4::xywz||  
 |double_4::xyz||  
@@ -599,7 +594,7 @@ class double_4;
 |double_4::zxwy||  
 |double_4::zxy||  
 |double_4::zxyw||  
-|double_4::zy||  
+|double_4::ZY||  
 |double_4::zyw||  
 |double_4::zywx||  
 |double_4::zyx||  
@@ -608,7 +603,7 @@ class double_4;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `double_4`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  

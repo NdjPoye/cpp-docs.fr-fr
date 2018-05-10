@@ -1,32 +1,27 @@
 ---
-title: "Comment : utiliser Alloc et Free pour améliorer les performances de la mémoire | Documents Microsoft"
-ms.custom: 
+title: 'Comment : utiliser Alloc et Free pour améliorer les performances de la mémoire | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e39cbec3016a3baa747cfa382220a04db1bbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0be6fa309975663126331a7e38be0f2bea7dcf17
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Comment : utiliser Alloc et Free pour améliorer les performances de la mémoire
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Comment : utiliser Alloc et Free pour améliorer les performances de la mémoire
 
 Ce document montre comment utiliser le [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) et [concurrency::Free](reference/concurrency-namespace-functions.md#free) fonctions afin d’améliorer les performances de la mémoire. Il compare la durée requise pour inverser les éléments d’un tableau en parallèle pour trois types différents qui spécifient chacun le `new` et `delete` opérateurs.  
 

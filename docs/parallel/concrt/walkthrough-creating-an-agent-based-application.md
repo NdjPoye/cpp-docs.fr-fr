@@ -1,30 +1,25 @@
 ---
-title: "Procédure pas à pas : Création d’une Application basée sur l’Agent | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Création d’une Application basée sur l’Agent | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procédure pas à pas : création d’une application basée sur un agent
 Cette rubrique décrit comment créer une application basée sur l’agent de base. Dans cette procédure pas à pas, vous pouvez créer un agent qui lit des données à partir d’un fichier texte de façon asynchrone. L’application utilise l’algorithme de somme de contrôle Adler-32 pour calculer la somme de contrôle du contenu de ce fichier.  
@@ -43,13 +38,13 @@ Cette rubrique décrit comment créer une application basée sur l’agent de ba
 ##  <a name="top"></a> Sections  
  Cette procédure pas à pas montre comment effectuer les tâches suivantes :  
   
-- [Création d’une Application Console](#createapplication)  
+- [Créer l'application console](#createapplication)  
   
 - [Création de la classe file_reader](#createagentclass)  
   
 - [À l’aide de la classe file_reader dans l’Application](#useagentclass)  
   
-##  <a name="createapplication"></a>Création d’une Application Console  
+##  <a name="createapplication"></a> Création d’une Application Console  
  Cette section montre comment créer une application console Visual C++ qui référence les fichiers d’en-tête qui utilise le programme.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Pour créer une application Visual C++ à l’aide de l’Assistant d’Application de Console Win32  
@@ -70,7 +65,7 @@ Cette rubrique décrit comment créer une application basée sur l’agent de ba
   
  [[Haut](#top)]  
   
-##  <a name="createagentclass"></a>Création de la classe file_reader  
+##  <a name="createagentclass"></a> Création de la classe file_reader  
  Cette section montre comment créer la `file_reader` classe. Le runtime planifie chaque agent pour effectuer le travail dans son propre contexte. Par conséquent, vous pouvez créer un agent qui exécute une tâche de façon synchrone, mais qui interagit avec d’autres composants de façon asynchrone. La `file_reader` classe lit les données à partir d’un fichier d’entrée donné et envoie les données à partir de ce fichier vers un composant cible donné.  
   
 #### <a name="to-create-the-filereader-class"></a>Pour créer la classe file_reader  
@@ -120,7 +115,7 @@ Le `run` méthode ouvre le fichier et lit les données à partir de celui-ci. Le
   
  [[Haut](#top)]  
   
-##  <a name="useagentclass"></a>À l’aide de la classe file_reader dans l’Application  
+##  <a name="useagentclass"></a> À l’aide de la classe file_reader dans l’Application  
  Cette section montre comment utiliser la `file_reader` classe pour lire le contenu d’un fichier texte. Il montre également comment créer un [concurrency::call](../../parallel/concrt/reference/call-class.md) objet qui reçoit les données de ce fichier et calcule la somme de contrôle Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Pour utiliser la classe file_reader dans votre application  

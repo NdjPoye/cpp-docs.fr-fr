@@ -1,13 +1,10 @@
 ---
-title: "Vue d’ensemble des instructions C | Microsoft Docs"
-ms.custom: 
+title: Vue d’ensemble des instructions C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 473a91651e52d04dbeb15301520c6c8984808551
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a3cf80e6237b21101f737f496eb39688ec6ed0a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-c-statements"></a>Vue d'ensemble des instructions C
 Les instructions C se composent de jetons, d'expressions et d'autres instructions. Une instruction qui forme un composant d'une autre instruction est qualifiée de « corps » de l'instruction englobante. Chaque type d'instruction donné par la syntaxe suivante est décrit dans cette section.  

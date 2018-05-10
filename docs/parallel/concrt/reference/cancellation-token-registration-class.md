@@ -1,12 +1,9 @@
 ---
 title: cancellation_token_registration, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_registration
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7c609c3a76e94029bd9004cf6322bae4f08d27b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration, classe
 La classe `cancellation_token_registration` représente une notification de rappel de `cancellation_token`. Quand la méthode `register` sur une classe `cancellation_token` est utilisée pour recevoir une notification relative à la date d'annulation, un objet `cancellation_token_registration` est retourné comme handle au rappel afin que l'appelant puisse demander qu'un rappel spécifique ne soit plus effectué via l'utilisation de la méthode `deregister`.  
@@ -45,7 +40,7 @@ class cancellation_token_registration;
 |Nom|Description|  
 |----------|-----------------|  
 |[cancellation_token_registration](#ctor)||  
-|[~cancellation_token_registration Destructor](#dtor)||  
+|[~ cancellation_token_registration, destructeur](#dtor)||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -58,12 +53,12 @@ class cancellation_token_registration;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `cancellation_token_registration`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** pplcancellation_token.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="dtor"></a> ~cancellation_token_registration 
+##  <a name="dtor"></a> ~ cancellation_token_registration 
 
 ```
 ~cancellation_token_registration();
@@ -82,7 +77,7 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>Paramètres  
  `_Src`  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> opérateur ! = 
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -93,7 +88,7 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -106,7 +101,7 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> opérateur == 
 
 ```
 bool operator== (const cancellation_token_registration& _Rhs) const;

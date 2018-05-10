@@ -1,12 +1,9 @@
 ---
 title: Concurrency::Graphics::Direct3D Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 420a022412d5f66855f834d574f627fdbf7273fd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6835297ca3248fcae92d94d98ab5620f86b5ba58
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d, espace de noms
 Fournit la [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) et [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) méthodes.  
@@ -47,7 +42,7 @@ namespace direct3d;
 |[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crée un [texture](texture-class.md) objet en utilisant les paramètres spécifiés.|  
 |[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Compare une valeur de référence de 4 octets et une valeur de la source de 8 octets et accumule un vecteur de 4 sommes.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
   
  **Namespace :** Concurrency::graphics  

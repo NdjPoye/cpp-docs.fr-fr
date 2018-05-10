@@ -1,12 +1,9 @@
 ---
 title: structured_task_group, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group, classe
 La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.  
@@ -50,7 +45,7 @@ class structured_task_group;
 |Nom|Description|  
 |----------|-----------------|  
 |[structured_task_group](#ctor)|Surchargé. Construit un nouveau `structured_task_group` objet.|  
-|[~structured_task_group Destructor](#dtor)|Détruit un objet `structured_task_group`. Vous devez appeler la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.|  
+|[~ structured_task_group, destructeur](#dtor)|Détruit un objet `structured_task_group`. Vous devez appeler la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -60,7 +55,7 @@ class structured_task_group;
 |[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `structured_task_group` objet s’exécute en ligne et un groupe de tâches supplémentaire en haut dans l’arborescence de travail a été annulé. Dans tels cas où l’exécution peut déterminer à l’avance que cette annulation passera via cet `structured_task_group` objet, `true` s’affichera également.|  
 |[run](#run)|Surchargé. Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’assistance de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.|  
-|[wait](#wait)|Attend que tout le travail sur la `structured_task_group` terminée ou est annulée.|  
+|[attente](#wait)|Attend que tout le travail sur la `structured_task_group` terminée ou est annulée.|  
   
 ## <a name="remarks"></a>Notes  
  Il existe plusieurs restrictions importantes mis l’utilisation d’un `structured_task_group` objet afin d’obtenir des performances :  
@@ -78,7 +73,7 @@ class structured_task_group;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `structured_task_group`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppl.h  
   
  **Espace de noms :** concurrency  

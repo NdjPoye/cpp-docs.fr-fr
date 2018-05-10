@@ -1,12 +1,9 @@
 ---
 title: invalid_link_target, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - invalid_link_target
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3a4ac6888f22fcedb494865a219fc0dd8e8a98c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target, classe
 Cette classe décrit une exception levée quand la méthode `link_target` d'un bloc de messagerie est appelée et que le bloc de messagerie ne parvient pas à établir un lien avec la cible. Cette situation peut être due à un dépassement du nombre de liens autorisé pour le bloc de messagerie ou à une tentative à deux reprises de liaison d'une cible spécifique à la même source.  
@@ -51,7 +46,7 @@ class invalid_link_target : public std::exception;
   
  `invalid_link_target`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  

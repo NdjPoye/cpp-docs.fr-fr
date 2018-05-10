@@ -1,27 +1,22 @@
 ---
 title: Directives OpenMP | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e8d47e6376b3786b27305e65bdb55f0c292995d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d7421f397b39c6d26c2e60042b25f37277afa5fd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-directives"></a>Directives OpenMP
 Fournit des liens vers les directives utilisées dans l’API OpenMP.  
@@ -36,7 +31,7 @@ Fournit des liens vers les directives utilisées dans l’API OpenMP.
 |[flush](../../../parallel/openmp/reference/flush-openmp.md)|Spécifie que tous les threads ont la même vue de la mémoire pour tous les objets partagés.|  
 |[for](../../../parallel/openmp/reference/for-openmp.md)|Provoque le travail effectué dans une boucle à l’intérieur d’une région parallèle pour être réparti entre les threads.|  
 |[master](../../../parallel/openmp/reference/master.md)|Spécifie qu’uniquement le maître threadshould exécuter une section du programme.|  
-|[ordered](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Spécifie que le code sous un parallélisée boucle doit être exécutée comme une boucle séquentielle.|  
+|[commandée](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Spécifie que le code sous un parallélisée boucle doit être exécutée comme une boucle séquentielle.|  
 |[parallel](../../../parallel/openmp/reference/parallel.md)|Définit une région parallèle, ce qui est le code qui sera exécuté par plusieurs threads en parallèle.|  
 |[sections](../../../parallel/openmp/reference/sections-openmp.md)|Identifie les sections de code pour être réparti entre tous les threads.|  
 |[single](../../../parallel/openmp/reference/single.md)|Permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.|  

@@ -1,10 +1,7 @@
 ---
-title: "espace de noms d’accès concurrentiel opérateurs | Documents Microsoft"
-ms.custom: 
+title: espace de noms d’accès concurrentiel opérateurs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
@@ -12,17 +9,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-operators"></a>espace de noms d’accès concurrentiel opérateurs
 ||||  
@@ -31,7 +26,7 @@ ms.lasthandoff: 02/23/2018
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>  operator&#124;&#124; Operator  
+##  <a name="operator_lor"></a>  opérateur&#124; &#124; (opérateur)  
  Crée une tâche qui s’effectue correctement quand l’une des tâches fournies en tant qu’arguments s’effectue correctement.  
   
 ```  
@@ -74,7 +69,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>Notes  
  Si les deux tâches sont annulées ou lever des exceptions, la tâche retournée se termine à l’état annulé, et l’une des exceptions, si les sont rencontrées, sera levée lorsque vous appelez `get()` ou `wait()` sur la tâche.  
   
-##  <a name="operator_amp_amp"></a>  operator&amp;&amp; Operator  
+##  <a name="operator_amp_amp"></a>  opérateur&amp; &amp; (opérateur)  
  Crée une tâche qui s’effectue correctement lorsque les deux tâches fournies comme arguments se déroulent correctement.  
   
 ```  
@@ -123,7 +118,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>Notes  
  Si une des tâches est annulée ou lève une exception, la tâche retournée se terminera prématurément, à l'état Annulé, et l'exception, s'il y en a une, sera levée si vous appelez `get()` ou `wait()` pour cette tâche.  
   
-##  <a name="operator_eq_eq"></a>  operator== Operator  
+##  <a name="operator_eq_eq"></a>  opérateur == (opérateur)  
  Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est égal à l'objet `concurrent_vector` situé à droite.  
   
 ```  
@@ -157,7 +152,7 @@ inline bool operator== (
   
  Cette méthode n’est pas d’accès concurrentiel-safe en ce qui concerne les autres méthodes qui pourraient modifier un des vecteurs simultanés `_A` ou `_B`.  
   
-##  <a name="operator_neq"></a>  operator!= Operator  
+##  <a name="operator_neq"></a>  opérateur ! =, opérateur  
  Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur n'est pas égal à l'objet `concurrent_vector` situé à droite.  
   
 ```  
@@ -191,7 +186,7 @@ inline bool operator!= (
   
  Cette méthode n’est pas d’accès concurrentiel-safe en ce qui concerne les autres méthodes qui pourraient modifier un des vecteurs simultanés `_A` ou `_B`.  
   
-##  <a name="operator_lt"></a>  operator&lt; Operator  
+##  <a name="operator_lt"></a>  opérateur&lt; (opérateur)  
  Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur à l'objet `concurrent_vector` situé à droite.  
   
 ```  
@@ -259,7 +254,7 @@ inline bool operator<= (
   
  Cette méthode n’est pas d’accès concurrentiel-safe en ce qui concerne les autres méthodes qui pourraient modifier un des vecteurs simultanés `_A` ou `_B`.  
   
-##  <a name="operator_gt"></a>  operator&gt; Operator  
+##  <a name="operator_gt"></a>  opérateur&gt; (opérateur)  
  Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur à l'objet `concurrent_vector` situé à droite.  
   
 ```  

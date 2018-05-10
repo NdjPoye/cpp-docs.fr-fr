@@ -1,12 +1,9 @@
 ---
 title: commentaire (C/C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 30683bb76ce674becb81321607bc95fefdb78ac1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comment-cc"></a>commentaire (C/C++)
 Place un enregistrement de commentaires dans un fichier objet ou un fichier exécutable.  
@@ -57,7 +52,7 @@ Place un enregistrement de commentaires dans un fichier objet ou un fichier exé
   
  Si l’ordre de la bibliothèque par défaut et une bibliothèque ajoutée est important, la compilation avec le [/Zl](../build/reference/zl-omit-default-library-name.md) commutateur empêche le nom de la bibliothèque par défaut soit placé dans le module objet. Un deuxième pragma comment peut alors être utilisé pour insérer le nom de la bibliothèque par défaut après la bibliothèque ajoutée. Les bibliothèques répertoriées avec ces pragmas figureront dans le module objet, dans l'ordre où elles sont trouvées dans le code source.  
   
- **linker**  
+ **Éditeur de liens**  
  Place un [option de l’éditeur de liens](../build/reference/linker-options.md) dans le fichier objet. Vous pouvez utiliser ce type-commentaire pour spécifier une option d'éditeur de liens au lieu de la passer à la ligne de commande ou de la spécifier dans l'environnement de développement. Par exemple, vous pouvez spécifier l'option /include pour forcer l'inclusion d'un symbole :  
   
 ```  
@@ -70,15 +65,15 @@ Place un enregistrement de commentaires dans un fichier objet ou un fichier exé
   
 -   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
--   [/INCLUDE](../build/reference/include-force-symbol-references.md)  
+-   [/ INCLURE](../build/reference/include-force-symbol-references.md)  
   
 -   [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/MERGE](../build/reference/merge-combine-sections.md)  
+-   [ET DE FUSION](../build/reference/merge-combine-sections.md)  
   
 -   [/SECTION](../build/reference/section-specify-section-attributes.md)  
   
- **user**  
+ **Utilisateur**  
  Place un commentaire général dans le fichier objet. Le paramètre `commentstring` contient le texte du commentaire. Cet enregistrement de commentaires est ignoré par l'Éditeur de liens.  
   
  Le pragma ci-dessous indique à l'Éditeur de liens de rechercher la bibliothèque EMAPI.LIB en effectuant la liaison. L’Éditeur de liens commence par rechercher dans le répertoire de travail actuel, puis dans le chemin d’accès spécifié dans la variable d’environnement LIB.  

@@ -1,12 +1,9 @@
 ---
 title: SchedulerPolicy, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy, classe
 La classe `SchedulerPolicy` contient un jeu de paires clé/valeur, un pour chaque élément de stratégie, qui contrôlent le comportement d'une instance du planificateur.  
@@ -70,7 +65,7 @@ class SchedulerPolicy;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `SchedulerPolicy`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h, concrtrm.h  
   
  **Espace de noms :** concurrency  
@@ -93,7 +88,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Notes  
  La méthode lève [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide.  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> opérateur = 
 
  Assigne la stratégie du planificateur à partir d’une autre stratégie de planificateur.  
   
@@ -140,7 +135,7 @@ SchedulerPolicy(
   
  Le troisième constructeur est un constructeur de copie. Souvent, la méthode la plus commode pour définir une nouvelle stratégie du planificateur est de copier une stratégie existante et modifier à l’aide de la `SetPolicyValue` ou `SetConcurrencyLimits` méthodes.  
   
-##  <a name="dtor"></a> ~SchedulerPolicy 
+##  <a name="dtor"></a> ~ SchedulerPolicy 
 
  Détruit une stratégie du planificateur.  
   

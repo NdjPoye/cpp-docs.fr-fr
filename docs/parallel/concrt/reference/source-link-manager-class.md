@@ -1,12 +1,9 @@
 ---
 title: source_link_manager, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
 L'objet `source_link_manager` gère les liens réseau des blocs de messagerie avec les blocs `ISource`.  
@@ -68,7 +63,7 @@ class source_link_manager;
 |Nom|Description|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Construit un objet `source_link_manager`.|  
-|[~source_link_manager Destructor](#dtor)|Détruit le `source_link_manager` objet.|  
+|[~ source_link_manager, destructeur](#dtor)|Détruit le `source_link_manager` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -76,7 +71,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|Ajoute un lien de la source à la `source_link_manager` objet.|  
 |[begin](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|  
-|[contains](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.|  
+|[contient](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet pour un bloc spécifié.|  
 |[count](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|  
 |[reference](#reference)|Acquiert une référence sur le `source_link_manager` objet.|  
 |[register_target_block](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|  
@@ -90,7 +85,7 @@ class source_link_manager;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `source_link_manager`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -210,7 +205,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a> ~source_link_manager 
+##  <a name="dtor"></a> ~ source_link_manager 
 
  Détruit le `source_link_manager` objet.  
   
@@ -220,5 +215,5 @@ source_link_manager();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [single_link_registry Class](single-link-registry-class.md)   
+ [single_link_registry, classe](single-link-registry-class.md)   
  [multi_link_registry, classe](multi-link-registry-class.md)

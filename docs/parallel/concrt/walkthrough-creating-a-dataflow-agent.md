@@ -1,30 +1,25 @@
 ---
-title: "Procédure pas à pas : Création d’un Agent de flux de données | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Création d’un Agent de flux de données | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Procédure pas à pas : création des agents de flux de données
 Ce document montre comment créer des applications basées sur l’agent qui sont basées sur les flux de données, au lieu de flux de contrôle.  
@@ -51,7 +46,7 @@ Ce document montre comment créer des applications basées sur l’agent qui son
   
 - [Création d’un Agent de l’enregistrement des messages](#logging)  
   
-##  <a name="control-flow"></a>Création d’un Agent de flux de contrôle de base  
+##  <a name="control-flow"></a> Création d’un Agent de flux de contrôle de base  
  Prenons l’exemple suivant définit la `control_flow_agent` classe. La `control_flow_agent` classe agit sur trois mémoires tampons de messages : une mémoire tampon d’entrée et deux mémoires tampons de sortie. Le `run` méthode lit à partir de la mémoire tampon de message source dans une boucle et utilise une instruction conditionnelle pour diriger le flux d’exécution du programme. L’agent incrémente un compteur pour différente de zéro, les valeurs négatives et incrémente un autre compteur pour les valeurs positifs différent de zéro. Une fois que l’agent reçoit la valeur de sentinelle zéro, il envoie les valeurs des compteurs aux tampons de messages de sortie. Le `negatives` et `positives` méthodes activer l’application de lire le nombre de valeurs positives et négatives à partir de l’agent.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ Ce document montre comment créer des applications basées sur l’agent qui son
   
  [[Haut](#top)]  
   
-##  <a name="dataflow"></a>Création d’un Agent de flux de données de base  
+##  <a name="dataflow"></a> Création d’un Agent de flux de données de base  
  Cette section montre comment convertir le `control_flow_agent` classe à utiliser le modèle de flux de données pour effectuer la même tâche.  
   
  L’agent de flux de données fonctionne en créant un réseau de mémoires tampons de messages, chacun servant à un objectif spécifique. Certains blocs de messages utilisent une fonction de filtre pour accepter ou rejeter un message en fonction de sa charge utile. Une fonction de filtre permet de s’assurer qu’un bloc de message reçoit uniquement certaines valeurs.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Haut](#top)]  
   
-##  <a name="logging"></a>Création d’un Agent de l’enregistrement des messages  
+##  <a name="logging"></a> Création d’un Agent de l’enregistrement des messages  
  L’exemple suivant illustre la `log_agent` (classe), qui ressemble à la `dataflow_agent` classe. La `log_agent` classe implémente un agent d’enregistrement asynchrone qu’enregistre les messages du journal dans un fichier et à la console. La `log_agent` classe permet à l’application classer les messages d’information, avertissement ou erreur. Il permet également l’application de spécifier si chaque catégorie d’enregistrement est écrit dans un fichier, la console ou les deux. Cet exemple écrit tous les messages du journal dans un fichier et uniquement les messages d’erreur dans la console.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

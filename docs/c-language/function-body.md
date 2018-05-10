@@ -1,13 +1,10 @@
 ---
 title: Corps de fonction | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: d6a566c1120f0a89a985895393fae5a79690bfa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-body"></a>Corps de fonction
 Un « corps de fonction » est une instruction composée contenant les instructions qui spécifient ce que fait la fonction.  
@@ -35,10 +30,10 @@ Un « corps de fonction » est une instruction composée contenant les instruc
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft \*/  
+ /\* *attribute-seq* est spécifique de Microsoft */  
   
  *compound-statement*: /\* Le corps de la fonction \*/  
- **{**  *declaration-list* opt*statement-list* opt**}**  
+ **{**  *declaration-list* opt*statement-list* opt **}**  
   
  Les variables déclarées dans un corps de fonction, appelées « variables locales », ont une classe de stockage **auto** sauf indication contraire. Lorsque la fonction est appelée, du stockage est créé pour les variables locales et les initialisations locales sont exécutées. Le contrôle d'exécution passe à la première instruction dans *compound-statement* et continue jusqu'à ce qu'une instruction `return` soit exécutée ou jusqu'à la fin du corps de la fonction. Le contrôle revient ensuite au point auquel la fonction a été appelée.  
   

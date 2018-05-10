@@ -1,13 +1,10 @@
 ---
-title: "Portée et visibilité | Microsoft Docs"
-ms.custom: 
+title: Portée et visibilité | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85f0ca180fc60b1281440845289d2f2a39d71af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-and-visibility"></a>Portée et visibilité
 La « visibilité » d'un identificateur détermine les parties du programme où un identificateur peut être référencé (sa « portée »). Un identificateur est visible (c- à-d. qu'il peut être utilisé) uniquement dans les parties d'un programme entourées par sa « portée », qui peuvent être limitées (afin d'augmenter les restrictions) au fichier, à la fonction, au bloc ou au prototype de fonction dans lequel il apparaît. La portée d'un identificateur est la partie du programme où il peut être utilisé. Cela est parfois appelé « portée lexicale ». Il existe quatre types de portée : fonction, fichier, bloc, et prototype de fonction.  

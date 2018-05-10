@@ -1,12 +1,9 @@
 ---
 title: include_alias | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -35,12 +30,12 @@ Spécifie que *short_filename* doit être utilisé en tant qu’alias pour *nom_
 
 ## <a name="syntax"></a>Syntaxe
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias(*long_filename*, *short_filename*)
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias («*nom_fichier_long*«, »*short_filename*»)  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*nom_fichier_long*, *short_filename*)
 
 ## <a name="remarks"></a>Notes
 
-Certains systèmes de fichiers autorisent l'utilisation de noms de fichiers d'en-tête plus longs que la limite 8.3 du système de fichiers FAT. Le compilateur ne peut pas simplement tronquer les noms plus longs à 8.3, car les huit premiers caractères des noms de fichiers d'en-tête plus longs peuvent ne pas être uniques. Chaque fois que le compilateur rencontre le *nom_fichier_long* chaîne, il remplace *short_filename*et recherche le fichier d’en-tête *short_filename* à la place. Ce pragma doit figurer avant les directives `#include` correspondantes. Exemple :
+Certains systèmes de fichiers autorisent l'utilisation de noms de fichiers d'en-tête plus longs que la limite 8.3 du système de fichiers FAT. Le compilateur ne peut pas simplement tronquer les noms plus longs à 8.3, car les huit premiers caractères des noms de fichiers d'en-tête plus longs peuvent ne pas être uniques. Chaque fois que le compilateur rencontre le *nom_fichier_long* chaîne, il remplace *short_filename*et recherche le fichier d’en-tête *short_filename* à la place. Ce pragma doit figurer avant les directives `#include` correspondantes. Par exemple :
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -72,7 +67,7 @@ l'option correspondante du compilateur doit être
 
 > /YcAppleSystemHeaderStop.h
 
-Vous pouvez utiliser la **include_alias** pragma pour mapper un nom de fichier d’en-tête à un autre. Exemple :
+Vous pouvez utiliser la **include_alias** pragma pour mapper un nom de fichier d’en-tête à un autre. Par exemple :
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -94,7 +89,7 @@ En outre, la directive suivante génère une erreur :
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Notez que le nom de fichier indiquée dans les messages d’erreur, ou en tant que la valeur de la **&#95; &#95; FICHIER &#95; &#95;**  (macro), est le nom du fichier après la substitution a été effectuée. Par exemple, consultez la sortie après les directives suivantes :
+Notez que le nom de fichier indiquée dans les messages d’erreur, ou en tant que la valeur de la **&#95; &#95;fichier&#95; &#95;** (macro), est le nom du fichier après la substitution a été effectuée. Par exemple, consultez la sortie après les directives suivantes :
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

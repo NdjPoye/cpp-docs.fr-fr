@@ -1,12 +1,9 @@
 ---
 title: reader_writer_lock, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock, classe
 Verrou de lecteur-writer basé sur une file d'attente à préférence de writer avec rotation uniquement locale. Le verrou accorde un accès Premier entré, premier sorti aux writers et prive les lecteurs sous une charge continue de writers.  
@@ -51,8 +46,8 @@ class reader_writer_lock;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant qu’un writer.|  
-|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant que lecteur.|  
+|[reader_writer_lock::scoped_lock, classe](#scoped_lock_class)|Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant qu’un writer.|  
+|[reader_writer_lock::scoped_lock_read, classe](#scoped_lock_read_class)|Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant que lecteur.|  
   
 ### <a name="public-constructors"></a>Constructeurs publics  
   
@@ -77,7 +72,7 @@ class reader_writer_lock;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `reader_writer_lock`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
  **Espace de noms :** concurrency  
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  Détruit le `reader_writer_lock` objet.  
   
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>Notes  
  Il est probable que le verrou n’est plus maintenu lorsque le destructeur s’exécute. Autoriser le verrou de writer de lecteur détruire avec le verrou maintenu toujours résultats dans un comportement non défini.  
   
-##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock Class  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock, classe  
  Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant qu’un writer.  
   
 ```
@@ -158,7 +153,7 @@ Détruit un `reader_writer_lock` de l’objet et libère le verrou fourni dans s
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class"></a>  reader_writer_lock::scoped_lock_read Class  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock::scoped_lock_read, classe  
  Un wrapper RAII sécurisé qui peut être utilisé pour acquérir `reader_writer_lock` verrouiller des objets en tant que lecteur.  
   
 ```
@@ -181,7 +176,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  Le `reader_writer_lock` objet à acquérir comme lecteur.  
   
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read::~scoped_lock_read Destructor
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read :: ~ scoped_lock_read, destructeur
 Détruit un `scoped_lock_read` de l’objet et libère le verrou fourni dans son constructeur.  
 
 ```

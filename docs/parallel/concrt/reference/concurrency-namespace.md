@@ -2,11 +2,8 @@
 title: accès concurrentiel Namespace | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency, espace de noms
 L'espace de noms `Concurrency` fournit des classes et des fonctions qui vous donnent accès au runtime d'accès concurrentiel, infrastructure de programmation simultanée pour C++. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../../../parallel/concrt/concurrency-runtime.md).  
