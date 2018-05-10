@@ -1,13 +1,10 @@
 ---
 title: Extensions de composant pour les plateformes Runtime | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensions de composant pour les plateformes Runtime
 Visual C++ fournit des extensions de langage pour vous aider à programmer par rapport à des plateformes d’exécution. À l’aide de C + c++ / CX, vous pouvez programmer des applications de plateforme Windows universelle et des composants qui se compilent en code natif. Bien que vous pouvez créer des applications de plateforme Windows universelle par programmation directe sur les interfaces COM de Windows Runtime, à l’aide de C + c++ / CX, vous pouvez travailler avec les constructeurs, les exceptions et les autres langages de programmation C++ modernes. Pour activer la programmation C++ dans un environnement d’exécution managé sur la plateforme .NET, vous pouvez utiliser C + c++ / CLI.  
@@ -86,7 +81,7 @@ Visual C++ fournit des extensions de langage pour vous aider à programmer par r
 |`gcnew`|Non|Alloue des types sur le tas récupéré par le garbage collector. À utiliser à la place de `new` et `delete`.|[gcnew de nouveau, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|Oui|Alloue un type Windows Runtime. À utiliser à la place de `new` et `delete`.|[gcnew de nouveau, ref](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Oui|Indique qu’un membre peut uniquement être initialisé lors de la déclaration ou dans un constructeur statique.|[initonly (C++-CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Oui|Crée une variable littérale.|[littéral](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Oui|Crée une variable littérale.|[Littéral](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|Non|Indique qu'un handle ou pointeur ne pointe pas vers un objet.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Constructions de modèle  

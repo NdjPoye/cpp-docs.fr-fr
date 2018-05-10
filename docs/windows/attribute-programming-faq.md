@@ -1,13 +1,10 @@
 ---
-title: "Forum aux questions de la programmation d’attribut | Documents Microsoft"
-ms.custom: 
+title: Forum aux questions de la programmation d’attribut | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Programmation par attributs (FAQ)
 Cette rubrique répond aux questions fréquemment posées suivantes :  
@@ -49,7 +44,7 @@ Cette rubrique répond aux questions fréquemment posées suivantes :
   
 -   [Puis-je utiliser des attributs sur une classe dérivée d’une classe qui utilise des attributs ?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Qu’est un HRESULT ?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Qu’est un HRESULT ?  
  Un `HRESULT` est un type de données simple qui est souvent utilisé comme valeur de retour par des attributs et ATL en général. Le tableau suivant décrit les différentes valeurs. Autres valeurs sont contenues dans le fichier d’en-tête winerror.h.  
   
 |Name|Description|Value|  
@@ -66,7 +61,7 @@ Cette rubrique répond aux questions fréquemment posées suivantes :
 |E_FAIL|Erreur non spécifiée|0 x 80004005|  
 |E_ACCESSDENIED|Erreur accès général refusé|0 x 80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Lorsque avez spécifier le nom de paramètre pour un attribut ?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Lorsque avez spécifier le nom de paramètre pour un attribut ?  
  Dans la plupart des cas, si l’attribut possède un paramètre unique, ce paramètre est nommé. Ce nom n’est pas requis lors de l’insertion de l’attribut dans votre code. Par exemple, l’utilisation de la [peuvent être agrégées](../windows/aggregatable.md) attribut :  
   
 ```  
@@ -100,10 +95,10 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[Source](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>Puis-je utiliser des commentaires dans un bloc d’attributs ?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Puis-je utiliser des commentaires dans un bloc d’attributs ?  
  Vous pouvez utiliser les commentaires de ligne simple et plusieurs lignes dans un bloc d’attributs. Toutefois, vous ne pouvez pas utiliser ces deux types de commentaire entre les parenthèses contenant les paramètres de l’attribut.  
   
  Les éléments suivants sont autorisé :  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Comment les attributs n’interagissent pas avec l’héritage ?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Comment les attributs n’interagissent pas avec l’héritage ?  
  Vous pouvez hériter des classes avec attributs et non attribuées à partir d’autres classes, qui peuvent elles-mêmes être attribués ou non. Le résultat de la dérivation d’une classe avec attributs est identique à la dérivation à partir de cette classe, une fois que le fournisseur d’attributs a transformé son code. Les attributs ne sont pas transmis aux classes dérivées par voie d’héritage C++. Un fournisseur d’attributs transforme uniquement le code à proximité de ses attributs.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Comment puis-je utiliser les attributs dans un projet ATL sans attributs ?  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Comment puis-je utiliser les attributs dans un projet ATL sans attributs ?  
  Avoir un projet ATL sans attributs, ce qui a un fichier .idl, et vous pouvez commencer à ajouter des objets avec attributs. Dans ce cas, utilisez l’Assistant Ajouter une classe pour fournir le code.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Comment puis-je utiliser un fichier .idl dans un projet avec attributs ?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Comment puis-je utiliser un fichier .idl dans un projet avec attributs ?  
  Vous avez peut-être un fichier .idl que vous souhaitez utiliser dans votre projet ATL avec attributs. Dans ce cas, vous devez utiliser le [importidl](../windows/importidl.md) , compilez le fichier .idl dans un fichier .h (consultez la [Pages de propriétés MIDL](../ide/midl-property-pages.md) dans la boîte de dialogue Pages de propriétés du projet), puis inclure le fichier .h dans votre projet .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Puis-je modifier le code injecté par un attribut ?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Puis-je modifier le code injecté par un attribut ?  
  Certains attributs d’injectent du code dans votre projet. Vous pouvez voir le code injecté à l’aide de la [/Fx](../build/reference/fx-merge-injected-code.md) option du compilateur. Il est également possible de copier le code à partir du fichier injecté et collez-le dans votre code source. Cela vous permet de modifier le comportement de l’attribut. Toutefois, vous devrez modifier d’autres parties de votre code.  
   
  L’exemple suivant est le résultat de la copie du code injecté dans un fichier de code source :  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Comment puis-je transférer déclarer une interface avec attributs ?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Comment puis-je transférer déclarer une interface avec attributs ?  
  Si vous vous apprêtez à effectuer une déclaration anticipée d’une interface avec attributs, vous devez appliquer les mêmes attributs de la déclaration anticipée que vous appliquez à la déclaration d’interface réelle. Vous devez également appliquer le [exporter](../windows/export.md) votre déclaration anticipée d’attribut.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Puis-je utiliser des attributs sur une classe dérivée d’une classe qui utilise des attributs ?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Puis-je utiliser des attributs sur une classe dérivée d’une classe qui utilise des attributs ?  
  Non, l’utilisation d’attributs sur une classe dérivée d’une classe qui utilise des attributs n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  

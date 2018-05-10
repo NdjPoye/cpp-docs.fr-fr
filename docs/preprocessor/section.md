@@ -1,12 +1,9 @@
 ---
 title: section | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - section_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5783c6712852bfb53f457cea174f699c01ea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a8d113c10ea8370a46560ba8668546c74b19c6f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="section"></a>section
 Crée une section dans un fichier .obj.  
@@ -57,7 +52,7 @@ Crée une section dans un fichier .obj.
  **execute**  
  Permet d'exécuter le code.  
   
- **shared**  
+ **Partagé**  
  Partage la section entre tous les processus qui chargent l'image.  
   
  **nopage**  
@@ -66,7 +61,7 @@ Crée une section dans un fichier .obj.
  **nocache**  
  Marque la section comme ne pouvant pas être mise en cache ; utile pour les pilotes de périphériques Win32.  
   
- **discard**  
+ **Ignorer**  
  Marque la section comme ne pouvant pas être supprimée ; utile pour les pilotes de périphériques Win32.  
   
  **remove**  

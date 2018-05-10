@@ -1,13 +1,10 @@
 ---
 title: Prise en charge du compilateur pour les Type Traits (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Prise en charge du compilateur pour les Type Traits (extensions du composant C++)
 Le compilateur prend en charge *les caractéristiques de type*, qui indiquent diverses caractéristiques d’un type au moment de la compilation.  
@@ -591,7 +586,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
  Le `__has_finalizer(` *type* `)` trait de type n’est pas pris en charge, car cette plateforme ne prend pas en charge les finaliseurs.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -599,7 +594,7 @@ Le compilateur prend en charge *les caractéristiques de type*, qui indiquent di
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

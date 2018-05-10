@@ -1,13 +1,10 @@
 ---
 title: Tableaux (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Tableaux (extensions du composant C++)
 Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + c++ / CLI, déclare un tableau d’un type spécifié et la valeur initiale.  
@@ -70,7 +65,7 @@ Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + 
  `array-type`  
  Le type de la variable tableau. Les types valides sont les classes Windows Runtime et types fondamentaux, les classes ref et les structures, les classes de valeur structs et des pointeurs natifs (`type*`).  
   
- `rank`[facultatif]  
+ `rank` [facultatif]  
  Le nombre de dimensions du tableau. Doit être 1.  
   
  `identifier`  
@@ -79,14 +74,14 @@ Le `Platform::Array<T>` type dans C + c++ / CX, ou le `array` mot clé dans C + 
  `initialization-type`  
  Le type des valeurs qui initialiser le tableau. En règle générale, `array-type` et `initialization-type` sont du même type. Toutefois, les types peuvent être différents s’il existe une conversion à partir de `initialization-type` à `array-type`— par exemple, si `initialization-type` est dérivée de `array-type`.  
   
- `initialization-list`[facultatif]  
+ `initialization-list` [facultatif]  
  Une liste délimitée par des virgules des valeurs dans des accolades qui initialise les éléments du tableau. Par exemple, si `rank-size-list` ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, `initialization list` peut être `{1,2,3}`.  
   
 ### <a name="remarks"></a>Notes  
   
  Vous pouvez détecter au moment de la compilation si un type est un tableau de décompte avec `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ### <a name="examples"></a>Exemples  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  Le type de la variable tableau. Les types valides sont les classes Windows Runtime et types fondamentaux, les classes ref et les structures, les classes de valeur et les structures, les pointeurs natifs (`type*`) et les types POD (plain anciennes données) natifs.  
   
- `rank`[facultatif]  
+ `rank` [facultatif]  
  Le nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau lui-même est un tableau.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  Une liste délimitée par des virgules de la taille de chaque dimension du tableau. Vous pouvez également, si le `initialization-list` paramètre est spécifié, le compilateur peut déduire la taille de chaque dimension et `rank-size-list` peut être omis. 
   
- `initialization-list`[facultatif]  
+ `initialization-list` [facultatif]  
  Une liste délimitée par des virgules des valeurs dans des accolades qui initialise les éléments du tableau. Ou une liste délimitée par des virgules d’imbriqués *-liste d’initialisation* éléments initialiser les éléments dans un tableau multidimensionnel.  
   
  Par exemple, si `rank-size-list` ont été `(3)`, qui déclare un tableau unidimensionnel de 3 éléments, `initialization list` peut être `{1,2,3}`. If `rank-size-list` ont été `(3,2,4)`, qui déclare un tableau à trois dimensions de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 des éléments dans la troisième, `initialization-list` peut être `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Notes  
   
- `array`est dans le [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) espace de noms.  
+ `array` est dans le [plateforme, par défaut et espaces de noms cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) espace de noms.  
   
  Comme C++ standard, les index de tableau sont de base zéro et l’indicées de tableau à l’aide de crochets ([]). Contrairement à C++ standard, les index d’un tableau multidimensionnel sont spécifiés dans une liste d’index pour chaque dimension au lieu d’un ensemble d’opérateurs de crochets ([]) pour chaque dimension. Par exemple, *identificateur*[*index1*, *index2*] à la place de *identificateur*[*index1*] [ *index2*].  
   
@@ -155,7 +150,7 @@ int main() {
   
  Au moment de la compilation, vous pouvez détecter si un type est une common language runtime (CLR) `__is_ref_array(type)`. Pour plus d’informations, consultez [prise en charge du compilateur pour les Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

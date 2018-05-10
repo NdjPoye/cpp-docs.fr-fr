@@ -1,13 +1,10 @@
 ---
 title: Types de fichier modifiables pour les ressources | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - resources [Visual Studio], editing
 - files [C++], editable types
 ms.assetid: c40f9204-f2f2-400b-9f53-53b7bf291356
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 884fc4fffa47562b35ebaf20f8b1336523253fa3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editable-file-types-for-resources"></a>Types de fichier modifiables pour les ressources
 Vous pouvez ouvrir les types de fichier suivants, et modifier les ressources qu'ils contiennent.  
@@ -45,7 +40,7 @@ Vous pouvez ouvrir les types de fichier suivants, et modifier les ressources qu'
   
 
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

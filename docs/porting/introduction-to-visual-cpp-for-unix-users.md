@@ -1,35 +1,30 @@
 ---
-title: "Introduction à Visual C++ pour les utilisateurs UNIX | Microsoft Docs"
-ms.custom: 
+title: Introduction à Visual C++ pour les utilisateurs UNIX | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
 
 Cette rubrique fournit des informations aux utilisateurs UNIX qui débutent avec Visual Studio et qui souhaitent tirer pleinement parti de C++ et de l’environnement de développement intégré (IDE) de Visual Studio.
   
-## <a name="getting-started-on-the-command-line"></a>Bien démarrer avec la ligne de commande  
+## <a name="getting-started-on-the-command-line"></a>Débuter sur la ligne de commande  
 
 Vous pouvez utiliser le compilateur C++ à partir de la ligne de commande, comme vous le feriez dans un environnement de ligne de commande UNIX. Vous pouvez compiler à partir de l’invite de commandes à l’aide du compilateur en ligne de commande C et C++ (CL.EXE), de l’éditeur de liens (LINK.EXE) et d’autres outils comme NMAKE.EXE, la version Microsoft de l’utilitaire UNIX.  
   

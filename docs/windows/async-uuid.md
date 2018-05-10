@@ -1,13 +1,10 @@
 ---
 title: async_uuid | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.async_uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c3d9fc9afb7a6f65be8ace5fec085db9bd92191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="asyncuuid"></a>async_uuid
 Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions synchrones et asynchrones d’une interface COM.  
@@ -41,7 +36,7 @@ Spécifie l’UUID qui indique au compilateur MIDL pour définir des versions sy
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *UUID*  
+ *uuid*  
  Un UUID qui identifie la version de l’interface.  
   
 ## <a name="remarks"></a>Notes  
@@ -61,7 +56,7 @@ __interface ICustom {
 };  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -69,7 +64,7 @@ __interface ICustom {
 |-|-|  
 |**S'applique à**|`interface`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
+|**Attributs requis**|Aucun|  
 |**Attributs non valides**|**Double**, **dispinterface**|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

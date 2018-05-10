@@ -1,13 +1,10 @@
 ---
-title: "Définitions de fonction C | Microsoft Docs"
-ms.custom: 
+title: Définitions de fonction C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Définitions de fonction C
 Une définition de fonction spécifie le nom de la fonction, les types et le nombre de paramètres qu’elle s’attend à recevoir et son type de retour. Une définition de fonction comprend également un corps de fonction avec les déclarations de ses variables locales, ainsi que les instructions qui déterminent ce que fait la fonction.  
@@ -50,7 +45,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
  *function-definition*: /\* Ici le déclarateur est le déclarateur de fonction \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* est spécifique de Microsoft \*/  
+ /\* *attribute-seq* est spécifique de Microsoft */  
   
  Les paramètres de prototype sont les suivants :  
   
@@ -72,7 +67,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
  *direct-declarator* : /\*Déclarateur de fonction \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Déclarateur de nouveau style \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Déclarateur de style obsolète \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Déclarateur de style obsolète \*/  
   
  La liste des paramètres dans une définition utilise la syntaxe suivante :  
   
@@ -101,7 +96,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
  La syntaxe du corps de la fonction est la suivante :  
   
  *compound-statement*: /\* Le corps de la fonction \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  Les seuls spécificateurs de classe de stockage pouvant modifier une déclaration de fonction sont `extern` et **static**. Le spécificateur `extern` signifie que la fonction peut être référencée à partir d'autres fichiers ; autrement dit, son nom est exporté vers l'éditeur de liens. Le spécificateur **static** signifie que la fonction ne peut pas être référencée à partir d'autres fichiers ; autrement dit, le nom n'est pas exporté par l'éditeur de liens. Si aucune classe de stockage n'apparaît dans une définition de fonction, `extern` est utilisé. Dans tous les cas, la fonction est toujours visible du point de définition jusqu'à la fin du fichier.  
   

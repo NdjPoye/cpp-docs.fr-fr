@@ -1,13 +1,10 @@
 ---
-title: "Touches d’accès pour l’éditeur de boîte de dialogue | Documents Microsoft"
-ms.custom: 
+title: Touches d’accès pour l’éditeur de boîte de dialogue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Dialog editor, shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75e9e6cac169bfe5e5867d0c1f3c14f70d19f916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a526cb1312a1e97eca4ad716576c009a6ae05e4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Touches accélérateur pour l'Éditeur de boîtes de dialogue
 Voici la valeur par défaut les touches accélérateur pour les commandes de l’éditeur de boîte de dialogue. Pour modifier les touches de raccourci, cliquez sur **Options** sur la **outils** menu, puis choisissez **clavier** sous le **environnement** dossier. Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -56,7 +51,7 @@ Voici la valeur par défaut les touches accélérateur pour les commandes de l�
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

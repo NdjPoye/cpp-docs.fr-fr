@@ -1,12 +1,9 @@
 ---
 title: Classe de message | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-class"></a>message, classe
 Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.  
@@ -74,7 +69,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[payload](#payload)|La charge utile de la `message` objet.|  
+|[charge utile](#payload)|La charge utile de la `message` objet.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -82,7 +77,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `message`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -130,7 +125,7 @@ message(
 ### <a name="remarks"></a>Notes  
  Le constructeur qui prend un pointeur vers un `message` de l’objet comme argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
   
-##  <a name="dtor"></a> ~message 
+##  <a name="dtor"></a> ~ message 
 
  Détruit le `message` objet.  
   

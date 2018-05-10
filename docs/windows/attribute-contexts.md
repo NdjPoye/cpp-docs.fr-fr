@@ -1,30 +1,25 @@
 ---
-title: "Contextes d’attribut | Documents Microsoft"
-ms.custom: 
+title: Contextes d’attribut | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e220eb0e7eb80d01d70aed82e773c46fe6704c7d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-contexts"></a>Contextes d'attribut
 Attributs C++ peuvent être décrite à l’aide de quatre champs de base : la cible peuvent être appliquées aux (**s’applique à**), si elles sont renouvelables ou non (**Repeatable**), le requis la présence d’autres attributs ( **Attributs obligatoires**) et les incompatibilités avec les autres attributs (**attributs non valides**). Ces champs sont répertoriés dans une table qui l’accompagne dans la rubrique de référence de chaque attribut. Chacun de ces champs est décrit ci-dessous.  

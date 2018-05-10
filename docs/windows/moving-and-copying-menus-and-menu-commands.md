@@ -1,13 +1,10 @@
 ---
-title: "Déplacer et copier des Menus et commandes de Menu | Documents Microsoft"
-ms.custom: 
+title: Déplacer et copier des Menus et commandes de Menu | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - commands, moving on menus
 - menu items, copying
 ms.assetid: 1d8df535-9922-4579-a9c2-37aeac1856eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6042647d0eff213dae82440b9733cff64e94631
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Déplacement et copie de menus et de commandes de menu
 Vous pouvez déplacer ou copier des menus et des commandes de menu par glisser-déplacer ou à l'aide des commandes du menu contextuel.  

@@ -1,12 +1,9 @@
 ---
 title: composant | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.component
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edb2f68b479eeadca777e0707dd96e148d13fe8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5bb453e8fe9d21c25292c4e5f94de90dcc67676a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="component"></a>component
 Contrôle la collecte des informations de consultation ou les informations sur les dépendances à partir des fichiers sources.  
@@ -46,7 +41,7 @@ Contrôle la collecte des informations de consultation ou les informations sur l
 ## <a name="browser"></a>Visiteur  
  Vous pouvez désactiver ou activer la collecte, et spécifier des noms particuliers à ignorer lors de la collecte d'informations.  
   
- L’utilisation de l’activation et de la désactivation contrôle la collection des informations de consultation à partir du pragma. Exemple :  
+ L’utilisation de l’activation et de la désactivation contrôle la collection des informations de consultation à partir du pragma. Par exemple :  
   
 ```  
 #pragma component(browser, off)  
@@ -57,7 +52,7 @@ Contrôle la collecte des informations de consultation ou les informations sur l
 > [!NOTE]
 >  Pour activer la collecte des informations de consultation avec ce pragma, [des informations de consultation doivent d’abord être activées](../build/reference/building-browse-information-files-overview.md).  
   
- Le **références** option peut être utilisée avec ou sans le *nom* argument. À l’aide de **références** sans *nom* Active ou désactive la collecte de références (les autres informations de consultation continuent à être collectées). Exemple :  
+ Le **références** option peut être utilisée avec ou sans le *nom* argument. À l’aide de **références** sans *nom* Active ou désactive la collecte de références (les autres informations de consultation continuent à être collectées). Par exemple :  
   
 ```  
 #pragma component(browser, off, references)  
@@ -65,7 +60,7 @@ Contrôle la collecte des informations de consultation ou les informations sur l
   
  arrête la collecte d'informations de référence par le compilateur.  
   
- À l’aide de **références** avec *nom* et **hors** empêche les références à *nom* d’apparaître dans la fenêtre d’informations de navigation. Utilisez cette syntaxe pour ignorer les noms et les types qui ne vous intéressent pas afin de réduire la taille des fichiers d'informations de consultation. Exemple :  
+ À l’aide de **références** avec *nom* et **hors** empêche les références à *nom* d’apparaître dans la fenêtre d’informations de navigation. Utilisez cette syntaxe pour ignorer les noms et les types qui ne vous intéressent pas afin de réduire la taille des fichiers d'informations de consultation. Par exemple :  
   
 ```  
 #pragma component(browser, off, references, DWORD)  

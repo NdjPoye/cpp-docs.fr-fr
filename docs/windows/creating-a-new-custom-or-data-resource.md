@@ -1,13 +1,10 @@
 ---
-title: "Création d’une ressource personnalisée ou ressource de données | Documents Microsoft"
-ms.custom: 
+title: Création d’une ressource personnalisée ou ressource de données | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [Visual Studio], creating
 ms.assetid: 9918bf96-38fa-43a1-a384-572f95d84950
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb376bd640c5b56bfbe5a855f0df91a9a0cb6b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Création d'une ressource personnalisée ou d'une ressource données
 Vous pouvez créer une ressource personnalisée ou une ressource de données en plaçant la ressource dans un fichier distinct à l’aide de la syntaxe de fichier de script de ressource normale, puis en incluant ce fichier en double-cliquant sur votre projet dans l’Explorateur de solutions et en cliquant sur **Include des ressources** dans le menu contextuel.  
@@ -41,7 +36,7 @@ Vous pouvez créer une ressource personnalisée ou une ressource de données en 
   
 2.  Dans l’ **Explorateur de solutions**, cliquez sur le fichier .rc de votre projet, puis sur **Include des ressources** dans le menu contextuel.  
   
-3.  Dans la zone **Directives de compilation** , tapez une instruction **#include** qui fournit le nom du fichier contenant la ressource personnalisée. Exemple :  
+3.  Dans la zone **Directives de compilation** , tapez une instruction **#include** qui fournit le nom du fichier contenant la ressource personnalisée. Par exemple :  
   
  ```  
     #include mydata.rc  
@@ -55,7 +50,7 @@ Vous pouvez créer une ressource personnalisée ou une ressource de données en 
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   

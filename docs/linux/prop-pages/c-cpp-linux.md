@@ -1,55 +1,23 @@
 ---
-title: "C/C++, propriétés (Linux C++) | Microsoft Docs"
-ms.custom: 
+title: C/C++, propriétés (Linux C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-f1_keywords:
-- VC.Project.VCClangCompilerTool.AdditionalIncludeDirectories
-- VC.Project.VCClangCompilerTool.DebugInformationFormat
-- VC.Project.VCClangCompilerTool.ObjectFile
-- VC.Project.VCClangCompilerTool.WarningLevel
-- VC.Project.VCClangCompilerTool.WarnAsError
-- VC.Project.VCClangCompilerTool.AdditionalWarning
-- VC.Project.VCClangCompilerTool.Verbose
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCClangCompilerTool.Optimization
-- VC.Project.VCClangCompilerTool.StrictAliasing
-- VC.Project.VCClangCompilerTool.UnrollLoops
-- VC.Project.VCClangCompilerTool.LinkTimeOptimization
-- VC.Project.VCClangCompilerTool.OmitFramePointers
-- VC.Project.VCClangCompilerTool.NoCommonBlocks
-- VC.Project.VCClangCompilerTool.PIC
-- VC.Project.VCClangCompilerTool.ThreadSafeStatics
-- VC.Project.VCClangCompilerTool.RelaxIEEE
-- VC.Project.VCClangCompilerTool.HideInlineMethods
-- VC.Project.VCClangCompilerTool.SymbolsHiddenByDefault
-- VC.Project.VCClangCompilerTool.ExceptionHandling
-- VC.Project.VCClangCompilerTool.RuntimeTypeInfo
-- VC.Project.VCClangCompilerTool.CLanguageStandard
-- VC.Project.VCClangCompilerTool.CppLanguageStandard
-- VC.Project.VCClangCompilerTool.PreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefinePreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefineAllPreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.ShowIncludes
-- VC.Project.VCClangCompilerTool.CompileAs
-- VC.Project.VCClangCompilerTool.ForcedIncludeFiles
-- vc.project.AdditionalOptionsPage
+f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 096775841841574571b7ef731db52f3bbda6485f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1978c566dab949093f0ddbd2aa1aa37ad0942808
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cc-properties-linux-c"></a>C/C++, propriétés (Linux C++)
 
@@ -57,7 +25,7 @@ ms.lasthandoff: 12/21/2017
 Propriété | Description | Options
 --- | ---| ---
 Autres répertoires Include | Spécifie un ou plusieurs répertoires à ajouter au chemin include. Si vous ajoutez plusieurs répertoires, séparez-les par des points-virgules. (-I[path]).
-Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage ; la compilation peut donc être plus rapide.<br>**Informations de débogage minimales** : génère des informations de débogage minimales.<br>**Informations de débogage complètes (DWARF2)** : génère des informations de débogage DWARF2.<br>
+Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage ; la compilation peut donc être plus rapide.<br>**Informations de débogage minimales** : génère des informations de débogage minimales.<br>**Informations de débogage complètes (DWARF2)**  : génère des informations de débogage DWARF2.<br>
 Nom de fichier objet | Spécifie un nom de substitution pour le nom de fichier objet par défaut. Il peut s’agir d’un nom de fichier ou de répertoire. (-o [name]).
 Niveau d’avertissement | Sélectionnez la rigueur avec laquelle le compilateur doit traiter les erreurs de code.  D’autres indicateurs doivent être ajoutés directement dans les options supplémentaires. (/w, /Weverything). | **Désactiver tous les avertissements** : désactive tous les avertissements du compilateur.<br>**Activer tous les avertissements** : active tous les avertissements, dont ceux qui sont désactivés par défaut.<br>
 Considérer les avertissements comme des erreurs | Considère tous les avertissements du compilateur comme des erreurs. Pour un nouveau projet, il est conseillé d’utiliser /Werror dans toutes les compilations, car la résolution de tous les avertissements permet de réduire les erreurs de code difficilement détectables.
@@ -101,13 +69,13 @@ Activer les exceptions C++ | Spécifie le modèle de gestion des exceptions à 
 Propriété | Description | Options
 --- | ---| ---
 Activer les informations de type au moment de l’exécution | Ajoute le code permettant de vérifier les types d’objet C++ à l’exécution (informations de type au moment de l’exécution).     (frtti, fno-rtti)
-Norme du langage C | Détermine la norme du langage C. | **Default**<br>**C89** : norme du langage C89.<br>**C99** : norme du langage C99.<br>**C11** : norme du langage C11.<br>**C99 (Dialecte GNU)** : norme du langage C99 (Dialecte GNU).<br>**C11 (Dialecte GNU)** : norme du langage C11 (Dialecte GNU).<br>
-Norme du langage C++ | Détermine la norme du langage C++. | **Default**<br>**C++03** : norme du langage C++03.<br>**C++11** : norme du langage C++11.<br>**C++14** : norme du langage C++14.<br>**C++03 (Dialecte GNU)** : norme du langage C++03 (Dialecte GNU).<br>**C++11 (Dialecte GNU)** : norme du langage C++11 (Dialecte GNU).<br>**C++14 (Dialecte GNU)** : norme du langage C++14 (Dialecte GNU).<br>
+Norme du langage C | Détermine la norme du langage C. | **Default**<br>**C89** : norme du langage C89.<br>**C99** : norme du langage C99.<br>**C11** : norme du langage C11.<br>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br>**C11 (Dialecte GNU)**  : norme du langage C11 (Dialecte GNU).<br>
+Norme du langage C++ | Détermine la norme du langage C++. | **Default**<br>**C++03** : norme du langage C++03.<br>**C++11** : norme du langage C++11.<br>**C++14** : norme du langage C++14.<br>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU).<br>
 
 ## <a name="advanced"></a>Avancé
 Propriété | Description | Options
 --- | ---| ---
-Compiler en | Permet de sélectionner l’option de langage de compilation pour les fichiers .c et .cpp.  'Default' effectue la détection d’après l’extension (.c ou .cpp). (-x c, -x c++) | **Par défaut** : option par défaut.<br>**Compiler en code C** : compile en code C.<br>**Compiler en code C++** : compile en code C++.<br>
+Compiler en | Permet de sélectionner l’option de langage de compilation pour les fichiers .c et .cpp.  'Default' effectue la détection d’après l’extension (.c ou .cpp). (-x c, -x c++) | **Par défaut** : option par défaut.<br>**Compiler en code C** : compile en code C.<br>**Compiler en code C++**  : compile en code C++.<br>
 Fichiers Include forcés | Un ou plusieurs fichiers Include forcés. (-include [name])
 
 ## <a name="additional-options"></a>Options supplémentaires 

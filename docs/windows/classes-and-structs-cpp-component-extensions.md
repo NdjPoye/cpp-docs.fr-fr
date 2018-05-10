@@ -1,13 +1,10 @@
 ---
 title: Les classes et Structs (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9863786e5e017b69217f984e3aa6d1db597e74d3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classes et structs  (extensions du composant C++)
 Déclare une classe ou un struct dont *durée de vie* est géré automatiquement. Quand l'objet n'est plus accessible ou qu'il est hors de portée, Visual C++ ignore automatiquement la mémoire allouée à cet objet.  
@@ -108,7 +103,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  Quand vous déclarez un objet à l'aide des mots clés `value class` ou `value struct`, la durée de vie de l'objet déclaré n'est pas contrôlée. L'objet est comme toute autre classe ou tout autre struct C++ standard.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -125,7 +120,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  Le `value class` et `value struct` mots clés indique au compilateur que la valeur de la classe allouée ou la structure est transmises aux fonctions ou stockée dans les membres.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ## <a name="see-also"></a>Voir aussi  

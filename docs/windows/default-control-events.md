@@ -1,13 +1,10 @@
 ---
-title: "Par défaut des événements de contrôle | Documents Microsoft"
-ms.custom: 
+title: Par défaut des événements de contrôle | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - events [C++], controls
 - dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a50b0deeb525481afb1da7221689924c41930bff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="default-control-events"></a>Événements de contrôle par défaut
 Les noms de contrôle suivants ont des événements par défaut qui l’accompagne :  
@@ -42,7 +37,7 @@ Les noms de contrôle suivants ont des événements par défaut qui l’accompag
 |Zone d’édition|**EN_CHANGE**|  
 |Zone de groupe|(Non applicable)|  
 |Touche d’accès rapide|**NM_OUTOFMEMORY**|  
-|Adresse IP|**IPN_FIELDCHANGED**|  
+|Adresse IP|**IPN_FIELDCHANGED**|  
 |Liste|**LVN_ITEMCHANGE**|  
 |Zone de liste|**LBN_SELCHANGE**|  
 |Calendrier mensuel|**MCN_SELCHANGE**|  
@@ -55,7 +50,7 @@ Les noms de contrôle suivants ont des événements par défaut qui l’accompag
 |Curseur|**NM_CUSTOMDRAW**|  
 |Faire pivoter|**UDN_DELTAPOS**|  
 |Texte statique|(Non applicable)|  
-|Tab|**TCN_SELCHANGE**|  
+|Onglet|**TCN_SELCHANGE**|  
 |Arborescence|**TVN_SELCHANGE**|  
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  

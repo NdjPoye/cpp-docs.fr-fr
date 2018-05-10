@@ -1,13 +1,10 @@
 ---
-title: "Boîte de dialogue Éditeur | Documents Microsoft"
-ms.custom: 
+title: Boîte de dialogue Éditeur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Éditeur de boîtes de dialogue
-L'Éditeur de boîtes de dialogue vous permet de créer et de modifier des ressources de boîte de dialogue. Vous ouvrez l’éditeur de boîte de dialogue, double-cliquez sur le fichier .rc d’une boîte de dialogue Affichage des ressources (**View &#124; Affichage des ressources**). Notez que l'Affichage des ressources n'est pas disponible dans les éditions Express.  
+L'Éditeur de boîtes de dialogue vous permet de créer et de modifier des ressources de boîte de dialogue. Vous ouvrez l’éditeur de boîte de dialogue, double-cliquez sur le fichier .rc d’une boîte de dialogue Affichage des ressources (**vue &#124; affichage des ressources**). Notez que l'Affichage des ressources n'est pas disponible dans les éditions Express.  
   
  L'une des premières étapes de la création d'une boîte de dialogue (ou d'un modèle de boîte de dialogue) consiste à ajouter des contrôles à la boîte de dialogue. Dans l'Éditeur de boîtes de dialogue, vous pouvez organiser les contrôles pour les ajuster à une taille, une forme ou un alignement particulier, ou vous pouvez les déplacer pour travailler dans la boîte de dialogue. Vous pouvez aussi facilement supprimer un contrôle.  
   
@@ -68,7 +63,7 @@ L'Éditeur de boîtes de dialogue vous permet de créer et de modifier des resso
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,12 +1,9 @@
 ---
 title: '#If, #elif, #else et #endif Directives (C/C++) | Documents Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Directives #if, #elif, #else et #endif (C/C++)
 La directive `#if`, ainsi que les directives `#elif`, `#else` et `#endif`, permettent de contrôler la compilation de certaines parties d'un fichier source. Si l'expression que vous écrivez (après `#if`) a une valeur différente de zéro, le groupe de lignes qui suit immédiatement la directive `#if` est conservé dans l'unité de traduction.  
@@ -55,9 +50,9 @@ La directive `#if`, ainsi que les directives `#elif`, `#else` et `#endif`, perme
  *If-ligne* :  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***identificateur*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***identificateur*   
   
  *parties d’elif* :  
  *texte de la ligne d’elif*  
@@ -70,7 +65,7 @@ La directive `#if`, ainsi que les directives `#elif`, `#else` et `#endif`, perme
  *partie « else »* :  
  *autre ligne de texte*  
   
- *else-line* :  
+ *ligne Else* :  
  `#else`  
   
  *ligne endif* :  
@@ -88,7 +83,7 @@ La directive `#if`, ainsi que les directives `#elif`, `#else` et `#endif`, perme
   
  Le préprocesseur traite le *texte* et le transmet au compilateur. Si *texte* contient des directives de préprocesseur, le préprocesseur exécute ces directives. Seuls les blocs de texte sélectionnés par le préprocesseur sont compilés.  
   
- Le préprocesseur sélectionne un seul *texte* élément en évaluant l’expression constante qui suit chaque `#if` ou `#elif` directive jusqu'à ce qu’il trouve une expression de constante true (différente de zéro). Il sélectionne tout le texte (y compris les autres directives de préprocesseur compter  **#** ) jusqu'à qui lui est associée `#elif`, `#else`, ou `#endif`.  
+ Le préprocesseur sélectionne un seul *texte* élément en évaluant l’expression constante qui suit chaque `#if` ou `#elif` directive jusqu'à ce qu’il trouve une expression de constante true (différente de zéro). Il sélectionne tout le texte (y compris les autres directives de préprocesseur compter **#**) jusqu'à qui lui est associée `#elif`, `#else`, ou `#endif`.  
   
  Si toutes les occurrences de *expression constante* ont la valeur false, ou si aucun `#elif` directives apparaissent, le préprocesseur sélectionne le bloc de texte après le `#else` clause. Si le `#else` clause est omise et toutes les instances de *expression constante* dans le `#if` bloc ont la valeur false, aucun bloc de texte n’est sélectionné.  
   

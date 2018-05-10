@@ -1,13 +1,10 @@
 ---
-title: "Choix d’un arrière-plan Transparent ou Opaque (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Choix d’un arrière-plan Transparent ou Opaque (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,25 +19,23 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Choix d'un arrière-plan transparent ou opaque (Éditeur d'images pour les icônes)
 Lorsque vous déplacez ou copiez une sélection à partir d’une image, les pixels de la sélection qui correspondent à la couleur d’arrière-plan actuelle sont, par défaut, transparent ; ils ne masquent pas pixels dans l’emplacement cible.  
   
  Vous pouvez passer d’un arrière-plan transparent (la valeur par défaut) à un arrière-plan opaque et vice versa. Lorsque vous utilisez un outil de sélection, le **arrière-plan Transparent** et **arrière-plan Opaque** options s’affichent dans le sélecteur d’options sur la **Éditeur d’images** barre d’outils (comme indiqué ci-dessous).  
   
- ![Options d’arrière-plan &#45; opaque ou transparent](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+ ![Options d’arrière-plan &#45; transparent ou opaque](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
 Options transparentes et opaques sur la barre d’outils Éditeur d’images  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Pour basculer entre un arrière-plan transparent et opaque  

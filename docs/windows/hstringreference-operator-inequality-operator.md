@@ -1,30 +1,25 @@
 ---
-title: "HStringReference::Operator ! =, opérateur | Documents Microsoft"
-ms.custom: 
+title: HStringReference::Operator ! =, opérateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!=
 dev_langs:
 - C++
 ms.assetid: 01ab6691-1fc7-4feb-85f0-fe795593a160
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c55e2fdb2e4fe1396a10563b0b29f5c38818a240
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ed2eeaceac23dc7a4efb17e2aba03cd9bc88eeb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator!=, opérateur
 Indique si les deux paramètres ne sont pas égales.  
@@ -52,15 +47,15 @@ inline bool operator!=(
   
 #### <a name="parameters"></a>Paramètres  
  `lhs`  
- Le premier paramètre à comparer. `lhs`peut être un objet HStringReference ou un handle HSTRING.  
+ Le premier paramètre à comparer. `lhs` peut être un objet HStringReference ou un handle HSTRING.  
   
  `rhs`  
- Le deuxième paramètre à comparer.  `rhs`peut être un objet HStringReference ou un handle HSTRING.  
+ Le deuxième paramètre à comparer.  `rhs` peut être un objet HStringReference ou un handle HSTRING.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si le `lhs` et `rhs` paramètres ne sont pas égaux ; sinon, `false`.  
+ `true` Si le `lhs` et `rhs` paramètres ne sont pas égaux ; sinon, `false`.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

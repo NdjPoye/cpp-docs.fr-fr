@@ -1,30 +1,25 @@
 ---
 title: Attribut cible (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Cibles d’attribut (extensions du composant C++)
 Spécificateurs de l’utilisation d’attributs vous permettent de spécifier les cibles d’attribut.  Chaque attribut est défini pour s’appliquer à certains éléments de langage. Par exemple, un attribut peut être défini pour s’appliquent uniquement aux classes et structs.  La liste suivante montre les éléments syntaxiques possibles sur lequel un attribut personnalisé peut être utilisé. Combinaisons de ces valeurs (à l’aide de la logique ou) peut être utilisé.  
@@ -33,7 +28,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
  Voici une liste des cibles d’attribut valide :  
   
--   `All`(s’applique à toutes les constructions)  
+-   `All` (s’applique à toutes les constructions)  
   
     ```  
   
@@ -45,7 +40,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
     ```  
   
--   `Assembly`(s’applique à un assembly dans son ensemble)  
+-   `Assembly` (s’applique à un assembly dans son ensemble)  
   
     ```  
   
@@ -57,7 +52,7 @@ Spécificateurs de l’utilisation d’attributs vous permettent de spécifier l
   
     ```  
   
--   `Module`(s’applique à un module dans son ensemble)  
+-   `Module` (s’applique à un module dans son ensemble)  
   
     ```  
   

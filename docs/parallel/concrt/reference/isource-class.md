@@ -1,12 +1,9 @@
 ---
 title: ISource, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource, classe
 La classe `ISource` est l'interface de tous les blocs sources. Les blocs sources propagent les messages aux blocs `ITarget`.  
@@ -71,7 +66,7 @@ class ISource;
 |----------|-----------------|  
 |[accept](#accept)|En cas de substitution dans une classe dérivée, accepte un message qui a été offert par ce `ISource` bloc, en transférant la propriété à l’appelant.|  
 |[acquire_ref](#acquire_ref)|En cas de substitution dans une classe dérivée, acquiert un décompte de références sur ce `ISource` bloc, pour empêcher la suppression.|  
-|[consume](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment offert par ce `ISource` bloquer et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
+|[Consommer](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment offert par ce `ISource` bloquer et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
 |[link_target](#link_target)|En cas de substitution dans une classe dérivée, lie un bloc cible à ce `ISource` bloc.|  
 |[release](#release)|En cas de substitution dans une classe dérivée, libère une réservation de message réussie précédente.|  
 |[release_ref](#release_ref)|En cas de substitution dans une classe dérivée, libère un décompte de références sur ce `ISource` bloc.|  
@@ -85,7 +80,7 @@ class ISource;
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `ISource`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  
@@ -151,7 +146,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Notes  
  Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé d’un appel à `reserve` qui retourné `true`.  
   
-##  <a name="dtor"></a> ~ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  Détruit le `ISource` objet.  
   

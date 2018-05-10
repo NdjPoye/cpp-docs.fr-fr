@@ -1,13 +1,10 @@
 ---
-title: "Charger la Palette de couleurs boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Charger la Palette de couleurs boîte de dialogue (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.loadcolorpalette
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - color palettes
 - Load Palette Colors dialog box
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c137277d3e7825c069d1c910b3ea2da2d1d63b74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95e5235a792301f3742bc576da607d7433f2e4b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Boîte de dialogue Charger la palette de couleurs (Éditeur d'images pour les icônes)
 Utilisez cette boîte de dialogue pour charger des palettes de couleurs particulières à utiliser dans votre projet. Pour plus d’informations, consultez [l’enregistrement et chargement de différentes Palettes de couleurs](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
@@ -43,8 +38,8 @@ Utilisez cette boîte de dialogue pour charger des palettes de couleurs particul
  **Types de fichiers**  
  Répertorie les types de fichiers à afficher. Palette (* .pal) est le type de fichier par défaut pour les palettes de couleurs.  
   
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
+## <a name="requirements"></a>Spécifications  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur d’images pour les icônes](../windows/image-editor-for-icons.md)

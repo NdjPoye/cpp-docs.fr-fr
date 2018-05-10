@@ -1,30 +1,25 @@
 ---
-title: "opérateur ! =, opérateur (Microsoft::WRL) | Documents Microsoft"
-ms.custom: 
+title: opérateur ! =, opérateur (Microsoft::WRL) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 dev_langs:
 - C++
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a379d367729a738f2a0a8b099a29eb6b274bacb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c972687973cbaa66d4b79a883e8b008cd588e237
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!=, opérateur (Microsoft::WRL)
 Opérateur d’inégalité pour [ComPtr](../windows/comptr-class.md) et [ComPtrRef](../windows/comptrref-class.md) objets.  
@@ -74,7 +69,7 @@ WRL_NOTHROW bool operator!=(
  Objet droit.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si les objets ne sont pas égales ; dans le cas contraire, `false`.  
+ `true` Si les objets ne sont pas égales ; dans le cas contraire, `false`.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** client.h  

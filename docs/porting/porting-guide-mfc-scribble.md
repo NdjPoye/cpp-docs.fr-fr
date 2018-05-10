@@ -1,27 +1,22 @@
 ---
-title: "Guide du portage : Scribble MFC | Microsoft Docs"
-ms.custom: 
+title: 'Guide du portage : Scribble MFC | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guide du portage : Scribble MFC
 Cette rubrique est la première d’une série de rubriques qui présentent le processus de mise à niveau de projets Visual C++ créés dans des versions antérieures de Visual Studio vers Visual Studio 2017. Ces rubriques abordent la mise à niveau en commençant par un exemple de projet très simple, avant de traiter des exemples de projets un peu plus complexes. Dans cette rubrique, nous effectuerons la mise à niveau d'un projet spécifique, appelé Scribble MFC. C'est un exemple qui nous permettra d'aborder les notions de base de la mise à niveau de projets C++.  

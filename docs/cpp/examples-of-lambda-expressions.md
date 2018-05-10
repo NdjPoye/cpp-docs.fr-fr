@@ -1,34 +1,29 @@
 ---
-title: "Exemples d’Expressions Lambda | Documents Microsoft"
-ms.custom: 
+title: Exemples d’Expressions Lambda | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour une vue d’ensemble d’expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’Expression Lambda](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a>Déclaration d’Expressions Lambda  
+##  <a name="declaringLambdaExpressions"></a> Déclaration d’Expressions Lambda  
   
 ### <a name="example-1"></a>Exemple 1  
  Une expression lambda étant typée, vous pouvez l’affecter à un `auto` variable ou à un [fonction](../standard-library/function-class.md) de l’objet, comme indiqué ici :  
@@ -109,7 +104,7 @@ int main()
   
  [[Dans cet article](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>Appel d’Expressions Lambda  
+##  <a name="callingLambdaExpressions"></a> Appel d’Expressions Lambda  
  Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l’extrait de code suivant. Le deuxième extrait montre comment passer une expression lambda en tant qu’argument des algorithmes de bibliothèque C++ Standard tels que `find_if`.  
   
 ### <a name="example-1"></a>Exemple 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[Dans cet article](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Imbrication d’Expressions Lambda  
+##  <a name="nestingLambdaExpressions"></a> Imbrication d’Expressions Lambda  
   
 ### <a name="example"></a>Exemple  
  Vous pouvez imbriquer une expression lambda dans une autre, comme le montre l'exemple suivant. L'expression lambda interne multiplie son argument par 2 et retourne le résultat. L'expression lambda externe appelle l'expression lambda interne avec son argument et ajoute 3 au résultat.  
@@ -222,7 +217,7 @@ int main()
   
  [[Dans cet article](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>Fonctions Lambda d’ordre supérieur  
+##  <a name="higherOrderLambdaExpressions"></a> Fonctions Lambda d’ordre supérieur  
   
 ### <a name="example"></a>Exemple  
  Nombreux langages de programmation prennent en charge le concept d’un *fonction d’ordre supérieur.* Une fonction d’ordre supérieur est une expression lambda qui prend une autre expression lambda comme argument ou qui retourne une expression lambda. Vous pouvez utiliser la [fonction](../standard-library/function-class.md) classe pour permettre à l’expression lambda C++ se comporte comme une fonction d’ordre supérieur. L'exemple suivant présente une expression lambda qui retourne un objet `function` et une expression lambda qui prend un objet `function` comme argument.  
@@ -271,7 +266,7 @@ int main()
   
  [[Dans cet article](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>À l’aide d’une Expression Lambda dans une fonction  
+##  <a name="methodLambdaExpressions"></a> À l’aide d’une Expression Lambda dans une fonction  
   
 ### <a name="example"></a>Exemple  
  Vous pouvez utiliser les expressions lambda dans le corps d'une fonction. L'expression lambda peut accéder à toute donnée membre ou fonction accessible à la fonction englobante. Vous pouvez explicitement ou implicitement capturer le pointeur `this` pour fournir l'accès aux fonctions et données membres de la classe englobante.  
@@ -366,7 +361,7 @@ int main()
   
  [[Dans cet article](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>Utilisation d’Expressions Lambda avec des modèles  
+##  <a name="templateLambdaExpressions"></a> Utilisation d’Expressions Lambda avec des modèles  
   
 ### <a name="example"></a>Exemple  
  Les expressions lambda étant typées, vous pouvez les utiliser avec des modèles C++. L'exemple suivant illustre les fonctions `negate_all` et `print_all`. La fonction `negate_all` applique l'opérateur `operator-` unaire à chaque élément de l'objet `vector`. La fonction `print_all` affiche chaque élément de l'objet `vector` sur la console.  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[Dans cet article](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>La gestion des Exceptions  
+##  <a name="ehLambdaExpressions"></a> La gestion des Exceptions  
   
 ### <a name="example"></a>Exemple  
  Le corps d'une expression lambda suit les règles de la gestion structurée des exceptions (SEH) et la gestion des exceptions C++. Vous pouvez gérer une exception levée dans le corps d'une expression lambda ou différer la gestion des exceptions dans la portée englobante. L'exemple suivant utilise la fonction `for_each` et une expression lambda pour remplir un objet `vector` avec les valeurs d'un autre. Il utilise un `try` / `catch` bloc pour gérer l’accès non valide pour le premier vecteur.  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[Dans cet article](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>Utilisation d’Expressions Lambda avec des Types managés (C + c++ / CLI)  
+##  <a name="managedLambdaExpressions"></a> Utilisation d’Expressions Lambda avec des Types managés (C + c++ / CLI)  
   
 ### <a name="example"></a>Exemple  
  La clause de capture d'une expression lambda ne peut pas contenir une variable qui a un type managé. Toutefois, vous pouvez passer un argument qui a un type managé dans la liste de paramètres d'une expression lambda. L'exemple suivant contient une expression lambda qui capture la variable non managée locale `ch` par valeur et prend un objet <xref:System.String?displayProperty=fullName> comme paramètre.  

@@ -1,13 +1,10 @@
 ---
 title: Fonctions strcoll | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll, fonctions
 Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction du paramètre de catégorie `LC_COLLATE` de la page de codes des paramètres régionaux en cours d’utilisation. Chacune des fonctions `_mbscoll` compare deux chaînes en fonction de la page de codes multioctets en cours d’utilisation. Utilisez les fonctions `coll` pour les comparaisons de chaînes s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison. Utilisez les fonctions `cmp` correspondantes pour tester uniquement pour l’égalité des chaînes.  

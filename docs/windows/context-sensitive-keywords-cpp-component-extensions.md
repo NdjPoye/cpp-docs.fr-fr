@@ -1,13 +1,10 @@
 ---
-title: "Mots clés contextuels (Extensions du composant C++) | Documents Microsoft"
-ms.custom: 
+title: Mots clés contextuels (Extensions du composant C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Mots clés contextuels  (extensions de composant C++)
 *Mots clés contextuels* sont des éléments de langage reconnus uniquement dans des contextes spécifiques. En dehors du contexte spécifique, un mot clé contextuel peut être un symbole défini par l'utilisateur.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `internal`   
   
--   [littéral](../windows/literal-cpp-component-extensions.md)  
+-   [Littéral](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(dans le cadre du [génériques](../windows/generics-cpp-component-extensions.md))  
+-   `where` (dans le cadre du [génériques](../windows/generics-cpp-component-extensions.md))  
   
  Pour des raisons de lisibilité, vous voudrez limiter votre utilisation des mots clés contextuels comme symboles définis par l’utilisateur.  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

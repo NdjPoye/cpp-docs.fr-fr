@@ -1,13 +1,10 @@
 ---
-title: "Modification de l’ordre de tabulation des contrôles | Documents Microsoft"
-ms.custom: 
+title: Modification de l’ordre de tabulation des contrôles | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - controls [C++], focus
 - dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dca6b1bb894aa2219a0352ba9c359e6f3c5a4677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Modification de l'ordre de tabulation des contrôles
 L’ordre de tabulation est l’ordre dans lequel la touche TAB déplace le focus d’entrée d’un contrôle à l’autre dans une boîte de dialogue. Généralement, l’ordre de tabulation se déroule de gauche à droite et de haut en bas de la boîte de dialogue. Chaque contrôle possède un **Tabstop** propriété qui détermine si un contrôle reçoit le focus d’entrée.  
@@ -81,7 +76,7 @@ L’ordre de tabulation est l’ordre dans lequel la touche TAB déplace le focu
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

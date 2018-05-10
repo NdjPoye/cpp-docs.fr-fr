@@ -1,12 +1,9 @@
 ---
-title: "Asyncbase::checkvalidstateforresultscall, méthode | Documents Microsoft"
-ms.custom: 
+title: Asyncbase::checkvalidstateforresultscall, méthode | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - async/Microsoft::WRL::AsyncBase::CheckValidStateForResultsCall
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CheckValidStateForResultsCall method
 ms.assetid: 87ca6805-bff1-4063-b855-6dd26132deff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8918ad1ef10e8a349eb38b1a19604bdac1c5a92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall, méthode
 Teste si les résultats d’une opération asynchrone qui peuvent être collectées dans l’état asynchrone actuelle.  
@@ -40,7 +35,7 @@ inline HRESULT CheckValidStateForResultsCall();
 ## <a name="return-value"></a>Valeur de retour  
  S_OK en cas de résultats peuvent être collectés ; dans le cas contraire, E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** async.h  
   
  **Espace de noms :** Microsoft::WRL  

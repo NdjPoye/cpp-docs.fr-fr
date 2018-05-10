@@ -1,31 +1,26 @@
 ---
-title: "Mécanismes de base des attributs | Documents Microsoft"
-ms.custom: 
+title: Mécanismes de base des attributs | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
 Il existe trois manières d’insérer des attributs dans votre projet. Tout d’abord, vous pouvez les insérer manuellement dans votre code source. Ensuite, vous pouvez insérer dans votre projet à l’aide de la grille des propriétés d’un objet. Enfin, vous pouvez insérer à l’aide des Assistants différents. Pour plus d’informations sur l’utilisation de la fenêtre Propriétés et les divers Assistants, consultez [création et gestion de projets Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

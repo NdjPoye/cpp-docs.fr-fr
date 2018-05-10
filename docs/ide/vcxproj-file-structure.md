@@ -1,29 +1,24 @@
 ---
 title: structure du fichier .vcxproj et .props | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>structure du fichier .vcxproj et .props
 
@@ -59,7 +54,7 @@ Si vous choisissez de modifier manuellement un fichier .vcxproj, tenez compte de
 
 Vous pouvez inspecter le contenu d’un fichier .vcxproj à l’aide de n’importe quel texte ou un éditeur XML. Vous pouvez les consulter dans Visual Studio en cliquant sur le projet dans l’Explorateur de solutions, en choisissant **décharger le projet** , puis en choisissant **Foo.vcxproj de modifier**.
 
-La première chose à remarquer est que les éléments de niveau supérieur s’affichent dans un ordre particulier. Exemple :
+La première chose à remarquer est que les éléments de niveau supérieur s’affichent dans un ordre particulier. Par exemple :
 
 - la plupart des groupes de propriétés et groupes d’éléments de définition se produire après l’importation de Microsoft.Cpp.Default.props.
 - toutes les cibles sont importés à la fin du fichier.
@@ -100,7 +95,7 @@ Les sections suivantes décrivent l’objectif de chacun de ces éléments et po
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`est le nœud racine. Il spécifie la version de MSBuild à utiliser, ainsi que la cible par défaut doit être exécuté lorsque ce fichier est passé à MSBuild.exe.
+`Project` est le nœud racine. Il spécifie la version de MSBuild à utiliser, ainsi que la cible par défaut doit être exécuté lorsque ce fichier est passé à MSBuild.exe.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup, élément
 
@@ -108,7 +103,7 @@ Les sections suivantes décrivent l’objectif de chacun de ces éléments et po
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`contient la description de configuration de projet. Citons débogage | Win32, version | Win32, débogage | ARM et ainsi de suite. Plusieurs paramètres de projet sont spécifiques à une configuration donnée. Par exemple, vous souhaiterez probablement définir les propriétés de l’optimisation d’une version Release, mais pas une version debug.
+`ProjectConfigurations` contient la description de configuration de projet. Citons débogage | Win32, version | Win32, débogage | ARM et ainsi de suite. Plusieurs paramètres de projet sont spécifiques à une configuration donnée. Par exemple, vous souhaiterez probablement définir les propriétés de l’optimisation d’une version Release, mais pas une version debug.
 
 Le `ProjectConfigurations` groupe d’éléments n’est pas utilisé au moment de la génération. L’IDE de Visual Studio est nécessaire afin de charger le projet. Ce groupe d’éléments de peut être déplacé vers un fichier .props et importé dans le fichier .vcxproj. Toutefois, dans ce cas, si vous avez besoin ajouter ou supprimer des configurations, vous devez modifier manuellement le fichier .props. Vous ne pouvez pas utiliser l’IDE.
 
@@ -143,7 +138,7 @@ Vous pouvez désactiver la génération et déploiement de commandes pour les pa
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`contient des paramètres de niveau de projet comme ProjectGuid RootNamespace et applicationtype en / ApplicationTypeRevision. Les deux derniers définissent souvent la cible du système d’exploitation. Un projet peut uniquement cibler un système d’exploitation unique dû au fait que les références et les éléments de projet ne peut pas avoir conditions actuellement. Ces propriétés sont généralement pas substituées ailleurs dans le fichier projet. Ce groupe n’est pas dépendantes de la configuration, et par conséquent généralement qu’un seul groupe Globals existe dans le fichier projet.
+`Globals` contient des paramètres de niveau de projet comme ProjectGuid RootNamespace et applicationtype en / ApplicationTypeRevision. Les deux derniers définissent souvent la cible du système d’exploitation. Un projet peut uniquement cibler un système d’exploitation unique dû au fait que les références et les éléments de projet ne peut pas avoir conditions actuellement. Ces propriétés sont généralement pas substituées ailleurs dans le fichier projet. Ce groupe n’est pas dépendantes de la configuration, et par conséquent généralement qu’un seul groupe Globals existe dans le fichier projet.
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Importation de Microsoft.Cpp.default.props, élément
 
@@ -191,7 +186,7 @@ Le `PropertySheets` groupe contient les importations de feuilles de propriétés
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`contient des propriétés vous créez en tant que variables qui sont utilisés pour personnaliser votre processus de génération. Par exemple, vous pouvez définir une macro utilisateur pour définir votre chemin d’accès de sortie personnalisée comme $(CustomOutputPath) et l’utiliser pour définir d’autres variables. Ce groupe de propriétés contient des propriétés. Notez que dans Visual Studio, ce groupe n’est pas rempli dans le fichier projet, car Visual C++ ne prend pas en charge les macros utilisateur pour les configurations. Macros utilisateur sont prises en charge dans les feuilles de propriétés.
+`UserMacros` contient des propriétés vous créez en tant que variables qui sont utilisés pour personnaliser votre processus de génération. Par exemple, vous pouvez définir une macro utilisateur pour définir votre chemin d’accès de sortie personnalisée comme $(CustomOutputPath) et l’utiliser pour définir d’autres variables. Ce groupe de propriétés contient des propriétés. Notez que dans Visual Studio, ce groupe n’est pas rempli dans le fichier projet, car Visual C++ ne prend pas en charge les macros utilisateur pour les configurations. Macros utilisateur sont prises en charge dans les feuilles de propriétés.
 
 ### <a name="per-configuration-propertygroup-elements"></a>Éléments de PropertyGroup par configuration
 
@@ -219,7 +214,7 @@ Contient les définitions d’élément. Ces derniers doivent respecter les mêm
 
 Contient les éléments (fichiers sources, etc.) dans le projet. Conditions ne sont pas prises en charge pour les éléments de projet (les types d’éléments qui sont considérées comme des éléments de projet par les définitions de règles, autrement dit,).
 
-Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Exemple :
+Les métadonnées doivent avoir des conditions de configuration pour chaque configuration, même si elles sont identiques. Par exemple :
 
    ```xml
    <ItemGroup>

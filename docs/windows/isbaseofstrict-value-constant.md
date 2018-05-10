@@ -1,12 +1,9 @@
 ---
 title: Isbaseofstrict::value, constante | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsBaseOfStrict::value
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value constant
 ms.assetid: 4a0cdab0-ba03-482b-babf-eeec519ba687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 284cbe8b140d38b31017a97fef1910b3b63513b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eaaf0b410861f28cd5b339f75a73c594b1bcba45
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value, constante
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -40,9 +35,9 @@ static const bool value = __is_base_of(Base, Derived);
 ## <a name="remarks"></a>Notes  
  Indique si un type est la base d’un autre.  
   
- `value`est `true` si type `Base` est une classe de base du type `Derived`, sinon il est `false`.  
+ `value` est `true` si type `Base` est une classe de base du type `Derived`, sinon il est `false`.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** internal.h  
   
  **Namespace :** Microsoft::WRL::Details  

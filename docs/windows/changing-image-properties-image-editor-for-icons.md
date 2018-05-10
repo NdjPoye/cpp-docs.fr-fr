@@ -1,13 +1,10 @@
 ---
-title: "Modification des propriétés de l’Image (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Modification des propriétés de l’Image (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Image editor [C++], image properties
 - Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96122b2bdc6419b41cd0e00cb544955d8d7c8463
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79903e198ddd418b96b0fac2a464dc130d81614e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Modification des propriétés d'une image (Éditeur d'images pour les icônes)
 Vous pouvez définir ou modifier les propriétés d’une image à l’aide de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
@@ -44,15 +39,15 @@ Vous pouvez définir ou modifier les propriétés d’une image à l’aide de l
     |**Nom de fichier**|Spécifie le nom du fichier image. Par défaut, Visual Studio assigne un nom de fichier de base créé en supprimant les quatre premiers caractères (« IDB_ ») à partir de l’identificateur de ressource par défaut (IDB_BITMAP1) et en ajoutant l’extension appropriée. Le nom de fichier pour l’image dans cet exemple est BITMAP1.bmp. Vous pouvez le renommer MABITMAP1.bmp.|  
     |**Hauteur**|Définit la hauteur de l’image (en pixels). La valeur par défaut est de 48. L’image est rognée ou l’espace vide est ajouté en dessous de l’image existante.|  
     |**ID**|Définit l’identificateur de ressource. Pour une image, Microsoft Visual Studio, par défaut, attribue l’identificateur disponible suivant dans une série : IDB_BITMAP1, IDB_BITMAP2, et ainsi de suite. Des noms similaires sont utilisées pour les icônes et curseurs.|  
-    |**Palette**|Modifications des propriétés de couleur. Double-clic pour sélectionner une couleur et afficher la [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Définir la couleur en tapant des valeurs RVB ou TSL dans les zones appropriées.|  
+    |**palette**|Modifications des propriétés de couleur. Double-clic pour sélectionner une couleur et afficher la [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Définir la couleur en tapant des valeurs RVB ou TSL dans les zones appropriées.|  
     |**SaveCompressed**|Indique si l’image est dans un format compressé. Cette propriété est en lecture seule. Visual Studio ne vous permet pas d’enregistrer des images dans un format compressé, donc pour toutes les images créées dans Visual Studio, cette propriété sera **False**. Si vous ouvrez une image compressée (créée dans un autre programme) dans Visual Studio, cette propriété sera **True**. Si vous enregistrez une image compressée à l’aide de Visual Studio, elle sera décompressée et cette propriété revient à **False**.|  
     |**Largeur**|Définit la largeur de l’image (en pixels). La valeur par défaut est de 48. L’image est rognée ou l’espace vide est ajouté à droite de l’image existante.|  
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
- Aucun.  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

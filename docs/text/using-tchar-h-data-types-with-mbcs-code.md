@@ -1,13 +1,10 @@
 ---
-title: "À l’aide de TCHAR. Types de données H avec _MBCS | Documents Microsoft"
-ms.custom: 
+title: À l’aide de TCHAR. Types de données H avec _MBCS | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilisation de types de données TCHAR.H avec _MBCS
 Lorsque la constante de manifeste **_MBCS** est définie, une routine de texte générique donnée correspond à un des types suivants de routines :  
@@ -48,7 +43,7 @@ Lorsque la constante de manifeste **_MBCS** est définie, une routine de texte g
     char * _tcsrev(char *);  
     ```  
   
-     Dans le cas par défaut, le prototype de `_tcsrev` est mappé à `_mbsrev` via un thunk dans Libc.lib. Cela transforme les types de la `_mbsrev` paramètres entrants et retournent la valeur de **_TCHAR \***  (autrement dit, `char`  **\*** ) à `unsigned` `char` **\***. Cette méthode garantit le type de correspondance lorsque vous utilisez **_TCHAR**, mais il est relativement lent en raison de la surcharge d’appels de fonction.  
+     Dans le cas par défaut, le prototype de `_tcsrev` est mappé à `_mbsrev` via un thunk dans Libc.lib. Cela transforme les types de la `_mbsrev` paramètres entrants et retournent la valeur de **_TCHAR \***  (autrement dit, `char` **\***) à `unsigned` `char` **\***. Cette méthode garantit le type de correspondance lorsque vous utilisez **_TCHAR**, mais il est relativement lent en raison de la surcharge d’appels de fonction.  
   
 -   Utilisez la fonction inline en incorporant l’instruction du préprocesseur suivante dans votre code.  
   
@@ -77,7 +72,7 @@ Lorsque la constante de manifeste **_MBCS** est définie, une routine de texte g
     #define _tcschr _mbschr  
     ```  
   
-     Lorsque vous adoptez cette approche, vous devez veiller à utiliser des types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la correspondance de type correcte ou vous pouvez utiliser la **_TXCHAR** type de données de texte générique. **_TXCHAR** correspond au type `char` dans le code SBCS mais correspond au type `unsigned` `char` dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans les *Run-Time Library Reference*.  
+     Lorsque vous adoptez cette approche, vous devez veiller à utiliser des types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique **_TXCHAR**. **_TXCHAR** correspond au type `char` dans le code SBCS mais correspond au type `unsigned` `char` dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans les *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappages de texte générique dans Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

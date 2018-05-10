@@ -1,13 +1,10 @@
 ---
-title: "Paramètres régionaux et Pages de codes | Documents Microsoft"
-ms.custom: 
+title: Paramètres régionaux et Pages de codes | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="locales-and-code-pages"></a>Paramètres régionaux et pages de codes
 Un ID de paramètres régionaux reflète les conventions et langue locales pour une région géographique spécifique. Une langue donnée peut être parlée dans plusieurs pays/région ; par exemple, le portugais est parlé au Brésil et Portugal. À l’inverse, un pays/région peut avoir plusieurs langues officiels. Par exemple, le Canada a deux langues : anglais et le Français. Par conséquent, le Canada a deux paramètres régionaux distincts : anglais (Canada) et en Français canadien. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires.  

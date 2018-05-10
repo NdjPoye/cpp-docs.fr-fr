@@ -1,13 +1,10 @@
 ---
-title: "Constantes de type de données | Microsoft Docs"
-ms.custom: 
+title: Constantes de type de données | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FLT_MIN
 - SHRT_MAX
@@ -95,17 +92,15 @@ helpviewer_keywords:
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 Les constantes de type de données sont des plages de valeurs dépendant de l’implémentation qui sont autorisées pour les types de données intégraux. Les constantes répertoriées ci-dessous donnent les plages des types de données intégraux, et sont définies dans LIMITS.H.  

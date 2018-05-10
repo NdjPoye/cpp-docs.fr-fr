@@ -1,24 +1,22 @@
 ---
-title: "Général, propriétés (projet Linux C++) | Microsoft Docs"
-ms.custom: 
+title: Général, propriétés (projet Linux C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: d5e6006c3951f8bc435e7a450347ed525d8bfcad
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 82dbdb4b2978860faba4e31c756ab0b69928e080
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-properties-linux-c"></a>Général, propriétés (Linux C++)
 
@@ -34,5 +32,5 @@ Ensemble d'outils de plateforme | Spécifie l’ensemble d’outils utilisé pou
 Machine de build distante | Machine ou appareil cible à utiliser pour la génération, le déploiement et le débogage à distance.
 Répertoire racine de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant.
 Répertoire de projet de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant du projet.
-Type de configuration | Spécifie le type de sortie générée par cette configuration. | **Bibliothèque dynamique (.so)** : bibliothèque dynamique (.so)<br>**Bibliothèque statique (.a)** : bibliothèque statique (.a)<br>**Application (.out)** : application (.out)<br>**Makefile** : fichier makefile<br>
+Type de configuration | Spécifie le type de sortie générée par cette configuration. | **Bibliothèque dynamique (.so)**  : bibliothèque dynamique (.so)<br>**Bibliothèque statique (.a)**  : bibliothèque statique (.a)<br>**Application (.out)**  : application (.out)<br>**Makefile** : fichier makefile<br>
 Utilisation de STL | Spécifie la bibliothèque C++ standard à utiliser pour cette configuration. | **Bibliothèque standard C++ GNU partagée**<br>**Bibliothèque standard C++ GNU statique (-static)**<br>

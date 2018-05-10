@@ -1,29 +1,24 @@
 ---
-title: "Fichiers de règles XML de la Page de propriété | Documents Microsoft"
-ms.custom: 
+title: Fichiers de règles XML de la Page de propriété | Documents Microsoft
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>Fichiers de règles XML de la Page de propriété
 Les pages de propriétés de projet dans l’IDE sont configurés par les fichiers XML dans le dossier VCTargets. Le chemin d’accès exact varie selon les edition(s) de Visual Studio est installés et que la langue du produit. Pour Visual Studio 2017 Enterprise Edition, en anglais, le chemin d’accès est `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Les fichiers XML décrivent les noms des règles, les catégories et chacune de ces propriétés, leur type de données, les valeurs par défaut, et comment ils doivent être affichés. Lorsque vous définissez une propriété dans l’IDE, la nouvelle valeur est stockée dans le fichier projet.
@@ -114,13 +109,13 @@ La section suivante décrit les principaux éléments de votre choix et certaine
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`Indique si le système de projet toutes les propriétés de la règle doivent être écrite dans le fichier de projet ou le fichier de feuille de propriétés (selon les nœud a été utilisé pour générer les pages de propriétés). L’autre valeur possible est « Fichier liste des utilisateurs » qui écrivent la valeur dans le fichier .user.
+   - `Persistence="ProjectFile` Indique si le système de projet toutes les propriétés de la règle doivent être écrite dans le fichier de projet ou le fichier de feuille de propriétés (selon les nœud a été utilisé pour générer les pages de propriétés). L’autre valeur possible est « Fichier liste des utilisateurs » qui écrivent la valeur dans le fichier .user.
 
-   - `ItemType="ClCompile"`Indique que les propriétés seront stockées en tant que ItemDefinition métadonnées ou des métadonnées d’élément (ce dernier uniquement si les pages de propriétés ont été générées à partir d’un nœud de fichier dans l’Explorateur de solutions) de ce type d’élément. Si ce champ n’est pas défini, la propriété est écrite comme une propriété commune dans un élément PropertyGroup.
+   - `ItemType="ClCompile"` Indique que les propriétés seront stockées en tant que ItemDefinition métadonnées ou des métadonnées d’élément (ce dernier uniquement si les pages de propriétés ont été générées à partir d’un nœud de fichier dans l’Explorateur de solutions) de ce type d’élément. Si ce champ n’est pas défini, la propriété est écrite comme une propriété commune dans un élément PropertyGroup.
 
-   - `Label=""`Indique que lorsque les propriétés sont écrites en tant que `ItemDefinition` métadonnées, l’étiquette du parent ItemDefinitionGroup sera vide (tous les éléments MSBuild peuvent avoir une étiquette). Visual Studio 2017 utilise des groupes étiquetés pour naviguer dans le fichier projet .vcxproj. Notez que les groupes qui contiennent la plupart des propriétés de la règle ont une chaîne vide en tant qu’étiquette.
+   - `Label=""` Indique que lorsque les propriétés sont écrites en tant que `ItemDefinition` métadonnées, l’étiquette du parent ItemDefinitionGroup sera vide (tous les éléments MSBuild peuvent avoir une étiquette). Visual Studio 2017 utilise des groupes étiquetés pour naviguer dans le fichier projet .vcxproj. Notez que les groupes qui contiennent la plupart des propriétés de la règle ont une chaîne vide en tant qu’étiquette.
 
-   - `HasConfigurationCondition="true"`Indique au système de projet d’apposer une condition de configuration à la valeur afin qu’elle s’applique uniquement pour la configuration de projet actuelle (la condition peut être apposée au groupe parent ou à la valeur elle-même). Par exemple, ouvrez les pages de propriétés du nœud de projet et définissez la valeur de la propriété **considérer les avertissements comme des erreurs** sous **propriétés de Configuration > générales de C/C++** sur « Oui ». La valeur suivante est écrite dans le fichier projet. Notez que la condition de configuration associé au parent ItemDefinitionGroup.
+   - `HasConfigurationCondition="true"` Indique au système de projet d’apposer une condition de configuration à la valeur afin qu’elle s’applique uniquement pour la configuration de projet actuelle (la condition peut être apposée au groupe parent ou à la valeur elle-même). Par exemple, ouvrez les pages de propriétés du nœud de projet et définissez la valeur de la propriété **considérer les avertissements comme des erreurs** sous **propriétés de Configuration > générales de C/C++** sur « Oui ». La valeur suivante est écrite dans le fichier projet. Notez que la condition de configuration associé au parent ItemDefinitionGroup.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">

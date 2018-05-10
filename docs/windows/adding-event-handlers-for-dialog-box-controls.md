@@ -1,13 +1,10 @@
 ---
-title: "Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue | Documents Microsoft"
-ms.custom: 
+title: Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - dialog box controls, events
 - event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afe50d56d6b96cc4bc0b871f72c27feb0a750e89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f05a9bc05dea6d217505e2e098dc2fde0d251894
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue
 Pour les boîtes de dialogue de projet qui sont déjà associés à une classe, vous pouvez tirer parti de certains raccourcis lorsque vous créez des gestionnaires d’événements. Vous pouvez rapidement créer un gestionnaire pour l’événement de notification de contrôle par défaut ou pour les messages Windows applicables.  
@@ -72,7 +67,7 @@ Pour les boîtes de dialogue de projet qui sont déjà associés à une classe, 
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

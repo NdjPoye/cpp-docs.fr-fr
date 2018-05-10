@@ -1,12 +1,9 @@
 ---
 title: accelerator_view, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view, classe
 Représente une abstraction d’appareil virtuel sur un accélérateur de données en parallèle de C++ AMP.  
@@ -71,7 +66,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|Retourne une valeur booléenne qui indique si le `accelerator_view` objet dispose de la couche de débogage activée pour le rapport d’erreurs étendues.|  
 |[get_queuing_mode](#get_queuing_mode)|Retourne le mode de files d’attente pour le `accelerator_view` objet.|  
 |[get_version](#get_version)|Retourne la version de la `accelerator_view`.|  
-|[wait](#wait)|Attend que toutes les commandes envoyées à la `accelerator_view` objet se termine.|  
+|[attente](#wait)|Attend que toutes les commandes envoyées à la `accelerator_view` objet se termine.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
@@ -85,7 +80,7 @@ class accelerator_view;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[accelerator](#accelerator)|Obtient l'objet `accelerator` pour l'objet `accelerator_view`.|  
+|[accélérateur](#accelerator)|Obtient l'objet `accelerator` pour l'objet `accelerator_view`.|  
 |[is_auto_selection](#is_auto_selection)|Obtient une valeur booléenne qui indique si le runtime sélectionne automatiquement un accélérateur approprié lorsque le `accelerator_view` objet est passé à une [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[is_debug](#is_debug)|Obtient une valeur booléenne qui indique si le `accelerator_view` objet dispose de la couche de débogage activée pour le rapport d’erreurs étendues.|  
 |[queuing_mode](#queuing_mode)|Obtient le mode de files d’attente pour le `accelerator_view` objet.|  
@@ -101,7 +96,7 @@ class accelerator_view;
   
  Un `accelerator_view` objet peut avoir une des deux [énumération queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) États. Si le mode de file d’attente est `immediate`, comme les commandes `copy` et `parallel_for_each` sont envoyés à l’appareil d’accélérateur correspondant dès qu’elles sont retournées à l’appelant. Si le mode de file d’attente est `deferred`, ces commandes sont la file d’attente sur une file d’attente de la commande qui correspond à la `accelerator_view` objet. Commandes ne sont pas réellement envoyées à l’appareil jusqu'à ce que `flush()` est appelée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amprt.h  
   
  **Espace de noms :** Concurrency  
@@ -143,7 +138,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>Valeur de retour  
  Ultérieures pour effectuer le suivi de l’achèvement de toutes les commandes envoyées jusqu'à présent à ce `accelerator_view` objet.  
   
-## <a name="flush"></a> flush 
+## <a name="flush"></a> Vidage 
 
 Envoie que toutes les commandes en attente en attente pour l’objet accelerator_view pour l’accélérateur pour l’exécution.  
   
@@ -238,7 +233,7 @@ Obtient une valeur booléenne qui indique si l’objet accelerator_view a la cou
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="accelerator_view__operator_neq"></a> operator!= 
+## <a name="accelerator_view__operator_neq"></a> opérateur ! = 
 
 Compare cet objet accelerator_view avec un autre et retourne `false` s’ils sont identiques ; sinon, retourne `true`.  
   
@@ -255,7 +250,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>Valeur de retour  
  `false` si les deux objets sont identiques ; sinon, `true`.  
   
-## <a name="accelerator_view__operator_eq"></a> operator= 
+## <a name="accelerator_view__operator_eq"></a> opérateur = 
 
 Copie le contenu de l’objet accelerator_view spécifié dans celle-ci.  
   
@@ -272,7 +267,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à la modification `accelerator_view` objet.  
   
-## <a name="accelerator_view__operator_eq_eq"></a> operator== 
+## <a name="accelerator_view__operator_eq_eq"></a> opérateur == 
 
 Compare cet objet accelerator_view avec un autre et retourne `true` s’ils sont identiques ; sinon, retourne `false`.  
   
@@ -325,7 +320,7 @@ void wait();
 #### <a name="remarks"></a>Notes  
  Si le [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) est `immediate`, cette méthode est retournée immédiatement sans blocage.  
   
-##  <a name="dtor"></a> ~accelerator_view 
+##  <a name="dtor"></a> ~ accelerator_view 
 
  Détruit l’objet accelerator_view.  
   

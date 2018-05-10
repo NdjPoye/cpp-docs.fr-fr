@@ -1,13 +1,10 @@
 ---
-title: "Conversion d’une Image d’un Format à un autre (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Conversion d’une Image d’un Format à un autre (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2defaafb1c0edb58f3fbd50ecc47ad26309ca38b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f415b0b2b6efca6eda9ecd131cc047b8c5cec83e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Conversion d'une image d'un format à un autre (Éditeur d'images pour les icônes)
 Vous pouvez ouvrir des images GIF ou JPEG dans l’éditeur d’images et les enregistrer sous forme de bitmaps. En outre, vous pouvez ouvrir un fichier bitmap et l’enregistrer en tant que GIF ou JPEG. Vous travaillez avec des images ne sont pas nécessairement partie d’un projet pour la modification dans l’environnement de développement (consultez [modification d’image autonome](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  
@@ -44,9 +39,9 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l’éditeur d’images et les en
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
- Aucun.  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modification de ressources graphiques](../windows/editing-graphical-resources-image-editor-for-icons.md)   

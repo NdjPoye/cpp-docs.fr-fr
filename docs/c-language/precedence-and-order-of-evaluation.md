@@ -1,13 +1,10 @@
 ---
-title: "Priorité et ordre d’évaluation | Microsoft Docs"
-ms.custom: 
+title: Priorité et ordre d’évaluation | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 84c3ec69c936605729f6813f28450ee1194951c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d'évaluation
 La priorité et l’associativité des opérateurs C affectent le regroupement et l’évaluation des opérandes dans les expressions. La priorité d'un opérateur est significative uniquement si d'autres opérateurs dotés d'une priorité supérieure ou inférieure sont présents. Les expressions avec des opérateurs de priorité supérieure sont évaluées en premier. La priorité peut également être décrite par le mot « liaison ». Les opérateurs dotés d'une priorité plus élevée sont considérés comme ayant une liaison plus stricte.  
@@ -58,7 +53,7 @@ La priorité et l’associativité des opérateurs C affectent le regroupement 
   
  2. Tous les opérateurs d'assignation simple et composée ont une même priorité.  
   
- Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (**\***), plusieurs opérateurs d’addition (**+**) ou plusieurs opérateurs binaires au niveau du bit (**& &#124; ^***), sur un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.  
+ Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (**\***), plusieurs opérateurs d’addition (**+**) ou plusieurs opérateurs binaires au niveau du bit (**& &#124; ^**), sur un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.  
   
  Seuls les opérateurs d’évaluation séquentielle (**,**), les opérateurs logiques AND (**&&**), les opérateurs logiques OR (`||`), les opérateurs d’expression conditionnelle (**? :**) et les opérateurs d’appel de fonction constituent des points de séquence, et garantissent par conséquent un ordre particulier d’évaluation pour leurs opérandes. L'opérateur d'appel de fonction correspond au jeu de parenthèses suivant l'identificateur de fonction. L’opérateur d’évaluation séquentielle (**,**) est assuré d’évaluer ses opérandes de gauche à droite. (Notez que l'opérateur virgule dans un appel de fonction n'est pas le même que l'opérateur d'évaluation-séquentielle et ne fournit pas de garantie.) Pour plus d’informations, consultez [Points de séquence](../c-language/c-sequence-points.md).  
   

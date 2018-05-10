@@ -1,13 +1,10 @@
 ---
-title: "Dépassements de mémoire tampon | Documents Microsoft"
-ms.custom: 
+title: Dépassements de mémoire tampon | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="buffer-overflow"></a>Dépassement de capacité du tampon
 Différentes tailles de caractères peut provoquer des problèmes lorsque vous placez des caractères dans une mémoire tampon. Prenons le code suivant, qui copie les caractères d’une chaîne, `sz`, dans une mémoire tampon, `rgch`:  
@@ -60,7 +55,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Ce code teste le dépassement de capacité de mémoire tampon possible dans la boucle de test, à l’aide de `_mbclen` pour tester la taille du caractère en cours vers lequel pointé `sz`. En effectuant un appel à la `_mbsnbcpy` (fonction), vous pouvez remplacer le code dans le `while` boucle avec une seule ligne de code. Exemple :  
+ Ce code teste le dépassement de capacité de mémoire tampon possible dans la boucle de test, à l’aide de `_mbclen` pour tester la taille du caractère en cours vers lequel pointé `sz`. En effectuant un appel à la `_mbsnbcpy` (fonction), vous pouvez remplacer le code dans le `while` boucle avec une seule ligne de code. Par exemple :  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

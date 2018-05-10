@@ -1,13 +1,10 @@
 ---
-title: "Comment : effectuer une conversion entre différents Types de chaînes | Documents Microsoft"
-ms.custom: 
+title: 'Comment : effectuer une conversion entre différents Types de chaînes | Documents Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Comment : effectuer une conversion entre différents types de chaînes
 Cette rubrique montre comment convertir des différents types de chaînes Visual C++ en d’autres chaînes. Les types de chaînes qui sont couvertes incluent `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), et <xref:System.String?displayProperty=fullName>. Dans tous les cas, une copie de la chaîne est effectuée lorsque converti au nouveau type. Toute modification apportée à la nouvelle chaîne n’affecteront pas la chaîne d’origine et vice versa.  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- Cet exemple montre comment convertir un `CString` aux autres types de chaînes répertoriées ci-dessus. `CString`est basé sur le type de données TCHAR, qui à son tour dépend si le symbole `_UNICODE` est défini. Si `_UNICODE` n’est pas défini, `TCHAR` est défini comme étant char et `CString` contient une chaîne de caractères multioctets ; si `_UNICODE` est défini, `TCHAR` est défini comme étant `wchar_t` et `CString` contient un caractère large chaîne.  
+ Cet exemple montre comment convertir un `CString` aux autres types de chaînes répertoriées ci-dessus. `CString` est basé sur le type de données TCHAR, qui à son tour dépend si le symbole `_UNICODE` est défini. Si `_UNICODE` n’est pas défini, `TCHAR` est défini comme étant char et `CString` contient une chaîne de caractères multioctets ; si `_UNICODE` est défini, `TCHAR` est défini comme étant `wchar_t` et `CString` contient un caractère large chaîne.  
   
- `CStringA`est la version de chaîne multioctets de `CString`, `CStringW` est uniquement la version de chaîne à caractères larges. Ni `CStringA` ni `CStringW` utiliser `_UNICODE` pour déterminer la façon dont ils doivent être compilés. `CStringA`et `CStringW` sont utilisés dans cet exemple pour clarifier les différences mineures dans l’allocation de taille de mémoire tampon et de gestion de sortie.  
+ `CStringA` est la version de chaîne multioctets de `CString`, `CStringW` est uniquement la version de chaîne à caractères larges. Ni `CStringA` ni `CStringW` utiliser `_UNICODE` pour déterminer la façon dont ils doivent être compilés. `CStringA` et `CStringW` sont utilisés dans cet exemple pour clarifier les différences mineures dans l’allocation de taille de mémoire tampon et de gestion de sortie.  
   
 ### <a name="code"></a>Code  
   

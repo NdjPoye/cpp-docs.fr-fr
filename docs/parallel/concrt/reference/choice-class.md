@@ -1,12 +1,9 @@
 ---
 title: Classe Choice | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Classe choice
 Un bloc de messagerie `choice` est un bloc à plusieurs sources et à cible unique qui représente une interaction de flux de contrôle avec un jeu de sources. Le bloc choice attend que l'une des multiples sources produise un message et propage l'index de la source qui a généré le message.  
@@ -69,7 +64,7 @@ class choice: public ISource<size_t>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[choice](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|  
+|[Choix](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|  
 |[~ choice, destructeur](#dtor)|Détruit le `choice` bloc de messagerie.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
@@ -78,7 +73,7 @@ class choice: public ISource<size_t>;
 |----------|-----------------|  
 |[accept](#accept)|Accepte un message qui a été offert par ce `choice` bloc, en transférant la propriété à l’appelant.|  
 |[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `choice` bloc de messagerie, pour empêcher la suppression.|  
-|[consume](#consume)|Consomme un message précédemment offert par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
+|[Consommer](#consume)|Consomme un message précédemment offert par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|  
 |[has_value](#has_value)|Vérifie si cela `choice` bloc de messagerie a encore été initialisé avec une valeur.|  
 |[index](#index)|Retourne un index dans le `tuple` représentant l’élément sélectionné par le `choice` bloc de messagerie.|  
 |[link_target](#link_target)|Lie un bloc cible à ce `choice` bloc de messagerie.|  
@@ -99,7 +94,7 @@ class choice: public ISource<size_t>;
   
  `choice`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
   
  **Espace de noms :** concurrency  

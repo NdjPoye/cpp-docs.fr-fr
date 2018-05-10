@@ -1,27 +1,22 @@
 ---
-title: "Guide du portage et de la mise à niveau de Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Guide du portage et de la mise à niveau de Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 084c689ad7720e36670130d552522aa2f593218e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guide du portage et de la mise à niveau de Visual C++
 Cette rubrique est destinée à vous guider lors de la mise à niveau du code Visual C++. Elle explique comment convertir le code pour qu'il se compile et s'exécute correctement sur une version plus récente des outils, et comment tirer parti des nouvelles fonctionnalités de langage et de Visual Studio. Cette rubrique inclut également des informations sur la migration des applications héritées vers des plateformes plus récentes.  

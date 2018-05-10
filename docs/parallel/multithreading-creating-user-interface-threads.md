@@ -1,13 +1,10 @@
 ---
-title: "Multithreading : Création de Threads d’Interface utilisateur | Documents Microsoft"
-ms.custom: 
+title: 'Multithreading : Création de Threads d’Interface utilisateur | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Multithreading : création de threads d'interface utilisateur
 Un thread d’interface utilisateur est généralement utilisé pour gérer l’entrée d’utilisateur et répondre aux événements utilisateur indépendamment des threads exécutant d’autres parties de l’application. Le thread d’application principal (fourni dans votre `CWinApp`-classe dérivée) est déjà créé et lancé pour vous. Cette rubrique décrit les étapes nécessaires à la création de threads d’interface utilisateur supplémentaires.  
@@ -62,7 +57,7 @@ Un thread d’interface utilisateur est généralement utilisé pour gérer l’
   
 -   (Facultatif) Les attributs de sécurité souhaité. La valeur par défaut est le même accès que le thread parent. Pour plus d’informations sur le format de ces informations de sécurité, consultez [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) dans le [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`effectue la plupart du travail pour vous. Elle crée un nouvel objet de votre classe, l’initialise avec les informations que vous fournissez et appelle [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) pour démarrer l’exécution du thread. Vérifications sont effectuées dans l’ensemble de la procédure pour vous assurer que tous les objets sont libérés correctement n’importe quelle partie de la création échoue.  
+ `AfxBeginThread` effectue la plupart du travail pour vous. Elle crée un nouvel objet de votre classe, l’initialise avec les informations que vous fournissez et appelle [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) pour démarrer l’exécution du thread. Vérifications sont effectuées dans l’ensemble de la procédure pour vous assurer que tous les objets sont libérés correctement n’importe quelle partie de la création échoue.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?  
   

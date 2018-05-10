@@ -1,13 +1,10 @@
 ---
-title: "Mappages de texte générique dans Tchar.h | Documents Microsoft"
-ms.custom: 
+title: Mappages de texte générique dans Tchar.h | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappages de texte générique dans Tchar.h
 Pour simplifier le transport de code pour une utilisation internationale, la [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] fournit de la bibliothèque Runtime [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-mappages de texte générique spécifiques pour nombreux types de données, les routines et les autres objets. Vous pouvez utiliser ces mappages, qui sont définis dans Tchar.h, pour écrire du code générique qui peut être compilé sur un octet, multioctet, ou [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] jeux, en fonction d’une constante de manifeste que vous définissez à l’aide de caractères un `#define` instruction. Mappages de texte générique sont [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] extensions qui ne sont pas [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] compatible.  
@@ -52,7 +47,7 @@ Pour simplifier le transport de code pour une utilisation internationale, la [!I
   
 |# define|Version compilée|Exemple|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](caractères larges)|`_tcsrev` correspond à `_wcsrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (caractères larges)|`_tcsrev` correspond à `_wcsrev`|  
 |`_MBCS`|Caractères multioctets|`_tcsrev` correspond à `_mbsrev`|  
 |Aucun (la valeur par défaut n’a pas `_UNICODE` ni `_MBCS` défini)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` correspond à `strrev`|  
   
@@ -60,14 +55,14 @@ Pour simplifier le transport de code pour une utilisation internationale, la [!I
   
 ### <a name="generic-text-data-type-mappings"></a>Mappages de types de données de texte générique  
   
-|Texte générique<br /><br /> Nom de Type de données|_UNICODE &<br /><br /> _MBCS non définis|_MBCS<br /><br /> Défini|_UNICODE<br /><br /> Défini|  
+|Texte générique<br /><br /> Nom de Type de données|_UNICODE &AMP;<br /><br /> _MBCS non définis|_MBCS<br /><br /> Défini|_UNICODE<br /><br /> Défini|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L`(convertit le caractère ou chaîne suivant sa [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] équivalent)|  
+|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L` (convertit le caractère ou chaîne suivant sa [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] équivalent)|  
   
  Pour obtenir la liste des mappages de texte générique des routines, variables et autres objets, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans Run-Time Library Reference.  
   

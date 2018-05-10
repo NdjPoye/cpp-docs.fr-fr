@@ -1,12 +1,9 @@
 ---
-title: "Modulebase::incrementobjectcount, méthode | Documents Microsoft"
-ms.custom: 
+title: Modulebase::incrementobjectcount, méthode | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IncrementObjectCount method
 ms.assetid: 2d70b472-684c-4bb7-8bab-09505cfcaf28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 773f909e6dad4aae1933db355510443846646df0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b0e0fd6ecfd4d30dd4921c99d873c23b533ee24
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulebaseincrementobjectcount-method"></a>ModuleBase::IncrementObjectCount, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -43,7 +38,7 @@ virtual long IncrementObjectCount() = 0;
 ## <a name="remarks"></a>Notes  
  En cas d’implémentation, incrémente le nombre d’objets suivis par le module.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** implements.h  
   
  **Namespace :** Microsoft::WRL::Details  

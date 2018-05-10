@@ -1,13 +1,10 @@
 ---
 title: immediatebind | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.immediatebind
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31dddbbb205715e46de5d3382923ef4d73261b53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="immediatebind"></a>immediatebind
 Indique que la base de données est immédiatement avertie de toutes les modifications apportées à une propriété d’un objet lié aux données.  
@@ -45,7 +40,7 @@ Indique que la base de données est immédiatement avertie de toutes les modific
 ## <a name="example"></a>Exemple  
  Consultez [pouvant être liés](../windows/bindable.md) pour obtenir un exemple montrant comment utiliser **immediatebind**.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -53,8 +48,8 @@ Indique que la base de données est immédiatement avertie de toutes les modific
 |-|-|  
 |**S'applique à**|Méthode d’interface|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

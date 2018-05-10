@@ -1,13 +1,10 @@
 ---
-title: "Prise en charge des jeux de caractères multioctets (MBCS) | Documents Microsoft"
-ms.custom: 
+title: Prise en charge des jeux de caractères multioctets (MBCS) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Prise en charge des jeux de caractères multioctets (MBCS)
 Les jeux de caractères multioctets (MBSC) sont une approche plus ancienne de la nécessité de prendre en charge certains jeux de caractères (japonais et chinois, par exemple) qui ne peuvent pas être représentés par un seul octet. Si vous procédez à un nouveau développement, vous devez utiliser Unicode pour toutes les chaînes de texte à l'exception peut-être des chaînes système qui ne sont pas visibles des utilisateurs finaux. MBCS est une technologie héritée qui n'est pas recommandée pour un nouveau développement.  

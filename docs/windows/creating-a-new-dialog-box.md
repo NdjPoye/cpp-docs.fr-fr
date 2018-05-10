@@ -1,13 +1,10 @@
 ---
-title: "Création d’une boîte de dialogue | Documents Microsoft"
-ms.custom: 
+title: Création d’une boîte de dialogue | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - dialog boxes, creating
 - Dialog editor, creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c23021e6e91d7097b1989c486d053bed3a8421b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-dialog-box"></a>Création d’une nouvelle boîte de dialogue
 ### <a name="to-create-a-new-dialog-box"></a>Pour créer une nouvelle boîte de dialogue  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   

@@ -1,12 +1,9 @@
 ---
 title: double_2, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c447587fcefbd922cbe6c1ba5f63ef1d3a2efce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double2-class"></a>double_2, classe
 Représente un vecteur court de 2 double.  
@@ -70,7 +65,7 @@ class double_2;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[double_2 Constructor](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
+|[double_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
@@ -96,7 +91,7 @@ class double_2;
 |double_2::operator-||  
 |double_2::operator--||  
 |double_2::operator*=||  
-|double_2::operator/=||  
+|/ = double_2::operator||  
 |double_2::operator++||  
 |double_2::operator+=||  
 |double_2::operator=||  
@@ -117,14 +112,14 @@ class double_2;
 |double_2::r||  
 |double_2::rg||  
 |double_2::x||  
-|double_2::xy||  
+|double_2::XY||  
 |double_2::y||  
 |double_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `double_2`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_short_vectors.h  
   
  **Namespace :** Concurrency::graphics  
