@@ -1,30 +1,25 @@
 ---
-title: "ComPtrRef::operator ! =, opérateur | Documents Microsoft"
-ms.custom: 
+title: ComPtrRef::operator ! =, opérateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator!=
 dev_langs:
 - C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a9c9572ece0f60971449f2e1b519ec662f9867f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!=, opérateur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -75,7 +70,7 @@ bool operator!=(
 ## <a name="remarks"></a>Notes  
  Indique si deux objets ComPtrRef ne sont pas égaux.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

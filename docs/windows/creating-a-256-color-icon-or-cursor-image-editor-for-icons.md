@@ -1,13 +1,10 @@
 ---
-title: "Création d’une icône de 256 couleurs ou d’un curseur (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Création d’une icône de 256 couleurs ou d’un curseur (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - colors, cursors
 - icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11c25c808ad9d1917413a66044e052e4c49ea584
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52c9aed6e55a11eea8eeb9b4979cbe43b016c26f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Création d'une icône ou d'un curseur 256 couleurs (Éditeur d'images pour les icônes)
 À l’aide de l’éditeur d’images, les icônes et curseurs peuvent être de grande taille (64 x 64) avec une palette de 256 couleurs. Après avoir créé la ressource, un style d’image de périphérique est sélectionné.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  **Spécifications**  
   
- Aucun.  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [À l’aide de la Palette 256 couleurs](../windows/using-the-256-color-palette-image-editor-for-icons.md)   

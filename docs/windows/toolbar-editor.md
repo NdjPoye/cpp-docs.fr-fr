@@ -1,13 +1,10 @@
 ---
-title: "Barre d’outils Éditeur | Documents Microsoft"
-ms.custom: 
+title: Barre d’outils Éditeur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
 dev_langs:
@@ -18,23 +15,21 @@ helpviewer_keywords:
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4358e01575ec7d4dfb2dea48499466f1cc0a4766
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-editor"></a>Éditeur de barres d’outils
 L’Éditeur de barres d’outils vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barres d’outils. L’Éditeur de barres d’outils utilise un affichage graphique pour afficher une barre d’outils et des boutons qui ressemblent étroitement à leur aspect dans une application finie.  
   
- Avec l’Éditeur de barres d’outils, vous pouvez :  
+ Avec l’Éditeur de barres d’outils, vous pouvez :  
   
 -   [Créer des boutons et des barres d’outils](../windows/creating-new-toolbars.md)  
   

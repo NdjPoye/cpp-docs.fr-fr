@@ -1,31 +1,26 @@
 ---
-title: "Insertion d’un espace entre les boutons sur une barre d’outils | Documents Microsoft"
-ms.custom: 
+title: Insertion d’un espace entre les boutons sur une barre d’outils | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Toolbar editor, spacing toolbar buttons
 - toolbar buttons (in Toolbar editor), space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f290433989ed56912309f86ce715fb7f2ede7d51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11e5c964092bbd67137ed3b6084da9589b026833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Insertion d'un espace entre des boutons sur une barre d'outils
 En règle générale, pour insérer un espace entre les boutons, faites simplement glisser les autres dans la barre d’outils. Pour supprimer un espace, faites-les glisser vers l’autre.  
@@ -44,7 +39,7 @@ En règle générale, pour insérer un espace entre les boutons, faites simpleme
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
  MFC ou ATL  
   

@@ -1,13 +1,10 @@
 ---
 title: SafeGreaterThan | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeGreaterThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeGreaterThan function
 ms.assetid: 32cecac9-ba88-43eb-a7a4-30e390456739
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82f3d666e6e0c5a09f0968547b732b3735d23d2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0944feb32f9dbd8b73d0710b248139c003e41410
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 Compare deux nombres.  
@@ -49,10 +44,10 @@ inline bool SafeGreaterThan (
  Second nombre à comparer. Cela doit être de type U.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si `t` est supérieur à `u`; sinon `false`.  
+ `true` Si `t` est supérieur à `u`; sinon `false`.  
   
 ## <a name="remarks"></a>Notes  
- `SafeGreaterThan`étend l’opérateur de comparaison standard en vous permettant de comparer deux types de nombres.  
+ `SafeGreaterThan` étend l’opérateur de comparaison standard en vous permettant de comparer deux types de nombres.  
   
  Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération de comparaison unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
   

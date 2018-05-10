@@ -1,12 +1,9 @@
 ---
 title: Runtimeclass, classe | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass, classe
 Représente une classe WinRT ou COM qui hérite des interfaces spécifiées et fournit le Windows Runtime spécifié, le COM classique et la prise en charge de la référence faible.  
@@ -48,7 +43,7 @@ Paramètre facultatif. Une combinaison d’une ou plusieurs [RuntimeClassType](.
 La liste des interfaces implémentées par l’objet au-delà de IUnknown, IInspectable ou autres interfaces contrôlées par [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Il peut également répertorier les autres classes d’être dérivé, notamment Microsoft::WRL::FtmBase pour rendre l’objet agile et la faire implémenter IMarshal.
   
 ## <a name="members"></a>Membres  
-`RuntimeClassInitialize`Une fonction qui initialise l’objet si la makeandinitialize, fonction de modèle est utilisée pour construire l’objet. Il retourne S_OK si l’objet a été correctement initialisé, ou un code d’erreur COM en cas d’échec de l’initialisation. Le code d’erreur COM est propagé sous la valeur de retour de MakeAndInitialize. Notez que la méthode RuntimeClassInitialize n’est pas appelée si la fonction de création de modèle est utilisée pour construire l’objet.
+`RuntimeClassInitialize` Une fonction qui initialise l’objet si la makeandinitialize, fonction de modèle est utilisée pour construire l’objet. Il retourne S_OK si l’objet a été correctement initialisé, ou un code d’erreur COM en cas d’échec de l’initialisation. Le code d’erreur COM est propagé sous la valeur de retour de MakeAndInitialize. Notez que la méthode RuntimeClassInitialize n’est pas appelée si la fonction de création de modèle est utilisée pour construire l’objet.
 
 ### <a name="public-constructors"></a>Constructeurs publics  
   
@@ -60,7 +55,7 @@ La liste des interfaces implémentées par l’objet au-delà de IUnknown, IInsp
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
 Il s’agit d’un détail d’implémentation.
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
 **En-tête :** implements.h  
   
 **Espace de noms :** Microsoft::WRL  

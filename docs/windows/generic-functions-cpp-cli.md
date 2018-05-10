@@ -1,13 +1,10 @@
 ---
-title: "Fonctions génériques (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: Fonctions génériques (C + c++ / CLI) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 Une fonction générique est une fonction déclarée avec les paramètres de type. Lorsqu’elle est appelée, les types réels sont utilisés à la place les paramètres de type.  
@@ -43,7 +38,7 @@ Une fonction générique est une fonction déclarée avec les paramètres de typ
   
  Cette fonctionnalité n’est pas pris en charge dans le Windows Runtime.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -66,9 +61,9 @@ return-type identifier<type-parameter identifier(s)>
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
  *modificateurs* (facultatif)  
- Un modificateur de la fonction, comme statique.  `virtual`ne peut pas étant donné que les méthodes virtuelles ne peuvent pas être génériques.  
+ Un modificateur de la fonction, comme statique.  `virtual` ne peut pas étant donné que les méthodes virtuelles ne peuvent pas être génériques.  
   
- *type de retour*  
+ *Type de retour*  
  Type retourné par la méthode. Si le type de retour est void, aucune valeur de retour n’est requis.  
   
  *identifier*  
@@ -94,7 +89,7 @@ return-type identifier<type-parameter identifier(s)>
   
  Lorsqu’elle est appelée, le paramètre de type générique est remplacé par un type réel. Le type réel peut-être être spécifié explicitement dans les crochets à l’aide d’une syntaxe semblable à un appel de fonction de modèle. Si elle est appelée sans paramètres de type, le compilateur tente de déduire le type réel à partir des paramètres fournis dans l’appel de fonction. Si l’argument de type prévu ne peut pas être déduit des paramètres utilisés, le compilateur signale une erreur.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Exemple**  
   
- L’exemple suivant utilise une fonction générique pour rechercher le premier élément dans un tableau. Elle déclare `MyClass`, qui hérite de la classe de base `MyBaseClass`. `MyClass`contient une fonction générique, `MyFunction`, qui appelle une autre fonction générique, `MyBaseClassFunction`, au sein de la classe de base. Dans **principal**, la fonction générique, `MyFunction`, est appelée à l’aide des arguments de type différents.  
+ L’exemple suivant utilise une fonction générique pour rechercher le premier élément dans un tableau. Elle déclare `MyClass`, qui hérite de la classe de base `MyBaseClass`. `MyClass` contient une fonction générique, `MyFunction`, qui appelle une autre fonction générique, `MyBaseClassFunction`, au sein de la classe de base. Dans **principal**, la fonction générique, `MyFunction`, est appelée à l’aide des arguments de type différents.  
   
 ```  
 // generics_generic_function_3.cpp  

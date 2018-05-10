@@ -1,28 +1,23 @@
 ---
-title: "DeferrableEventArgs::InvokeAllFinished (méthode) | Documents Microsoft"
-ms.custom: 
+title: DeferrableEventArgs::InvokeAllFinished (méthode) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 86b45205-3edb-4134-9cd0-ed7a7b4c3b1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ca021d66c615bfec84b8f08df8474eeb20709e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aaaf8c6849b30e26463810ff353234319960048
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deferrableeventargsinvokeallfinished-method"></a>DeferrableEventArgs::InvokeAllFinished (méthode)
 Appelé pour indiquer que le traitement d'un événement différé est terminé.  
@@ -38,7 +33,7 @@ void InvokeAllFinished()
   
  Pour obtenir un exemple de code, consultez [deferrableeventargs, classe](../windows/deferrableeventargs-class.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** event.h  
   
  **Espace de noms :** Microsoft::WRL  

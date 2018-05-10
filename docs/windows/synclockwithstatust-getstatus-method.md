@@ -1,12 +1,9 @@
 ---
-title: "Synclockwithstatust::GetStatus, méthode | Documents Microsoft"
-ms.custom: 
+title: Synclockwithstatust::GetStatus, méthode | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: d448b51d-a63d-40d9-a9ee-4aad3204118d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 181735766e62aa1bf8c306bd425c6e6b03b2066d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03addd8d89c54eddb5deb721ab47d46e8b945edd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus, méthode
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -45,7 +40,7 @@ DWORD GetStatus() const;
   
  La fonction GetStatus() récupère la valeur de l’objet sous-jacent [status_](../windows/synclockwithstatust-status-data-member.md) membre de données. Lorsqu’un objet basé sur la classe SyncLockWithStatusT effectue une opération de verrouillage, l’objet attend d’abord l’objet devienne disponible. Le résultat de cette opération d’attente est stocké dans le `status_` membre de données. Les valeurs possibles de le `status_` membre de données sont les valeurs de retour de l’opération d’attente. Pour plus d’informations, consultez les valeurs de retour de la **WaitForSingleObjectEx()** fonction dans la bibliothèque MSDN.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

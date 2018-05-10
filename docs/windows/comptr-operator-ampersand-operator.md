@@ -1,12 +1,9 @@
 ---
-title: "ComPtr::operator&amp; opérateur | Documents Microsoft"
-ms.custom: 
+title: ComPtr::operator&amp; opérateur | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::operator&
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator& operator
 ms.assetid: 2d77fda6-f4b2-45c1-8a0e-fbc355013531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc5234f10a16141fd91193d634f0d306886aff71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptroperatoramp-operator"></a>ComPtr::operator&amp; (opérateur)
 Libère l’interface associée à ce `ComPtr` de l’objet, puis récupère l’adresse de le `ComPtr` objet.  
@@ -45,7 +40,7 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ## <a name="remarks"></a>Notes  
  Cette méthode diffère [ComPtr::GetAddressOf](../windows/comptr-getaddressof-method.md) dans la mesure où cette méthode libère une référence au pointeur d’interface. Utilisez `ComPtr::GetAddressOf` quand vous exigent l’adresse du pointeur d’interface, mais ne souhaitez pas libérer cette interface.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** client.h  
   
  **Espace de noms :** Microsoft::WRL  

@@ -1,13 +1,10 @@
 ---
 title: module (C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 Définit le bloc de bibliothèque dans le fichier .idl.  
@@ -73,7 +68,7 @@ Définit le bloc de bibliothèque dans le fichier .idl.
  Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La valeur par défaut est 1,0.  
   
  `uuid`  
- ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer l’ *uuid* de votre bloc de bibliothèque, ce que vous pouvez faire à l’aide de l’identificateur **__uuidof(***nom_bibliothèque***)**.  
+ ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer le *uuid* de votre bloc de bibliothèque, vous pouvez effectuer à l’aide de l’identificateur **__uuidof (***libraryname***)**.  
   
  **lcid**  
  Paramètre de localisation. Pour plus d’informations, consultez [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
@@ -103,7 +98,7 @@ Définit le bloc de bibliothèque dans le fichier .idl.
  Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
  ***custom***  (facultatif)  
- Un ou plusieurs attributs. Ceci est similaire à l’attribut [custom](../windows/custom-cpp.md) . Le premier paramètre de `custom` est le GUID de l’attribut. Exemple :  
+ Un ou plusieurs attributs. Ceci est similaire à l’attribut [custom](../windows/custom-cpp.md) . Le premier paramètre de `custom` est le GUID de l’attribut. Par exemple :  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
@@ -174,7 +169,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -182,8 +177,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|  
 |**S'applique à**|N'importe où|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
  Pour plus d'informations, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -193,7 +188,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Attributs autonomes](../windows/stand-alone-attributes.md)   
  [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [usesgetlasterror](../windows/usesgetlasterror.md)   
- [bibliothèque](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
+ [Bibliothèque](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [HelpContext](../windows/helpcontext.md)   
  [HelpString](../windows/helpstring.md)   
  [HelpFile](../windows/helpfile.md)   

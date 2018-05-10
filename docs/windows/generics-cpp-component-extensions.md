@@ -1,13 +1,10 @@
 ---
-title: "Génériques (Extensions du composant C++) | Documents Microsoft"
-ms.custom: 
+title: Génériques (Extensions du composant C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics--c-component-extensions"></a>Génériques  (extensions du composant C++)
 Les génériques sont des méthodes et des types paramétrables. Dans cette section, Découvrez les fonctionnalités génériques sont pris en charge par le Windows Runtime et le common language runtime, et qui sont pris en charge uniquement le common language runtime. En outre, découvrez comment créer vos propres méthodes et types génériques dans Visual C++ et comment utiliser des types génériques créés dans un langage .NET Framework dans Visual C++. Enfin, cette section fournit une comparaison des modèles C++ et les génériques.  

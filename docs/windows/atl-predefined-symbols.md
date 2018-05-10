@@ -1,31 +1,26 @@
 ---
-title: "Symboles ATL prédéfinis | Documents Microsoft"
-ms.custom: 
+title: Symboles ATL prédéfinis | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - symbols, ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d56fcfa8fb65f183acfe96c3981023d06f5e524a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c00487b2bb7c7a67dfb81ffb638f5a46fc611bc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="atl-predefined-symbols"></a>Symboles ATL prédéfinis
 Ces symboles sont définis dans les fichiers d’en-tête ATL, mais ils prennent en charge les actions et les fonctions d’application Windows standard. Ces symboles sont utilisés principalement avec les boîtes de dialogue. Lorsque vous travaillez avec les boîtes de dialogue et des contrôles dans le [éditeur de boîte de dialogue](../windows/dialog-editor.md), ces symboles s’affichent dans la fenêtre de propriétés associée aux contrôles communs. Par exemple, si votre boîte de dialogue comporte un bouton Annuler, cette commande est associée au symbole IDCANCEL dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).  
@@ -43,7 +38,7 @@ Ces symboles sont définis dans les fichiers d’en-tête ATL, mais ils prennent
 |IDS_PROJNAME|De chaîne : Nom de l’application en cours|  
 |IDYES|Contrôle : Bouton de la boîte de dialogue Oui|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  ATL  
   
 ## <a name="see-also"></a>Voir aussi  

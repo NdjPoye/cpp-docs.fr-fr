@@ -1,13 +1,10 @@
 ---
-title: "Affichage et modification de ressources dans un éditeur de ressources | Documents Microsoft"
-ms.custom: 
+title: Affichage et modification de ressources dans un éditeur de ressources | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resourceview
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1afa1377b222789243706cf3c5e61f45b4fcd1a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Affichage et modification des ressources dans un Éditeur de ressources
 Chaque type de ressource possède un éditeur de ressources spécifique à ce type de ressource. Vous pouvez réorganiser, redimensionner, ajouter des contrôles et fonctionnalités ou bien modifier les aspects d’une ressource à l’aide de l’éditeur associé. Vous pouvez également modifier une ressource dans [au format texte](../windows/how-to-open-a-resource-script-file-in-text-format.md) et [format binaire](../windows/opening-a-resource-for-binary-editing.md).  
@@ -87,8 +82,8 @@ Chaque type de ressource possède un éditeur de ressources spécifique à ce ty
   
 1.  Dans l’Explorateur de solutions, cliquez sur la ressource que vous souhaitez supprimer, puis sélectionnez **supprimer** dans le menu contextuel.  
   
-### <a name="requirements"></a>Configuration requise  
- Aucun.  
+### <a name="requirements"></a>Spécifications  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeurs de ressources](../windows/resource-editors.md)

@@ -1,13 +1,10 @@
 ---
-title: "Comment : utiliser des modèles de ressources | Documents Microsoft"
-ms.custom: 
+title: 'Comment : utiliser des modèles de ressources | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>comment : utiliser des modèles de ressources
 Un modèle de ressource est une ressource personnalisée que vous avez enregistrée en tant que fichier .rct. Un modèle de ressource peut servir ensuite de point de départ pour la création d'autres ressources. Les modèles de ressources permettent de gagner du temps pour le développement de ressources ou de groupes de ressources supplémentaires qui partagent des fonctionnalités, par exemple les contrôles standard et autres éléments récurrents. Par exemple, vous pouvez être amené à inclure un bouton Aide et l'icône d'un logo d'entreprise dans plusieurs boîtes de dialogue. Pour y parvenir rapidement, créez un modèle de boîte de dialogue, puis personnalisez-le avec le logo et le bouton Aide.  
@@ -61,7 +56,7 @@ Un modèle de ressource est une ressource personnalisée que vous avez enregistr
   
 1.  [Ouvrez le fichier .rc en tant que fichier autonome](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  Sur le **fichier** menu, cliquez sur  **enregistrer \<* votre nom de fichier*> en tant que **.  
+2.  Sur le **fichier** menu, cliquez sur **enregistrer \< *votre nom de fichier*> en tant que**.  
   
 3.  Spécifiez un emplacement et cliquez sur **OK**.  
   
@@ -79,7 +74,7 @@ Un modèle de ressource est une ressource personnalisée que vous avez enregistr
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   

@@ -1,13 +1,10 @@
 ---
-title: "Vue d’ensemble des génériques dans Visual C++ | Documents Microsoft"
-ms.custom: 
+title: Vue d’ensemble des génériques dans Visual C++ | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Vue d'ensemble de génériques dans Visual C++
 Les génériques sont des types paramétrables pris en charge par le Common Language Runtime. Un type paramétrable est un type est défini avec un paramètre de type inconnu qui est spécifié lorsque le générique est utilisé.  
@@ -77,7 +72,7 @@ Les génériques sont des types paramétrables pris en charge par le Common Lang
  Une contrainte est une restriction sur les types qui peuvent être utilisés comme paramètre de type. Par exemple, une classe générique donnée pourrait accepter uniquement les classes qui héritent d'une classe spécifiée, ou pourrait implémenter une interface spécifiée. Pour plus d’informations, consultez [contraintes sur les paramètres de Type générique (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Types de référence et types de valeur  
- Les types de handle et les types de valeur peuvent être utilisés comme des arguments de type. Dans la définition générique, dans laquelle chaque type peut être utilisé, la syntaxe est celle des types de référence. Par exemple, le  **->**  opérateur permet d’accéder aux membres du type du paramètre de type si le type est éventuellement utilisé est un type référence ou un type valeur ou non. Lorsqu’un type de valeur est utilisé comme argument type, le runtime génère du code qui utilise les types de valeur directement sans avoir à évaluer les types de valeur.  
+ Les types de handle et les types de valeur peuvent être utilisés comme des arguments de type. Dans la définition générique, dans laquelle chaque type peut être utilisé, la syntaxe est celle des types de référence. Par exemple, le **->** opérateur permet d’accéder aux membres du type du paramètre de type si le type est éventuellement utilisé est un type référence ou un type valeur ou non. Lorsqu’un type de valeur est utilisé comme argument type, le runtime génère du code qui utilise les types de valeur directement sans avoir à évaluer les types de valeur.  
   
  Lorsque vous utilisez un type de référence comme argument de type générique, utilisez la syntaxe du handle. Lorsque vous utilisez un type de valeur comme argument de type générique, utilisez directement le nom du type.  
   
@@ -135,7 +130,7 @@ int main() {
   
  Ces restrictions s'appliquent aux opérateurs également. Un paramètre de type générique sans contrainte ne peut pas utiliser les opérateurs `==` et `!=` pour comparer deux instances du paramètre de type, au cas où le type ne prendrait pas en charge ces opérateurs. Ces contrôles sont nécessaires pour les génériques, mais pas pour les modèles, car les génériques peuvent être spécialisés pendant l'exécution avec n'importe quelle classe satisfaisant aux contraintes, lorsqu'il est trop tard pour vérifier l'utilisation de membres non valides.  
   
- Une instance par défaut du paramètre de type peut être créée à l'aide de l'opérateur `()`. Exemple :  
+ Une instance par défaut du paramètre de type peut être créée à l'aide de l'opérateur `()`. Par exemple :  
   
  `T t = T();`  
   

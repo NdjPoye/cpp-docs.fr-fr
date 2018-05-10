@@ -1,13 +1,10 @@
 ---
 title: Delegate (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (extensions du composant C++)
 Déclare un type qui représente un pointeur de fonction.  
@@ -60,19 +55,19 @@ delegate-type-identifier
  *access*  
  (facultatif) L’accessibilité du délégué, qui peut être `public` (la valeur par défaut) ou `private`. Le prototype de fonction peut également être qualifié avec le `const` ou `volatile` mots clés.  
   
- *type de retour*  
+ *Type de retour*  
  Le type de retour du prototype de fonction.  
   
  *identificateur de type délégué*  
  Le nom du type délégué déclaré.  
   
- *paramètres*  
+ *Paramètres*  
  (Facultatif) Les types et les identificateurs du prototype de fonction.  
   
 ### <a name="remarks"></a>Notes  
  Utilisez le *identificateur de type de délégué* pour déclarer un événement avec le même prototype que le délégué. Pour plus d’informations, consultez [délégués (C + c++ / CX)](../cppcx/delegates-c-cx.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
@@ -129,7 +124,7 @@ function_declaration
   
 -   [Délégués génériques (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

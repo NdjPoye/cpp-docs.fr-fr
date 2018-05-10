@@ -1,31 +1,26 @@
 ---
-title: "Comment : ouvrir une ressource de manifeste | Documents Microsoft"
-ms.custom: 
+title: 'Comment : ouvrir une ressource de manifeste | Documents Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifest resources
 - resources [Visual Studio], opening
 ms.assetid: bd6f9c47-2a1e-417d-9d2a-c1ad7d3b9635
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9e576593792e8b93576128bb34244638545a261
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Comment : ouvrir une ressource de manifeste
 Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage des ressources](../windows/resource-view-window.md), la ressource s'ouvre au format binaire. Pour afficher le contenu d'une ressource de manifeste dans un format plus lisible, vous devez ouvrir la ressource à partir de l'Explorateur de solutions.  
@@ -46,7 +41,7 @@ Si vous ouvrez une ressource de manifeste à partir de la fenêtre [Affichage de
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.*  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   

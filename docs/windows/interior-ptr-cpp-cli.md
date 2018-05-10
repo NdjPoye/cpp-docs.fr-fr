@@ -1,13 +1,10 @@
 ---
 title: interior_ptr (C + c++ / CLI) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - stdcli::language::interior_ptr
 - interior_ptr_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Un *pointeur intérieur* déclare un pointeur vers à l’intérieur d’un type référence, mais pas à l’objet lui-même. Un pointeur intérieur peut pointer vers un handle de référence, le type de valeur, le handle du type boxed, le membre d’un type managé, ou à un élément d’un tableau managé.  
@@ -73,7 +68,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
  Dans la mesure où il existe des pointeurs intérieurs uniquement sur la pile, prise d’adresse d’un pointeur intérieur génère un pointeur non managé.  
   
- `interior_ptr`a une conversion implicite vers `bool`, ce qui permet de son utilisation dans des instructions conditionnelles.  
+ `interior_ptr` a une conversion implicite vers `bool`, ce qui permet de son utilisation dans des instructions conditionnelles.  
   
  Pour plus d’informations sur la façon de déclarer un pointeur intérieur qui pointe vers un objet qui ne peut pas être déplacé sur le tas de garbage collection, consultez [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   

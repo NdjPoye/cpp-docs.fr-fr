@@ -1,13 +1,10 @@
 ---
 title: SafeAdd | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeAdd
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeAdd function
 ms.assetid: 3f82b91d-59fe-4ee1-873b-d056182fa8be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8b668f5b164934cff6643d73d9b4b6169a9d4b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeadd"></a>SafeAdd
 Additionne deux nombres d’une manière qui protège contre le dépassement de capacité.  
@@ -53,7 +48,7 @@ inline bool SafeAdd (
  Le paramètre où `SafeAdd` stocke le résultat.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si aucune erreur ne se produit ; `false` si une erreur se produit.  
+ `true` Si aucune erreur ne se produit ; `false` si une erreur se produit.  
   
 ## <a name="remarks"></a>Notes  
  Cette méthode fait partie de [Bibliothèque SafeInt](../windows/safeint-library.md) et est conçu pour une opération d’ajout unique sans créer d’instance de la [SafeInt, classe](../windows/safeint-class.md).  
@@ -63,7 +58,7 @@ inline bool SafeAdd (
   
  Pour plus d’informations sur les types de modèles T, U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** safeint.h  
   
  **Namespace :** Microsoft::Utilities  

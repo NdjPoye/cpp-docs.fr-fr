@@ -1,12 +1,9 @@
 ---
-title: "Module::unregistercomobject, méthode | Documents Microsoft"
-ms.custom: 
+title: Module::unregistercomobject, méthode | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::UnregisterCOMObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - UnregisterCOMObject method
 ms.assetid: 5d377525-0385-482a-a215-6e8a1f032861
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45a6dc776feb1534cd7e58240a40cc173e7459de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject, méthode
 Annule l’inscription d’un ou plusieurs objets COM, ce qui empêche d’autres applications de se connecter à ceux-ci.  
@@ -53,7 +48,7 @@ virtual HRESULT UnregisterCOMObject(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si cette opération a réussi ; Sinon, une erreur HRESULT qui indique la raison pour laquelle l’opération a échoué.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** module.h  
   
  **Espace de noms :** Microsoft::WRL

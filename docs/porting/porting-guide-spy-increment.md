@@ -1,27 +1,22 @@
 ---
-title: "Guide du portage : Spy++ | Microsoft Docs"
-ms.custom: 
+title: 'Guide du portage : Spy++ | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 Cette étude de cas de portage vise à vous donner une idée de ce qu'est un projet de portage classique et des types de problèmes que vous êtes susceptible de rencontrer. Elle fournit également quelques conseils et astuces généraux qui vous aideront à résoudre certains problèmes liés au portage. Elle n'est pas destinée à être un guide du portage exhaustif, car le déroulement du portage d'un projet dépend beaucoup des spécificités du code.  
@@ -533,7 +528,7 @@ fatal error LNK1181: cannot open input file 'mfc42d.lib'
 msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\SpyHk55.lib;%(AdditionalDependencies)  
 ```  
   
- Nous allons maintenant mettre à jour l'ancien code MBCS (Multi-byte Character Set) au format Unicode. Dans la mesure où il s'agit d'une application Windows étroitement liée à la plateforme de Bureau Windows, nous choisissons de la porter vers le format Unicode UTF-16 utilisé par Windows. Si vous écrivez du code interplateforme ou que vous portez une application Windows vers une autre plateforme, vous préférerez peut-être la porter vers UTF-8, qui est plus largement utilisé sur d'autres systèmes d'exploitation.  
+ Nous allons maintenant mettre à jour l'ancien code MBCS (Multi-byte Character Set ) au format Unicode. Dans la mesure où il s'agit d'une application Windows étroitement liée à la plateforme de Bureau Windows, nous choisissons de la porter vers le format Unicode UTF-16 utilisé par Windows. Si vous écrivez du code interplateforme ou que vous portez une application Windows vers une autre plateforme, vous préférerez peut-être la porter vers UTF-8, qui est plus largement utilisé sur d'autres systèmes d'exploitation.  
   
  Dans le cadre d'un portage vers Unicode UTF-16, nous devons déterminer si nous conservons ou non la possibilité de compiler en MBCS.  Pour offrir une prise en charge de MBCS, nous devons utiliser la macro TCHAR comme type de caractère, qui se résout en `char` ou en `wchar_t`, selon que _MBCS ou _UNICODE est définie pour la compilation. Si vous optez pour TCHAR et les versions TCHAR de diverses API au lieu de `wchar_t` et des API qui lui sont associées, vous pourrez revenir à une version MBCS de votre code simplement en remplaçant la macro _UNICODE par _MBCS. Outre TCHAR, il existe diverses versions TCHAR largement répandues pour les typedef, les macros et les fonctions (par exemple, LPCTSTR au lieu de LPCSTR, etc.). Dans la boîte de dialogue Propriétés du projet, sous **Propriétés de configuration**, dans la section **Général**, remplacez la valeur **Utiliser le jeu de caractères multioctet (MBCS)** de la propriété **Jeu de caractères** par **Utiliser le jeu de caractères Unicode**. Ce paramètre détermine quelle macro est prédéfinie lors de la compilation. Il existe une macro UNICODE et une macro _UNICODE. La propriété du projet s'applique aux deux systématiquement. Les en-têtes Windows utilisent UNICODE là où les en-têtes Visual C++, tels que MFC, utilisent _UNICODE. Notez que les deux sont toujours définis ensemble.  
   

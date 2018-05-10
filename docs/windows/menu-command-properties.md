@@ -1,30 +1,25 @@
 ---
-title: "Propriétés de commande de menu | Documents Microsoft"
-ms.custom: 
+title: Propriétés de commande de menu | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-command-properties"></a>Propriétés d'une commande de menu
 Les informations ci-dessous sont organisées en fonction des propriétés de menu qui s'affichent dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) quand vous sélectionnez une commande de menu. Elles sont répertoriées par ordre alphabétique. Toutefois, la fenêtre Propriétés vous permet également d'afficher ces propriétés par catégorie.  
@@ -46,7 +41,7 @@ Les informations ci-dessous sont organisées en fonction des propriétés de men
   
 
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

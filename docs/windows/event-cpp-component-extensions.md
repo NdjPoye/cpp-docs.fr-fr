@@ -1,13 +1,10 @@
 ---
-title: "événements (Extensions du composant C++) | Documents Microsoft"
-ms.custom: 
+title: événements (Extensions du composant C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>événement  (extensions du composant C++)
 Le `event` mot clé déclare une *événement*, qui est une notification aux abonnés inscrits (*gestionnaires d’événements*) qu’un élément d’intérêt s’est produit.  
@@ -53,19 +48,19 @@ modifiereventdelegate^ event_name
   
  **Paramètres**  
   
- *modificateur*  
+ *Modificateur*  
  Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
   
  *delegate*  
  Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *nom_événement*  
+ *Nom_événement*  
  Nom de l'événement.  
   
  *return_value*  
  Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
   
- *paramètres*  
+ *Paramètres*  
  (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
   
  **Remarques**  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  Vous pouvez utiliser `operators+=` et `operator-=` pour ajouter et supprimer un gestionnaire d'événements ou appeler les méthodes `add()` et `remove()` explicitement.  
   
- `event`est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
+ `event` est un mot clé contextuel ; consultez [mots clés contextuels](../windows/context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
@@ -91,7 +86,7 @@ modifiereventdelegate^ event_name
   
  Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout. Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
@@ -115,19 +110,19 @@ modifiereventdelegate^ event_name
   
  **Paramètres**  
   
- *modificateur*  
+ *Modificateur*  
  Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont `static` et `virtual`.  
   
  *delegate*  
  Le [déléguer](../windows/delegate-cpp-component-extensions.md), dont le Gestionnaire d’événements doit correspondre à la signature.  
   
- *nom_événement*  
+ *Nom_événement*  
  Nom de l'événement.  
   
  *return_value*  
  Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être `void`.  
   
- *paramètres*  
+ *Paramètres*  
  (facultatif) Paramètres pour le `raise` (méthode), qui correspond à la signature de la *déléguer* paramètre.  
   
  **Remarques**  
@@ -176,7 +171,7 @@ modifiereventdelegate^ event_name
   
 -   [Événements dans une Interface](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

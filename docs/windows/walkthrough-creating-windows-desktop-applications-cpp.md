@@ -1,12 +1,10 @@
 ---
-title: "Procédure pas à pas : Création d’une application de bureau Windows classique (C++) | Documents Microsoft"
-ms.custom: 
+title: 'Procédure pas à pas : Création d’une application de bureau Windows classique (C++) | Documents Microsoft'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : Création d’une application de bureau Windows classique (C++)
 
@@ -74,7 +71,7 @@ Suivez ces étapes pour créer votre premier projet de bureau Windows et entrez 
 
 Votre projet est maintenant créé et votre fichier source s’ouvre dans l’éditeur. Pour continuer, passez directement à [créer le code](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Pour créer un projet de bureau Windows dans Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Pour créer un projet de bureau Windows dans Visual Studio 2017 RTM
 
 1. Dans le menu **Fichier**, choisissez **Nouveau**, puis **Projet**.
 
@@ -369,7 +366,7 @@ Ensuite, vous allez apprendre à créer le code pour une application de bureau W
    }
    ```
 
-   `HDC`Dans ce code est un handle vers un contexte de périphérique, qui est une structure de données qu’utilise Windows pour autoriser votre application à communiquer avec le sous-système de graphiques. Le `BeginPaint` et `EndPaint` fonctions vous assurer que votre application se comporte comme un bon citoyen et n’utilise pas le contexte de périphérique plus longtemps que nécessaire. Cela permet de garantir que le sous-système de graphiques est disponible pour une utilisation par d’autres applications.
+   `HDC` Dans ce code est un handle vers un contexte de périphérique, qui est une structure de données qu’utilise Windows pour autoriser votre application à communiquer avec le sous-système de graphiques. Le `BeginPaint` et `EndPaint` fonctions vous assurer que votre application se comporte comme un bon citoyen et n’utilise pas le contexte de périphérique plus longtemps que nécessaire. Cela permet de garantir que le sous-système de graphiques est disponible pour une utilisation par d’autres applications.
 
 1. Une application traite généralement beaucoup d’autres messages, par exemple, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) lors de la création d’une fenêtre, et [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) lorsque la fenêtre est fermée. Le code suivant illustre une fonction `WndProc` basique mais complète.
 

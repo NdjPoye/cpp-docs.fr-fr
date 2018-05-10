@@ -1,13 +1,10 @@
 ---
 title: SafeNotEquals | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeNotEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 Détermine si deux nombres ne sont pas égaux.  
@@ -49,7 +44,7 @@ inline bool SafeNotEquals (
  Second nombre à comparer. Cela doit être de type U.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`Si `t` et `u` ne sont pas égaux ; sinon `false`.  
+ `true` Si `t` et `u` ne sont pas égaux ; sinon `false`.  
   
 ## <a name="remarks"></a>Notes  
  La méthode améliore `!=` car `SafeNotEquals` vous permet de comparer deux types de nombres.  
@@ -61,7 +56,7 @@ inline bool SafeNotEquals (
   
  Pour plus d’informations sur les types de modèles T, U, consultez [SafeInt, fonctions](../windows/safeint-functions.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** safeint.h  
   
  **Namespace :** Microsoft::Utilities  

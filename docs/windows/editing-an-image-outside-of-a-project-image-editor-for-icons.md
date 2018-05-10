@@ -1,31 +1,26 @@
 ---
-title: "Modification d’une Image en dehors d’un projet (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: Modification d’une Image en dehors d’un projet (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c45a813e34aa04ee41487cf6d25a8a7eab152741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e376aef574c1daa700ca98e714825a6cf7e4c66d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Modification d'une image en dehors d'un projet (Éditeur d'images pour les icônes)
 Vous pouvez ouvrir et modifier des images dans l’environnement de développement comme vous le feriez dans n’importe quelle application graphique. Les images que vous utilisez ne sont pas nécessairement partie d’un projet Visual Studio pour une modification autonome.  

@@ -1,13 +1,10 @@
 ---
 title: oleautomation | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.oleautomation
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 277123f28b9fb74676fcb7a657b6e6dbc294a4a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="oleautomation"></a>oleautomation
 Indique qu’une interface est compatible avec l’Automation.  
@@ -45,7 +40,7 @@ Indique qu’une interface est compatible avec l’Automation.
 ## <a name="example"></a>Exemple  
  Consultez les exemples de [defaultvalue](../windows/defaultvalue.md) et [nonextensible](../windows/nonextensible.md) pour un exemple d’utilisation de **oleautomation**.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -53,7 +48,7 @@ Indique qu’une interface est compatible avec l’Automation.
 |-|-|  
 |**S'applique à**|`interface`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
+|**Attributs requis**|Aucun|  
 |**Attributs non valides**|**dispinterface**|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  

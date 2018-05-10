@@ -1,13 +1,10 @@
 ---
 title: partial (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - partial_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71c0fc9739e7ef8e1e68c5678ce56fcec4a250c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="partial--c-component-extensions"></a>partial (extensions de composant C++)
 Le `partial` (mot clé) permettent aux différentes parties de la même classe ref pour être créé indépendamment et dans différents fichiers.  
@@ -78,7 +73,7 @@ class-key identifier {
   
  Pour plus d’informations sur l’utilisation de la `partial` (mot clé), consultez [Classes partielles (C + c++ / CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  

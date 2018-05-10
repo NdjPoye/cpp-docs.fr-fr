@@ -1,13 +1,10 @@
 ---
-title: "L’image de Menu (Éditeur d’images pour les icônes) | Documents Microsoft"
-ms.custom: 
+title: L’image de Menu (Éditeur d’images pour les icônes) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Image (Éditeur d'images pour les icônes)
 Le menu Image, qui apparaît uniquement lorsque l’éditeur d’images est active, dispose des commandes pour modifier les images, la gestion des palettes de couleurs et la définition des options de la fenêtre d’éditeur d’images. En outre, les commandes pour l’utilisation des images de périphérique sont disponibles lorsque vous travaillez avec des icônes et des curseurs.  
@@ -82,8 +77,8 @@ Le menu Image, qui apparaît uniquement lorsque l’éditeur d’images est acti
  **Outils**  
  Lance un sous-menu contenant tous les outils disponibles à partir de la [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md).  
   
-## <a name="requirements"></a>Configuration requise  
- Aucun.  
+## <a name="requirements"></a>Spécifications  
+ Aucun  
   
 ## <a name="see-also"></a>Voir aussi  
  [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)   

@@ -1,13 +1,10 @@
 ---
-title: "Basculer entre les contrôles de boîte de dialogue et le Code | Documents Microsoft"
-ms.custom: 
+title: Basculer entre les contrôles de boîte de dialogue et le Code | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - controls [C++], jumping to code
 - Dialog editor, switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f8ea53cf6c4428913ce7ebfa4183c135208024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ffcb4621bf0005e6b22991da7a2dde9372afa6c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Basculement entre l'Éditeur de boîtes de dialogue et le code
 Dans les applications MFC, vous pouvez double-cliquer sur les contrôles de boîte de dialogue pour atteindre le code du gestionnaire ou pour créer rapidement des fonctions gestionnaires stub.  
@@ -56,7 +51,7 @@ Dans les applications MFC, vous pouvez double-cliquer sur les contrôles de boî
   
  Pour plus d’informations sur l’ajout de ressources aux projets managés, consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le *Guide du développeur .NET Framework.* Pour plus d’informations sur l’ajout manuel des fichiers de ressources aux projets managés, l’accès aux ressources, affichage de ressources statiques et l’assignation de chaînes de ressources aux propriétés, consultez [création de fichiers de ressources pour les applications de bureau](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Pour plus d’informations sur la globalisation et localisation des ressources dans les applications managées, consultez [globalisation et localisation d’Applications .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Configuration requise  
+ Spécifications  
   
  Win32  
   

@@ -1,13 +1,10 @@
 ---
 title: UUID (attributs C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributs C++)
 Spécifie l’ID unique pour une classe ou interface.  
@@ -41,7 +36,7 @@ Spécifie l’ID unique pour une classe ou interface.
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *UUID*  
+ *uuid*  
  Identificateur unique de 128 bits.  
   
 ## <a name="remarks"></a>Notes  
@@ -56,16 +51,16 @@ Spécifie l’ID unique pour une classe ou interface.
 ## <a name="example"></a>Exemple  
  Consultez le [pouvant être liés](../windows/bindable.md) exemple pour un exemple d’utilisation de `uuid`.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
 |||  
 |-|-|  
-|**S'applique à**|**classe**, `struct`, `interface`, **union**,`enum`|  
+|**S'applique à**|**classe**, `struct`, `interface`, **union**, `enum`|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   
@@ -74,4 +69,4 @@ Spécifie l’ID unique pour une classe ou interface.
  [Attributs d’interface](../windows/interface-attributes.md)   
  [Attributs de classe](../windows/class-attributes.md)   
  [TypeDef, Enum, Union et Struct (attributs)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [UUID](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
+ [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

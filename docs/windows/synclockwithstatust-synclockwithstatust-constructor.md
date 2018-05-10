@@ -1,12 +1,9 @@
 ---
 title: Synclockwithstatust::synclockwithstatust, constructeur | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SyncLockWithStatusT, constructor
 ms.assetid: 5d2fb820-ae1b-495f-8084-ebb4fecc3104
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc5be4a37182cb23b47a2511d2e7d5eb0ffa558a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT, constructeur
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -59,7 +54,7 @@ explicit SyncLockWithStatusT(
   
  Le premier constructeur initialise l’objet SyncLockWithStatusT actuel à partir d’un autre SyncLockWithStatusT spécifié par le paramètre `other`et puis invalide l’autre objet SyncLockWithStatusT. Le deuxième constructeur est `protected`et initialise l’objet SyncLockWithStatusT actuel à un état non valide.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers::Details  

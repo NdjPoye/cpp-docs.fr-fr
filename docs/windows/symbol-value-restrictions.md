@@ -1,13 +1,10 @@
 ---
 title: Restrictions de la valeur de symbole | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.value
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbols, value restrictions
 - restrictions, symbol values
 ms.assetid: 32467ec3-690b-4cd0-a4d0-7d189a3296cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f2188d6904274fabce0f8626fa2f440ac324ff5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbol-value-restrictions"></a>Restrictions relatives à la valeur d'un symbole
 Une valeur de symbole peut être un entier exprimé de façon normale pour les directives de préprocesseur #define. Voici quelques exemples de valeurs de symboles :  
@@ -53,7 +48,7 @@ Une valeur de symbole peut être un entier exprimé de façon normale pour les d
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
--   Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments en tant que définitions de valeur. Exemple :  
+-   Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments en tant que définitions de valeur. Par exemple :  
   
     ```  
     #define   IDD_ABOUT  ID(7) //not supported  
@@ -67,7 +62,7 @@ Une valeur de symbole peut être un entier exprimé de façon normale pour les d
   
 
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Win32  
   
 ## <a name="see-also"></a>Voir aussi  

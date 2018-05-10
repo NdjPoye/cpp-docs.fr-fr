@@ -1,12 +1,9 @@
 ---
 title: '#Importer la Directive (C++) | Documents Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#import'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e649e458a6275ea369031416c379721c3f9af0e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-directive-c"></a>#import, directive (C++)
 **Spécifique à C++**  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
 -   Nom d'un fichier qui contient une bibliothèque de types, par exemple un fichier .olb, .tlb ou .dll. Le mot clé, **fichier :**, peut précéder chaque nom de fichier.  
   
--   Progid d'un contrôle dans la bibliothèque de types. Le mot clé, **progid :**, peut précéder chaque progid. Exemple :  
+-   Progid d'un contrôle dans la bibliothèque de types. Le mot clé, **progid :**, peut précéder chaque progid. Par exemple :  
   
     ```  
     #import "progid:my.prog.id.1.5"  
@@ -61,7 +56,7 @@ ms.lasthandoff: 02/23/2018
   
      Notez que lorsque vous compilez avec un compilateur croisé sur un système d'exploitation 64 bits, le compilateur ne peut lire que la ruche du Registre 32 bits. Vous pouvez utiliser le compilateur 64 bits natif pour générer et inscrire une bibliothèque de types 64 bits.  
   
--   ID de bibliothèque de la bibliothèque de types. Le mot clé, **libid :**, peut précéder chaque ID de bibliothèque. Exemple :  
+-   ID de bibliothèque de la bibliothèque de types. Le mot clé, **libid :**, peut précéder chaque ID de bibliothèque. Par exemple :  
   
     ```  
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")  
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
 -   Tout autre format de fichier pouvant être compris par le **LoadTypeLib** API.  
   
  `attributes`  
- Un ou plusieurs [attributs #import](#_predir_the_23import_directive_import_attributes). Sépare les attributs par un espace ou une virgule. Exemple :  
+ Un ou plusieurs [attributs #import](#_predir_the_23import_directive_import_attributes). Sépare les attributs par un espace ou une virgule. Par exemple :  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
@@ -101,7 +96,7 @@ ms.lasthandoff: 02/23/2018
 |Forme avec crochets pointus|Indique au préprocesseur de rechercher les fichiers bibliothèques de types en utilisant les chemins d’accès suivants :<br /><br /> 1.  Le **chemin d’accès** liste du chemin d’accès de variable d’environnement<br />2.  Le **LIB** liste du chemin d’accès de variable d’environnement<br />3.  Le chemin d’accès spécifié par le /I (autres répertoires include) option du compilateur, mais le compilateur recherche une bibliothèque de types est référencée à partir d’une autre bibliothèque de types avec le [no_registry](../preprocessor/no-registry.md) attribut.|  
   
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> En spécifiant l’ID de localisation et le numéro de Version  
- Lorsque vous spécifiez un progid, vous pouvez également spécifier l'ID de localisation et le numéro de version du progid. Exemple :  
+ Lorsque vous spécifiez un progid, vous pouvez également spécifier l'ID de localisation et le numéro de version du progid. Par exemple :  
   
 ```  
 #import "progid:my.prog.id" lcid("0") version("4.0)  
@@ -190,7 +185,7 @@ using namespace MyLib;
  Pour plus d'informations, consultez l'article de la Base de connaissances « Les méthodes de Wrapper #import peuvent provoquer une violation d'accès » (n° 242527) ou « Erreurs du compilateur lors de l'utilisation de #import avec XML » (n° 269194). Vous trouverez les articles de la Base de connaissances sur le support de MSDN Library ou à [Support technique de Microsoft](https://support.microsoft.com/).  
   
 ##  <a name="_predir_the_23import_directive_import_attributes"></a> attributs #import  
- `#import` peut éventuellement inclure un ou plusieurs attributs. Ces attributs demandent au compilateur de modifier le contenu des en-têtes de bibliothèque de types. Une barre oblique inverse (**\\**) symbole peut être utilisé pour inclure des lignes supplémentaires dans un seul `#import` instruction. Exemple :  
+ `#import` peut éventuellement inclure un ou plusieurs attributs. Ces attributs demandent au compilateur de modifier le contenu des en-têtes de bibliothèque de types. Une barre oblique inverse (**\\**) symbole peut être utilisé pour inclure des lignes supplémentaires dans un seul `#import` instruction. Par exemple :  
   
 ```  
 #import "test.lib" no_namespace \  

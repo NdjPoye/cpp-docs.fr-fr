@@ -1,13 +1,10 @@
 ---
 title: sealed (Extensions du composant C++) | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sealed--c-component-extensions"></a>sealed  (extensions du composant C++)
 `sealed` est un mot clé contextuel pour les classes ref qui indique qu'un membre virtuel ne peut pas être remplacé ou qu'un type ne peut pas être utilisé comme type de base.  
@@ -49,7 +44,7 @@ virtual return-type identifier() sealed {...};
  *identifier*  
  Nom de la fonction ou de la classe.  
   
- *type de retour*  
+ *Type de retour*  
  Type retourné par une fonction.  
   
 ## <a name="remarks"></a>Notes  
@@ -65,13 +60,13 @@ virtual return-type identifier() sealed {...};
 ## <a name="windows-runtime"></a>Windows Runtime  
  Consultez [les classes ou structures](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  (Aucune note de cette fonctionnalité de langage ne s'applique qu'au Common Language Runtime.)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  

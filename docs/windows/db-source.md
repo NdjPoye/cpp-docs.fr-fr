@@ -1,13 +1,10 @@
 ---
 title: db_source | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_source
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18c4a4af3f8df4e3af5f6aae8f6643db553c7373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b826e5d630b52062892001c26efda01b5c7293f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbsource"></a>db_source
 Crée une connexion à une source de données.  
@@ -53,20 +48,20 @@ Crée une connexion à une source de données.
  Identifie la variable qui reçoit le `HRESULT` de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.  
   
 ## <a name="remarks"></a>Notes  
- `db_source`Crée un [CDataSource](../data/oledb/cdatasource-class.md) et un [CSession](../data/oledb/csession-class.md) objet, qui représentent une connexion à une source de données du consommateur OLE DB.  
+ `db_source` Crée un [CDataSource](../data/oledb/cdatasource-class.md) et un [CSession](../data/oledb/csession-class.md) objet, qui représentent une connexion à une source de données du consommateur OLE DB.  
   
  Lorsque vous utilisez `db_source` sur une classe, le `CSession` objet devient un membre de la classe.  
   
  Lorsque vous utilisez `db_source` dans une méthode, le code injecté sera exécuté dans la portée de la méthode et le `CSession` objet est créé en tant que variable locale.  
   
- `db_source`Ajoute les propriétés de source de données à une classe ou d’une méthode. Il est utilisé conjointement avec **db_command** (qui prend la `db_source` *nom* paramètre en tant que son `source_name` paramètre).  
+ `db_source` Ajoute les propriétés de source de données à une classe ou d’une méthode. Il est utilisé conjointement avec **db_command** (qui prend la `db_source` *nom* paramètre en tant que son `source_name` paramètre).  
   
  Lorsque le fournisseur de consommateur d’attribut s’applique à cet attribut à une classe, le compilateur attribue la classe à \_ *YourClassName*accesseur, où *YourClassName* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *YourClassName*, lequel dérive \_ *YourClassName*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.  
   
  Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) et [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Exemple  
- Cet exemple appelle `db_source` sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds`est un handle pour la source de données, ce qui peut être utilisé en interne sur la `CMyCommand` classe.  
+ Cet exemple appelle `db_source` sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds` est un handle pour la source de données, ce qui peut être utilisé en interne sur la `CMyCommand` classe.  
   
 ```  
 // db_source_1.cpp  
@@ -82,7 +77,7 @@ Crée une connexion à une source de données.
 class CMyCommand {};  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 ### <a name="attribute-context"></a>Contexte d'attribut  
   
@@ -90,8 +85,8 @@ class CMyCommand {};
 |-|-|  
 |**S'applique à**|**class**, `struct`, member, method, local|  
 |**Renouvelable**|Non|  
-|**Attributs requis**|Aucun.|  
-|**Attributs non valides**|Aucun.|  
+|**Attributs requis**|Aucun|  
+|**Attributs non valides**|Aucun|  
   
  Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](../windows/attribute-contexts.md).  
   

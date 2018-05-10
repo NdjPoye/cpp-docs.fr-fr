@@ -1,31 +1,26 @@
 ---
-title: "Chaîne (Extensions du composant C++) | Documents Microsoft"
-ms.custom: 
+title: Chaîne (Extensions du composant C++) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>Chaîne  (extensions du composant C++)
 Le compilateur Visual C++ prend en charge *chaînes*, qui sont des objets qui représentent le texte comme une séquence de caractères. Visual C++ prend en charge les variables de chaîne, dont la valeur est implicite, et les littéraux, dont la valeur est une chaîne entre guillemets explicite.  
@@ -51,7 +46,7 @@ using namespace default;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations et des exemples sur les chaînes, consultez [Platform::String, std::wstring et littéraux (plate-forme)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
@@ -78,7 +73,7 @@ using namespace default;
   
  Pour plus d’informations, consultez [littéraux de chaîne et caractère](../cpp/string-and-character-literals-cpp.md).  
   
-### <a name="requirements"></a>Configuration requise  
+### <a name="requirements"></a>Spécifications  
  Option du compilateur : **/clr**  
   
 ### <a name="examples"></a>Exemples  
@@ -291,4 +286,4 @@ System.String
 ## <a name="see-also"></a>Voir aussi  
  [Extensions de composant pour les plateformes Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Littéraux de chaîne et caractères](../cpp/string-and-character-literals-cpp.md)   
- [/CLR (Compilation pour le common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

@@ -1,28 +1,23 @@
 ---
 title: Microsoft::wrl::Details Namespace | Documents Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -90,7 +85,7 @@ namespace Microsoft::WRL::Details;
 |[Swap, fonction (bibliothèque de modèles Windows Runtime C++)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Échange les valeurs des deux arguments spécifiés.|  
 |[TerminateMap, fonction](../windows/terminatemap-function.md)|Arrête les fabriques de classe dans le module spécifié.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
   
  **Namespace :** Microsoft::WRL::Details  
