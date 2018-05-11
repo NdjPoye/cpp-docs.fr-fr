@@ -1,13 +1,10 @@
 ---
-title: "Classes génériques (C + c++ / CLI) | Documents Microsoft"
-ms.custom: 
+title: Classes génériques (C + c++ / CLI) | Documents Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 Une classe générique est déclarée à l’aide de la forme suivante :  
@@ -53,7 +48,7 @@ class-body
  Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et classes d’attributs, consultez attributs.  
   
  *clé de la classe*  
- Soit `class` ou`typename`  
+ Soit `class` ou `typename`  
   
  *type-paramètre-identificateur (s)*,  
  Liste de séparées par des virgules d’identificateurs en spécifiant les noms des paramètres de type.  
@@ -81,10 +76,10 @@ class-body
  *corps de la classe*  
  Le corps de la classe contenant des champs, des fonctions membres, etc.  
   
- *déclarateurs*  
+ *Déclarateurs*  
  Déclarations des variables de ce type. Par exemple : `^` *identificateur*[`,` ...]  
   
- Vous pouvez déclarer des classes génériques telles que celles-ci (Notez que le mot clé **classe** peut être utilisé au lieu de **typename**). Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus spécifiés au point où le type. `HashTable<int, int>`est un type construit du type générique `HashTable<KeyType, ValueType>`. Un nombre de différents types construits peut être construit à partir d’un type générique unique. Les types construits construites à partir de classes génériques sont traités comme tout autre type de classe ref.  
+ Vous pouvez déclarer des classes génériques telles que celles-ci (Notez que le mot clé **classe** peut être utilisé au lieu de **typename**). Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus spécifiés au point où le type. `HashTable<int, int>` est un type construit du type générique `HashTable<KeyType, ValueType>`. Un nombre de différents types construits peut être construit à partir d’un type générique unique. Les types construits construites à partir de classes génériques sont traités comme tout autre type de classe ref.  
   
 ```  
 // generic_classes_1.cpp  
@@ -282,7 +277,7 @@ Test1
 ### <a name="non-generic-methods-in-generic-classes"></a>Méthodes non génériques dans les Classes génériques  
  Méthodes dans les classes génériques qui n’ont aucun paramètre de type supplémentaires sont généralement appelées non générique bien qu’ils sont implicitement paramétrables par la classe générique englobante.  
   
- La signature d’une méthode non générique peut inclure un ou plusieurs paramètres de type de la classe englobante, soit directement, soit dans un type construit ouvert. Exemple :  
+ La signature d’une méthode non générique peut inclure un ou plusieurs paramètres de type de la classe englobante, soit directement, soit dans un type construit ouvert. Par exemple :  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
@@ -345,7 +340,7 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>Méthodes génériques dans les Classes génériques  
- Vous pouvez déclarer des méthodes génériques dans les classes génériques et non génériques. Exemple :  
+ Vous pouvez déclarer des méthodes génériques dans les classes génériques et non génériques. Par exemple :  
   
 ## <a name="example"></a>Exemple  
   
