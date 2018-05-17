@@ -2,12 +2,9 @@
 title: -/RTC (vérifications des erreurs au moment de l’exécution) | Documents Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rtc
 - VC.Project.VCCLCompilerTool.SmallerTypeCheck
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8699a96dcd7c04bc1b2707e964afb4b68068147e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a135c9c4e32ea7a54c45719eff503ff99509d3e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Vérifications des erreurs au moment de l'exécution)
 Utilisé pour activer et désactiver la fonctionnalité de vérification-erreur d’exécution, conjointement avec la [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  
@@ -60,12 +55,12 @@ Utilisé pour activer et désactiver la fonctionnalité de vérification-erreur 
   
 ## <a name="arguments"></a>Arguments  
  `1`  
- Équivalent de **/RTC.**`su`.  
+ Équivalent de **/RTC**`su`.  
   
  `c`  
  Signale quand une valeur est affectée à un type de données plus petit et entraîne une perte de données. Par exemple, si une valeur de type `short 0x101` est assigné à une variable de type `char`.  
   
- Cette option signale les situations dans lesquelles vous voulez tronquer, par exemple, si vous souhaitez que les huit premiers bits d’un `int` retourné comme un `char`. Étant donné que **/RTC.** `c` provoque une erreur d’exécution si les informations sont perdues suite à l’affectation, vous pouvez masquer les informations nécessaires pour éviter une erreur d’exécution à la suite de **/RTC** `c`. Exemple :  
+ Cette option signale les situations dans lesquelles vous voulez tronquer, par exemple, si vous souhaitez que les huit premiers bits d’un `int` retourné comme un `char`. Étant donné que **/RTC.** `c` provoque une erreur d’exécution si les informations sont perdues suite à l’affectation, vous pouvez masquer les informations nécessaires pour éviter une erreur d’exécution à la suite de **/RTC** `c`. Par exemple :  
   
 ```  
 #include <crtdbg.h>  
@@ -92,7 +87,7 @@ int main() {
 -   Vérification de pointeur de pile, qui détecte l’altération des pointeurs de pile. Altération des pointeurs de pile peut résulter d’une discordance de convention d’appel. Par exemple, à l’aide d’un pointeur de fonction, vous appelez une fonction dans une DLL qui est exportée en tant que [__stdcall](../../cpp/stdcall.md) , mais vous déclarez le pointeur à la fonction en tant que [__cdecl](../../cpp/cdecl.md).  
   
  `u`  
- Signale quand une variable est utilisée sans avoir été initialisée. Par exemple, une instruction qui génère `C4701` peut également générer une erreur au moment de l’exécution sous **/RTC.**`u`. Toute instruction qui génère [Avertissement du compilateur (niveaux 1 et 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) génère une erreur au moment de l’exécution sous **/RTC.**`u`.  
+ Signale quand une variable est utilisée sans avoir été initialisée. Par exemple, une instruction qui génère `C4701` peut également générer une erreur au moment de l’exécution sous **/RTC**`u`. Toute instruction qui génère [Avertissement du compilateur (niveaux 1 et 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) génère une erreur au moment de l’exécution sous **/RTC**`u`.  
   
  Toutefois, considérez le fragment de code suivant :  
   
@@ -103,7 +98,7 @@ b = &a;
 c = a;  // No run-time error with /RTCu  
 ```  
   
- Si une variable aurait pu être initialisée, elle n’est pas signalée au moment de l’exécution par **/RTC.**`u`. Par exemple, une fois une variable alias via un pointeur, le compilateur pas suit la variable et de rapports utilise sans être initialisé. En effet, vous pouvez initialiser une variable par la prise de son adresse. Le & (opérateur) fonctionne comme un opérateur d’assignation dans ce cas.  
+ Si une variable aurait pu être initialisée, elle n’est pas signalée au moment de l’exécution par **/RTC**`u`. Par exemple, une fois une variable alias via un pointeur, le compilateur pas suit la variable et de rapports utilise sans être initialisé. En effet, vous pouvez initialiser une variable par la prise de son adresse. Le & (opérateur) fonctionne comme un opérateur d’assignation dans ce cas.  
   
 ## <a name="remarks"></a>Notes  
  Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution ; Pour plus d’informations, consultez [Comment : utiliser les contrôles d’exécution natifs](/visualstudio/debugger/how-to-use-native-run-time-checks).  

@@ -1,13 +1,10 @@
 ---
 title: Constantes Commit-To-Disk | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.constants
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd4873d8f9b3a658996bfd057372e8fb29e3478
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c3a815948c127c5dec0fe6412ab3c358aa409e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commit-to-disk-constants"></a>Commit-To-Disk, constantes
 **Section spécifique à Microsoft**  
@@ -46,10 +41,10 @@ ms.lasthandoff: 12/21/2017
  Écrit le contenu non écrit de la mémoire tampon spécifiée sur le disque. Cette fonctionnalité de validation sur disque se produit uniquement lors des appels explicites à la fonction [fflush](../c-runtime-library/reference/fflush.md) ou [_flushall](../c-runtime-library/reference/flushall.md). Ce mode est utile lors de l'utilisation de données sensibles. Par exemple, si votre programme prend fin après un appel à `fflush` ou à `_flushall`, vous pouvez être certain que vos données ont atteint les mémoires tampons du système d'exploitation. Toutefois, à moins qu'un fichier soit ouvert avec l'option **c**, les données peuvent ne jamais être écrites sur le disque si le système d'exploitation s'arrête également.  
   
  **n**  
- Écrit le contenu non écrit de la mémoire tampon spécifiée dans les mémoires tampons du système d'exploitation. Le système d'exploitation peut mettre en cache les données et déterminer un délai optimal pour écrire sur le disque. Dans de nombreuses conditions, ce comportement convient à un comportement efficace du programme. Toutefois, si la conservation des données est critique (par exemple, des transactions bancaires ou des informations de billet d’avion), utilisez l’option **c**. Le mode **n** est l'option par défaut.  
+ Écrit le contenu non écrit de la mémoire tampon spécifiée dans les mémoires tampons du système d'exploitation. Le système d'exploitation peut mettre en cache les données et déterminer un délai optimal pour écrire sur le disque. Dans de nombreuses conditions, ce comportement convient à un comportement efficace du programme. Toutefois, si la conservation des données est critique (par exemple, des transactions bancaires ou des informations de billet d’avion), utilisez l’option **c**. Le mode **n** est l’option par défaut.  
   
 > [!NOTE]
->  Les options **c** et **n** ne font pas partie de la norme ANSI pour `fopen`, mais sont des extensions Microsoft et ne doivent pas être utilisées lorsque la portabilité ANSI est souhaitée.  
+>  Les options **c** et **n** ne font pas partie de la norme ANSI pour `fopen`, mais sont des extensions Microsoft : ne les utilisez pas quand la portabilité ANSI est souhaitée.  
   
 ## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>Utilisation de la fonctionnalité de validation sur disque avec le code existant  
  Par défaut, les appels aux fonctions [fflush](../c-runtime-library/reference/fflush.md) ou [_flushall](../c-runtime-library/reference/flushall.md) de la bibliothèque écrivent les données dans les mémoires tampons gérées par le système d'exploitation. Le système d'exploitation détermine le délai optimal pour écrire réellement les données sur le disque. La fonctionnalité de validation sur disque de la bibliothèque runtime garantit que les données critiques sont écrites directement sur le disque plutôt que dans les mémoires tampons du système d'exploitation. Vous pouvez fournir cette fonctionnalité à un programme existant sans le réécrire en liant ses fichiers objets avec COMMODE.OBJ.  

@@ -1,13 +1,10 @@
 ---
-title: "Spécification de largeur scanf | Microsoft Docs"
-ms.custom: 
+title: Spécification de largeur scanf | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>Spécification de largeur scanf
 Ces informations s'appliquent à l'interprétation des chaînes de format dans la famille `scanf` de fonctions, y compris les versions sécurisées telles que `scanf_s`. Ces fonctions partent normalement de l'hypothèse que le flux d'entrée est divisé en une séquence de jetons. Les jetons sont séparés par un espace blanc (un espace, une tabulation ou une nouvelle ligne), ou dans le cas des types numériques, par la fin naturelle d'un type de données numérique, comme indiqué par le premier caractère qui ne peut pas être converti en texte numérique. Toutefois, la spécification de largeur peut servir à provoquer l'arrêt de l'analyse de l'entrée avant la fin naturelle d'un jeton.  
@@ -94,7 +89,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Notez que **%[a-z]** et **%[z-a]** sont interprétés comme étant équivalents à **%[abcde...z]**. Il s'agit d'une extension de fonction `scanf` commune. Toutefois, notez que la norme ANSI ne l'impose pas.  
   
 ## <a name="reading-unterminated-strings"></a>Lecture de chaînes non terminées  
- Pour stocker une chaîne sans stocker un caractère Null de fin ('\0'), utilisez la spécification `%`*n***c** où *n* est un entier décimal. Dans ce cas, le caractère de type **c** indique que l’argument est un pointeur vers un tableau de caractères. Les *n* prochains caractères sont lus à partir du flux d’entrée dans l’emplacement spécifié, et aucun caractère Null ('\0') n’est ajouté. Si *n* n’est pas spécifié, sa valeur par défaut est 1.  
+ Pour stocker une chaîne sans stocker un caractère Null de fin (« \0 »), utilisez la spécification `%`*n***c** où *n* est un entier décimal. Dans ce cas, le caractère de type **c** indique que l’argument est un pointeur vers un tableau de caractères. Les *n* prochains caractères sont lus à partir du flux d’entrée dans l’emplacement spécifié, et aucun caractère Null ('\0') n’est ajouté. Si *n* n’est pas spécifié, sa valeur par défaut est 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Quand scanf arrête de lire un champ  
  La fonction `scanf` analyse chaque champ d'entrée, caractère par caractère. Elle peut aussi arrêter de lire un champ d'entrée particulier avant d'atteindre un espace pour diverses raisons :  

@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Section spécifique à Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Ordre de transmission des arguments|Les deux premiers DWORD ou arguments plus petits qui figurent dans la liste d'arguments de gauche à droite sont transmis dans les registres ECX et EDX ; tous les autres arguments sont transmis sur la pile de droite à gauche.|  
 |Responsabilité de la maintenance de la pile|La fonction appelée enlève les arguments de la pile.|  
-|Convention de décoration de nom|L'arobase (@) est préfixé aux noms ; un arobase suivi du nombre d'octets (au format décimal) dans la liste de paramètres est suffixé aux noms.|  
+|Convention de décoration de nom|Arobase (\@) est préfixé aux noms ; un arobase suivi du nombre d’octets (au format décimal) dans le paramètre de liste est suffixée aux noms.|  
 |Convention de conversion de casse|Aucune conversion de casse n'est effectuée.|  
   
 > [!NOTE]

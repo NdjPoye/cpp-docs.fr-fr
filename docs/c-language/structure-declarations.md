@@ -1,13 +1,10 @@
 ---
-title: "Déclarations de structure | Microsoft Docs"
-ms.custom: 
+title: Déclarations de structure | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>Déclarations de structure
 Une déclaration de structure désigne un type et spécifie une séquence de valeurs variables (appelées membres ou champs de la structure) qui peuvent avoir des types. Un identificateur facultatif, appelé balise indique le nom du type de structure et peut être utilisé dans les références suivantes au type structure. Une variable de ce type structure contient la séquence entière définie par ce type. Les structures en C sont semblables aux types appelés enregistrements dans d'autres langages.  
   
 ## <a name="syntax"></a>Syntaxe  
  *struct-or-union-specifier* :  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   
@@ -51,7 +46,7 @@ Une déclaration de structure désigne un type et spécifie une séquence de val
  Le contenu de structure est défini comme  
   
  *struct-declaration* :  
- *specifier-qualifier-list struct-declarator-list* **;**  
+ *specifier-qualifier-list struct-declarator-list*  **;**  
   
  *specifier-qualifier-list* :  
  *type-specifier specifier-qualifier-list* opt  

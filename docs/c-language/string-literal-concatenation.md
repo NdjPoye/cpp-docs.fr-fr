@@ -1,30 +1,25 @@
 ---
-title: "Concaténation de littéraux chaîne | Microsoft Docs"
-ms.custom: 
+title: Concaténation de littéraux chaîne | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-literal-concatenation"></a>Concaténation de littéraux chaîne
 Pour former des littéraux de chaîne acceptant plusieurs lignes, vous pouvez concaténer les deux chaînes. Pour cela, tapez une barre oblique inverse, puis appuyez sur la touche RETOUR. La barre oblique fait que le compilateur ignore le saut de ligne suivant. Par exemple, la chaîne littérale  
@@ -42,7 +37,7 @@ ken into two or more pieces."
   
  La concaténation de chaînes peut être utilisée n'importe où vous avez peut-être utilisé précédemment une barre oblique suivie d'un caractère de saut de ligne pour écrire des chaînes de plus d'une ligne.  
   
- Pour forcer une nouvelle ligne dans un littéral de chaîne, entrez la séquence d'échappement de saut de ligne (**\n**) au point de la chaîne où la ligne doit comporter un saut de ligne, comme suit :  
+ Pour forcer une nouvelle ligne dans un littéral de chaîne, entrez la séquence d’échappement de saut de ligne (**\n**) au point dans la chaîne où vous voulez un saut de ligne, comme suit :  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  
