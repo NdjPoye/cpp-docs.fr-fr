@@ -1,7 +1,7 @@
 ---
-title: ATL (Classes) | Documents Microsoft
+title: ATL classes et structs | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL (Classes)
-La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).  
+# <a name="atl-classes-and-structs"></a>Les structs et les classes ATL
+La bibliothèque ATL (Active Template) inclut les classes et structs suivants. Pour rechercher une classe particulière par catégorie, consultez la [vue d’ensemble de la classe ATL](../../atl/atl-class-overview.md).  
   
-|Classe|Description|Fichier d'en-tête|  
+|Classe / struct|Description|Fichier d'en-tête|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Contient les données d’instance de classe dans le code de fenêtrage dans ATL.|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|Utilisé par aucun projet qui utilise ATL.|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Utilisé par le code relatif à COM dans ATL.| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|Contient des informations de type utilisées pour décrire une méthode ou propriété sur une dispinterface.|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|Contient les données utilisées par chaque module ATL.|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Utilisé par le code de fenêtrage dans ATL.|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Cette classe est utilisée par les macros de conversion de chaînes `CA2TEX` et `CT2AEX`et le typedef **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Cette classe est utilisée par les macros de conversion de chaînes `CA2CTEX` et `CT2CAEX`et le typedef **CA2CA**.|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Cette classe est utilisée par les macros de conversion de chaînes `CA2TEX`, `CA2CTEX`, `CT2WEX`, et `CT2CWEX`et le typedef **CA2W**.|atlconv.h|  
@@ -224,7 +231,6 @@ La bibliothèque ATL (Active Template) inclut les classes suivantes. Pour recher
  [Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)   
  [Fonctions](../../atl/reference/atl-functions.md)   
  [Variables globales](../../atl/reference/atl-global-variables.md)   
- [Structures](../../atl/reference/atl-structures.md)   
  [Typedefs](../../atl/reference/atl-typedefs.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

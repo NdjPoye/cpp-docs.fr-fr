@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
 Microsoft fournit plusieurs API pour la programmation d’applications clientes et serveur. Nombre de nouvelles applications sont écrites pour Internet et technologies, fonctionnalités de navigateur et modification des options de sécurité, les nouveaux types d’applications seront écrit. Les navigateurs s’exécutent sur les ordinateurs clients, en fournissant l’accès à Internet et l’affichage des pages HTML qui contiennent du texte, des graphiques, des contrôles ActiveX et des documents. Serveurs fournissent des services gopher, HTTP et FTP et exécutent des applications d’extension de serveur à l’aide de CGI. Votre application personnalisée peut récupérer des informations et fournir des données sur Internet.  
@@ -52,8 +52,6 @@ Microsoft fournit plusieurs API pour la programmation d’applications clientes 
 -   [Notions de base de WinInet](../mfc/wininet-basics.md)  
   
 -   [HTML - Notions de base](../mfc/html-basics.md)  
-  
--   [HTTP - Notions de base](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>Rubriques connexes  
   

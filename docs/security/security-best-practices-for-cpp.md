@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -99,8 +99,7 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 
 Pour plus d’informations sur la façon d’identifier et d’atténuation contre les vulnérabilités de matériel exécution spéculative côté canal dans le logiciel de C++, consultez [Guide du développeur C++ pour les canaux du côté spéculatif d’exécution](developer-guidance-speculative-execution.md).
 
-  
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Security>   
- [Sécurité](/dotnet/standard/security/index)   
- [Répercussions du contrôle de compte utilisateur sur votre application](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [Sécurité](/dotnet/standard/security/index)   
+- [Répercussions du contrôle de compte utilisateur sur votre application](how-user-account-control-uac-affects-your-application.md)

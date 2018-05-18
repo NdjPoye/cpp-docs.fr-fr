@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d460733eff0f5ef78ae92a98347f2eec5f84dc0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fc2777e32fb6ad95248b266b1ff62b1983c83c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-macros"></a>Macros ATL
 Pour rechercher une macro ATL par catégorie, consultez les rubriques suivantes.  
@@ -86,6 +86,6 @@ Pour rechercher une macro ATL par catégorie, consultez les rubriques suivantes.
  [Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)   
  [Fonctions](../../atl/reference/atl-functions.md)   
  [Variables globales](../../atl/reference/atl-global-variables.md)   
- [Structures](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
- [Classes](../../atl/reference/atl-classes.md)
+ [Les classes et structs](../../atl/reference/atl-classes.md)  
+ [Typedef](../../atl/reference/atl-typedefs.md)   
+
