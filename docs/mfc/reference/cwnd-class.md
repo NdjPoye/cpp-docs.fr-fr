@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 Fournit les fonctionnalités de base de toutes les classes de fenêtres de la bibliothèque MFC (Microsoft Foundation Class).  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|Signale qu'une fenêtre spécifiée va être supprimée de la chaîne.|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|Appelé quand l'état de l'interface utilisateur (IU) doit être modifié.|  
 |[CWnd::OnChar](#onchar)|Appelé quand une séquence de touches est traduite en caractère non système.|  
-|[CWnd::OnCharToItem](#onchartoitem)|Appelée par une zone de liste enfant avec le [LBS_WANTKEYBOARDINPUT](list-box-styles.md) style en réponse à une [WM_CHAR](#onchar) message.|  
+|[CWnd::OnCharToItem](#onchartoitem)|Appelée par une zone de liste enfant avec le [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style en réponse à une [WM_CHAR](#onchar) message.|  
 |[CWnd::OnChildActivate](#onchildactivate)|Appelé pour des fenêtres enfants d'interface multidocument (MDI) chaque fois que la taille ou la position de `CWnd` change ou que `CWnd` est activé.|  
 |[CWnd::OnChildNotify](#onchildnotify)|Appelé par une fenêtre parente pour offrir à un contrôle de notification la possibilité de répondre à une notification de contrôle.|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Envoyé quand le contenu du Presse-papiers a changé.|  

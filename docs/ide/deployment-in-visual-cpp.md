@@ -1,7 +1,7 @@
 ---
 title: Déploiement dans Visual C++ | Documents Microsoft
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Déploiement dans Visual C++
 
 Installation de votre application sur un ordinateur autre que votre ordinateur de développement est appelée *déploiement*. Lorsque vous déployez une application Visual C++ vers un autre ordinateur, vous devez installer l’application et tous les fichiers bibliothèques qu'il dépend. Visual Studio permet de trois façons de déployer les bibliothèques Visual C++ avec votre application : *déploiement central*, *déploiement local*, et *liaison statique*. Déploiement central place les fichiers de bibliothèque sous le répertoire Windows, où le service Windows Update peut les mettre à jour automatiquement. Déploiement local place les fichiers de bibliothèque dans le même répertoire que votre application. Vous devez redéployer toutes les bibliothèques déployées localement afin de les mettre à jour. La liaison statique, le code de bibliothèque est liée dans votre application. Vous devez recompiler et redéployer votre application pour tirer parti de toutes les mises à jour pour les bibliothèques lorsque vous utilisez la liaison statique.
+
+Dans Visual Studio 2015, la bibliothèque Microsoft C Runtime a été refactorisée dans les composants de la bibliothèque de local spécifique à la version et une nouvelle bibliothèque Universal Runtime C qui fait désormais partie de Windows. Pour plus d’informations sur le déploiement de la bibliothèque Universal CRT, consultez [déploiement de la bibliothèque Universal CRT](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Déploiement central
 
@@ -59,4 +61,5 @@ L’ordre de chargement des bibliothèques Visual C++ est dépendante du systèm
 
 ## <a name="see-also"></a>Voir aussi
 
-[Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Déploiement d’Applications de bureau](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Déploiement de CRT universel](universal-crt-deployment.md)

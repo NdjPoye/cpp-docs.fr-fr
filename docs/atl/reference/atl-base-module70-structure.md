@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4e0173ecca5256ed942c23dbaf377850ee8192
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 484fc4a68d0421cb12e901b2d56f30e95f6cb79b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atlbasemodule70-structure"></a>Structure de _ATL_BASE_MODULE70
 Utilisé par aucun projet qui utilise ATL.  
@@ -75,7 +75,7 @@ struct _ATL_BASE_MODULE70 {
  **En-tête :** atlcore.h  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures](../../atl/reference/atl-structures.md)
+ [Les classes et structs](../../atl/reference/atl-classes.md)
 
 
 
