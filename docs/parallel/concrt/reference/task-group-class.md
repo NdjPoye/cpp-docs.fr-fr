@@ -1,4 +1,4 @@
-La `task_group` classe représente une collection de travaux parallèles qui permettre être attendue ou annulée.  
+La classe `task_group` représente une collection de travail parallèle qui peut être attendue ou annulée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -19,26 +19,26 @@ class task_group;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Annuler](#cancel)|Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|  
+|[cancel](#cancel)|Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|  
 |[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’indique pas nécessairement que le `cancel` méthode a été appelée sur le `task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `task_group` objet s’exécute en ligne et un groupe de tâches supplémentaire en haut dans l’arborescence de travail a été annulé. Dans tels cas où l’exécution peut déterminer à l’avance que cette annulation passera via cet `task_group` objet, `true` s’affichera également.|  
 |[run](#run)|Surchargé. Planifie une tâche sur le `task_group` objet. Si un `task_handle` objet est passé en tant que paramètre à `run`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La version de la méthode qui accepte une référence à un objet de fonction comme un paramètre implique l’allocation de tas au sein du runtime qui peut être moins performante que l’utilisation de la version qui prend une référence à un `task_handle` objet. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié par ce paramètre.|  
 |[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’assistance de la `task_group` objet pour la prise en charge complète de l’annulation. La fonction attend ensuite que tout le travail sur le `task_group` objet est terminée ou annulé. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet.|  
 |[attente](#wait)|Attend que tout le travail sur le `task_group` objet est terminée ou annulé.|  
   
 ## <a name="remarks"></a>Notes  
- Contrairement aux très restreinte `structured_task_group` (classe), la `task_group` classe est une construction beaucoup plus générale. Il n’a pas de restrictions décrites par [structured_task_group](structured-task-group-class.md). `task_group`objets en toute sécurité peuvent être utilisées sur les threads et utilisées dans un format libre. L’inconvénient de la `task_group` construction est qu’il ne peut pas effectuer, ainsi que les `structured_task_group` construire pour les tâches qui exécutent des petites quantités de travail.  
+ Contrairement aux très restreinte `structured_task_group` (classe), la `task_group` classe est une construction beaucoup plus générale. Il n’a pas de restrictions décrites par [structured_task_group](structured-task-group-class.md). `task_group` objets en toute sécurité peuvent être utilisées sur les threads et utilisées dans un format libre. L’inconvénient de la `task_group` construction est qu’il ne peut pas effectuer, ainsi que les `structured_task_group` construire pour les tâches qui exécutent des petites quantités de travail.  
   
  Pour plus d’informations, consultez [parallélisme des tâches](../task-parallelism-concurrency-runtime.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `task_group`  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ppl.h  
   
  **Espace de noms :** concurrency  
   
-##  <a name="cancel"></a>Annuler 
+##  <a name="cancel"></a> Annuler 
 
  Permet un meilleur effort pour annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.  
   
@@ -49,7 +49,7 @@ void cancel();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [annulation](../cancellation-in-the-ppl.md).  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’indique pas nécessairement que le `cancel` méthode a été appelée sur le `task_group` objet (bien que ce cas la méthode retourne `true`). Il peut arriver que le `task_group` objet s’exécute en ligne et un groupe de tâches supplémentaire en haut dans l’arborescence de travail a été annulé. Dans tels cas où l’exécution peut déterminer à l’avance que cette annulation passera via cet `task_group` objet, `true` s’affichera également.  
   
@@ -63,7 +63,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [annulation](../cancellation-in-the-ppl.md).  
   
-##  <a name="run"></a>exécuter 
+##  <a name="run"></a> Exécuter 
 
  Planifie une tâche sur le `task_group` objet. Si un `task_handle` objet est passé en tant que paramètre à `run`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La version de la méthode qui accepte une référence à un objet de fonction comme un paramètre implique l’allocation de tas au sein du runtime qui peut être moins performante que l’utilisation de la version qui prend une référence à un `task_handle` objet. La version qui prend le paramètre `_Placement` amène la tâche à être favorise l’exécution à l’emplacement spécifié par ce paramètre.  
   
@@ -119,7 +119,7 @@ void run(
   
  La méthode lève un [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exception si la tâche gérer donné par le `_Task_handle` paramètre a déjà été planifié sur un objet de groupe de tâches via la `run` (méthode) et il y a eu aucune appel d’intervention à la `wait` ou `run_and_wait` méthode sur ce groupe de tâches.  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  Planifie une tâche à exécuter inline dans le contexte d’appel avec l’assistance de la `task_group` objet pour la prise en charge complète de l’annulation. La fonction attend ensuite que tout le travail sur le `task_group` objet est terminée ou annulé. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet.  
   
@@ -162,7 +162,7 @@ task_group_status run_and_wait(
   
  Dans le chemin d’exécution non exceptionnel, vous avez une autorisation d’appeler cette méthode ou la `wait` méthode avant le destructeur de la `task_group` s’exécute.  
   
-##  <a name="ctor"></a>task_group 
+##  <a name="ctor"></a> task_group 
 
  Construit un nouveau `task_group` objet.  
   
@@ -181,7 +181,7 @@ task_group(
 ### <a name="remarks"></a>Notes  
  Le constructeur qui accepte un jeton d’annulation crée un `task_group` qui sera annulée lors de l’annulation de la source associée au jeton. En fournissant un jeton d’annulation explicite isole également de participer à une annulation implicite à partir d’un groupe parent avec un jeton différent ou aucun jeton de ce groupe de tâches.  
   
-##  <a name="dtor"></a>~ task_group 
+##  <a name="dtor"></a> ~ task_group 
 
  Détruit un objet `task_group`. Vous devez appeler la la `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute en tant que le résultat de la pile de déroulement en raison d’une exception.  
   
@@ -192,7 +192,7 @@ task_group(
 ### <a name="remarks"></a>Notes  
  Si le destructeur s’exécute en tant que le résultat d’une exécution normale (par exemple, pas déroulement de pile en raison d’une exception) et ne le `wait` ni `run_and_wait` a été appelée, le destructeur peut lever une [missing_wait](missing-wait-class.md) exception.  
   
-##  <a name="wait"></a>attente 
+##  <a name="wait"></a> attente 
 
  Attend que tout le travail sur le `task_group` objet est terminée ou annulé.  
   
