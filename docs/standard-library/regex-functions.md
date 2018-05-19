@@ -114,7 +114,7 @@ bool regex_match(
 
 `ptr` Pointeur vers le début de la séquence à correspondent. Si ptr est char*, utilisez cmatch et regex. Si ptr est wchar_t\*, utilisez wcmatch et wregex.
 
-`re` L’expression régulière pour faire correspondre. Type `regex` pour string et char*, ou `wregex` pour wstring et wchar_t\*.
+`re` L’expression régulière pour faire correspondre. Type `regex` pour string et char\*, ou `wregex` pour wstring et wchar_t\*.
 
 `str` Chaîne à faire correspondre. Correspond au type Elem.
 

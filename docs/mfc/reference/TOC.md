@@ -419,6 +419,7 @@
 ## [CSpinButtonCtrl, classe](cspinbuttonctrl-class.md)
 ## [CSplitButton, classe](csplitbutton-class.md)
 ## [CSplitterWnd, classe](csplitterwnd-class.md)
+## [CSplitterWndEx, classe](csplitterwndex-class.md)
 ## [CStatic, classe](cstatic-class.md)
 ## [CStatusBar, classe](cstatusbar-class.md)
 ## [CStatusBarCtrl, classe](cstatusbarctrl-class.md)
