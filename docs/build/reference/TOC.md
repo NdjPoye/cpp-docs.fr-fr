@@ -53,6 +53,7 @@
 #### [/favor (Optimisation pour les particularités d’architecture)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (Chemin complet du fichier de code source dans les diagnostics)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (Spécifier le comportement de virgule flottante)](fp-specify-floating-point-behavior.md)
+##### [Optimisation du code en virgule flottante avec Microsoft Visual C++](floating-point-optimization.md)
 #### [/FS (Forcer les écritures PDB synchrones)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (Optimiser pour une application Windows)](ga-optimize-for-windows-application.md)
 #### [/Gd, /Gr, /Gv, /Gz (Convention d’appel)](gd-gr-gv-gz-calling-convention.md)
