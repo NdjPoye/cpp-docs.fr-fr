@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Chaque fonction retourne un pointeur vers une mémoire tampon contenant le nom d
 
 ## <a name="remarks"></a>Notes
 
-Le **_fullpath_dbg** et **_wfullpath_dbg** fonctions sont identiques aux **_fullpath** et **_wfullpath** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, allocation de mémoire si la valeur NULL est passée comme premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
+Le **_fullpath_dbg** et **_wfullpath_dbg** fonctions sont identiques aux **_fullpath** et **_wfullpath** , sauf que, lorsque **_DEBUG** est défini, ces fonctions utilisent la version debug de **malloc**, **_malloc_dbg**, allocation de mémoire si **NULL** est passé en tant que premier paramètre. Pour plus d’informations sur les fonctionnalités de débogage de **_malloc_dbg**, consultez [_malloc_dbg](malloc-dbg.md).
 
 Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. Au lieu de cela, vous pouvez définir le **_CRTDBG_MAP_ALLOC** indicateur. Lorsque **_CRTDBG_MAP_ALLOC** est défini, les appels à **_fullpath** et **_wfullpath** sont remappés à **_fullpath_dbg** et **_wfullpath_dbg**, respectivement, avec la *blockType* la valeur **_NORMAL_BLOCK**. Par conséquent, il est inutile d’appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme **_CLIENT_BLOCK**. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 

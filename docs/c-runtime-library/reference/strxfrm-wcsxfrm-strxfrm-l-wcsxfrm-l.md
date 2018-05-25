@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Après la transformation, un appel à **strcmp** avec les deux chaînes transfor
 
 **wcsxfrm** est une version à caractères larges de **strxfrm**; les arguments de chaîne de **wcsxfrm** sont des pointeurs à caractères larges. Pour **wcsxfrm**, après la transformation de chaîne, un appel à **wcscmp** avec les deux chaînes transformées génère des résultats identiques à ceux d’un appel à **wcscoll** appliquée à la deux chaînes d’origine. **wcsxfrm** et **strxfrm** comportent de façon identique. **wcsxfrm** utilise les paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux ; **_wcsxfrm_l** utilise les paramètres régionaux passé au lieu des paramètres régionaux actuels.
 
-Ces fonctions valident leurs paramètres. Si *strSource* est un pointeur null, ou *strDest* est un pointeur NULL (sauf si le nombre est égal à zéro), ou si *nombre* est supérieur à **INT_MAX**, Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **INT_MAX**.
+Ces fonctions valident leurs paramètres. Si *strSource* est un pointeur null, ou *strDest* est un **NULL** pointeur (sauf si le nombre est égal à zéro), ou si *nombre* est supérieur à **INT_MAX**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retourner **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

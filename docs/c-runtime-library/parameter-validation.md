@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Validation de paramètre
-La plupart des fonctions CRT avec sécurité avancée et de nombreuses fonctions préexistantes valident leurs paramètres. Elles peuvent notamment rechercher les pointeurs de valeur NULL, vérifier que les entiers se trouvent dans une plage valide ou encore vérifier que les valeurs d’énumération sont valides. Quand un paramètre non valide est trouvé, son gestionnaire s’exécute.  
+La plupart des fonctions CRT avec sécurité avancée et de nombreuses fonctions préexistantes valident leurs paramètres. Elles peuvent notamment rechercher les pointeurs de valeur **NULL**, vérifier que les entiers se trouvent dans une plage valide ou encore vérifier que les valeurs d’énumération sont valides. Quand un paramètre non valide est trouvé, son gestionnaire s’exécute.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Routine du gestionnaire du paramètre non valide  
  Quand une fonction de la bibliothèque Runtime C détecte un paramètre non valide, elle capture des informations sur l’erreur, puis appelle une macro qui inclut une fonction de distribution du gestionnaire du paramètre non valide, du type [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) ou [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). La fonction de distribution appelée varie selon que votre code est, respectivement, une version Debug, une version commerciale ou que l’erreur est n’est pas considérée comme récupérable. 

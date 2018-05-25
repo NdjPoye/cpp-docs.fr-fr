@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’exclusion du terminal **NULL**. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
+Chacune de ces fonctions retourne le nombre de caractères dans *str*, à l’exclusion de la valeur null de Terminal Server. Aucune valeur de retour n’est réservée pour indiquer une erreur, à l’exception de **_mbstrlen** et **_mbstrlen_l**, qui retournent `((size_t)(-1))` si la chaîne contient un caractère multioctet non valide.
 
 ## <a name="remarks"></a>Notes
 

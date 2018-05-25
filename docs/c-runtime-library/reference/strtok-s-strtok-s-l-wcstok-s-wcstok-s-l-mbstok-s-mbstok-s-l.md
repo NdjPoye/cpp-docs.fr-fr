@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -129,7 +129,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le jeton suivant trouvé dans *str*. Retourne **NULL** lorsque ne figurent pas plus de jetons. Chaque appel modifie *str* en substituant un **NULL** caractère pour le premier délimiteur qui se produit après le jeton retourné.
+Retourne un pointeur vers le jeton suivant trouvé dans *str*. Retourne **NULL** lorsque ne figurent pas plus de jetons. Chaque appel modifie *str* en remplaçant un caractère null pour le premier délimiteur qui se produit après le jeton retourné.
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 

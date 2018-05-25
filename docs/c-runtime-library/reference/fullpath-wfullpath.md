@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Paramètres
 
 *absPath*<br/>
-Pointeur vers une mémoire tampon contenant le nom de chemin absolu ou complet, ou NULL.
+Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu ou complet, ou **NULL**.
 
 *relPath*<br/>
 Nom de chemin d’accès relatif.
@@ -82,7 +82,7 @@ Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant
 
 ## <a name="remarks"></a>Notes
 
-Le **_fullpath** développe le nom de chemin d’accès relatif dans *relPath* et son chemin d’accès complet ou absolu stocke ce nom dans *absPath*. Si *absPath* est NULL, **malloc** est utilisé pour allouer une mémoire tampon de longueur suffisante pour contenir le nom de chemin d’accès. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement aux **_makepath**, **_fullpath** peut être utilisé pour obtenir le nom de chemin d’accès absolu pour les chemins d’accès relatifs (*relPath*) qui incluent «. / « ou ».. / » dans leur nom.
+Le **_fullpath** développe le nom de chemin d’accès relatif dans *relPath* et son chemin d’accès complet ou absolu stocke ce nom dans *absPath*. Si *absPath* est **NULL**, **malloc** est utilisé pour allouer une mémoire tampon de longueur suffisante pour contenir le nom de chemin d’accès. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement aux **_makepath**, **_fullpath** peut être utilisé pour obtenir le nom de chemin d’accès absolu pour les chemins d’accès relatifs (*relPath*) qui incluent «. / « ou ».. / » dans leur nom.
 
 Par exemple, pour utiliser les routines du runtime C, l’application doit inclure les fichiers d’en-tête qui contiennent les déclarations pour les routines. Chaque instruction include du fichier d’en-tête référence l’emplacement du fichier de manière relative (à partir du répertoire de travail de l’application) :
 

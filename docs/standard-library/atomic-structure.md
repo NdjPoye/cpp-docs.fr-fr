@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic, structure
 
@@ -63,7 +63,7 @@ struct atomic;
 
 Le type *Ty* doit être *simplement être copiés*. Autrement dit, à l’aide de [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) pour copier ses octets doit produire une valide *Ty* objet valeur est égale à l’objet d’origine. Le [compare_exchange_weak](#compare_exchange_weak) et [compare_exchange_strong](#compare_exchange_strong) utilisation de fonctions membres [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) pour déterminer si deux *Ty* valeurs sont égales. Ces fonctions n’utilisent pas un *Ty*-défini **opérateur ==**. Les fonctions membres de **atomique** utiliser **memcpy** pour copier les valeurs de type *Ty*.
 
-Une spécialisation partielle, ** atomique\<Ty * > **, existe pour tous les types de pointeur. La spécialisation permet d’ajouter un décalage à la valeur de pointeur gérée ou de lui soustraire un décalage. Les opérations arithmétiques prennent un argument de type **ptrdiff_t** et ajuster cet argument en fonction de la taille de *Ty* pour être cohérent avec l’adresse ordinaire arithmétique.
+Une spécialisation partielle, **atomique\<Ty \* >** , existe pour tous les types de pointeur. La spécialisation permet d’ajouter un décalage à la valeur de pointeur gérée ou de lui soustraire un décalage. Les opérations arithmétiques prennent un argument de type **ptrdiff_t** et ajuster cet argument en fonction de la taille de *Ty* pour être cohérent avec l’adresse ordinaire arithmétique.
 
 Une spécialisation existe pour chaque type intégral sauf **bool**. Chaque spécialisation fournit un ensemble complet de méthodes pour les opérations atomiques arithmétiques et logiques.
 

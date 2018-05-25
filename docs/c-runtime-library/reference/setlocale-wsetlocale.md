@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ Au démarrage du programme, l'équivalent de l'instruction suivante est exécut�
 
 `setlocale( LC_ALL, "C" );`
 
-Le *paramètres régionaux* argument peut prendre un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et code de pays/région, une page de codes, ou une chaîne de langue, code de pays/région et page de codes. L'ensemble des noms de paramètres régionaux, des langages, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux pris en charge par l'API Windows NLS, à l'exception des pages de codes qui requièrent plus de deux octets par caractère, telles que UTF-7 et UTF-8. Si vous fournissez une valeur de page de code de UTF-7 ou UTF-8, **setlocale** échoue, retournant NULL. L’ensemble des noms de paramètres régionaux pris en charge par **setlocale** sont décrites dans [noms de paramètres régionaux, les langues et les chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **setlocale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
+Le *paramètres régionaux* argument peut prendre un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et code de pays/région, une page de codes, ou une chaîne de langue, code de pays/région et page de codes. L'ensemble des noms de paramètres régionaux, des langages, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux pris en charge par l'API Windows NLS, à l'exception des pages de codes qui requièrent plus de deux octets par caractère, telles que UTF-7 et UTF-8. Si vous fournissez une valeur de page de code de UTF-7 ou UTF-8, **setlocale** échoue et génère **NULL**. L’ensemble des noms de paramètres régionaux pris en charge par **setlocale** sont décrites dans [noms de paramètres régionaux, les langues et les chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **setlocale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
 
 Un pointeur null est passé en tant que le *paramètres régionaux* argument indique **setlocale** d’interroger au lieu de définir l’environnement international. Si le *paramètres régionaux* argument est un pointeur null, les paramètres régionaux actuels du programme ne sont pas modifié. Au lieu de cela, **setlocale** retourne un pointeur vers la chaîne qui est associée à la *catégorie* de paramètres régionaux du thread. Si le *catégorie* argument est **LC_ALL**, la fonction retourne une chaîne qui indique la configuration actuelle de chaque catégorie, séparé par des points-virgules. Par exemple, la séquence d'appels
 

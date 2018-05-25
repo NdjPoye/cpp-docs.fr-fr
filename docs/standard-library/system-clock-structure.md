@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock, structure
 
@@ -42,8 +42,6 @@ Un *type d’horloge* est utilisé pour obtenir l’heure actuelle au format UTC
 Une horloge est *monotone* si la valeur retournée par un premier appel à `now()` est toujours inférieure ou égale à la valeur retournée par un appel ultérieur à `now()`.
 
 Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les battements d’horloge est constant.
-
-Dans cette implémentation, un `system_clock` est un synonyme de `high_resolution_clock`.
 
 ## <a name="members"></a>Membres
 

@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ Taille demandée du bloc de mémoire (en octets).
 Type du bloc de mémoire demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé l'opération d'allocation ou NULL.
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où l'opération d'allocation a été demandée ou NULL.
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
 
 Le *nom de fichier* et *linenumber* paramètres sont disponibles uniquement quand **_malloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)constante du préprocesseur a été définie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Une fois l'opération réussie, cette fonction retourne un pointeur vers la partie utilisateur du bloc de mémoire alloué, appelle la fonction du nouveau gestionnaire ou retourne Null. Pour obtenir une description complète du comportement de retour, voir la section Notes suivante. Pour plus d’informations sur l’utilisation de la fonction du nouveau gestionnaire, consultez la fonction [malloc](malloc.md).
+Opération réussie, cette fonction retourne un pointeur vers la partie utilisateur du bloc de mémoire alloué, appelle la nouvelle fonction de gestionnaire ou retourne **NULL**. Pour obtenir une description complète du comportement de retour, voir la section Notes suivante. Pour plus d’informations sur l’utilisation de la fonction du nouveau gestionnaire, consultez la fonction [malloc](malloc.md).
 
 ## <a name="remarks"></a>Notes
 

@@ -104,11 +104,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fournit les fonctionnalités d'un contrôle d'édition Windows.  
@@ -188,7 +188,7 @@ class CEdit : public CWnd
   
  Chaque entrée de table des messages prend la forme suivante :  
   
- **ON_** Notification **(** *id, memberFxn ***)**  
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
   
  où `id` Spécifie l’ID de fenêtre enfant du contrôle d’édition envoie la notification, et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer la notification.  
   

@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Le nombre de champs qui ont été correctement convertis et assignés. La valeur
 
 Le **_cscanf** fonction lit les données directement à partir de la console dans les emplacements données par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable avec un type qui correspond à un spécificateur de type dans *format*. Les contrôles de format des champs de l’interprétation de l’entrée et a la même forme et fonction que la *format* paramètre pour le [scanf](scanf-scanf-l-wscanf-wscanf-l.md) (fonction). Alors que **_cscanf** normalement reproduit en écho le caractère d’entrée, il ne fera pas si le dernier appel a été **_ungetch**.
 
-Cette fonction valide ses paramètres. Si format a la valeur NULL, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
+Cette fonction valide ses paramètres. Si le format est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 
 Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 

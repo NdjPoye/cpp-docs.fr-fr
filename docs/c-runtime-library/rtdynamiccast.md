@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 Implémentation du runtime de l’opérateur [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
  `true` si l’entrée est une référence ; `false` si l’entrée est un pointeur.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pointeur vers le sous-objet approprié, en cas de réussite ; sinon, NULL.  
+ Pointeur vers le sous-objet approprié, en cas de réussite ; sinon, **NULL**.  
   
 ## <a name="exceptions"></a>Exceptions  
  `bad_cast()` si l’entrée de `dynamic_cast<>` est une référence et que le cast échoue.  

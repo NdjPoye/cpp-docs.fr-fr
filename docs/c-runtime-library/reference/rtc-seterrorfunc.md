@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f288a54f6260584fb30a52d427396f583afacdbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -57,7 +57,7 @@ L’adresse de la fonction qui va gérer les vérifications d’erreurs au momen
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction d’erreur définie précédemment. S’il n’existe pas de fonction définie précédemment, retourne NULL.
+La fonction d’erreur définie précédemment. S’il n’existe aucune fonction définie précédemment, retourne **NULL**.
 
 ## <a name="remarks"></a>Notes
 

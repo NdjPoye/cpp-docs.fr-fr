@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Taille demandée pour le bloc réalloué (octets).
 Type pour le bloc réalloué demandé : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé le **realloc** opération ou NULL.
+Pointeur vers le nom du fichier source qui a demandé le **realloc** opération ou **NULL**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où la **realloc** opération a été demandée ou NULL.
+Numéro de ligne dans le fichier source où la **realloc** opération a été demandée ou **NULL**.
 
 Le *nom de fichier* et *linenumber* paramètres sont disponibles uniquement quand **_realloc_dbg** a été appelée explicitement ou [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) constante du préprocesseur a été définie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Une fois exécutée, cette fonction retourne un pointeur vers la partie utilisateur du bloc de mémoire réalloué, appelle la nouvelle fonction de gestionnaire ou retourne NULL. Pour obtenir une description complète du comportement de retour, voir la section Notes suivante. Pour plus d’informations sur l’utilisation de la fonction de nouveau gestionnaire, voir la fonction [realloc](realloc.md).
+Opération réussie, cette fonction retourne un pointeur vers la partie utilisateur du bloc de mémoire réalloué, appelle la nouvelle fonction de gestionnaire, soit retourne **NULL**. Pour obtenir une description complète du comportement de retour, voir la section Notes suivante. Pour plus d’informations sur l’utilisation de la fonction de nouveau gestionnaire, voir la fonction [realloc](realloc.md).
 
 ## <a name="remarks"></a>Notes
 

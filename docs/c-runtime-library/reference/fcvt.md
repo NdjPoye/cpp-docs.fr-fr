@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ Pointeur désignant l’indicateur de signe stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_fcvt** retourne un pointeur vers la chaîne de chiffres, NULL en cas d’erreur.
+**_fcvt** retourne un pointeur vers la chaîne de chiffres, **NULL** en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
@@ -86,7 +86,7 @@ La différence entre **_ecvt** et **_fcvt** est dans l’interprétation de la *
 
 **_ecvt** et **_fcvt** utilisent un seul tampon alloué de manière statique pour la conversion. Chaque appel à une de ces routines détruit les résultats de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *dec* ou *signe* est NULL, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la valeur NULL est retournée.
+Cette fonction valide ses paramètres. Si *dec* ou *signe* est **NULL**, ou *nombre* est 0, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **NULL** est retourné.
 
 ## <a name="requirements"></a>Spécifications
 

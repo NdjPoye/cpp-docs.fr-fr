@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Pointeur vers le numéro de ligne dans le fichier source ou **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-Le **_CrtIsMemoryBlock** fonction vérifie qu’un bloc de mémoire spécifié se trouve dans le tas local de l’application et qu’il possède un identificateur de type de bloc valide. Cette fonction peut également être utilisée pour obtenir le numéro d’ordre d’allocation d’objet et le numéro de ligne/nom du fichier source où l’allocation de bloc de mémoire a été initialement demandée. En passant les valeurs non NULL pour le *requestNumber*, *nom de fichier*, ou *linenumber* causes de paramètres **_CrtIsMemoryBlock** à définir Ces paramètres pour les valeurs dans le bloc de mémoire de débogage en-tête, s’il trouve le bloc dans le tas local. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsMemoryBlock** sont supprimés lors du prétraitement.
+Le **_CrtIsMemoryBlock** fonction vérifie qu’un bloc de mémoire spécifié se trouve dans le tas local de l’application et qu’il possède un identificateur de type de bloc valide. Cette fonction peut également être utilisée pour obtenir le numéro d’ordre d’allocation d’objet et le numéro de ligne/nom du fichier source où l’allocation de bloc de mémoire a été initialement demandée. Passage non -**NULL** les valeurs pour le *requestNumber*, *nom de fichier*, ou *linenumber* causes de paramètres **_ CrtIsMemoryBlock** pour définir ces paramètres pour les valeurs dans l’en-tête de débogage du bloc de mémoire, s’il trouve le bloc dans le tas local. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtIsMemoryBlock** sont supprimés lors du prétraitement.
 
 Si **_CrtIsMemoryBlock** échoue, elle retourne **FALSE** et les paramètres de sortie sont initialisés à des valeurs par défaut : *requestNumber* et **lineNumber**  sont définies sur 0 et *nom de fichier* a la valeur **NULL**.
 

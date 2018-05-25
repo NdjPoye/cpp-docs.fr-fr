@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Retourne un pointeur vers la chaîne de caractères *timestr*.
 
 Le **_strtime** fonction copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointée *timestr*. L’heure sous la forme **hh : mm :** où **hh** comprend deux chiffres représentant l’heure dans la notation de 24 heures, **mm** comprend deux chiffres représentant les minutes après l’heure et **ss** comprend deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 heures La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
-**_wstrtime** est une version à caractères larges de **_strtime**; la valeur des arguments et de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent de façon identique dans le cas contraire. Si *timestr* est **NULL** pointeur ou si *timestr* est correctement mise en forme, non valide Gestionnaire de paramètres est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent une valeur NULL et le jeu de **errno** à **EINVAL** si *timestr* a une valeur NULL ou définir **errno**à **ERANGE** si *timestr* est incorrect.
+**_wstrtime** est une version à caractères larges de **_strtime**; la valeur des arguments et de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un **NULL** pointeur ou si *timestr* est correctement mise en forme, non valide Gestionnaire de paramètres est appelé, comme décrit dans [paramètre Validation](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent un **NULL** et **errno** à **EINVAL** si *timestr* a été un **NULL** ou **errno** à **ERANGE** si *timestr* est incorrect.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

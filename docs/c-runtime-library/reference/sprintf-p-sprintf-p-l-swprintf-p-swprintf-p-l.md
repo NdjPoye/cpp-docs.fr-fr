@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ Le nombre de caractères écrits, ou -1 si une erreur s’est produite.
 
 ## <a name="remarks"></a>Notes
 
-Le **_sprintf_p** fonction formate et stocke une série de caractères et les valeurs de *tampon*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A **NULL** caractère est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** qui est **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Le **_sprintf_p** fonction formate et stocke une série de caractères et les valeurs de *tampon*. Chaque argument dans le *argument_list* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le *format* argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini. La différence entre **_sprintf_p** et **sprintf_s** qui est **_sprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisé dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_swprintf_p** est une version à caractères larges de **_sprintf_p**; les arguments de pointeur de **_swprintf_p** sont des chaînes à caractères larges. La détection des erreurs dans l’encodage **_swprintf_p** peut différer de celle dans **_sprintf_p**. **_swprintf_p** et **fwprintf_p** se comportent de façon identique, sauf que **_swprintf_p** écrit la sortie vers une chaîne plutôt que vers une destination de type **fichier**, et **_swprintf_p** requiert le *nombre* paramètre pour spécifier le nombre maximal de caractères à écrire. Les versions de ces fonctions avec le **_l** suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-**_sprintf_p** retourne le nombre d’octets stockés dans *tampon*, sans compter la fin du **NULL** caractère. **_swprintf_p** retourne le nombre de caractères larges stockés dans *tampon*, sans compter la fin du **NULL** caractères larges. Si *tampon* ou *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
+**_sprintf_p** retourne le nombre d’octets stockés dans *tampon*, sans compter le caractère null de fin. **_swprintf_p** retourne le nombre de caractères larges stockés dans *tampon*, sans compter le caractère large null de fin. Si *tampon* ou *format* est un pointeur null, ou si la chaîne de format contient des caractères de mise en forme non valides, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre ](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et la valeur **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

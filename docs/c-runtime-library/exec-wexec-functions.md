@@ -63,11 +63,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec, fonctions
 Chaque fonction dans cette famille charge et exécute un nouveau processus :  
@@ -120,9 +120,9 @@ Chaque fonction dans cette famille charge et exécute un nouveau processus :
   
  Les appels de fonctions `_execl`, `_execle`, `_execlp` et `_execlpe` sont généralement utilisés quand le nombre de paramètres est connu à l'avance. Le paramètre `arg0` est généralement un pointeur vers `cmdname`. Les paramètres `arg1` à `argn` pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Un pointeur Null doit suivre `argn` pour marquer la fin de la liste de paramètres.  
   
- Les appels de fonctions `_execv`, `_execve`, `_execvp` et `_execvpe` sont utiles quand le nombre de paramètres du nouveau processus est variable. Les pointeurs vers les paramètres sont passés comme tableau, `argv`. Le paramètre `argv`[0] est généralement un pointeur vers `cmdname`. Les paramètres `argv`[1] à `argv`[`n`] pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Le paramètre `argv`[`n`+1] doit être un pointeur `NULL` pour marquer la fin de la liste de paramètres.  
+ Les appels de fonctions `_execv`, `_execve`, `_execvp` et `_execvpe` sont utiles quand le nombre de paramètres du nouveau processus est variable. Les pointeurs vers les paramètres sont passés comme tableau, `argv`. Le paramètre `argv`[0] est généralement un pointeur vers `cmdname`. Les paramètres `argv`[1] à `argv`[`n`] pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Le paramètre `argv`[`n`+1] doit être un pointeur **NULL** pour marquer la fin de la liste de paramètres.  
   
- Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n'est pas placé entre guillemets doubles.) Le dernier élément du tableau `envp` doit être `NULL`. Quand `envp` lui-même a la valeur `NULL`, le nouveau processus hérite des paramètres d'environnement du processus appelant.  
+ Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n'est pas placé entre guillemets doubles.) Le dernier élément du tableau `envp` doit être **NULL**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.  
   
  Un programme exécuté avec l'une des fonctions `_exec` est toujours chargé en mémoire comme si le champ d'allocation maximale dans l'en-tête du fichier .exe du programme avait pris la valeur par défaut 0xFFFFH.  
   

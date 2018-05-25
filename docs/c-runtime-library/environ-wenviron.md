@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variable `_environ` est un pointeur vers un tableau de pointeurs qui désignent les chaînes de caractères multioctets qui constituent l'environnement de processus. Cette variable globale a été déconseillée au profit des versions fonctionnelles plus sécurisées [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) et [putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), qui doivent être utilisées à la place de la variable globale. `_environ` est déclaré dans Stdlib.h.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  est une version à caractères larges de `_environ`. Dans un programme qui utilise la fonction `wmain`, `_wenviron` est initialisé au démarrage du programme en fonction des paramètres tirés de l'environnement de système d'exploitation.  
   
- Dans un programme qui utilise `main`, la valeur initiale de `_wenviron` est `NULL`, car l'environnement se compose de chaînes de caractères multioctets. Au premier appel à `_wgetenv` ou `_wputenv`, un environnement à chaînes de caractères larges correspondant est créé et est désigné par `_wenviron`.  
+ Dans un programme qui utilise `main`, la valeur initiale de `_wenviron` est **NULL** car l’environnement se compose de chaînes de caractères multioctets. Au premier appel à `_wgetenv` ou `_wputenv`, un environnement à chaînes de caractères larges correspondant est créé et est désigné par `_wenviron`.  
   
- De la même manière, dans un programme qui utilise `wmain`, la valeur initiale de `_environ` est `NULL`, car l'environnement se compose de chaînes de caractères larges. Au premier appel à `_getenv` ou `_putenv`, un environnement à chaînes de caractères multioctets correspondant est créé et est désigné par `_environ`.  
+ De la même manière, dans un programme qui utilise `wmain`, la valeur initiale de `_environ` est **NULL** car l’environnement se compose de chaînes de caractères larges. Au premier appel à `_getenv` ou `_putenv`, un environnement à chaînes de caractères multioctets correspondant est créé et est désigné par `_environ`.  
   
  Quand deux copies de l'environnement (MBCS et Unicode) existent simultanément dans un programme, le système Runtime doit gérer les deux copies, ce qui entraîne des temps d'exécution plus lents. Par exemple, quand vous appelez `_putenv`, un appel à `_wputenv` est aussi exécuté automatiquement, de sorte que les deux chaînes d'environnement correspondent.  
   

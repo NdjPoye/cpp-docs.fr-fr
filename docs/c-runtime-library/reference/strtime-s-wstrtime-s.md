@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Si une condition d’erreur se présente, le gestionnaire de paramètre non vali
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-En passant une valeur non nulle non valide pour la mémoire tampon entraîne une violation d’accès si le *numberOfElements* paramètre est supérieur à 9.
+En passant un non valide non -**NULL** valeur pour la mémoire tampon entraîne une violation d’accès si le *numberOfElements* paramètre est supérieur à 9.
 
 Passage d’une valeur *numberOfElements* qui est supérieure à la taille réelle de la mémoire tampon entraîne le dépassement de mémoire tampon.
 

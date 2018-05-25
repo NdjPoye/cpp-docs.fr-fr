@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ Taille de l'allocation de mémoire demandée.
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *filename*<br/>
-Pointeur vers le nom du fichier source qui a demandé l'opération d'allocation ou NULL.
+Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **NULL**.
 
 *linenumber*<br/>
-Numéro de ligne dans le fichier source où l'opération d'allocation a été demandée ou NULL.
+Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **NULL**.
 
 ## <a name="return-value"></a>Valeur de retour
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,7 +85,7 @@ Paramètres régionaux à utiliser.
 |**_MBC_SINGLE** (0)|Caractère codé sur un octet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 0 si l’octet spécifié est dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF.|
 |**_MBC_LEAD** (1)|Octet de tête de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 1 si l’octet spécifié est dans la plage 0 x 81-0x9F ou 0xE0 - 0xFC.|
 |**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** renvoie la valeur 2 si l’octet spécifié est dans la plage 0 x 40-0x7E ou 0 x 80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULL** chaîne, de caractère non valide, ou **NULL** octets trouvés avant l’octet au décalage *nombre* dans *mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**NULL** chaîne, un caractère non valide ou octet null trouvée avant l’octet au décalage *nombre* dans *mbstr*.|
 
 ## <a name="remarks"></a>Notes
 

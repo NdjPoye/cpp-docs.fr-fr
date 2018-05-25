@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Adresse de début d'une routine qui commence l'exécution d'un nouveau thread. P
 Taille de la pile d'un nouveau thread ou 0.
 
 *arglist*<br/>
-Liste d'arguments à passer à un nouveau thread ou NULL.
+Liste d’arguments à passer à un nouveau thread ou **NULL**.
 
 *Sécurité*<br/>
-Pointeur vers une structure [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) qui détermine si le handle retourné peut être hérité par des processus enfants. Si *sécurité* est NULL, le handle ne peut pas être hérité. Doit avoir la valeur NULL pour les applications Windows 95.
+Pointeur vers une structure [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) qui détermine si le handle retourné peut être hérité par des processus enfants. Si *sécurité* est **NULL**, le handle ne peut pas être hérité. Doit être **NULL** pour les applications Windows 95.
 
 *initflag*<br/>
 Indicateurs qui contrôlent l'état initial d'un nouveau thread. Définissez *initflag* sur 0 pour une exécution immédiate, ou sur **CREATE_SUSPENDED** pour créer le thread dans un état suspendu ; utilisez [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) pour exécuter le thread. Définissez *initflag* à **STACK_SIZE_PARAM_IS_A_RESERVATION** indicateur à utiliser pour *stack_size* comme taille de la pile en octets de réserve initial ; si cet indicateur n’est pas spécifié, *stack_size* spécifie la taille de validation.
 
 *thrdaddr*<br/>
-Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. Si sa valeur est NULL, il n'est pas utilisé.
+Pointe vers une variable 32 bits qui reçoit l'identificateur du thread. S’il s’agit **NULL**, il n’est pas utilisé.
 
 ## <a name="return-value"></a>Valeur de retour
 
 En cas de réussite, chacune de ces fonctions retourne un handle au thread nouvellement créé. Toutefois, si le nouveau thread se ferme trop rapidement, **_beginthread** peut ne pas retourner un handle valide. (Consultez la discussion dans la section Notes.) En cas d’erreur, **_beginthread** retourne-1 L, et **errno** a la valeur **EAGAIN** si il y a trop de threads, la valeur **EINVAL** si l’argument est non valide ou la taille de pile est incorrecte, ou la valeur **EACCES** si les ressources sont insuffisantes (par exemple la mémoire). En cas d’erreur, **_beginthreadex** renvoie la valeur 0, et **errno** et **_doserrno** sont définies.
 
-Si *start_address* est NULL, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
+Si *start_address* est **NULL**, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EINVAL** et retournent -1.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Vous pouvez appeler [_endthread](endthread-endthreadex.md) ou **_endthreadex** e
 
 Le système d’exploitation gère l’allocation de la pile lorsque soit **_beginthread** ou **_beginthreadex** est appelé ; vous n’êtes pas obligé de passer l’adresse de la pile des threads à une de ces fonctions. En outre, le *stack_size* argument peut être 0, dans lequel cas le système d’exploitation utilise la même valeur que la pile est spécifiée pour le thread principal.
 
-*arglist* est un paramètre à passer au thread nouvellement créé. En général, il s'agit de l'adresse d'un élément de donnée, tel qu'une chaîne de caractères. *arglist* peut être NULL s’il n’est pas nécessaire, mais **_beginthread** et **_beginthreadex** doit comporter une valeur à passer au nouveau thread. Tous les threads sont arrêtés si un thread appelle [abandonner](abort.md), **quitter**, **_exit**, ou **ExitProcess**.
+*arglist* est un paramètre à passer au thread nouvellement créé. En général, il s'agit de l'adresse d'un élément de donnée, tel qu'une chaîne de caractères. *arglist* peut être **NULL** s’il n’est pas nécessaire, mais **_beginthread** et **_beginthreadex** doit comporter une valeur à passer au nouveau thread. Tous les threads sont arrêtés si un thread appelle [abandonner](abort.md), **quitter**, **_exit**, ou **ExitProcess**.
 
 Les paramètres régionaux du nouveau thread sont initialisé en utilisant les informations de paramètres régionaux globaux actuel par processus. Si les paramètres régionaux par thread sont activé par un appel à [_configthreadlocale](configthreadlocale.md) (globalement ou pour de nouveaux threads uniquement), le thread peut modifier ses paramètres régionaux indépendamment des autres threads en appelant **setlocale** ou **_wsetlocale**. Les threads qui n’ont pas l’indicateur de paramètres régionaux par thread définie peuvent affecter les informations de paramètres régionaux dans tous les autres threads qui ne possèdent également l’indicateur de paramètres régionaux par thread défini, ainsi que tous les threads qui vient d’être créé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

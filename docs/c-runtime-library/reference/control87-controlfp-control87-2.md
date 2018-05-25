@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Sur les plateformes ARM, le **_control87** et **_controlfp** fonctions s’appliquent au Registre fpscr. Sur x64 architectures, seul le mot de contrôle SSE2 est stocké dans le MXCSR register est affecté. Sur x86 plates-formes, **_control87** et **_controlfp** affectent les mots de contrôle pour le x87 et le SSE2, le cas échéant. La fonction **__control87_2** permet le x87 et les unités de virgule flottante SSE2 pour être contrôlé ensemble ou séparément. Si vous souhaitez affecter à la fois unités, passer les adresses de deux entiers à **x86_cw** et **sse2_cw**. Si vous souhaitez uniquement affecter une unité, passez une adresse pour ce paramètre tout en passant la valeur 0 (NULL) pour l’autre. Si 0 est passé pour l’un de ces paramètres, la fonction n’a aucun effet sur cette unité de virgule flottante. Cette fonctionnalité peut être utile dans les cas où une partie du code utilise l’unité de virgule flottante x87 et une autre partie l’unité de virgule flottante SSE2. Si vous utilisez **__control87_2** dans une partie d’un programme et définir des valeurs différentes pour les mots de contrôle à virgule flottante, puis utiliser **_control87** ou **_controlfp** autres manipuler le mot de contrôle, puis **_control87** et **_controlfp** peut être incapable de renvoyer un mot de contrôle unique pour représenter l’état de deux unités à virgule flottante. Dans ce cas, ces fonctions définissent les **EM_AMBIGUOUS** indicateur dans la valeur entière retournée pour indiquer qu’il existe une incohérence entre les mots de contrôle de deux. Il s’agit d’un message d’avertissement selon lequel le mot de contrôle retourné peut ne pas représenter l’état des deux mots de contrôle à virgule flottante avec précision.
+Sur les plateformes ARM, le **_control87** et **_controlfp** fonctions s’appliquent au Registre fpscr. Sur x64 architectures, seul le mot de contrôle SSE2 est stocké dans le MXCSR register est affecté. Sur x86 plates-formes, **_control87** et **_controlfp** affectent les mots de contrôle pour le x87 et le SSE2, le cas échéant. La fonction **__control87_2** permet le x87 et les unités de virgule flottante SSE2 pour être contrôlé ensemble ou séparément. Si vous souhaitez affecter à la fois unités, passer les adresses de deux entiers à **x86_cw** et **sse2_cw**. Si vous souhaitez uniquement affecter une unité, passer d’une adresse pour ce paramètre mais passer la valeur 0 (**NULL**) pour les autres. Si 0 est passé pour l’un de ces paramètres, la fonction n’a aucun effet sur cette unité de virgule flottante. Cette fonctionnalité peut être utile dans les cas où une partie du code utilise l’unité de virgule flottante x87 et une autre partie l’unité de virgule flottante SSE2. Si vous utilisez **__control87_2** dans une partie d’un programme et définir des valeurs différentes pour les mots de contrôle à virgule flottante, puis utiliser **_control87** ou **_controlfp** autres manipuler le mot de contrôle, puis **_control87** et **_controlfp** peut être incapable de renvoyer un mot de contrôle unique pour représenter l’état de deux unités à virgule flottante. Dans ce cas, ces fonctions définissent les **EM_AMBIGUOUS** indicateur dans la valeur entière retournée pour indiquer qu’il existe une incohérence entre les mots de contrôle de deux. Il s’agit d’un message d’avertissement selon lequel le mot de contrôle retourné peut ne pas représenter l’état des deux mots de contrôle à virgule flottante avec précision.
 
 Sur la ARM et x64 architectures, changer le mode de l’infini ou de la précision en virgule flottante ne sont pas pris en charge. Si le masque de contrôle de précision est utilisé sur le x64 plateforme, la fonction génère une assertion et le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 

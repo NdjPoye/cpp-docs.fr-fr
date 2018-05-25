@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de 
 
 Le **wctomb_s** fonction convertit son *wchar* l’argument de caractère multioctet correspondant et stocke le résultat à *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
 
-Si **wctomb_s** convertit le caractère large à un caractère multioctet, il place le nombre d’octets (ce qui n’est jamais supérieur **MB_CUR_MAX**) dans le caractère large dans l’entier vers lequel pointé *pRetValue*. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur de la cible *mbchar* est NULL, **wctomb_s** affecte la valeur 0 *pRetValue*. Si la conversion n’est pas possible dans les paramètres régionaux, **wctomb_s** place -1 dans *pRetValue*.
+Si **wctomb_s** convertit le caractère large à un caractère multioctet, il place le nombre d’octets (ce qui n’est jamais supérieur **MB_CUR_MAX**) dans le caractère large dans l’entier vers lequel pointé *pRetValue*. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur de la cible *mbchar* est **NULL**, **wctomb_s** affecte la valeur 0 *pRetValue*. Si la conversion n’est pas possible dans les paramètres régionaux, **wctomb_s** place -1 dans *pRetValue*.
 
 **wctomb_s** utilise les paramètres régionaux actuels pour plus d’informations dépendant des paramètres régionaux ; **_wctomb_s_l** est identique, sauf qu’elle utilise les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

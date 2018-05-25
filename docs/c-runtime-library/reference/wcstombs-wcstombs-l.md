@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wcstombs** convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne multioctets de sortie, à l’exclusion de la fin du **NULL** (le cas échéant). Si le *mbstr* argument est **NULL**, **wcstombs** retourne la taille en octets de la chaîne de destination. Si **wcstombs** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet, elle retourne -1 castée en type **size_t** et définit **errno** à **EILSEQ** .
+Si **wcstombs** convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne multioctets de sortie, à l’exclusion du caractère null de fin (le cas échéant). Si le *mbstr* argument est **NULL**, **wcstombs** retourne la taille en octets de la chaîne de destination. Si **wcstombs** rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet, elle retourne -1 castée en type **size_t** et définit **errno** à **EILSEQ** .
 
 ## <a name="remarks"></a>Notes
 
-Le **wcstombs** fonction convertit la chaîne à caractères larges vers lequel pointée *wcstr* à la multioctets correspondante de caractères et stocke les résultats dans le *mbstr* tableau. Le *nombre* paramètre indique le nombre maximal d’octets qui peuvent être stockées dans la chaîne multioctets de sortie (autrement dit, la taille de *mbstr*). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. S’il existe deux octets dans la chaîne multioctets de sortie pour chaque caractère large dans la chaîne d’entrée (y compris le caractère large **NULL**), le résultat est garanti pour s’ajuster.
+Le **wcstombs** fonction convertit la chaîne à caractères larges vers lequel pointée *wcstr* à la multioctets correspondante de caractères et stocke les résultats dans le *mbstr* tableau. Le *nombre* paramètre indique le nombre maximal d’octets qui peuvent être stockées dans la chaîne multioctets de sortie (autrement dit, la taille de *mbstr*). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. S’il existe deux octets dans la chaîne multioctets de sortie pour chaque caractère large dans la chaîne d’entrée (y compris la valeur null de caractères larges), le résultat est garanti pour s’ajuster.
 
 Si **wcstombs** rencontre le caractère null de caractères larges (L '\0') avant ou lorsque *nombre* se produit, il est converti en un 0 de 8 bits et s’arrête. Par conséquent, la chaîne de caractères multioctets à *mbstr* est terminant par null uniquement si **wcstombs** rencontre un caractère null de caractères larges lors de la conversion. Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcstombs** n’est pas défini.
 

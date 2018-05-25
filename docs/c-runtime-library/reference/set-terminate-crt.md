@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017ea9d96cef9065ff82e7f3428e725b816c9319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +56,7 @@ Pointeur désignant une fonction d’arrêt que vous écrivez.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la fonction précédente enregistrée par **set_terminate** afin que la fonction précédente permettre être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; cette valeur peut être NULL.
+Retourne un pointeur vers la fonction précédente enregistrée par **set_terminate** afin que la fonction précédente permettre être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **NULL**.
 
 ## <a name="remarks"></a>Notes
 

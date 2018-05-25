@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -94,7 +94,7 @@ Cette fonction valide le *catégorie* et *paramètres régionaux* paramètres. S
 
 Le *paramètres régionaux* argument est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de la *paramètres régionaux* argument, consultez [noms de paramètres régionaux, les langues et les chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-Le *paramètres régionaux* argument peut prendre un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et code de pays/région, une page de codes, ou une chaîne de langue, code de pays/région et page de codes. L’ensemble des noms de paramètres régionaux, des langues, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux qui sont pris en charge par l’API Windows NLS, à l’exception des pages de codes qui requièrent plus de deux octets par caractère, par exemple, UTF-7 et UTF-8. Si vous fournissez une page de codes comme UTF-7 ou UTF-8, **_create_locale** échouent et retournent la valeur NULL. L’ensemble des noms de paramètres régionaux pris en charge par **_create_locale** sont décrites dans [noms de paramètres régionaux, les langues et les chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **_create_locale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes pays/région](../../c-runtime-library/country-region-strings.md).
+Le *paramètres régionaux* argument peut prendre un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et code de pays/région, une page de codes, ou une chaîne de langue, code de pays/région et page de codes. L’ensemble des noms de paramètres régionaux, des langues, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux qui sont pris en charge par l’API Windows NLS, à l’exception des pages de codes qui requièrent plus de deux octets par caractère, par exemple, UTF-7 et UTF-8. Si vous fournissez une page de codes comme UTF-7 ou UTF-8, **_create_locale** échouera et renverra **NULL**. L’ensemble des noms de paramètres régionaux pris en charge par **_create_locale** sont décrites dans [noms de paramètres régionaux, les langues et les chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **_create_locale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes pays/région](../../c-runtime-library/country-region-strings.md).
 
 Pour plus d’informations sur les paramètres régionaux, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 

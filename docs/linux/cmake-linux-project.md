@@ -1,7 +1,9 @@
 ---
 title: Configurer un projet CMake Linux dans Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2107
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurer un projet CMake Linux
   
@@ -44,7 +46,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-CMakeLists.txt : 
+CMakeLists.txt :
+
 ```cmd
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
@@ -58,6 +61,8 @@ Par défaut, Visual Studio choisit le premier système distant dans la liste (so
 Une fois que vous avez spécifié une cible Linux, votre source est copiée sur la machine Linux. Ensuite, CMake est exécuté sur la machine Linux pour générer le cache CMake de votre projet.  
 
 ![Générer le cache CMake sur Linux](media/cmake-linux-1.png "Générer le cache CMake sur Linux")  
+
+**Visual Studio 2017 15.7 et ultérieur :** Pour prendre en charge IntelliSense pour les en-têtes distants, Visual Studio les copie automatiquement dans un répertoire sur votre ordinateur Windows local. Pour plus d’informations, consultez [IntelliSense pour les en-têtes distants](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Déboguer le projet  
 Pour déboguer votre code sur le système distant, définissez un point d’arrêt, sélectionnez la cible CMake comme élément de démarrage du menu de barre d’outils à côté des paramètres du projet, puis cliquez sur Exécuter (ou appuyez sur F5).
@@ -84,6 +89,7 @@ Pour changer les paramètres CMake par défaut, choisissez **CMake | Changer le
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 La valeur `name` spécifie un nom de votre choix. La valeur `remoteMachineName` spécifie le système distant à cibler, s’il y a plusieurs systèmes distants disponibles. IntelliSense est activé pour ce champ afin de vous permettre de sélectionner le système approprié. Le champ `remoteCMakeListsRoot` spécifie l’emplacement où vos sources de projet doivent être copiées sur le système distant. Le champ `remoteBuildRoot` spécifie l’emplacement où la sortie de la génération doit être copiée sur le système distant. Cette sortie est également copiée sur le système local, à l’emplacement spécifié par `buildRoot`.
 
 ## <a name="building-a-supported-cmake-release-from-source"></a>Génération d’une version de CMake prise en charge à partir de la source

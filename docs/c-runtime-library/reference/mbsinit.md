@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14034c598c3f7e77bc6bc650b275ee1e035d084c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -55,7 +55,7 @@ Pointeur désignant une variable [mbstate_t](../../c-runtime-library/standard-ty
 
 ## <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si *ps* est NULL ou if pas au milieu d’une conversion.
+Différent de zéro si *ps* est **NULL** ou si pas au milieu d’une conversion.
 
 ## <a name="remarks"></a>Notes
 

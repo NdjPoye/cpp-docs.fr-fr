@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -72,7 +72,7 @@ Caractère large.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wctomb** convertit le caractère large en un caractère multioctet, elle retourne le nombre d’octets (ce qui n’est jamais supérieur **MB_CUR_MAX**) dans le caractère large. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb** renvoie la valeur 1. Si le pointeur de la cible *mbchar* est NULL, **wctomb** retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux, **wctomb** retourne -1 et **errno** a la valeur **EILSEQ**.
+Si **wctomb** convertit le caractère large en un caractère multioctet, elle retourne le nombre d’octets (ce qui n’est jamais supérieur **MB_CUR_MAX**) dans le caractère large. Si *wchar* est le caractère null de caractères larges (L '\0'), **wctomb** renvoie la valeur 1. Si le pointeur de la cible *mbchar* est **NULL**, **wctomb** retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux, **wctomb** retourne -1 et **errno** a la valeur **EILSEQ**.
 
 ## <a name="remarks"></a>Notes
 

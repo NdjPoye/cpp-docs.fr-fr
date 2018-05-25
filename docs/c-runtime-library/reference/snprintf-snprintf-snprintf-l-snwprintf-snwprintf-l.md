@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Écrit des données mises en forme dans une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -174,7 +174,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 Le **snprintf** (fonction) et le **_snprintf** famille de fonctions forme et stockent *nombre* caractères au maximum dans *tampon*. Le **snprintf** fonction stocke toujours un caractère null de fin, tronque la sortie si nécessaire. Le **_snprintf** famille de fonctions ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieur à *nombre* caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que la *format* argument pour [printf](printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Étant donné que la **_snprintf** fonctions ne garantissent pas de fin NULL : en particulier, lorsque la valeur de retour est *nombre*— vous assurer qu’elles sont suivies par le code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Étant donné que la **_snprintf** fonctions ne garantissent pas le caractère null de fin : en particulier, lorsque la valeur de retour est *nombre*— vous assurer qu’elles sont suivies par le code qui ajoute la marque de fin null. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Depuis le composant UCRT dans Visual Studio 2015 et Windows 10, **snprintf** n’est plus identique à **_snprintf**. Le **snprintf** comportement de la fonction est désormais conforme à la norme C99.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

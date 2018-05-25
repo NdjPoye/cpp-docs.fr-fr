@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procédure pas-à-pas : débogage d’une application C++ AMP
 Cette rubrique montre comment déboguer une application qui utilise C++ Accelerated les Massive Parallelism (C++ AMP) pour tirer parti de l’unité de traitement graphique (GPU). Il utilise un programme de réduction parallèle qui additionne un grand tableau d’entiers. Cette procédure pas à pas décrit les tâches suivantes :  
@@ -228,7 +228,9 @@ Points d'arrêt d'UC
   
 3.  Dans le **débogueur à lancer** liste, sélectionnez **débogueur Windows Local**.  
   
-4.  Dans le **Type de débogueur** liste, sélectionnez **GPU uniquement**.  
+4.  Dans le **Type de débogueur** liste, vérifiez que **automatique** est sélectionnée.
+
+    **Auto** est la valeur par défaut. Avant Windows 10, **GPU uniquement** est la valeur requise à la place de **automatique**.
   
 5.  Sélectionnez le bouton **OK** .  
   
