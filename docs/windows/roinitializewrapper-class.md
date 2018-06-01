@@ -1,7 +1,7 @@
 ---
 title: Roinitializewrapper, classe | Documents Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705590"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper, classe
 Initialise le Windows Runtime.  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Notes  
- RoInitializeWrapper est un outil qui initialise l’exécution de Windows et retourne un HRESULT qui indique si l’opération a réussi.  
+ RoInitializeWrapper est un outil qui initialise l’exécution de Windows et retourne un HRESULT qui indique si l’opération a réussi. Étant donné que le destructeur de classe appelle `::Windows::Foundation::Uninitialize`, instances de `RoInitializeWrapper` doit être déclarée au niveau de portée globale ou de niveau supérieur.  
   
 ## <a name="members"></a>Membres  
   
@@ -51,7 +52,7 @@ class RoInitializeWrapper
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `RoInitializeWrapper`  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** corewrappers.h  
   
  **Namespace :** Microsoft::WRL::Wrappers  

@@ -16,33 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a76fb6ff4c00317da3e65c5bf31979c777ea51e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60cf1c03ace94c866b77c5340e2a04a9d8190e4d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705216"
 ---
 # <a name="compiler-warning-c4957"></a>Avertissement du compilateur C4957
-'cast' : le cast explicite de 'cast_from' en 'cast_to' n’est pas vérifiable  
-  
- Un cast aura pour résultat une image non vérifiable.  
-  
- Certains casts sont « safe » (par exemple, un `static_cast` qui déclenche des conversions définies par l’utilisateur et un `const_cast`). Un [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) garantit la génération d’un code vérifiable.  
-  
- Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
- Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .  
-  
- L’exemple suivant génère l’erreur C4957 :  
-  
-```  
-// C4957.cpp  
-// compile with: /clr:safe  
-// #pragma warning( disable : 4957 )  
-using namespace System;  
-int main() {  
-   Object ^ o = "Hello, World!";  
-   String ^ s = static_cast<String^>(o);   // C4957  
-   String ^ s2 = safe_cast<String^>(o);   // OK  
-}  
+
+> '*cast*' : cast explicite de '*cast_from*'à'*cast_to*' n’est pas vérifiable
+
+## <a name="remarks"></a>Notes
+
+Un cast aura pour résultat une image non vérifiable.
+
+Certains casts sont « safe » (par exemple, un `static_cast` qui déclenche des conversions définies par l’utilisateur et un `const_cast`). Un [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) garantit la génération d’un code vérifiable.
+
+Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+
+Le **/CLR : safe** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C4957 :
+
+```cpp
+// C4957.cpp
+// compile with: /clr:safe
+// #pragma warning( disable : 4957 )
+using namespace System;
+int main() {
+   Object ^ o = "Hello, World!";
+   String ^ s = static_cast<String^>(o);   // C4957
+   String ^ s2 = safe_cast<String^>(o);   // OK
+}
 ```

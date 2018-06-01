@@ -1,6 +1,6 @@
 ---
 title: C4800 des avertissements du compilateur via C5999 | Documents Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704748"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 des avertissements du compilateur via C5999
 
@@ -242,10 +243,10 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement C5035 du compilateur|l’utilisation de fonctionnalité '*fonctionnalité*' provoque la fonction *fonction* doit être compilé comme code de l’invité|
 |Avertissement du compilateur (niveau 1) C5036|conversion de pointeur de fonction varargs lors de la compilation avec /hybrid:x86arm64 '*type1*'à'*type2*'|
 |Avertissement du compilateur (erreur) C5037|'*fonction membre*' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut|
-|[Avertissement C5038 du compilateur](c5038.md)|données membres '*member1*'sera initialisé après le membre de données'*membre2*'|
-|Avertissement C5039 du compilateur|'*fonction*' : pointeur ou référence à potentiellement lever fonction passé à la fonction extern C sous - /EHc. Un comportement non défini peut se produire si cette fonction lève une exception.|
-|Avertissement C5040 du compilateur|spécifications d’exception dynamiques sont valides uniquement dans C ++ 14 et les versions antérieures ; traitement en tant que noexcept (false)|
-|Avertissement C5041 du compilateur|'*définition*' : définition hors ligne pour les membres de données statiques constexpr n’est pas nécessaire et est déconseillée dans C ++ 17|
-|Avertissement C5042 du compilateur|'*déclaration*' : les déclarations de fonction au niveau de la portée de bloc ne peut pas être 'inline' spécifié dans C++ standard ; supprimez le spécificateur 'inline'|
-|Avertissement C5043 du compilateur|'*spécification*' : spécification d’exception ne correspond pas à la déclaration précédente|
-|Avertissement C5044 du compilateur|Argument d’option de ligne de commande *option* pointe vers un chemin d’accès '*chemin d’accès*' qui n’existe pas|
+|[Avertissement du compilateur (niveau 4) C5038](c5038.md)|données membres '*member1*'sera initialisé après le membre de données'*membre2*'|
+|Avertissement du compilateur (niveau 4) C5039|'*fonction*' : pointeur ou référence à potentiellement lever fonction passé à la fonction extern C sous - /EHc. Un comportement non défini peut se produire si cette fonction lève une exception.|
+|Avertissement du compilateur (niveau 3) C5040|spécifications d’exception dynamiques sont valides uniquement dans C ++ 14 et les versions antérieures ; traitement en tant que noexcept (false)|
+|Avertissement du compilateur (niveau 1) C5041|'*définition*' : définition hors ligne pour les membres de données statiques constexpr n’est pas nécessaire et est déconseillée dans C ++ 17|
+|Avertissement du compilateur (niveau 3) C5042|'*déclaration*' : les déclarations de fonction au niveau de la portée de bloc ne peut pas être 'inline' spécifié dans C++ standard ; supprimez le spécificateur 'inline'|
+|Avertissement du compilateur (niveau 2) C5043|'*spécification*' : spécification d’exception ne correspond pas à la déclaration précédente|
+|Avertissement du compilateur (niveau 4) C5044|Argument d’option de ligne de commande *option* pointe vers un chemin d’accès '*chemin d’accès*' qui n’existe pas|

@@ -12,22 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a280d4dfe19d4f8c31e282a8138fc41152f9786a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704917"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuels de programmation du fabricant de processeurs
 Cet article fournit des liens vers les sites Web qui peuvent contenir des informations sur la programmation sur les processeurs qui ne sont pas fabriqués, vendus ou pris en charge par Microsoft. Microsoft ne possède ni contrôler les sites Web ou le contenu sur les.  
   
 ## <a name="processor-manufacturer-websites"></a>Sites Web du fabricant du processeur  
   
--   [AMD64 Jeu d’instructions manuels de référence](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
-  
--   [Manuels de développement logiciel Intel 64 et IA-32 Architectures](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
-  
--   [Intel Advanced Vector Extensions (AVX)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+- [AMD64 Jeu d’instructions manuels de référence](https://developer.amd.com/resources/developer-guides-manuals/)  
+
+- [Manuels de développement logiciel Intel 64 et IA-32 Architectures](https://software.intel.com/en-us/documentation)  
+
+- [Intel Advanced Vector Extensions (AVX)](https://software.intel.com/en-us/articles/introduction-to-intel-advanced-vector-extensions)  
   
 ## <a name="remarks"></a>Notes  
  Ni [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ni l’assembleur de macros Microsoft prend en charge tous les processeurs.  

@@ -104,7 +104,6 @@
 #### [Listes d’initialiseurs](initializer-lists.md)
 #### [Notation castée et introduction de safe_cast](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [Code pur et vérifiable (C++-CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [Comparaison entre les fonctionnalités mixte, pure et vérifiable (C++-CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [Guide pratique pour créer des projets C++ vérifiables (C++-CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [Guide pratique pour effectuer une migration vers /clr:safe (C++-CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [Utilisation d’assemblys vérifiables avec SQL Server (C++-CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

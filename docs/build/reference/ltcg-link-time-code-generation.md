@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703731"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Génération de code durant l'édition de liens)
 
@@ -141,7 +142,7 @@ Si une fonction est appelée via un pointeur de fonction, ou si une fonction est
 
 Les modules compilés avec [/GL](../../build/reference/gl-whole-program-optimization.md) et [/clr](../../build/reference/clr-common-language-runtime-compilation.md) peuvent être utilisés comme entrée dans l'éditeur de liens si **/LTCG** est spécifié.
 
-- **/LTCG** peut accepter des fichiers objets natifs et fichiers d’objet managé/natif mixte (compilée à l’aide de **/CLR**). Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.
+- **/LTCG** peut accepter des fichiers objets natifs et fichiers d’objet managé/natif mixte (compilée à l’aide de **/CLR**). Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
 
 - **/ LTCG : PGI** n’accepte pas les modules natifs compilés à l’aide de **/GL** et   **/CLR**
 
@@ -161,5 +162,5 @@ Vous pouvez également appliquer **LTCG** à des builds spécifiques en choisiss
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)<br/>
-[Options de l’éditeur de liens](../../build/reference/linker-options.md)<br/>
+- [Définition des options de l’Éditeur de liens](../../build/reference/setting-linker-options.md)
+- [Options de l’éditeur de liens](../../build/reference/linker-options.md)

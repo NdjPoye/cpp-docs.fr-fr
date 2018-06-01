@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f0f60a1096c070d28be3b7af161bbb924fb20dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b540f87458c75ddf7d57626b6251248652b96213
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704303"
 ---
 # <a name="compiler-error-c3389"></a>Erreur du compilateur C3389
-__declspec (Keyword) ne peut pas être utilisé avec/clr : pure ou/CLR : safe  
-  
- Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
-  
- A [__declspec](../../cpp/declspec.md) modificateur utilisé implique un état par processus.  [/ CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md) implique un par [appdomain](../../cpp/appdomain.md) état.  Par conséquent, déclarer une variable avec le `keyword` **__declspec** modificateur et la compilation avec **/CLR : pure** n’est pas autorisée.  
-  
- L’exemple suivant génère l’erreur C3389 :  
-  
-```  
-// C3389.cpp  
-// compile with: /clr:pure /c  
-__declspec(dllexport) int g2 = 0;   // C3389  
+
+> __declspec (*mot clé*) ne peut pas être utilisé avec/clr : pure ou/CLR : safe
+
+## <a name="remarks"></a>Notes
+
+Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+A [__declspec](../../cpp/declspec.md) modificateur utilisé implique un état par processus.  [/ CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md) implique un par [appdomain](../../cpp/appdomain.md) état.  Par conséquent, déclarer une variable avec le `keyword` **__declspec** modificateur et la compilation avec **/CLR : pure** n’est pas autorisée.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3389 :
+
+```cpp
+// C3389.cpp
+// compile with: /clr:pure /c
+__declspec(dllexport) int g2 = 0;   // C3389
 ```

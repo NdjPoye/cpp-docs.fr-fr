@@ -1,6 +1,6 @@
 ---
 title: C4400 des avertissements du compilateur via C4599 | Documents Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704683"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 des avertissements du compilateur via C4599
 
@@ -319,7 +320,8 @@ Les articles de cette section de la documentation expliquent un sous-ensemble de
 |Avertissement du compilateur (niveau 4) C4574|'*Identificateur*'n’est défini comme étant ' 0' : souhaitiez-vous utiliser 'identificateur #if' ?|
 |Avertissement du compilateur (niveau 1) C4575|'__vectorcall' incompatible avec le ' / clr' option : conversion en '__stdcall'|
 |Avertissement du compilateur (niveau 1, erreur) C4576|un type entre parenthèses suivi d’une liste d’initialiseurs est une syntaxe de conversion de type explicite non standard|
-|Avertissement du compilateur (niveau 1, erreur) C4578|'abs' : conversion de '*type1*'à'*type2*', perte possible de données (souhaitiez-vous appeler '*fonction*' ou à #include <cmath>?)|
+|Avertissement du compilateur (niveau 1, Off) C4577|'noexcept' utilisé avec aucun spécifié ; le mode de gestion des exceptions arrêt sur l’exception n’est pas garantie. Spécifiez /EHsc|
+|Avertissement du compilateur (niveau 1, erreur) C4578|'abs' : conversion de '*type1*'à'*type2*', perte possible de données (souhaitiez-vous appeler '*fonction*' ou à #include \<cmath > ?)|
 |[Avertissement du compilateur (niveau 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] est déconseillé ; spécifiez System::Attribute ou Platform::Metadata comme classe de base à la place|
 |[Avertissement du compilateur (niveau 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportement déconseillé : ' «*chaîne*« ' remplacé par '*chaîne*' pour traiter l’attribut|
 |Avertissement du compilateur (niveau 4) C4582|'*type*' : constructeur n’est pas appelé de manière implicite|

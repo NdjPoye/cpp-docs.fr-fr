@@ -16,38 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89a6d6b10fa76c7fbf1bf11c4ebe2ecff5f98ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704858"
 ---
 # <a name="compiler-error-c2472"></a>Erreur du compilateur C2472
-'function' ne peut pas être généré dans le code managé : 'message' ; compilez avec /clr pour générer une image mixte  
-  
- Cette erreur se produit quand des types non pris en charge par le code managé sont utilisés dans un environnement CLR pur. Compilez avec **/clr** pour résoudre l’erreur.  
-  
- Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant génère l’erreur C2472 :  
-  
-```  
-// C2472.cpp  
-// compile with: /clr:pure  
-// C2472 expected  
-  
-#include <cstdlib>  
-  
-int main()  
-{  
-   int * __ptr32 p32;  
-   int * __ptr64 p64;  
-  
-   p32 = (int * __ptr32)malloc(4);  
-   p64 = p32;  
-}  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+> '*fonction*' ne peut pas être généré dans le code managé : '*message*' ; compilez avec /clr pour générer une image mixte
+
+## <a name="remarks"></a>Notes
+
+Cette erreur se produit quand des types non pris en charge par le code managé sont utilisés dans un environnement CLR pur. Compilez avec **/clr** pour résoudre l’erreur.
+
+Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C2472 :
+
+```cpp
+// C2472.cpp
+// compile with: /clr:pure
+// C2472 expected
+
+#include <cstdlib>
+
+int main()
+{
+   int * __ptr32 p32;
+   int * __ptr64 p64;
+
+   p32 = (int * __ptr32)malloc(4);
+   p64 = p32;
+}
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

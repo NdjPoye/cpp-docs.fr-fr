@@ -1,7 +1,7 @@
 ---
 title: Avertissements du compilateur par la version du compilateur | Documents Microsoft
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704735"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par la version du compilateur
 
-Le compilateur peut supprimer les avertissements qui ont été introduites après une version que vous spécifiez à l’aide de la [/WV.](../../build/reference/compiler-option-warning-level.md) option du compilateur. Cela est utile pour la gestion de votre processus de génération lorsque vous introduire une nouvelle version de l’ensemble d’outils et que vous souhaitez supprimer temporairement de nouveaux avertissements. Cette option ne supprime pas les nouveaux messages d’erreur. Nous ne recommandons pas vous supprimez tous les nouveaux avertissements définitivement ! Nous vous recommandons de vous compilez toujours au niveau avertissement régulière la plus élevé, __/W4__et supprimer les __/WV.__ option dans votre build dès que possible. 
+Le compilateur peut supprimer les avertissements qui ont été introduites après une version que vous spécifiez à l’aide de la [/WV.](../../build/reference/compiler-option-warning-level.md) option du compilateur. Cela est utile pour la gestion de votre processus de génération lorsque vous introduire une nouvelle version de l’ensemble d’outils et que vous souhaitez supprimer temporairement de nouveaux avertissements. Cette option ne supprime pas les nouveaux messages d’erreur. Nous ne recommandons pas vous supprimez tous les nouveaux avertissements définitivement ! Nous vous recommandons de vous compilez toujours au niveau avertissement régulière la plus élevé, __/W4__et supprimer les __/WV.__ option dans votre build dès que possible.
 
 Ces versions du compilateur a introduit de nouveaux avertissements :
 
@@ -39,26 +40,36 @@ Ces versions du compilateur a introduit de nouveaux avertissements :
 | Visual C++ 2015 Update 1 | 19.00.23506.0 |
 | Visual C++ 2015 Update 2 | 19.00.23918.0 |
 | Visual C++ 2015 Update 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
-| Visual C++ 2017 version 15,1 | 19.10.25017.0 |
+| Visual C++ 2017 RTM | 19.10.25017.0 |
 | Visual C++ 2017 version 15.3 | 19.11.25506.0 |
-| Visual C++ 2017 version 15.5 | 19.12.25827.0 |
+| Visual C++ 2017 version 15.5 | 19.12.25830.0 |
+| Visual C++ 2017 version 15,6 | 19.13.26128.0 |
+| Visual C++ 2017 version 15.7 | 19.14.26428.0 |
 
 Vous pouvez spécifier uniquement le numéro principal, les numéros de version majeures et mineures ou majeure, mineure et les numéros de build pour le __/WV.__ option. Le compilateur signale tous les avertissements qui correspondent aux versions qui commencent par le nombre spécifié et supprime tous les avertissements pour les versions supérieures au nombre spécifié. Par exemple, __/Wv:17__ signale tous les avertissements introduits dans ou avant n’importe quelle version de Visual Studio 2012 et supprime tous les avertissements introduits par un compilateur à partir de Visual Studio 2013 (version 18) ou version ultérieure. Pour supprimer les avertissements introduits dans Visual Studio 2015 update 2 et versions ultérieures, vous pouvez utiliser __/Wv:19.00.23506__. Utilisez __/Wv:19.11__ pour signaler tous les avertissements introduits dans n’importe quelle version de Visual Studio antérieures à Visual Studio 2017 version 15.5, mais supprime les avertissements introduits dans Visual Studio 2017 15,5 et versions ultérieures.
 
 Les sections suivantes répertorient les avertissements introduits par chaque version de Visual C++ que vous pouvez supprimer à l’aide de la __/WV.__ option du compilateur. Le __/WV.__ option ne peut pas supprimer les avertissements qui ne sont pas répertoriés, et qui sont antérieurs aux versions spécifiées du compilateur.
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Avertissements introduits dans Visual C++ 2017 version 15.5 (version du compilateur 19.12.25827.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Avertissements introduits dans Visual C++ 2017 version 15.7 (version du compilateur 19.14.26428.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.11__.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.13__.
+
+|||
+|-|-|
+C4642|'*problème*' : ne peut pas importer les contraintes pour le paramètre générique '*paramètre*'
+C5045|Compilateur insère atténuation du Spectre pour une charge mémoire si /Qspectre commutateur spécifié
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Avertissements introduits dans Visual C++ 2017 version 15,6 (version du compilateur 19.13.26128.0)
+
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.12__.
 
 |||
 |-|-|
 C5044|Argument d’option de ligne de commande *option* pointe vers un chemin d’accès '*chemin d’accès*' qui n’existe pas
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Avertissements introduits dans Visual C++ 2017 version 15.3 (version du compilateur 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Avertissements introduits dans Visual C++ 2017 version 15.5 (version du compilateur 19.12.25830.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.10__.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.11__.
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|'*définition*' : définition hors ligne pour les membres de données sta
 C5042|'*déclaration*' : les déclarations de fonction au niveau de la portée de bloc ne peut pas être 'inline' spécifié dans C++ standard ; supprimez le spécificateur 'inline'
 C5043|'*spécification*' : spécification d’exception ne correspond pas à la déclaration précédente
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Avertissements introduits dans Visual C++ 2017 version 15,1 (version du compilateur 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Avertissements introduits dans Visual C++ 2017 version 15.3 (version du compilateur 19.11.25506.0)
 
-Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.10.24903__.
+Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.10__.
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|conversion de pointeur de fonction varargs lors de la compilation avec /hy
 C5037|'*fonction membre*' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut
 C5038|données membres '*member1*'sera initialisé après le membre de données'*membre2*'
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Avertissements introduits dans Visual C++ 2017 RTM (version du compilateur 19.10.24903)
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Avertissements introduits dans Visual C++ 2017 RTM (version du compilateur 19.10.25017.0)
 
 Ces avertissements et tous les avertissements dans les versions ultérieures sont supprimés à l’aide de l’option du compilateur __/Wv:19.00__.
 
@@ -164,15 +175,15 @@ C4498|extension non standard utilisée : '*extension*'
 C4499|'*spécialisation*' : une spécialisation explicite ne peut pas avoir une classe de stockage (ignorée)
 C4576|un type entre parenthèses suivi d’une liste d’initialiseurs est une syntaxe de conversion de type explicite non standard
 C4577|'noexcept' utilisé avec aucun spécifié ; le mode de gestion des exceptions arrêt sur l’exception n’est pas garantie. Spécifiez /EHsc
-C4578|'abs' : conversion de '*type*'à'*type*', perte possible de données (souhaitiez-vous appeler '*nom*' ou la valeur #include <cmath>?)
+C4578|'abs' : conversion de '*type*'à'*type*', perte possible de données (souhaitiez-vous appeler '*nom*' ou la valeur #include \<cmath > ?)
 C4582|'*type*' : constructeur n’est pas appelé de manière implicite
 C4583|'*type*' : destructeur n’est pas appelé de manière implicite
 C4587|'*type*' : changement de comportement : constructeur est appelé n’est plus implicitement.
 C4588|'*type*' : changement de comportement : destructeur est appelé n’est plus implicitement.
 C4589|Constructeur de classe abstraite*type*'ignore l’initialiseur de classe de base virtuelle'*type*'
-C4591|limite de profondeur des appels 'constexpr' de *nombre* dépassée (/ constexpr : Depth<NUMBER>)
+C4591|limite de profondeur des appels 'constexpr' de *nombre* dépassée (/ constexpr : Depth\<nombre >)
 C4592|'*type*' : symbole sera dynamiquement initialisé (limite d’implémentation)
-C4593|'*type*' : limite d’étape d’évaluation d’appels 'constexpr' de *valeur* dépassée ; utiliser/constexpr : Steps<NUMBER> pour augmenter la limite
+C4593|'*type*' : limite d’étape d’évaluation d’appels 'constexpr' de *valeur* dépassée ; utiliser/constexpr : Steps\<nombre > pour augmenter la limite
 C4647|changement de comportement : __is_pod (*type*) a une valeur différente dans les versions précédentes
 C4648|l’attribut standard 'carries_dependency' est ignoré.
 C4649|les attributs sont ignorés dans ce contexte
@@ -377,10 +388,10 @@ C4633|Commentaire de document XML*description*: erreur : *description*
 C4634|Commentaire de document XML*description*: ne peut pas être appliqué : *description*
 C4635|Commentaire de document XML*description*: code XML incorrect : *description*
 C4636|Commentaire de document XML*description*: la balise requiert non vide '*description*' attribut.
-C4637|Commentaire de document XML*description*: <include> balise ignorée. *description*
+C4637|Commentaire de document XML*description*: \<inclure > balise ignorée. *description*
 C4638|Commentaire de document XML*description*: référence à un symbole inconnu '*description*'.
 C4639|Erreur MSXML, document XML commentaires ne seront pas traités. *description*
-C4641|Commentaire de document XML a une référence croisée ambiguë : 
+C4641|Commentaire de document XML a une référence croisée ambiguë :
 C4678|classe de base*déclaration*'est moins accessible que'*nom*'
 C4679|'*description*' : Impossible d’importer le membre
 C4687|'*type*' : une classe abstraite sealed ne peut pas implémenter une interface '*type*'
@@ -626,6 +637,7 @@ C4997|'*type*' : coclasse n’implémente pas une interface COM ou pseudo-inter
 C4998|Échec du résultat attendu : *description*(*numéro*)
 
 ## <a name="see-also"></a>Voir aussi
-[Option de compilateur /WV.](../../build/reference/compiler-option-warning-level.md)
-[avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[avertissement](../../preprocessor/warning.md)
+
+- [Option du compilateur /WV.](../../build/reference/compiler-option-warning-level.md)
+- [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [warning](../../preprocessor/warning.md)

@@ -16,38 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7347e8edda7ad8b317d4e6e02dfc9345ac76f269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704152"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erreur des outils Éditeur de liens LNK2028
-« fonction_exportée » (nom_décoré) référencé dans la fonction « fonction_contenant_l ' appel_de_fonction » (nom_décoré)  
-  
- Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations natives et pures.  
-  
-## <a name="example"></a>Exemple  
- Cet exemple de code génère un composant avec une fonction native exportée dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).  
-  
-```  
-// LNK2028.cpp  
-// compile with: /LD  
-__declspec(dllexport) int func() {  
-   return 3;  
-}  
-```  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la convention d’appel sous **/CLR : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’erreur LNK2028.  
-  
-```  
-// LNK2028_b.cpp  
-// compile with: /clr:pure lnk2028.lib  
-// LNK2028 expected  
-int func();  
-  
-int main() {  
-   return func();  
-}  
+
+«*fonction_exportée*» (*nom_décoré*) référencé dans la fonction «*function_containing_function_call*» (*nom_décoré*)
+
+## <a name="remarks"></a>Notes
+
+Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations natives et pures.
+
+Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+## <a name="example"></a>Exemple
+
+Cet exemple de code génère un composant avec une fonction native exportée dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
+
+```cpp
+// LNK2028.cpp
+// compile with: /LD
+__declspec(dllexport) int func() {
+   return 3;
+}
+```
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la convention d’appel sous **/CLR : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’erreur LNK2028.
+
+```cpp
+// LNK2028_b.cpp
+// compile with: /clr:pure lnk2028.lib
+// LNK2028 expected
+int func();
+
+int main() {
+   return func();
+}
 ```

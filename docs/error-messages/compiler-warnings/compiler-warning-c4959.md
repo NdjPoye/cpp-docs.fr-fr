@@ -16,35 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e995f90741ac4421622bb891f01deb92aebab283
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705162"
 ---
 # <a name="compiler-warning-c4959"></a>Avertissement du compilateur C4959
-Impossible de définir le struct 'type' non managé en /clr:safe, car l’accès à ses membres génère du code non vérifiable  
-  
- L’accès à un membre d’un type non managé entraîne la création d’une image non vérifiable (peverify.exe).  
-  
- Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
- Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .  
-  
- L’exemple suivant génère l’erreur C4959.  
-  
-```  
-// C4959.cpp  
-// compile with: /clr:safe  
-  
-// Uncomment the following line to resolve.  
-// #pragma warning( disable : 4959 )  
-struct X {  
-   int data;  
-};  
-  
-int main() {  
-   X x;  
-   x.data = 10;   // C4959  
-}  
+
+> Impossible de définir le struct non managé '*type*' dans/CLR : safe, car l’accès à ses membres génère du code non vérifiable
+
+## <a name="remarks"></a>Notes
+
+L’accès à un membre d’un type non managé entraîne la création d’une image non vérifiable (peverify.exe).
+
+Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+
+Le **/CLR : safe** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C4959.
+
+```cpp
+// C4959.cpp
+// compile with: /clr:safe
+
+// Uncomment the following line to resolve.
+// #pragma warning( disable : 4959 )
+struct X {
+   int data;
+};
+
+int main() {
+   X x;
+   x.data = 10;   // C4959
+}
 ```

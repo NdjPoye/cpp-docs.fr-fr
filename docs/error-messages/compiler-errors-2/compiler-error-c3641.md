@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496ff73822dcc1c886fbd2020f8ec6b8a5a9a2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704943"
 ---
 # <a name="compiler-error-c3641"></a>Erreur du compilateur C3641
-'fonction' : non valide de convention d’appel 'convention_appel' pour la fonction compilée avec/clr : pure ou/CLR : safe  
-  
- Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
-  
- Uniquement [__clrcall](../../cpp/clrcall.md) convention d’appel n’est autorisée avec [/CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- L’exemple suivant génère l’erreur C3641 :  
-  
-```  
-// C3641.cpp  
-// compile with: /clr:pure /c  
-void __cdecl f() {}   // C3641  
+
+> '*fonction*' : non valide de convention d’appel 'convention_appel' pour la fonction compilée avec/clr : pure ou/CLR : safe
+
+## <a name="remarks"></a>Notes
+
+Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+
+Uniquement [__clrcall](../../cpp/clrcall.md) convention d’appel n’est autorisée avec [/CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant génère l’erreur C3641 :
+
+```cpp
+// C3641.cpp
+// compile with: /clr:pure /c
+void __cdecl f() {}   // C3641
 ```
