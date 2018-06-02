@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686849"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- Dans l’exemple précédent, `pwCaption` est un pointeur vers un membre de classe `Window` qui possède un type **char\***. Le type de `pwCaption` est `char * Window::*`. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
+ Dans l’exemple précédent, `pwCaption` est un pointeur vers un membre de classe `Window` qui possède un type **char\***. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
